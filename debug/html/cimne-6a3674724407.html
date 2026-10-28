@@ -1,0 +1,2015 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="pingback" href="https://cimne.com/xmlrpc.php" />
+
+	<script type="text/javascript">
+		document.documentElement.className = 'js';
+	</script>
+	
+		<script id="cimne-google-consent-mode">
+	(function (window, document) {
+		'use strict';
+
+		/*
+		 * Inicializar dataLayer y gtag sin sobrescribir
+		 * una implementación existente.
+		 */
+		window.dataLayer = window.dataLayer || [];
+
+		window.gtag = window.gtag || function () {
+			window.dataLayer.push(arguments);
+		};
+
+
+		/*
+		 * Estado predeterminado.
+		 *
+		 * Hasta que Complianz comunique el consentimiento del usuario,
+		 * Statistics y Marketing permanecen denegados.
+		 */
+		window.gtag('consent', 'default', {
+			'analytics_storage': 'denied',
+			'ad_storage': 'denied',
+			'ad_user_data': 'denied',
+			'ad_personalization': 'denied',
+			'functionality_storage': 'granted',
+			'security_storage': 'granted',
+			'wait_for_update': 500
+		});
+
+
+		/**
+		 * Actualiza Google Consent Mode utilizando las categorías
+		 * comunicadas directamente por Complianz.
+		 *
+		 * @param {CustomEvent} event Evento cmplz_fire_categories.
+		 *
+		 * @return {void}
+		 */
+		function cimneUpdateGoogleConsent(event) {
+			var categories = [];
+
+			if (
+				event &&
+				event.detail &&
+				Array.isArray(event.detail.categories)
+			) {
+				categories = event.detail.categories;
+			}
+
+			var statisticsAllowed =
+				categories.indexOf('statistics') !== -1;
+
+			var marketingAllowed =
+				categories.indexOf('marketing') !== -1;
+
+			window.gtag('consent', 'update', {
+				'analytics_storage':
+					statisticsAllowed ? 'granted' : 'denied',
+
+				'ad_storage':
+					marketingAllowed ? 'granted' : 'denied',
+
+				'ad_user_data':
+					marketingAllowed ? 'granted' : 'denied',
+
+				'ad_personalization':
+					marketingAllowed ? 'granted' : 'denied',
+
+				'functionality_storage': 'granted',
+				'security_storage': 'granted'
+			});
+		}
+
+
+		/**
+		 * Revoca los consentimientos opcionales de Google.
+		 *
+		 * @return {void}
+		 */
+		function cimneRevokeGoogleConsent() {
+			window.gtag('consent', 'update', {
+				'analytics_storage': 'denied',
+				'ad_storage': 'denied',
+				'ad_user_data': 'denied',
+				'ad_personalization': 'denied',
+				'functionality_storage': 'granted',
+				'security_storage': 'granted'
+			});
+		}
+
+
+		/*
+		 * Complianz comunica mediante este evento el conjunto completo
+		 * de categorías consentidas.
+		 */
+		document.addEventListener(
+			'cmplz_fire_categories',
+			cimneUpdateGoogleConsent
+		);
+
+
+		/*
+		 * Si el usuario revoca el consentimiento, restablecer
+		 * inmediatamente todos los consentimientos opcionales.
+		 */
+		document.addEventListener(
+			'cmplz_revoke',
+			cimneRevokeGoogleConsent
+		);
+
+	})(window, document);
+	</script>
+	<title>Research staff | CIMNE</title>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin /><style id="et-builder-googlefonts-cached-inline">/* Original: https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic|Lora:regular,500,600,700,italic,500italic,600italic,700italic&#038;subset=devanagari,latin,latin-ext,cyrillic,cyrillic-ext,vietnamese&#038;display=swap *//* User Agent: Mozilla/5.0 (Unknown; Linux x86_64) AppleWebKit/538.1 (KHTML, like Gecko) Safari/538.1 Daum/4.1 */@font-face {font-family: 'Lora';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-MoFkqg.ttf) format('truetype');}@font-face {font-family: 'Lora';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-PgFkqg.ttf) format('truetype');}@font-face {font-family: 'Lora';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-BQCkqg.ttf) format('truetype');}@font-face {font-family: 'Lora';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-C0Ckqg.ttf) format('truetype');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuyJG.ttf) format('truetype');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787wsuyJG.ttf) format('truetype');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787zAvCJG.ttf) format('truetype');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787z5vCJG.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiAyp8kv8JHgFVrJJLmE3tF.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmv1plEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm21llEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrJJLedw.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmg1hlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmr19lEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmy15lEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm111lEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm81xlEA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrLPTedw.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLFj_V1s.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDz8V1s.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJA.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9V1s.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1s.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1s.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDD4V1s.ttf) format('truetype');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLBT5V1s.ttf) format('truetype');}/* User Agent: Mozilla/5.0 (Windows NT 6.1; WOW64; rv:27.0) Gecko/20100101 Firefox/27.0 */@font-face {font-family: 'Lora';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-MoFkqs.woff) format('woff');}@font-face {font-family: 'Lora';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-PgFkqs.woff) format('woff');}@font-face {font-family: 'Lora';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-BQCkqs.woff) format('woff');}@font-face {font-family: 'Lora';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-C0Ckqs.woff) format('woff');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuyJF.woff) format('woff');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787wsuyJF.woff) format('woff');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787zAvCJF.woff) format('woff');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787z5vCJF.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiAyp8kv8JHgFVrJJLmE3tG.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmv1plEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm21llEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrJJLedA.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmg1hlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmr19lEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmy15lEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm111lEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm81xlEw.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrLPTedA.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLFj_V1g.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDz8V1g.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJM.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9V1g.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V1g.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V1g.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDD4V1g.woff) format('woff');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLBT5V1g.woff) format('woff');}/* User Agent: Mozilla/5.0 (Windows NT 6.3; rv:39.0) Gecko/20100101 Firefox/39.0 */@font-face {font-family: 'Lora';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-MoFkq0.woff2) format('woff2');}@font-face {font-family: 'Lora';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-PgFkq0.woff2) format('woff2');}@font-face {font-family: 'Lora';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-BQCkq0.woff2) format('woff2');}@font-face {font-family: 'Lora';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI8MX1D_JOuMw_hLdO6T2wV9KnW-C0Ckq0.woff2) format('woff2');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787weuyJD.woff2) format('woff2');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787wsuyJD.woff2) format('woff2');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787zAvCJD.woff2) format('woff2');}@font-face {font-family: 'Lora';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/lora/v37/0QI6MX1D_JOuGQbT0gvTJPa787z5vCJD.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiAyp8kv8JHgFVrJJLmE3tA.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmv1plFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm21llFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrJJLecg.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmg1hlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmr19lFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLmy15lFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm111lFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: italic;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiDyp8kv8JHgFVrJJLm81xlFQ.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 100;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiGyp8kv8JHgFVrLPTecg.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 200;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLFj_V14.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 300;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDz8V14.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 400;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiEyp8kv8JHgFVrFJU.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 500;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLGT9V14.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 600;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLEj6V14.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 700;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLCz7V14.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 800;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLDD4V14.woff2) format('woff2');}@font-face {font-family: 'Poppins';font-style: normal;font-weight: 900;font-display: swap;src: url(https://fonts.gstatic.com/s/poppins/v24/pxiByp8kv8JHgFVrLBT5V14.woff2) format('woff2');}</style><meta name='robots' content='max-image-preview:large, max-snippet:-1, max-video-preview:-1' />
+<link rel="alternate" hreflang="ca" href="https://cimne.com/ca/feina-beques/personal-investigador/" />
+<link rel="alternate" hreflang="en" href="https://cimne.com/jobs-fellowships/research-staff/" />
+<link rel="alternate" hreflang="es" href="https://cimne.com/es/empleos-becas/personal-investigador/" />
+<link rel="alternate" hreflang="x-default" href="https://cimne.com/jobs-fellowships/research-staff/" />
+<script type="text/javascript">
+			let jqueryParams=[],jQuery=function(r){return jqueryParams=[...jqueryParams,r],jQuery},$=function(r){return jqueryParams=[...jqueryParams,r],$};window.jQuery=jQuery,window.$=jQuery;let customHeadScripts=!1;jQuery.fn=jQuery.prototype={},$.fn=jQuery.prototype={},jQuery.noConflict=function(r){if(window.jQuery)return jQuery=window.jQuery,$=window.jQuery,customHeadScripts=!0,jQuery.noConflict},jQuery.ready=function(r){jqueryParams=[...jqueryParams,r]},$.ready=function(r){jqueryParams=[...jqueryParams,r]},jQuery.load=function(r){jqueryParams=[...jqueryParams,r]},$.load=function(r){jqueryParams=[...jqueryParams,r]},jQuery.fn.ready=function(r){jqueryParams=[...jqueryParams,r]},$.fn.ready=function(r){jqueryParams=[...jqueryParams,r]};</script><link rel="canonical" href="https://cimne.com/jobs-fellowships/research-staff/">
+<meta name="description" content="Join CIMNE as a Research Staff. We are looking for your talent to push the boundaries of computational engineering research. We list below the open job offers a">
+<meta property="og:title" content="Research staff | CIMNE">
+<meta property="og:type" content="article">
+<meta property="og:image" content="https://cimne.com/wp-content/uploads/2025/04/trnimage1.png">
+<meta property="og:image:width" content="414">
+<meta property="og:image:height" content="220">
+<meta property="og:image:alt" content="trnimage1">
+<meta property="og:description" content="Join CIMNE as a Research Staff. We are looking for your talent to push the boundaries of computational engineering research. We list below the open job offers a">
+<meta property="og:url" content="https://cimne.com/jobs-fellowships/research-staff/">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="CIMNE">
+<meta property="article:published_time" content="2024-07-18T12:35:27+02:00">
+<meta property="article:modified_time" content="2026-08-06T11:37:02+02:00">
+<meta property="og:updated_time" content="2026-08-06T11:37:02+02:00">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cimne.com/wp-content/uploads/2025/04/trnimage1.png">
+<link rel="alternate" type="application/rss+xml" title="CIMNE &raquo; Feed" href="https://cimne.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="CIMNE &raquo; Comments Feed" href="https://cimne.com/comments/feed/" />
+<link rel="alternate" title="oEmbed (JSON)" type="application/json+oembed" href="https://cimne.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcimne.com%2Fjobs-fellowships%2Fresearch-staff%2F" />
+<link rel="alternate" title="oEmbed (XML)" type="text/xml+oembed" href="https://cimne.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fcimne.com%2Fjobs-fellowships%2Fresearch-staff%2F&#038;format=xml" />
+<meta content="CIMNE v.1.0.5" name="generator"/>
+<style id="global-styles-inline-css">
+:root{--wp--preset--aspect-ratio--square: 1;--wp--preset--aspect-ratio--4-3: 4/3;--wp--preset--aspect-ratio--3-4: 3/4;--wp--preset--aspect-ratio--3-2: 3/2;--wp--preset--aspect-ratio--2-3: 2/3;--wp--preset--aspect-ratio--16-9: 16/9;--wp--preset--aspect-ratio--9-16: 9/16;--wp--preset--color--black: #000000;--wp--preset--color--cyan-bluish-gray: #abb8c3;--wp--preset--color--white: #ffffff;--wp--preset--color--pale-pink: #f78da7;--wp--preset--color--vivid-red: #cf2e2e;--wp--preset--color--luminous-vivid-orange: #ff6900;--wp--preset--color--luminous-vivid-amber: #fcb900;--wp--preset--color--light-green-cyan: #7bdcb5;--wp--preset--color--vivid-green-cyan: #00d084;--wp--preset--color--pale-cyan-blue: #8ed1fc;--wp--preset--color--vivid-cyan-blue: #0693e3;--wp--preset--color--vivid-purple: #9b51e0;--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple: linear-gradient(135deg,rgb(6,147,227) 0%,rgb(155,81,224) 100%);--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan: linear-gradient(135deg,rgb(122,220,180) 0%,rgb(0,208,130) 100%);--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange: linear-gradient(135deg,rgb(252,185,0) 0%,rgb(255,105,0) 100%);--wp--preset--gradient--luminous-vivid-orange-to-vivid-red: linear-gradient(135deg,rgb(255,105,0) 0%,rgb(207,46,46) 100%);--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray: linear-gradient(135deg,rgb(238,238,238) 0%,rgb(169,184,195) 100%);--wp--preset--gradient--cool-to-warm-spectrum: linear-gradient(135deg,rgb(74,234,220) 0%,rgb(151,120,209) 20%,rgb(207,42,186) 40%,rgb(238,44,130) 60%,rgb(251,105,98) 80%,rgb(254,248,76) 100%);--wp--preset--gradient--blush-light-purple: linear-gradient(135deg,rgb(255,206,236) 0%,rgb(152,150,240) 100%);--wp--preset--gradient--blush-bordeaux: linear-gradient(135deg,rgb(254,205,165) 0%,rgb(254,45,45) 50%,rgb(107,0,62) 100%);--wp--preset--gradient--luminous-dusk: linear-gradient(135deg,rgb(255,203,112) 0%,rgb(199,81,192) 50%,rgb(65,88,208) 100%);--wp--preset--gradient--pale-ocean: linear-gradient(135deg,rgb(255,245,203) 0%,rgb(182,227,212) 50%,rgb(51,167,181) 100%);--wp--preset--gradient--electric-grass: linear-gradient(135deg,rgb(202,248,128) 0%,rgb(113,206,126) 100%);--wp--preset--gradient--midnight: linear-gradient(135deg,rgb(2,3,129) 0%,rgb(40,116,252) 100%);--wp--preset--font-size--small: 13px;--wp--preset--font-size--medium: 20px;--wp--preset--font-size--large: 36px;--wp--preset--font-size--x-large: 42px;--wp--preset--spacing--20: 0.44rem;--wp--preset--spacing--30: 0.67rem;--wp--preset--spacing--40: 1rem;--wp--preset--spacing--50: 1.5rem;--wp--preset--spacing--60: 2.25rem;--wp--preset--spacing--70: 3.38rem;--wp--preset--spacing--80: 5.06rem;--wp--preset--shadow--natural: 6px 6px 9px rgba(0, 0, 0, 0.2);--wp--preset--shadow--deep: 12px 12px 50px rgba(0, 0, 0, 0.4);--wp--preset--shadow--sharp: 6px 6px 0px rgba(0, 0, 0, 0.2);--wp--preset--shadow--outlined: 6px 6px 0px -3px rgb(255, 255, 255), 6px 6px rgb(0, 0, 0);--wp--preset--shadow--crisp: 6px 6px 0px rgb(0, 0, 0);}.wp-block-button{--wp--preset--dimension--25: 25%;--wp--preset--dimension--50: 50%;--wp--preset--dimension--75: 75%;--wp--preset--dimension--100: 100%;}:root { --wp--style--global--content-size: 823px;--wp--style--global--wide-size: 1080px; }:where(body) { margin: 0; }.wp-site-blocks > .alignleft { float: left; margin-right: 2em; }.wp-site-blocks > .alignright { float: right; margin-left: 2em; }.wp-site-blocks > .aligncenter { justify-content: center; margin-left: auto; margin-right: auto; }:where(.is-layout-flex){gap: 0.5em;}:where(.is-layout-grid){gap: 0.5em;}.is-layout-flow > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-flow > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-flow > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignleft{float: left;margin-inline-start: 0;margin-inline-end: 2em;}.is-layout-constrained > .alignright{float: right;margin-inline-start: 2em;margin-inline-end: 0;}.is-layout-constrained > .aligncenter{margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > :where(:not(.alignleft):not(.alignright):not(.alignfull)){max-width: var(--wp--style--global--content-size);margin-left: auto !important;margin-right: auto !important;}.is-layout-constrained > .alignwide{max-width: var(--wp--style--global--wide-size);}body .is-layout-flex{display: flex;}.is-layout-flex{flex-wrap: wrap;align-items: center;}.is-layout-flex > :is(*, div){margin: 0;}body .is-layout-grid{display: grid;}.is-layout-grid > :is(*, div){margin: 0;}body{padding-top: 0px;padding-right: 0px;padding-bottom: 0px;padding-left: 0px;}:root :where(.wp-element-button, .wp-block-button__link){background-color: #32373c;border-width: 0;color: #fff;font-family: inherit;font-size: inherit;font-style: inherit;font-weight: inherit;letter-spacing: inherit;line-height: inherit;padding-top: calc(0.667em + 2px);padding-right: calc(1.333em + 2px);padding-bottom: calc(0.667em + 2px);padding-left: calc(1.333em + 2px);text-decoration: none;text-transform: inherit;}.has-black-color{color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-color{color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-color{color: var(--wp--preset--color--white) !important;}.has-pale-pink-color{color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-color{color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-color{color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-color{color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-color{color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-color{color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-color{color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-color{color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-color{color: var(--wp--preset--color--vivid-purple) !important;}.has-black-background-color{background-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-background-color{background-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-background-color{background-color: var(--wp--preset--color--white) !important;}.has-pale-pink-background-color{background-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-background-color{background-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-background-color{background-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-background-color{background-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-background-color{background-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-background-color{background-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-background-color{background-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-background-color{background-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-background-color{background-color: var(--wp--preset--color--vivid-purple) !important;}.has-black-border-color{border-color: var(--wp--preset--color--black) !important;}.has-cyan-bluish-gray-border-color{border-color: var(--wp--preset--color--cyan-bluish-gray) !important;}.has-white-border-color{border-color: var(--wp--preset--color--white) !important;}.has-pale-pink-border-color{border-color: var(--wp--preset--color--pale-pink) !important;}.has-vivid-red-border-color{border-color: var(--wp--preset--color--vivid-red) !important;}.has-luminous-vivid-orange-border-color{border-color: var(--wp--preset--color--luminous-vivid-orange) !important;}.has-luminous-vivid-amber-border-color{border-color: var(--wp--preset--color--luminous-vivid-amber) !important;}.has-light-green-cyan-border-color{border-color: var(--wp--preset--color--light-green-cyan) !important;}.has-vivid-green-cyan-border-color{border-color: var(--wp--preset--color--vivid-green-cyan) !important;}.has-pale-cyan-blue-border-color{border-color: var(--wp--preset--color--pale-cyan-blue) !important;}.has-vivid-cyan-blue-border-color{border-color: var(--wp--preset--color--vivid-cyan-blue) !important;}.has-vivid-purple-border-color{border-color: var(--wp--preset--color--vivid-purple) !important;}.has-vivid-cyan-blue-to-vivid-purple-gradient-background{background: var(--wp--preset--gradient--vivid-cyan-blue-to-vivid-purple) !important;}.has-light-green-cyan-to-vivid-green-cyan-gradient-background{background: var(--wp--preset--gradient--light-green-cyan-to-vivid-green-cyan) !important;}.has-luminous-vivid-amber-to-luminous-vivid-orange-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-amber-to-luminous-vivid-orange) !important;}.has-luminous-vivid-orange-to-vivid-red-gradient-background{background: var(--wp--preset--gradient--luminous-vivid-orange-to-vivid-red) !important;}.has-very-light-gray-to-cyan-bluish-gray-gradient-background{background: var(--wp--preset--gradient--very-light-gray-to-cyan-bluish-gray) !important;}.has-cool-to-warm-spectrum-gradient-background{background: var(--wp--preset--gradient--cool-to-warm-spectrum) !important;}.has-blush-light-purple-gradient-background{background: var(--wp--preset--gradient--blush-light-purple) !important;}.has-blush-bordeaux-gradient-background{background: var(--wp--preset--gradient--blush-bordeaux) !important;}.has-luminous-dusk-gradient-background{background: var(--wp--preset--gradient--luminous-dusk) !important;}.has-pale-ocean-gradient-background{background: var(--wp--preset--gradient--pale-ocean) !important;}.has-electric-grass-gradient-background{background: var(--wp--preset--gradient--electric-grass) !important;}.has-midnight-gradient-background{background: var(--wp--preset--gradient--midnight) !important;}.has-small-font-size{font-size: var(--wp--preset--font-size--small) !important;}.has-medium-font-size{font-size: var(--wp--preset--font-size--medium) !important;}.has-large-font-size{font-size: var(--wp--preset--font-size--large) !important;}.has-x-large-font-size{font-size: var(--wp--preset--font-size--x-large) !important;}
+/*# sourceURL=global-styles-inline-css */
+</style>
+
+<link rel='stylesheet' id='fontawesome-css' href='https://cimne.com/wp-content/plugins/infinity-tnc-divi-modules/admin/assets/fontawesome/css/all.min.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='infinity-tnc-divi-modules-bundle-style-css' href='https://cimne.com/wp-content/plugins/infinity-tnc-divi-modules/styles/bundle.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='inftnc-embed-map-style-css' href='https://cimne.com/wp-content/plugins/infinity-tnc-divi-modules/divi-4/modules/EmbedMap/style.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='inftnc-star-rating-style-css' href='https://cimne.com/wp-content/plugins/infinity-tnc-divi-modules/divi-4/modules/StarRating/style.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='inftnc-youtube-embed-style-css' href='https://cimne.com/wp-content/plugins/infinity-tnc-divi-modules/divi-4/modules/YoutubeEmbed/style.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='inftnc-vimeo-video-style-css' href='https://cimne.com/wp-content/plugins/infinity-tnc-divi-modules/divi-4/modules/VimeoVideo/style.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='inftnc-heading-gradient-style-css' href='https://cimne.com/wp-content/plugins/infinity-tnc-divi-modules/divi-4/modules/HeadingGradient/style.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='inftnc-breadcrumb-style-css' href='https://cimne.com/wp-content/plugins/infinity-tnc-divi-modules/divi-4/modules/BreadCrumbs/style.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='inftnc-dual-buttons-style-css' href='https://cimne.com/wp-content/plugins/infinity-tnc-divi-modules/divi-4/modules/DualButtons/style.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='inftnc-social-share-style-css' href='https://cimne.com/wp-content/plugins/infinity-tnc-divi-modules/divi-4/modules/SocialShare/style.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='inftnc-social-share-child-style-css' href='https://cimne.com/wp-content/plugins/infinity-tnc-divi-modules/divi-4/modules/SocialShareChild/style.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='wp-pagenavi-css' href='https://cimne.com/wp-content/plugins/wp-pagenavi/css/wp-pagenavi.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='wpml-legacy-horizontal-list-0-css' href='https://cimne.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/legacy-list-horizontal/style.min.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='wpml-menu-item-0-css' href='https://cimne.com/wp-content/plugins/sitepress-multilingual-cms/templates/language-switchers/menu-item/style.min.css?ver=1.0.5' media='all' />
+<style id="wpml-menu-item-0-inline-css">
+.wpml-ls-slot-15, .wpml-ls-slot-15 a, .wpml-ls-slot-15 a:visited{color:#02a0a5;}.wpml-ls-slot-15.wpml-ls-current-language, .wpml-ls-slot-15.wpml-ls-current-language a, .wpml-ls-slot-15.wpml-ls-current-language a:visited{color:#004996;}
+/*# sourceURL=wpml-menu-item-0-inline-css */
+</style>
+<link rel='stylesheet' id='cmplz-general-css' href='https://cimne.com/wp-content/plugins/complianz-gdpr/assets/css/cookieblocker.min.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='divi-style-parent-css' href='https://cimne.com/wp-content/themes/Divi/style-static.min.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='divi-style-css' href='https://cimne.com/wp-content/themes/cimne/style.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='cimne-navigation-css' href='https://cimne.com/wp-content/themes/cimne/css/navigation.css?ver=1.0.5' media='all' />
+<link rel='stylesheet' id='cmplz-banner-1-optin-css' href='https://cimne.com/wp-content/uploads/complianz/css/banner-1-optin.css?ver=1.0.5' media='all' />
+<script id="wpml-cookie-js-extra">
+var wpml_cookies = {"wp-wpml_current_language":{"value":"en","expires":"Thu, 29 Oct 2026 11:38:44 GMT","path":"/"}};
+//# sourceURL=wpml-cookie-js-extra
+</script>
+<script data-wp-strategy="defer" defer id="wpml-cookie-js" src="https://cimne.com/wp-content/plugins/sitepress-multilingual-cms/res/js/cookies/language-cookie.js?ver=510000"></script>
+<script id="jquery-core-js" src="https://cimne.com/wp-includes/js/jquery/jquery.min.js?ver=3.7.1"></script>
+<script id="jquery-migrate-js" src="https://cimne.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.4.1"></script>
+<script id="jquery-js-after">
+jqueryParams.length&&$.each(jqueryParams,function(e,r){if("function"==typeof r){var n=String(r);n.replace("$","jQuery");var a=new Function("return "+n)();$(document).ready(a)}});
+//# sourceURL=jquery-js-after
+</script>
+<link rel="https://api.w.org/" href="https://cimne.com/wp-json/" /><link rel="alternate" title="JSON" type="application/json" href="https://cimne.com/wp-json/wp/v2/pages/158" /><link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://cimne.com/xmlrpc.php?rsd" />
+<link rel='shortlink' href='https://cimne.com/?p=158' />
+<meta name="generator" content="WPML ver:5.1.0 stt:8,1,2;" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />			<style>.cmplz-hidden {
+					display: none !important;
+				}</style>
+				<!-- Solucion para Divi Flashing Unstyled Content usando hidden y opacity en lugar de display -->
+<script type="text/javascript">
+    // Seleccionamos el elemento HTML
+    var elm = document.getElementsByTagName("html")[0];
+    
+    // Ocultamos visualmente pero mantenemos el espacio y flujo del DOM para que Divi calcule las posiciones
+    elm.style.opacity = "0";
+    elm.style.visibility = "hidden";
+    elm.style.transition = "none"; // Evita transiciones extrañas al inicio
+
+    document.addEventListener("DOMContentLoaded", function(event) {
+        // Volvemos a hacer visible todo una vez el DOM esté listo
+        elm.style.opacity = "1";
+        elm.style.visibility = "visible";
+    });
+</script>
+<!-- Añade aria-label en botón de búsqueda -->
+<script>
+jQuery(document).ready(function($) {
+    // Busca el botón de búsqueda en el menú y añade el aria-label
+    $('.et_pb_menu__search-button').attr('aria-label', 'Search the site');
+    $('.et_pb_menu__close-search-button').attr('aria-label', 'Close search');
+});
+</script>
+
+<!-- Carga de otras fuentes de Google Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&amp;display=swap" rel="stylesheet"><link rel="icon" href="https://cimne.com/wp-content/uploads/2026/03/cropped-cimne-blanc.png" sizes="32x32" />
+<link rel="icon" href="https://cimne.com/wp-content/uploads/2026/03/cropped-cimne-blanc.png" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://cimne.com/wp-content/uploads/2026/03/cropped-cimne-blanc.png" />
+<meta name="msapplication-TileImage" content="https://cimne.com/wp-content/uploads/2026/03/cropped-cimne-blanc.png" />
+<style id="et-divi-customizer-global-cached-inline-styles">body,.et_pb_column_1_2 .et_quote_content blockquote cite,.et_pb_column_1_2 .et_link_content a.et_link_main_url,.et_pb_column_1_3 .et_quote_content blockquote cite,.et_pb_column_3_8 .et_quote_content blockquote cite,.et_pb_column_1_4 .et_quote_content blockquote cite,.et_pb_blog_grid .et_quote_content blockquote cite,.et_pb_column_1_3 .et_link_content a.et_link_main_url,.et_pb_column_3_8 .et_link_content a.et_link_main_url,.et_pb_column_1_4 .et_link_content a.et_link_main_url,.et_pb_blog_grid .et_link_content a.et_link_main_url,body .et_pb_bg_layout_light .et_pb_post p,body .et_pb_bg_layout_dark .et_pb_post p{font-size:14px}.et_pb_slide_content,.et_pb_best_value{font-size:15px}body,.et_pb_column_1_2 .et_quote_content blockquote cite,.et_pb_column_1_2 .et_link_content a.et_link_main_url,.et_pb_column_1_3 .et_quote_content blockquote cite,.et_pb_column_3_8 .et_quote_content blockquote cite,.et_pb_column_1_4 .et_quote_content blockquote cite,.et_pb_blog_grid .et_quote_content blockquote cite,.et_pb_column_1_3 .et_link_content a.et_link_main_url,.et_pb_column_3_8 .et_link_content a.et_link_main_url,.et_pb_column_1_4 .et_link_content a.et_link_main_url,.et_pb_blog_grid .et_link_content a.et_link_main_url,body .et_pb_bg_layout_light .et_pb_post p,body .et_pb_bg_layout_dark .et_pb_post p{font-weight:400}.et_pb_slide_content,.et_pb_best_value{font-weight:400}.et_secondary_nav_enabled #page-container #top-header{background-color:#f2f2f2!important}#et-secondary-nav li ul{background-color:#f2f2f2}#top-header,#top-header a{color:rgba(0,0,0,0.6)}#top-header,#top-header a,#et-secondary-nav li li a,#top-header .et-social-icon a:before{letter-spacing:2px}#top-menu li a,.et_search_form_container input{letter-spacing:1px}.et_search_form_container input::-moz-placeholder{letter-spacing:1px}.et_search_form_container input::-webkit-input-placeholder{letter-spacing:1px}.et_search_form_container input:-ms-input-placeholder{letter-spacing:1px}@media only screen and (min-width:981px){.et_fixed_nav #page-container .et-fixed-header#top-header{background-color:#f2f2f2!important}.et_fixed_nav #page-container .et-fixed-header#top-header #et-secondary-nav li ul{background-color:#f2f2f2}.et-fixed-header#top-header a{color:rgba(0,0,0,0.6)}}@media only screen and (min-width:1350px){.et_pb_row{padding:27px 0}.et_pb_section{padding:54px 0}.single.et_pb_pagebuilder_layout.et_full_width_page .et_post_meta_wrapper{padding-top:81px}.et_pb_fullwidth_section{padding:0}}h1,h1.et_pb_contact_main_title,.et_pb_title_container h1{font-weight:400}h2,.product .related h2,.et_pb_column_1_2 .et_quote_content blockquote p{font-weight:400}h3{font-weight:400}h4,.et_pb_circle_counter h3,.et_pb_number_counter h3,.et_pb_column_1_3 .et_pb_post h2,.et_pb_column_1_4 .et_pb_post h2,.et_pb_blog_grid h2,.et_pb_column_1_3 .et_quote_content blockquote p,.et_pb_column_3_8 .et_quote_content blockquote p,.et_pb_column_1_4 .et_quote_content blockquote p,.et_pb_blog_grid .et_quote_content blockquote p,.et_pb_column_1_3 .et_link_content h2,.et_pb_column_3_8 .et_link_content h2,.et_pb_column_1_4 .et_link_content h2,.et_pb_blog_grid .et_link_content h2,.et_pb_column_1_3 .et_audio_content h2,.et_pb_column_3_8 .et_audio_content h2,.et_pb_column_1_4 .et_audio_content h2,.et_pb_blog_grid .et_audio_content h2,.et_pb_column_3_8 .et_pb_audio_module_content h2,.et_pb_column_1_3 .et_pb_audio_module_content h2,.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2{font-weight:400}h5{font-weight:400}h6{font-weight:400}.et_pb_slide_description .et_pb_slide_title{font-weight:400}.et_pb_gallery_grid .et_pb_gallery_item h3,.et_pb_portfolio_grid .et_pb_portfolio_item h2,.et_pb_filterable_portfolio_grid .et_pb_portfolio_item h2,.et_pb_column_1_4 .et_pb_audio_module_content h2{font-weight:400}@media only screen and (max-width:980px){#main-header,#main-header .nav li ul,.et-search-form,#main-header .et_mobile_menu{background-color:}.et_header_style_centered .mobile_nav .select_page,.et_header_style_split .mobile_nav .select_page,.et_mobile_menu li a,.mobile_menu_bar:before,.et_nav_text_color_light #top-menu>li>a,.et_nav_text_color_dark #top-menu>li>a,#top-menu a,.et_mobile_menu li a,#et_search_icon:before,#et_top_search .et-search-form input,.et_search_form_container input,#et-top-navigation .et-cart-info{color:}.et_close_search_field:after{color:!important}.et_search_form_container input::-moz-placeholder{color:}.et_search_form_container input::-webkit-input-placeholder{color:}.et_search_form_container input:-ms-input-placeholder{color:}}	h1,h2,h3,h4,h5,h6{font-family:'Poppins',Helvetica,Arial,Lucida,sans-serif}body,input,textarea,select{font-family:'Poppins',Helvetica,Arial,Lucida,sans-serif}#top-header .container{font-family:'Poppins',Helvetica,Arial,Lucida,sans-serif}a.skip-link.da11y-screen-reader-text{position:absolute}</style></head>
+<body data-cmplz=1 class="wp-singular page-template-default page page-id-158 page-parent page-child parent-pageid-157 wp-theme-Divi wp-child-theme-cimne et-tb-has-template et-tb-has-header et-tb-has-footer et_pb_button_helper_class et_cover_background et_pb_gutter et_pb_gutters3 et_pb_pagebuilder_layout et_no_sidebar et_divi_theme et-db">
+	<div id="page-container">
+<div id="et-boc" class="et-boc">
+			
+		<header class="et-l et-l--header">
+			<div class="et_builder_inner_content et_pb_gutters3"><div class="et_pb_section et_pb_section_0_tb_header cimne-header-host et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_header et_pb_gutters3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_0_tb_header  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_0_tb_header">
+				
+				
+				
+				
+				<div class="et_pb_code_inner">
+<header
+	class="cimne-header"
+	data-cimne-header
+>
+	
+<div class="cimne-header__desktop" data-desktop-header>
+
+	<div class="cimne-header__utility">
+		<div class="cimne-header__utility-inner">
+
+							<nav class="cimne-utility-nav cimne-utility-nav--desktop" aria-label="Additional navigation">
+					<ul class="cimne-utility-nav__list">
+													<li class="cimne-utility-nav__item">
+								<a class="cimne-utility-nav__link" href="https://aulas.cimne.com/">
+									CIMNE Labs								</a>
+							</li>
+													<li class="cimne-utility-nav__item">
+								<a class="cimne-utility-nav__link" href="https://congressbureau.cimne.com/">
+									Congress Bureau								</a>
+							</li>
+													<li class="cimne-utility-nav__item">
+								<a class="cimne-utility-nav__link" href="https://books.cimne.com/">
+									Bookstore								</a>
+							</li>
+													<li class="cimne-utility-nav__item utility-separator">
+								<a class="cimne-utility-nav__link" href="https://cimne.com/ethics-channel/">
+									Ethics Channel								</a>
+							</li>
+													<li class="cimne-utility-nav__item">
+								<a class="cimne-utility-nav__link" href="https://intranet.cimne.com/">
+									Intranet								</a>
+							</li>
+											</ul>
+				</nav>
+			
+							<nav class="cimne-language-nav cimne-language-nav--desktop" aria-label="Language">
+					<ul class="cimne-language-nav__list">
+																				<li class="cimne-language-nav__item">
+								<a
+									class="cimne-language-nav__link"
+									href="https://cimne.com/ca/feina-beques/personal-investigador/"
+									lang="ca"
+									hreflang="ca"
+																	>
+									CA								</a>
+							</li>
+																				<li class="cimne-language-nav__item is-current">
+								<a
+									class="cimne-language-nav__link"
+									href="https://cimne.com/jobs-fellowships/research-staff/"
+									lang="en"
+									hreflang="en"
+									aria-current="page"								>
+									EN								</a>
+							</li>
+																				<li class="cimne-language-nav__item">
+								<a
+									class="cimne-language-nav__link"
+									href="https://cimne.com/es/empleos-becas/personal-investigador/"
+									lang="es"
+									hreflang="es"
+																	>
+									ES								</a>
+							</li>
+											</ul>
+				</nav>
+			
+		</div>
+	</div>
+
+	<div class="cimne-header__main">
+		<div class="cimne-header__main-inner">
+
+			<a
+				class="cimne-header__logo cimne-header__logo--desktop"
+				href="https://cimne.com/"
+				aria-label="CIMNE - Home"
+			>
+				<img decoding="async" class="cimne-header__logo-image" src="https://cimne.com/wp-content/uploads/2024/09/logo-color-cimne-web.png" alt="CIMNE">			</a>
+
+							<nav class="cimne-nav cimne-nav--desktop" aria-label="Primary navigation" data-desktop-nav>
+					<ul class="cimne-nav__list">
+
+													
+							<li class="cimne-nav__item cimne-nav__item--has-children" data-menu-item="261015">
+
+								<a
+									id="cimne-desktop-trigger-261015"									class="cimne-nav__link"
+									href="https://cimne.com/research/"																			aria-expanded="false"
+										aria-controls="cimne-desktop-mega-261015"
+										data-mega-trigger
+																	>
+									Research								</a>
+
+																	<div
+										id="cimne-desktop-mega-261015"
+										class="cimne-mega"
+										aria-labelledby="cimne-desktop-trigger-261015"
+										data-mega-panel
+										hidden
+									>
+										<div class="cimne-mega__inner">
+
+											<div class="cimne-mega__intro">
+												<h2 class="cimne-mega__title">
+													Research												</h2>
+
+																									<p class="cimne-mega__description">
+														Research
+
+Computational engineering to tackle global challenges													</p>
+																							</div>
+
+											<div class="cimne-mega__navigation">
+												<ul class="cimne-mega__list">
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/research/research-challenges/">
+																Research Challenges															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/research/research-methodologies/">
+																Research Methodologies															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/research/research-clusters/">
+																Research Clusters															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/research/projects/">
+																Projects															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/research/publications/">
+																Publications															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/research/senior-distinguished-researchers/">
+																Senior Distinguished Researchers															</a>
+														</li>
+																									</ul>
+											</div>
+
+																							
+												<div class="cimne-mega__feature">
+													<a
+														class="cimne-mega-feature"
+														href="https://cimne.com/research/projects/"
+																											>
+
+																													<figure class="cimne-mega-feature__media">
+																<img width="800" height="450" src="https://cimne.com/wp-content/uploads/2025/08/cimne-menu-projects.jpg" class="cimne-mega-feature__image" alt="Cimne menu projects" loading="lazy" decoding="async" />															</figure>
+														
+														<div class="cimne-mega-feature__content">
+															
+															
+																															<span class="cimne-mega-feature__title">
+																	Discover our latest research projects																</span>
+															
+															<span class="cimne-mega-feature__arrow" aria-hidden="true">&rarr;</span>
+														</div>
+
+													</a>
+												</div>
+											
+										</div>
+									</div>
+								
+							</li>
+													
+							<li class="cimne-nav__item cimne-nav__item--has-children" data-menu-item="261024">
+
+								<a
+									id="cimne-desktop-trigger-261024"									class="cimne-nav__link"
+									href="https://cimne.com/innovation/"																			aria-expanded="false"
+										aria-controls="cimne-desktop-mega-261024"
+										data-mega-trigger
+																	>
+									Innovation								</a>
+
+																	<div
+										id="cimne-desktop-mega-261024"
+										class="cimne-mega"
+										aria-labelledby="cimne-desktop-trigger-261024"
+										data-mega-panel
+										hidden
+									>
+										<div class="cimne-mega__inner">
+
+											<div class="cimne-mega__intro">
+												<h2 class="cimne-mega__title">
+													Innovation												</h2>
+
+																									<p class="cimne-mega__description">
+														Innovation
+
+Delivering tangible solutions for the benefit of all													</p>
+																							</div>
+
+											<div class="cimne-mega__navigation">
+												<ul class="cimne-mega__list">
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/innovation/innovation-units/">
+																Innovation units															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/innovation/tech-transfer/">
+																Technology Transfer															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/innovation/technologies-portfolio/">
+																Technologies Portfolio															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/innovation/software/">
+																Software															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/innovation/research-impact/">
+																Research Impact															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/innovation/spin-offs/">
+																Spin-offs															</a>
+														</li>
+																									</ul>
+											</div>
+
+																							
+												<div class="cimne-mega__feature">
+													<a
+														class="cimne-mega-feature"
+														href="https://cimne.com/safeguarding-nuclear-power-plants-for-a-sustainable-future/"
+																											>
+
+																													<figure class="cimne-mega-feature__media">
+																<img width="800" height="450" src="https://cimne.com/wp-content/uploads/2025/08/cimne-menu-nuclear-1.jpg" class="cimne-mega-feature__image" alt="Cimne menu nuclear" loading="lazy" decoding="async" />															</figure>
+														
+														<div class="cimne-mega-feature__content">
+															
+															
+																															<span class="cimne-mega-feature__title">
+																	See how advanced simulation enhances nuclear safety																</span>
+															
+															<span class="cimne-mega-feature__arrow" aria-hidden="true">&rarr;</span>
+														</div>
+
+													</a>
+												</div>
+											
+										</div>
+									</div>
+								
+							</li>
+													
+							<li class="cimne-nav__item cimne-nav__item--has-children" data-menu-item="261020">
+
+								<a
+									id="cimne-desktop-trigger-261020"									class="cimne-nav__link"
+									href="https://cimne.com/community/"																			aria-expanded="false"
+										aria-controls="cimne-desktop-mega-261020"
+										data-mega-trigger
+																	>
+									Community								</a>
+
+																	<div
+										id="cimne-desktop-mega-261020"
+										class="cimne-mega"
+										aria-labelledby="cimne-desktop-trigger-261020"
+										data-mega-panel
+										hidden
+									>
+										<div class="cimne-mega__inner">
+
+											<div class="cimne-mega__intro">
+												<h2 class="cimne-mega__title">
+													Community												</h2>
+
+																									<p class="cimne-mega__description">
+														Community
+
+A thriving network of global innovators, thinkers, and life-long learners in numerical methods.													</p>
+																							</div>
+
+											<div class="cimne-mega__navigation">
+												<ul class="cimne-mega__list">
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/community/cimne-labs/">
+																CIMNE Labs															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/community/unesco-chair/">
+																UNESCO Chair															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/community/alliances/">
+																Alliances															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/community/training/">
+																Training															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="/category/events/">
+																Events															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="/category/news/">
+																News															</a>
+														</li>
+																									</ul>
+											</div>
+
+																							
+												<div class="cimne-mega__feature">
+													<a
+														class="cimne-mega-feature"
+														href="https://cimne.com/community/unesco-chair/"
+																											>
+
+																													<figure class="cimne-mega-feature__media">
+																<img width="800" height="450" src="https://cimne.com/wp-content/uploads/2026/02/cimne-menu-unesco.jpg" class="cimne-mega-feature__image" alt="Cimne menu unesco" loading="lazy" decoding="async" />															</figure>
+														
+														<div class="cimne-mega-feature__content">
+															
+															
+																															<span class="cimne-mega-feature__title">
+																	Learn how the UNESCO Chair in Numerical Methods spearheads frontier innovation in the Global South																</span>
+															
+															<span class="cimne-mega-feature__arrow" aria-hidden="true">&rarr;</span>
+														</div>
+
+													</a>
+												</div>
+											
+										</div>
+									</div>
+								
+							</li>
+													
+							<li class="cimne-nav__item cimne-nav__item--has-children" data-menu-item="261074">
+
+								<a
+									id="cimne-desktop-trigger-261074"									class="cimne-nav__link"
+									href="https://cimne.com/about/"																			aria-expanded="false"
+										aria-controls="cimne-desktop-mega-261074"
+										data-mega-trigger
+																	>
+									About								</a>
+
+																	<div
+										id="cimne-desktop-mega-261074"
+										class="cimne-mega"
+										aria-labelledby="cimne-desktop-trigger-261074"
+										data-mega-panel
+										hidden
+									>
+										<div class="cimne-mega__inner">
+
+											<div class="cimne-mega__intro">
+												<h2 class="cimne-mega__title">
+													About												</h2>
+
+																									<p class="cimne-mega__description">
+														About
+
+We are a pioneering research and innovation centre in computational engineering, founded in 1987													</p>
+																							</div>
+
+											<div class="cimne-mega__navigation">
+												<ul class="cimne-mega__list">
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/about/mission/">
+																Mission and History															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/about/scientific-advisory-council/">
+																Scientific Advisory Council															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/about/awards/">
+																Awards															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/about/organizational-chart/">
+																Organizational chart															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/about/directory/">
+																Directory															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/about/our-values/">
+																Our values															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/about/transparency/">
+																Transparency															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/about/press-room/">
+																Press Room															</a>
+														</li>
+																											<li class="cimne-mega__item">
+															<a class="cimne-mega__link" href="https://cimne.com/about/where-we-are/">
+																Where we are															</a>
+														</li>
+																									</ul>
+											</div>
+
+																							
+												<div class="cimne-mega__feature">
+													<a
+														class="cimne-mega-feature"
+														href="https://cimne.com/about/directory/"
+																											>
+
+																													<figure class="cimne-mega-feature__media">
+																<img width="800" height="450" src="https://cimne.com/wp-content/uploads/2025/08/cimne-menu-people.jpg" class="cimne-mega-feature__image" alt="Cimne menu people" loading="lazy" decoding="async" />															</figure>
+														
+														<div class="cimne-mega-feature__content">
+															
+															
+																															<span class="cimne-mega-feature__title">
+																	People at CIMNE: Meet the talent that makes it possible																</span>
+															
+															<span class="cimne-mega-feature__arrow" aria-hidden="true">&rarr;</span>
+														</div>
+
+													</a>
+												</div>
+											
+										</div>
+									</div>
+								
+							</li>
+													
+							<li class="cimne-nav__item header-cta cimne-nav__item--cta" data-menu-item="261073">
+
+								<a
+																		class="cimne-nav__link cimne-nav__link--cta"
+									href="https://cimne.com/jobs-fellowships/"																	>
+									Jobs &#038; Fellowships								</a>
+
+								
+							</li>
+						
+					</ul>
+				</nav>
+			
+
+			<div
+				id="cimne-search-desktop"
+				class="cimne-search-slot cimne-search-slot--desktop"
+				data-search-panel="desktop"
+				hidden
+			>
+				<form
+					class="cimne-search-form"
+					role="search"
+					method="get"
+					action="https://cimne.com/"
+				>
+					<label class="screen-reader-text" for="cimne-search-field-desktop">
+						Search CIMNE					</label>
+
+					<div class="cimne-search-form__field-wrapper">
+						<input
+							id="cimne-search-field-desktop"
+							class="cimne-search-form__field"
+							type="search"
+							name="s"
+							value=""
+							placeholder="Search"
+							autocomplete="off"
+						>
+
+						<button
+							class="cimne-search-form__submit"
+							type="submit"
+							aria-label="Submit search"
+						>
+							<svg class="cimne-icon cimne-icon--search" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+								<circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
+								<path d="M16 16L21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+							</svg>
+						</button>
+					</div>
+				</form>
+
+				<button
+					class="cimne-search-close cimne-search-close--desktop"
+					type="button"
+					aria-label="Close search"
+					data-search-close
+				>
+					<svg class="cimne-icon cimne-icon--close" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+						<path d="M5 5L19 19M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+					</svg>
+				</button>
+			</div>
+
+			<button
+				class="cimne-search-toggle cimne-search-toggle--desktop"
+				type="button"
+				aria-expanded="false"
+				aria-controls="cimne-search-desktop"
+				aria-label="Open search"
+				data-search-toggle
+			>
+				<svg
+					class="cimne-icon cimne-icon--search"
+					viewBox="0 0 24 24"
+					width="24"
+					height="24"
+					aria-hidden="true"
+					focusable="false"
+				>
+					<circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
+					<path d="M16 16L21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</button>
+
+		</div>
+	</div>
+
+</div>
+
+<div class="cimne-header__mobile" data-mobile-header>
+
+	<div class="cimne-header__mobile-bar">
+
+		<a
+			class="cimne-header__logo cimne-header__logo--mobile"
+			href="https://cimne.com/"
+			aria-label="CIMNE - Home"
+		>
+			<img decoding="async" class="cimne-header__logo-image" src="https://cimne.com/wp-content/uploads/2024/09/logo-color-cimne-web.png" alt="CIMNE">		</a>
+
+
+		<div
+			id="cimne-search-mobile"
+			class="cimne-search-slot cimne-search-slot--mobile"
+			data-search-panel="mobile"
+			hidden
+		>
+			<form
+				class="cimne-search-form cimne-search-form--mobile"
+				role="search"
+				method="get"
+				action="https://cimne.com/"
+			>
+				<label class="screen-reader-text" for="cimne-search-field-mobile">
+					Search CIMNE				</label>
+
+				<div class="cimne-search-form__field-wrapper">
+					<input
+						id="cimne-search-field-mobile"
+						class="cimne-search-form__field"
+						type="search"
+						name="s"
+						value=""
+						placeholder="Search"
+						autocomplete="off"
+					>
+
+					<button
+						class="cimne-search-form__submit"
+						type="submit"
+						aria-label="Submit search"
+					>
+						<svg class="cimne-icon cimne-icon--search" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+							<circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
+							<path d="M16 16L21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+						</svg>
+					</button>
+				</div>
+			</form>
+
+			<button
+				class="cimne-search-close cimne-search-close--mobile"
+				type="button"
+				aria-label="Close search"
+				data-search-close
+			>
+				<svg class="cimne-icon cimne-icon--close" viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false">
+					<path d="M5 5L19 19M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</button>
+		</div>
+
+		<div class="cimne-header__mobile-actions">
+
+			<button
+				class="cimne-search-toggle cimne-search-toggle--mobile"
+				type="button"
+				aria-expanded="false"
+				aria-controls="cimne-search-mobile"
+				aria-label="Open search"
+				data-search-toggle
+			>
+				<svg
+					class="cimne-icon cimne-icon--search"
+					viewBox="0 0 24 24"
+					width="24"
+					height="24"
+					aria-hidden="true"
+					focusable="false"
+				>
+					<circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2" />
+					<path d="M16 16L21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+				</svg>
+			</button>
+
+			<button
+				class="cimne-mobile-toggle"
+				type="button"
+				aria-expanded="false"
+				aria-controls="cimne-mobile-navigation"
+				aria-label="Open navigation"
+				data-mobile-toggle
+			>
+				<span class="cimne-mobile-toggle__icon cimne-mobile-toggle__icon--open" aria-hidden="true">
+					<svg
+						class="cimne-icon cimne-icon--menu"
+						viewBox="0 0 24 24"
+						width="24"
+						height="24"
+						focusable="false"
+					>
+						<path d="M4 6H20M4 12H20M4 18H20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+					</svg>
+				</span>
+
+				<span class="cimne-mobile-toggle__icon cimne-mobile-toggle__icon--close" aria-hidden="true">
+					<svg
+						class="cimne-icon cimne-icon--close"
+						viewBox="0 0 24 24"
+						width="24"
+						height="24"
+						focusable="false"
+					>
+						<path d="M5 5L19 19M19 5L5 19" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+					</svg>
+				</span>
+			</button>
+
+		</div>
+	</div>
+
+	<div
+		id="cimne-mobile-navigation"
+		class="cimne-mobile-navigation"
+		data-mobile-navigation
+		hidden
+	>
+		<div class="cimne-mobile-navigation__scroll">
+
+			<div class="cimne-mobile-panel cimne-mobile-panel--root" data-mobile-panel="root">
+
+									<nav class="cimne-mobile-nav" aria-label="Primary navigation">
+						<ul class="cimne-mobile-nav__list">
+															
+								<li class="cimne-mobile-nav__item cimne-mobile-nav__item--has-children">
+									<div class="cimne-mobile-nav__row">
+										<a
+											class="cimne-mobile-nav__link"
+											href="https://cimne.com/research/"										>
+											Research										</a>
+
+																					<button
+												class="cimne-mobile-nav__submenu-toggle"
+												type="button"
+												aria-expanded="false"
+												aria-controls="cimne-mobile-panel-261015"
+												aria-label="Open Research submenu"
+												data-mobile-open="261015"
+											>
+												<span aria-hidden="true">&rarr;</span>
+											</button>
+																			</div>
+								</li>
+															
+								<li class="cimne-mobile-nav__item cimne-mobile-nav__item--has-children">
+									<div class="cimne-mobile-nav__row">
+										<a
+											class="cimne-mobile-nav__link"
+											href="https://cimne.com/innovation/"										>
+											Innovation										</a>
+
+																					<button
+												class="cimne-mobile-nav__submenu-toggle"
+												type="button"
+												aria-expanded="false"
+												aria-controls="cimne-mobile-panel-261024"
+												aria-label="Open Innovation submenu"
+												data-mobile-open="261024"
+											>
+												<span aria-hidden="true">&rarr;</span>
+											</button>
+																			</div>
+								</li>
+															
+								<li class="cimne-mobile-nav__item cimne-mobile-nav__item--has-children">
+									<div class="cimne-mobile-nav__row">
+										<a
+											class="cimne-mobile-nav__link"
+											href="https://cimne.com/community/"										>
+											Community										</a>
+
+																					<button
+												class="cimne-mobile-nav__submenu-toggle"
+												type="button"
+												aria-expanded="false"
+												aria-controls="cimne-mobile-panel-261020"
+												aria-label="Open Community submenu"
+												data-mobile-open="261020"
+											>
+												<span aria-hidden="true">&rarr;</span>
+											</button>
+																			</div>
+								</li>
+															
+								<li class="cimne-mobile-nav__item cimne-mobile-nav__item--has-children">
+									<div class="cimne-mobile-nav__row">
+										<a
+											class="cimne-mobile-nav__link"
+											href="https://cimne.com/about/"										>
+											About										</a>
+
+																					<button
+												class="cimne-mobile-nav__submenu-toggle"
+												type="button"
+												aria-expanded="false"
+												aria-controls="cimne-mobile-panel-261074"
+												aria-label="Open About submenu"
+												data-mobile-open="261074"
+											>
+												<span aria-hidden="true">&rarr;</span>
+											</button>
+																			</div>
+								</li>
+															
+								<li class="cimne-mobile-nav__item header-cta cimne-mobile-nav__item--cta">
+									<div class="cimne-mobile-nav__row">
+										<a
+											class="cimne-mobile-nav__link cimne-mobile-nav__link--cta"
+											href="https://cimne.com/jobs-fellowships/"										>
+											Jobs &#038; Fellowships										</a>
+
+																			</div>
+								</li>
+													</ul>
+					</nav>
+				
+									<nav class="cimne-utility-nav cimne-utility-nav--mobile" aria-label="Additional navigation">
+						<ul class="cimne-utility-nav__list">
+															<li class="cimne-utility-nav__item">
+									<a class="cimne-utility-nav__link" href="https://aulas.cimne.com/">
+										CIMNE Labs									</a>
+								</li>
+															<li class="cimne-utility-nav__item">
+									<a class="cimne-utility-nav__link" href="https://congressbureau.cimne.com/">
+										Congress Bureau									</a>
+								</li>
+															<li class="cimne-utility-nav__item">
+									<a class="cimne-utility-nav__link" href="https://books.cimne.com/">
+										Bookstore									</a>
+								</li>
+															<li class="cimne-utility-nav__item utility-separator">
+									<a class="cimne-utility-nav__link" href="https://cimne.com/ethics-channel/">
+										Ethics Channel									</a>
+								</li>
+															<li class="cimne-utility-nav__item">
+									<a class="cimne-utility-nav__link" href="https://intranet.cimne.com/">
+										Intranet									</a>
+								</li>
+													</ul>
+					</nav>
+				
+									<nav class="cimne-language-nav cimne-language-nav--mobile" aria-label="Language">
+						<ul class="cimne-language-nav__list">
+																							<li class="cimne-language-nav__item">
+									<a
+										class="cimne-language-nav__link"
+										href="https://cimne.com/ca/feina-beques/personal-investigador/"
+										lang="ca"
+										hreflang="ca"
+																			>
+										CA									</a>
+								</li>
+																							<li class="cimne-language-nav__item is-current">
+									<a
+										class="cimne-language-nav__link"
+										href="https://cimne.com/jobs-fellowships/research-staff/"
+										lang="en"
+										hreflang="en"
+										aria-current="page"									>
+										EN									</a>
+								</li>
+																							<li class="cimne-language-nav__item">
+									<a
+										class="cimne-language-nav__link"
+										href="https://cimne.com/es/empleos-becas/personal-investigador/"
+										lang="es"
+										hreflang="es"
+																			>
+										ES									</a>
+								</li>
+													</ul>
+					</nav>
+				
+			</div>
+
+							
+				
+				<section
+					id="cimne-mobile-panel-261015"
+					class="cimne-mobile-panel cimne-mobile-panel--section"
+					aria-labelledby="cimne-mobile-panel-261015-title"
+					data-mobile-panel="261015"
+					hidden
+				>
+					<header class="cimne-mobile-panel__header">
+						<h2 id="cimne-mobile-panel-261015-title" class="cimne-mobile-panel__title">
+							Research						</h2>
+
+						<button
+							class="cimne-mobile-panel__back"
+							type="button"
+							aria-label="Back to main navigation"
+							data-mobile-back
+						>
+							<span aria-hidden="true">&larr;</span>
+						</button>
+					</header>
+
+											<p class="cimne-mobile-panel__description">
+							Research
+
+Computational engineering to tackle global challenges						</p>
+					
+					<ul class="cimne-mobile-panel__list">
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/research/research-challenges/">
+									Research Challenges								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/research/research-methodologies/">
+									Research Methodologies								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/research/research-clusters/">
+									Research Clusters								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/research/projects/">
+									Projects								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/research/publications/">
+									Publications								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/research/senior-distinguished-researchers/">
+									Senior Distinguished Researchers								</a>
+							</li>
+											</ul>
+				</section>
+							
+				
+				<section
+					id="cimne-mobile-panel-261024"
+					class="cimne-mobile-panel cimne-mobile-panel--section"
+					aria-labelledby="cimne-mobile-panel-261024-title"
+					data-mobile-panel="261024"
+					hidden
+				>
+					<header class="cimne-mobile-panel__header">
+						<h2 id="cimne-mobile-panel-261024-title" class="cimne-mobile-panel__title">
+							Innovation						</h2>
+
+						<button
+							class="cimne-mobile-panel__back"
+							type="button"
+							aria-label="Back to main navigation"
+							data-mobile-back
+						>
+							<span aria-hidden="true">&larr;</span>
+						</button>
+					</header>
+
+											<p class="cimne-mobile-panel__description">
+							Innovation
+
+Delivering tangible solutions for the benefit of all						</p>
+					
+					<ul class="cimne-mobile-panel__list">
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/innovation/innovation-units/">
+									Innovation units								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/innovation/tech-transfer/">
+									Technology Transfer								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/innovation/technologies-portfolio/">
+									Technologies Portfolio								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/innovation/software/">
+									Software								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/innovation/research-impact/">
+									Research Impact								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/innovation/spin-offs/">
+									Spin-offs								</a>
+							</li>
+											</ul>
+				</section>
+							
+				
+				<section
+					id="cimne-mobile-panel-261020"
+					class="cimne-mobile-panel cimne-mobile-panel--section"
+					aria-labelledby="cimne-mobile-panel-261020-title"
+					data-mobile-panel="261020"
+					hidden
+				>
+					<header class="cimne-mobile-panel__header">
+						<h2 id="cimne-mobile-panel-261020-title" class="cimne-mobile-panel__title">
+							Community						</h2>
+
+						<button
+							class="cimne-mobile-panel__back"
+							type="button"
+							aria-label="Back to main navigation"
+							data-mobile-back
+						>
+							<span aria-hidden="true">&larr;</span>
+						</button>
+					</header>
+
+											<p class="cimne-mobile-panel__description">
+							Community
+
+A thriving network of global innovators, thinkers, and life-long learners in numerical methods.						</p>
+					
+					<ul class="cimne-mobile-panel__list">
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/community/cimne-labs/">
+									CIMNE Labs								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/community/unesco-chair/">
+									UNESCO Chair								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/community/alliances/">
+									Alliances								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/community/training/">
+									Training								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="/category/events/">
+									Events								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="/category/news/">
+									News								</a>
+							</li>
+											</ul>
+				</section>
+							
+				
+				<section
+					id="cimne-mobile-panel-261074"
+					class="cimne-mobile-panel cimne-mobile-panel--section"
+					aria-labelledby="cimne-mobile-panel-261074-title"
+					data-mobile-panel="261074"
+					hidden
+				>
+					<header class="cimne-mobile-panel__header">
+						<h2 id="cimne-mobile-panel-261074-title" class="cimne-mobile-panel__title">
+							About						</h2>
+
+						<button
+							class="cimne-mobile-panel__back"
+							type="button"
+							aria-label="Back to main navigation"
+							data-mobile-back
+						>
+							<span aria-hidden="true">&larr;</span>
+						</button>
+					</header>
+
+											<p class="cimne-mobile-panel__description">
+							About
+
+We are a pioneering research and innovation centre in computational engineering, founded in 1987						</p>
+					
+					<ul class="cimne-mobile-panel__list">
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/about/mission/">
+									Mission and History								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/about/scientific-advisory-council/">
+									Scientific Advisory Council								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/about/awards/">
+									Awards								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/about/organizational-chart/">
+									Organizational chart								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/about/directory/">
+									Directory								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/about/our-values/">
+									Our values								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/about/transparency/">
+									Transparency								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/about/press-room/">
+									Press Room								</a>
+							</li>
+													<li class="cimne-mobile-panel__item">
+								<a class="cimne-mobile-panel__link" href="https://cimne.com/about/where-we-are/">
+									Where we are								</a>
+							</li>
+											</ul>
+				</section>
+												
+		</div>
+	</div>
+
+</div>
+
+
+</header>
+</div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</header>
+	<div id="et-main-area">
+	
+<div id="main-content">
+
+
+			
+				<article id="post-158" class="post-158 page type-page status-publish has-post-thumbnail hentry">
+
+				
+					<div class="entry-content">
+					<div class="et-l et-l--post">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_with_border et_pb_section et_pb_section_0 first-block first-block-desktop et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_with_border et_pb_column_2_3 et_pb_column et_pb_column_0  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_divider et_pb_divider_0 et_pb_divider_position_center et_pb_space"><div class="et_pb_divider_internal"></div></div><div class="et_pb_module et_pb_text et_pb_text_0  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner">Jobs &#038; Fellowships</div>
+			</div><div class="et_pb_module et_pb_heading et_pb_heading_0 et_pb_bg_layout_">
+				
+				
+				
+				
+				<div class="et_pb_heading_container"><h1 class="et_pb_module_heading">Research staff</h1></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_1  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Join CIMNE as a Research Staff. We are looking for your talent to push the boundaries of computational engineering research.</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_3 et_pb_column_1  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_image et_pb_image_0 fit-img">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img fetchpriority="high" decoding="async" width="414" height="220" src="https://cimne.com/wp-content/uploads/2025/04/trnimage1.png" alt="Trnimage1" title="trnimage1" class="wp-image-232432" /></span>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_with_border et_pb_section et_pb_section_1 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_2_5 et_pb_column_2  et_pb_css_mix_blend_mode_passthrough et_pb_column_empty">
+				
+				
+				
+				
+				
+			</div><div class="et_pb_column et_pb_column_3_5 et_pb_column_3  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_2  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>We list below the open job offers at CIMNE. If there are no vacancies, matching with your profile in this moment, please go to <a href="#">Career opportunities</a> section to discover fellowships and grants that you can apply for according your career stage and make an expression of interest.</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div id="section-job-offers-menu" class="et_pb_with_border et_pb_section et_pb_section_2 et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_2 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_with_border et_pb_column_4_4 et_pb_column et_pb_column_4  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div id="open-jobs-item" class="et_pb_module et_pb_heading et_pb_heading_1  tab-item et_pb_bg_layout_">
+				
+				
+				
+				
+				<div class="et_pb_heading_container"><h6 class="et_pb_module_heading">Open positions</h6></div>
+			</div><div id="closed-jobs-item" class="et_pb_module et_pb_heading et_pb_heading_2  tab-item et_pb_bg_layout_">
+				
+				
+				
+				
+				<div class="et_pb_heading_container"><h6 class="et_pb_module_heading">Closed positions</h6></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_3 open-jobs-content tab-content et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_3 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_5  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_0">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><iframe class="iframe-sin-scroll" src="https://cimne.com/jobs-fellowships/research-staff/pdi-open-jobs/" style="border:0;"></iframe></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_4 closed-jobs-content tab-content et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_4 et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_6  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_1">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><iframe class="iframe-sin-scroll" src="https://cimne.com/jobs-fellowships/research-staff/pdi-closed-jobs/" style="border:0;"></iframe></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_section et_pb_section_5 et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_5 et_pb_gutters3">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_7  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_code et_pb_code_2">
+				
+				
+				
+				
+				<div class="et_pb_code_inner"><style>
+  iframe {
+    width: 100%;
+    height: 100vh;
+  }
+</style>
+<script src="/wp-content/themes/cimne/js/iframe-resizer/iframe-resizer.parent.js"></script>
+<script>
+  iframeResize({
+    license: 'GPLv3',
+    log: 'collapsed',
+    waitForLoad: true,
+  }, '.iframe-sin-scroll');
+</script></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</div>
+						</div>
+
+				
+				</article>
+
+			
+
+</div>
+
+	<footer class="et-l et-l--footer">
+			<div class="et_builder_inner_content et_pb_gutters3">
+		<div class="et_pb_with_border et_pb_section et_pb_section_0_tb_footer footer-top et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_0_tb_footer et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_1_4 et_pb_column_0_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_heading et_pb_heading_0_tb_footer et_pb_bg_layout_">
+				
+				
+				
+				
+				<div class="et_pb_heading_container"><h2 class="et_pb_module_heading">CIMNE</h2></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_0_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p><span>Edifici C1 Campus Nord UPC </span></p>
+<p><span>C/ Gran Capità, S/N </span></p>
+<p><span>08034 Barcelona, Spain</span></p>
+<p><span></span><br /><a style="color: #fff;" href="mailto:cimne@cimne.upc.edu" alt="Mail to Cimne" title="Mail to Cimne">cimne@cimne.upc.edu</a></p>
+<p>+34 93 401 74 95</p></div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_1_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_heading et_pb_heading_1_tb_footer et_pb_bg_layout_">
+				
+				
+				
+				
+				<div class="et_pb_heading_container"><h2 class="et_pb_module_heading">SOCIAL NETWORKS</h2></div>
+			</div><div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_0_tb_footer et_clickable  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></div>
+					<div class="et_pb_blurb_container">
+						<h3 class="et_pb_module_header"><span>X (FKA Twitter)</span></h3>
+						
+					</div>
+				</div>
+			</div><div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_1_tb_footer et_clickable  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></div>
+					<div class="et_pb_blurb_container">
+						<h3 class="et_pb_module_header"><span>Bluesky</span></h3>
+						
+					</div>
+				</div>
+			</div><div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_2_tb_footer et_clickable  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></div>
+					<div class="et_pb_blurb_container">
+						<h3 class="et_pb_module_header"><span>LinkedIn</span></h3>
+						
+					</div>
+				</div>
+			</div><div class="et_pb_with_border et_pb_module et_pb_blurb et_pb_blurb_3_tb_footer et_clickable  et_pb_text_align_left  et_pb_blurb_position_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_blurb_content">
+					<div class="et_pb_main_blurb_image"><span class="et_pb_image_wrap"><span class="et-waypoint et_pb_animation_top et_pb_animation_top_tablet et_pb_animation_top_phone et-pb-icon"></span></span></div>
+					<div class="et_pb_blurb_container">
+						<h3 class="et_pb_module_header"><span>Youtube</span></h3>
+						
+					</div>
+				</div>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_2_tb_footer  et_pb_css_mix_blend_mode_passthrough">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_heading et_pb_heading_2_tb_footer et_pb_bg_layout_">
+				
+				
+				
+				
+				<div class="et_pb_heading_container"><h2 class="et_pb_module_heading">CONSORTIUM</h2></div>
+			</div><div class="et_pb_module et_pb_image et_pb_image_0_tb_footer">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="153" height="38" src="https://cimne.com/wp-content/uploads/2024/09/gencat-1.png" alt="" title="gencat 1" class="wp-image-225979" /></span>
+			</div><div class="et_pb_module et_pb_image et_pb_image_1_tb_footer">
+				
+				
+				
+				
+				<span class="et_pb_image_wrap "><img loading="lazy" decoding="async" width="163" height="33" src="https://cimne.com/wp-content/uploads/2024/09/upc-1.png" alt="" title="upc 1" class="wp-image-225976" /></span>
+			</div>
+			</div><div class="et_pb_column et_pb_column_1_4 et_pb_column_3_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_heading et_pb_heading_3_tb_footer et_pb_bg_layout_">
+				
+				
+				
+				
+				<div class="et_pb_heading_container"><h2 class="et_pb_module_heading">OTHER LINKS</h2></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_1_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>Contractor Profile</p></div>
+			</div><div class="et_pb_module et_pb_text et_pb_text_2_tb_footer et_clickable  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>CIMNE Tecnologia Contractor Profile</p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div><div class="et_pb_with_border et_pb_section et_pb_section_1_tb_footer footer-botom et_pb_with_background et_section_regular" >
+				
+				
+				
+				
+				
+				
+				<div class="et_pb_row et_pb_row_1_tb_footer et_pb_equal_columns et_pb_gutters1">
+				<div class="et_pb_column et_pb_column_4_4 et_pb_column_4_tb_footer  et_pb_css_mix_blend_mode_passthrough et-last-child">
+				
+				
+				
+				
+				<div class="et_pb_module et_pb_text et_pb_text_3_tb_footer  et_pb_text_align_left et_pb_bg_layout_light">
+				
+				
+				
+				
+				<div class="et_pb_text_inner"><p>2025 © Centre Internacional de Mètodes Numèrics a l&#8217;Enginyeria | <a href="/general-terms-of-use-and-access/" target="_blank" rel="noopener" title="General Terms of Use and Access">General Terms of Use and Access</a> | <a href="/privacy-policy/" target="_blank" rel="noopener" title="Privacy Policy">Privacy Policy</a> | <a href="/cookies-policy/" target="_blank" rel="noopener" title="Cookies policy">Cookies policy</a> | <a href="/accessibility/" target="_blank" rel="noopener" title="Accessibility"><span data-sheets-root="1">Accessibility</span></a> | <a href="/sitemap/" target="_blank" rel="noopener" title="Sitemap">Sitemap</a></p></div>
+			</div>
+			</div>
+				
+				
+				
+				
+			</div>
+				
+				
+			</div>		</div>
+	</footer>
+		</div>
+
+			
+		</div>
+		</div>
+
+			<script type="speculationrules">
+{"prefetch":[{"source":"document","where":{"and":[{"href_matches":"/*"},{"not":{"href_matches":["/wp-*.php","/wp-admin/*","/wp-content/uploads/*","/wp-content/*","/wp-content/plugins/*","/wp-content/themes/cimne/*","/wp-content/themes/Divi/*","/*\\?(.+)"]}},{"not":{"selector_matches":"a[rel~=\"nofollow\"]"}},{"not":{"selector_matches":".no-prefetch, .no-prefetch a"}}]},"eagerness":"conservative"}]}
+</script>
+
+<!-- Consent Management powered by Complianz | GDPR/CCPA Cookie Consent https://wordpress.org/plugins/complianz-gdpr -->
+<div id="cmplz-cookiebanner-container"><div id="cmplz-cookiebanner-1-optin" class="cmplz-cookiebanner cmplz-hidden banner-1 banner-a optin cmplz-bottom cmplz-categories-type-view-preferences" aria-modal="true" data-nosnippet="true" role="dialog" aria-live="polite" aria-labelledby="cmplz-header-1-optin" aria-describedby="cmplz-message-1-optin">
+	<div class="cmplz-header">
+		<div class="cmplz-logo"></div>
+		<div class="cmplz-title" id="cmplz-header-1-optin">Manage Consent</div>
+		<div class="cmplz-close" tabindex="0" role="button" aria-label="Close dialog">
+			<svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="times" class="svg-inline--fa fa-times fa-w-11" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 352 512"><path fill="currentColor" d="M242.72 256l100.07-100.07c12.28-12.28 12.28-32.19 0-44.48l-22.24-22.24c-12.28-12.28-32.19-12.28-44.48 0L176 189.28 75.93 89.21c-12.28-12.28-32.19-12.28-44.48 0L9.21 111.45c-12.28 12.28-12.28 32.19 0 44.48L109.28 256 9.21 356.07c-12.28 12.28-12.28 32.19 0 44.48l22.24 22.24c12.28 12.28 32.2 12.28 44.48 0L176 322.72l100.07 100.07c12.28 12.28 32.2 12.28 44.48 0l22.24-22.24c12.28-12.28 12.28-32.19 0-44.48L242.72 256z"></path></svg>
+		</div>
+	</div>
+
+	<div class="cmplz-divider cmplz-divider-header"></div>
+	<div class="cmplz-body">
+		<div class="cmplz-message" id="cmplz-message-1-optin">To provide the best experiences, we use technologies like cookies to store and/or access device information. Consenting to these technologies will allow us to process data such as browsing behavior or unique IDs on this site. Not consenting or withdrawing consent, may adversely affect certain features and functions.</div>
+		<!-- categories start -->
+		<div class="cmplz-categories">
+			<div class="cmplz-category cmplz-functional">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-functional-1-optin">Functional</span>
+					<span class='cmplz-always-active'>
+						<span class="cmplz-banner-checkbox">
+							<input type="checkbox"
+									id="cmplz-functional-optin"
+									data-category="cmplz_functional"
+									class="cmplz-consent-checkbox cmplz-functional"
+									size="40"
+									value="1"/>
+							<label class="cmplz-label" for="cmplz-functional-optin"><span class="screen-reader-text">Functional</span></label>
+						</span>
+						Always active					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-functional-1-optin"
+							aria-labelledby="cmplz-title-functional-1-optin">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-functional-1-optin" hidden>
+					<span class="cmplz-description-functional">The technical storage or access is strictly necessary for the legitimate purpose of enabling the use of a specific service explicitly requested by the subscriber or user, or for the sole purpose of carrying out the transmission of a communication over an electronic communications network.</span>
+				</div>
+			</div>
+
+			<div class="cmplz-category cmplz-preferences">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-preferences-1-optin">Preferences</span>
+					<span class="cmplz-banner-checkbox">
+						<input type="checkbox"
+								id="cmplz-preferences-optin"
+								data-category="cmplz_preferences"
+								class="cmplz-consent-checkbox cmplz-preferences"
+								size="40"
+								value="1"/>
+						<label class="cmplz-label" for="cmplz-preferences-optin"><span class="screen-reader-text">Preferences</span></label>
+					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-preferences-1-optin"
+							aria-labelledby="cmplz-title-preferences-1-optin">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-preferences-1-optin" hidden>
+					<span class="cmplz-description-preferences">The technical storage or access is necessary for the legitimate purpose of storing preferences that are not requested by the subscriber or user.</span>
+				</div>
+			</div>
+
+			<div class="cmplz-category cmplz-statistics">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-statistics-1-optin">Statistics</span>
+					<span class="cmplz-banner-checkbox">
+						<input type="checkbox"
+								id="cmplz-statistics-optin"
+								data-category="cmplz_statistics"
+								class="cmplz-consent-checkbox cmplz-statistics"
+								size="40"
+								value="1"/>
+						<label class="cmplz-label" for="cmplz-statistics-optin"><span class="screen-reader-text">Statistics</span></label>
+					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-statistics-1-optin"
+							aria-labelledby="cmplz-title-statistics-1-optin">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-statistics-1-optin" hidden>
+					<span class="cmplz-description-statistics">The technical storage or access that is used exclusively for statistical purposes.</span>
+					<span class="cmplz-description-statistics-anonymous">The technical storage or access that is used exclusively for anonymous statistical purposes. Without a subpoena, voluntary compliance on the part of your Internet Service Provider, or additional records from a third party, information stored or retrieved for this purpose alone cannot usually be used to identify you.</span>
+				</div>
+			</div>
+
+			<div class="cmplz-category cmplz-marketing">
+				<div class="cmplz-category-header">
+					<span class="cmplz-category-title" id="cmplz-title-marketing-1-optin">Marketing</span>
+					<span class="cmplz-banner-checkbox">
+						<input type="checkbox"
+								id="cmplz-marketing-optin"
+								data-category="cmplz_marketing"
+								class="cmplz-consent-checkbox cmplz-marketing"
+								size="40"
+								value="1"/>
+						<label class="cmplz-label" for="cmplz-marketing-optin"><span class="screen-reader-text">Marketing</span></label>
+					</span>
+					<button class="cmplz-category-toggle"
+							aria-expanded="false"
+							aria-controls="cmplz-desc-marketing-1-optin"
+							aria-labelledby="cmplz-title-marketing-1-optin">
+						<span class="cmplz-icon cmplz-open">
+							<svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" height="18"><path d="M224 416c-8.188 0-16.38-3.125-22.62-9.375l-192-192c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0L224 338.8l169.4-169.4c12.5-12.5 32.75-12.5 45.25 0s12.5 32.75 0 45.25l-192 192C240.4 412.9 232.2 416 224 416z"/></svg>
+						</span>
+					</button>
+				</div>
+				<div class="cmplz-description" id="cmplz-desc-marketing-1-optin" hidden>
+					<span class="cmplz-description-marketing">The technical storage or access is required to create user profiles to send advertising, or to track the user on a website or across several websites for similar marketing purposes.</span>
+				</div>
+			</div>
+		</div><!-- categories end -->
+			</div>
+
+	<div class="cmplz-links cmplz-information">
+		<ul>
+			<li><a class="cmplz-link cmplz-manage-options cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">Manage options</a></li>
+			<li><a class="cmplz-link cmplz-manage-third-parties cookie-statement" href="#" data-relative_url="#cmplz-cookies-overview">Manage services</a></li>
+			<li><a class="cmplz-link cmplz-manage-vendors tcf cookie-statement" href="#" data-relative_url="#cmplz-tcf-wrapper">Manage {vendor_count} vendors</a></li>
+			<li><a class="cmplz-link cmplz-external cmplz-read-more-purposes tcf" target="_blank" rel="noopener noreferrer nofollow" href="https://cookiedatabase.org/tcf/purposes/" aria-label="Read more about TCF purposes on Cookie Database">Read more about these purposes</a></li>
+		</ul>
+			</div>
+
+	<div class="cmplz-divider cmplz-footer"></div>
+
+	<div class="cmplz-buttons">
+		<button class="cmplz-btn cmplz-accept">Accept</button>
+		<button class="cmplz-btn cmplz-deny">Deny</button>
+		<button class="cmplz-btn cmplz-view-preferences">View preferences</button>
+		<button class="cmplz-btn cmplz-save-preferences">Save preferences</button>
+		<a class="cmplz-btn cmplz-manage-options tcf cookie-statement" href="#" data-relative_url="#cmplz-manage-consent-container">View preferences</a>
+			</div>
+
+
+	<div class="cmplz-documents cmplz-links">
+		<ul>
+			<li><a class="cmplz-link cookie-statement" href="#" data-relative_url="">{title}</a></li>
+			<li><a class="cmplz-link privacy-statement" href="#" data-relative_url="">{title}</a></li>
+			<li><a class="cmplz-link impressum" href="#" data-relative_url="">{title}</a></li>
+		</ul>
+			</div>
+</div>
+</div>
+					<div id="cmplz-manage-consent" data-nosnippet="true"><button class="cmplz-btn cmplz-hidden cmplz-manage-consent manage-consent-1" aria-haspopup="dialog" aria-controls="cmplz-cookiebanner-1-optin">Manage consent</button>
+
+</div>	<script data-service="youtube" data-category="marketing" type="text/plain">
+				var et_link_options_data = [{"class":"et_pb_blurb_0_tb_footer","url":"https:\/\/x.com\/cimne","target":"_blank"},{"class":"et_pb_blurb_1_tb_footer","url":"https:\/\/bsky.app\/profile\/cimne.com","target":"_blank"},{"class":"et_pb_blurb_2_tb_footer","url":"https:\/\/www.linkedin.com\/company\/cimne","target":"_blank"},{"class":"et_pb_blurb_3_tb_footer","url":"https:\/\/www.youtube.com\/cimneMC","target":"_blank"},{"class":"et_pb_text_1_tb_footer","url":"https:\/\/contractaciopublica.cat\/ca\/perfils-contractant\/detall\/CIMNE?categoria=0","target":"_blank"},{"class":"et_pb_text_2_tb_footer","url":"https:\/\/contractaciopublica.cat\/ca\/perfils-contractant\/detall\/95632658?categoria=0","target":"_blank"}];
+			</script>
+	<script type="application/ld+json" id="slim-seo-schema">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://cimne.com/#website","url":"https://cimne.com/","name":"CIMNE","description":"International Centre for Numerical Methods in Engineering","inLanguage":"en-US","potentialAction":{"@id":"https://cimne.com/#searchaction"},"publisher":{"@id":"https://cimne.com/#organization"}},{"@type":"SearchAction","@id":"https://cimne.com/#searchaction","target":"https://cimne.com/?s={search_term_string}","query-input":"required name=search_term_string"},{"@type":"BreadcrumbList","name":"Breadcrumbs","@id":"https://cimne.com/jobs-fellowships/research-staff/#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://cimne.com/"},{"@type":"ListItem","position":2,"name":"Jobs & Fellowships","item":"https://cimne.com/jobs-fellowships/"},{"@type":"ListItem","position":3,"name":"Research staff"}]},{"@type":"WebPage","@id":"https://cimne.com/jobs-fellowships/research-staff/#webpage","url":"https://cimne.com/jobs-fellowships/research-staff/","inLanguage":"en-US","name":"Research staff | CIMNE","description":"Join CIMNE as a Research Staff. We are looking for your talent to push the boundaries of computational engineering research. We list below the open job offers a","datePublished":"2024-07-18T12:35:27+02:00","dateModified":"2026-08-06T11:37:02+02:00","isPartOf":{"@id":"https://cimne.com/#website"},"breadcrumb":{"@id":"https://cimne.com/jobs-fellowships/research-staff/#breadcrumblist"},"potentialAction":{"@id":"https://cimne.com/jobs-fellowships/research-staff/#readaction"},"primaryImageOfPage":{"@id":"https://cimne.com/jobs-fellowships/research-staff/#thumbnail"},"image":{"@id":"https://cimne.com/jobs-fellowships/research-staff/#thumbnail"}},{"@type":"ReadAction","@id":"https://cimne.com/jobs-fellowships/research-staff/#readaction","target":"https://cimne.com/jobs-fellowships/research-staff/"},{"@type":"Organization","@id":"https://cimne.com/#organization","url":"https://cimne.com/","name":"CIMNE"},{"@type":"ImageObject","@id":"https://cimne.com/jobs-fellowships/research-staff/#thumbnail","url":"https://cimne.com/wp-content/uploads/2025/04/trnimage1.png","contentUrl":"https://cimne.com/wp-content/uploads/2025/04/trnimage1.png","width":414,"height":220}]}</script><script id="divi-custom-script-js-extra">
+var DIVI = {"item_count":"%d Item","items_count":"%d Items"};
+var et_builder_utils_params = {"condition":{"diviTheme":true,"extraTheme":false},"scrollLocations":["app","top"],"builderScrollLocations":{"desktop":"app","tablet":"app","phone":"app"},"onloadScrollLocation":"app","builderType":"fe"};
+var et_frontend_scripts = {"builderCssContainerPrefix":"#et-boc","builderCssLayoutPrefix":"#et-boc .et-l"};
+var et_pb_custom = {"ajaxurl":"https://cimne.com/wp-admin/admin-ajax.php","images_uri":"https://cimne.com/wp-content/themes/Divi/images","builder_images_uri":"https://cimne.com/wp-content/themes/Divi/includes/builder/images","et_frontend_nonce":"5792d6e7b0","subscription_failed":"Please, check the fields below to make sure you entered the correct information.","et_ab_log_nonce":"4e7115239c","fill_message":"Please, fill in the following fields:","contact_error_message":"Please, fix the following errors:","invalid":"Invalid email","captcha":"Captcha","prev":"Prev","previous":"Previous","next":"Next","wrong_captcha":"You entered the wrong number in captcha.","wrong_checkbox":"Checkbox","ignore_waypoints":"no","is_divi_theme_used":"1","widget_search_selector":".widget_search","ab_tests":[],"is_ab_testing_active":"","page_id":"158","unique_test_id":"","ab_bounce_rate":"5","is_cache_plugin_active":"yes","is_shortcode_tracking":"","tinymce_uri":"https://cimne.com/wp-content/themes/Divi/includes/builder/frontend-builder/assets/vendors","accent_color":"#2ea3f2","waypoints_options":[]};
+var et_pb_box_shadow_elements = [];
+//# sourceURL=divi-custom-script-js-extra
+</script>
+<script id="divi-custom-script-js" src="https://cimne.com/wp-content/themes/Divi/js/scripts.min.js?ver=4.27.9"></script>
+<script id="fitvids-js" src="https://cimne.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.fitvids.js?ver=4.27.9"></script>
+<script async data-wp-strategy="async" fetchpriority="low" id="comment-reply-js" src="https://cimne.com/wp-includes/js/comment-reply.min.js?ver=7.1.3"></script>
+<script id="jquery-mobile-js" src="https://cimne.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/jquery.mobile.js?ver=4.27.9"></script>
+<script id="magnific-popup-js" src="https://cimne.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/magnific-popup.js?ver=4.27.9"></script>
+<script id="easypiechart-js" src="https://cimne.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/easypiechart.js?ver=4.27.9"></script>
+<script id="salvattore-js" src="https://cimne.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/salvattore.js?ver=4.27.9"></script>
+<script id="et-core-common-js" src="https://cimne.com/wp-content/themes/Divi/core/admin/js/common.js?ver=4.27.9"></script>
+<script data-wp-strategy="defer" defer id="cimne-global-js" src="https://cimne.com/wp-content/themes/cimne/js/functions.js?ver=1788344269"></script>
+<script id="cimne-navigation-js" src="https://cimne.com/wp-content/themes/cimne/js/navigation.js?ver=1787045800"></script>
+<script id="cmplz-cookiebanner-js-extra">
+var complianz = {"prefix":"cmplz_","debug":"","user_banner_id":"1","set_cookies":[],"block_ajax_content":"","banner_version":"92","version":"7.5.6","store_consent":"","do_not_track_enabled":"1","consenttype":"optin","region":"eu","geoip":"","dismiss_timeout":"","disable_cookiebanner":"","soft_cookiewall":"","dismiss_on_scroll":"","cookie_expiry":"365","url":"https://cimne.com/wp-json/complianz/v1/","locale":"lang=en&locale=en_US","set_cookies_on_root":"","cookie_domain":"","current_policy_id":"49","cookie_path":"/","categories":{"statistics":"statistics","marketing":"marketing"},"tcf_active":"","placeholdertext":"Click to accept {category} cookies and enable this content","css_file":"https://cimne.com/wp-content/uploads/complianz/css/banner-{banner_id}-{type}.css?v=92","page_links":{"eu":{"cookie-statement":{"title":"Cookies policy in this site web pages","url":"https://cimne.com/cookies-policy/"},"privacy-statement":{"title":"Privacy Policy","url":"https://cimne.com/privacy-policy/"},"impressum":{"title":"General Terms of Use and Access","url":"https://cimne.com/general-terms-of-use-and-access/"}},"us":{"impressum":{"title":"General Terms of Use and Access","url":"https://cimne.com/general-terms-of-use-and-access/"}},"uk":{"impressum":{"title":"General Terms of Use and Access","url":"https://cimne.com/general-terms-of-use-and-access/"}},"ca":{"impressum":{"title":"General Terms of Use and Access","url":"https://cimne.com/general-terms-of-use-and-access/"}},"au":{"impressum":{"title":"General Terms of Use and Access","url":"https://cimne.com/general-terms-of-use-and-access/"}},"za":{"impressum":{"title":"General Terms of Use and Access","url":"https://cimne.com/general-terms-of-use-and-access/"}},"br":{"impressum":{"title":"General Terms of Use and Access","url":"https://cimne.com/general-terms-of-use-and-access/"}}},"tm_categories":"1","forceEnableStats":"","preview":"","clean_cookies":"","aria_label":"Click to accept {category} cookies and enable this content","iapi_nav":"fallback","is_cookiepolicy_page":""};
+//# sourceURL=cmplz-cookiebanner-js-extra
+</script>
+<script defer id="cmplz-cookiebanner-js" src="https://cimne.com/wp-content/plugins/complianz-gdpr/cookiebanner/js/complianz.min.js?ver=1791929033"></script>
+<script data-waitfor="maps.googleapis.com" type="text/plain" data-service="google-maps" data-category="marketing" id="cmplz-cookiebanner-js-after">
+		
+			let cmplz_activated_divi_recaptcha = false;
+			document.addEventListener("cmplz_enable_category", function (e) {
+				if (!cmplz_activated_divi_recaptcha && (e.detail.category==='marketing' || e.detail.service === 'google-recaptcha') ){
+					cmplz_divi_init_recaptcha();
+				}
+			});
+
+			function cmplz_divi_init_recaptcha() {
+				if ('undefined' === typeof window.jQuery || 'undefined' === typeof window.etCore ) {
+					setTimeout(cmplz_divi_init_recaptcha, 500);
+				} else {
+					window.etCore.api.spam.recaptcha.init();
+					cmplz_activated_divi_recaptcha = true;
+				}
+			}
+		
+		
+		
+			let cmplz_activated_divi_maps = false;
+			document.addEventListener("cmplz_enable_category", function (e) {
+				if (!cmplz_activated_divi_maps && (e.detail.category==='marketing' || e.detail.service === 'google-maps') ){
+					cmplz_divi_init_map();
+				}
+			});
+
+			function cmplz_divi_init_map() {
+				if ('undefined' === typeof window.jQuery || 'undefined' === typeof window.et_pb_map_init ) {
+					setTimeout(cmplz_divi_init_map, 1000);
+				} else {
+					let map_container = jQuery(".et_pb_map_container");
+					map_container.each(function () {
+						window.et_pb_map_init(jQuery(this));
+						cmplz_activated_divi_maps = true;
+					})
+				}
+			}
+			setTimeout(cmplz_divi_init_map, 300);
+		
+
+		
+//# sourceURL=cmplz-cookiebanner-js-after
+</script>
+<script id="divi-accessibility-da11y-js-extra">
+var _da11y = {"version":"2.0.5","active_outline_color":"#2ea3f2","skip_navigation_link_text":"Skip to content"};
+//# sourceURL=divi-accessibility-da11y-js-extra
+</script>
+<script id="divi-accessibility-da11y-js" src="https://cimne.com/wp-content/plugins/divi-accessibility-master/public/js/da11y.js?ver=2.0.5"></script>
+<script id="divi-accessibility-da11y-js-after">
+jQuery(document).ready((function(e){function n(){const n=e(".et_search_form_container");n.hasClass("et_pb_is_animating")||(e(".et_menu_container").removeClass("et_pb_menu_visible et_pb_no_animation").addClass("et_pb_menu_hidden"),n.removeClass("et_pb_search_form_hidden et_pb_no_animation").addClass("et_pb_search_visible et_pb_is_animating"),setTimeout((function(){e(".et_menu_container").addClass("et_pb_no_animation"),n.addClass("et_pb_no_animation").removeClass("et_pb_is_animating")}),1e3),n.find("input").focus(),function(){const n=e(".et_search_form_container"),s=e("body");if(n.hasClass("et_pb_search_visible")){const a=e("#main-header").innerHeight(),i=e("#top-menu").width(),t=e("#top-menu li a").css("font-size");n.css({height:a+"px"}),n.find("input").css("font-size",t),s.hasClass("et_header_style_left")?n.find("form").css("max-width",i+60):n.css("max-width",i+60)}}())}e(".et-menu > li").on("focusout",(function(){e(this).removeClass("et-hover")})),e(".menu-item-has-children > a").length&&(e(".menu-item-has-children > a").addClass("da11y-submenu"),e(".menu-item-has-children > a").attr("aria-expanded","false")),e(".menu-item a").on("focus",(function(){e(this).siblings(".da11y-submenu").attr("aria-expanded","true"),e(this).siblings(".sub-menu").addClass("da11y-submenu-show"),e(this).trigger("mouseenter")})),e(".menu-item-has-children a").on("focusout",(function(){e(this).parent().not(".menu-item-has-children").is(":last-child")&&e(this).parents(".menu-item-has-children").children(".da11y-submenu").attr("aria-expanded","false").trigger("mouseleave").siblings(".sub-menu").removeClass("da11y-submenu-show")})),e(".menu-item-has-children a").keyup((function(n){if(27===n.keyCode){var s=e(this).parents(".menu-item-has-children").last();s.length&&(s.children("a").focus(),s.find(".da11y-submenu").attr("aria-expanded","false").trigger("mouseleave").siblings(".sub-menu").removeClass("da11y-submenu-show"))}})),e(this).keyup((function(){e(".et-search-field").focus((function(){n()})).blur((function(){e(".et_search_form_container").hasClass("et_pb_is_animating")||(e(".et_menu_container").removeClass("et_pb_menu_hidden et_pb_no_animation").addClass("et_pb_menu_visible"),e(".et_search_form_container").removeClass("et_pb_search_visible et_pb_no_animation").addClass("et_pb_search_form_hidden et_pb_is_animating"),setTimeout((function(){e(".et_menu_container").addClass("et_pb_no_animation"),e(".et_search_form_container").addClass("et_pb_no_animation").removeClass("et_pb_is_animating")}),1e3))}))}))}));
+jQuery(document).ready((function(n){const t=((window||{})._da11y||{}).skip_navigation_link_text||!1;!function(e){const i='<a href="'+e+'" class="skip-link da11y-screen-reader-text">'+t+"</a>";n(e).attr("tabindex",-1),n("body").prepend(i)}("#main-content"),n('a[href^="#"]').click((function(){n("#"+n(this).attr("href").slice(1)).focus()}))}));
+jQuery(document).ready((function(e){let n=new Date,o=new Date;e(this).on("focusin",(function(t){e(".keyboard-outline").removeClass("keyboard-outline");o<n&&e(t.target).addClass("keyboard-outline")})),e(this).on("mousedown",(function(){o=new Date})),e(this).on("keydown",(function(){n=new Date}))}));
+jQuery(document).ready((function(t){t(".et_pb_toggle").each((function(e){var a=t(this),o=a.find(".et_pb_toggle_title"),_=a.find(".et_pb_toggle_content"),i=a.hasClass("et_pb_accordion_item");o.attr("role","button"),o.attr("tabindex",0),o.attr("aria-controls","et_pb_toggle_content_"+e),_.attr("id","et_pb_toggle_content_"+e),a.hasClass("et_pb_toggle_open")?(o.attr("aria-expanded",!0),i&&o.attr("aria-disabled",!0)):(o.attr("aria-expanded",!1),i&&o.removeAttr("aria-disabled"))})),t(".et_pb_toggle_title").on("keydown",(function(t){32===t.which&&t.preventDefault()})),t(document).on("keyup",(function(e){13!==e.which&&32!==e.which||t(".et_pb_toggle_title:focus").trigger("click")})),t(".et_pb_toggle_title").on("click",(function(){var e=t(this),a=e.parent();a.hasClass("et_pb_accordion_item")?a.hasClass("et_pb_toggle_open")||(e.closest(".et_pb_accordion").find(".et_pb_toggle").each((function(){if($toggle=t(this),$toggle.hasClass("et_pb_toggle_open")){var e=$toggle.find(".et_pb_toggle_title");e.attr("aria-expanded",!1),e.removeAttr("aria-disabled")}})),setTimeout((function(){e.attr("aria-expanded",!0),e.attr("aria-disabled",!0)}),500)):a.hasClass("et_pb_toggle_open")?e.attr("aria-expanded",!1):e.attr("aria-expanded",!0)}))}));
+jQuery(document).ready((function(e){e(".et-search-field").each((function(t){e(this).attr("id","et_pb_search_module_input_"+t),e("#et_pb_search_module_input_"+t).before('<label class="da11y-screen-reader-text" for="et_pb_search_module_input_'+t+'">Search for...</label>'),e("#et_pb_search_module_input_"+t).after('<button type="submit" class="da11y-screen-reader-text">Search</button>')})),e(".et_pb_s").each((function(t){e(this).attr("id","et_pb_s_module_input_"+t),e("#et_pb_s_module_input_"+t).before('<label class="da11y-screen-reader-text" for="et_pb_s_module_input_'+t+'">Search for...</label>')})),e(".et_pb_contact_form").each((function(){e(this).find(".et_pb_contact_captcha_question").parent().wrap("<label></label>")})),e(".et-social-facebook a.icon span").text("Facebook"),e(".et-social-twitter a.icon span").text("Twitter"),e(".et-social-google-plus a.icon span").text("Google Plus"),e(".et-social-pinterest a.icon span").text("Pinterest"),e(".et-social-linkedin a.icon span").text("LinkedIn"),e(".et-social-tumblr a.icon span").text("Tumblr"),e(".et-social-instagram a.icon span").text("Instagram"),e(".et-social-skype a.icon span").text("Skype"),e(".et-social-flikr a.icon span").text("Flickr"),e(".et-social-myspace a.icon span").text("Myspace"),e(".et-social-dribbble a.icon span").text("Dribble"),e(".et-social-youtube a.icon span").text("YouTube"),e(".et-social-vimeo a.icon span").text("Vimeo"),e(".et-social-rss a.icon span").text("RSS")}));
+jQuery(document).ready((function(t){t(".et_pb_tabs_controls").each((function(){t(this).attr("role","tablist")})),t(".et_pb_tabs_controls li").each((function(){t(this).attr("role","presentation")})),t(".et_pb_tabs_controls a").each((function(){t(this).attr({role:"tab"})})),t(".et_pb_tab").each((function(){t(this).attr("role","tabpanel")})),t(".et_pb_tabs_controls li:not(.et_pb_tab_active) a").each((function(){t(this).attr({"aria-selected":"false","aria-expanded":"false",tabindex:-1})})),t(".et_pb_tabs_controls li.et_pb_tab_active a").each((function(){t(this).attr({"aria-selected":"true","aria-expanded":"true",tabindex:0})})),t("ul.sub-menu .menu-item a").each((function(){t(this).attr({"aria-haspopup":"true"})})),t("a:not(.et-social-icon a, .wp-block-button__link, figure a, .et_pb_button, .et_pb_video_play a, .et_pb_tabs_controls a)").each((function(){t(this).attr({role:"link"})})),t("#et_search_icon, .et_close_search_field, #et_mobile_nav_menu, #searchsubmit, .icon, .wp-block-button__link, .et_pb_button, .et_pb_video_play a").each((function(){t(this).attr({role:"button"})})),t("#g-recaptcha-response").each((function(){t(this).attr({"aria-hidden":"true","aria-label":"do not use","aria-readonly":"true"})})),t(".et_pb_tabs_controls a").each((function(a){t(this).attr({id:"et_pb_tab_control_"+a,"aria-controls":"et_pb_tab_panel_"+a})})),t(".et_pb_tab").each((function(a){t(this).attr({id:"et_pb_tab_panel_"+a,"aria-labelledby":"et_pb_tab_control_"+a})})),t(".et_pb_tab.et_pb_active_content").each((function(){t(this).attr("aria-hidden","false")})),t(".et_pb_tab:not(.et_pb_active_content)").each((function(){t(this).attr("aria-hidden","true")})),t(".et_pb_tabs").each((function(a){t(this).attr("data-da11y-id","et_pb_tab_module_"+a)})),t(".et_pb_tabs_controls a").on("click",(function(){const a=t(this).attr("id"),e=t(this).closest(".et_pb_tabs").attr("data-da11y-id");t('[data-da11y-id="'+e+'"] .et_pb_tabs_controls a').attr({"aria-selected":"false","aria-expanded":"false",tabindex:-1}),t(this).attr({"aria-selected":"true","aria-expanded":"true",tabindex:0}),t("#"+e+" .et_pb_tab").attr("aria-hidden","true"),t('[aria-labelledby="'+a+'"]').attr("aria-hidden","false")})),t(".et_pb_tabs_controls a").keyup((function(a){const e=t(this).closest(".et_pb_tabs").attr("data-da11y-id"),i=t('[data-da11y-id="'+e+'"]');if(39===a.which){const t=i.find("li.et_pb_tab_active").next();t.length>0?t.find("a").trigger("click"):i.find("li:first a").trigger("click")}else if(37===a.which){const t=i.find("li.et_pb_tab_active").prev();t.length>0?t.find("a").trigger("click"):i.find("li:last a").trigger("click")}t(".et_pb_tabs_controls a").removeClass("keyboard-outline"),i.find("li.et_pb_tab_active a").addClass("keyboard-outline")})),t(".et_pb_search").each((function(a){t(this).attr("data-da11y-id","et_pb_search_module_"+a)})),t('[data-required_mark="required"]').each((function(){t(this).attr("aria-required","true")})),t(".et_pb_contactform_validate_field").attr("type","hidden"),t(".et-pb-contact-message").attr("role","alert"),t("#main-content").attr("role","main"),t(".et_pb_fullwidth_header").each((function(a){t(this).attr("aria-label","Wide Header"+a)})),t("#comment-wrap").attr("aria-label","Comments"),t(".aria-hidden").each((function(a,e){!function a(e){const i=t(e);t(e).attr("aria-hidden","true");for(const t of i.children())a(t)}(e)}))}));
+jQuery(document).ready((function(e){e("#et_top_search, .et_close_search_field, .et_pb_main_blurb_image").attr("aria-hidden","true")}));
+jQuery(document).ready((function(e){e(".mobile_menu_bar").attr({role:"button","aria-expanded":"false","aria-label":"Menu",tabindex:0}),e(".mobile_menu_bar").on("click",(function(){e(this).hasClass("a11y-mobile-menu-open")?e(this).removeClass("a11y-mobile-menu-open").attr("aria-expanded","false"):e(this).addClass("a11y-mobile-menu-open").attr("aria-expanded","true")})),e(".mobile_menu_bar").keyup((function(n){13!==n.keyCode&&32!==n.keyCode||e(".mobile_menu_bar").click()})),e(document).keyup((function(n){27===n.keyCode&&e("#et_mobile_nav_menu .mobile_nav").hasClass("opened")&&e(".mobile_menu_bar").click()})),e(this).on("focusin",(function(){e("#et_mobile_nav_menu .mobile_nav").hasClass("opened")&&(e("#et_mobile_nav_menu .et_mobile_menu :focus").length||e("#et_mobile_nav_menu .mobile_menu_bar").click())}))}));
+//# sourceURL=divi-accessibility-da11y-js-after
+</script>
+<script id="et-builder-modules-script-motion-js-extra">
+var et_pb_motion_elements = {"desktop":[],"tablet":[],"phone":[]};
+//# sourceURL=et-builder-modules-script-motion-js-extra
+</script>
+<script id="et-builder-modules-script-motion-js" src="https://cimne.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/motion-effects.js?ver=4.27.9"></script>
+<script id="et-builder-modules-script-sticky-js-extra">
+var et_pb_sticky_elements = [];
+//# sourceURL=et-builder-modules-script-sticky-js-extra
+</script>
+<script id="et-builder-modules-script-sticky-js" src="https://cimne.com/wp-content/themes/Divi/includes/builder/feature/dynamic-assets/assets/js/sticky-elements.js?ver=4.27.9"></script>
+<!-- Statistics script Complianz GDPR/CCPA -->
+						<script data-category="functional">
+							(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+		new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+	j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+	'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-P975W47S');
+						</script>
+						<style id="et-builder-module-design-tb-238109-tb-238110-deferred-158-cached-inline-styles">.et_pb_section_0,.et_pb_section_1{border-bottom-width:1px;border-bottom-color:#d9d9d9}.et_pb_section_0.et_pb_section{padding-top:144px;padding-bottom:0px;margin-top:0px;margin-bottom:0px}.et_pb_row_0,body #page-container .et-db #et-boc .et-l .et_pb_row_0.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0.et_pb_row,.et_pb_row_1,body #page-container .et-db #et-boc .et-l .et_pb_row_1.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_1.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_1.et_pb_row,.et_pb_row_2,body #page-container .et-db #et-boc .et-l .et_pb_row_2.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_2.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_2.et_pb_row,.et_pb_row_3,body #page-container .et-db #et-boc .et-l .et_pb_row_3.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_3.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_3.et_pb_row,.et_pb_row_4,body #page-container .et-db #et-boc .et-l .et_pb_row_4.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_4.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_4.et_pb_row{width:100%;max-width:1472px}.et_pb_row_0{position:static!important;top:0px;right:auto;bottom:auto;left:0px}.et_pb_divider_0{margin-bottom:0px!important;width:85px}.et_pb_divider_0:before{border-top-color:#004996}.et_pb_text_0{line-height:20px;font-family:'Lora',Georgia,"Times New Roman",serif;font-style:italic;font-size:18px;line-height:20px;padding-top:0px!important;padding-bottom:15px!important}.et_pb_heading_0 .et_pb_heading_container h1,.et_pb_heading_0 .et_pb_heading_container h2,.et_pb_heading_0 .et_pb_heading_container h3,.et_pb_heading_0 .et_pb_heading_container h4,.et_pb_heading_0 .et_pb_heading_container h5,.et_pb_heading_0 .et_pb_heading_container h6{font-family:'Poppins',Helvetica,Arial,Lucida,sans-serif;font-weight:600;font-size:48px;line-height:52px}.et_pb_heading_0{margin-bottom:10px!important}.et_pb_text_1.et_pb_text{color:#02a0a5!important}.et_pb_text_1{font-size:1.5rem}.et_pb_image_0 .et_pb_image_wrap img{height:220px}.et_pb_image_0{margin-bottom:0px!important;width:100%;width:100%;max-width:100%!important;text-align:center}.et_pb_image_0 .et_pb_image_wrap,.et_pb_image_0 img{width:100%}.et_pb_section_1.et_pb_section,.et_pb_section_3.et_pb_section,.et_pb_section_4.et_pb_section{padding-top:0px;padding-bottom:0px;margin-top:0px;margin-bottom:0px}.et_pb_text_2{font-size:18px}.et_pb_section_2{border-width:1px;border-color:#d9d9d9;min-height:63px}.et_pb_section_2.et_pb_section{padding-top:0px;padding-bottom:0px;margin-top:0px;margin-bottom:0px;background-color:rgba(0,73,150,0.2)!important}.et_pb_heading_1 .et_pb_heading_container h1,.et_pb_heading_1 .et_pb_heading_container h2,.et_pb_heading_1 .et_pb_heading_container h3,.et_pb_heading_1 .et_pb_heading_container h4,.et_pb_heading_1 .et_pb_heading_container h5,.et_pb_heading_1 .et_pb_heading_container h6,.et_pb_heading_2 .et_pb_heading_container h1,.et_pb_heading_2 .et_pb_heading_container h2,.et_pb_heading_2 .et_pb_heading_container h3,.et_pb_heading_2 .et_pb_heading_container h4,.et_pb_heading_2 .et_pb_heading_container h5,.et_pb_heading_2 .et_pb_heading_container h6{font-family:'Lora',Georgia,"Times New Roman",serif;font-weight:600;font-style:italic;font-size:1.1rem;color:#444444!important;line-height:1.5rem;text-align:center}.et_pb_heading_1 .et_pb_heading_container h1:hover,.et_pb_heading_1 .et_pb_heading_container h2:hover,.et_pb_heading_1 .et_pb_heading_container h3:hover,.et_pb_heading_1 .et_pb_heading_container h4:hover,.et_pb_heading_1 .et_pb_heading_container h5:hover,.et_pb_heading_1 .et_pb_heading_container h6:hover,.et_pb_heading_2 .et_pb_heading_container h1:hover,.et_pb_heading_2 .et_pb_heading_container h2:hover,.et_pb_heading_2 .et_pb_heading_container h3:hover,.et_pb_heading_2 .et_pb_heading_container h4:hover,.et_pb_heading_2 .et_pb_heading_container h5:hover,.et_pb_heading_2 .et_pb_heading_container h6:hover{color:#004996!important}.et_pb_heading_1,.et_pb_heading_2{padding-top:0px!important;padding-bottom:0px!important;margin-top:0px!important;margin-bottom:0px!important;width:100%!important}.et_pb_heading_1 .et_pb_heading_container h1,.et_pb_heading_1 .et_pb_heading_container h2,.et_pb_heading_1 .et_pb_heading_container h3,.et_pb_heading_1 .et_pb_heading_container h4,.et_pb_heading_1 .et_pb_heading_container h5,.et_pb_heading_1 .et_pb_heading_container h6,.et_pb_heading_2 .et_pb_heading_container h1,.et_pb_heading_2 .et_pb_heading_container h2,.et_pb_heading_2 .et_pb_heading_container h3,.et_pb_heading_2 .et_pb_heading_container h4,.et_pb_heading_2 .et_pb_heading_container h5,.et_pb_heading_2 .et_pb_heading_container h6{transition:color 300ms ease 0ms}.et_pb_heading_1 h1,.et_pb_heading_1 h2,.et_pb_heading_1 h3,.et_pb_heading_1 h4,.et_pb_heading_1 h5,.et_pb_heading_1 h6,.et_pb_heading_2 h1,.et_pb_heading_2 h2,.et_pb_heading_2 h3,.et_pb_heading_2 h4,.et_pb_heading_2 h5,.et_pb_heading_2 h6{padding-bottom:16px}.et_pb_column_0{border-right-width:1px;border-right-color:#d9d9d9;padding-top:50px;padding-right:3%;padding-bottom:50px;padding-left:3%;display:flex;flex-direction:column;justify-content:flex-end}.et_pb_column_1{padding-top:50px;padding-right:3%;padding-bottom:50px;padding-left:3%;display:flex;flex-direction:column;justify-content:flex-end}.et_pb_column_2,.et_pb_column_3,.et_pb_column_5,.et_pb_column_6{padding-top:50px;padding-right:3%;padding-left:3%}.et_pb_column_4{padding-top:20px;padding-right:0px;padding-left:0px}.et_pb_row_0.et_pb_row,.et_pb_row_2.et_pb_row{padding-top:0px!important;padding-right:0px!important;padding-bottom:0px!important;padding-left:0px!important;margin-top:0px!important;margin-right:0px!important;margin-bottom:0px!important;margin-left:0px!important;margin-left:auto!important;margin-right:auto!important;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px}.et_pb_divider_0.et_pb_module{margin-left:0px!important;margin-right:auto!important}.et_pb_row_1.et_pb_row,.et_pb_row_4.et_pb_row{padding-top:50px!important;padding-right:0px!important;padding-bottom:50px!important;padding-left:0px!important;margin-right:0px!important;margin-left:0px!important;margin-left:auto!important;margin-right:auto!important;padding-top:50px;padding-right:0px;padding-bottom:50px;padding-left:0px}.et_pb_row_3.et_pb_row{padding-top:0px!important;padding-right:0px!important;padding-bottom:0px!important;padding-left:0px!important;margin-right:0px!important;margin-left:0px!important;margin-left:auto!important;margin-right:auto!important;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px}@media only screen and (min-width:981px){.et_pb_column_4{display:grid;grid-template-columns:repeat(2,1fr)}}@media only screen and (max-width:980px){.et_pb_section_0,.et_pb_section_1{border-bottom-width:1px;border-bottom-color:#d9d9d9}.et_pb_row_0{display:flex;flex-direction:column-reverse}.et_pb_heading_0 .et_pb_heading_container h1,.et_pb_heading_0 .et_pb_heading_container h2,.et_pb_heading_0 .et_pb_heading_container h3,.et_pb_heading_0 .et_pb_heading_container h4,.et_pb_heading_0 .et_pb_heading_container h5,.et_pb_heading_0 .et_pb_heading_container h6{font-size:32px}.et_pb_section_2{border-top-width:1px;border-right-width:1px;border-left-width:1px;border-top-color:#d9d9d9;border-right-color:#d9d9d9;border-left-color:#d9d9d9}.et_pb_heading_1,.et_pb_heading_2{padding-top:10px!important}.et_pb_column_0{border-right-width:0px;border-right-color:#d9d9d9;padding-top:50px;padding-bottom:50px}.et_pb_column_1{padding-top:50px;padding-right:6%;padding-bottom:0px;padding-left:6%}.et_pb_column_2,.et_pb_column_3,.et_pb_column_5,.et_pb_column_6{padding-right:6%;padding-left:6%}.et_pb_column_4{border-right-width:0px;padding-top:0px;padding-right:0%;display:grid;grid-template-columns:repeat(1,1fr)}}@media only screen and (max-width:767px){.et_pb_section_0,.et_pb_section_1{border-bottom-width:1px;border-bottom-color:#d9d9d9}.et_pb_row_0{display:flex;flex-direction:column-reverse}.et_pb_section_2{border-top-width:1px;border-right-width:1px;border-left-width:1px;border-top-color:#d9d9d9;border-right-color:#d9d9d9;border-left-color:#d9d9d9}.et_pb_heading_1,.et_pb_heading_2{padding-top:10px!important}.et_pb_column_0{border-right-width:0px;border-right-color:#d9d9d9;padding-top:50px;padding-right:6%;padding-bottom:50px;padding-left:6%}.et_pb_column_1{padding-top:50px;padding-right:6%;padding-left:6%}.et_pb_column_4{border-right-width:0px;padding-top:0px;display:grid;grid-template-columns:repeat(1,1fr)}}</style><style id="et-builder-module-design-tb-238109-tb-238110-158-cached-inline-styles">.et-db #et-boc .et-l.et-l--header .et_builder_inner_content{z-index:10001}.et_pb_section_0_tb_header.et_pb_section{padding-top:0px;padding-bottom:0px;margin-top:0px;margin-bottom:0px}.et_pb_row_0_tb_header{background-color:RGBA(255,255,255,0)}.et_pb_row_0_tb_header,body #page-container .et-db #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0_tb_header.et_pb_row{width:100%;max-width:none}.et_pb_section_0_tb_footer,.et_pb_section_1_tb_footer{border-top-width:1px;border-color:#000000}.et_pb_section_0_tb_footer.et_pb_section{padding-top:30px;padding-bottom:30px;background-color:#004996!important}.et_pb_row_0_tb_footer,body #page-container .et-db #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_0_tb_footer.et_pb_row,.et_pb_row_1_tb_footer,body #page-container .et-db #et-boc .et-l .et_pb_row_1_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single #page-container #et-boc .et-l .et_pb_row_1_tb_footer.et_pb_row,body.et_pb_pagebuilder_layout.single.et_full_width_page #page-container #et-boc .et-l .et_pb_row_1_tb_footer.et_pb_row{width:100%;max-width:1472px}.et_pb_heading_0_tb_footer .et_pb_heading_container h1,.et_pb_heading_0_tb_footer .et_pb_heading_container h2,.et_pb_heading_0_tb_footer .et_pb_heading_container h3,.et_pb_heading_0_tb_footer .et_pb_heading_container h4,.et_pb_heading_0_tb_footer .et_pb_heading_container h5,.et_pb_heading_0_tb_footer .et_pb_heading_container h6{font-size:18px;color:#FFFFFF!important;line-height:24px}.et_pb_heading_0_tb_footer,.et_pb_heading_1_tb_footer,.et_pb_heading_2_tb_footer,.et_pb_heading_3_tb_footer{padding-bottom:32px!important}.et_pb_text_0_tb_footer.et_pb_text,.et_pb_text_1_tb_footer.et_pb_text,.et_pb_text_2_tb_footer.et_pb_text,.et_pb_text_3_tb_footer.et_pb_text{color:#FFFFFF!important}.et_pb_text_0_tb_footer,.et_pb_text_1_tb_footer{font-size:1rem}.et_pb_heading_1_tb_footer .et_pb_heading_container h1,.et_pb_heading_1_tb_footer .et_pb_heading_container h2,.et_pb_heading_1_tb_footer .et_pb_heading_container h3,.et_pb_heading_1_tb_footer .et_pb_heading_container h4,.et_pb_heading_1_tb_footer .et_pb_heading_container h5,.et_pb_heading_1_tb_footer .et_pb_heading_container h6,.et_pb_heading_2_tb_footer .et_pb_heading_container h1,.et_pb_heading_2_tb_footer .et_pb_heading_container h2,.et_pb_heading_2_tb_footer .et_pb_heading_container h3,.et_pb_heading_2_tb_footer .et_pb_heading_container h4,.et_pb_heading_2_tb_footer .et_pb_heading_container h5,.et_pb_heading_2_tb_footer .et_pb_heading_container h6,.et_pb_heading_3_tb_footer .et_pb_heading_container h1,.et_pb_heading_3_tb_footer .et_pb_heading_container h2,.et_pb_heading_3_tb_footer .et_pb_heading_container h3,.et_pb_heading_3_tb_footer .et_pb_heading_container h4,.et_pb_heading_3_tb_footer .et_pb_heading_container h5,.et_pb_heading_3_tb_footer .et_pb_heading_container h6{font-size:1.1rem;color:#FFFFFF!important;line-height:24px}.et_pb_blurb_0_tb_footer.et_pb_blurb .et_pb_module_header,.et_pb_blurb_0_tb_footer.et_pb_blurb .et_pb_module_header a,.et_pb_blurb_1_tb_footer.et_pb_blurb .et_pb_module_header,.et_pb_blurb_1_tb_footer.et_pb_blurb .et_pb_module_header a,.et_pb_blurb_2_tb_footer.et_pb_blurb .et_pb_module_header,.et_pb_blurb_2_tb_footer.et_pb_blurb .et_pb_module_header a,.et_pb_blurb_3_tb_footer.et_pb_blurb .et_pb_module_header,.et_pb_blurb_3_tb_footer.et_pb_blurb .et_pb_module_header a{font-weight:600;font-size:1rem;color:#FFFFFF!important;line-height:1.5em;text-align:left}.et_pb_blurb_0_tb_footer.et_pb_blurb,.et_pb_blurb_1_tb_footer.et_pb_blurb,.et_pb_blurb_2_tb_footer.et_pb_blurb,.et_pb_blurb_3_tb_footer.et_pb_blurb{border-left-width:0px;border-left-color:RGBA(255,255,255,0);padding-top:0px!important;padding-bottom:15px!important;margin-top:0px!important;margin-bottom:0px!important;width:100%}.et_pb_blurb_0_tb_footer .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_0_tb_footer .et_pb_main_blurb_image .et-pb-icon,.et_pb_blurb_1_tb_footer .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_1_tb_footer .et_pb_main_blurb_image .et-pb-icon,.et_pb_blurb_2_tb_footer .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_2_tb_footer .et_pb_main_blurb_image .et-pb-icon,.et_pb_blurb_3_tb_footer .et_pb_main_blurb_image .et_pb_only_image_mode_wrap,.et_pb_blurb_3_tb_footer .et_pb_main_blurb_image .et-pb-icon{margin-left:0px!important}.et_pb_blurb_0_tb_footer .et-pb-icon{font-size:30px;color:#FFFFFF;font-family:ETmodules!important;font-weight:400!important}.et_pb_blurb_0_tb_footer .et_pb_blurb_content,.et_pb_blurb_1_tb_footer .et_pb_blurb_content,.et_pb_blurb_2_tb_footer .et_pb_blurb_content,.et_pb_blurb_3_tb_footer .et_pb_blurb_content{max-width:100%}.et_pb_blurb_1_tb_footer .et-pb-icon{font-size:30px;color:#FFFFFF;font-family:FontAwesome!important;font-weight:900!important}.et_pb_blurb_2_tb_footer .et-pb-icon,.et_pb_blurb_3_tb_footer .et-pb-icon{font-size:30px;color:#FFFFFF;font-family:FontAwesome!important;font-weight:400!important}.et_pb_image_0_tb_footer,.et_pb_image_1_tb_footer{padding-bottom:15px;text-align:left;margin-left:0}.et_pb_text_2_tb_footer{font-size:1rem;margin-bottom:10px!important}.et_pb_section_1_tb_footer.et_pb_section{padding-top:0px;padding-bottom:0px;background-color:#444444!important}.et_pb_text_3_tb_footer.et_pb_text a{color:#ffffff!important}.et_pb_text_3_tb_footer a{font-weight:600}.et_pb_column_0_tb_footer,.et_pb_column_1_tb_footer,.et_pb_column_2_tb_footer,.et_pb_column_3_tb_footer{padding-right:3%;padding-bottom:0px;padding-left:3%}.et_pb_column_4_tb_footer{padding-top:15px;padding-right:3%;padding-bottom:15px;padding-left:3%}.et_pb_row_0_tb_footer.et_pb_row,.et_pb_row_1_tb_footer.et_pb_row{padding-top:0px!important;padding-right:0px!important;padding-bottom:0px!important;padding-left:0px!important;margin-top:0px!important;margin-right:0px!important;margin-bottom:0px!important;margin-left:0px!important;margin-left:auto!important;margin-right:auto!important;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px}.et_pb_blurb_0_tb_footer.et_pb_blurb.et_pb_module,.et_pb_blurb_1_tb_footer.et_pb_blurb.et_pb_module,.et_pb_blurb_2_tb_footer.et_pb_blurb.et_pb_module,.et_pb_blurb_3_tb_footer.et_pb_blurb.et_pb_module{margin-left:0px!important;margin-right:auto!important}@media only screen and (max-width:980px){.et_pb_section_0_tb_footer,.et_pb_section_1_tb_footer{border-top-width:1px}.et_pb_heading_0_tb_footer .et_pb_heading_container h1,.et_pb_heading_0_tb_footer .et_pb_heading_container h2,.et_pb_heading_0_tb_footer .et_pb_heading_container h3,.et_pb_heading_0_tb_footer .et_pb_heading_container h4,.et_pb_heading_0_tb_footer .et_pb_heading_container h5,.et_pb_heading_0_tb_footer .et_pb_heading_container h6,.et_pb_heading_1_tb_footer .et_pb_heading_container h1,.et_pb_heading_1_tb_footer .et_pb_heading_container h2,.et_pb_heading_1_tb_footer .et_pb_heading_container h3,.et_pb_heading_1_tb_footer .et_pb_heading_container h4,.et_pb_heading_1_tb_footer .et_pb_heading_container h5,.et_pb_heading_1_tb_footer .et_pb_heading_container h6,.et_pb_heading_2_tb_footer .et_pb_heading_container h1,.et_pb_heading_2_tb_footer .et_pb_heading_container h2,.et_pb_heading_2_tb_footer .et_pb_heading_container h3,.et_pb_heading_2_tb_footer .et_pb_heading_container h4,.et_pb_heading_2_tb_footer .et_pb_heading_container h5,.et_pb_heading_2_tb_footer .et_pb_heading_container h6,.et_pb_heading_3_tb_footer .et_pb_heading_container h1,.et_pb_heading_3_tb_footer .et_pb_heading_container h2,.et_pb_heading_3_tb_footer .et_pb_heading_container h3,.et_pb_heading_3_tb_footer .et_pb_heading_container h4,.et_pb_heading_3_tb_footer .et_pb_heading_container h5,.et_pb_heading_3_tb_footer .et_pb_heading_container h6{font-size:1.1rem}.et_pb_heading_0_tb_footer,.et_pb_heading_1_tb_footer,.et_pb_heading_2_tb_footer,.et_pb_heading_3_tb_footer{padding-bottom:25px!important}.et_pb_text_0_tb_footer{font-size:1rem}.et_pb_blurb_0_tb_footer.et_pb_blurb,.et_pb_blurb_1_tb_footer.et_pb_blurb,.et_pb_blurb_2_tb_footer.et_pb_blurb,.et_pb_blurb_3_tb_footer.et_pb_blurb{border-left-width:0px;border-left-color:RGBA(255,255,255,0)}.et_pb_image_0_tb_footer .et_pb_image_wrap img,.et_pb_image_1_tb_footer .et_pb_image_wrap img{width:auto}.et_pb_column_0_tb_footer,.et_pb_column_1_tb_footer,.et_pb_column_2_tb_footer,.et_pb_column_3_tb_footer{padding-right:6%;padding-bottom:32px;padding-left:6%}.et_pb_column_4_tb_footer{padding-right:6%;padding-left:6%}}@media only screen and (max-width:767px){.et_pb_section_0_tb_footer,.et_pb_section_1_tb_footer{border-top-width:1px}.et_pb_heading_0_tb_footer .et_pb_heading_container h1,.et_pb_heading_0_tb_footer .et_pb_heading_container h2,.et_pb_heading_0_tb_footer .et_pb_heading_container h3,.et_pb_heading_0_tb_footer .et_pb_heading_container h4,.et_pb_heading_0_tb_footer .et_pb_heading_container h5,.et_pb_heading_0_tb_footer .et_pb_heading_container h6,.et_pb_heading_1_tb_footer .et_pb_heading_container h1,.et_pb_heading_1_tb_footer .et_pb_heading_container h2,.et_pb_heading_1_tb_footer .et_pb_heading_container h3,.et_pb_heading_1_tb_footer .et_pb_heading_container h4,.et_pb_heading_1_tb_footer .et_pb_heading_container h5,.et_pb_heading_1_tb_footer .et_pb_heading_container h6,.et_pb_heading_2_tb_footer .et_pb_heading_container h1,.et_pb_heading_2_tb_footer .et_pb_heading_container h2,.et_pb_heading_2_tb_footer .et_pb_heading_container h3,.et_pb_heading_2_tb_footer .et_pb_heading_container h4,.et_pb_heading_2_tb_footer .et_pb_heading_container h5,.et_pb_heading_2_tb_footer .et_pb_heading_container h6,.et_pb_heading_3_tb_footer .et_pb_heading_container h1,.et_pb_heading_3_tb_footer .et_pb_heading_container h2,.et_pb_heading_3_tb_footer .et_pb_heading_container h3,.et_pb_heading_3_tb_footer .et_pb_heading_container h4,.et_pb_heading_3_tb_footer .et_pb_heading_container h5,.et_pb_heading_3_tb_footer .et_pb_heading_container h6{font-size:1.1rem}.et_pb_heading_0_tb_footer,.et_pb_heading_1_tb_footer,.et_pb_heading_2_tb_footer,.et_pb_heading_3_tb_footer{padding-bottom:15px!important}.et_pb_text_0_tb_footer{font-size:1rem}.et_pb_blurb_0_tb_footer.et_pb_blurb,.et_pb_blurb_1_tb_footer.et_pb_blurb,.et_pb_blurb_2_tb_footer.et_pb_blurb,.et_pb_blurb_3_tb_footer.et_pb_blurb{border-left-width:0px;border-left-color:RGBA(255,255,255,0)}.et_pb_image_0_tb_footer .et_pb_image_wrap img,.et_pb_image_1_tb_footer .et_pb_image_wrap img{width:auto}.et_pb_column_0_tb_footer,.et_pb_column_1_tb_footer,.et_pb_column_2_tb_footer,.et_pb_column_3_tb_footer{padding-right:6%;padding-bottom:50px;padding-left:6%}}footer .footer-top p{padding:0 0}footer .footer-top p{padding:0 0}</style>	
+			<span class="et_pb_scroll_top et-pb-icon"></span>
+	</body>
+</html>
+
+<!-- Dynamic page generated in 1.326 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2026-10-28 12:38:44 -->
+
+<!-- Compression = gzip -->
