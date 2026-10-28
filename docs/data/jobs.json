@@ -1,0 +1,1562 @@
+{
+ "generated": "2026-10-28T13:02:09+00:00",
+ "count": 64,
+ "items": [
+  {
+   "id": "4117e2050540",
+   "title": "Convocatoria FPU 2026",
+   "url": "https://investigacion.ugr.es/recursos-humanos/predoctorales/fpu-2026",
+   "institution": "Universidad de Granada",
+   "inst_id": "ugr",
+   "region": "Andalucía",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [],
+   "deadline": null,
+   "kind": "call",
+   "source_page": "https://investigacion.ugr.es/recursos-humanos/predoctorales",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "2d40015e26aa",
+   "title": "Contratos predoctorales del Plan Propio de Investigación.",
+   "url": "https://investigacion.ugr.es/plan-propio/informacion/programas/p6",
+   "institution": "Universidad de Granada",
+   "inst_id": "ugr",
+   "region": "Andalucía",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture",
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://investigacion.ugr.es/recursos-humanos/predoctorales",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "36d6158ea202",
+   "title": "Consultas sobre recursos humanos en investigación",
+   "url": "https://investigacion.ugr.es/informacion/contacto/rrhh",
+   "institution": "Universidad de Granada",
+   "inst_id": "ugr",
+   "region": "Andalucía",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://investigacion.ugr.es/recursos-humanos/predoctorales",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "2a58369b320e",
+   "title": "16/06/2026 Abierta Ayudas para la formación de profesorado universitario (FPU) 2026 Convocatoria Ir a convocatoria",
+   "url": "https://www.aei.gob.es/convocatorias/buscador-convocatorias/ayudas-contratos-predoctorales-formacion-profesorado",
+   "institution": "Universidad de Huelva",
+   "inst_id": "uhu",
+   "region": "Andalucía",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [],
+   "deadline": null,
+   "kind": "call",
+   "source_page": "https://www.uhu.es/gestion-investigacion/rrhh/predoctorales",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "f15d9aec58c9",
+   "title": "Resolución del Rector de la Universidad Pablo de Olavide, por la que se nombran las Comisiones de Evaluación para la convocatoria de ayudas para contratos predoctorales para la formación de personas doctoras contemplada en el Subprograma Estatal de Generación de Conocimiento Científico-Técnico y Des",
+   "url": "https://www.upo.es/cms1/export/sites/upo/area-investigacion/contratos-predoctorales/Publicada_Registro.pdf",
+   "institution": "Universidad Pablo de Olavide",
+   "inst_id": "upo",
+   "region": "Andalucía",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [],
+   "deadline": null,
+   "kind": "call",
+   "source_page": "https://www.upo.es/area-investigacion/contratos-predoctorales/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "077b9a184369",
+   "title": "Atención al Personal Investigador",
+   "url": "https://www.upo.es/area-investigacion/sobre-el-area/",
+   "institution": "Universidad Pablo de Olavide",
+   "inst_id": "upo",
+   "region": "Andalucía",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Climate & risk",
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.upo.es/area-investigacion/contratos-predoctorales/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "b8ce24b8b257",
+   "title": "Solicitud Certificados Proyectos I+D+I y otras Ayudas",
+   "url": "https://www.upo.es/area-investigacion/solicitud-certificados-proyectos-idi-y-otras-ayudas/",
+   "institution": "Universidad Pablo de Olavide",
+   "inst_id": "upo",
+   "region": "Andalucía",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Climate & risk",
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.upo.es/area-investigacion/contratos-predoctorales/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "e48587221974",
+   "title": "Gestión Recursos Humanos Investigación",
+   "url": "https://www.upo.es/area-investigacion/gestion-rr-hh-investigacion/",
+   "institution": "Universidad Pablo de Olavide",
+   "inst_id": "upo",
+   "region": "Andalucía",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Climate & risk",
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.upo.es/area-investigacion/contratos-predoctorales/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "01af54522f9d",
+   "title": "Guía del Portal del Personal Investigador",
+   "url": "https://www.upo.es/area-investigacion/portal-personal-investigador/",
+   "institution": "Universidad Pablo de Olavide",
+   "inst_id": "upo",
+   "region": "Andalucía",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Climate & risk",
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.upo.es/area-investigacion/contratos-predoctorales/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "1fc3c1ef6189",
+   "title": "Investigador/a en formació per realitzar la interpretabilitat de la IA. Codi 10267010007",
+   "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/investigador-a-en-formacio-per-realitzar-la-interpretabilitat-de-la-ia-codi-10267010007/investigador-a-en-formacio-per-realitzar-la-interpretabilitat-de-la-ia-codi-10267010007",
+   "institution": "Universitat Politècnica de Catalunya",
+   "inst_id": "upc",
+   "region": "Catalunya",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "87e643be3166",
+   "title": "Investigador/a en formació en el camp de la computació quàntica i les seves arquitectures modulars. Codi 10267010006",
+   "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/investigador-a-en-formacio-en-el-camp-de-la-computacio-quantica-i-les-seves-arquitectures-modulars-codi-10267010006/investigador-a-en-formacio-en-el-camp-de-la-computacio-quantica-i-les-seves-arquitectures-modulars-codi-10267010006",
+   "institution": "Universitat Politècnica de Catalunya",
+   "inst_id": "upc",
+   "region": "Catalunya",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "6e781f853a3a",
+   "title": "Investigador en formació en anàlisi de STATCOMs de xarxa per a la resiliència del sistema elèctric. Codi 10269460005",
+   "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/investigador-en-formacio-en-analisi-de-statcoms-de-xarxa-per-a-la-resiliencia-del-sistema-electric-codi-10269460005/investigador-en-formacio-en-analisi-de-statcoms-de-xarxa-per-a-la-resiliencia-del-sistema-electric-codi-10269460005",
+   "institution": "Universitat Politècnica de Catalunya",
+   "inst_id": "upc",
+   "region": "Catalunya",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Climate & risk"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "94a69de23353",
+   "title": "Investigador en formació en dispositius i circuits per Arquitectures de Computació en Memòria per entorns Edge. Codi 10267010005",
+   "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/investigador-en-formacio-en-dispositius-i-circuits-per-arquitectures-de-computacio-en-memoria-per-entorns-edge-codi-10267010005/investigador-en-formacio-en-dispositius-i-circuits-per-arquitectures-de-computacio-en-memoria-per-entorns-edge-codi-10267010005",
+   "institution": "Universitat Politècnica de Catalunya",
+   "inst_id": "upc",
+   "region": "Catalunya",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "79c0a8a1bb7f",
+   "title": "Investigador/a en formació en arquitectura de computadors. Codi 10267010004",
+   "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/investigador-a-en-formacio-en-arquitectura-de-computadors-codi-10267010004/investigador-a-en-formacio-en-arquitectura-de-computadors-codi-10267010004",
+   "institution": "Universitat Politècnica de Catalunya",
+   "inst_id": "upc",
+   "region": "Catalunya",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "865164fc4967",
+   "title": "Contracte Predoctoral per investigació documental i treball de camp per al projecte ERC-Starting grant CAMPS. Codi 10267350002",
+   "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/contracte-predoctoral-per-investigacio-documental-i-treball-de-camp-per-al-projecte-erc-starting-grant-camps-codi-10267350002/contracte-predoctoral-per-investigacio-documental-i-treball-de-camp-per-al-projecte-erc-starting-grant-camps-codi-10267350002",
+   "institution": "Universitat Politècnica de Catalunya",
+   "inst_id": "upc",
+   "region": "Catalunya",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "f5c0a7354155",
+   "title": "Underwater Wireless Optical Communications Assisted by Reconfigurable Surfaces. Codi 10267010003",
+   "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/underwater-wireless-optical-communications-assisted-by-reconfigurable-surfaces-codi-10267010003/underwater-wireless-optical-communications-assisted-by-reconfigurable-surfaces-codi-10267010003",
+   "institution": "Universitat Politècnica de Catalunya",
+   "inst_id": "upc",
+   "region": "Catalunya",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "ba3476ac52d4",
+   "title": "Synthetic data lifecycle optimization. Codi 10267010002",
+   "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/synthetic-data-lifecycle-optimization-codi-10267010002/synthetic-data-lifecycle-optimization-codi-10267010002",
+   "institution": "Universitat Politècnica de Catalunya",
+   "inst_id": "upc",
+   "region": "Catalunya",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "cb09349abce2",
+   "title": "Investigador en visualització de patrimoni cultural usant RV. Codi 30267230010",
+   "url": "https://talenthub.upc.edu/en/jobs/r2/r2-jobs/investigador-en-visualitzacio-de-patrimoni-cultural-usant-rv-codi-30267230010/investigador-en-visualitzacio-de-patrimoni-cultural-usant-rv-codi-30267230010",
+   "institution": "Universitat Politècnica de Catalunya",
+   "inst_id": "upc",
+   "region": "Catalunya",
+   "inst_type": "public",
+   "level": "postdoc",
+   "fields": [
+    "Heritage"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://talenthub.upc.edu/en/jobs/r2/r2-jobs/r2-jobs",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "2628bc397dbb",
+   "title": "Departamento de Proyectos Arquitectónicos Ver convocatorias",
+   "url": "https://www.upv.es/entidades/DPA/indexc.html",
+   "institution": "Universitat Politècnica de València",
+   "inst_id": "upv",
+   "region": "Comunitat Valenciana",
+   "inst_type": "public",
+   "level": "postdoc",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.upv.es/empleopublico/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "7cb5d7783a23",
+   "title": "Defensa de la Tesis Doctoral \"Between Promotion and Commemoration: a Corpus-Assisted Critical Genre Analysis of Dark Tourism Promotional Discourse at First and Second World War Heritage Sites\", realizada por María Amparo Alesón Carbonell",
+   "url": "https://cvnet.cpd.ua.es/AgendaUA/Investigacio/V/218794?terminoBusqueda=&rangoFechas=&enLaUa=True&credits=False&materia=0",
+   "institution": "Universidad de Alicante",
+   "inst_id": "ua",
+   "region": "Comunitat Valenciana",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Heritage",
+    "Urban planning"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://cvnet.cpd.ua.es/AgendaUA/Investigacio",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "538145f6fddb",
+   "title": "Abierta la convocatoria Health Research 2027 (HR27) – Fundación La Caixa",
+   "url": "https://sgi.umh.es/2026/09/17/health-research-2026-hr27-fundacion-la-caixa/",
+   "institution": "Universidad Miguel Hernández",
+   "inst_id": "umh",
+   "region": "Comunitat Valenciana",
+   "inst_type": "public",
+   "level": "phd+postdoc",
+   "fields": [
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://sgi.umh.es/en/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "a36868239908",
+   "title": "(Español) AYUDAS A LA INVESTIGACIÓN 2026 Fundación NAVARRO-LUCIANO... Otras ayudas I+D",
+   "url": "https://sgi.umh.es/en/2026/10/20/ayudas-a-la-investigacion-2026-fundacion-navarro-luciano-tripodi/",
+   "institution": "Universidad Miguel Hernández",
+   "inst_id": "umh",
+   "region": "Comunitat Valenciana",
+   "inst_type": "public",
+   "level": "phd+postdoc",
+   "fields": [
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://sgi.umh.es/en/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "5e0782b391a3",
+   "title": "(Español) Ayudas para la Realización de Proyectos de... Other national projects",
+   "url": "https://sgi.umh.es/en/2026/10/12/ayudas-para-la-realizacion-de-proyectos-de-investigacion-de-la-fundacion-san-rafael/",
+   "institution": "Universidad Miguel Hernández",
+   "inst_id": "umh",
+   "region": "Comunitat Valenciana",
+   "inst_type": "public",
+   "level": "phd+postdoc",
+   "fields": [
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://sgi.umh.es/en/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "0690790708c6",
+   "title": "(Español) Ayudas para contratos Ramón y Cajal (RYC) 2026 Ayudas postdoctorales",
+   "url": "https://sgi.umh.es/en/2026/10/08/ayudas-para-contratos-ramon-y-cajal-ryc-2026/",
+   "institution": "Universidad Miguel Hernández",
+   "inst_id": "umh",
+   "region": "Comunitat Valenciana",
+   "inst_type": "public",
+   "level": "postdoc",
+   "fields": [
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://sgi.umh.es/en/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "1901e84f143c",
+   "title": "(Español) Ayudas para contratos de Personal Técnico y... Ayudas Técnicos de Apoyo (PTA)",
+   "url": "https://sgi.umh.es/en/2026/10/08/ayudas-para-contratos-de-personal-tecnico-y-de-gestion-de-idi-2026/",
+   "institution": "Universidad Miguel Hernández",
+   "inst_id": "umh",
+   "region": "Comunitat Valenciana",
+   "inst_type": "public",
+   "level": "phd+postdoc",
+   "fields": [
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://sgi.umh.es/en/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "d5a74f1af141",
+   "title": "Pers. Docente y Pers. Investigador",
+   "url": "https://www.ucm.es/",
+   "institution": "Universidad Complutense de Madrid",
+   "inst_id": "ucm",
+   "region": "Madrid",
+   "inst_type": "public",
+   "level": "postdoc",
+   "fields": [
+    "Geography"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.ucm.es/pinves",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "e6a30b6c7a8f",
+   "title": "HRS2026/445 Investigador/a postdoctoral - detección y geolocalización RFI por satélite / Postdoctoral Researcher - Satellite RFI Detection and Geolocation HRS2026/445 Escuela Técnica Superior de Ingenieros de Telecomunic",
+   "url": "https://web.upm.es/hrs4r/hrs2026445-investigadora-postdoctoral-deteccion-y-geolocalizacion-rfi-por-satelite-postdoctoral",
+   "institution": "Universidad Politécnica de Madrid",
+   "inst_id": "upm",
+   "region": "Madrid",
+   "inst_type": "public",
+   "level": "phd+postdoc",
+   "fields": [
+    "Climate & risk"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://web.upm.es/hrs4r/incorporacion-la-upm",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "7ab863f657b2",
+   "title": "HRS2026/444-358 Predoc/Junior Researcher Position in Modeling and AI-enabled Drone-Based Systems HRS2026/444-360 Escuela Técnica Superior de Ingenieros de Telecomunicación Ana M. Bernardos empleo@grpss.ssr.upm.es www.ipt",
+   "url": "https://web.upm.es/hrs4r/hrs2026444-358-predocjunior-researcher-position-modeling-and-ai-enabled-drone-based-systems",
+   "institution": "Universidad Politécnica de Madrid",
+   "inst_id": "upm",
+   "region": "Madrid",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://web.upm.es/hrs4r/incorporacion-la-upm",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "37237f2ba6c8",
+   "title": "ESTRATEGIA HRS4R Estrategia HRS4R Estrategia HRS4R La Estrategia de Recursos Humanos para la Investigación (HRS4R) es una herramienta puesta en marcha por la Comisión Europea para apoyar a las instituciones y organizacio",
+   "url": "https://www.urjc.es/hrs4r",
+   "institution": "Universidad Rey Juan Carlos",
+   "inst_id": "urjc",
+   "region": "Madrid",
+   "inst_type": "public",
+   "level": "phd+postdoc",
+   "fields": [
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.urjc.es/hrs4r",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "2a1b14e56708",
+   "title": "En julio de 2022 , la URJC presentó ante la Comisión Europea el informe de evaluación intermedia analizando el progreso y los logros alcanzados en las 18 acciones puestas en marcha bajo el Plan de Acción incial (2020-202",
+   "url": "https://www.urjc.es/images/facultades/hrs4r/documentos/HRS4R_Plan_de_Acción_revisado.pdf",
+   "institution": "Universidad Rey Juan Carlos",
+   "inst_id": "urjc",
+   "region": "Madrid",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.urjc.es/hrs4r",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "823820a8523b",
+   "title": "R-1609/2024 Resolución provisional primera fase",
+   "url": "https://www.um.es/documents/d/investigacion/05-r-1609_2024-resolucion-provisional-primera-fase-pdf",
+   "institution": "Universidad de Murcia",
+   "inst_id": "um",
+   "region": "Murcia",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.um.es/web/investigacion/novedades-investigacion",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "f12ecfb5e965",
+   "title": "Equivalence of average grade of university studies carried out in foreign centers",
+   "url": "https://www.universidades.gob.es/equivalencia-de-notas-medias-de-estudios-universitarios-realizados-en-centros-extranjeros/",
+   "institution": "Universidad de Murcia",
+   "inst_id": "um",
+   "region": "Murcia",
+   "inst_type": "public",
+   "level": "phd+postdoc",
+   "fields": [
+    "Climate & risk",
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.um.es/web/investigacion/novedades-investigacion",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "3fb660f97afc",
+   "title": "Resolución provisional 1ª fase",
+   "url": "https://www.um.es/documents/d/investigacion/04-r-1886_2023-provisional-1-fase-pdf",
+   "institution": "Universidad de Murcia",
+   "inst_id": "um",
+   "region": "Murcia",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.um.es/web/investigacion/novedades-investigacion",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "03d05e6d7791",
+   "title": "Corrección definitiva 1ª fase",
+   "url": "https://www.um.es/documents/d/investigacion/06-r-133_2024-correccion-definitiva-1-fase-pdf",
+   "institution": "Universidad de Murcia",
+   "inst_id": "um",
+   "region": "Murcia",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.um.es/web/investigacion/novedades-investigacion",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "5e22f185301c",
+   "title": "Resolución provisional 2ª fase",
+   "url": "https://www.um.es/documents/d/investigacion/07-r-163_2024-provisional-de-la-convocatoria-pdf",
+   "institution": "Universidad de Murcia",
+   "inst_id": "um",
+   "region": "Murcia",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.um.es/web/investigacion/novedades-investigacion",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "a86bf69d53d8",
+   "title": "R-281_2024. Resolución definitiva de la Convocatoria",
+   "url": "https://www.um.es/documents/d/investigacion/08-r-281_2024-resolucion-definitiva-de-la-convocatoria-pdf",
+   "institution": "Universidad de Murcia",
+   "inst_id": "um",
+   "region": "Murcia",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.um.es/web/investigacion/novedades-investigacion",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "7334f7e5a3cc",
+   "title": "Call for two predoctoral contracts funded by the European Commission within the framework of the MSCA DN project \"MGICIAN\"",
+   "url": "https://www.unavarra.es/en/sites/investigacion/como-lo-hacemos/ayudas-y-convocatorias/personal-investigador.html?anuncio=/sites/investigacion/contents/Ayudas y convocatorias/personal-investigador/2026/mgician&opcion=1",
+   "institution": "Universidad Pública de Navarra",
+   "inst_id": "upna",
+   "region": "Navarra",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.unavarra.es/en/sites/investigacion/como-lo-hacemos/ayudas-y-convocatorias/personal-investigador.html",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "a0d2f191be71",
+   "title": "Becas de posdoctorado Junior Leader Convocatoria Retaining 2027 Fundación \"la Caixa\" miércoles, 23 de septiembre de 2026 Becas Bases convocatoria",
+   "url": "https://dam.ceu.es/api/public/content/uch/conocenos/investigacion/convocatorias/postdoctoral-junior-leader-2027-retaining-rules-participation_10_09_2026.pdf",
+   "institution": "Universidad CEU Cardenal Herrera",
+   "inst_id": "uchceu",
+   "region": "Comunitat Valenciana",
+   "inst_type": "private",
+   "level": "postdoc",
+   "fields": [],
+   "deadline": null,
+   "kind": "call",
+   "source_page": "https://www.uchceu.es/investigacion/convocatorias",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "08f8678f0eb4",
+   "title": "Ayudas para contratos de formación de doctores y doctoras en empresas (Doctorados Industriales) 2026 Agencia Estatal de Investigación (AEI) lunes, 26 de octubre de 2026 Convocatorias Convocatoria",
+   "url": "https://www.aei.gob.es/sites/default/files/convocatory_info/file/2026-09/Resoluci%C3%B3n%20convocatoria%20DIN%202026_fda.pdf",
+   "institution": "Universidad CEU Cardenal Herrera",
+   "inst_id": "uchceu",
+   "region": "Comunitat Valenciana",
+   "inst_type": "private",
+   "level": "phd+postdoc",
+   "fields": [
+    "Mobility & transport"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.uchceu.es/investigacion/convocatorias",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "63d9d5d3b99f",
+   "title": "Ayudas para contratos predoctorales para la formación de profesorado universitario (FPU) 2026 Agencia Estatal de Investigación (AEI) Del 20 oct. al 12 nov. de 2026 Convocatorias Convocatoria",
+   "url": "https://www.aei.gob.es/sites/default/files/convocatory_info/assistants/2026-09/convocatoria%20FPU%202026_firmada.pdf",
+   "institution": "Universidad CEU Cardenal Herrera",
+   "inst_id": "uchceu",
+   "region": "Comunitat Valenciana",
+   "inst_type": "private",
+   "level": "phd",
+   "fields": [],
+   "deadline": null,
+   "kind": "call",
+   "source_page": "https://www.uchceu.es/investigacion/convocatorias",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "581e7016c702",
+   "title": "Ayudas Juan de la Cierva 2026 Agencia Estatal de Investigación (AEI) Del 12 nov. al 26 nov. de 2026 Convocatorias Convocatoria",
+   "url": "https://www.aei.gob.es/sites/default/files/convocatory_info/assistants/2026-09/Convocatoria%20JDC%202026_firmada.pdf",
+   "institution": "Universidad CEU Cardenal Herrera",
+   "inst_id": "uchceu",
+   "region": "Comunitat Valenciana",
+   "inst_type": "private",
+   "level": "postdoc",
+   "fields": [],
+   "deadline": null,
+   "kind": "call",
+   "source_page": "https://www.uchceu.es/investigacion/convocatorias",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "d3176a345c6d",
+   "title": "Ayudas Ramón y Cajal 2026 Agencia Estatal de Investigación (AEI) Del 10 nov. al 10 dic. de 2026 Convocatorias Convocatoria",
+   "url": "https://www.aei.gob.es/sites/default/files/convocatory_info/file/2026-09/convocatoria%20RYC%202026_.pdf",
+   "institution": "Universidad CEU Cardenal Herrera",
+   "inst_id": "uchceu",
+   "region": "Comunitat Valenciana",
+   "inst_type": "private",
+   "level": "postdoc",
+   "fields": [],
+   "deadline": null,
+   "kind": "call",
+   "source_page": "https://www.uchceu.es/investigacion/convocatorias",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "f3da153070f7",
+   "title": "Severo Ochoa Postdoctoral Researcher in Exposom... Barcelona_Campus Mar_PRBB",
+   "url": "https://jobs.isglobal.org/jobs/8572771-severo-ochoa-postdoctoral-researcher-in-exposome-research",
+   "institution": "ISGlobal (urban planning",
+   "inst_id": "isglobal",
+   "region": "Catalunya",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Urban planning"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://jobs.isglobal.org/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "4a6c759a2118",
+   "title": "Postdoctoral Researcher for RELATE4NATURE Project",
+   "url": "https://www.bc3research.org/en/job_offer/postdoctoral-researcher-for-relate4nature-project/",
+   "institution": "Basque Centre for Climate Change (BC3)",
+   "inst_id": "bc3",
+   "region": "País Vasco",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Climate & risk",
+    "GIS & remote sensing",
+    "Geography",
+    "Landscape",
+    "Urban planning"
+   ],
+   "deadline": null,
+   "kind": "position",
+   "source_page": "https://www.bc3research.org/en/careers/job-offers/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "b9dccf8aecda",
+   "title": "Download job description",
+   "url": "https://rrhh.irec.cat/wp-content/uploads/2026/10/anexo-2-2027-13-PostDoc_HyPromise-1.pdf",
+   "institution": "Institut de Recerca en Energia de Catalunya (IREC)",
+   "inst_id": "irec",
+   "region": "Catalunya",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": "2026-12-31",
+   "kind": "position",
+   "source_page": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "0811a30f469c",
+   "title": "Próxima publicación Solicitud: 10/11/2026 - 10/12/2026 Ayudas para contratos Ramón y Cajal 2026",
+   "url": "https://www.uam.es/uam/investigacion/ofertas-empleo/ryc2026",
+   "institution": "Universidad Autónoma de Madrid",
+   "inst_id": "uam",
+   "region": "Madrid",
+   "inst_type": "public",
+   "level": "postdoc",
+   "fields": [],
+   "deadline": "2026-12-10",
+   "kind": "call",
+   "source_page": "https://www.uam.es/uam/investigacion/ofertas-empleo",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "85e3cf171c2b",
+   "title": "Continúa leyendo Convocatoria Juan de la Cierva 2026",
+   "url": "https://convocatoriasinvestigacion.usal.es/convocatoria-juan-de-la-cierva-2026/",
+   "institution": "Universidad de Salamanca",
+   "inst_id": "usal",
+   "region": "Castilla y León",
+   "inst_type": "public",
+   "level": "postdoc",
+   "fields": [],
+   "deadline": "2026-11-27",
+   "kind": "call",
+   "source_page": "https://convocatoriasinvestigacion.usal.es/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "2697644c1c1d",
+   "title": "Convocatorias ordinarias - Ciencia e investigación",
+   "url": "https://ceice.gva.es/es/web/ciencia/-/plan-gent2-1?redirect=%2Fes%2Fweb%2Fciencia%2Fconvocatories_2027%2Fc-programa-per-al-suport-a-persones-investigadores-amb-talent-pla-gent2",
+   "institution": "Universidad CEU Cardenal Herrera",
+   "inst_id": "uchceu",
+   "region": "Comunitat Valenciana",
+   "inst_type": "private",
+   "level": "phd+postdoc",
+   "fields": [
+    "Heritage"
+   ],
+   "deadline": "2026-11-27",
+   "kind": "position",
+   "source_page": "https://www.uchceu.es/investigacion/convocatorias",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "7cf5024265c6",
+   "title": "Próxima publicación Solicitud: 12/11/2026 - 26/11/2026 Ayudas Juan de la Cierva 2026",
+   "url": "https://www.uam.es/uam/investigacion/ofertas-empleo/jdc2026",
+   "institution": "Universidad Autónoma de Madrid",
+   "inst_id": "uam",
+   "region": "Madrid",
+   "inst_type": "public",
+   "level": "postdoc",
+   "fields": [],
+   "deadline": "2026-11-26",
+   "kind": "call",
+   "source_page": "https://www.uam.es/uam/investigacion/ofertas-empleo",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "e213e7b3197f",
+   "title": "16/06/2026 Abierta Ayudas para la formación de profesorado universitario (FPU) 2026 Convocatoria Ir a convocatoria",
+   "url": "https://www.uhu.es/gestion-investigacion/convocatorias/ayudas-para-la-formacion-de-profesorado-universitario-fpu-2026",
+   "institution": "Universidad de Huelva",
+   "inst_id": "uhu",
+   "region": "Andalucía",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [],
+   "deadline": "2026-11-20",
+   "kind": "call",
+   "source_page": "https://www.uhu.es/gestion-investigacion/rrhh/predoctorales",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "e5b79a95779d",
+   "title": "Download job description",
+   "url": "https://rrhh.irec.cat/wp-content/uploads/2026/10/Anexo-2-ENG_Oferta-contratacion_820_26_057.pdf",
+   "institution": "Institut de Recerca en Energia de Catalunya (IREC)",
+   "inst_id": "irec",
+   "region": "Catalunya",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": "2026-11-17",
+   "kind": "position",
+   "source_page": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "f78a261e2f56",
+   "title": "Download job description",
+   "url": "https://rrhh.irec.cat/wp-content/uploads/2026/10/Annex-2-Oferta-contractacio-26-090_PartTime-VDD.pdf",
+   "institution": "Institut de Recerca en Energia de Catalunya (IREC)",
+   "inst_id": "irec",
+   "region": "Catalunya",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": "2026-11-17",
+   "kind": "position",
+   "source_page": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "2f284ec2344d",
+   "title": "Download job description",
+   "url": "https://rrhh.irec.cat/wp-content/uploads/2026/10/Anexe-2-2026-72-_Description-of-the-R1_Stacks-high-pressure-VD.pdf",
+   "institution": "Institut de Recerca en Energia de Catalunya (IREC)",
+   "inst_id": "irec",
+   "region": "Catalunya",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": "2026-11-17",
+   "kind": "position",
+   "source_page": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "1e5706013cf5",
+   "title": "Download job description",
+   "url": "https://rrhh.irec.cat/wp-content/uploads/2026/09/Anexo-2-Description-of-ResearchEng_SELDON-2026-80.pdf",
+   "institution": "Institut de Recerca en Energia de Catalunya (IREC)",
+   "inst_id": "irec",
+   "region": "Catalunya",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": "2026-11-17",
+   "kind": "position",
+   "source_page": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "6af86684d55f",
+   "title": "Download job description",
+   "url": "https://rrhh.irec.cat/wp-content/uploads/2026/09/ANEXO-2-2026-73.pdf",
+   "institution": "Institut de Recerca en Energia de Catalunya (IREC)",
+   "inst_id": "irec",
+   "region": "Catalunya",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": "2026-11-17",
+   "kind": "position",
+   "source_page": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "ee8ab4367bcc",
+   "title": "Download job description",
+   "url": "https://rrhh.irec.cat/wp-content/uploads/2026/07/S1-Tecnica-administrativa-de-projectes-Ref.-2026-14.pdf",
+   "institution": "Institut de Recerca en Energia de Catalunya (IREC)",
+   "inst_id": "irec",
+   "region": "Catalunya",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Climate & risk"
+   ],
+   "deadline": "2026-11-17",
+   "kind": "position",
+   "source_page": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "7da91dd82005",
+   "title": "Download job description",
+   "url": "https://rrhh.irec.cat/wp-content/uploads/2026/07/Anexo-2-Oferta-contractacio-Responsable-Manteniment-PLEMCAT-cat.engl-2026-65.pdf",
+   "institution": "Institut de Recerca en Energia de Catalunya (IREC)",
+   "inst_id": "irec",
+   "region": "Catalunya",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Mobility & transport"
+   ],
+   "deadline": "2026-11-17",
+   "kind": "position",
+   "source_page": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "4f9f299c2273",
+   "title": "Download job description",
+   "url": "https://rrhh.irec.cat/wp-content/uploads/2026/04/R-2-Investigadora-Recunaguda-Iontronics-Ref.-2026-08.pdf",
+   "institution": "Institut de Recerca en Energia de Catalunya (IREC)",
+   "inst_id": "irec",
+   "region": "Catalunya",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": "2026-11-17",
+   "kind": "position",
+   "source_page": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "a94aea74bd61",
+   "title": "Investigador/a en estudis socioespacials, anàlisi geoespacial, justícia espacial i desenvolupament de projectes transdisciplinaris. Codi 30267350016",
+   "url": "https://talenthub.upc.edu/en/jobs/r2/r2-jobs/investigador-a-en-estudis-socioespacials-analisi-geoespacial-justicia-espacial-i-desenvolupament-de-projectes-transdisciplinaris-codi-30267350016/investigador-a-en-estudis-socioespacials-analisi-geoespacial-justicia-espacial-i-desenvolupament-de-projectes-transdisciplinaris-codi-30267350016",
+   "institution": "Universitat Politècnica de Catalunya",
+   "inst_id": "upc",
+   "region": "Catalunya",
+   "inst_type": "public",
+   "level": "postdoc",
+   "fields": [
+    "Architecture",
+    "GIS & remote sensing"
+   ],
+   "deadline": "2026-11-16",
+   "kind": "position",
+   "source_page": "https://talenthub.upc.edu/en/jobs/r2/r2-jobs/r2-jobs",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "83a68816b9b0",
+   "title": "Ayudas para contratos Juan de la Cierva y Ramón y Cajal (RYC) (2026)",
+   "url": "https://www.ubu.es/te-interesa/ayudas-para-contratos-juan-de-la-cierva-y-ramon-y-cajal-ryc-2026",
+   "institution": "Universidad de Burgos",
+   "inst_id": "ubu",
+   "region": "Castilla y León",
+   "inst_type": "public",
+   "level": "postdoc",
+   "fields": [],
+   "deadline": "2026-11-12",
+   "kind": "call",
+   "source_page": "https://www.ubu.es/trabaja-en-la-ubu",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "3cbc69acbabb",
+   "title": "Continúa leyendo CONVOCATORIA RAMÓN Y CAJAL 2026",
+   "url": "https://convocatoriasinvestigacion.usal.es/convocatoria-ramon-y-cajal-2026/",
+   "institution": "Universidad de Salamanca",
+   "inst_id": "usal",
+   "region": "Castilla y León",
+   "inst_type": "public",
+   "level": "postdoc",
+   "fields": [],
+   "deadline": "2026-11-09",
+   "kind": "call",
+   "source_page": "https://convocatoriasinvestigacion.usal.es/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "d76d2f470e05",
+   "title": "Download job description",
+   "url": "https://rrhh.irec.cat/wp-content/uploads/2026/10/Anexo-2-Oferta-contratacion-Process-Monitoring-researcher-2027-10-VF.pdf",
+   "institution": "Institut de Recerca en Energia de Catalunya (IREC)",
+   "inst_id": "irec",
+   "region": "Catalunya",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": "2026-10-30",
+   "kind": "position",
+   "source_page": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "8104a50be97f",
+   "title": "Senior Postdoctoral Researcher on urban adaptation evaluation for IMAGINE Adaptation Project",
+   "url": "https://www.bc3research.org/en/job_offer/senior-postdoctoral-researcher-on-urban-adaptation-evaluation-for-imagine-adaptation-project/",
+   "institution": "Basque Centre for Climate Change (BC3)",
+   "inst_id": "bc3",
+   "region": "País Vasco",
+   "inst_type": "research",
+   "level": "phd+postdoc",
+   "fields": [
+    "Urban planning"
+   ],
+   "deadline": "2026-10-30",
+   "kind": "position",
+   "source_page": "https://www.bc3research.org/en/careers/job-offers/",
+   "first_seen": "2026-10-28"
+  },
+  {
+   "id": "0c6876cd671a",
+   "title": "Investigador/a en formació per millorar l'arquitectura dels sistemes de computació en processadors gràfics. Codi 10277010001",
+   "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/investigador-a-en-formacio-per-millorar-larquitectura-dels-sistemes-de-computacio-en-processadors-grafics/investigador-a-en-formacio-per-millorar-larquitectura-dels-sistemes-de-computacio-en-processadors-grafics-codi-10277010001",
+   "institution": "Universitat Politècnica de Catalunya",
+   "inst_id": "upc",
+   "region": "Catalunya",
+   "inst_type": "public",
+   "level": "phd",
+   "fields": [
+    "Architecture"
+   ],
+   "deadline": "2026-10-28",
+   "kind": "position",
+   "source_page": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
+   "first_seen": "2026-10-28"
+  }
+ ],
+ "sources": [
+  {
+   "institution": "ual",
+   "url": "https://www.ual.es/investigacion/convocatorias",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "www.ual.es"
+  },
+  {
+   "institution": "ual",
+   "url": "https://www.ual.es/universidad/serviciosgenerales/sgi/convocatorias-1/rr-hh/contratos-predoctorales",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "www.ual.es"
+  },
+  {
+   "institution": "ual",
+   "url": "https://www.ual.es/universidad/serviciosgenerales/sgi/convocatorias-1/rr-hh/contratos-posdoctorales",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "www.ual.es"
+  },
+  {
+   "institution": "uca",
+   "url": "https://investigacionytransferencia.uca.es/capital-humano-investigador/contratos-predoctorales-en-industria/",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "investigacionytransferencia.uca.es"
+  },
+  {
+   "institution": "ugr",
+   "url": "https://investigacion.ugr.es/recursos-humanos/predoctorales",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 12,
+   "kept": 3,
+   "details_fetched": 11,
+   "host": "investigacion.ugr.es"
+  },
+  {
+   "institution": "uhu",
+   "url": "https://www.uhu.es/gestion-investigacion/rrhh/predoctorales",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 25,
+   "kept": 2,
+   "details_fetched": 8,
+   "host": "www.uhu.es"
+  },
+  {
+   "institution": "uhu",
+   "url": "https://www.uhu.es/gestion-investigacion/rrhh/posdoctorales",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 16,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "www.uhu.es"
+  },
+  {
+   "institution": "uma",
+   "url": "https://www.uma.es/servicio-de-investigacion/cms/menu/contratos-y-becas/",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "www.uma.es"
+  },
+  {
+   "institution": "upo",
+   "url": "https://www.upo.es/area-investigacion/contratos-predoctorales/",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 38,
+   "kept": 5,
+   "details_fetched": 35,
+   "host": "www.upo.es"
+  },
+  {
+   "institution": "us",
+   "url": "https://www.investigacion.us.es/",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "www.investigacion.us.es"
+  },
+  {
+   "institution": "unican",
+   "url": "https://sede.unican.es/Tramites-y-procedimientos/tramites-pdi",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "sede.unican.es"
+  },
+  {
+   "institution": "ubu",
+   "url": "https://www.ubu.es/trabaja-en-la-ubu",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 12,
+   "kept": 1,
+   "details_fetched": 3,
+   "host": "www.ubu.es"
+  },
+  {
+   "institution": "usal",
+   "url": "https://convocatoriasinvestigacion.usal.es/",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 48,
+   "kept": 2,
+   "details_fetched": 47,
+   "host": "convocatoriasinvestigacion.usal.es"
+  },
+  {
+   "institution": "ub",
+   "url": "https://seu.ub.edu/ofertaPublicaCategoriaPublic/categories",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 12,
+   "kept": 0,
+   "details_fetched": 5,
+   "host": "seu.ub.edu"
+  },
+  {
+   "institution": "upc",
+   "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 32,
+   "kept": 9,
+   "details_fetched": 32,
+   "host": "talenthub.upc.edu"
+  },
+  {
+   "institution": "upc",
+   "url": "https://talenthub.upc.edu/en/jobs/r2/r2-jobs/r2-jobs",
+   "checked": "2026-10-28T12:58:19+00:00",
+   "ok": true,
+   "listed": 31,
+   "kept": 2,
+   "details_fetched": 31,
+   "host": "talenthub.upc.edu"
+  },
+  {
+   "institution": "udg",
+   "url": "https://www.udg.edu/ca/coneix/treballa-a-la-udg/personal-docent-i-investigador/convocatories-carrec-projectes",
+   "checked": "2026-10-28T12:58:22+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "www.udg.edu"
+  },
+  {
+   "institution": "udl",
+   "url": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-predoctorals/",
+   "checked": "2026-10-28T12:58:22+00:00",
+   "ok": true,
+   "listed": 136,
+   "kept": 0,
+   "details_fetched": 17,
+   "host": "www.recercaitransferencia.udl.cat"
+  },
+  {
+   "institution": "udl",
+   "url": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-postdoctorals/",
+   "checked": "2026-10-28T12:58:23+00:00",
+   "ok": true,
+   "listed": 128,
+   "kept": 0,
+   "details_fetched": 4,
+   "host": "www.recercaitransferencia.udl.cat"
+  },
+  {
+   "institution": "urv",
+   "url": "https://seuelectronica.urv.cat/treballar-a-la-urv/convocatories-pdi/",
+   "checked": "2026-10-28T12:58:23+00:00",
+   "ok": true,
+   "listed": 38,
+   "kept": 0,
+   "details_fetched": 24,
+   "host": "seuelectronica.urv.cat"
+  },
+  {
+   "institution": "upv",
+   "url": "https://www.upv.es/empleopublico/",
+   "checked": "2026-10-28T12:58:25+00:00",
+   "ok": true,
+   "listed": 42,
+   "kept": 1,
+   "details_fetched": 5,
+   "host": "www.upv.es"
+  },
+  {
+   "institution": "ua",
+   "url": "https://cvnet.cpd.ua.es/AgendaUA/Investigacio",
+   "checked": "2026-10-28T12:58:25+00:00",
+   "ok": true,
+   "listed": 26,
+   "kept": 1,
+   "details_fetched": 22,
+   "host": "cvnet.cpd.ua.es"
+  },
+  {
+   "institution": "uji",
+   "url": "https://www.uji.es/serveis/rrhh/base/pi/pii/",
+   "checked": "2026-10-28T12:58:27+00:00",
+   "ok": true,
+   "listed": 8,
+   "kept": 0,
+   "details_fetched": 1,
+   "host": "www.uji.es"
+  },
+  {
+   "institution": "umh",
+   "url": "https://sgi.umh.es/en/",
+   "checked": "2026-10-28T12:58:28+00:00",
+   "ok": true,
+   "listed": 7,
+   "kept": 5,
+   "details_fetched": 6,
+   "host": "sgi.umh.es"
+  },
+  {
+   "institution": "uvigo",
+   "url": "https://secretaria.uvigo.gal/uv/web/convocatoria/public/categoria/investigar",
+   "checked": "2026-10-28T12:58:29+00:00",
+   "ok": true,
+   "listed": 20,
+   "kept": 0,
+   "details_fetched": 20,
+   "host": "secretaria.uvigo.gal"
+  },
+  {
+   "institution": "ucm",
+   "url": "https://www.ucm.es/pinves",
+   "checked": "2026-10-28T12:58:29+00:00",
+   "ok": true,
+   "listed": 16,
+   "kept": 1,
+   "details_fetched": 12,
+   "host": "www.ucm.es"
+  },
+  {
+   "institution": "ucm",
+   "url": "https://www.ucm.es/empleo-ucm",
+   "checked": "2026-10-28T12:58:32+00:00",
+   "ok": true,
+   "listed": 10,
+   "kept": 0,
+   "details_fetched": 7,
+   "host": "www.ucm.es"
+  },
+  {
+   "institution": "uam",
+   "url": "https://www.uam.es/uam/investigacion/ofertas-empleo",
+   "checked": "2026-10-28T12:58:34+00:00",
+   "ok": true,
+   "listed": 1277,
+   "kept": 2,
+   "details_fetched": 60,
+   "host": "www.uam.es"
+  },
+  {
+   "institution": "uam",
+   "url": "https://www.uam.es/uam/investigacion/proyectos-investigacion",
+   "checked": "2026-10-28T12:58:35+00:00",
+   "ok": true,
+   "listed": 1,
+   "kept": 0,
+   "details_fetched": 1,
+   "host": "www.uam.es"
+  },
+  {
+   "institution": "upm",
+   "url": "https://web.upm.es/hrs4r/incorporacion-la-upm",
+   "checked": "2026-10-28T12:58:43+00:00",
+   "ok": true,
+   "listed": 10,
+   "kept": 2,
+   "details_fetched": 9,
+   "host": "web.upm.es"
+  },
+  {
+   "institution": "upm",
+   "url": "https://web.upm.es/hrs4r/",
+   "checked": "2026-10-28T12:58:43+00:00",
+   "ok": true,
+   "listed": 11,
+   "kept": 0,
+   "details_fetched": 11,
+   "host": "web.upm.es"
+  },
+  {
+   "institution": "urjc",
+   "url": "https://www.urjc.es/hrs4r",
+   "checked": "2026-10-28T12:58:44+00:00",
+   "ok": true,
+   "listed": 11,
+   "kept": 2,
+   "details_fetched": 11,
+   "host": "www.urjc.es"
+  },
+  {
+   "institution": "uned",
+   "url": "https://www.uned.es/universidad/inicio/investigacion/portal-investigador/becas-ayudas-doctorado.html",
+   "checked": "2026-10-28T12:58:49+00:00",
+   "ok": true,
+   "listed": 27,
+   "kept": 0,
+   "details_fetched": 27,
+   "host": "www.uned.es"
+  },
+  {
+   "institution": "um",
+   "url": "https://www.um.es/web/investigacion/novedades-investigacion",
+   "checked": "2026-10-28T12:59:09+00:00",
+   "ok": true,
+   "listed": 304,
+   "kept": 6,
+   "details_fetched": 60,
+   "host": "www.um.es"
+  },
+  {
+   "institution": "upna",
+   "url": "https://www.unavarra.es/en/sites/investigacion/como-lo-hacemos/ayudas-y-convocatorias/personal-investigador.html",
+   "checked": "2026-10-28T12:59:12+00:00",
+   "ok": true,
+   "listed": 8,
+   "kept": 1,
+   "details_fetched": 6,
+   "host": "www.unavarra.es"
+  },
+  {
+   "institution": "uoc",
+   "url": "https://selection.uoc.edu/web/offersjob/offers.aspx?y=PP",
+   "checked": "2026-10-28T12:59:15+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "selection.uoc.edu"
+  },
+  {
+   "institution": "uic",
+   "url": "https://www.uic.es/en/university/uic-barcelona/work-us-uic-barcelona/teaching-and-research-staff",
+   "checked": "2026-10-28T12:59:18+00:00",
+   "ok": true,
+   "listed": 4,
+   "kept": 0,
+   "details_fetched": 3,
+   "host": "www.uic.es"
+  },
+  {
+   "institution": "uvic",
+   "url": "https://utalent.uvic.cat/",
+   "checked": "2026-10-28T12:59:18+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "utalent.uvic.cat"
+  },
+  {
+   "institution": "unav",
+   "url": "https://www.unav.edu/investigacion/servicios-para-investigadores/atraccion-de-talento",
+   "checked": "2026-10-28T12:59:20+00:00",
+   "ok": true,
+   "listed": 2,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "www.unav.edu"
+  },
+  {
+   "institution": "mondragon",
+   "url": "https://www.mondragon.edu/es/investigacion/ingenieria-tecnologia/ayudas-becas",
+   "checked": "2026-10-28T12:59:25+00:00",
+   "ok": true,
+   "listed": 3,
+   "kept": 0,
+   "details_fetched": 2,
+   "host": "www.mondragon.edu"
+  },
+  {
+   "institution": "comillas",
+   "url": "https://www.comillas.edu/trabaja-con-nosotros/convocatorias-para-el-personal-investigador/",
+   "checked": "2026-10-28T12:59:26+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "www.comillas.edu"
+  },
+  {
+   "institution": "uax",
+   "url": "https://fundacion.uax.com/investigadores/predoctorales.html",
+   "checked": "2026-10-28T12:59:27+00:00",
+   "ok": true,
+   "listed": 7,
+   "kept": 0,
+   "details_fetched": 3,
+   "host": "fundacion.uax.com"
+  },
+  {
+   "institution": "uchceu",
+   "url": "https://www.uchceu.es/investigacion/convocatorias",
+   "checked": "2026-10-28T12:59:28+00:00",
+   "ok": true,
+   "listed": 134,
+   "kept": 6,
+   "details_fetched": 60,
+   "host": "www.uchceu.es"
+  },
+  {
+   "institution": "ucam",
+   "url": "https://investigacion.ucam.edu/postdoctorado",
+   "checked": "2026-10-28T12:59:29+00:00",
+   "ok": true,
+   "listed": 13,
+   "kept": 0,
+   "details_fetched": 12,
+   "host": "investigacion.ucam.edu"
+  },
+  {
+   "institution": "isglobal",
+   "url": "https://jobs.isglobal.org/",
+   "checked": "2026-10-28T12:59:31+00:00",
+   "ok": true,
+   "listed": 8,
+   "kept": 1,
+   "details_fetched": 6,
+   "host": "jobs.isglobal.org"
+  },
+  {
+   "institution": "irec",
+   "url": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
+   "checked": "2026-10-28T12:59:34+00:00",
+   "ok": true,
+   "listed": 1545,
+   "kept": 10,
+   "details_fetched": 60,
+   "host": "rrhh.irec.cat"
+  },
+  {
+   "institution": "cimne",
+   "url": "https://cimne.com/jobs-fellowships/research-staff/",
+   "checked": "2026-10-28T12:59:36+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0,
+   "host": "cimne.com"
+  },
+  {
+   "institution": "bc3",
+   "url": "https://www.bc3research.org/en/careers/job-offers/",
+   "checked": "2026-10-28T12:59:38+00:00",
+   "ok": true,
+   "listed": 3,
+   "kept": 2,
+   "details_fetched": 3,
+   "host": "www.bc3research.org"
+  }
+ ]
+}
