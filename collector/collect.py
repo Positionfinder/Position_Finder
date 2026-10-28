@@ -67,6 +67,8 @@ SKIP_LINK = re.compile(r"^(home|inicio|inici|login|accede|contact|contacto|conta
                        r"more|ver más|veure més|next|siguiente|previous|anterior|\d+|»|«|›|‹|all calls|open|closed|"
                        r"access to jobs|view more|view all|ver todas?|veure-les totes|tots|todas|abiertas?|cerradas?|obertes|tancades)$",
                        re.I)
+TECH_STAFF = re.compile(r"personal t[eé]cnico|t[eé]cnic[oa]s? (de apoyo|superior|especialista|de laboratorio)|t[eè]cnic/?a|"
+                        r"\bPTA\b|technician|research support|gestor[a]? de|project manager|administrativ|developer|ingeniero de dise|engineer\b", re.I)
 ROW_CONTAINERS = ("tr", "li", "article", "dd")
 TEXT_CONTAINERS = ("p", "h2", "h3", "h4", "h5", "td", "div")
 MAIN_ID = re.compile(r"^(content|main|contingut|contenido|region-content|main-content)", re.I)
@@ -185,9 +187,14 @@ def read_detail(url: str) -> dict:
     return {"status": "ok", "title": title, "segments": segments[:3000], "pdf": is_pdf}
 
 
+def max_year(text: str) -> int | None:
+    years = [int(y) for y in re.findall(r"\b(20[1-3]\d)\b", text) if int(y) <= date.today().year + 2]
+    return max(years) if years else None
+
+
 def classify_text(text: str) -> dict:
     return {"level": classify.level(text), "fields": classify.fields(text[:15000]),
-            "deadline": classify.deadline(text, date.min)}
+            "deadline": classify.deadline(text, date.min), "max_year": max_year(text)}
 
 
 # ---------- per source ----------
@@ -261,14 +268,24 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             reason = "marked closed"
         elif not lvl:
             reason = "not PhD/postdoc"
-        elif not lvl_title and len(title) < 45:
+        elif TECH_STAFF.search(title) and not lvl_title:
+            reason = "technical / support staff"
+        elif not prog and not lvl_title and len(title) < 45:
             reason = "vague title (looks like a menu or section link)"
+        elif not dl and max([y for y in (max_year(f"{title} {it['context']}"), det.get("max_year")) if y] or [today.year]) < today.year:
+            reason = "old (no deadline, latest year mentioned is in the past)"
         elif prog and not classify.relevant(flds):
             years = [int(y) for y in re.findall(r"\b(20\d{2})\b", f"{title} {it['context'][:300]}")]
             if (years and max(years) < today.year) or (not years and not dl):
                 reason = "old or undated programme call"
         elif not prog and not classify.relevant(flds):
             reason = "field not relevant"
+        is_call = bool(prog and not classify.relevant(flds))
+        if is_call and not dl:
+            future = [d for _, d in classify._dates(it["context"]) if d >= today]
+            dl = max(future).isoformat() if future else None
+        if is_call and (len(title) < 45 or not classify.level(title)) and not classify.programme_key(title):
+            title = f"{prog} call"
         rec = {
             "id": item_id(it["url"]), "title": title[:300], "url": it["url"],
             "institution": inst["name"], "inst_id": inst["id"], "region": inst.get("region"),
