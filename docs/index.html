@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Position Finder · PhD & postdoc positions in Spain</title>
+<meta name="description" content="PhD and postdoc positions in urban planning, architecture, geography and related fields at Spanish universities and research centres, collected automatically every day.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="masthead">
+  <div class="wrap">
+    <p class="eyebrow">Spain · updated daily</p>
+    <h1>Position Finder</h1>
+    <p class="lede">PhD and postdoc positions in <strong>urban planning, architecture, geography</strong> and related fields, collected automatically from Spanish universities and research centres.</p>
+  </div>
+</header>
+
+<main class="wrap">
+  <section class="controls" aria-label="Filters">
+    <input id="q" type="search" placeholder="Search title, institution, keyword…" autocomplete="off">
+    <div class="row">
+      <div class="seg" role="group" aria-label="Level">
+        <button data-level="all" class="on">All</button>
+        <button data-level="phd">PhD</button>
+        <button data-level="postdoc">Postdoc</button>
+      </div>
+      <select id="region" aria-label="Region"><option value="">All regions</option></select>
+      <select id="itype" aria-label="Institution type">
+        <option value="">All institutions</option>
+        <option value="public">Public universities</option>
+        <option value="private">Private universities</option>
+        <option value="research">Research centres</option>
+      </select>
+      <select id="sort" aria-label="Sort">
+        <option value="new">Newest first</option>
+        <option value="deadline">Deadline soonest</option>
+      </select>
+    </div>
+    <div id="fields" class="chips" aria-label="Fields"></div>
+    <label class="toggle"><input type="checkbox" id="calls"> Include national/regional fellowship calls open to all fields (Juan de la Cierva, FPU, Beatriu de Pinós…)</label>
+  </section>
+
+  <p id="summary" class="summary" aria-live="polite">Loading…</p>
+  <ol id="list" class="list"></ol>
+
+  <section class="also">
+    <h2>Also worth searching</h2>
+    <p>Some portals don't allow automated collection, so they aren't included above. Search them directly:</p>
+    <ul>
+      <li><a href="https://euraxess.ec.europa.eu/jobs/search?keywords=urban%20planning%20Spain" rel="noopener">EURAXESS · urban planning</a> ·
+          <a href="https://euraxess.ec.europa.eu/jobs/search?keywords=architecture%20Spain" rel="noopener">architecture</a> ·
+          <a href="https://euraxess.ec.europa.eu/jobs/search?keywords=geography%20Spain" rel="noopener">geography</a></li>
+    </ul>
+  </section>
+
+  <details class="sources">
+    <summary>Sources and their status</summary>
+    <p class="small">Each listing page is checked once a day, respecting the site's robots.txt. Positions link to the original announcement; always check details and deadlines there.</p>
+    <table><thead><tr><th>Institution</th><th>Page</th><th>Status</th><th>Kept</th></tr></thead><tbody id="srcs"></tbody></table>
+  </details>
+</main>
+
+<footer class="wrap foot">
+  <p>Last updated <span id="updated">–</span>. Open source on <a href="https://github.com/Positionfinder/Position_Finder">GitHub</a>.</p>
+</footer>
+<script src="app.js"></script>
+</body>
+</html>

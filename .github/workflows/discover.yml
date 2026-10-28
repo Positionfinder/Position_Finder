@@ -1,9 +1,8 @@
 name: discover
 on:
   workflow_dispatch:
-  push:
-    branches: [probe]
-    paths: ["sources/**", "collector/discover.py", "collector/fetch.py", ".github/workflows/discover.yml"]
+  schedule:
+    - cron: "41 3 * * 1"   # weekly, Monday 03:41 UTC
 permissions:
   contents: write
 concurrency: discover
@@ -22,4 +21,5 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add data/discovery.json
           git commit -m "Discovery results [skip ci]" || true
+          git pull --rebase || true
           git push
