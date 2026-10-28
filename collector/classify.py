@@ -6,7 +6,7 @@ from datetime import date
 
 PHD = re.compile(
     r"predoctoral|pre-doctoral|predoc\b|ph\.?\s?d\.?\s?(student|candidate|position|fellowship|contract|scholarship)|"
-    r"doctoral (student|candidate|researcher|position|fellowship|contract)|doctorand[oa]?s?|"
+    r"(?<![a-z-])doctoral (student|candidate|researcher|position|fellowship|contract)|doctorand[oa]?s?|"
     r"\bfpi\b|\bfpu\b|\bR1\b|first stage researcher|investigador[a]? (en formaci[oó]n|predoctoral)|"
     r"personal investigador en formaci|contrat[eo]s? predoctorals?|beca predoctoral|tesis doctoral|joan or[oó]|\bINPhINIT\b",
     re.I,

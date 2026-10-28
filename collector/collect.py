@@ -263,6 +263,9 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         title = it["title"]
         if det.get("title") and len(det["title"]) > 15 and (len(title) < 30 or GENERIC_LINK.match(title) or it.get("weak_title")):
             title = det["title"]
+        elif it.get("weak_title"):
+            debug.append({"title": title[:200], "url": it["url"], "skip": "link inside a long list, no own title"})
+            continue
         prog = classify.programme_key(f"{title} {it['context'][:200]}")
         reason = None
         if dl and dl < today.isoformat():
@@ -321,7 +324,8 @@ def merge_calls(items: list[dict]) -> list[dict]:
             rec = {**rec, "programme": key, "title": f"{key} call"}
         if key in calls:
             c = calls[key]
-            c["listed_by"].append(rec["institution"])
+            if rec["institution"] not in c["listed_by"]:
+                c["listed_by"].append(rec["institution"])
             if not c["deadline"] and rec["deadline"]:
                 c["deadline"] = rec["deadline"]
             continue
