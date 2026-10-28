@@ -1,0 +1,189 @@
+{
+  "upc_r1": {
+    "url": "https://talenthub.upc.edu/en/jobs/r1",
+    "status": 200,
+    "final_url": "https://talenthub.upc.edu/en/jobs/r1",
+    "type": "text/html;charset=utf-8",
+    "bytes": 65508
+  },
+  "upc_r2": {
+    "url": "https://talenthub.upc.edu/en/jobs/r2",
+    "status": 200,
+    "final_url": "https://talenthub.upc.edu/en/jobs/r2",
+    "type": "text/html;charset=utf-8",
+    "bytes": 75693
+  },
+  "upc_jobs": {
+    "url": "https://talenthub.upc.edu/en/jobs",
+    "status": 200,
+    "final_url": "https://talenthub.upc.edu/en/jobs",
+    "type": "text/html;charset=utf-8",
+    "bytes": 61844
+  },
+  "upm_hrs4r": {
+    "url": "https://web.upm.es/hrs4r/",
+    "status": 200,
+    "final_url": "https://web.upm.es/hrs4r/",
+    "type": "text/html; charset=UTF-8",
+    "bytes": 84310
+  },
+  "ub_seu_pdi": {
+    "url": "https://seu.ub.edu/ofertaPublicaCategoriaPublic/categories/personaldocent?lang=en",
+    "status": 200,
+    "final_url": "https://seu.ub.edu/ofertaPublicaCategoriaPublic/categories/personaldocent?lang=en",
+    "type": "text/html;charset=utf-8",
+    "bytes": 74832
+  },
+  "ub_seu_root": {
+    "url": "https://seu.ub.edu/ofertaPublicaCategoriaPublic/categories?lang=en",
+    "status": 200,
+    "final_url": "https://seu.ub.edu/ofertaPublicaCategoriaPublic/categories?lang=en",
+    "type": "text/html;charset=utf-8",
+    "bytes": 70173
+  },
+  "upv_empleo": {
+    "url": "https://www.upv.es/empleopublico",
+    "status": 200,
+    "final_url": "https://www.upv.es/empleopublico/",
+    "type": "text/html; charset=utf-8",
+    "bytes": 84242
+  },
+  "us_inv": {
+    "url": "https://investigacion.us.es/",
+    "status": 200,
+    "final_url": "https://www.investigacion.us.es/",
+    "type": "text/html; charset=UTF-8",
+    "bytes": 95982
+  },
+  "ugr_inv_personal": {
+    "url": "https://investigacion.ugr.es/personal",
+    "error": "<HTTPError 404: 'Not Found'>"
+  },
+  "dogv_home": {
+    "url": "https://dogv.gva.es/es/",
+    "status": 200,
+    "final_url": "https://dogv.gva.es/es/inici/",
+    "type": "text/html;charset=UTF-8",
+    "bytes": 125068
+  },
+  "dogv_opendata": {
+    "url": "https://dogv.gva.es/es/datos-abiertos",
+    "status": 200,
+    "final_url": "https://dogv.gva.es/es/inici/",
+    "type": "text/html;charset=UTF-8",
+    "bytes": 125068
+  },
+  "boja_home": {
+    "url": "https://www.juntadeandalucia.es/eboja.html",
+    "status": 200,
+    "final_url": "https://www.juntadeandalucia.es/eboja.html",
+    "type": "text/html; charset=UTF-8",
+    "bytes": 133587
+  },
+  "boja_rss": {
+    "url": "https://www.juntadeandalucia.es/boja/distribucion/boja.xml",
+    "status": 200,
+    "final_url": "https://www.juntadeandalucia.es/boja/distribucion/boja.xml",
+    "type": "text/xml; charset=utf-8",
+    "bytes": 109843
+  },
+  "dogc_portal": {
+    "url": "https://portaldogc.gencat.cat/",
+    "error": "<HTTPError 403: 'Forbidden'>"
+  },
+  "dogc_opendata": {
+    "url": "https://analisi.transparenciacatalunya.cat/resource/n6hn-rmy7.json?$limit=5",
+    "status": 200,
+    "final_url": "https://analisi.transparenciacatalunya.cat/resource/n6hn-rmy7.json?$limit=5",
+    "type": "application/json;charset=utf-8",
+    "bytes": 8961
+  },
+  "bocm_home": {
+    "url": "https://www.bocm.es/",
+    "status": 200,
+    "final_url": "https://www.bocm.es/",
+    "type": "text/html; charset=utf-8",
+    "bytes": 846851
+  },
+  "bocm_rss": {
+    "url": "https://www.bocm.es/boletines.rss",
+    "error": "TimeoutError('The read operation timed out')"
+  },
+  "robots_analisi.transparenciacatalunya.cat": {
+    "url": "https://analisi.transparenciacatalunya.cat/robots.txt",
+    "status": 200,
+    "final_url": "https://analisi.transparenciacatalunya.cat/robots.txt",
+    "type": "text/plain; charset=utf-8",
+    "bytes": 1757
+  },
+  "robots_dogv.gva.es": {
+    "url": "https://dogv.gva.es/robots.txt",
+    "status": 200,
+    "final_url": "https://dogv.gva.es/robots.txt",
+    "type": "text/plain",
+    "bytes": 106349
+  },
+  "robots_investigacion.ugr.es": {
+    "url": "https://investigacion.ugr.es/robots.txt",
+    "status": 200,
+    "final_url": "https://investigacion.ugr.es/robots.txt",
+    "type": "text/plain",
+    "bytes": 1594
+  },
+  "robots_investigacion.us.es": {
+    "url": "https://investigacion.us.es/robots.txt",
+    "status": 200,
+    "final_url": "https://investigacion.us.es/robots.txt",
+    "type": "text/plain; charset=UTF-8",
+    "bytes": 155
+  },
+  "robots_portaldogc.gencat.cat": {
+    "url": "https://portaldogc.gencat.cat/robots.txt",
+    "status": 200,
+    "final_url": "https://portaldogc.gencat.cat/robots.txt",
+    "type": "text/plain; charset=UTF-8",
+    "bytes": 28
+  },
+  "robots_seu.ub.edu": {
+    "url": "https://seu.ub.edu/robots.txt",
+    "status": 200,
+    "final_url": "https://seu.ub.edu/robots.txt",
+    "type": "text/plain;charset=UTF-8",
+    "bytes": 388
+  },
+  "robots_talenthub.upc.edu": {
+    "url": "https://talenthub.upc.edu/robots.txt",
+    "status": 200,
+    "final_url": "https://talenthub.upc.edu/robots.txt",
+    "type": "text/plain; charset=utf-8",
+    "bytes": 1237
+  },
+  "robots_web.upm.es": {
+    "url": "https://web.upm.es/robots.txt",
+    "status": 200,
+    "final_url": "https://web.upm.es/robots.txt",
+    "type": "text/plain",
+    "bytes": 2027
+  },
+  "robots_www.bocm.es": {
+    "url": "https://www.bocm.es/robots.txt",
+    "status": 200,
+    "final_url": "https://www.bocm.es/robots.txt",
+    "type": "text/plain;charset=UTF-8",
+    "bytes": 122929
+  },
+  "robots_www.juntadeandalucia.es": {
+    "url": "https://www.juntadeandalucia.es/robots.txt",
+    "status": 200,
+    "final_url": "https://www.juntadeandalucia.es/robots.txt",
+    "type": "text/plain; charset=utf-8",
+    "bytes": 8850
+  },
+  "robots_www.upv.es": {
+    "url": "https://www.upv.es/robots.txt",
+    "status": 200,
+    "final_url": "https://www.upv.es/robots.txt",
+    "type": "text/plain; charset=ISO-8859-1",
+    "bytes": 1268
+  }
+}

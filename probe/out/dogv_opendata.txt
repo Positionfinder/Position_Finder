@@ -1,0 +1,5894 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+			<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html class="ltr" dir="ltr" lang="es-ES">
+	
+<head>
+
+	<title>Inicio - Diari Oficial de la Generalitat Valenciana (DOGV) - Generalitat Valenciana</title>
+    <link rel="stylesheet" href="https://dogv.gva.es/o/es.gva.liferayPortales.themes.horizontal-theme/css/fontawesome/releases/v6.4.2/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta content="text/html; charset=UTF-8" http-equiv="content-type" />
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="importmap">{"imports":{"react-dom":"/o/frontend-js-react-web/__liferay__/exports/react-dom.js","@clayui/breadcrumb":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$breadcrumb.js","@clayui/charts":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$charts.js","@clayui/empty-state":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$empty-state.js","react":"/o/frontend-js-react-web/__liferay__/exports/react.js","react-dom-16":"/o/frontend-js-react-web/__liferay__/exports/react-dom-16.js","@clayui/navigation-bar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$navigation-bar.js","@clayui/icon":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$icon.js","@clayui/table":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$table.js","@clayui/slider":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$slider.js","@clayui/multi-select":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$multi-select.js","@clayui/nav":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$nav.js","@clayui/provider":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$provider.js","@clayui/panel":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$panel.js","@clayui/list":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$list.js","@liferay/dynamic-data-mapping-form-field-type":"/o/dynamic-data-mapping-form-field-type/__liferay__/index.js","@clayui/date-picker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$date-picker.js","@clayui/label":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$label.js","@liferay/frontend-js-api/data-set":"/o/frontend-js-dependencies-web/__liferay__/exports/@liferay$js-api$data-set.js","@clayui/core":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$core.js","@clayui/pagination-bar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$pagination-bar.js","@clayui/layout":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$layout.js","@clayui/multi-step-nav":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$multi-step-nav.js","@liferay/frontend-js-api":"/o/frontend-js-dependencies-web/__liferay__/exports/@liferay$js-api.js","@clayui/toolbar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$toolbar.js","@clayui/badge":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$badge.js","react-dom-18":"/o/frontend-js-react-web/__liferay__/exports/react-dom-18.js","@clayui/link":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$link.js","@clayui/card":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$card.js","@clayui/tooltip":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$tooltip.js","@clayui/button":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$button.js","@clayui/tabs":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$tabs.js","@clayui/sticker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$sticker.js","@clayui/form":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$form.js","@clayui/popover":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$popover.js","@clayui/shared":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$shared.js","@clayui/localized-input":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$localized-input.js","@clayui/modal":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$modal.js","@clayui/color-picker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$color-picker.js","@clayui/pagination":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$pagination.js","@clayui/autocomplete":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$autocomplete.js","@clayui/management-toolbar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$management-toolbar.js","@clayui/time-picker":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$time-picker.js","@clayui/upper-toolbar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$upper-toolbar.js","@clayui/loading-indicator":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$loading-indicator.js","@clayui/drop-down":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$drop-down.js","@clayui/data-provider":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$data-provider.js","@liferay/language/":"/o/js/language/","@clayui/css":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$css.js","@clayui/alert":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$alert.js","@clayui/progress-bar":"/o/frontend-taglib-clay/__liferay__/exports/@clayui$progress-bar.js","react-16":"/o/frontend-js-react-web/__liferay__/exports/react-16.js","react-18":"/o/frontend-js-react-web/__liferay__/exports/react-18.js"},"scopes":{}}</script><link data-senna-track="temporary" href="https://dogv.gva.es/va/inici" rel="canonical" />
+<link data-senna-track="temporary" href="https://dogv.gva.es/es/inici" hreflang="es-ES"rel="alternate" />
+<link data-senna-track="temporary" href="https://dogv.gva.es/va/inici" hreflang="ca-ES"rel="alternate" />
+<link data-senna-track="temporary" href="https://dogv.gva.es/va/inici" hreflang="x-default"rel="alternate" />
+
+<meta property="og:locale" content="es_ES">
+<meta property="og:locale:alternate" content="ca_ES">
+<meta property="og:locale:alternate" content="es_ES">
+<meta property="og:site_name" content="Diari Oficial de la Generalitat Valenciana (DOGV)">
+<meta property="og:title" content="Inicio - Diari Oficial de la Generalitat Valenciana (DOGV) - Generalitat Valenciana">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://dogv.gva.es/va/inici">
+<script data-senna-track="temporary">var Liferay = window.Liferay || {};Liferay.Icons = Liferay.Icons || {};Liferay.Icons.controlPanelSpritemap = 'https://dogv.gva.es/o/admin-theme/images/clay/icons.svg'; Liferay.Icons.spritemap = 'https://dogv.gva.es/o/es.gva.liferayPortales.themes.horizontal-theme/images/clay/icons.svg';</script>
+<script data-senna-track="permanent" src="/combo?browserId=other&minifierType=js&languageId=es_ES&t=1793136436363&/o/frontend-js-jquery-web/jquery/jquery.min.js&/o/frontend-js-jquery-web/jquery/init.js&/o/frontend-js-jquery-web/jquery/ajax.js&/o/frontend-js-jquery-web/jquery/bootstrap.bundle.min.js&/o/frontend-js-jquery-web/jquery/collapsible_search.js&/o/frontend-js-jquery-web/jquery/fm.js&/o/frontend-js-jquery-web/jquery/form.js&/o/frontend-js-jquery-web/jquery/popper.min.js&/o/frontend-js-jquery-web/jquery/side_navigation.js" type="text/javascript"></script>
+<script data-senna-track="permanent" type="text/javascript">window.Liferay = window.Liferay || {}; window.Liferay.CSP = {nonce: ''};</script>
+
+
+<link href="https://dogv.gva.es/o/es.gva.liferayPortales.themes.horizontal-theme/images/favicon.ico" rel="apple-touch-icon" />
+<link href="https://dogv.gva.es/o/es.gva.liferayPortales.themes.horizontal-theme/images/favicon.ico" rel="icon" />
+
+
+
+<link class="lfr-css-file" data-senna-track="temporary" href="https://dogv.gva.es/o/es.gva.liferayPortales.themes.horizontal-theme/css/clay.css?browserId=other&amp;themeId=horizontal_WAR_esgvaliferayPortalesthemeshorizontaltheme&amp;minifierType=css&amp;languageId=es_ES&amp;t=1793136404000" id="liferayAUICSS" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+
+	<link href="/combo?browserId=other&amp;minifierType=css&amp;themeId=horizontal_WAR_esgvaliferayPortalesthemeshorizontaltheme&amp;languageId=es_ES&amp;com_liferay_commerce_product_asset_categories_navigation_web_internal_portlet_CPAssetCategoriesNavigationPortlet_INSTANCE_cpAssetCategoriesNavigationPortlet_navigation_menu:%2Fo%2Fcommerce-product-asset-categories-navigation-web%2Fcss%2Fmain.css&amp;com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_0AkBwY2jfOvL:%2Fo%2Fjournal-content-web%2Fcss%2Fmain.css&amp;com_liferay_product_navigation_product_menu_web_portlet_ProductMenuPortlet:%2Fo%2Fproduct-navigation-product-menu-web%2Fcss%2Fmain.css&amp;com_liferay_product_navigation_user_personal_bar_web_portlet_ProductNavigationUserPersonalBarPortlet:%2Fo%2Fproduct-navigation-user-personal-bar-web%2Fcss%2Fmain.css&amp;com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_footerNavigation:%2Fo%2Fsite-navigation-menu-web%2Fcss%2Fmain.css&amp;t=1793136404000" rel="stylesheet" type="text/css"
+ data-senna-track="temporary" id="7d09505" />
+
+
+
+
+
+
+
+
+<script type="text/javascript" data-senna-track="temporary">
+	// <![CDATA[
+		var Liferay = Liferay || {};
+
+		Liferay.Browser = {
+			acceptsGzip: function () {
+				return false;
+			},
+
+			
+
+			getMajorVersion: function () {
+				return 0;
+			},
+
+			getRevision: function () {
+				return '';
+			},
+			getVersion: function () {
+				return '';
+			},
+
+			
+
+			isAir: function () {
+				return false;
+			},
+			isChrome: function () {
+				return false;
+			},
+			isEdge: function () {
+				return false;
+			},
+			isFirefox: function () {
+				return false;
+			},
+			isGecko: function () {
+				return false;
+			},
+			isIe: function () {
+				return false;
+			},
+			isIphone: function () {
+				return false;
+			},
+			isLinux: function () {
+				return false;
+			},
+			isMac: function () {
+				return false;
+			},
+			isMobile: function () {
+				return false;
+			},
+			isMozilla: function () {
+				return false;
+			},
+			isOpera: function () {
+				return false;
+			},
+			isRtf: function () {
+				return false;
+			},
+			isSafari: function () {
+				return false;
+			},
+			isSun: function () {
+				return false;
+			},
+			isWebKit: function () {
+				return false;
+			},
+			isWindows: function () {
+				return false;
+			}
+		};
+
+		Liferay.Data = Liferay.Data || {};
+
+		Liferay.Data.ICONS_INLINE_SVG = true;
+
+		Liferay.Data.NAV_SELECTOR = '#navigation';
+
+		Liferay.Data.NAV_SELECTOR_MOBILE = '#navigationCollapse';
+
+		Liferay.Data.isCustomizationView = function () {
+			return false;
+		};
+
+		Liferay.Data.notices = [
+			
+		];
+
+		(function () {
+			var available = {};
+
+			var direction = {};
+
+			
+
+				available['ca_ES'] = 'catalán\x20\x28España\x29';
+				direction['ca_ES'] = 'ltr';
+
+			
+
+				available['es_ES'] = 'español\x20\x28España\x29';
+				direction['es_ES'] = 'ltr';
+
+			
+
+				available['en_US'] = 'inglés\x20\x28Estados\x20Unidos\x29';
+				direction['en_US'] = 'ltr';
+
+			
+
+				available['fr_FR'] = 'francés\x20\x28Francia\x29';
+				direction['fr_FR'] = 'ltr';
+
+			
+
+			let _cache = {};
+
+			if (Liferay && Liferay.Language && Liferay.Language._cache) {
+				_cache = Liferay.Language._cache;
+			}
+
+			Liferay.Language = {
+				_cache,
+				available,
+				direction,
+				get: function(key) {
+					let value = Liferay.Language._cache[key];
+
+					if (value === undefined) {
+						value = key;
+					}
+
+					return value;
+				}
+			};
+		})();
+
+		var featureFlags = {"LPD-10964":false,"LPD-37927":false,"LPD-10889":false,"LPS-193884":false,"LPD-30371":false,"LPD-11131":true,"LPS-178642":false,"LPS-193005":false,"LPD-31789":false,"LPD-10562":false,"LPD-11212":false,"COMMERCE-8087":false,"LPD-39304":true,"LPD-13311":true,"LRAC-10757":false,"LPD-35941":false,"LPS-180090":false,"LPS-178052":false,"LPD-21414":false,"LPS-185892":false,"LPS-186620":false,"LPD-40533":true,"LPD-40534":true,"LPS-184404":false,"LPD-40530":true,"LPD-20640":false,"LPS-198183":false,"LPD-38869":false,"LPD-35678":false,"LPD-6378":false,"LPS-153714":false,"LPD-11848":false,"LPS-170670":false,"LPD-7822":false,"LPS-169981":false,"LPD-21926":false,"LPS-177027":false,"LPD-37531":false,"LPD-11003":false,"LPD-36446":false,"LPD-39437":false,"LPS-135430":false,"LPD-20556":false,"LPD-45276":false,"LPS-134060":false,"LPS-164563":false,"LPD-32050":false,"LPS-122920":false,"LPS-199086":false,"LPD-35128":false,"LPD-10588":false,"LPD-13778":true,"LPD-11313":false,"LPD-6368":false,"LPD-34594":false,"LPS-202104":false,"LPD-19955":false,"LPD-35443":false,"LPD-39967":false,"LPD-11235":false,"LPD-11232":false,"LPS-196935":true,"LPD-43542":false,"LPS-176691":false,"LPS-197909":false,"LPD-29516":false,"COMMERCE-8949":false,"LPD-11228":false,"LPS-153813":false,"LPD-17809":false,"COMMERCE-13024":false,"LPS-165482":false,"LPS-193551":false,"LPS-197477":false,"LPS-174816":false,"LPS-186360":false,"LPD-30204":false,"LPD-32867":false,"LPS-153332":false,"LPD-35013":true,"LPS-179669":false,"LPS-174417":false,"LPD-44091":true,"LPD-31212":false,"LPD-18221":false,"LPS-155284":false,"LRAC-15017":false,"LPD-19870":false,"LPS-200108":false,"LPD-20131":false,"LPS-159643":false,"LPS-129412":false,"LPS-169837":false,"LPD-20379":false};
+
+		Liferay.FeatureFlags = Object.keys(featureFlags).reduce(
+			(acc, key) => ({
+				...acc, [key]: featureFlags[key] === 'true' || featureFlags[key] === true
+			}), {}
+		);
+
+		Liferay.PortletKeys = {
+			DOCUMENT_LIBRARY: 'com_liferay_document_library_web_portlet_DLPortlet',
+			DYNAMIC_DATA_MAPPING: 'com_liferay_dynamic_data_mapping_web_portlet_DDMPortlet',
+			ITEM_SELECTOR: 'com_liferay_item_selector_web_portlet_ItemSelectorPortlet'
+		};
+
+		Liferay.PropsValues = {
+			JAVASCRIPT_SINGLE_PAGE_APPLICATION_TIMEOUT: 0,
+			UPLOAD_SERVLET_REQUEST_IMPL_MAX_SIZE: 1073741824
+		};
+
+		Liferay.ThemeDisplay = {
+
+			
+
+			
+				getLayoutId: function () {
+					return '1';
+				},
+
+				
+
+				getLayoutRelativeControlPanelURL: function () {
+					return '/es/group/dogv/~/control_panel/manage';
+				},
+
+				getLayoutRelativeURL: function () {
+					return '/es/inici';
+				},
+				getLayoutURL: function () {
+					return 'https://dogv.gva.es/es/inici';
+				},
+				getParentLayoutId: function () {
+					return '0';
+				},
+				isControlPanel: function () {
+					return false;
+				},
+				isPrivateLayout: function () {
+					return 'false';
+				},
+				isVirtualLayout: function () {
+					return false;
+				},
+			
+
+			getBCP47LanguageId: function () {
+				return 'es-ES';
+			},
+			getCanonicalURL: function () {
+
+				
+
+				return 'https\x3a\x2f\x2fdogv\x2egva\x2ees\x2fca\x2finici';
+			},
+			getCDNBaseURL: function () {
+				return 'https://dogv.gva.es';
+			},
+			getCDNDynamicResourcesHost: function () {
+				return '';
+			},
+			getCDNHost: function () {
+				return '';
+			},
+			getCompanyGroupId: function () {
+				return '10193';
+			},
+			getCompanyId: function () {
+				return '10155';
+			},
+			getDefaultLanguageId: function () {
+				return 'ca_ES';
+			},
+			getDoAsUserIdEncoded: function () {
+				return '';
+			},
+			getLanguageId: function () {
+				return 'es_ES';
+			},
+			getParentGroupId: function () {
+				return '176057414';
+			},
+			getPathContext: function () {
+				return '';
+			},
+			getPathImage: function () {
+				return '/image';
+			},
+			getPathJavaScript: function () {
+				return '/o/frontend-js-web';
+			},
+			getPathMain: function () {
+				return '/es/c';
+			},
+			getPathThemeImages: function () {
+				return 'https://dogv.gva.es/o/es.gva.liferayPortales.themes.horizontal-theme/images';
+			},
+			getPathThemeRoot: function () {
+				return '/o/es.gva.liferayPortales.themes.horizontal-theme';
+			},
+			getPlid: function () {
+				return '176057431';
+			},
+			getPortalURL: function () {
+				return 'https://dogv.gva.es';
+			},
+			getRealUserId: function () {
+				return '10159';
+			},
+			getRemoteAddr: function () {
+				return '172.27.134.178';
+			},
+			getRemoteHost: function () {
+				return '172.27.134.178';
+			},
+			getScopeGroupId: function () {
+				return '176057414';
+			},
+			getScopeGroupIdOrLiveGroupId: function () {
+				return '176057414';
+			},
+			getSessionId: function () {
+				return '';
+			},
+			getSiteAdminURL: function () {
+				return 'https://dogv.gva.es/group/dogv/~/control_panel/manage?p_p_lifecycle=0&p_p_state=maximized&p_p_mode=view';
+			},
+			getSiteGroupId: function () {
+				return '176057414';
+			},
+			getTimeZone: function() {
+				return 'Europe/Paris';
+			},
+			getURLControlPanel: function() {
+				return '/es/group/control_panel?refererPlid=176057431';
+			},
+			getURLHome: function () {
+				return 'https\x3a\x2f\x2fdogv\x2egva\x2ees\x2fweb\x2fguest';
+			},
+			getUserEmailAddress: function () {
+				return '';
+			},
+			getUserId: function () {
+				return '10159';
+			},
+			getUserName: function () {
+				return '';
+			},
+			isAddSessionIdToURL: function () {
+				return false;
+			},
+			isImpersonated: function () {
+				return false;
+			},
+			isSignedIn: function () {
+				return false;
+			},
+
+			isStagedPortlet: function () {
+				
+					
+						return false;
+					
+				
+			},
+
+			isStateExclusive: function () {
+				return false;
+			},
+			isStateMaximized: function () {
+				return false;
+			},
+			isStatePopUp: function () {
+				return false;
+			}
+		};
+
+		var themeDisplay = Liferay.ThemeDisplay;
+
+		Liferay.AUI = {
+
+			
+
+			getCombine: function () {
+				return true;
+			},
+			getComboPath: function () {
+				return '/combo/?browserId=other&minifierType=&languageId=es_ES&t=1793136297603&';
+			},
+			getDateFormat: function () {
+				return '%d/%m/%Y';
+			},
+			getEditorCKEditorPath: function () {
+				return '/o/frontend-editor-ckeditor-web';
+			},
+			getFilter: function () {
+				var filter = 'raw';
+
+				
+					
+						filter = 'min';
+					
+					
+
+				return filter;
+			},
+			getFilterConfig: function () {
+				var instance = this;
+
+				var filterConfig = null;
+
+				if (!instance.getCombine()) {
+					filterConfig = {
+						replaceStr: '.js' + instance.getStaticResourceURLParams(),
+						searchExp: '\\.js$'
+					};
+				}
+
+				return filterConfig;
+			},
+			getJavaScriptRootPath: function () {
+				return '/o/frontend-js-web';
+			},
+			getPortletRootPath: function () {
+				return '/html/portlet';
+			},
+			getStaticResourceURLParams: function () {
+				return '?browserId=other&minifierType=&languageId=es_ES&t=1793136297603';
+			}
+		};
+
+		Liferay.authToken = '1ZBBcNxJ';
+
+		
+
+		Liferay.currentURL = '\x2fes\x2finici\x2f';
+		Liferay.currentURLEncoded = '\x252Fes\x252Finici\x252F';
+	// ]]>
+</script>
+
+<script data-senna-track="temporary" type="text/javascript">window.__CONFIG__= {basePath: '',combine: true, defaultURLParams: null, explainResolutions: false, exposeGlobal: false, logLevel: 'warn', moduleType: 'module', namespace:'Liferay', nonce: '', reportMismatchedAnonymousModules: 'warn', resolvePath: '/o/js_resolve_modules', url: '/combo/?browserId=other&minifierType=js&languageId=es_ES&t=1793136297603&', waitTimeout: 60000};</script><script data-senna-track="permanent" src="/o/frontend-js-loader-modules-extender/loader.js?&mac=9WaMmhziBCkScHZwrrVcOR7VZF4=&browserId=other&languageId=es_ES&minifierType=js" type="text/javascript"></script><script data-senna-track="permanent" src="/combo?browserId=other&minifierType=js&languageId=es_ES&t=1793136297603&/o/frontend-js-aui-web/aui/aui/aui-min.js&/o/frontend-js-aui-web/liferay/modules.js&/o/frontend-js-aui-web/liferay/aui_sandbox.js&/o/frontend-js-aui-web/aui/attribute-base/attribute-base-min.js&/o/frontend-js-aui-web/aui/attribute-complex/attribute-complex-min.js&/o/frontend-js-aui-web/aui/attribute-core/attribute-core-min.js&/o/frontend-js-aui-web/aui/attribute-observable/attribute-observable-min.js&/o/frontend-js-aui-web/aui/attribute-extras/attribute-extras-min.js&/o/frontend-js-aui-web/aui/event-custom-base/event-custom-base-min.js&/o/frontend-js-aui-web/aui/event-custom-complex/event-custom-complex-min.js&/o/frontend-js-aui-web/aui/oop/oop-min.js&/o/frontend-js-aui-web/aui/aui-base-lang/aui-base-lang-min.js&/o/frontend-js-aui-web/liferay/dependency.js&/o/frontend-js-aui-web/liferay/util.js&/o/frontend-js-web/liferay/dom_task_runner.js&/o/frontend-js-web/liferay/events.js&/o/frontend-js-web/liferay/lazy_load.js&/o/frontend-js-web/liferay/liferay.js&/o/frontend-js-web/liferay/global.bundle.js&/o/frontend-js-web/liferay/portlet.js&/o/frontend-js-web/liferay/workflow.js&/o/oauth2-provider-web/js/liferay.js" type="text/javascript"></script>
+<script data-senna-track="temporary" type="text/javascript">window.Liferay = Liferay || {}; window.Liferay.OAuth2 = {getAuthorizeURL: function() {return 'https://dogv.gva.es/o/oauth2/authorize';}, getBuiltInRedirectURL: function() {return 'https://dogv.gva.es/o/oauth2/redirect';}, getIntrospectURL: function() { return 'https://dogv.gva.es/o/oauth2/introspect';}, getTokenURL: function() {return 'https://dogv.gva.es/o/oauth2/token';}, getUserAgentApplication: function(externalReferenceCode) {return Liferay.OAuth2._userAgentApplications[externalReferenceCode];}, _userAgentApplications: {}}</script><script data-senna-track="temporary" type="text/javascript">try {var MODULE_MAIN='@liferay/frontend-js-react-web@5.0.54/index';var MODULE_PATH='/o/frontend-js-react-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			react: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/frontend-js-state-web@1.0.30/index';var MODULE_PATH='/o/frontend-js-state-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			state: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='exportimport-web@5.0.100/index';var MODULE_PATH='/o/exportimport-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			exportimportweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-export-import-export-import': {
+						path: 'main.js',
+						requires: [
+							'aui-datatype',
+							'aui-dialog-iframe-deprecated',
+							'aui-modal',
+							'aui-parse-content',
+							'aui-toggler',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='@liferay/document-library-web@6.0.198/index';var MODULE_PATH='/o/document-library-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			dl: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'document-library-upload-component': {
+						path: 'DocumentLibraryUpload.js',
+						requires: [
+							'aui-component',
+							'aui-data-set-deprecated',
+							'aui-overlay-manager-deprecated',
+							'aui-overlay-mask-deprecated',
+							'aui-parse-content',
+							'aui-progressbar',
+							'aui-template-deprecated',
+							'liferay-search-container',
+							'querystring-parse-simple',
+							'uploader',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='staging-processes-web@5.0.65/index';var MODULE_PATH='/o/staging-processes-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			stagingprocessesweb: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-staging-processes-export-import': {
+						path: 'main.js',
+						requires: [
+							'aui-datatype',
+							'aui-dialog-iframe-deprecated',
+							'aui-modal',
+							'aui-parse-content',
+							'aui-toggler',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='contacts-web@5.0.65/index';var MODULE_PATH='/o/contacts-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			contactscenter: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-contacts-center': {
+						path: 'main.js',
+						requires: [
+							'aui-io-plugin-deprecated',
+							'aui-toolbar',
+							'autocomplete-base',
+							'datasource-io',
+							'json-parse',
+							'liferay-portlet-base',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='portal-workflow-kaleo-designer-web@5.0.146/index';var MODULE_PATH='/o/portal-workflow-kaleo-designer-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			'kaleo-designer': {
+				base: MODULE_PATH + '/designer/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-kaleo-designer-autocomplete-util': {
+						path: 'autocomplete_util.js',
+						requires: ['autocomplete', 'autocomplete-highlighters'],
+					},
+					'liferay-kaleo-designer-definition-diagram-controller': {
+						path: 'definition_diagram_controller.js',
+						requires: [
+							'liferay-kaleo-designer-field-normalizer',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-dialogs': {
+						path: 'dialogs.js',
+						requires: ['liferay-util-window'],
+					},
+					'liferay-kaleo-designer-editors': {
+						path: 'editors.js',
+						requires: [
+							'aui-ace-editor',
+							'aui-ace-editor-mode-xml',
+							'aui-base',
+							'aui-datatype',
+							'aui-node',
+							'liferay-kaleo-designer-autocomplete-util',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-field-normalizer': {
+						path: 'field_normalizer.js',
+						requires: ['liferay-kaleo-designer-remote-services'],
+					},
+					'liferay-kaleo-designer-nodes': {
+						path: 'nodes.js',
+						requires: [
+							'aui-datatable',
+							'aui-datatype',
+							'aui-diagram-builder',
+							'liferay-kaleo-designer-editors',
+							'liferay-kaleo-designer-utils',
+						],
+					},
+					'liferay-kaleo-designer-remote-services': {
+						path: 'remote_services.js',
+						requires: ['aui-io'],
+					},
+					'liferay-kaleo-designer-templates': {
+						path: 'templates.js',
+						requires: ['aui-tpl-snippets-deprecated'],
+					},
+					'liferay-kaleo-designer-utils': {
+						path: 'utils.js',
+						requires: [],
+					},
+					'liferay-kaleo-designer-xml-definition': {
+						path: 'xml_definition.js',
+						requires: [
+							'aui-base',
+							'aui-component',
+							'dataschema-xml',
+							'datatype-xml',
+						],
+					},
+					'liferay-kaleo-designer-xml-definition-serializer': {
+						path: 'xml_definition_serializer.js',
+						requires: ['escape', 'liferay-kaleo-designer-xml-util'],
+					},
+					'liferay-kaleo-designer-xml-util': {
+						path: 'xml_util.js',
+						requires: ['aui-base'],
+					},
+					'liferay-portlet-kaleo-designer': {
+						path: 'main.js',
+						requires: [
+							'aui-ace-editor',
+							'aui-ace-editor-mode-xml',
+							'aui-tpl-snippets-deprecated',
+							'dataschema-xml',
+							'datasource',
+							'datatype-xml',
+							'event-valuechange',
+							'io-form',
+							'liferay-kaleo-designer-autocomplete-util',
+							'liferay-kaleo-designer-editors',
+							'liferay-kaleo-designer-nodes',
+							'liferay-kaleo-designer-remote-services',
+							'liferay-kaleo-designer-utils',
+							'liferay-kaleo-designer-xml-util',
+							'liferay-util-window',
+						],
+					},
+				},
+				root: MODULE_PATH + '/designer/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-js-components-web@2.0.80/index';var MODULE_PATH='/o/frontend-js-components-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			components: {
+
+				// eslint-disable-next-line
+				mainModule: MODULE_MAIN,
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='portal-search-web@6.0.148/index';var MODULE_PATH='/o/portal-search-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			search: {
+				base: MODULE_PATH + '/js/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-search-custom-range-facet': {
+						path: 'custom_range_facet.js',
+						requires: ['aui-form-validator'],
+					},
+				},
+				root: MODULE_PATH + '/js/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='frontend-editor-alloyeditor-web@5.0.56/index';var MODULE_PATH='/o/frontend-editor-alloyeditor-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			alloyeditor: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-alloy-editor': {
+						path: 'alloyeditor.js',
+						requires: [
+							'aui-component',
+							'liferay-portlet-base',
+							'timers',
+						],
+					},
+					'liferay-alloy-editor-source': {
+						path: 'alloyeditor_source.js',
+						requires: [
+							'aui-debounce',
+							'liferay-fullscreen-source-editor',
+							'liferay-source-editor',
+							'plugin',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='dynamic-data-mapping-web@5.0.115/index';var MODULE_PATH='/o/dynamic-data-mapping-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	const LiferayAUI = Liferay.AUI;
+
+	AUI().applyConfig({
+		groups: {
+			ddm: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: LiferayAUI.getFilterConfig(),
+				modules: {
+					'liferay-ddm-form': {
+						path: 'ddm_form.js',
+						requires: [
+							'aui-base',
+							'aui-datatable',
+							'aui-datatype',
+							'aui-image-viewer',
+							'aui-parse-content',
+							'aui-set',
+							'aui-sortable-list',
+							'json',
+							'liferay-form',
+							'liferay-map-base',
+							'liferay-translation-manager',
+							'liferay-util-window',
+						],
+					},
+					'liferay-portlet-dynamic-data-mapping': {
+						condition: {
+							trigger: 'liferay-document-library',
+						},
+						path: 'main.js',
+						requires: [
+							'arraysort',
+							'aui-form-builder-deprecated',
+							'aui-form-validator',
+							'aui-map',
+							'aui-text-unicode',
+							'json',
+							'liferay-menu',
+							'liferay-translation-manager',
+							'liferay-util-window',
+							'text',
+						],
+					},
+					'liferay-portlet-dynamic-data-mapping-custom-fields': {
+						condition: {
+							trigger: 'liferay-document-library',
+						},
+						path: 'custom_fields.js',
+						requires: ['liferay-portlet-dynamic-data-mapping'],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}try {var MODULE_MAIN='calendar-web@5.0.105/index';var MODULE_PATH='/o/calendar-web';/**
+ * SPDX-FileCopyrightText: (c) 2000 Liferay, Inc. https://liferay.com
+ * SPDX-License-Identifier: LGPL-2.1-or-later OR LicenseRef-Liferay-DXP-EULA-2.0.0-2023-06
+ */
+
+(function () {
+	AUI().applyConfig({
+		groups: {
+			calendar: {
+				base: MODULE_PATH + '/js/legacy/',
+				combine: Liferay.AUI.getCombine(),
+				filter: Liferay.AUI.getFilterConfig(),
+				modules: {
+					'liferay-calendar-a11y': {
+						path: 'calendar_a11y.js',
+						requires: ['calendar'],
+					},
+					'liferay-calendar-container': {
+						path: 'calendar_container.js',
+						requires: [
+							'aui-alert',
+							'aui-base',
+							'aui-component',
+							'liferay-portlet-base',
+						],
+					},
+					'liferay-calendar-date-picker-sanitizer': {
+						path: 'date_picker_sanitizer.js',
+						requires: ['aui-base'],
+					},
+					'liferay-calendar-interval-selector': {
+						path: 'interval_selector.js',
+						requires: ['aui-base', 'liferay-portlet-base'],
+					},
+					'liferay-calendar-interval-selector-scheduler-event-link': {
+						path: 'interval_selector_scheduler_event_link.js',
+						requires: ['aui-base', 'liferay-portlet-base'],
+					},
+					'liferay-calendar-list': {
+						path: 'calendar_list.js',
+						requires: [
+							'aui-template-deprecated',
+							'liferay-scheduler',
+						],
+					},
+					'liferay-calendar-message-util': {
+						path: 'message_util.js',
+						requires: ['liferay-util-window'],
+					},
+					'liferay-calendar-recurrence-converter': {
+						path: 'recurrence_converter.js',
+						requires: [],
+					},
+					'liferay-calendar-recurrence-dialog': {
+						path: 'recurrence.js',
+						requires: [
+							'aui-base',
+							'liferay-calendar-recurrence-util',
+						],
+					},
+					'liferay-calendar-recurrence-util': {
+						path: 'recurrence_util.js',
+						requires: ['aui-base', 'liferay-util-window'],
+					},
+					'liferay-calendar-reminders': {
+						path: 'calendar_reminders.js',
+						requires: ['aui-base'],
+					},
+					'liferay-calendar-remote-services': {
+						path: 'remote_services.js',
+						requires: [
+							'aui-base',
+							'aui-component',
+							'liferay-calendar-util',
+							'liferay-portlet-base',
+						],
+					},
+					'liferay-calendar-session-listener': {
+						path: 'session_listener.js',
+						requires: ['aui-base', 'liferay-scheduler'],
+					},
+					'liferay-calendar-simple-color-picker': {
+						path: 'simple_color_picker.js',
+						requires: ['aui-base', 'aui-template-deprecated'],
+					},
+					'liferay-calendar-simple-menu': {
+						path: 'simple_menu.js',
+						requires: [
+							'aui-base',
+							'aui-template-deprecated',
+							'event-outside',
+							'event-touch',
+							'widget-modality',
+							'widget-position',
+							'widget-position-align',
+							'widget-position-constrain',
+							'widget-stack',
+							'widget-stdmod',
+						],
+					},
+					'liferay-calendar-util': {
+						path: 'calendar_util.js',
+						requires: [
+							'aui-datatype',
+							'aui-io',
+							'aui-scheduler',
+							'aui-toolbar',
+							'autocomplete',
+							'autocomplete-highlighters',
+						],
+					},
+					'liferay-scheduler': {
+						path: 'scheduler.js',
+						requires: [
+							'async-queue',
+							'aui-datatype',
+							'aui-scheduler',
+							'dd-plugin',
+							'liferay-calendar-a11y',
+							'liferay-calendar-message-util',
+							'liferay-calendar-recurrence-converter',
+							'liferay-calendar-recurrence-util',
+							'liferay-calendar-util',
+							'liferay-scheduler-event-recorder',
+							'liferay-scheduler-models',
+							'promise',
+							'resize-plugin',
+						],
+					},
+					'liferay-scheduler-event-recorder': {
+						path: 'scheduler_event_recorder.js',
+						requires: [
+							'dd-plugin',
+							'liferay-calendar-util',
+							'resize-plugin',
+						],
+					},
+					'liferay-scheduler-models': {
+						path: 'scheduler_models.js',
+						requires: [
+							'aui-datatype',
+							'dd-plugin',
+							'liferay-calendar-util',
+						],
+					},
+				},
+				root: MODULE_PATH + '/js/legacy/',
+			},
+		},
+	});
+})();
+} catch(error) {console.error(error);}</script>
+
+
+
+
+<script type="text/javascript" data-senna-track="temporary">
+	// <![CDATA[
+		
+			
+				
+		
+
+		
+	// ]]>
+</script>
+
+
+
+
+
+	
+		
+
+			
+
+			
+				<script async src="https://www.googletagmanager.com/gtag/js?id=G-3F6JG1855L"></script>
+
+				
+			
+		
+		
+
+
+
+	
+		
+
+			
+
+			
+		
+		
+
+
+
+	
+		
+
+			
+
+			
+		
+	
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<link class="lfr-css-file" data-senna-track="temporary" href="https://dogv.gva.es/o/es.gva.liferayPortales.themes.horizontal-theme/css/main.css?browserId=other&amp;themeId=horizontal_WAR_esgvaliferayPortalesthemeshorizontaltheme&amp;minifierType=css&amp;languageId=es_ES&amp;t=1793136404000" id="liferayThemeCSS" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+
+	<style data-senna-track="temporary" type="text/css">
+
+		
+
+			
+
+		
+
+			
+
+				
+
+					
+
+#p_p_id_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_0AkBwY2jfOvL_ .portlet-content {
+
+}
+body.DXP #wrapper #content #breadcrumbs .portlet-breadcrumbs .breadcrumb .breadcrumb-item.breadcrumb-item-3 {
+    display: none;
+}
+
+body:not(.DXP) #breadcrumbs ul.breadcrumbs.breadcrumbs-horizontal li.last.sel {
+    display: none;
+}
+
+
+
+				
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+			
+
+		
+
+	</style>
+
+
+<style data-senna-track="temporary" type="text/css">
+</style>
+<link data-senna-track="permanent" href="/o/frontend-js-aui-web/alloy_ui.css?&mac=favIEq7hPo8AEd6k+N5OVADEEls=&browserId=other&languageId=es_ES&minifierType=css&themeId=horizontal_WAR_esgvaliferayPortalesthemeshorizontaltheme" rel="stylesheet"></link>
+<script type="module">
+import {init} from '/o/frontend-js-spa-web/__liferay__/index.js';
+{
+init({"navigationExceptionSelectors":":not([target=\"_blank\"]):not([data-senna-off]):not([data-resource-href]):not([data-cke-saved-href]):not([data-cke-saved-href])","cacheExpirationTime":-1,"clearScreensCache":false,"portletsBlacklist":["com_liferay_login_web_portlet_CreateAccountPortlet","com_liferay_nested_portlets_web_portlet_NestedPortletsPortlet","com_liferay_site_navigation_directory_web_portlet_SitesDirectoryPortlet","com_liferay_questions_web_internal_portlet_QuestionsPortlet","com_liferay_account_admin_web_internal_portlet_AccountUsersRegistrationPortlet","com_liferay_login_web_portlet_ForgotPasswordPortlet","com_liferay_portal_language_override_web_internal_portlet_PLOPortlet","com_liferay_login_web_portlet_LoginPortlet","listadodocumentos_WAR_listadodocumentosportlet","com_liferay_login_web_portlet_FastLoginPortlet"],"excludedTargetPortlets":["com_liferay_users_admin_web_portlet_UsersAdminPortlet","com_liferay_server_admin_web_portlet_ServerAdminPortlet"],"validStatusCodes":[221,490,494,499,491,496,492,493,495,220],"debugEnabled":false,"loginRedirect":"","excludedPaths":["/c/document_library","/documents","/image"],"preloadCSS":false,"userNotification":{"message":"Parece que esto está tardando más de lo esperado.","title":"Vaya","timeout":30000},"requestTimeout":0});
+}
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+Liferay.on(
+	'ddmFieldBlur', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldBlurred',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					focusDuration: event.focusDuration,
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFieldFocus', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'fieldFocused',
+				'Form',
+				{
+					fieldName: event.fieldName,
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title:event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormPageShow', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'pageViewed',
+				'Form',
+				{
+					formId: event.formId,
+					formPageTitle: event.formPageTitle,
+					page: event.page,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormSubmit', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formSubmitted',
+				'Form',
+				{
+					formId: event.formId,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+Liferay.on(
+	'ddmFormView', function(event) {
+		if (window.Analytics) {
+			Analytics.send(
+				'formViewed',
+				'Form',
+				{
+					formId: event.formId,
+					title: event.title
+				}
+			);
+		}
+	}
+);
+
+</script><script>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<script type="text/javascript" data-senna-track="temporary">
+	if (window.Analytics) {
+		window._com_liferay_document_library_analytics_isViewFileEntry = false;
+	}
+</script>
+
+
+
+
+
+
+
+
+
+	
+	
+	<script type="text/javascript" src="/o/es.gva.liferayPortales.themes.horizontal-theme/js/openlayers.js"></script>
+  	<script type="text/javascript" src="/o/es.gva.liferayPortales.themes.horizontal-theme/js/buscador_movil.js"></script>
+  	<script type="text/javascript" src="/o/es.gva.liferayPortales.themes.horizontal-theme/js/portal_normal.js"></script>
+	<script type="text/javascript" src="/o/es.gva.liferayPortales.themes.horizontal-theme/js/cookies.js"></script>
+	<script>Liferay.Loader.define.amd = Liferay.Loader.define._amd;</script>
+
+</head>
+	
+	<body class="other controls-visible  yui3-skin-sam signed-out public-page organization-site GVA-responsive horizontal DXP">
+<!-- Google Tag Manager (noscript) -->
+<!-- End Google Tag Manager (noscript) --> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	<nav aria-label="Enlaces rápidos" class="bg-dark cadmin quick-access-nav text-center text-white" id="kckm_quickAccessNav">
+		
+			
+				<a class="d-block p-2 sr-only sr-only-focusable text-reset" href="#main-content">
+		Saltar al contenido principal
+	</a>
+			
+			
+	</nav>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+		<a href="javascript:void(0);" id="scroll" title="Subir a inicio de la página" style="display: none;">Subir<span></span></a>
+		
+		<div id="wrapper">
+		
+<header id="header" role="banner" class="visible-print visible-desktop">
+	<div class="wrap-cabecera">
+		<div class="cabecera">
+			
+<div class="logos">
+
+	
+	<div id="logo_gva">
+				
+	<a href="https://www.gva.es">Generalitat Valenciana</a>
+									
+</div>	
+	<div id="logo_izquierda">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<div class="journal-content-article " data-analytics-asset-id="176058027" data-analytics-asset-title="Logo DOGV" data-analytics-asset-type="web-content" data-analytics-web-content-resource-pk="176058029">
+			
+
+			
+
+
+
+
+
+
+<div class="banners">
+        <ul class="row">
+            
+           
+           
+            
+        	<li class="banner_vertical ">
+        			<a href="/es/inici/" target="_self" title="">
+                    <img class="" alt="Diari Oficial de la Generalitat Valenciana (DOGV)"  src="/documents/176057414/0/DOGV+Logo.png/98946f4e-4048-4238-87b1-fe0e965387d8?t=1775823888298" title="Diari Oficial de la Generalitat Valenciana (DOGV)"/>
+        	
+                </a>
+        	</li>
+        </ul>
+</div>
+
+<style>
+    @media screen and (min-width: 992px) {
+        ul li.banner_vertical {width:100%;}
+    }
+    @media screen and (max-width: 992px) {
+        ul li.banner_vertical {margin:5px;}
+    }
+</style>
+
+			
+		</div>
+
+		
+
+	
+
+
+	</div>
+	
+	<div id="bloque_logo_derecha_buscador">
+	<div id="logo_derecha">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<div class="journal-content-article " data-analytics-asset-id="176058666" data-analytics-asset-title="Cabecera de Acceso personal" data-analytics-asset-type="web-content" data-analytics-web-content-resource-pk="176058668">
+			
+
+			<div class="text-content">
+    <div id="cabecera-acceso-area-personal">
+	&nbsp;</div>
+</div>
+
+			
+		</div>
+
+		
+
+	
+
+
+	</div>
+		
+			<div class="bloque-idioma-buscador">
+					<div class="idiomas d-inline-block">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_  portlet-static portlet-static-end portlet-borderless portlet-language " id="p_p_id_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_INSTANCE_idiomas_">
+		<span id="p_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_INSTANCE_idiomas"></span>
+
+
+
+
+	
+
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+
+<section class="portlet" id="portlet_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_INSTANCE_idiomas">
+
+
+	<div class="portlet-content">
+	
+
+		
+			<div class=" portlet-content-container">
+				
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+						
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="idiomas-texto">
+    
+<a href="/es/c/portal/update_language?redirect=%2Fes%2Finici%2F&amp;groupId=176057414&amp;privateLayout=false&amp;layoutId=1&amp;languageId=ca_ES" class="idiomas-texto-corto Valenciano" lang="ca-ES" > Val</a>
+<span class="idiomas-texto-corto Castellano" lang="es-ES" > Cas</span></div>
+<div class="idioma-menu">
+    <div id="cabecera-idiomas" class="d-inline-block w-100"><span class="info-idioma p-1 d-inline-block text-center"><i aria-hidden="true" class="fa-solid fa-earth-europe"></i></span><button aria-expanded="false" class="idioma-actual border-0 text-left font-weight-bold pl-1 w-auto"></button></div>
+    <div id="menu-opciones" class="opciones">
+        <ul class="level-1 m-0">
+        </ul>
+    </div>
+</div>
+
+<script>
+
+    /* Este codigo pinta el html del menu desplegable de idiomas en version movil.
+        Los valores necesarios se recogen del html pintado del portlet de idiomas texto corto.*/
+    //Se obtiene el idioma actual.
+    var idiomaActual = $(".idiomas-texto span.idiomas-texto-corto")[0].classList[1];
+    //Se obtiene el numero total de idiomas que estan activos.
+    var numElementosTotal = $(".idiomas-texto > .idiomas-texto-corto").length;
+    //Se declara array con todos los idiomas menos el actual.
+    var arrayIdiomas = [];
+    //Se declara array con los enlaces correspondientes a los idiomas del array anterior.
+    var arrayEnlaces = [];
+    //Se declara array con los lang correspondientes a los idiomas del array anterior
+    var arrayLang = [];
+    //Se recorren todos los elementos "a" que son hijos de la clase "idiomasTexto".
+    //Se añade a los arrays creados el texto (el idioma) y el valor
+    //del atributo href.
+    $(".idiomas-texto-corto").each(function(index){
+        const [idioma] = $(this);
+        const language = idioma.classList[1];
+        arrayIdiomas.push(language);
+        arrayEnlaces.push($(this).attr("href"));
+        arrayLang.push($(this).attr("lang"));
+    });
+
+    for(i=0; i<=numElementosTotal; i++){
+        let idioma = arrayIdiomas[i];
+        if(idioma === idiomaActual){
+            //Se pinta el idioma actual.
+            $(".idioma-actual").append(idiomaActual + '<i aria-hidden="true" class="fa fa-caret-down pl-1"></i><i aria-hidden="true" class="fa fa-caret-up hide pl-1"></i>');
+        }else if (idioma){
+            //Se pinta los idiomas plegados.
+            $(".opciones .level-1").append('<li class="nav-item"><a class="idioma-plegado'+i+' text-decoration-none px-2 d-inline-block w-100 ml-5"> </a></li>');
+            $(".idioma-plegado"+i).text(arrayIdiomas[i]);
+            $(".idioma-plegado"+i).attr("href",arrayEnlaces[i]);
+            $(".idioma-plegado"+i).attr("lang",arrayLang[i]);
+        }
+    }
+</script>
+
+	
+	
+					
+				
+			
+		
+	
+	
+
+
+	</div>
+
+			</div>
+		
+	</div>
+</section>
+	
+
+		
+		
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+	 
+	</div>
+
+
+
+			</div>	</div>
+		
+
+</div>
+	
+		</div>	
+		
+	</div>
+		
+</header>
+
+
+
+			
+<nav class="sort-pages modify-pages" id="navigation" role="navigation">
+
+	
+
+<ul class="titulos-movil m-0 text-center">
+	
+
+
+	
+	
+	
+	
+			
+		
+	 
+		
+		<li class="descripcion-pequena pl-0">
+		
+			<a class="py-1 d-block font-weight-bold text-decoration-none" href="/es/web/presidencia-de-la-generalitat-new" >
+			
+				<span>Vicepresidència segona i Conselleria de Presidència</span>
+				
+			</a>
+			
+		</li>
+		
+		<li class="descripcion-grande pl-0">
+		
+			<a class="py-1 d-block font-weight-bold text-decoration-none" href="/es/web/dogv" >
+			
+				<span>DOGV</span>
+				
+			</a>
+			
+		</li>
+	
+
+</ul>
+	
+<div class="navbar-light menu_navegacion_movil px-3 pt-3 position-absolute float-none">
+	<div id="boton-menu-movil" tabindex="0" class="navbar-toggler boton-menu-movil w-nav" role="button"
+		 aria-expanded="false" aria-label="Mostrar u ocultar menú de navegación">
+		<div class="barras abrir ml-n1 mt-n1">
+			<i aria-hidden="true" class="fas fa-bars"></i>
+		</div>
+		<div class="barras cerrar mt-n1 hide">
+			<i aria-hidden="true" class="fas fa-times"></i>
+		</div>
+	</div>
+</div>
+<div id="menuNavMovil" class="menuNavMovil collapse">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_  portlet-static portlet-static-end portlet-borderless portlet-navigation " id="p_p_id_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavMovil_">
+		<span id="p_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavMovil"></span>
+
+
+
+
+	
+
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+
+<section class="portlet" id="portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavMovil">
+
+
+	<div class="portlet-content">
+	
+
+		
+			<div class=" portlet-content-container">
+				
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+						
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+		
+
+		
+
+		
+	<div role="list" aria-label="Páginas del sitio web" class="list-menu">
+			<div class="collapse navbar-collapse d-inline-block w-100" id="menu-navegacion-boton">
+				<div id="cabecera-menu" class="cabecera-menu d-inline-block w-100 p-1">
+					<span class="icono-menu d-inline-block text-center"><i aria-hidden="true" class="fa-solid fa-list-ul"></i></span><button aria-expanded="true" class="link-menu border-0 text-left font-weight-bold pl-1">
+						Menú<i aria-hidden="true" class="fa fa-caret-down hide pl-1"></i><i aria-hidden="true" class="fa fa-caret-up pl-1"></i>
+					</button>
+				</div>
+				<div id="menu-navegacion-list" class="subMenu bg-white">
+		<ul class="level-1" >
+
+			
+				
+
+
+
+        <li class="nav-item selected ">       
+			
+			
+			<a class="nav-link font-weight-bold" href="https://dogv.gva.es/es/inici" ><span>Inicio</span></a>
+			
+        </li>
+
+				
+
+
+
+        <li class="nav-item  ">       
+			
+			
+			<a class="nav-link " href="https://dogv.gva.es/es/portal" ><span>Portal Legislativo</span></a>
+			
+        </li>
+
+				
+
+
+
+        <li class="nav-item  ">       
+			
+			
+			<a class="nav-link " href="https://dogv.gva.es/es/informacio-general" ><span>Información y servicios</span></a>
+			
+        </li>
+
+				
+
+
+
+        <li class="nav-item  ">       
+			
+			
+			<a class="nav-link " href="https://dogv.gva.es/es/alertas-del-diari-oficial" ><span>Alertas y subscripciones</span></a>
+			
+        </li>
+    </ul>
+				</div>
+			</div>
+	</div>
+
+
+
+	<script>
+		$( document ).ready(function() {
+			var tituloAreas = $('#portlet_com_liferay_site_navigation_directory_web_portlet_SitesDirectoryPortlet_INSTANCE_globalMenu .portlet-title-text').text();
+			if(tituloAreas != ""){
+				$('#portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavMovil .list-menu').prepend('<div class="menu-areas d-inline-block w-100"><div id="cabecera-areas" class="d-inline-block w-100 p-1"><span class="icono-areas d-inline-block text-center"><i aria-hidden="true" class="fa-solid fa-folder-tree"></i></span><button aria-expanded="false" class="link-areas border-0 text-left font-weight-bold pl-1">'+tituloAreas+'<i aria-hidden="true" class="fa fa-caret-down pl-1"></i><i aria-hidden="true" class="fa fa-caret-up hide pl-1"></i></button></div><div class="subMenu collapse" id="menu-navegacion-areas-movil"><ul class="level-1"></ul></div></div>');
+
+				$('.sites-directory-taglib ul li a').each(function (index){
+					$('#portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavMovil .portlet-content #menu-navegacion-areas-movil ul').append('<li class="nav-item"><a class="nav-link" href="'+$(this).attr('href')+'">'+$(this).text()+('</a></li>'));
+				});
+			}
+		});
+	</script>
+
+	
+	
+	
+
+
+	
+	
+					
+				
+			
+		
+	
+	
+
+
+	</div>
+
+			</div>
+		
+	</div>
+</section>
+	
+
+		
+		
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+
+</div>	
+	
+	<div id="mask-nav-movil"></div>
+</nav>
+		
+<div id="content">
+	
+	<div class="site-breadcrumbs nivel-inicial-2 visible-desktop visible-print" id="breadcrumbs" data-inicio="Inicio">
+	<span class="estasEn">Estás en</span>
+		<div class="portlet-breadcrumbs">
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_  portlet-static portlet-static-end portlet-borderless portlet-breadcrumb " id="p_p_id_com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_INSTANCE_migas_">
+		<span id="p_com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_INSTANCE_migas"></span>
+
+
+
+
+	
+
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+
+<section class="portlet" id="portlet_com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_INSTANCE_migas">
+
+
+	<div class="portlet-content">
+	
+
+		
+			<div class=" portlet-content-container">
+				
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+						
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<nav aria-label="Ruta de navegación" id="_com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_INSTANCE_migas_breadcrumbs-defaultScreen">
+	
+		
+
+
+
+
+	
+		
+		
+			
+				
+			
+		
+	
+	
+		
+
+
+	
+		
+		
+			
+				
+			
+		
+	
+		
+		
+		
+			<ol class="breadcrumb">
+			
+				
+				
+				
+				
+				
+				
+					<li class="breadcrumb-item breadcrumb-item-2">
+						
+					
+						
+					
+					
+						<a class="breadcrumb-link" href="/es/inici/"><span class="breadcrumb-text-truncate">Inicio</span></a>
+					
+					</li>
+					
+					
+				
+				
+				
+				
+					<li class="breadcrumb-item breadcrumb-item-3">
+						
+									
+					
+
+						<a class="breadcrumb-link childless" style='font-weight: bold;' href="https://dogv.gva.es/es/inici"><span class="breadcrumb-text-truncate">Inicio</span></a>
+                        
+					</li>
+					
+					
+				
+		    </ol>
+	   
+    
+		
+    
+
+
+	
+</nav>
+
+	
+	
+					
+				
+			
+		
+	
+	
+
+
+	</div>
+
+			</div>
+		
+	</div>
+</section>
+	
+
+		
+		
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+		</div>
+</div>
+	
+<div id="navegacion-column-1">
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_  portlet-static portlet-static-end portlet-borderless portlet-navigation " id="p_p_id_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavHorizontal_">
+		<span id="p_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavHorizontal"></span>
+
+
+
+
+	
+
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+
+<section class="portlet" id="portlet_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavHorizontal">
+
+
+	<div class="portlet-content">
+	
+
+		
+			<div class=" portlet-content-container">
+				
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+						
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+
+		
+
+		
+
+		
+	<div role="list" aria-label="Páginas del sitio web" class="list-menu">
+
+			<ul class="navbar-nav menu-horizontal level-1">
+
+
+
+
+
+
+				
+				
+				<li class="nav-item">
+					<a class="nav-link selected" style='font-weight: bold;' href="https://dogv.gva.es/es/inici" >Inicio</a>
+				</li>
+
+
+
+				
+				
+				<li class="nav-item">
+					<a class="nav-link "  href="https://dogv.gva.es/es/portal" >Portal Legislativo</a>
+				</li>
+
+
+				<li class="nav-item dropdown">
+					<a href="#" aria-expanded="false" class="nav-link drop dropdown-toggle "  >Información y servicios</a>
+					<ul class="dropdown-menu level-2 " >
+
+
+
+
+
+
+				
+				
+				<li class="nav-item">
+					<a class="nav-link "  href="https://dogv.gva.es/es/que-es-el-dogv" >¿Qué es el DOGV?</a>
+				</li>
+
+
+
+				
+				
+				<li class="nav-item">
+					<a class="nav-link "  href="https://dogv.gva.es/es/como-publicar-en-el-dogv" >Publicar un anuncio</a>
+				</li>
+
+
+
+				
+				
+				<li class="nav-item">
+					<a class="nav-link "  href="https://dogv.gva.es/es/verificador-de-documents" >Verificador de documentos</a>
+				</li>
+
+
+
+				
+				
+				<li class="nav-item">
+					<a class="nav-link "  href="https://dogv.gva.es/es/preguntes-frequents" >Preguntas frecuentes</a>
+				</li>
+
+
+
+				
+				
+				<li class="nav-item">
+					<a class="nav-link "  href="https://dogv.gva.es/es/altres-diaris-oficials" >Otros diarios oficiales</a>
+				</li>
+
+
+
+				
+				
+				<li class="nav-item">
+					<a class="nav-link "  href="https://twitter.com/GVAdogv" target="_blank">El DOGV en X</a>
+				</li>
+					</ul>
+				</li>
+
+
+
+				
+				
+				<li class="nav-item">
+					<a class="nav-link "  href="https://dogv.gva.es/es/alertas-del-diari-oficial" >Alertas y subscripciones</a>
+				</li>
+			</ul>
+	</div>
+
+
+	<script>
+		$('.menu-horizontal a.dropdown-toggle').click( function(e){
+			e.preventDefault();
+			e.stopImmediatePropagation();
+
+			$(this).addClass("clicked");
+			if ($(this).attr("aria-expanded")=="true"){
+				$(this).attr("aria-expanded", "false");
+			}else{
+				$(this).attr("aria-expanded", "true");
+			}
+			var $trigger = $(".menu-horizontal .dropdown-menu.level-2:visible");
+			if( !$trigger.parent('li').is($(e.target).parent('li')) && !$(e.target).parents('ul').hasClass('level-2') ){
+				$trigger.slideUp(300);
+				$trigger.siblings("a").attr("aria-expanded", "false");
+			}
+
+			$trigger = $(".menu-horizontal .dropdown-menu.level-3:visible");
+			if( !$trigger.parent('li').is($(e.target).parent('li')) && !$(e.target).parents('ul').hasClass('level-3') ){
+				$trigger.slideUp(200);
+				$trigger.siblings("a").attr("aria-expanded", "false");
+			}
+
+			$trigger = $(".menu-horizontal .dropdown-menu.level-4:visible");
+			if( !$trigger.parent('li').is($(e.target).parent('li')) && !$(e.target).parents('ul').hasClass('level-4') ){
+				$trigger.slideUp(200);
+				$trigger.siblings("a").attr("aria-expanded", "false");
+			}
+
+			$(this).siblings('ul').slideToggle(300);
+		});
+		$(document).on({
+			click: function() {
+				var $trigger = $(".menu-horizontal.level-1 li");
+				if($trigger !== event.target && !$trigger.has(event.target).length){
+					$trigger.children('ul').slideUp(300);
+					$('.menu-horizontal.level-1 li.nav-item a.clicked').attr('aria-expanded', "false");
+					$('.menu-horizontal.level-1 li.nav-item a.clicked').removeClass('clicked');
+				}
+			}
+		});
+	</script>
+
+
+	
+	
+	
+
+
+	
+	
+					
+				
+			
+		
+	
+	
+
+
+	</div>
+
+			</div>
+		
+	</div>
+</section>
+	
+
+		
+		
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+</div>
+	
+<h1 class="hide-accessible">Inicio - Diari Oficial de la Generalitat Valenciana (DOGV)</h1>
+	
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<style type="text/css">
+			.master-layout-fragment .portlet-header {
+				display: none;
+			}
+		</style>
+
+		
+
+		<div class="columns-1" id="main-content" role="main">
+	<div class="portlet-layout row">
+		<div class="col-md-12 portlet-column portlet-column-only" id="column-1">
+			<div class="portlet-dropzone portlet-column-content portlet-column-content-only" id="layout-column_column-1">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	<div class="portlet-boundary portlet-boundary_com_liferay_journal_content_web_portlet_JournalContentPortlet_  portlet-static portlet-static-end portlet-borderless portlet-journal-content " id="p_p_id_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_0AkBwY2jfOvL_">
+		<span id="p_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_0AkBwY2jfOvL"></span>
+
+
+
+
+	
+
+	
+		
+			
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+		
+
+<section class="portlet" id="portlet_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_0AkBwY2jfOvL">
+
+
+	<div class="portlet-content">
+	
+			<div class="autofit-float autofit-row portlet-header">
+
+				
+					<div class="autofit-col autofit-col-end">
+						<div class="autofit-section">
+							<div class="visible-interaction">
+
+	
+
+	
+</div>
+						</div>
+					</div>
+			</div>
+
+		
+			<div class=" portlet-content-container">
+				
+
+
+	<div class="portlet-body">
+
+
+
+	
+		
+			
+				
+					
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+
+
+
+
+
+
+
+	
+
+				
+
+				
+					
+						
+
+
+	
+
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+		
+			
+			
+				
+					
+					
+					
+					
+
+						
+
+						
+
+							
+
+							<div class="" data-fragments-editor-item-id="10108-176057939" data-fragments-editor-item-type="fragments-editor-mapped-item" >
+								
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<div class="journal-content-article " data-analytics-asset-id="176057937" data-analytics-asset-title="IFRAME Inicio" data-analytics-asset-type="web-content" data-analytics-web-content-resource-pk="176057939">
+			
+
+			
+	<div class="webContent" style="float:none;">
+			<p class="header10">IFRAME Inicio</p>
+	</div>
+
+
+
+	<div class="iframe">
+		   <div class="texto_cuerpo"> 
+				
+		   </div>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+				
+				
+
+                
+				
+
+				<div class="iframe-error-protocol  iframe-error-protocol-176057937" style="display: none;">
+					<span>
+Si el contenido no se muestra correctamente						<a href="/dogv-portal-frontend/es" target="_blank">
+							<b>abrir en nueva ventana</b>
+						</a>
+					</span>
+				</div>
+				
+				<div id="iframe-container-176057937">
+					<iframe allow="clipboard-write" src="" width="100%" height="650" scrolling="no" title="IFRAME Inicio" id="iframe-176057937" name="iframe-176057937"></iframe>
+				</div>
+		
+		 
+
+			<script type="text/javascript">
+
+				// Script para que no cargue el src del iframe dos veces por el efecto del SPA https://help.liferay.com/hc/es/requests/41501
+				var iframe = document.getElementById('iframe-176057937');
+				var url = "/dogv-portal-frontend/es";
+				if (Liferay.SPA && iframe) {
+					iframe.src = url;
+				}
+				else {
+					Liferay.on(
+						'SPAReady',
+						function(event) {
+							if (iframe) {
+								iframe.src = url;
+							}
+						}
+					);
+				}
+				
+				
+				if( location.protocol == "https:" &&  "" == "http:" )
+					$('.portlet-journal-content .iframe-error-protocol-176057937').css('display','block');
+				
+					var milisengundosRefresco = 100;
+					//milisengundosRefresco = 2000;
+				
+
+					var debug = false;
+					//debug = true;
+					setInterval(function() {
+						
+						/* Recogemos los diferentes elementos del DOM */
+						const iframeContainer 	= document.getElementById('iframe-container-176057937');
+						const iframe 			= document.getElementById('iframe-176057937');
+						const iframeWindow 		= iframe.contentWindow;
+						const iframeDocument 	= iframeWindow.document;				
+						const main 				= iframeDocument.querySelector("app-root main");
+						const header 			= iframeDocument.querySelector("app-root app-header header");
+						const legislation 		= iframeDocument.querySelector("app-root app-legislation-by-areas section");
+						const eli 				= iframeDocument.querySelector("app-root app-eli section");
+						const title				= iframeDocument.querySelector("app-root app-detail main h2");
+
+						if(title){
+							document.title = title.innerText;
+						}
+					
+						/* Se setablecen los valores por defecto por si el contenido de iframe todavía no está cargado */
+						let mainScrollHeight 			 = 500;
+						let headerScrollHeight 			 = 500;
+						let iframeScrollHeight 			 = 0;
+						
+						/*Obtenemos los alto de los elementos*/
+						if(main){
+							mainScrollHeight = main.scrollHeight;
+						}else if(legislation){
+							mainScrollHeight = legislation.scrollHeight;
+						}else if(eli){
+							mainScrollHeight = eli.scrollHeight;
+						}
+						if(header){
+							headerScrollHeight = header.scrollHeight;
+						}
+						if(iframe){
+							iframeScrollHeight = iframe.scrollHeight
+						}
+						
+						
+						const margenAnyadido = 100;
+						
+						const alturaCalculada = mainScrollHeight + headerScrollHeight + margenAnyadido + 'px';
+						
+						if (debug) console.log("--------------------------------------");
+						if (debug) console.log("BUSCAMOS EL NUEVO ALTO DEL IFRAME");
+						if (debug) console.log("iframeScrollHeight = " 				+ iframeScrollHeight);
+						if (debug) console.log("mainScrollHeight = " 				+ mainScrollHeight);
+						if (debug) console.log("headerScrollHeight = " 				+ headerScrollHeight);
+						if (debug) console.log("alturaCalculada = " 				+ alturaCalculada);
+						if (debug) console.log("FIN BUSCAMOS EL NUEVO ALTO DEL IFRAME");
+						if (debug) console.log("--------------------------------------");
+						
+						if(iframeScrollHeight != mainScrollHeight){
+							iframe.style.height = alturaCalculada;
+						}
+
+						
+						/* ************************************************************************************ */
+						/* Cogemos del IFRAME del DOGV la parte del camino de migas que montan en la aplicacion */
+						/* ************************************************************************************ */
+						if (debug) console.log("--------------------------------------");
+						if (debug) console.log("BUSCAMOS EL BREADCRUMB");
+						
+						/* Definimos el selector del elemento dentro del iframe con el texto que se debe incluir en el iframe */
+						var bselector = 'breadcrumb-title';
+						var biframeselector = "iframe-"+bselector;
+						/* Definimos el selector del elemento del breadcrumb dentro del iframe */
+						var bselectorBreadcrumb = 'ul.breadcrumbs-horizontal';
+						var biframeDocument = iframeDocument;
+						var belement =  biframeDocument.getElementById(bselector);
+						if ((typeof belement !== 'undefined') && belement ) {
+							if (debug) console.log("Se ha encontrado el elemento: " + bselector); 
+							var text_to_add = belement.textContent;
+							if (debug) console.log("text_to_add: " + text_to_add);
+							if (text_to_add.length !== 0) {
+								/* Ya tenemos el texto ahora hay que buscar el elemento del breadcrumb donde incluirlo */
+								var bul = document.querySelector(bselectorBreadcrumb);
+								if ((typeof bul !== 'undefined') && bul) {
+									if (debug) console.log("Se encuentra el ul con el selector: " + bselectorBreadcrumb);
+									/* Tenemos que buscar si el elemento li ya existe o hay que crearlo */
+									var bli =  bul.querySelector("#"+biframeselector);
+									if ((typeof bli !== 'undefined') && bli) {
+										if (debug) console.log("Se encuentra el li con el selector: " + biframeselector);
+										var span = bli.getElementsByTagName("span")[0];
+										if (debug) console.log("Se encuentra el span");
+										span.innerHTML = text_to_add;
+									} else {
+										if (debug) console.log("Vamos a crear el li");
+										bli = document.createElement("li");
+										bli.setAttribute('id',biframeselector);
+										var span = document.createElement("span");
+										span.appendChild(document.createTextNode(text_to_add));
+										bli.appendChild(span)
+										bul.appendChild(bli)
+									}
+								}
+							}
+						}
+						if (debug) console.log("FIN BUSCAMOS EL BREADCRUMB");
+						if (debug) console.log("--------------------------------------");
+						
+					},milisengundosRefresco);
+						
+				
+
+				$(document).ready(function() {
+			
+						$('#iframe-176057937').load(function() {
+							this.style.height = (this.contentWindow.document.body.offsetHeight + 30 ) + 'px';
+						});
+
+				
+
+					var numLoads = 0;
+					document.getElementById('iframe-176057937').onload = function (element) {
+						if (numLoads > 0) {
+							if ($(window).scrollTop() > $('#iframe-container-176057937').offset().top) {
+								$('html, body').animate({ scrollTop: $('#iframe-container-176057937').offset().top - 60 }, 'slow');
+							}
+							
+						}
+						
+						
+						if (numLoads == 1) {
+						}
+						
+						numLoads++;
+					}
+
+
+					$("span[class='header-back-to']").find("a").attr("href", "javascript:window.history.back()"); 
+				});
+	
+				var myConfObj = {
+				  iframeMouseOver : false
+				}
+				window.addEventListener('blur',function(event){
+				  if(myConfObj.iframeMouseOver){
+					// Ocultar menu desplegado cuando haces click en otro sitio distinto al menu
+					var $trigger = $(".horizontal .navegacion-superior .nav-menu .level-1 li, .sede .navegacion-superior .nav-menu .level-1 li");
+					$trigger.children('ul').slideUp(300);
+				  }
+				});
+				document.getElementById('iframe-container-176057937').addEventListener('mouseover',function(){
+				   myConfObj.iframeMouseOver = true;
+				});
+				document.getElementById('iframe-container-176057937').addEventListener('mouseout',function(){
+					myConfObj.iframeMouseOver = false;
+				});				
+					
+			</script>
+			
+	</div>
+
+			
+		</div>
+
+		
+
+	
+
+
+
+							</div>
+						
+					
+				
+			
+		
+	
+
+
+
+
+	
+
+	
+		<div class="asset-links content-metadata-asset-addon-entries">
+			<div class="content-metadata-asset-addon-entry content-metadata-asset-addon-entry-links">
+				
+			</div>
+		</div>
+	
+
+	
+
+	
+
+	
+
+
+
+
+	
+	
+					
+				
+			
+		
+	
+	
+
+
+	</div>
+
+			</div>
+		
+	</div>
+</section>
+	
+
+		
+		
+
+
+
+
+
+
+
+	</div>
+
+
+
+
+
+
+</div>
+		</div>
+	</div>
+</div>
+	
+
+
+<form action="#" aria-hidden="true" class="hide" id="hrefFm" method="post" name="hrefFm"><span></span><button hidden type="submit">Oculto</button></form>
+
+	
+			
+
+
+
+
+
+
+</div>			
+			<footer id="footer" role="contentinfo">
+			
+
+	<div class="d-none">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<div class="journal-content-article " data-analytics-asset-id="176057919" data-analytics-asset-title="CSS y JS (MIGRADO a DXP)" data-analytics-asset-type="web-content" data-analytics-web-content-resource-pk="176057921">
+			
+
+			<div class="text-content">
+    <style type="text/css"><link href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&amp;subset=Latin" rel="stylesheet" type="text/css" />
+
+/********************************************************************************************************************************************************/
+                                                    /* REGLAS CSS VÁLIDAS PARA DXP                */
+/********************************************************************************************************************************************************/
+/*Reglas que creemos durante este proceso para trasladar cambios actuales para DXP***********************************************************************/
+
+/* Migas de pan */
+#wrapper #content #breadcrumbs .portlet-breadcrumbs .breadcrumb .breadcrumb-item .breadcrumb-text-truncate {color: #717171;}
+#wrapper #content #breadcrumbs .portlet-breadcrumbs .breadcrumb .breadcrumb-item .breadcrumb-text-truncate:hover {color: #717171; text-decoration: none;}
+.horizontal.DXP #breadcrumbs { border-bottom: 1px dashed #999; }
+.horizontal.DXP #wrapper #content #breadcrumbs .portlet-breadcrumbs .breadcrumb{margin-bottom:0px; padding-bottom:0px;}
+
+
+/** Menú de navegación **/
+
+#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item.dropdown > a::before {
+    height: 16px;
+    font-family: FontAwesome;
+    content: "\f078";
+    color: #dc002e;
+    line-height: 16px;
+    font-size: 25px;
+    position: absolute;
+    right: 5px;
+    top: 15px;
+    font-weight: normal;
+}
+
+#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item:first-child {
+	width: auto;
+}
+
+#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item > a {color: #575353 !important ;font-weight:bold;}
+#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item > a.selected:after {
+	background-color: #dc002e;
+	height: 3px;
+	content: "";
+	margin-left: 0;
+}
+#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 li.nav-item ul.dropdown-menu li.nav-item {
+    text-align: left;
+    border-bottom: none;
+}
+
+#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 li.nav-item ul.dropdown-menu li.nav-item a {
+    padding-left: 20px;
+}
+
+@media screen and (min-width:980px) {
+	.horizontal .navegacion-superior .nav-menu .level-1 > li:nth-child(1) {
+		padding-left: 0;
+	}
+	
+	#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item > a:after, #wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item > a.drop:after {
+		background-color: #dc002e;
+		height: 3px;
+		content: "";
+		margin-left: 0;
+	}
+
+	#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item > a:hover:after {
+		background-color: #333;
+	}
+
+	#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item > a { text-align: left !important; }
+	
+	#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 li.nav-item ul.dropdown-menu.level-2 {
+	   background-color: #333 !important;
+	}
+		
+	#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item > a {
+		padding: 10px 10px 10px;
+	}
+	#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item > a.selected {
+		text-align: left;
+		border-top: none;
+	}
+	
+	#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item > a:hover {
+		color: white !important;
+		background: #333;
+	}
+
+}
+
+@media screen and (max-width: 979px) {
+	#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item {
+		border-bottom: 2px solid #c70f2d;	
+		position: relative;
+		margin: 0 25px 20px;
+	}
+	#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item > a {
+		padding: 15px 15px 5px;
+		text-align: left;
+	}
+	#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 > li.nav-item > a { font-weight: bold; }
+	#wrapper #content #navegacion-column-1 .portlet-navigation .portlet-body ul.menu-horizontal.navbar-nav.level-1 li.nav-item.dropdown::before {
+		top: 20px;
+	}
+}
+
+
+
+/**** Colores Portada ****/
+body {color: #565353;}
+
+/** Colores Base **/
+#wrapper h3 {color: #575353;}
+#wrapper h4 {color: #575353;}
+
+/** Footer **/
+.horizontal #wrapper .portlet-title-text {
+	font-family: 'Ubuntu',Arial,Helvetica,sans-serif;
+	color: #333 !important; 		
+}
+#wrapper footer .portlet-body li {
+    padding-left: 10px;
+}
+#wrapper a:hover {
+    color: #717171;
+}
+#wrapper a {
+    color: #575353;
+}
+
+body.DXP #wrapper .footer-list-wrapper ul li::before {
+	font-family: FontAwesome;
+	content:"\f054";
+	position: absolute;
+	transform: rotate(360deg);
+	top:0;
+}
+
+body.DXP #wrapper .footer-list-wrapper ul li ul li::before {content: '';}
+	
+
+/** Que es el DOGV **/
+.que-es-el-dogv a.carta-servicios-dogv-enlace {
+	display: inline-block;
+	position: relative;
+	padding: 0.7em 1.5em 0.7em 4em;
+	margin-bottom: 1em;
+	border: 1px solid #e6e6e6;
+	background-color: #fff;
+	box-shadow: 2px 2px 5px 0 #d1d1d1;
+	transition: box-shadow .2s ease-out;
+	}
+.que-es-el-dogv a.carta-servicios-dogv-enlace:hover {
+	box-shadow: 5px 5px 10px 0 #a1a1a1;
+	border: 1px solid #e6e6e6 !important;
+	}
+.que-es-el-dogv .carta-servicios-dogv-enlace::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 1em;
+	left: 1.4em;
+	width: 1.5em;
+	height: 1.5em;
+	margin-right: 0.2em;
+	background: transparent url(/documents/176057414/176057508/ico_pdf_c70f2d.svg/bb0372c1-2b40-486c-8285-b689736bd305) no-repeat 50%/auto 100%;}
+.que-es-el-dogv a.carta-servicios-dogv-enlace span {
+	display: block;
+	font-size: .9em;
+	color: #333;
+}
+
+/** SCROLL **/
+body:not(.DXP) #scroll {text-indent: 0;}
+
+body:not(.DXP) #scroll span{border: 0;}
+
+/**FAQ **/
+
+body #wrapper #content #main-content .portlet-title-text {border-bottom: none;}
+
+body.DXP #wrapper #content #main-content .faq .asset-title a:before{content:none}
+
+body.DXP #wrapper #content #main-content .faq .asset-title a::before {
+    content: "\f059";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 14px;
+    padding-right: 5px;
+    right: 50px;
+    width: 16px;
+    border: unset !important;
+    opacity: .5;
+    margin: 0 8px 0 0;
+	position:absolute;
+	right:5px;
+	color:#575353
+}
+
+body.DXP #wrapper #content #main-content .faq .asset-title a::after {
+    content: "\f078";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    font-size: 25px;
+    padding-right: 5px;
+    right: 15px;
+    top: -5px;
+    width: 16px;
+    border: unset !important;
+    opacity: .5;
+    margin: 0 8px 0 0;
+	position: absolute;
+	color:#575353;
+}
+
+
+@media screen and (min-width: 980px) {
+    .horizontal.DXP #content .journal-content-article .faq .asset-title.expanded > a::after {
+        transform: rotate(180deg);
+        top: 20px !important;
+        right: 7px !important;
+    }
+}
+
+body.DXP #wrapper #content #main-content .publicador-faq .portlet-content {
+    border-bottom: none;
+    box-shadow: .2em .2em .5em #ccc;
+    padding: 1em 2em;
+}
+
+/** Idiomas **/
+body #wrapper .bloque-idioma-buscador .idiomas {
+	font-size: 1rem;
+}
+
+body #wrapper .bloque-idioma-buscador .idiomas .portlet-body a.idiomas-texto-corto:hover {
+    text-decoration: none;
+    color: #860019;
+}
+body #wrapper .bloque-idioma-buscador .idiomas  .portlet-body span.idiomas-texto-corto{
+	color: inherit;
+	font-weight: 600;
+	border-bottom: 2px solid #dc002e;
+    text-decoration: none;
+}
+body #wrapper .bloque-idioma-buscador .idiomas .portlet-body .idiomas-texto-corto:hover {
+    text-decoration: none;
+    color: inherit;
+}
+
+body #wrapper .bloque-idioma-buscador .idiomas .portlet-body .idiomas-texto-corto:not(:first-child):before {
+    content: none;
+}
+
+/*Reglas que son válidas tanto para el actual 6.1 como para DXP************************************************************************/
+
+
+/*FONT FAMILY*/
+#wrapper body.horizontal.GVA-responsive,
+#wrapper #content p, #wrapper #content a {font-family:'Ubuntu',Arial,Helvetica,sans-serif !important}
+#wrapper #content h2, #wrapper .nav-menu .layouts li a {font-family: 'Ubuntu Bold', Arial, sans-serif;}
+
+/** Menu Navegación **/
+body #wrapper #navigation {border-bottom: none;}
+
+/** Footer **/
+.footer-list-wrapper, .footer-list-wrapper > p { text-align: left !important; }
+
+.footer-list-wrapper ul li a {
+	color: #dc002e !important;
+	margin-left: 20px;
+}	
+.footer-list-wrapper ul li a:hover {
+	color: #717171 !important;
+}	
+
+.footer-list-wrapper ul li p {
+	margin-left: 20px;
+	text-align: left !important;
+}
+.footer-list-wrapper #redes-twitter-footer {
+	margin-top: 10px;
+}
+#footer {
+	background-color: #f2f2f2;
+	border-top: unset !important;
+	font-family: "Ubuntu", Arial, sans-serif;
+}
+
+@media screen and (min-width:980px) {
+	.footer-list-wrapper { width: max-content;}
+}
+
+/** Titulos de Portlet **/
+.horizontal #content .journal-content-article .webContent h2,
+.horizontal #content .journal-content-article h2 {color: #333 !important;font-weight: normal;}
+body.horizontal #wrapper #content #main-content a {color: #dc002e;text-decoration: none !important;}
+body.horizontal #wrapper #content #main-content a:hover {color: #860019;}
+
+/* Tabla Tarifas */
+#wrapper .publicar-dogv table {width: 50%;border: 1.5px solid #ccc;}
+#wrapper .publicar-dogv table thead tr th {background-color: #f2f2f2;color: #333;font-size: .9em;font-weight: normal;text-align: left;text-transform: uppercase;border-color: #ccc3be;}
+#wrapper .publicar-dogv table tbody tr th p, .publicar-dogv table tbody tr td p {margin: 0;}
+#wrapper .publicar-dogv table tbody tr th {background-color: #fff;color: #333;font-size: 1em;font-weight: normal;border-color: #ccc3be;}
+#wrapper .publicar-dogv table tbody tr td {font-weight: bold;padding: 0.5em 1em;vertical-align: middle;}	
+
+
+/** SCROLL **/
+body:not(.DXP) #scroll {
+	z-index: 4;
+	position: fixed;
+	right: 20px;
+	bottom: 45px;
+	cursor: pointer;
+	width: 70px;
+	height: 35px;
+	background-color: #c70f2d;
+	color: white;
+	line-height: 33px;
+	text-align: right;
+	padding: 0 10px;
+}
+body:not(.DXP) #scroll:hover {
+	background-color: #860019;
+	text-decoration: none;
+}
+body:not(.DXP) #scroll::before {
+	content: '\f062';
+	font-family: FontAwesome;
+	left: 11px;
+	position: absolute;
+}
+
+/** FAQ **/
+body #wrapper #content #main-content .faq .asset-title a {
+    text-decoration: none;
+    color: #dc002e;
+}
+.horizontal #content .portlet-asset-publisher.publicador-faq  .portlet-content-container .portlet-body { margin: 0; }
+.horizontal #content .journal-content-article .faq {
+	border: 1px solid #ccc;
+	background-color: #f2f2f2;
+}
+.horizontal #content .journal-content-article .faq .asset-title {
+	padding: 8px 16px;
+	background-color: #f2f2f2;
+}
+.horizontal #content .journal-content-article .faq .asset-title > a {
+	display: block;
+	position: relative;
+	margin-left: 18px;
+	font-weight: normal;
+}
+
+body #wrapper #content #main-content .faq .asset-title {
+    display: block !important;
+}
+
+@media screen and (min-width: 980px) {
+    .horizontal #content .journal-content-article .faq .asset-title.expanded > a::after {
+        transform: rotate(180deg);
+        top: 15px !important;
+        right: 6px !important;
+    }
+}
+
+/** Tabla Proyecto ELI **/
+#wrapper .journal-content-article td {
+    padding: 3px 5px;
+    font-size: 1em;
+    color: #47423a;
+    border-color: #ccc3be;
+    border-style: solid;
+    border-width: 1px;
+}
+
+
+<script>
+	
+
+function scrollToIframe	(scrollPosition=0, animate=600) {
+  $("html, body").animate({ scrollTop: scrollPosition }, animate);
+}
+
+
+
+	
+$(document).ready(function(){
+
+	/* Añadir clase a elemento desplegado del menu */
+	/*if ( $('.navegacion-superior .level-1 li a.conHijos + .level-2:visible').length > 0 ) {	
+		$('.navegacion-superior .level-1 li a.conHijos + .level-2:visible').parent().find('a.conHijos').addClass('desp');
+	}*/
+
+	/* Añadir un iframe para el tema del acceso al area personal si no existe ya un iframe a /dogv-portal-frontend creado*/
+	// Lo primero que hacemos es buscar si ya existen iframes con ese SRC
+	var rutaSrcIframeContexto = "/dogv-portal-frontend/";
+	var rutaSrcIframeInyector = "/inyector";
+	
+	var iFrame, frames;
+	var existeIframeDogv = false;
+	frames = document.getElementsByTagName("iframe");
+	for (iFrame = 0; iFrame < frames.length; ++iFrame)
+	{
+		// The iFrame
+		var frameSrcAttribute = frames[iFrame].getAttribute('src');
+		if (frameSrcAttribute.includes(rutaSrcIframeContexto)){
+			existeIframeDogv = true;
+		}
+	}	
+	
+    //crear elemento
+	if (!existeIframeDogv){
+		var rutaSrcIframeIdioma = idiomaPagina;
+		if ( idiomaPagina == "ca" ){
+			rutaSrcIframeIdioma = 'va';
+		}
+	
+		
+		var selector = document.getElementById('footer');
+		var iframe = document.createElement('iframe');
+
+		//propiedades iframe
+		iframe.setAttribute('src',rutaSrcIframeContexto+rutaSrcIframeIdioma+rutaSrcIframeInyector);
+		iframe.setAttribute('id','iframeInyectorAccesoAreaPersonal');
+		
+		iframe.style.display = 'none';
+		
+		//insertar iframe
+		selector.appendChild(iframe);	
+	}	
+	
+   /* FUNCIONALIDAD PARA MONTAR LAS ANCLAS EN LAS PÁGINAS CON MUCHOS H1 */
+   /* BASTARA CON PONER EN APARIENCIA DE LAS PAGINAS PUBLICAS LA CLASE publicador-faq */
+   var arrayIds = [];
+   var titles=[];
+   var id = "";
+   var title="";
+   var numId=0;
+
+   $(".portlet-asset-publisher.publicador-faq h1.portlet-title").each(function () {
+
+         id = "h1_num_" + numId;
+		 numId++;
+		 $(this).attr('id', id);;
+	     arrayIds.push(id);
+         title=$(this).text();
+		 console.log("title: "+ title);
+         titles.push(title);
+		 console.log("id: "+ id);
+	
+   });
+
+   $(".portlet-journal-content.titulo-faq h1.portlet-title").after("<div class='anclas'><ul></ul></div>");
+
+   for(var i=0;i<arrayIds.length;i++){
+
+      var textoHtml ="";
+      textoHtml = textoHtml + "<li><a href='#";
+      textoHtml = textoHtml + arrayIds[i];
+      textoHtml = textoHtml + "' class='boton-tercer-nivel'>"+titles[i]+"</a></li>";
+
+      $(".portlet-journal-content.titulo-faq .anclas ul").append(textoHtml);
+   }
+   /* FIN FUNCIONALIDAD PARA MONTAR LAS ANCLAS EN LAS PÁGINAS CON MUCHOS H3 */	
+
+    /* SE COPIA MEDIANTE JQUERY EL HTML DE LOGO 3 DONDE ESTÁ EL ACCESO AL AREA PERSONAL DE LA CABECERA AL CUERPO PARA LA VERSION MOVIL */	
+	$("#p_p_id_56_INSTANCE_LOGO_A1b3c_").clone().prependTo("#layout-column_column-1");
+	$("#layout-column_column-1 #p_p_id_56_INSTANCE_LOGO_A1b3c_").attr("id","p_p_id_56_INSTANCE_LOGO_A1b3c_movil");
+	$("#layout-column_column-1 #p_p_id_56_INSTANCE_LOGO_A1b3c_movil #p_56_INSTANCE_LOGO_A1b3c").attr("id","p_56_INSTANCE_LOGO_A1b3c_movil");
+	$("#layout-column_column-1 #p_p_id_56_INSTANCE_LOGO_A1b3c_movil #cabecera-acceso-area-personal").attr("id","cabecera-acceso-area-personal-movil");
+	/* SE COPIA MEDIANTE JQUERY EL HTML DE LOGO 3 DONDE ESTÁ EL ACCESO AL AREA PERSONAL DE LA CABECERA AL CUERPO PARA LA VERSION MOVIL */	
+});
+</script>
+
+/********************************************************************************************************************************************************/
+                                                            /* REGLAS CSS VÁLIDAS SOLO PARA 6.1 */
+/********************************************************************************************************************************************************/
+/*Reglas que se podrán borrar cuando estemos en 6.1 por que no servirán para nada************************************************************************/
+
+<link href="https://fonts.googleapis.com/css?family=Ubuntu:regular,bold&amp;subset=Latin" rel="stylesheet" type="text/css" />
+
+
+/** NAVEGACION SUPERIOR **/
+#wrapper .horizontal .navegacion-superior .nav-menu .layouts.level-1 .conHijos::before {
+	height: 16px;
+	font-family: FontAwesome;
+	content: "\f078";
+	color: #dc002e;
+	line-height: 16px;
+	font-size: 16px;
+	position: absolute;
+	right: 5px;
+	top: 17px;
+	font-weight: normal;
+}
+
+@media screen and (min-width:980px) {
+	.horizontal .navegacion-superior .nav-menu .level-1 > li:nth-child(1) {
+		padding-left: 0;
+	}
+	
+	.horizontal .navegacion-superior .nav-menu .layouts.level-1 .conHijos::before {
+		height: 16px;
+		font-family: FontAwesome;
+		content: "\f078";
+		color: #dc002e;
+		line-height: 16px;
+		font-size: 16px;
+		position: absolute;
+		right: 5px;
+		top: 17px;
+		font-weight: normal;
+	}
+	body.horizontal .navegacion-superior .nav-menu .layouts.level-1 .open > a::after {
+		background-color: #dc002e;
+		height: 2px;
+		content: "";
+		margin-left: 0;
+	}
+	body.horizontal .navegacion-superior .nav-menu li a { text-align: left !important; }
+	
+	.horizontal .navegacion-superior .nav-menu .level-1 li a:hover::after, .horizontal .navegacion-superior .nav-menu .level-2 {
+	   background-color: #333 !important;
+	}
+		
+	body.horizontal .navegacion-superior .nav-menu .level-1 > li > a {
+		padding: 10px 10px 10px;
+	}
+	.horizontal .navegacion-superior .nav-menu .layouts.level-2 a.open {
+		padding: 7px 20px;
+		text-align: left;
+		border-top: none;
+	}
+	
+	body.horizontal .navegacion-superior .nav-menu .level-2 li:hover, body.horizontal .navegacion-superior .nav-menu .level-2 a:hover {
+		 background: black;
+	}
+	
+	body.horizontal .navegacion-superior .nav-menu  .level-1 > li > a:hover {
+		background: #333;
+		color: white !important;
+	}
+	
+}
+@media screen and (max-width: 979px) {
+	body.horizontal .navegacion-superior .nav-menu ul.level-1 > li {
+		border-bottom: 2px solid #c70f2d;	
+		position: relative;
+		margin: 0 25px 20px;
+	}
+	body.horizontal .navegacion-superior .nav-menu ul.level-1 li a {
+		padding: 15px 15px 5px;
+		text-align: left;
+	}
+	body.horizontal .navegacion-superior .nav-menu ul.level-1 > li > a { font-weight: bold; }
+	.horizontal .navegacion-superior .nav-menu .layouts.level-1 .conHijos::before {
+		top: 20px;
+	}
+	body.horizontal .navegacion-superior .nav-menu .level-1 > li:hover, body.horizontal .navegacion-superior .nav-menu .level-1 > li > a:hover, body.horizontal .navegacion-superior .nav-menu .level-1 > li:hover a {
+		background: #333;
+		color: white !important;
+		border-bottom: unset;
+		width: auto;
+	}
+}
+
+/** CARRUSEL **/
+body.horizontal #wrapper .carousel { margin-top: 20px; }
+.horizontal #content .carousel.listaCarrusel .carousel-inner li { background-image: none; }
+.horizontal #wrapper .carousel-caption {
+	margin: 0 15% 0 15%;
+	width: 30%;
+	top: 2em;
+	bottom: initial;
+	background-color: transparent;
+}
+.horizontal #wrapper .carousel-caption .titulo {
+	font-size: 3em;
+	text-shadow: rgba(0, 0, 0, 0.41) 1px 1px 3px;
+	font-family: "Ubuntu Bold", Arial, sans-serif;
+}
+
+.horizontal #wrapper .carousel-control {
+	top: 7px;
+	margin-left: auto;
+	margin-right: auto;
+	border-radius: 0;
+	background-color: #dc002e !important;
+	background-size: 50% !important;
+	opacity: unset;
+}
+.horizontal #wrapper .carousel-control.carousel-control.left {
+	right: -140px;
+	background: url("/GVA-theme/images/arrows/carrusel_anterior.svg") center no-repeat;
+}
+.horizontal #wrapper .carousel-control.carousel-control.right {
+	left: 235px;
+	background: url("/GVA-theme/images/arrows/carrusel_siguiente.svg") center no-repeat;
+}
+.horizontal #wrapper .carousel-indicators {
+			position: unset;
+			height: 20px;
+		}
+.horizontal #wrapper .carousel-indicators li{
+	display: none;
+	float: unset;
+	width: auto;
+	height: auto;		
+	text-indent: unset;
+	margin-left: 0;
+}
+.horizontal #wrapper .carousel-indicators li.active {
+	display: block !important;
+	background-color: transparent;
+	box-shadow: none;
+}
+.horizontal #wrapper .carousel-indicators li.active span.carrusel-text {
+	display: block !important;
+	text-align: center;
+}
+
+.horizontal #wrapper .carousel .carousel-play-pause {
+	left: 0;
+	right: 140px;
+	margin-left: auto;
+	margin-right: auto;
+	position: absolute;
+	max-width: 34px;
+	border-radius: 0;
+	width: 34px;
+	height: 34px;
+	top: -10px;
+	padding: 0px;
+	background-image: none !important;
+	background-color: #dc002e;
+	opacity: unset;
+}
+.horizontal #wrapper .carousel .carousel-play-pause > span {
+	background-image: none;
+}
+
+.horizontal #wrapper .carousel .carousel-play-pause > span::before {
+	font-family: FontAwesome;
+	font-size: 16px;
+	line-height: 34px;
+	right: 9px;
+	position: absolute;
+}
+.horizontal #wrapper .carousel .carousel-play-pause > span.icon-play::before {
+	content: "\f04b";
+}
+.horizontal #wrapper .carousel .carousel-play-pause > span.icon-pause::before {
+	content: "\f04c";
+}
+
+/* FOOTER */
+.footer-template {
+	display:flex;
+	justify-content:space-around;
+	flex-direction: row;
+	width: 100%;
+	margin-top: 15px;
+}
+
+.footer-list-wrapper ul li {
+	margin-bottom: 5px;
+	position: relative;
+	list-style: none!important;
+}
+
+.footer-list-wrapper ul li ul li:before {
+	background: none;
+}
+
+.footer-list-wrapper ul li::before {
+	width: 10px;
+	height: 10px;
+	opacity: .5;
+}
+
+
+.footer-list-wrapper .siguenos-twitter{
+	color: #dc002e;
+	font-family: "Ubuntu Bold",Arial,sans-serif;
+	font-size: 1.1rem;
+	margin-right: -20px;
+}
+.footer-list-wrapper .siguenos-twitter::before {
+	background: #dc002e url(/GVA-theme/images/color_schemes/dogv/twitter.png) center no-repeat;
+	border-radius: 20px;
+	background-size: 20px;
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	margin: 0 3px -10px 0;
+	content: " ";
+}
+
+
+@media screen and (max-width:979px) {
+	.footer-template { flex-direction: column; padding: 15px; }
+	.footer-list-wrapper:last-child {
+		max-width: 70%;
+		margin-top: 30px !important;
+		margin: auto;
+	}
+	
+}
+
+
+/** IDIOMAS **/
+.bloque-idioma-buscador {
+	margin-top: 20px;
+}
+#idiomas {
+	display: none;
+}
+#idiomas .portlet-body .portlet-body .taglib-language-list-text {
+	margin: 0 5px;
+	line-height: 20px;
+	padding: 0 10px;
+}
+#idiomas .portlet-body .portlet-body .taglib-language-list-text:hover{
+	text-decoration:none;
+}
+#idiomas .portlet-body .portlet-body .taglib-language-list-text.selected {
+	color: inherit;
+	font-weight: 600;
+	border-bottom: 2px solid #dc002e;
+}
+#idiomas .portlet-body .portlet-body .taglib-language-list-text:hover:not(.selected) {
+	color: #860019;
+}
+#idiomas .portlet-body .portlet-body .taglib-language-list-text:not(:first-child)::before {
+	content: none;
+}
+/** CAMINO DE MIGAS **/
+.horizontal:not(.DXP) #breadcrumbs { height: auto; width: auto; padding-left: 0; }
+
+@media screen and (min-width:1280px) {
+	 .horizontal:not(.DXP) #breadcrumbs { margin-right: 5.4%; }
+}
+
+
+@media screen and (max-width:1279px) {
+	 .horizontal:not(.DXP) #breadcrumbs { margin-right: 3.4%; }
+}
+.horizontal:not(.DXP) #breadcrumbs .estasEn { height: auto; }
+.horizontal:not(.DXP) #breadcrumbs .breadcrumbs { border-bottom: 1px dashed #999; }
+.horizontal.DXP) #breadcrumbs .breadcrumb { border-bottom: 1px dashed #999; }
+.horizontal:not(.DXP) #breadcrumbs .portlet-borderless-container ul li.last span { font-weight: normal; }
+.horizontal:not(.DXP) #breadcrumbs .portlet-borderless-container ul li.parent + .last.sel span { font-weight: normal; }
+.horizontal:not(.DXP) #breadcrumbs .portlet-borderless-container ul li.parent +.sel:not(.last) span a {
+	color: #dc002e !important;
+}
+.horizontal:not(.DXP) #breadcrumbs li span.firstVisible::before {
+	display: unset;
+}
+
+.horizontal:not(.DXP) #breadcrumbs .portlet-borderless-container ul li span::before {
+	content: '\f054';
+	padding-right: 5px;
+	font-family: FontAwesome;
+	font-size: 12px;
+}
+/** Titulos de portlet **/
+
+.horizontal #wrapper #content .portlet-title {
+	border-bottom: unset;
+}
+
+/** Tarifas **/
+.publicar-dogv table tbody tr th span {font-size: .8em;font-weight: normal;}
+
+
+/** Publicador preguntas frecuentes **/
+.publicador-faq > .portlet-body {
+	padding: 1em 2em;
+	margin-bottom: 1em;
+	background-color: #fff;
+	box-shadow: .2em .2em .5em #ccc;
+}
+.horizontal #content .portlet-asset-publisher.publicador-faq .asset-full-content {
+	padding: 0 0 10px 0;
+	margin-bottom: 16px !important;
+}
+.portlet-asset-publisher.publicador-faq .asset-full-content .asset-content { margin: 0; }
+
+
+.horizontal #content .journal-content-article .faq .asset-title > a::before {
+	background: transparent url('/GVA-theme/images/color_schemes/dogv/faq_pregunta.svg') center no-repeat;
+	background-size: contain;
+	position: absolute;
+	left: -25px;
+	top: 5px;
+	width: 16px;
+	height: 16px;
+	content: '';
+	border: unset !important;
+	opacity: .5;
+	margin: 0 8px 0 0;
+}
+
+@media screen and (max-width:979px) {
+	.horizontal #content .journal-content-article .faq .asset-title > a::before {
+		background: transparent url('/GVA-theme/images/arrows/flecha_faq.svg') center no-repeat;
+		transition: transform .2s ease-out;
+	}
+	.horizontal #content .journal-content-article .faq .asset-title.expanded > a::before {
+		transform: rotate(180deg);
+	}
+}
+@media screen and (min-width:980px) {
+	.horizontal #content .journal-content-article .faq .asset-title > a::after {
+		background: transparent url('/GVA-theme/images/arrows/flecha_faq.svg') center no-repeat;
+		content: '';
+		background-size: cover;
+		position: absolute;
+		right: -5px;
+		top: 5px;
+		width: 24px;
+		height: 16px;
+		opacity: .4;
+		margin: 0 8px 0 0;
+		transition: transform .2s ease-out;
+	}
+	.horizontal #content .journal-content-article .faq .asset-title.expanded > a::after {
+		transform: rotate(180deg);
+	}
+}
+.horizontal #content .journal-content-article .faq .faq-respuesta {
+	padding: 1em;
+	margin: 0 !important;
+}	
+
+/** QUITAR BORDE ROJO DE NAVEGACION **/
+.horizontal #navigation {
+	height: 0;
+	border-bottom: unset;
+}	
+
+/** SCROLL **/
+.titulo-oculto .portlet-title {display: none;}
+
+
+/** Covid-19 **/
+.covid-19 .content ul {
+	margin-bottom: 1.5em !important;
+}
+.covid-19 .content ul li {
+	outline: none;
+	display: block;
+	position: relative;
+	color: #333;
+	padding: 1em !important;
+	border: 1px solid #e6e6e6;
+	box-shadow: 2px 2px 5px 0 #d1d1d1;
+	transition: box-shadow .2s ease-out;
+	display: block;
+	font-size: 1.1em;
+	font-weight: bold;
+	cursor: pointer;
+	margin-top: 1.5em;
+}
+.covid-19 .content ul li:nth-child(1) {
+	margin-top: 0;
+}
+.covid-19 .content ul li:hover {
+	box-shadow: 5px 5px 10px 0 #a1a1a1;
+}
+.covid-19 .content ul li::before {
+	content: none !important;
+}
+.covid-19 .content ul li a {
+	display: block;
+	color: #333 !important;
+	font-weight: normal;
+}
+
+.covid-19 h2 {
+	position: relative;
+	padding: 1em 4em 1em 4em;
+	margin-bottom: 2em;
+	background-color: #ffeeae;
+}
+.covid-19 h2::before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 1em;
+	left: 1.4em;
+	width: 1.5em;
+	height: 1.5em;
+	margin-right: 0.2em;
+	background: transparent url(/dogv-portal-frontend/ico_informacio_c70f2d.426371459c0718ef621a.svg) no-repeat 50%/auto 100%;
+}
+.covid-19 h2.covid-19-normativa {
+	color: #333!important;
+	font-weight: normal;
+	padding: unset;
+	background: none;
+	margin: 1em 0 0.5em 0;
+}
+.covid-19 h2.covid-19-normativa::before {
+	content: "";
+	background: none;
+}
+.covid-19 .content.entrada div {
+	display: flex;
+}
+.covid-19 .content.entrada div p {
+	display: block;
+	color: #333;
+	padding: 1em;
+	margin-bottom: 1em;
+	border: 1px solid #e6e6e6;
+	background-color: #fff;
+	box-shadow: 2px 2px 5px 0 #d1d1d1;
+	transition: box-shadow .2s ease-out;
+	cursor: pointer;
+	font-weight: normal;
+}
+.covid-19 .content.entrada div p:hover {
+	box-shadow: 5px 5px 10px 0 #a1a1a1;
+}
+.covid-19 .content.entrada div p:nth-child(2) {
+	margin-left: 2em !important;
+}
+.covid-19 .content.entrada div p a {
+	font-weight: bold;
+	color: #333 !important;
+	display: block;
+}
+.covid-19 .content.cuerpo h3 {
+	margin-top: 1.5em;
+}
+.covid-19 .content.cuerpo h3:nth-child(1) {
+	margin-top: 0;
+}
+.covid-19 .content.cuerpo h3::before {
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	position: relative;
+	top: -0.1em;
+	width: 2em;
+	height: 2em;
+	margin-right: 0.5em;
+	background: #666 url(/documents/176057414/176057508/ico_calendari_fff.svg/1231a2d4-af13-4aa1-b42e-a7de9603c01f) no-repeat center center / auto 50%;
+	border-radius: 50%;
+}
+
+
+
+
+/** Cómo publicar en el DOGV **/
+.publicar-dogv p a.enlace-dogv-remitents, .publicar-dogv p a.enlace-manual-dogv-remitents, .publicar-dogv p a.enlace-normas-publicacion {
+display: inline-block;
+position: relative;
+padding: 0.7em 1.5em 0.7em 4em;
+margin-bottom: 1em;
+border: 1px solid #e6e6e6;
+background-color: #fff;
+box-shadow: 2px 2px 5px 0 #d1d1d1;
+transition: box-shadow .2s ease-out;
+}
+.publicar-dogv p a.enlace-dogv-remitents::before {
+content: "";
+display: inline-block;
+position: absolute;
+top: 1em;
+left: 1.4em;
+width: 1.5em;
+height: 1.5em;
+margin-right: 0.2em;
+background: transparent url(/documents/176057414/176057508/ico_publicar_acces_c70f2d.svg/91d88943-8c91-425e-9adb-7d5a79bf5fad) no-repeat 50%/auto 100%;
+}
+.publicar-dogv p a.enlace-manual-dogv-remitents::before, .publicar-dogv p a.enlace-normas-publicacion::before {
+content: "";
+display: inline-block;
+position: absolute;
+top: 1em;
+left: 1.4em;
+width: 1.5em;
+height: 1.5em;
+margin-right: 0.2em;
+background: transparent url(/documents/176057414/176057508/ico_pdf_c70f2d.svg/bb0372c1-2b40-486c-8285-b689736bd305) no-repeat 50%/auto 100%;
+}
+.publicar-dogv p a.enlace-manual-dogv-remitents span, .publicar-dogv p a.enlace-normas-publicacion span {
+display: block;
+font-size: .9em;
+color: #333;
+}
+.publicar-dogv p a.enlace-dogv-remitents:hover, .publicar-dogv p a.enlace-manual-dogv-remitents:hover, .publicar-dogv p a.enlace-normas-publicacion:hover {
+box-shadow: 5px 5px 10px 0 #a1a1a1;
+border: 1px solid #e6e6e6 !important;
+}
+
+/* Solicitudes */
+.horizontal.DXP #content .journal-content-article .webContent ol {counter-reset: item;}
+.horizontal.DXP #content .journal-content-article .webContent ol>li:before {
+    content: counter(item) ". ";
+    counter-increment: item;
+    font-weight: bold;
+}
+.publicar-dogv .solicitud {
+padding: 1em 2em;
+background-color: #f2f2f2;
+margin-bottom: 1em;
+}
+.publicar-dogv .solicitud h4 {
+font-size: 1.1em !important;
+margin-top: 0;
+}
+.publicar-dogv .solicitud ol {
+margin-bottom: 1.5em !important;
+}
+.publicar-dogv .solicitud ol li {
+list-style: none;
+padding: 10px 10px 10px 0px !important;
+}
+.publicar-dogv .solicitud ol li + li {
+border-top: 1px dashed #999;
+}
+.publicar-dogv .solicitud ol li::before {
+display: inline-flex;
+align-items: center;
+justify-content: center;
+width: 2em;
+height: 2em;
+color: #fff !important;
+text-decoration: none;
+background-color: #333;
+border-radius: 50%;
+margin-right: 1em;
+}
+
+/* Tabla Tarifas */
+.publicar-dogv table {
+width: 50%;
+border: 1.5px solid #ccc;
+}
+.publicar-dogv table thead tr th {
+background-color: #f2f2f2;
+color: #333;
+font-size: .9em;
+font-weight: normal;
+text-align: left;
+text-transform: uppercase;
+border-color: #ccc3be;				
+}
+.publicar-dogv table tbody tr th p, .publicar-dogv table tbody tr td p {
+margin: 0;
+}
+.publicar-dogv table tbody tr th span {
+font-size: .8em;
+font-weight: normal;
+}
+.publicar-dogv table tbody tr th {
+background-color: #fff;
+color: #333;
+font-size: 1em;
+font-weight: normal;
+border-color: #ccc3be;				
+}
+.publicar-dogv table tbody tr td {
+
+font-weight: bold;
+padding: 0.5em 1em;
+vertical-align: middle;
+}	
+
+/* ANCLAS DE LAS PREGUNTAS FRECUENTES */
+@media screen and (min-width: 980px){
+ .anclas ul{display: flex;}
+}
+.anclas ul{justify-content: space-evenly;padding: 20px 0;border: 1px solid #ccc;margin-top: 20px;background-color: #f2f2f2;font-weight: bold;}	
+
+
+/* LOGO 3 CON EL ACCESO AL AREA PERSONAL PARA MOVILES */
+@media screen and (min-width: 980px){
+#layout-column_column-1 #p_p_id_56_INSTANCE_LOGO_A1b3c_movil{display:none;}
+}
+#layout-column_column-1 #p_p_id_56_INSTANCE_LOGO_A1b3c_movil #cabecera-acceso-area-personal-movil {
+    text-align: right;
+}
+
+/* */
+</style>
+<p><script>
+	
+	/* Cambio texto de idiomas */
+	var idiomaPagina = $('html').attr('lang');
+	
+	var textoVal = "";
+	var textoCas = "";
+	if ( idiomaPagina == "ca" || idiomaPagina == "ca-ES"  ){
+		textoVal = "Valencià";
+		textoCas = "Castellà";
+	}else if ( idiomaPagina == "es" || idiomaPagina == "es-ES" ) {
+		textoVal = "Valenciano";
+		textoCas = "Castellano";
+	} else {
+		textoVal = "Valenciano";
+		textoCas = "Castellano";
+	}
+	
+	
+
+	$('body #idiomas .taglib-language-list-text[lang="es-ES"]').text(textoCas);
+	$('body.DXP .idiomas .idiomas-texto-corto[lang="es-ES"]').text(textoCas);
+	$('body #idiomas .taglib-language-list-text[lang="ca-ES"]').text(textoVal);
+	$('body.DXP .idiomas .idiomas-texto-corto[lang="ca-ES"]').text(textoVal);
+	
+	$('body #idiomas').css('display','unset')
+	
+	/* Cambio texto de camino de migas*/
+	var textoMigas = "";
+	if ( idiomaPagina == "ca"  || idiomaPagina == "ca-ES"){
+		textoMigas = "Vosté es troba a: ";
+	}else if ( idiomaPagina == "es" || idiomaPagina == "es-ES") {
+		textoMigas = "Usted se encuentra en: ";
+	}
+	
+	$('body #breadcrumbs .estasEn').text(textoMigas);
+	
+$(document).ready(function(){
+
+	function scrollToIframe	(scrollPosition=0, animate=600) {
+	  $("html, body").animate({ scrollTop: scrollPosition }, animate);
+	}	
+	
+	/* Añadir clase a elemento desplegado del menu */
+	/*if ( $('.navegacion-superior .level-1 li a.conHijos + .level-2:visible').length > 0 ) {	
+		$('.navegacion-superior .level-1 li a.conHijos + .level-2:visible').parent().find('a.conHijos').addClass('desp');
+	}*/
+
+
+    /** Boton subir arriba **/
+	
+	$(window).on("scroll",function(){
+		if($(this).scrollTop() > $(window).height()/2){
+			$('body:not(.DXP) #scroll').fadeIn();
+		}else{
+			$('body:not(.DXP) #scroll').fadeOut();
+		}
+	});
+
+	$('body:not(.DXP) #scroll').on("click",function(){
+		scrollToIframe();
+		return false;
+	});
+
+	/* Añadir un iframe para el tema del acceso al area personal si no existe ya un iframe a /dogv-portal-frontend creado*/
+	// Lo primero que hacemos es buscar si ya existen iframes con ese SRC
+	var rutaSrcIframeContexto = "/dogv-portal-frontend/";
+	var rutaSrcIframeInyector = "/inyector";
+	
+	var iFrame, frames;
+	var existeIframeDogv = false;
+	frames = document.getElementsByTagName("iframe");
+	for (iFrame = 0; iFrame < frames.length; ++iFrame)
+	{
+		// The iFrame
+		var frameSrcAttribute = frames[iFrame].getAttribute('src');
+		if (frameSrcAttribute.includes(rutaSrcIframeContexto)){
+			existeIframeDogv = true;
+		}
+	}	
+	
+    //crear elemento
+	if (!existeIframeDogv){
+		var rutaSrcIframeIdioma = idiomaPagina;
+		if ( idiomaPagina == "ca" ){
+			rutaSrcIframeIdioma = 'va';
+		}
+	
+		
+		var selector = document.getElementById('footer');
+		var iframe = document.createElement('iframe');
+
+		//propiedades iframe
+		iframe.setAttribute('src',rutaSrcIframeContexto+rutaSrcIframeIdioma+rutaSrcIframeInyector);
+		iframe.setAttribute('id','iframeInyectorAccesoAreaPersonal');
+		
+		iframe.style.display = 'none';
+		
+		//insertar iframe
+		selector.appendChild(iframe);	
+	}	
+	
+   /* FUNCIONALIDAD PARA MONTAR LAS ANCLAS EN LAS PÁGINAS CON MUCHOS H1 */
+   /* BASTARA CON PONER EN APARIENCIA DE LAS PAGINAS PUBLICAS LA CLASE publicador-faq */
+   var arrayIds = [];
+   var titles=[];
+   var id = "";
+   var title="";
+   var numId=0;
+
+   $(".portlet-asset-publisher.publicador-faq h1.portlet-title, .portlet-asset-publisher.publicador-faq h2.portlet-title-text").each(function () {
+
+         id = "h1_num_" + numId;
+		 numId++;
+		 $(this).attr('id', id);;
+	     arrayIds.push(id);
+         title=$(this).text();
+		 console.log("title: "+ title);
+         titles.push(title);
+		 console.log("id: "+ id);
+	
+   });
+
+   $(".portlet-journal-content.titulo-faq h1.portlet-title, .portlet-journal-content.titulo-faq h2.portlet-title-text").after("<div class='anclas'><ul></ul></div>");
+
+   for(var i=0;i<arrayIds.length;i++){
+
+      var textoHtml ="";
+      textoHtml = textoHtml + "<li><a href='#";
+      textoHtml = textoHtml + arrayIds[i];
+      textoHtml = textoHtml + "' class='boton-tercer-nivel'>"+titles[i]+"</a></li>";
+
+      $(".portlet-journal-content.titulo-faq .anclas ul").append(textoHtml);
+   }
+   /* FIN FUNCIONALIDAD PARA MONTAR LAS ANCLAS EN LAS PÁGINAS CON MUCHOS H3 */	
+
+    /* SE COPIA MEDIANTE JQUERY EL HTML DE LOGO 3 DONDE ESTÁ EL ACCESO AL AREA PERSONAL DE LA CABECERA AL CUERPO PARA LA VERSION MOVIL */	
+	$("#p_p_id_56_INSTANCE_LOGO_A1b3c_").clone().prependTo("#layout-column_column-1");
+	$("#layout-column_column-1 #p_p_id_56_INSTANCE_LOGO_A1b3c_").attr("id","p_p_id_56_INSTANCE_LOGO_A1b3c_movil");
+	$("#layout-column_column-1 #p_p_id_56_INSTANCE_LOGO_A1b3c_movil #p_56_INSTANCE_LOGO_A1b3c").attr("id","p_56_INSTANCE_LOGO_A1b3c_movil");
+	$("#layout-column_column-1 #p_p_id_56_INSTANCE_LOGO_A1b3c_movil #cabecera-acceso-area-personal").attr("id","cabecera-acceso-area-personal-movil");
+	/* SE COPIA MEDIANTE JQUERY EL HTML DE LOGO 3 DONDE ESTÁ EL ACCESO AL AREA PERSONAL DE LA CABECERA AL CUERPO PARA LA VERSION MOVIL */	
+});
+</script></p>
+
+<p> </p>
+</div>
+
+			
+		</div>
+
+		
+
+	
+
+
+	</div>
+<div class="footer-content">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+	
+	
+		<div class="journal-content-article " data-analytics-asset-id="176058045" data-analytics-asset-title="Footer" data-analytics-asset-type="web-content" data-analytics-web-content-resource-pk="176058047">
+			
+
+			<div class="text-content">
+    <div class="footer-template">
+	<div class="footer-list-wrapper">
+		<p>
+			© Diari Oficial de la Generalitat Valenciana</p>
+		<ul class="footer-list fixed-list">
+			<li class="footer-list-item">
+				<a class="footer-link" href="/es/mapa-web">Mapa web</a></li>
+			<li class="footer-list-item">
+				<a class="footer-link" href="/es/contacte">Contacto</a></li>
+			<li class="footer-list-item">
+				<a class="footer-link" href="/es/accessibilitat">Accessibilidad</a></li>
+			<li class="footer-list-item">
+				<a class="footer-link" href="/es/avis-legal">Aviso legal</a></li>
+			<li class="footer-list-item">
+				<a class="footer-link" href="/es/proteccio-de-dades">Protección de datos</a></li>
+			<li class="footer-list-item">
+				<p>
+					Enlaces de interés:</p>
+				<ul>
+					<li>
+						<a href="https://gvaoberta.gva.es/es/" target="_blank" title="Se abre en una nueva ventana">Portal de Transparencia de la Generalitat Valenciana</a></li>
+					<li>
+						<a href="https://www.contratacion.gva.es/WebContrataP/filtro.jsp?language=C&amp;MODO=P" target="_blank" title="S'obri en una finestra nova">Plataforma de Contratación de la Generalitat</a></li>
+				</ul>
+			</li>
+		</ul>
+	</div>
+	<div class="footer-list-wrapper">
+		<ul id="aui_3_4_0_1_464">
+			<li>
+				<a href="/es/inicio"> Inicio</a></li>
+			<li id="aui_3_4_0_1_542">
+				<a href="/es/informacio-general" id="aui_3_4_0_1_541"> Información y servicios</a>
+				<ul>
+					<li>
+						<a href="/es/que-es-el-dogv"> ¿Qué es el DOGV?</a></li>
+					<li>
+						<a href="/es/como-publicar-en-el-dogv"> Publicar un anuncio</a></li>
+					<li>
+						<a href="/es/verificador-de-documents"> Verificador de documentos</a></li>
+					<li>
+						<a href="/es/preguntes-frequents"> Preguntas frecuentes</a></li>
+					<li>
+						<a href="/es/altres-diaris-oficials"> Otros diarios oficiales</a></li>
+					<li>
+						<a href="https://twitter.com/GVAdogv" target="_blank"> El DOGV en X</a></li>
+				</ul>
+			</li>
+			<li>
+				<a href="/es/portal"> Portal Legislativo</a>
+				<ul>
+					<li>
+						<a href="/es/cerca-de-legislacio"> Acceso al portal</a></li>
+					<li>
+						<a href="/es/legislacio-per-materies"> Legislación por materias</a></li>
+					<li>
+						<a href="/es/projecte-eli-identificador-legislatiu-europeu"> Proyecto «Identificador europeo de legislación» (ELI)</a></li>
+				</ul>
+			</li>
+			<li id="aui_3_4_0_1_463">
+				<a href="/es/alertas-del-diari-oficial"> Alertas y subscripciones</a></li>
+		</ul>
+	</div>
+	<div class="footer-list-wrapper">
+		<div id="redes-twitter-footer">
+			<a class="btn-light btn pull-right" href="https://twitter.com/intent/follow?original_referer=http%3A%2F%2Fplatform.twitter.com%2Fwidgets%2Ffollow_button.1357323348.html&amp;region=follow_link&amp;screen_name=generalitat&amp;tw_p=followbutton&amp;variant=2.0" style="margin-bottom:5px;" target="_blank" title="Seguir a generalitat"> <span>Seguir a <strong>@generalitat</strong></span> </a></div>
+	</div>
+</div>
+<p>
+	<a href="javascript:void(0);" id="scroll" style="display: none;" title="Subir arriba">Subir</a></p>
+</div>
+
+			
+		</div>
+
+		
+
+	
+
+
+</div>				
+
+<div class="banderaUE">
+
+	<img src="/o/es.gva.liferayPortales.themes.horizontal-theme/images/GVA/bandera_union_europea_es_ES.png" alt="Unión Europea. Fondo Europeo de Desarrollo Regional"/>
+	
+</div>
+
+				
+			</footer>
+		
+		</div>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+	
+
+
+
+
+
+
+
+
+
+<script type="text/javascript">
+
+	
+		
+
+			
+
+			
+		
+	
+
+
+</script><script>
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+
+
+<script type="text/javascript">
+
+					window.dataLayer = window.dataLayer || [];
+					function gtag(){dataLayer.push(arguments);}
+					gtag('js', new Date());
+					gtag('config', 'G-3F6JG1855L');
+
+					
+
+					
+				
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onDestroyPortlet = function () {
+		Liferay.detach('messagePosted', onMessagePosted);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+
+	var onMessagePosted = function (event) {
+		if (window.Analytics) {
+			const eventProperties = {
+				className: event.className,
+				classPK: event.classPK,
+				commentId: event.commentId,
+				text: event.text,
+			};
+
+			const blogNode = document.querySelector(
+				'[data-analytics-asset-id="' + event.classPK + '"]'
+			);
+
+			const dmNode = document.querySelector(
+				'[data-analytics-file-entry-id="' + event.classPK + '"]'
+			);
+
+			if (blogNode) {
+				eventProperties.title = blogNode.dataset.analyticsAssetTitle;
+			}
+			else if (dmNode) {
+				eventProperties.title = dmNode.dataset.analyticsFileEntryTitle;
+			}
+
+			Analytics.send('posted', 'Comment', eventProperties);
+		}
+	};
+
+	Liferay.on('messagePosted', onMessagePosted);
+})();
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onVote = function (event) {
+		if (window.Analytics) {
+			let title = event.contentTitle;
+
+			if (!title) {
+				const dmNode = document.querySelector(
+					'[data-analytics-file-entry-id="' + event.classPK + '"]'
+				);
+
+				if (dmNode) {
+					title = dmNode.dataset.analyticsFileEntryTitle;
+				}
+			}
+
+			Analytics.send('VOTE', 'Ratings', {
+				className: event.className,
+				classPK: event.classPK,
+				ratingType: event.ratingType,
+				score: event.score,
+				title,
+			});
+		}
+	};
+
+	var onDestroyPortlet = function () {
+		Liferay.detach('ratings:vote', onVote);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('ratings:vote', onVote);
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+})();
+
+	function getValueByAttribute(node, attr) {
+		return (
+			node.dataset[attr] ||
+			(node.parentElement && node.parentElement.dataset[attr])
+		);
+	}
+
+	function sendDocumentDownloadedAnalyticsEvent(anchor) {
+		var fileEntryId = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryId'
+		);
+		var title = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryTitle'
+		);
+		var version = getValueByAttribute(
+			anchor,
+			'analyticsFileEntryVersion'
+		);
+
+		if (fileEntryId) {
+			Analytics.send('documentDownloaded', 'Document', {
+				groupId: themeDisplay.getScopeGroupId(),
+				fileEntryId,
+				preview:
+					!!window._com_liferay_document_library_analytics_isViewFileEntry,
+				title,
+				version,
+			});
+		}
+	}
+
+	function handleDownloadClick(event) {
+		if (window.Analytics) {
+			if (event.target.nodeName.toLowerCase() === 'a') {
+				sendDocumentDownloadedAnalyticsEvent(
+					event.target
+				);
+			}
+			else if (
+				event.target.parentNode &&
+				event.target.parentNode.nodeName.toLowerCase() === 'a'
+			) {
+				sendDocumentDownloadedAnalyticsEvent(
+					event.target.parentNode
+				);
+			}
+			else {
+				var target = event.target;
+				var matchTextContent =
+					target.textContent &&
+					target.textContent.toLowerCase() ===
+						'descargar';
+				var matchTitle =
+					target.title && target.title.toLowerCase() === 'download';
+				var matchAction = target.action === 'download';
+				var matchLexiconIcon = !!target.querySelector(
+					'.lexicon-icon-download'
+				);
+				var matchLexiconClassName = target.classList.contains(
+					'lexicon-icon-download'
+				);
+				var matchParentTitle =
+					target.parentNode &&
+					target.parentNode.title &&
+					target.parentNode.title.toLowerCase() === 'download';
+				var matchParentLexiconClassName =
+					target.parentNode &&
+					target.parentNode.classList.contains('lexicon-icon-download');
+
+				if (
+					matchTextContent ||
+					matchTitle ||
+					matchParentTitle ||
+					matchAction ||
+					matchLexiconIcon ||
+					matchLexiconClassName ||
+					matchParentLexiconClassName
+				) {
+					var selectedFiles = document.querySelectorAll(
+						'.form .custom-control-input:checked'
+					);
+
+					selectedFiles.forEach(({value}) => {
+						var selectedFile = document.querySelector(
+							'[data-analytics-file-entry-id="' + value + '"]'
+						);
+
+						sendDocumentDownloadedAnalyticsEvent(
+							selectedFile
+						);
+					});
+				}
+			}
+		}
+	}
+
+	Liferay.once('destroyPortlet', () => {
+		document.body.removeEventListener(
+			'click',
+			handleDownloadClick
+		);
+	});
+
+	Liferay.once('portletReady', () => {
+		document.body.addEventListener(
+			'click',
+			handleDownloadClick
+		);
+	});
+
+(function() {var $ = AUI.$;var _ = AUI._;
+	var onShare = function (data) {
+		if (window.Analytics) {
+			Analytics.send('shared', 'SocialBookmarks', {
+				className: data.className,
+				classPK: data.classPK,
+				type: data.type,
+				url: data.url,
+			});
+		}
+	};
+
+	var onDestroyPortlet = function () {
+		Liferay.detach('socialBookmarks:share', onShare);
+		Liferay.detach('destroyPortlet', onDestroyPortlet);
+	};
+
+	Liferay.on('socialBookmarks:share', onShare);
+	Liferay.on('destroyPortlet', onDestroyPortlet);
+})();
+
+	if (window.svg4everybody && Liferay.Data.ICONS_INLINE_SVG) {
+		svg4everybody(
+			{
+				polyfill: true,
+				validate: function (src, svg, use) {
+					return !src || !src.startsWith('#');
+				}
+			}
+		);
+	}
+
+(function() {var $ = AUI.$;var _ = AUI._;
+	Liferay.Util.delegate(
+		document,
+		'focusin',
+		'.portlet',
+		function(event) {
+			event.delegateTarget.closest('.portlet').classList.add('open');
+		}
+	);
+
+	Liferay.Util.delegate(
+		document,
+		'focusout',
+		'.portlet',
+		function(event) {
+			event.delegateTarget.closest('.portlet').classList.remove('open');
+		}
+	);
+})();
+
+	// <![CDATA[
+
+		
+
+		Liferay.currentURL = '\x2fes\x2finici\x2f';
+		Liferay.currentURLEncoded = '\x252Fes\x252Finici\x252F';
+
+	// ]]>
+
+(function() {var $ = AUI.$;var _ = AUI._;
+		import(Liferay.ThemeDisplay.getPathContext() + '/o/frontend-js-web/__liferay__/index.js').then(
+			({openToast}) => {
+				AUI().use(
+					'liferay-session',
+					function () {
+						Liferay.Session = new Liferay.SessionBase(
+							{
+								autoExtend: true,
+								redirectOnExpire: false,
+								redirectUrl: 'https\x3a\x2f\x2fdogv\x2egva\x2ees\x2fweb\x2fguest',
+								sessionLength: 2400,
+								sessionTimeoutOffset: 70,
+								warningLength: 60
+							}
+						);
+
+						
+					}
+				);
+			}
+		)
+	})();
+
+	
+		Liferay.Portlet.register('com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavMovil');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavMovil_',
+			portletId: 'com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavMovil',
+			refreshURL: '\x2fes\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d176057431\x26p_p_id\x3dcom_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavMovil\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fes\x252Finici\x252F',
+			refreshURLData: {}
+		}
+	);
+
+
+	
+		Liferay.Portlet.register('com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavHorizontal');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavHorizontal_',
+			portletId: 'com_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavHorizontal',
+			refreshURL: '\x2fes\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d176057431\x26p_p_id\x3dcom_liferay_site_navigation_menu_web_portlet_SiteNavigationMenuPortlet_INSTANCE_menuNavHorizontal\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fes\x252Finici\x252F',
+			refreshURLData: {}
+		}
+	);
+
+
+	
+		Liferay.Portlet.register('com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_0AkBwY2jfOvL');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_0AkBwY2jfOvL_',
+			portletId: 'com_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_0AkBwY2jfOvL',
+			refreshURL: '\x2fes\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d176057431\x26p_p_id\x3dcom_liferay_journal_content_web_portlet_JournalContentPortlet_INSTANCE_0AkBwY2jfOvL\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dcolumn-1\x26p_p_col_pos\x3d0\x26p_p_col_count\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fes\x252Finici\x252F',
+			refreshURLData: {}
+		}
+	);
+
+
+	
+		Liferay.Portlet.register('com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_INSTANCE_migas');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_INSTANCE_migas_',
+			portletId: 'com_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_INSTANCE_migas',
+			refreshURL: '\x2fes\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d176057431\x26p_p_id\x3dcom_liferay_site_navigation_breadcrumb_web_portlet_SiteNavigationBreadcrumbPortlet_INSTANCE_migas\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fes\x252Finici\x252F',
+			refreshURLData: {}
+		}
+	);
+
+
+	
+		Liferay.Portlet.register('com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_INSTANCE_idiomas');
+	
+
+	Liferay.Portlet.onLoad(
+		{
+			canEditTitle: false,
+			columnPos: 0,
+			isStatic: 'end',
+			namespacedId: 'p_p_id_com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_INSTANCE_idiomas_',
+			portletId: 'com_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_INSTANCE_idiomas',
+			refreshURL: '\x2fes\x2fc\x2fportal\x2frender_portlet\x3fp_l_id\x3d176057431\x26p_p_id\x3dcom_liferay_site_navigation_language_web_portlet_SiteNavigationLanguagePortlet_INSTANCE_idiomas\x26p_p_lifecycle\x3d0\x26p_t_lifecycle\x3d0\x26p_p_state\x3dnormal\x26p_p_mode\x3dview\x26p_p_col_id\x3dnull\x26p_p_col_pos\x3dnull\x26p_p_col_count\x3dnull\x26p_p_static\x3d1\x26p_p_isolated\x3d1\x26currentURL\x3d\x252Fes\x252Finici\x252F',
+			refreshURLData: {}
+		}
+	);
+
+
+</script><script type="module">
+import {InfoItemActionHandler as ComponentModule} from '/o/layout-taglib/__liferay__/index.js';
+AUI().use(
+  'liferay-menu',
+function(A) {
+{
+Liferay.component('infoItemActionComponent', new ComponentModule({"executeInfoItemActionURL":"https:\/\/dogv.gva.es\/es\/c\/portal\/execute_info_item_action?p_l_mode=view&plid=176057431","namespace":"","spritemap":"https:\/\/dogv.gva.es\/o\/es.gva.liferayPortales.themes.horizontal-theme\/images\/clay\/icons.svg"}), { destroyOnNavigate: true, portletId: ''});
+}
+(function() {
+var $ = AUI.$;var _ = AUI._;
+	new Liferay.Menu();
+
+	var liferayNotices = Liferay.Data.notices;
+
+	for (var i = 0; i < liferayNotices.length; i++) {
+		Liferay.Util.openToast(liferayNotices[i]);
+	}
+
+})();
+});
+
+</script>
+
+
+
+
+
+
+
+
+
+<script src="https://dogv.gva.es/o/es.gva.liferayPortales.themes.horizontal-theme/js/main.js?browserId=other&amp;minifierType=js&amp;languageId=es_ES&amp;t=1793136404000" type="text/javascript"></script>
+
+
+
+
+<script type="module">
+import {main} from '/o/frontend-js-tabs-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {main} from '/o/frontend-js-collapse-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {main} from '/o/frontend-js-tooltip-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {main} from '/o/frontend-js-alert-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {main} from '/o/frontend-js-dropdown-support-web/__liferay__/index.js';
+{
+main();
+}
+
+</script><script type="module">
+import {runThirdPartyCookiesInterval} from '/o/cookies-banner-web/__liferay__/index.js';
+{
+runThirdPartyCookiesInterval();
+}
+
+</script><script type="text/javascript">
+Liferay.CustomDialogs = {enabled: false};
+
+</script><script>
+
+</script><div id="aviso-cookies" style="display: none;">
+    <div class="cerrar"><span tabindex="0" role="button">x</span></div>
+    <p>Esta página web utiliza cookies propias y de terceros para mejorar el
+contenido ofrecido.</p>
+    <button class="btn-acepta-cookies">De acuerdo</button>
+    <a href="/politica-cookies">Más información</a>
+</div>	</body>
+	
+<!-- p1sa...11 -->
+<!-- https://dogv.gva.es/es/inici/ -->	
+
+</html>
+		
+	
+

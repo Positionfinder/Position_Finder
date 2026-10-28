@@ -1,0 +1,15 @@
+    User-agent: *
+    Disallow: /seupro/documentPublic/
+    Disallow: /seupro/registrePublic/
+    Disallow: /seupro/admin/
+    Disallow: /seupro/login/
+    Disallow: /seupro/copiaAutentica/
+    Sitemap: /seupro/sitemap.xml
+
+    Disallow: /documentPublic/
+    Disallow: /registrePublic/
+    Disallow: /admin/
+    Disallow: /login/
+    Disallow: /copiaAutentica/
+    Sitemap: /sitemap.xml
+
