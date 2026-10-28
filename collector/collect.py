@@ -176,7 +176,7 @@ def read_detail(url: str) -> dict:
                 reader = PdfReader(io.BytesIO(r.content))
                 text = "\n".join((p.extract_text() or "") for p in reader.pages[:6])
                 segments = [clean(x) for x in text.split("\n") if clean(x)]
-                title = next((x for x in segments[:15] if len(x) >= 25 and OFFER.search(x)), None)
+                title = pdf_title(segments)
             except Exception:  # noqa: BLE001
                 pass
     elif "html" in ctype:
@@ -192,6 +192,22 @@ def read_detail(url: str) -> dict:
 def max_year(text: str) -> int | None:
     years = [int(y) for y in re.findall(r"\b(20[1-3]\d)\b", text) if int(y) <= date.today().year + 2]
     return max(years) if years else None
+
+
+PDF_HEAD = re.compile(r"^(resoluci[oó]n?|convocat[oò]ria|anuncio|anunci|bases|oferta|offer|call for|job offer|position)", re.I)
+
+
+def pdf_title(segments: list[str]) -> str | None:
+    """Heading of a call PDF: the first line that starts like one, plus the lines that continue it."""
+    for i, seg in enumerate(segments[:60]):
+        if PDF_HEAD.match(seg) and len(seg) >= 12:
+            title = seg
+            for nxt in segments[i + 1:i + 4]:
+                if len(title) >= 160:
+                    break
+                title += " " + nxt
+            return clean(title)[:220]
+    return next((x for x in segments[:15] if len(x) >= 25 and OFFER.search(x)), None)
 
 
 def classify_text(text: str) -> dict:
@@ -326,13 +342,16 @@ def merge_calls(items: list[dict]) -> list[dict]:
             c = calls[key]
             if rec["institution"] not in c["listed_by"]:
                 c["listed_by"].append(rec["institution"])
-            if not c["deadline"] and rec["deadline"]:
-                c["deadline"] = rec["deadline"]
+            if rec["deadline"]:
+                c["_deadlines"].append(rec["deadline"])
             continue
-        rec = {**rec, "listed_by": [rec["institution"]]}
+        rec = {**rec, "listed_by": [rec["institution"]], "_deadlines": [rec["deadline"]] if rec["deadline"] else []}
         calls[key] = rec
         out.append(rec)
     for c in calls.values():
+        dls = c.pop("_deadlines")
+        if dls:  # the deadline most listings agree on; ties go to the later date
+            c["deadline"] = max(set(dls), key=lambda d: (dls.count(d), d))
         if len(c["listed_by"]) > 1:
             c["institution"] = f"Listed by {len(c['listed_by'])} institutions"
             c["region"] = None
