@@ -52,7 +52,9 @@ NOT_OFFER = re.compile(
     r"defensa (de la )?tesis|thesis defen[cs]e|lectura de tesis|gu[ií]a (del|de|para)|consultas|certificad|"
     r"equivalen|preguntas frecuentes|\bfaq\b|normativa|reglamento|instrucciones|plantilla|manual|"
     r"acta |actas |memoria anual|news|noticia|evento|jornada|seminario|webinar|premio|award|"
-    r"tramos de investigaci|sexenios|estabilizaci[oó]n",
+    r"tramos de investigaci|sexenios|estabilizaci[oó]n|sorteo|committee selection|selection draws|tribunal|"
+    r"cuerpos docentes|profesor(ado)? (titular|catedr|ayudante|asociado|agregat|lector|visitante)|catedr[aá]tic|"
+    r"plazas? de profesor|places? de professor",
     re.I,
 )
 GENERIC_LINK = re.compile(
@@ -210,7 +212,9 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         status.update(ok=False, error=f"{type(e).__name__}: {e}"[:200])
         return [], status, []
 
-    raw = parse_listing(r.text, r.url)
+    raw = [it for it in parse_listing(r.text, r.url)
+           if it["url"].rstrip("/") not in (page.rstrip("/"), r.url.rstrip("/"))
+           and not (r.url.startswith(it["url"].rstrip("/") + "/") and len(it["url"]) < len(r.url))]
     today = date.today()
     cutoff = (today - timedelta(days=CACHE_DAYS)).isoformat()
 
@@ -252,8 +256,8 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             continue
         quick = f"{it['title']} {it['context']}"
         det = cache.get(it["url"], {})
-        lvl_title = classify.level(quick)
-        lvl = lvl_title or det.get("level")
+        lvl_title = classify.level(it["title"]) or classify.level(it["context"])
+        lvl = classify.level(it["title"]) or classify.level(it["context"]) or det.get("level")
         flds = sorted(set(classify.fields(f"{quick} {det.get('title') or ''}")) | set(det.get("fields") or []))
         dl = classify.deadline(quick, date.min) or det.get("deadline")
         title = it["title"]
@@ -268,7 +272,7 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             reason = "marked closed"
         elif not lvl:
             reason = "not PhD/postdoc"
-        elif TECH_STAFF.search(title) and not lvl_title:
+        elif TECH_STAFF.search(title) and not classify.level(title):
             reason = "technical / support staff"
         elif not prog and not lvl_title and len(title) < 45:
             reason = "vague title (looks like a menu or section link)"
@@ -284,7 +288,7 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         if is_call and not dl:
             future = [d for _, d in classify._dates(it["context"]) if d >= today]
             dl = max(future).isoformat() if future else None
-        if is_call and (len(title) < 45 or not classify.level(title)) and not classify.programme_key(title):
+        if is_call:
             title = f"{prog} call"
         rec = {
             "id": item_id(it["url"]), "title": title[:300], "url": it["url"],
@@ -312,6 +316,9 @@ def merge_calls(items: list[dict]) -> list[dict]:
             out.append(rec)
             continue
         key = rec["programme"]
+        if not re.search(r"20\d\d$", key) and rec.get("deadline"):
+            key = f"{key} {rec['deadline'][:4]}"
+            rec = {**rec, "programme": key, "title": f"{key} call"}
         if key in calls:
             c = calls[key]
             c["listed_by"].append(rec["institution"])
