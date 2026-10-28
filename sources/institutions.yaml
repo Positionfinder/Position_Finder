@@ -1,0 +1,110 @@
+# Registry of Spanish institutions checked by Position Finder.
+# job_pages: public listing pages known to carry PhD / postdoc / research-contract calls.
+# Pages discovered automatically are written to data/discovery.json; promote good ones here.
+# Never add pages behind a login, or pages disallowed by the site's robots.txt.
+
+# ---------------- Public universities ----------------
+- {id: ual, name: Universidad de Almería, type: public, region: Andalucía, homepage: "https://www.ual.es"}
+- {id: uca, name: Universidad de Cádiz, type: public, region: Andalucía, homepage: "https://www.uca.es"}
+- {id: uco, name: Universidad de Córdoba, type: public, region: Andalucía, homepage: "https://www.uco.es"}
+- {id: ugr, name: Universidad de Granada, type: public, region: Andalucía, homepage: "https://www.ugr.es"}
+- {id: uhu, name: Universidad de Huelva, type: public, region: Andalucía, homepage: "https://www.uhu.es"}
+- {id: ujaen, name: Universidad de Jaén, type: public, region: Andalucía, homepage: "https://www.ujaen.es"}
+- {id: uma, name: Universidad de Málaga, type: public, region: Andalucía, homepage: "https://www.uma.es"}
+- {id: upo, name: Universidad Pablo de Olavide, type: public, region: Andalucía, homepage: "https://www.upo.es"}
+- {id: us, name: Universidad de Sevilla, type: public, region: Andalucía, homepage: "https://www.us.es",
+   job_pages: ["https://www.investigacion.us.es/"]}
+- {id: unizar, name: Universidad de Zaragoza, type: public, region: Aragón, homepage: "https://www.unizar.es"}
+- {id: uniovi, name: Universidad de Oviedo, type: public, region: Asturias, homepage: "https://www.uniovi.es"}
+- {id: uib, name: Universitat de les Illes Balears, type: public, region: Illes Balears, homepage: "https://www.uib.es"}
+- {id: ull, name: Universidad de La Laguna, type: public, region: Canarias, homepage: "https://www.ull.es"}
+- {id: ulpgc, name: Universidad de Las Palmas de Gran Canaria, type: public, region: Canarias, homepage: "https://www.ulpgc.es"}
+- {id: unican, name: Universidad de Cantabria, type: public, region: Cantabria, homepage: "https://web.unican.es"}
+- {id: uclm, name: Universidad de Castilla-La Mancha, type: public, region: Castilla-La Mancha, homepage: "https://www.uclm.es"}
+- {id: ubu, name: Universidad de Burgos, type: public, region: Castilla y León, homepage: "https://www.ubu.es"}
+- {id: unileon, name: Universidad de León, type: public, region: Castilla y León, homepage: "https://www.unileon.es"}
+- {id: usal, name: Universidad de Salamanca, type: public, region: Castilla y León, homepage: "https://www.usal.es"}
+- {id: uva, name: Universidad de Valladolid, type: public, region: Castilla y León, homepage: "https://www.uva.es"}
+- {id: ub, name: Universitat de Barcelona, type: public, region: Catalunya, homepage: "https://www.ub.edu",
+   job_pages: ["https://seu.ub.edu/ofertaPublicaCategoriaPublic/categories"]}
+- {id: uab, name: Universitat Autònoma de Barcelona, type: public, region: Catalunya, homepage: "https://www.uab.cat",
+   notes: "seleccio.uab.cat requires login; look for a public listing"}
+- {id: upc, name: Universitat Politècnica de Catalunya, type: public, region: Catalunya, homepage: "https://www.upc.edu",
+   job_pages: ["https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs", "https://talenthub.upc.edu/en/jobs/r2/r2-jobs/r2-jobs"]}
+- {id: upf, name: Universitat Pompeu Fabra, type: public, region: Catalunya, homepage: "https://www.upf.edu"}
+- {id: udg, name: Universitat de Girona, type: public, region: Catalunya, homepage: "https://www.udg.edu"}
+- {id: udl, name: Universitat de Lleida, type: public, region: Catalunya, homepage: "https://www.udl.cat"}
+- {id: urv, name: Universitat Rovira i Virgili, type: public, region: Catalunya, homepage: "https://www.urv.cat",
+   job_pages: ["https://seuelectronica.urv.cat/treballar-a-la-urv/convocatories-pdi/"]}
+- {id: uv, name: Universitat de València, type: public, region: Comunitat Valenciana, homepage: "https://www.uv.es"}
+- {id: upv, name: Universitat Politècnica de València, type: public, region: Comunitat Valenciana, homepage: "https://www.upv.es",
+   job_pages: ["https://www.upv.es/empleopublico/"]}
+- {id: ua, name: Universidad de Alicante, type: public, region: Comunitat Valenciana, homepage: "https://www.ua.es"}
+- {id: uji, name: Universitat Jaume I, type: public, region: Comunitat Valenciana, homepage: "https://www.uji.es"}
+- {id: umh, name: Universidad Miguel Hernández, type: public, region: Comunitat Valenciana, homepage: "https://www.umh.es"}
+- {id: unex, name: Universidad de Extremadura, type: public, region: Extremadura, homepage: "https://www.unex.es"}
+- {id: usc, name: Universidade de Santiago de Compostela, type: public, region: Galicia, homepage: "https://www.usc.gal"}
+- {id: udc, name: Universidade da Coruña, type: public, region: Galicia, homepage: "https://www.udc.es"}
+- {id: uvigo, name: Universidade de Vigo, type: public, region: Galicia, homepage: "https://www.uvigo.gal"}
+- {id: ucm, name: Universidad Complutense de Madrid, type: public, region: Madrid, homepage: "https://www.ucm.es"}
+- {id: uam, name: Universidad Autónoma de Madrid, type: public, region: Madrid, homepage: "https://www.uam.es",
+   job_pages: ["https://www.uam.es/uam/investigacion/ofertas-empleo"]}
+- {id: upm, name: Universidad Politécnica de Madrid, type: public, region: Madrid, homepage: "https://www.upm.es",
+   job_pages: ["https://web.upm.es/hrs4r/incorporacion-la-upm"]}
+- {id: uc3m, name: Universidad Carlos III de Madrid, type: public, region: Madrid, homepage: "https://www.uc3m.es"}
+- {id: uah, name: Universidad de Alcalá, type: public, region: Madrid, homepage: "https://www.uah.es"}
+- {id: urjc, name: Universidad Rey Juan Carlos, type: public, region: Madrid, homepage: "https://www.urjc.es"}
+- {id: uned, name: Universidad Nacional de Educación a Distancia, type: public, region: Madrid, homepage: "https://www.uned.es"}
+- {id: um, name: Universidad de Murcia, type: public, region: Murcia, homepage: "https://www.um.es"}
+- {id: upct, name: Universidad Politécnica de Cartagena, type: public, region: Murcia, homepage: "https://www.upct.es"}
+- {id: upna, name: Universidad Pública de Navarra, type: public, region: Navarra, homepage: "https://www.unavarra.es"}
+- {id: ehu, name: Universidad del País Vasco / Euskal Herriko Unibertsitatea, type: public, region: País Vasco, homepage: "https://www.ehu.eus"}
+- {id: unirioja, name: Universidad de La Rioja, type: public, region: La Rioja, homepage: "https://www.unirioja.es"}
+- {id: unia, name: Universidad Internacional de Andalucía, type: public, region: Andalucía, homepage: "https://www.unia.es"}
+- {id: uimp, name: Universidad Internacional Menéndez Pelayo, type: public, region: Madrid, homepage: "https://www.uimp.es"}
+
+# ---------------- Private universities ----------------
+- {id: uoc, name: Universitat Oberta de Catalunya, type: private, region: Catalunya, homepage: "https://www.uoc.edu",
+   job_pages: ["https://selection.uoc.edu/web/offersjob/offers.aspx?y=PP"]}
+- {id: uic, name: Universitat Internacional de Catalunya, type: private, region: Catalunya, homepage: "https://www.uic.es",
+   job_pages: ["https://www.uic.es/en/university/uic-barcelona/work-us-uic-barcelona/teaching-and-research-staff"]}
+- {id: url, name: Universitat Ramon Llull, type: private, region: Catalunya, homepage: "https://www.url.edu"}
+- {id: salle, name: La Salle - Universitat Ramon Llull, type: private, region: Catalunya, homepage: "https://www.salleurl.edu"}
+- {id: uvic, name: Universitat de Vic - Universitat Central de Catalunya, type: private, region: Catalunya, homepage: "https://www.uvic.cat"}
+- {id: uao, name: Universitat Abat Oliba CEU, type: private, region: Catalunya, homepage: "https://www.uaoceu.es"}
+- {id: unav, name: Universidad de Navarra, type: private, region: Navarra, homepage: "https://www.unav.edu"}
+- {id: deusto, name: Universidad de Deusto, type: private, region: País Vasco, homepage: "https://www.deusto.es"}
+- {id: mondragon, name: Mondragon Unibertsitatea, type: private, region: País Vasco, homepage: "https://www.mondragon.edu"}
+- {id: comillas, name: Universidad Pontificia Comillas, type: private, region: Madrid, homepage: "https://www.comillas.edu"}
+- {id: ceu, name: Universidad CEU San Pablo, type: private, region: Madrid, homepage: "https://www.uspceu.com"}
+- {id: ue, name: Universidad Europea, type: private, region: Madrid, homepage: "https://universidadeuropea.com"}
+- {id: ucjc, name: Universidad Camilo José Cela, type: private, region: Madrid, homepage: "https://www.ucjc.edu"}
+- {id: nebrija, name: Universidad Nebrija, type: private, region: Madrid, homepage: "https://www.nebrija.com"}
+- {id: ufv, name: Universidad Francisco de Vitoria, type: private, region: Madrid, homepage: "https://www.ufv.es"}
+- {id: ie, name: IE University, type: private, region: Castilla y León, homepage: "https://www.ie.edu"}
+- {id: uax, name: Universidad Alfonso X el Sabio, type: private, region: Madrid, homepage: "https://www.uax.com"}
+- {id: ucv, name: Universidad Católica de Valencia, type: private, region: Comunitat Valenciana, homepage: "https://www.ucv.es"}
+- {id: uchceu, name: Universidad CEU Cardenal Herrera, type: private, region: Comunitat Valenciana, homepage: "https://www.uchceu.es"}
+- {id: ucam, name: Universidad Católica de Murcia, type: private, region: Murcia, homepage: "https://www.ucam.edu"}
+- {id: loyola, name: Universidad Loyola, type: private, region: Andalucía, homepage: "https://www.uloyola.es"}
+- {id: usj, name: Universidad San Jorge, type: private, region: Aragón, homepage: "https://www.usj.es"}
+- {id: upsa, name: Universidad Pontificia de Salamanca, type: private, region: Castilla y León, homepage: "https://www.upsa.es"}
+- {id: uemc, name: Universidad Europea Miguel de Cervantes, type: private, region: Castilla y León, homepage: "https://www.uemc.es"}
+- {id: unir, name: Universidad Internacional de La Rioja, type: private, region: La Rioja, homepage: "https://www.unir.net"}
+
+# ---------------- Research institutions (planning, architecture, geography and related) ----------------
+- {id: csic, name: Consejo Superior de Investigaciones Científicas (CSIC), type: research, region: Spain, homepage: "https://www.csic.es"}
+- {id: cchs, name: CSIC Centro de Ciencias Humanas y Sociales (incl. IEGD geography), type: research, region: Madrid, homepage: "https://cchs.csic.es"}
+- {id: ietcc, name: Instituto de Ciencias de la Construcción Eduardo Torroja (CSIC), type: research, region: Madrid, homepage: "https://ietcc.csic.es"}
+- {id: iesa, name: Instituto de Estudios Sociales Avanzados (CSIC), type: research, region: Andalucía, homepage: "https://www.iesa.csic.es"}
+- {id: iermb, name: Institut Metròpoli (IERMB), type: research, region: Catalunya, homepage: "https://www.institutmetropoli.cat"}
+- {id: iaac, name: Institute for Advanced Architecture of Catalonia (IAAC), type: research, region: Catalunya, homepage: "https://iaac.net"}
+- {id: icta, name: Institut de Ciència i Tecnologia Ambientals (ICTA-UAB), type: research, region: Catalunya, homepage: "https://icta.uab.cat"}
+- {id: creaf, name: CREAF, type: research, region: Catalunya, homepage: "https://www.creaf.cat"}
+- {id: isglobal, name: ISGlobal (urban planning, environment and health), type: research, region: Catalunya, homepage: "https://www.isglobal.org"}
+- {id: irec, name: Institut de Recerca en Energia de Catalunya (IREC), type: research, region: Catalunya, homepage: "https://www.irec.cat"}
+- {id: cimne, name: CIMNE, type: research, region: Catalunya, homepage: "https://www.cimne.com"}
+- {id: icgc, name: Institut Cartogràfic i Geològic de Catalunya (ICGC), type: research, region: Catalunya, homepage: "https://www.icgc.cat"}
+- {id: bc3, name: Basque Centre for Climate Change (BC3), type: research, region: País Vasco, homepage: "https://www.bc3research.org"}
+- {id: tecnalia, name: Tecnalia, type: research, region: País Vasco, homepage: "https://www.tecnalia.com"}
+- {id: cartif, name: CARTIF, type: research, region: Castilla y León, homepage: "https://www.cartif.es"}

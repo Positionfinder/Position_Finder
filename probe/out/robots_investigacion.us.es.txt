@@ -1,6 +1,0 @@
-User-agent: *
-Disallow: /sisius/sis_solmail.php
-Disallow: /sisius/sis_info.php
-Disallow: /convocatorias/calendario
-Disallow: /contenido/utils/codigos.php
-
