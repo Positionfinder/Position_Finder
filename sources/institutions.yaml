@@ -53,7 +53,7 @@
   region: "Andalucía"
   homepage: "https://www.uma.es"
   job_pages:
-    - "https://www.uma.es/servicio-de-investigacion/cms/menu/contratos-y-becas/"
+    - "https://www.uma.es/servicio-de-investigacion/cms/menu/contratos-y-becas/convocatorias-contratos/"
 - id: upo
   name: "Universidad Pablo de Olavide"
   type: public
@@ -73,6 +73,8 @@
   type: public
   region: "Aragón"
   homepage: "https://www.unizar.es"
+  job_pages:
+    - "https://gespi.unizar.es/"
 - id: uniovi
   name: "Universidad de Oviedo"
   type: public
@@ -99,8 +101,6 @@
   type: public
   region: "Cantabria"
   homepage: "https://web.unican.es"
-  job_pages:
-    - "https://sede.unican.es/Tramites-y-procedimientos/tramites-pdi"
 - id: uclm
   name: "Universidad de Castilla-La Mancha"
   type: public
@@ -143,7 +143,7 @@
   type: public
   region: "Catalunya"
   homepage: "https://www.uab.cat"
-  notes: "seleccio.uab.cat requires login; look for a public listing"
+  notes: "seleccio.uab.cat requires login and no public listing was found; UAB posts research offers on EURAXESS"
 - id: upc
   name: "Universitat Politècnica de Catalunya"
   type: public
@@ -157,13 +157,16 @@
   type: public
   region: "Catalunya"
   homepage: "https://www.upf.edu"
+  job_pages:
+    - "https://www.upf.edu/web/personal/ofertes-pdi"
 - id: udg
   name: "Universitat de Girona"
   type: public
   region: "Catalunya"
   homepage: "https://www.udg.edu"
   job_pages:
-    - "https://www.udg.edu/ca/coneix/treballa-a-la-udg/personal-docent-i-investigador/convocatories-carrec-projectes"
+    - "https://www.udg.edu/ca/coneix/treballa-a-la-udg/personal-docent-i-investigador/ofertes-de-treball-temporal"
+    - "https://www.udg.edu/ca/coneix/treballa-a-la-udg/personal-docent-i-investigador/ofertes-de-treball-temporal-post"
 - id: udl
   name: "Universitat de Lleida"
   type: public
@@ -184,6 +187,8 @@
   type: public
   region: "Comunitat Valenciana"
   homepage: "https://www.uv.es"
+  job_pages:
+    - "https://www.uv.es/pasinvest/"
 - id: upv
   name: "Universitat Politècnica de València"
   type: public
@@ -264,6 +269,9 @@
   type: public
   region: "Madrid"
   homepage: "https://www.uc3m.es"
+  job_pages:
+    - "https://www.uc3m.es/investigacion-apoyopdi/empleo-investigacion-uc3m/otras-ofertas"
+    - "https://www.uc3m.es/empleo/inicio"
 - id: uah
   name: "Universidad de Alcalá"
   type: public
@@ -307,6 +315,8 @@
   type: public
   region: "País Vasco"
   homepage: "https://www.ehu.eus"
+  job_pages:
+    - "https://www.ehu.eus/es/web/ikerketaren-kudeaketa"
 - id: unirioja
   name: "Universidad de La Rioja"
   type: public
@@ -329,6 +339,7 @@
   type: private
   region: "Catalunya"
   homepage: "https://www.uoc.edu"
+  notes: "offers list is loaded by JavaScript; needs a dedicated adapter"
   job_pages:
     - "https://selection.uoc.edu/web/offersjob/offers.aspx?y=PP"
 - id: uic

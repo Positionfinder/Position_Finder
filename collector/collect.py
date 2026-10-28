@@ -94,7 +94,12 @@ def seg_hash(s: str) -> str:
 
 
 def main_element(soup: BeautifulSoup):
-    return soup.find("main") or soup.find(id=MAIN_ID) or soup.find(attrs={"role": "main"}) or soup.body or soup
+    """The page's main content: the candidate container holding the most links, else <body>."""
+    cands = soup.find_all("main") + soup.find_all(id=MAIN_ID) + soup.find_all(attrs={"role": "main"})
+    best = max(cands, key=lambda c: len(c.find_all("a")), default=None)
+    if best is None or len(best.find_all("a")) < 3:
+        return soup.body or soup
+    return best
 
 
 # ---------- listing parsing ----------
@@ -125,14 +130,16 @@ def parse_listing(html: str, base_url: str) -> list[dict]:
             context = link_text
         if not ITEM_HINT.search(context):
             continue
-        if GENERIC_LINK.match(link_text) or len(link_text) < 20:
+        generic = bool(GENERIC_LINK.match(link_text)) or len(link_text) < 20
+        if generic:
             rest = clean(context.replace(link_text, " "))
             title = rest[:220] if len(rest) >= 15 else link_text
         else:
             title = link_text
         prev = items.get(url)
         if prev is None or len(context) > len(prev["context"]):
-            items[url] = {"url": url, "title": title, "context": context}
+            items[url] = {"url": url, "title": title, "context": context,
+                          "weak_title": generic and len(context) > 250}
     return list(items.values())
 
 
@@ -155,6 +162,7 @@ def read_detail(url: str) -> dict:
                 reader = PdfReader(io.BytesIO(r.content))
                 text = "\n".join((p.extract_text() or "") for p in reader.pages[:6])
                 segments = [clean(x) for x in text.split("\n") if clean(x)]
+                title = next((x for x in segments[:15] if len(x) >= 25 and OFFER.search(x)), None)
             except Exception:  # noqa: BLE001
                 pass
     elif "html" in ctype:
@@ -232,7 +240,7 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         flds = sorted(set(classify.fields(f"{quick} {det.get('title') or ''}")) | set(det.get("fields") or []))
         dl = classify.deadline(quick, date.min) or det.get("deadline")
         title = it["title"]
-        if det.get("title") and len(det["title"]) > 15 and (len(title) < 30 or GENERIC_LINK.match(title)):
+        if det.get("title") and len(det["title"]) > 15 and (len(title) < 30 or GENERIC_LINK.match(title) or it.get("weak_title")):
             title = det["title"]
         prog = classify.programme_key(f"{title} {it['context'][:200]}")
         reason = None

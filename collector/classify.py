@@ -100,7 +100,8 @@ DATE_PATTERNS = [
 ]
 DEADLINE_CUE = re.compile(
     r"deadline|closing date|apply (by|before)|application period|until|plazo|fecha l[ií]mite|fin de plazo|hasta el|"
-    r"termini|data l[ií]mit|fins al|fins el|finaliza|fecha de cierre|cierre",
+    r"termini|data l[ií]mit|fins al|fins el|finaliza|fecha de cierre|cierre|solicitud:|solicitudes|sol·licituds|"
+    r"presentaci[oó]n? de (solicitudes|sol·licituds)|applications?:",
     re.I,
 )
 
@@ -123,14 +124,14 @@ def deadline(text: str, today: date | None = None) -> str | None:
     if not dates:
         return None
     cues = [m.start() for m in DEADLINE_CUE.finditer(text)]
-    best = None
-    for pos, d in dates:
-        near = [abs(pos - c) for c in cues if -40 <= pos - c <= 200]
-        if near and (best is None or min(near) < best[0]):
-            best = (min(near), d)
-    if best and best[1] >= today:
-        return best[1].isoformat()
-    return None
+    # Dates shortly after a cue; for a window like "19/10/2026 - 30/10/2026" the later date is the deadline.
+    near = [d for pos, d in dates if any(-40 <= pos - c <= 160 for c in cues)]
+    if not near:
+        return None
+    first_cue = min(c for c in cues if any(-40 <= pos - c <= 160 for pos, _ in dates))
+    window = [d for pos, d in dates if -40 <= pos - first_cue <= 160]
+    best = max(window)
+    return best.isoformat() if best >= today else None
 
 
 def level(text: str) -> str | None:
