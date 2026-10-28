@@ -1,0 +1,1870 @@
+
+<!DOCTYPE html>
+<html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+ <!--[if gt IE 8]>     <html class="no-js"> <![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <title>Research</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width">
+        <link rel="stylesheet" href="/AgendaUA/css/datepicker.css" />
+            <link rel="stylesheet" href="/AgendaUA/Content/bootstrap/bootstrap31510.css">
+            <link rel="stylesheet" href="/AgendaUA/Content/bootstrap/bootstrap-theme.min31510.css">
+            <link rel="stylesheet" href="/AgendaUA/css/agendaua31510.css" />
+        <link rel="stylesheet" href="/AgendaUA/Content/ua.css">
+        
+        <link rel="stylesheet" href="/AgendaUA/css/daterangepicker-bs3.css"/> 
+        
+        <link rel="stylesheet" href="/AgendaUA/Content/skins/square/blue.css"/>
+        <link rel="stylesheet" href="/AgendaUA/Content/bootstrapSwitch.css"/>
+        <link href="/AgendaUA/Content/css?v=BwpD0zwoveay6s5cEEJlSE8G_MRFCnAyLLIx5sthjis1" rel="stylesheet"/>
+
+
+        
+
+        <script src="/AgendaUA/bundles/jquery?v=0RVmF5hTiwhqWmr_Rw2vINX8uKxckcqjqKH3KOypuC41"></script>
+
+        <script src="/AgendaUA/bundles/jqueryui?v=Df8HmWXsMWP1eVkQEp_iCQrPGqPsR9B_iimD7wze2N01"></script>
+
+        
+
+        <link href="/AgendaUA/Content/themes/base/css?v=myqT7npwmF2ABsuSaHqt8SCvK8UFWpRv7T4M8r3kiK01" rel="stylesheet"/>
+
+
+        <script src="/AgendaUA/bundles/datatable?v=ryErd4g8AK4P2_Nro8gJsiZBLPAW2yaC6BgoGA5f_1o1"></script>
+
+        <script src="/AgendaUA/bundles/modernizr?v=wBEWDufH_8Md-Pbioxomt90vm6tJN2Pyy9u9zHtWsPo1"></script>
+
+        
+
+        
+        <script type="text/javascript" src="/AgendaUA/Scripts/jquery.unobtrusive-ajax.min.js"></script>
+        
+        
+
+        
+        
+        
+        
+        
+    </head>
+    <body>
+        <a id="dalt"></a>
+        <div class="visible-print-block">
+            <img src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/logo-ua-per-a-imprimir.jpg" alt="...">        
+        </div>
+        <div class="clearfix visible-print-block" style="margin-bottom:20px"></div>
+
+        <div class="navbar navbar-default  navbar-fixed-top">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="/AgendaUA/">Calendar of Events</a>
+                </div>
+                
+
+                <div class="navbar-collapse collapse">
+                   
+                        <form class="navbar-form navbar-right">
+                            <input class="form-control" type="text" id="termino-buscar" name="terminoBusqueda" placeholder="Buscar">
+                            <input type="hidden" id="agenda" name="agenda" value="31510"/>
+                            <input type="hidden" id="fechasBuscador" name="rangoFechas" value=""/>
+                            <input type="hidden" id="enLaUaBuscar" name="enLaUa" value="True" /> 
+                            <input type="hidden" id="creditsBuscar" name="credits" value="False" />
+                        </form>
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                            <li id="botoLlistatMenu"><a title="Generate list in PDF" href="/AgendaUA/Home/Exportar?modo=PDF&amp;agenda=31510&amp;enLaUa=True&amp;credits=False"><span class="glyphicon glyphicon-list-alt"></span> List</a></li>
+                            <li id="botoSuggerirMenu"><a href="/AgendaUA/Sugerir/Crear">Suggest</a></li>
+                            <li class="dropdown">
+                                <a class="dropdown-toggle" data-toggle="dropdown" href="#">Language<b class="caret"></b></a>
+                                <ul class="dropdown-menu pull-left">
+                                    <li><a href="/AgendaUA/es">Espa&#241;ol</a></li>
+                                    <li><a href="/AgendaUA/ca">Valenci&#224;</a></li>
+                                    <li><a href="/AgendaUA/en">English</a> </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    
+                    
+                </div><!--/.nav-collapse -->
+            </div>
+        </div>
+
+        
+
+        <div class="container">
+        
+            <h1>Research</h1>
+            
+            
+
+
+<ul class="breadcrumb"><li><span class='glyphicon glyphicon-home'></span>&nbsp;<a class="enlaceHome hidden-print" href="/AgendaUA/Investigacio">Home</a><a class="visible-print-inline">Home</a><span class="divider"><i class="icon-chevron-right"></i></span></li></ul>
+
+
+
+
+
+
+
+
+<div class="flotante">
+    <a href="#dalt" class="btn btn-info" title="Tornar dalt">
+        <span class="glyphicon glyphicon-chevron-up" aria-hidden="true"></span>
+    </a>
+</div>
+
+
+<div class="row"> 
+
+    <!-- Columna de la izquierda, con el contenido -->
+    <div id="columnaIzquierda" class="col-md-9" >
+        
+        <div class="row hidden-print" style="margin-bottom: 5px;">
+
+            <!-- Calendario de consulta -->
+            <div class="col-md-6">
+                <form class="form-horizontal" style="padding-right: 15px; padding-bottom: 10px;" id="formCalendari">
+                    <input type="hidden"  name="enLaUa" id="enLaUa" value="True"/>
+                    <input type="hidden"  name="credits" id="credits" value="False"/>
+                    <input type="hidden"  name="terminoBusqueda" id="terminoBusqueda"/>
+                    <input type="hidden"  name="agenda" id="agenda" value="31510"/>
+                    <input type="hidden"  name="rangoFechas" id="rangoFechas" value=""/>
+                            
+                    <div id="calendari" class="form-control" style="background: #eee; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                        <i class="glyphicon glyphicon-calendar" style="margin-right: 10px;"></i>
+                        <span></span> <b class="caret pull-right" style="margin-top: 10px;"></b>
+                    </div>      
+                            
+                    <!--/div>
+                    </div-->
+                </form>
+            </div>
+
+            <div class="col-md-6">
+                
+                
+                
+            
+                <label for="enLaUa" title="Show only UA activities">Only UA</label>
+                <span  title="Show only UA activities"><div class='make-switch' data-on-label='SI' data-off-label='NO'><input checked='checked' data-val='true' data-val-required='The Boolean field is required.' id='enLaUa' name='enLaUa' type='checkbox' value='true' /><input name='enLaUa' type='hidden' value='false' /></div></span>
+                <label for="credits" title="Show only activities with credits">Credits</label>
+                <span title="Show only activities with credits"><div class='make-switch' data-on-label='SI' data-off-label='NO'><input data-val='true' data-val-required='The Boolean field is required.' id='credits' name='credits' type='checkbox' value='true' /><input name='credits' type='hidden' value='false' /></div></span>
+            </div>
+    
+        </div>
+        
+        
+        <div class="row hidden-print">
+            <div class ="col-md-12">
+                <!--  Llista de tipus d'activitat arrel   -->
+                <div id="tiposDeActividad" class="well"> 
+                    <ul>
+                                                    <li><div class="dropdown">
+                                <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#listaDeActividades&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=7171&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=7171&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">COMPETITIONS, CONTESTS...</a>
+                                
+                                <a class="dropdown-toggle" title="Deploy subtypes" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span style="cursor:pointer;" class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>&nbsp;
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                            <li role="presentation">
+                                                 <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#7173&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=7171&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=7171&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">AWARDS</a>
+                                                
+                                            </li>
+                                    </ul>
+                                <span class="badge" style="background-color:#CCCCCC;">8</span></div></li>
+                            <li><div class="dropdown">
+                                <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#listaDeActividades&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=5871&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=5871&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">CONFERENCES, WORKSHOPS, EXHIBITION HALLS AND FAIRS</a>
+                                
+                                <a class="dropdown-toggle" title="Deploy subtypes" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span style="cursor:pointer;" class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>&nbsp;
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                            <li role="presentation">
+                                                 <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#15&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=5871&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=5871&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">CONFERENCES</a>
+                                                
+                                            </li>
+                                            <li role="presentation">
+                                                 <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#29&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=5871&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=5871&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">EXHIBITION HALLS AND FAIRS</a>
+                                                
+                                            </li>
+                                            <li role="presentation">
+                                                 <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#4&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=5871&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=5871&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">MEETINGS</a>
+                                                
+                                            </li>
+                                            <li role="presentation">
+                                                 <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#7708&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=5871&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=5871&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">SYMPOSIUMS</a>
+                                                
+                                            </li>
+                                    </ul>
+                                <span class="badge" style="background-color:#CCCCCC;">11</span></div></li>
+                            <li><div class="dropdown">
+                                <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#listaDeActividades&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=8868&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=8868&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">GRANTS AND FINANCIAL ASSISTANCE</a>
+                                
+                                <a class="dropdown-toggle" title="Deploy subtypes" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span style="cursor:pointer;" class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>&nbsp;
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                            <li role="presentation">
+                                                 <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#34499&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=8868&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=8868&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">MOBILITY AID
+MOBILITY AID</a>
+                                                
+                                            </li>
+                                            <li role="presentation">
+                                                 <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#32791&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=8868&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=8868&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">PLACES FOR PERSONAL SUPPORT RESEARCH PROJECTS</a>
+                                                
+                                            </li>
+                                    </ul>
+                                <span class="badge" style="background-color:#CCCCCC;">8</span></div></li>
+                            <li><div class="dropdown">
+                                <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#listaDeActividades&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=11142&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=11142&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">OPEN COMPETITIONS AND SELECTION PROCESSES</a>
+                                
+                                <a class="dropdown-toggle" title="Deploy subtypes" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span style="cursor:pointer;" class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>&nbsp;
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                            <li role="presentation">
+                                                 <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#12389&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=11142&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=11142&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">ACADEMIC AND RESEARCH STAFF VACANCIES</a>
+                                                
+                                            </li>
+                                    </ul>
+                                <span class="badge" style="background-color:#CCCCCC;">3</span></div></li>
+                            <li><div class="dropdown">
+                                <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#listaDeActividades&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=5869&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=5869&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">THIRD-CYCLE STUDY PROGRAMMES</a>
+                                
+                                <a class="dropdown-toggle" title="Deploy subtypes" id="dropdownMenu1" data-toggle="dropdown" aria-expanded="true"><span style="cursor:pointer;" class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a>&nbsp;
+                                    <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+                                            <li role="presentation">
+                                                 <a data-ajax="true" data-ajax-loading="#avisocargando" data-ajax-mode="replace" data-ajax-success="$.smoothScroll({scrollTarget: &#39;#29713&#39;, speed:400, offset:-40});" data-ajax-update="#listaDeActividades" data-ajax-url="/AgendaUA/Home/Listado?tipoActividad=5869&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0" href="/AgendaUA/Home/Listado?tipoActividad=5869&amp;agenda=31510&amp;enLaUa=True&amp;credits=False&amp;materia=0">THESIS DEFENSE</a>
+                                                
+                                            </li>
+                                    </ul>
+                                <span class="badge" style="background-color:#CCCCCC;">10</span></div></li>
+                    </ul>
+                </div>    
+            </div>
+        </div>
+        
+        <div class="carregant" id="avisocargando">
+            <img src="/AgendaUA/img/ajax-loader.gif" />
+            Loading...
+        </div>
+
+        <div class="row">
+            <div class ="col-md-12">
+                <!--      Llista d'activitats        -->        
+                <div id="listaDeActividades">
+                    
+
+
+
+            <a id="7171"></a>
+            <div class="titolTipusActivitatRaiz">COMPETITIONS, CONTESTS...
+                
+            </div>
+            <a id="7173"></a>
+            <div class="titolTipusActivitat">AWARDS
+                <a class="icon-align-right hidden-print" href="/AgendaUA/Home/Feed?agenda=31510&amp;tipoActividad=7173">
+                    <img src="/AgendaUA/img/rss-grey.png" alt="Subscriure's" title="Subscriure's"/></a>
+            </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218722?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218722?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0"> I Edici&#243;n concurso de piezas audiovisuales para redes sociales sobre violencias machistas- &quot;20 segundos para cambiar la mirada&quot;, de la Universidad de Alicante</a>
+                    <a class="visible-print-block"> I Edici&#243;n concurso de piezas audiovisuales para redes sociales sobre violencias machistas- &quot;20 segundos para cambiar la mirada&quot;, de la Universidad de Alicante</a>
+                </h4>
+                
+                
+Deadline : From 14, October 2026 to 30, October 2026            
+                
+                
+                        <br />
+Publication : BOUA 29/09/2026            
+                        <br />
+Campus San Vicente del Raspeig.                        <span></span>
+Alacant            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218894?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218894?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Convocatoria para la selecci&#243;n de los institutos de secundaria de la provincia de Alicante participantes en el X Certamen Escolar de Teatro Grecolatino de la Universidad de Alicante</a>
+                    <a class="visible-print-block">Convocatoria para la selecci&#243;n de los institutos de secundaria de la provincia de Alicante participantes en el X Certamen Escolar de Teatro Grecolatino de la Universidad de Alicante</a>
+                </h4>
+                
+                
+Deadline : From 19, October 2026 to 20, December 2026            
+                
+                
+                        <br />
+Publication : BOUA 16/10/2026            
+                        <br />
+Campus San Vicente del Raspeig.                        <span></span>
+Alacant            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218655?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218655?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Premio &quot;Josefina Pascual Devesa&quot; para reconocer y promover la difusi&#243;n de las mejores tesis doctorales defendidas en la Universidad de Alicante, que incorporen la perspectiva de g&#233;nero</a>
+                    <a class="visible-print-block">Premio &quot;Josefina Pascual Devesa&quot; para reconocer y promover la difusi&#243;n de las mejores tesis doctorales defendidas en la Universidad de Alicante, que incorporen la perspectiva de g&#233;nero</a>
+                </h4>
+                
+                
+Deadline : From 13, October 2026 to 2, November 2026            
+                
+                
+                        <br />
+Publication : BOUA 24/09/2026            
+                        <br />
+Campus San Vicente del Raspeig.                        <span></span>
+Alacant            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218935?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218935?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Premios a la excelencia acad&#233;mica de la c&#225;tedra Germ&#225;n Bern&#225;cer (novena edici&#243;n)</a>
+                    <a class="visible-print-block">Premios a la excelencia acad&#233;mica de la c&#225;tedra Germ&#225;n Bern&#225;cer (novena edici&#243;n)</a>
+                </h4>
+                
+                
+Deadline : From 9, November 2026 to 16, November 2026            
+                
+                
+                        <br />
+Publication : BOUA 21/10/2026            
+                        <br />
+Campus San Vicente del Raspeig.                        <span></span>
+Alacant            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218766?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218766?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Premios ASCER-UA T22 Cer&#225;mica, nZEB, Passivhaus e industrializaci&#243;n - 2026 Universidad de Alicante</a>
+                    <a class="visible-print-block">Premios ASCER-UA T22 Cer&#225;mica, nZEB, Passivhaus e industrializaci&#243;n - 2026 Universidad de Alicante</a>
+                </h4>
+                
+                
+Deadline : From 15, October 2026 to 28, October 2026            
+                
+                
+                        <br />
+Publication : BOUA 06/10/2026            
+                        <br />
+Campus San Vicente del Raspeig.                        <span></span>
+Alacant            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218326?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218326?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">XIII Convocatoria de la Cartera Estrat&#233;gica de Proyectos TI de la Universidad de Alicante</a>
+                    <a class="visible-print-block">XIII Convocatoria de la Cartera Estrat&#233;gica de Proyectos TI de la Universidad de Alicante</a>
+                </h4>
+                
+                
+Deadline : From 16, July 2026 to 3, November 2026            
+                
+                
+                        <br />
+Publication : BOUA 15/07/2026            
+                        <br />
+Campus San Vicente del Raspeig.                        <span></span>
+Alacant            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218817?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218817?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Premios trabajos fin de grado del Departamento de Did&#225;ctica General y Did&#225;cticas Espec&#237;ficas de la Universidad de Alicante</a>
+                    <a class="visible-print-block">Premios trabajos fin de grado del Departamento de Did&#225;ctica General y Did&#225;cticas Espec&#237;ficas de la Universidad de Alicante</a>
+                </h4>
+                
+                
+Deadline : From 2, November 2026 to 13, November 2026            
+                
+                
+                        <br />
+Publication : BOUA 13/10/2026            
+                        <br />
+Campus San Vicente del Raspeig.                        <span></span>
+Alacant            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218819?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218819?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Premios con motivo de la realizaci&#243;n de la V Bienal de artes visuales pluri-identitats 2027. Curso: 2026-2027, de la Universidad de Alicante</a>
+                    <a class="visible-print-block">Premios con motivo de la realizaci&#243;n de la V Bienal de artes visuales pluri-identitats 2027. Curso: 2026-2027, de la Universidad de Alicante</a>
+                </h4>
+                
+                
+Deadline : From 2, November 2026 to 8, January 2027            
+                
+                
+                        <br />
+Publication : BOUA 13/10/2026            
+                        <br />
+Campus San Vicente del Raspeig.                        <span></span>
+Alacant            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+            <a id="5871"></a>
+            <div class="titolTipusActivitatRaiz">CONFERENCES, WORKSHOPS, EXHIBITION HALLS AND FAIRS
+                
+            </div>
+            <a id="15"></a>
+            <div class="titolTipusActivitat">CONFERENCES
+                <a class="icon-align-right hidden-print" href="/AgendaUA/Home/Feed?agenda=31510&amp;tipoActividad=15">
+                    <img src="/AgendaUA/img/rss-grey.png" alt="Subscriure's" title="Subscriure's"/></a>
+            </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/219025?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/la-investigacion-en-danza_medi_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/la-investigacion-en-danza_medi_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/219025?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">IX Congreso nacional y vi internacional “La investigaci&#243;n en danza”. </a>
+                    <a class="visible-print-block">IX Congreso nacional y vi internacional “La investigaci&#243;n en danza”. </a>
+                </h4>
+                
+                
+            
+                
+Dates : 06 and 07 November 2026                
+                        <br />
+Timetable : 09:00 horas            
+                        <br />
+On line.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+            <a id="29"></a>
+            <div class="titolTipusActivitat">EXHIBITION HALLS AND FAIRS
+                <a class="icon-align-right hidden-print" href="/AgendaUA/Home/Feed?agenda=31510&amp;tipoActividad=29">
+                    <img src="/AgendaUA/img/rss-grey.png" alt="Subscriure's" title="Subscriure's"/></a>
+            </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218696?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/Cartel Cocentaina 2026_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/Cartel Cocentaina 2026_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218696?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Fira de Tots Sants 2026</a>
+                    <a class="visible-print-block">Fira de Tots Sants 2026</a>
+                </h4>
+                
+                
+            
+                
+Dates : 30 de octubre al 1 de noviembre de 2026                
+            
+                        <br />
+Pla&#231;a el Pla.                        <span></span>
+Cocentaina (Alicante)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218697?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/centro 14_xicoteta.jpeg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/centro 14_xicoteta.jpeg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218697?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Jornadas formativo-laborales Ori&#233;ntate Alicante</a>
+                    <a class="visible-print-block">Jornadas formativo-laborales Ori&#233;ntate Alicante</a>
+                </h4>
+                
+                
+            
+                
+Dates : 4 al 27 de noviembre de 2026                
+                        <br />
+Timetable : 9 a 14 h.            
+                        <br />
+Centro 14 (C/ Labradores, 14).                        <span></span>
+Alicante            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+            <a id="4"></a>
+            <div class="titolTipusActivitat">MEETINGS
+                <a class="icon-align-right hidden-print" href="/AgendaUA/Home/Feed?agenda=31510&amp;tipoActividad=4">
+                    <img src="/AgendaUA/img/rss-grey.png" alt="Subscriure's" title="Subscriure's"/></a>
+            </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/219029?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/assagador-UA26-cast_page-0001_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/assagador-UA26-cast_page-0001_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/219029?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Jornadas Assagador de la UA 2026: Mujeres, tradici&#243;n y ciencia en el A&#241;o Internacional de los Pastizales y los Pastores</a>
+                    <a class="visible-print-block">Jornadas Assagador de la UA 2026: Mujeres, tradici&#243;n y ciencia en el A&#241;o Internacional de los Pastizales y los Pastores</a>
+                </h4>
+                
+                
+            
+                
+Dates : 27, 28 and 29 October 2026                
+            
+                        <br />
+ Sede universitaria y Sal&#243;n de Grados Rector Ram&#243;n Mart&#237;n Mateo.                        <span></span>
+Alacant            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218967?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/emprende_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/emprende_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218967?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Terreta Emprende. Emprender no es solo empezar</a>
+                    <a class="visible-print-block">Terreta Emprende. Emprender no es solo empezar</a>
+                </h4>
+                
+                
+            
+                
+Dates : 28 October 2026                
+                        <br />
+Timetable : 18:00 horas            
+                        <br />
+Parque Cient&#237;fico Tecnol&#243;gico.                        <span></span>
+Sant Vicent del Raspeig (Alacant)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/219018?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/escuela-lacaniana-de-psicoanalisis_medi(2)_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/escuela-lacaniana-de-psicoanalisis_medi(2)_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/219018?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">XXV Jornadas ELP “Cuerpos adorados”</a>
+                    <a class="visible-print-block">XXV Jornadas ELP “Cuerpos adorados”</a>
+                </h4>
+                
+                
+            
+                
+Dates : 04 November 2026                
+                        <br />
+Timetable : 20:15 horas            
+                        <br />
+Sede Universitaria de Alicante C/ Ram&#243;n y Cajal, 4.                        <span></span>
+Alacant            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218991?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/1533472_WebinarioCASCV_xicoteta.png" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/1533472_WebinarioCASCV_xicoteta.png"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218991?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Webinario &quot;Nuevas T&#233;cnicas Gen&#243;micas en agricultura: soluciones tecnol&#243;gicas en el marco regulatorio europeo&quot;</a>
+                    <a class="visible-print-block">Webinario &quot;Nuevas T&#233;cnicas Gen&#243;micas en agricultura: soluciones tecnol&#243;gicas en el marco regulatorio europeo&quot;</a>
+                </h4>
+                
+                
+            
+                
+Dates : 05 de noviembre de 2026                
+                        <br />
+Timetable : 11:00 horas            
+                        <br />
+On-line.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218980?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/jornadas-logo_xicoteta.png" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/jornadas-logo_xicoteta.png"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218980?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">XLI Jornadas de Alicante sobre Econom&#237;a Espa&#241;ola</a>
+                    <a class="visible-print-block">XLI Jornadas de Alicante sobre Econom&#237;a Espa&#241;ola</a>
+                </h4>
+                
+                
+            
+                
+Dates : 5 and 6 November 2026                
+                        <br />
+Timetable : 16:30 horas            
+                        <br />
+Sal&#243;n de actos Aulario II.                        <span></span>
+Sant Vicent del Raspeig (Alacant)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218813?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/SAVE THE DATE_xicoteta.png" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/SAVE THE DATE_xicoteta.png"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218813?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Jornada Espacios test agrarios: articulando herramientas para el relevo agrario en red</a>
+                    <a class="visible-print-block">Jornada Espacios test agrarios: articulando herramientas para el relevo agrario en red</a>
+                </h4>
+                
+                
+Application period : From 19, October 2026            
+                
+                        <br />
+Dates : 25 de noviembre de 2026                
+                        <br />
+Timetable : 10 a 14 h.            
+                        <br />
+Ministerio de Agricultura, Pesca y Alimentaci&#243;n.                        <span></span>
+Madrid            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+            <a id="7708"></a>
+            <div class="titolTipusActivitat">SYMPOSIUMS
+                <a class="icon-align-right hidden-print" href="/AgendaUA/Home/Feed?agenda=31510&amp;tipoActividad=7708">
+                    <img src="/AgendaUA/img/rss-grey.png" alt="Subscriure's" title="Subscriure's"/></a>
+            </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/219024?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/sasha-engelmann_medi_xicoteta.png" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/sasha-engelmann_medi_xicoteta.png"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/219024?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Cultural geography of heat. Arts of environmental sensing</a>
+                    <a class="visible-print-block">Cultural geography of heat. Arts of environmental sensing</a>
+                </h4>
+                
+                
+            
+                
+Dates : 05 November 2026                
+                        <br />
+Timetable : 13:00 horas            
+                        <br />
+On line.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/219021?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/asociacion-entendemos-de-alicante_medi_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/asociacion-entendemos-de-alicante_medi_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/219021?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Entrevista sobre “Transexualidad y sinhogarismo” </a>
+                    <a class="visible-print-block">Entrevista sobre “Transexualidad y sinhogarismo” </a>
+                </h4>
+                
+                
+            
+                
+Dates : 05 November 2026                
+                        <br />
+Timetable : 19:15 horas            
+                        <br />
+Sede Universitaria de Alicante C/ Ram&#243;n y Cajal, 4.                        <span></span>
+Alacant            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+            <a id="8868"></a>
+            <div class="titolTipusActivitatRaiz">GRANTS AND FINANCIAL ASSISTANCE
+                
+            </div>
+            <a id="34499"></a>
+            <div class="titolTipusActivitat">MOBILITY AID
+MOBILITY AID
+                <a class="icon-align-right hidden-print" href="/AgendaUA/Home/Feed?agenda=31510&amp;tipoActividad=34499">
+                    <img src="/AgendaUA/img/rss-grey.png" alt="Subscriure's" title="Subscriure's"/></a>
+            </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218821?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218821?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Ayudas del Vicerrectorado de Estudios y Calidad para favorecer la movilidad de profesorado y profesionales externos en ense&#241;anzas universitarias oficiales de M&#225;ster para el curso 2026-27</a>
+                    <a class="visible-print-block">Ayudas del Vicerrectorado de Estudios y Calidad para favorecer la movilidad de profesorado y profesionales externos en ense&#241;anzas universitarias oficiales de M&#225;ster para el curso 2026-27</a>
+                </h4>
+                
+                
+Application period : From 14, October 2026 to 10, November 2026            
+                
+                
+                        <br />
+Publication : BOUA 13/10/2026            
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+            <a id="32791"></a>
+            <div class="titolTipusActivitat">PLACES FOR PERSONAL SUPPORT RESEARCH PROJECTS
+                <a class="icon-align-right hidden-print" href="/AgendaUA/Home/Feed?agenda=31510&amp;tipoActividad=32791">
+                    <img src="/AgendaUA/img/rss-grey.png" alt="Subscriure's" title="Subscriure's"/></a>
+            </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218864?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218864?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Proceso selectivo para la contrataci&#243;n indefinida de personal de investigaci&#243;n de la categor&#237;a de personal investigador colaborador para colaborar con la l&#237;nea de investigaci&#243;n &quot;Reconocimiento &#243;ptico de m&#250;sica&quot;, I-PI 82-26</a>
+                    <a class="visible-print-block">Proceso selectivo para la contrataci&#243;n indefinida de personal de investigaci&#243;n de la categor&#237;a de personal investigador colaborador para colaborar con la l&#237;nea de investigaci&#243;n &quot;Reconocimiento &#243;ptico de m&#250;sica&quot;, I-PI 82-26</a>
+                </h4>
+                
+                
+Application period : From 16, October 2026 to 29, October 2026            
+                
+                
+                        <br />
+Publication : DOGV 15/10/2026            
+                        <br />
+Universidad de Alicante.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218929?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218929?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Proceso selectivo para la contrataci&#243;n indefinida de personal de investigaci&#243;n de la categor&#237;a de personal tecn&#243;logo superior para colaborar con la l&#237;nea de investigaci&#243;n &quot;Ejercicio f&#237;sico para poblaciones especiales&quot;, I-PTGAI 50-26</a>
+                    <a class="visible-print-block">Proceso selectivo para la contrataci&#243;n indefinida de personal de investigaci&#243;n de la categor&#237;a de personal tecn&#243;logo superior para colaborar con la l&#237;nea de investigaci&#243;n &quot;Ejercicio f&#237;sico para poblaciones especiales&quot;, I-PTGAI 50-26</a>
+                </h4>
+                
+                
+Application period : From 22, October 2026 to 4, November 2026            
+                
+                
+                        <br />
+Publication : DOGV 21/10/2026            
+                        <br />
+Universidad de Alicante.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218989?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218989?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Proceso selectivo para la contrataci&#243;n temporal de personal de investigaci&#243;n de la categor&#237;a de personal investigador en formaci&#243;n para colaborar en el proyecto &quot;Rational design of hybrid materials for lighting and photocatalysis&quot;, I-PI 83-26</a>
+                    <a class="visible-print-block">Proceso selectivo para la contrataci&#243;n temporal de personal de investigaci&#243;n de la categor&#237;a de personal investigador en formaci&#243;n para colaborar en el proyecto &quot;Rational design of hybrid materials for lighting and photocatalysis&quot;, I-PI 83-26</a>
+                </h4>
+                
+                
+Application period : From 27, October 2026 to 9, November 2026            
+                
+                
+                        <br />
+Publication : DOGV 26/10/2026            
+                        <br />
+Universidad de Alicante.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/219006?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/219006?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Proceso selectivo de preselecci&#243;n para la contrataci&#243;n indefinida personal tecn&#243;logo superior para colaborar con la l&#237;nea de investigaci&#243;n &quot;Excavaciones arqueol&#243;gicas submarinas en El Portitxol (J&#225;vea)&quot;, I-PTGAI 51-26</a>
+                    <a class="visible-print-block">Proceso selectivo de preselecci&#243;n para la contrataci&#243;n indefinida personal tecn&#243;logo superior para colaborar con la l&#237;nea de investigaci&#243;n &quot;Excavaciones arqueol&#243;gicas submarinas en El Portitxol (J&#225;vea)&quot;, I-PTGAI 51-26</a>
+                </h4>
+                
+                
+Application period : From 28, October 2026 to 10, November 2026            
+                
+                
+                        <br />
+Publication : DOGV 27/10/2026            
+                        <br />
+Universidad de Alicante.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/219005?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/219005?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Proceso selectivo para la contrataci&#243;n indefinida de personal de investigaci&#243;n de la categor&#237;a de personal investigador colaborador para colaborar con la l&#237;nea de investigaci&#243;n &quot;Investigaci&#243;n y aplicaciones de tecnolog&#237;as del lenguaje humano&quot;, I-PI 80-26</a>
+                    <a class="visible-print-block">Proceso selectivo para la contrataci&#243;n indefinida de personal de investigaci&#243;n de la categor&#237;a de personal investigador colaborador para colaborar con la l&#237;nea de investigaci&#243;n &quot;Investigaci&#243;n y aplicaciones de tecnolog&#237;as del lenguaje humano&quot;, I-PI 80-26</a>
+                </h4>
+                
+                
+Application period : From 28, October 2026 to 10, November 2026            
+                
+                
+                        <br />
+Publication : DOGV 27/10/2026            
+                        <br />
+Universidad de Alicante.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/219042?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/219042?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Proceso selectivo para la contrataci&#243;n indefinida de personal de investigaci&#243;n de la categor&#237;a de personal investigador colaborador para ayudar con la l&#237;nea de investigaci&#243;n &quot;Transmisi&#243;n de textos medievales&quot;, I-PI 79-26</a>
+                    <a class="visible-print-block">Proceso selectivo para la contrataci&#243;n indefinida de personal de investigaci&#243;n de la categor&#237;a de personal investigador colaborador para ayudar con la l&#237;nea de investigaci&#243;n &quot;Transmisi&#243;n de textos medievales&quot;, I-PI 79-26</a>
+                </h4>
+                
+                
+Application period : From 29, October 2026 to 11, November 2026            
+                
+                
+                        <br />
+Publication : DOGV 28/10/2026            
+                        <br />
+Universidad de Alicante.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/219041?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/219041?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Proceso selectivo para la contrataci&#243;n indefinida de personal de investigaci&#243;n de la categor&#237;a de personal tecn&#243;logo superior para colaborar con la l&#237;nea de investigaci&#243;n &quot;Dise&#241;o de materiales porosos para adsorci&#243;n y cat&#225;lisis&quot;, I-PTGAI 54-26</a>
+                    <a class="visible-print-block">Proceso selectivo para la contrataci&#243;n indefinida de personal de investigaci&#243;n de la categor&#237;a de personal tecn&#243;logo superior para colaborar con la l&#237;nea de investigaci&#243;n &quot;Dise&#241;o de materiales porosos para adsorci&#243;n y cat&#225;lisis&quot;, I-PTGAI 54-26</a>
+                </h4>
+                
+                
+Application period : From 29, October 2026 to 11, November 2026            
+                
+                
+                        <br />
+Publication : DOGV 28/10/2026            
+                        <br />
+Universidad de Alicante.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+            <a id="11142"></a>
+            <div class="titolTipusActivitatRaiz">OPEN COMPETITIONS AND SELECTION PROCESSES
+                
+            </div>
+            <a id="12389"></a>
+            <div class="titolTipusActivitat">ACADEMIC AND RESEARCH STAFF VACANCIES
+                <a class="icon-align-right hidden-print" href="/AgendaUA/Home/Feed?agenda=31510&amp;tipoActividad=12389">
+                    <img src="/AgendaUA/img/rss-grey.png" alt="Subscriure's" title="Subscriure's"/></a>
+            </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218871?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218871?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Concurso de acceso a plazas de cuerpos docentes universitarios de la Universidad de Alicante</a>
+                    <a class="visible-print-block">Concurso de acceso a plazas de cuerpos docentes universitarios de la Universidad de Alicante</a>
+                </h4>
+                
+                
+Application deadline : From 19, October 2026 to 30, October 2026            
+                
+                
+                        <br />
+Publication : BOE 16/10/2026            
+                        <br />
+Universidad de Alicante.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218870?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218870?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Concurso de acceso a plazas de cuerpos docentes universitarios de la Universidad de Alicante (promoci&#243;n interna)</a>
+                    <a class="visible-print-block">Concurso de acceso a plazas de cuerpos docentes universitarios de la Universidad de Alicante (promoci&#243;n interna)</a>
+                </h4>
+                
+                
+Application deadline : From 19, October 2026 to 30, October 2026            
+                
+                
+                        <br />
+Publication : BOE 16/10/2026            
+                        <br />
+Universidad de Alicante.                        <span></span>
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218888?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+                <a class="pull-left visible-print-block">
+                    <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/imatge_per_defecte_xicoteta.png" alt="Universitat d'Alacant">
+                </a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218888?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Concurso plazas de personal docente e investigador en r&#233;gimen de contrataci&#243;n laboral de la Universidad de Alicante</a>
+                    <a class="visible-print-block">Concurso plazas de personal docente e investigador en r&#233;gimen de contrataci&#243;n laboral de la Universidad de Alicante</a>
+                </h4>
+                
+                
+Application deadline : From 20, October 2026 to 2, November 2026            
+                
+                
+                        <br />
+Publication : DOGV 19/10/2026            
+            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+            <a id="5869"></a>
+            <div class="titolTipusActivitatRaiz">THIRD-CYCLE STUDY PROGRAMMES
+                
+            </div>
+            <a id="29713"></a>
+            <div class="titolTipusActivitat">THESIS DEFENSE
+                <a class="icon-align-right hidden-print" href="/AgendaUA/Home/Feed?agenda=31510&amp;tipoActividad=29713">
+                    <img src="/AgendaUA/img/rss-grey.png" alt="Subscriure's" title="Subscriure's"/></a>
+            </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218834?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218834?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Defensa de la Tesis Doctoral &quot;Producci&#243;n de PHBV utilizando residuos de la industria agroalimentaria mediante Haloferax mediterranei&quot;, realizada por Salvador Garc&#237;a Chumillas</a>
+                    <a class="visible-print-block">Defensa de la Tesis Doctoral &quot;Producci&#243;n de PHBV utilizando residuos de la industria agroalimentaria mediante Haloferax mediterranei&quot;, realizada por Salvador Garc&#237;a Chumillas</a>
+                </h4>
+                
+                
+            
+                
+Dates : 28 de octubre de 2026                
+                        <br />
+Timetable : 11:00 h            
+                        <br />
+Sala polivalente del Dep. de Bioqu&#237;mica, Biolog&#237;a Molecular, Edafolog&#237;a....                        <span></span>
+San Vicente del Raspeig (Alicante)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218757?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218757?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Defensa de la Tesis Doctoral &quot;Acridine Photocatalysis as a Platform for Sustainable Visible-Light-Driven Organic Transformations&quot;, realizada por Beatriz Quevedo Flores </a>
+                    <a class="visible-print-block">Defensa de la Tesis Doctoral &quot;Acridine Photocatalysis as a Platform for Sustainable Visible-Light-Driven Organic Transformations&quot;, realizada por Beatriz Quevedo Flores </a>
+                </h4>
+                
+                
+            
+                
+Dates : 30 de octubre de 2026                
+                        <br />
+Timetable : 11:00 horas            
+                        <br />
+Sal&#243;n de actos del edificio de Nuevos Institutos (Institutos II).                        <span></span>
+San Vicente del Raspeig (Alicante)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218794?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218794?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Defensa de la Tesis Doctoral &quot;Between Promotion and Commemoration: a Corpus-Assisted Critical Genre Analysis of Dark Tourism Promotional Discourse at First and Second World War Heritage Sites&quot;, realizada por Mar&#237;a Amparo Ales&#243;n Carbonell</a>
+                    <a class="visible-print-block">Defensa de la Tesis Doctoral &quot;Between Promotion and Commemoration: a Corpus-Assisted Critical Genre Analysis of Dark Tourism Promotional Discourse at First and Second World War Heritage Sites&quot;, realizada por Mar&#237;a Amparo Ales&#243;n Carbonell</a>
+                </h4>
+                
+                
+            
+                
+Dates : 2 de noviembre de 2026                
+                        <br />
+Timetable : 09:30 h            
+                        <br />
+Sal&#243;n de Grados de la Facultad de Filosof&#237;a y Letras.                        <span></span>
+San Vicente del Raspeig (Alicante)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218887?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218887?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Defensa de la Tesis Doctoral &quot;Efecto de los ritmos circadianos a nivel de la morfolog&#237;a corneal y esclero-conjuntival en sujetos sanos y con c&#243;rnea ect&#225;sica&quot;, realizada por Laura Barber&#225;n Bernardos</a>
+                    <a class="visible-print-block">Defensa de la Tesis Doctoral &quot;Efecto de los ritmos circadianos a nivel de la morfolog&#237;a corneal y esclero-conjuntival en sujetos sanos y con c&#243;rnea ect&#225;sica&quot;, realizada por Laura Barber&#225;n Bernardos</a>
+                </h4>
+                
+                
+            
+                
+Dates : 2 de noviembre de 2026                
+                        <br />
+Timetable : 11:00 h            
+                        <br />
+Sal&#243;n de Grados Alfredo Orts.                        <span></span>
+San Vicente del Raspeig (Alicante)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218822?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218822?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Defensa de la Tesis Doctoral &quot;From Interpretability Methods to Interpretable Models&quot;, realizada por Julien Louis Colin</a>
+                    <a class="visible-print-block">Defensa de la Tesis Doctoral &quot;From Interpretability Methods to Interpretable Models&quot;, realizada por Julien Louis Colin</a>
+                </h4>
+                
+                
+            
+                
+Dates : 6 de noviembre de 2026                
+                        <br />
+Timetable : 15:00 h            
+                        <br />
+Sal&#243;n de Actos EPS IV.                        <span></span>
+San Vicente del Raspeig (Alicante)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/219036?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/219036?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Defensa de la Tesis Doctoral &quot;La contribuci&#243;n municipal a la nueva gobernanza ambiental multinivel. Algunas claves para una reforma del r&#233;gimen local en Espa&#241;a&quot;, realizada por Sergio Agueitos Soriano</a>
+                    <a class="visible-print-block">Defensa de la Tesis Doctoral &quot;La contribuci&#243;n municipal a la nueva gobernanza ambiental multinivel. Algunas claves para una reforma del r&#233;gimen local en Espa&#241;a&quot;, realizada por Sergio Agueitos Soriano</a>
+                </h4>
+                
+                
+            
+                
+Dates : 6 de noviembre de 2026                
+                        <br />
+Timetable : 12:00 h            
+                        <br />
+Sala de Juntas de la Facultad de Derecho.                        <span></span>
+San Vicente del Raspeig (Alicante)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218985?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218985?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Defensa de la Tesis Doctoral &quot;Nanoparticle determination in environmental samples by means spICP-MS using microwave assited extraction treatments&quot;, realizada por Carlos G&#243;mez Pertusa</a>
+                    <a class="visible-print-block">Defensa de la Tesis Doctoral &quot;Nanoparticle determination in environmental samples by means spICP-MS using microwave assited extraction treatments&quot;, realizada por Carlos G&#243;mez Pertusa</a>
+                </h4>
+                
+                
+            
+                
+Dates : 6 de noviembre de 2026                
+                        <br />
+Timetable : 11:00 h            
+                        <br />
+Sal&#243;n de actos del edificio Institutos Universitarios II.                        <span></span>
+San Vicente del Raspeig (Alicante)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/219038?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/219038?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Defensa de la Tesis Doctoral &quot;La importancia de la participaci&#243;n ciudadana para la protecci&#243;n ambiental: el caso de Colombia&quot;, realizada por Juan Esteban Orjuela Gonz&#225;lez</a>
+                    <a class="visible-print-block">Defensa de la Tesis Doctoral &quot;La importancia de la participaci&#243;n ciudadana para la protecci&#243;n ambiental: el caso de Colombia&quot;, realizada por Juan Esteban Orjuela Gonz&#225;lez</a>
+                </h4>
+                
+                
+            
+                
+Dates : 10 de noviembre de 2026                
+                        <br />
+Timetable : 12:00 h            
+                        <br />
+Sala de Juicios de la Facultad de Derecho.                        <span></span>
+San Vicente del Raspeig (Alicante)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218869?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218869?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Defensa de la Tesis Doctoral &quot;Las mujeres en la ficci&#243;n televisiva espa&#241;ola de plataformas VOD (2016-2024): autor&#237;a, protagonismo y representaci&#243;n de g&#233;nero&quot;, realizada por Patricia Palomares S&#225;nchez</a>
+                    <a class="visible-print-block">Defensa de la Tesis Doctoral &quot;Las mujeres en la ficci&#243;n televisiva espa&#241;ola de plataformas VOD (2016-2024): autor&#237;a, protagonismo y representaci&#243;n de g&#233;nero&quot;, realizada por Patricia Palomares S&#225;nchez</a>
+                </h4>
+                
+                
+            
+                
+Dates : 12 de noviembre de 2026                
+                        <br />
+Timetable : 11:00 h            
+                        <br />
+Biblioteca de Sociolog&#237;a I.                        <span></span>
+San Vicente del Raspeig (Alicante)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    <div style="margin-bottom:10px; page-break-inside:avoid;" class="clearfix" >
+        
+        <div class="media">
+            
+                    <a class="pull-left hidden-print" href="/AgendaUA/Investigacio/V/218914?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg" alt="..."></a>
+                    <a class="pull-left visible-print-block">
+                        <img class="media-object" src="https://cvnet.cpd.ua.es/AgendaUA/agenda/imatges/eidua_xicoteta.jpg"></a>
+            
+            <div class="media-body">
+                
+                <h4 class="media-heading">
+                    <a class="hidden-print" title="Detalls de l'activitat" href="/AgendaUA/Investigacio/V/218914?terminoBusqueda=&amp;rangoFechas=&amp;enLaUa=True&amp;credits=False&amp;materia=0">Defensa de la Tesis Doctoral &quot;Proceso integrado de electrodi&#225;lisis-electroclorinaci&#243;n para el tratamiento de aguas residuales para uso agr&#237;cola y la protecci&#243;n del medio ambiente&quot;, realizada por Vicent Ayala Andreu</a>
+                    <a class="visible-print-block">Defensa de la Tesis Doctoral &quot;Proceso integrado de electrodi&#225;lisis-electroclorinaci&#243;n para el tratamiento de aguas residuales para uso agr&#237;cola y la protecci&#243;n del medio ambiente&quot;, realizada por Vicent Ayala Andreu</a>
+                </h4>
+                
+                
+            
+                
+Dates : 12 de noviembre de 2026                
+                        <br />
+Timetable : 11:00 h            
+                        <br />
+Sal&#243;n de actos del Edificio de Institutos de Investigaci&#243;n II.                        <span></span>
+San Vicente del Raspeig (Alicante)            </div>
+
+        </div>
+        
+        
+
+        
+        
+            
+    </div>
+    
+                
+                
+
+
+                </div > 
+            </div>
+        </div>
+        
+
+    </div><!-- columna Esquerra -->
+    
+    <!-- Columna de la dreta, calendaris -->
+    <div id="ColumnaDerecha" class="col-md-3 hidden-print">
+        <div id="dp1" data-date-format="dd-mm-yyyy" data-date=""></div>
+        <div id="dp2" data-date-format="dd-mm-yyyy"></div>
+        <div id="dp3" data-date-format="dd-mm-yyyy"></div>
+    </div>   
+
+</div> <!-- row -->
+
+
+<script type="text/javascript">
+    $(document).ready(function () {  
+
+        //Calendaris de la dreta
+        $('#dp1').datepicker({ language: 'en', weekStart: 1 });
+        $('#dp2').datepicker({ language: 'en', weekStart: 1, startDate: '01-11-2026' });
+        $('#dp3').datepicker({ language: 'en', weekStart: 1, startDate: '01-12-2026' });
+    
+        $('#dp1').datepicker()
+            .on('changeDate', function (ev) {
+                document.location = "/AgendaUA/?rangoFechas=" + formateaFechaCalendario(ev.date) + "&terminoBusqueda=&agenda=31510&enLaUa=True&credits=False"; 
+            });
+
+        $('#dp2').datepicker()
+            .on('changeDate', function (ev) {
+                document.location = "/AgendaUA/?rangoFechas=" + formateaFechaCalendario(ev.date) + "&terminoBusqueda=&agenda=31510&enLaUa=True&credits=False"; 
+            });
+
+        $('#dp3').datepicker()
+            .on('changeDate', function (ev) {
+                document.location = "/AgendaUA/?rangoFechas=" + formateaFechaCalendario(ev.date) + "&terminoBusqueda=&agenda=31510&enLaUa=True&credits=False"; 
+            });
+
+
+        $(".make-switch").on('switch-change', function (e, data) {
+                
+            var $el = $(data.el)
+                , value = data.value;
+            var nomControl = $el.closest("input").attr("name");
+
+            var url = '/AgendaUA/?' + nomControl + '=' + value;
+            url += '&agenda=31510';
+            url += '&terminoBusqueda=';
+            url += '&rangoFechas=';
+            url += nomControl == 'enLaUa' ? '&credits=False' : '&enLaUa=True';
+                
+            window.location.href = url;
+        });
+
+
+        var cb = function(start, end, label) {
+            $('#calendari span').html(start.format('DD/MM/YYYY') + ' to ' + end.format('DD/MM/YYYY'));
+            $('#rangoFechas').val($('#calendari span').html());
+            $('#formCalendari').submit();
+        };
+
+        
+        var opcionsCalendari = {
+            startDate: '28/10/2026',
+            endDate: '29/10/2026',
+            dateLimit: false,
+            showDropdowns: true,
+            showWeekNumbers: false,
+            timePicker: false,
+            timePickerIncrement: 1,
+            timePicker12Hour: true,
+            ranges: {
+                "Today": [moment(), moment()],
+                "Next 7 days": [new Date(), moment().add('days', 6)],
+                "Next 30 days": [new Date(), moment().add('days', 29)],
+                "This month": [moment().startOf('month'), moment().endOf('month')]
+            },
+            opens: 'right',
+            buttonClasses: ['btn btn-small'],
+            applyClass: 'btn-success',
+            cancelClass: ' btn-danger',
+            format: 'DD/MM/YYYY',
+            separator: ' to ',
+            locale: {
+                applyLabel: 'Ok',
+                cancelLabel: 'Close',
+                    clearLabel: 'Clear',
+                    fromLabel: 'From',
+                    toLabel: 'to',
+                    customRangeLabel: 'Custom',
+                    daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+                    monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'Setember', 'Octobre', 'November', 'Decembrer'],
+                    firstDay: 1
+               }
+           };
+
+        $('#calendari span').html('');
+
+        $('#calendari').daterangepicker(opcionsCalendari, cb);
+
+    });
+                   
+
+    function formateaFechaCalendario(laFecha) {
+        var any = laFecha.getFullYear();
+        var mes = laFecha.getMonth() + 1;
+        var dia = laFecha.getDate();
+        var preMes = "";
+        var preDia = "";
+
+        if (mes < 10) preMes = "0";
+        if (dia < 10) preDia = "0";
+        return ( preDia + dia.toString() + "/" + preMes + mes.toString() + "/" + any.toString());
+    }
+
+</script>
+
+            
+            <hr>
+
+            <footer>
+                <p>&copy; University of Alicante. 2026</p>
+            </footer>
+
+        </div> <!-- /container -->
+        
+        
+        <script src="/AgendaUA/bundles/plugins?v=xk-3UTog-Wt0sLrZaJY_PVYIzOX6wHQgAhYp_QY1Wwc1"></script>
+
+        
+        <script type="text/javascript" src="/AgendaUA/Scripts/bootstrap-datepicker.js"></script>
+        <script type="text/javascript" src="/AgendaUA/Scripts/locales/bootstrap-datepicker.es.js"></script>
+        <script type="text/javascript" src="/AgendaUA/Scripts/locales/bootstrap-datepicker.ca.js"></script>
+        <script type="text/javascript" src="/AgendaUA/Scripts/jquery.smooth-scroll.js"></script>
+        <script type="text/javascript" src="/AgendaUA/Scripts/jquery.icheck.js"></script>
+        <script type="text/javascript" src="/AgendaUA/Scripts/bootstrapSwitch.js"></script>
+        <script type="text/javascript" src="/AgendaUA/Scripts/moment.js"></script>
+        <script type="text/javascript" src="/AgendaUA/Scripts/daterangepicker.js"></script>
+        
+        
+    </body>
+</html>
+    

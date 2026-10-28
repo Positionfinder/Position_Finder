@@ -1,25 +1,7 @@
 {
- "generated": "2026-10-28T13:29:00+00:00",
- "count": 23,
+ "generated": "2026-10-28T13:38:34+00:00",
+ "count": 14,
  "items": [
-  {
-   "id": "2d40015e26aa",
-   "title": "Contratos predoctorales del Plan Propio de Investigación.",
-   "url": "https://investigacion.ugr.es/plan-propio/informacion/programas/p6",
-   "institution": "Universidad de Granada",
-   "inst_id": "ugr",
-   "region": "Andalucía",
-   "inst_type": "public",
-   "level": "phd",
-   "fields": [
-    "Architecture"
-   ],
-   "deadline": null,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://investigacion.ugr.es/recursos-humanos/predoctorales",
-   "first_seen": "2026-10-28"
-  },
   {
    "id": "5bfff03d130e",
    "title": "Resolución de la Universitat de Lleida, p or la que se convoca un proceso selectivo para la contratación",
@@ -39,136 +21,21 @@
    "first_seen": "2026-10-28"
   },
   {
-   "id": "8b86d48c955f",
-   "title": "Resolución de la Universitat de Lleida, p or la que se convoca un proceso selectivo para la contratación",
-   "url": "https://www.recercaitransferencia.udl.cat/export/sites/Recerca/ca/.galleries/docs/20240919_Convocatoria_UdL_2_2024_FD_esmenada.pdf",
-   "institution": "Universitat de Lleida",
-   "inst_id": "udl",
-   "region": "Catalunya",
+   "id": "b2bb2fe40a4b",
+   "title": "Announcements of committee selection draws for Teaching Bodies, Permanent Lecturers, and PhD Assistant Professors",
+   "url": "https://www.ucm.es/sorteos-comisiones-plazas-pdi-cuerpos",
+   "institution": "Universidad Complutense de Madrid",
+   "inst_id": "ucm",
+   "region": "Madrid",
    "inst_type": "public",
-   "level": "phd+postdoc",
+   "level": "postdoc",
    "fields": [
     "Geography"
    ],
    "deadline": null,
    "kind": "position",
    "programme": null,
-   "source_page": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-predoctorals/",
-   "first_seen": "2026-10-28"
-  },
-  {
-   "id": "153a9e939d08",
-   "title": "Convocatòria: Orden Ministeri 30/12/2022 Publicació e-tauler UdL",
-   "url": "https://www.recercaitransferencia.udl.cat/export/sites/Recerca/ca/.galleries/docs/convoca/Predoctorales_UdL_FPIP.pdf",
-   "institution": "Universitat de Lleida",
-   "inst_id": "udl",
-   "region": "Catalunya",
-   "inst_type": "public",
-   "level": "phd+postdoc",
-   "fields": [
-    "Architecture"
-   ],
-   "deadline": null,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-predoctorals/",
-   "first_seen": "2026-10-28"
-  },
-  {
-   "id": "03e276a7e46c",
-   "title": "formalitzar un contracte laboral de durada determinada sota la modalitat de Personal Investigador",
-   "url": "https://www.recercaitransferencia.udl.cat/export/sites/Recerca/ca/.galleries/docs/convoca/202600316_Convocatoria_6_2026_REC-_Censurado.pdf",
-   "institution": "Universitat de Lleida",
-   "inst_id": "udl",
-   "region": "Catalunya",
-   "inst_type": "public",
-   "level": "phd",
-   "fields": [
-    "Landscape"
-   ],
-   "deadline": null,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-predoctorals/",
-   "first_seen": "2026-10-28"
-  },
-  {
-   "id": "2c5ae564d495",
-   "title": "contracte laboral indefinit sota la modalitat de Contracte d’Activitats Cientificotècniques, regulat a l’article",
-   "url": "https://www.recercaitransferencia.udl.cat/export/sites/Recerca/ca/.galleries/docs/convoca/202600213_Convocatoria_2_2026_REC-_Censurado.pdf",
-   "institution": "Universitat de Lleida",
-   "inst_id": "udl",
-   "region": "Catalunya",
-   "inst_type": "public",
-   "level": "postdoc",
-   "fields": [
-    "GIS & remote sensing",
-    "Geography"
-   ],
-   "deadline": null,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-postdoctorals/",
-   "first_seen": "2026-10-28"
-  },
-  {
-   "id": "0950030c9e0f",
-   "title": "formalitzar un contracte laboral indefinit sota la modalitat de Contracte d’Activitats",
-   "url": "https://www.recercaitransferencia.udl.cat/export/sites/Recerca/ca/.galleries/docs/convoca/20250407_Convocatoria_17_2025_REC.pdf",
-   "institution": "Universitat de Lleida",
-   "inst_id": "udl",
-   "region": "Catalunya",
-   "inst_type": "public",
-   "level": "postdoc",
-   "fields": [
-    "GIS & remote sensing",
-    "Geography",
-    "Landscape"
-   ],
-   "deadline": null,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-postdoctorals/",
-   "first_seen": "2026-10-28"
-  },
-  {
-   "id": "7a5a092903e9",
-   "title": "contracte laboral indefinit sota la modalitat de Contracte d’Activitats Cientificotècnique s, regulat a l’article",
-   "url": "https://www.recercaitransferencia.udl.cat/export/sites/Recerca/ca/.galleries/docs/20250311_Convocatoria_9_2025_REC_catala.pdf",
-   "institution": "Universitat de Lleida",
-   "inst_id": "udl",
-   "region": "Catalunya",
-   "inst_type": "public",
-   "level": "postdoc",
-   "fields": [
-    "GIS & remote sensing",
-    "Geography",
-    "Landscape"
-   ],
-   "deadline": null,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-postdoctorals/",
-   "first_seen": "2026-10-28"
-  },
-  {
-   "id": "0f166c6b9d3f",
-   "title": "formalizar un contrato laboral indefinido bajo la modalidad de Contrato de Actividades Científico- Técnicas,",
-   "url": "https://www.recercaitransferencia.udl.cat/export/sites/Recerca/ca/.galleries/docs/20250311_Convocatoria_9_2025_REC_castella.pdf",
-   "institution": "Universitat de Lleida",
-   "inst_id": "udl",
-   "region": "Catalunya",
-   "inst_type": "public",
-   "level": "postdoc",
-   "fields": [
-    "GIS & remote sensing",
-    "Geography",
-    "Landscape"
-   ],
-   "deadline": null,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-postdoctorals/",
+   "source_page": "https://www.ucm.es/empleo-ucm",
    "first_seen": "2026-10-28"
   },
   {
@@ -192,7 +59,7 @@
   },
   {
    "id": "31b3a9d240b4",
-   "title": "Fundación \"la Caixa\"",
+   "title": "la Caixa Junior Leader 2027 call",
    "url": "https://fundacionlacaixa.org/es/becas-posdoctorado-junior-leader-convocatoria-retaining",
    "institution": "Listed by 2 institutions",
    "inst_id": "uchceu",
@@ -211,41 +78,21 @@
    "first_seen": "2026-10-28"
   },
   {
-   "id": "08f8678f0eb4",
-   "title": "Ayudas para contratos de formación de doctores y doctoras en empresas (Doctorados Industriales) 2026 Agencia Estatal de Investigación (AEI) lunes, 26 de octubre de 2026 s",
-   "url": "https://www.aei.gob.es/sites/default/files/convocatory_info/file/2026-09/Resoluci%C3%B3n%20convocatoria%20DIN%202026_fda.pdf",
-   "institution": "Universidad CEU Cardenal Herrera",
-   "inst_id": "uchceu",
-   "region": "Comunitat Valenciana",
-   "inst_type": "private",
+   "id": "a0956ab8ce3d",
+   "title": "Call for Candidates - ICREA Call 2027 Barcelona Junior Contract Manager Barcelona HR Recruitment Specialist Human Resources · Barcelona Personal Assistant to the Director of Policy, D... Barcelona · Hybrid Severo Ochoa P",
+   "url": "https://jobs.isglobal.org/jobs",
+   "institution": "ISGlobal (urban planning",
+   "inst_id": "isglobal",
+   "region": "Catalunya",
+   "inst_type": "research",
    "level": "phd+postdoc",
-   "fields": [],
-   "deadline": null,
-   "kind": "call",
-   "programme": "Industrial Doctorates 2026",
-   "source_page": "https://www.uchceu.es/investigacion/convocatorias",
-   "listed_by": [
-    "Universidad CEU Cardenal Herrera"
+   "fields": [
+    "Urban planning"
    ],
-   "first_seen": "2026-10-28"
-  },
-  {
-   "id": "0b924c7136e3",
-   "title": "Marie Sklodowska-Curie (MSCA) Doctoral Networks (DN) martes, 24 de noviembre de 2026 Internacional Work Programme 2026-2027",
-   "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
-   "institution": "Universidad CEU Cardenal Herrera",
-   "inst_id": "uchceu",
-   "region": "Comunitat Valenciana",
-   "inst_type": "private",
-   "level": "phd",
-   "fields": [],
    "deadline": null,
-   "kind": "call",
-   "programme": "MSCA 2027",
-   "source_page": "https://www.uchceu.es/investigacion/convocatorias",
-   "listed_by": [
-    "Universidad CEU Cardenal Herrera"
-   ],
+   "kind": "position",
+   "programme": null,
+   "source_page": "https://jobs.isglobal.org/",
    "first_seen": "2026-10-28"
   },
   {
@@ -274,24 +121,6 @@
    "id": "940ab8dcc7b5",
    "title": "Próxima publicación Solicitud: 24/11/2026 - 10/12/2026 Ayudas para contratos de Personal Técnico de I+D+i 2026",
    "url": "https://www.uam.es/uam/investigacion/ofertas-empleo/pta2026",
-   "institution": "Universidad Autónoma de Madrid",
-   "inst_id": "uam",
-   "region": "Madrid",
-   "inst_type": "public",
-   "level": "phd+postdoc",
-   "fields": [
-    "Architecture"
-   ],
-   "deadline": "2026-12-10",
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.uam.es/uam/investigacion/ofertas-empleo",
-   "first_seen": "2026-10-28"
-  },
-  {
-   "id": "966a47b5ea86",
-   "title": "Resuelto Solicitud: 08/10/2025 - 22/10/2025 Ayudas para contratos de Personal Técnico de I+D+i 2025",
-   "url": "https://www.uam.es/uam/investigacion/ofertas-empleo/pta2025",
    "institution": "Universidad Autónoma de Madrid",
    "inst_id": "uam",
    "region": "Madrid",
@@ -376,7 +205,7 @@
   },
   {
    "id": "31a30ebcef22",
-   "title": "Abierta. Desde el 20/10/2026 hasta el 12/11/2026 (a las 14:00 horas, horario peninsular)",
+   "title": "FPU 2026 call",
    "url": "https://www.ual.es/universidad/serviciosgenerales/sgi/convocatorias-1/rr-hh/contratos-predoctorales/contratos-fpu-2026",
    "institution": "Listed by 18 institutions",
    "inst_id": "ual",
@@ -412,7 +241,7 @@
   },
   {
    "id": "07b0dc9dd22d",
-   "title": "Información de la convocatoria",
+   "title": "FPU call",
    "url": "https://www.aei.gob.es/convocatorias/buscador-convocatorias/ayudas-formacion-profesorado-universitario-fpu-2026",
    "institution": "Universidad de Huelva",
    "inst_id": "uhu",
@@ -485,70 +314,70 @@
   {
    "institution": "ual",
    "url": "https://www.ual.es/investigacion/convocatorias",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 32,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 31
   },
   {
    "institution": "ual",
    "url": "https://www.ual.es/universidad/serviciosgenerales/sgi/convocatorias-1/rr-hh/contratos-predoctorales",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 9,
    "kept": 1,
-   "details_fetched": 0
+   "details_fetched": 8
   },
   {
    "institution": "ual",
    "url": "https://www.ual.es/universidad/serviciosgenerales/sgi/convocatorias-1/rr-hh/contratos-posdoctorales",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 3,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 2
   },
   {
    "institution": "uca",
    "url": "https://investigacionytransferencia.uca.es/capital-humano-investigador/contratos-predoctorales-en-industria/",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 55,
    "kept": 0,
-   "details_fetched": 13
+   "details_fetched": 40
   },
   {
    "institution": "ugr",
    "url": "https://investigacion.ugr.es/recursos-humanos/predoctorales",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 14,
-   "kept": 2,
-   "details_fetched": 2
+   "kept": 1,
+   "details_fetched": 12
   },
   {
    "institution": "uhu",
    "url": "https://www.uhu.es/gestion-investigacion/rrhh/predoctorales",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 27,
    "kept": 4,
-   "details_fetched": 1
+   "details_fetched": 27
   },
   {
    "institution": "uhu",
    "url": "https://www.uhu.es/gestion-investigacion/rrhh/posdoctorales",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 16,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 16
   },
   {
    "institution": "uma",
    "url": "https://www.uma.es/servicio-de-investigacion/cms/menu/contratos-y-becas/convocatorias-contratos/",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 10,
    "kept": 0,
@@ -557,79 +386,79 @@
   {
    "institution": "upo",
    "url": "https://www.upo.es/area-investigacion/contratos-predoctorales/",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 43,
    "kept": 0,
-   "details_fetched": 5
+   "details_fetched": 38
   },
   {
    "institution": "us",
    "url": "https://www.investigacion.us.es/",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 1,
-   "kept": 0,
-   "details_fetched": 0
-  },
-  {
-   "institution": "unizar",
-   "url": "https://gespi.unizar.es/",
-   "checked": "2026-10-28T13:25:53+00:00",
-   "ok": true,
-   "listed": 1,
-   "kept": 0,
-   "details_fetched": 0
-  },
-  {
-   "institution": "ubu",
-   "url": "https://www.ubu.es/trabaja-en-la-ubu",
-   "checked": "2026-10-28T13:25:53+00:00",
-   "ok": true,
-   "listed": 12,
-   "kept": 1,
-   "details_fetched": 0
-  },
-  {
-   "institution": "usal",
-   "url": "https://convocatoriasinvestigacion.usal.es/",
-   "checked": "2026-10-28T13:25:53+00:00",
-   "ok": true,
-   "listed": 48,
-   "kept": 3,
-   "details_fetched": 0
-  },
-  {
-   "institution": "ub",
-   "url": "https://seu.ub.edu/ofertaPublicaCategoriaPublic/categories",
-   "checked": "2026-10-28T13:25:53+00:00",
-   "ok": true,
-   "listed": 13,
    "kept": 0,
    "details_fetched": 1
   },
   {
+   "institution": "unizar",
+   "url": "https://gespi.unizar.es/",
+   "checked": "2026-10-28T13:33:00+00:00",
+   "ok": true,
+   "listed": 1,
+   "kept": 0,
+   "details_fetched": 1
+  },
+  {
+   "institution": "ubu",
+   "url": "https://www.ubu.es/trabaja-en-la-ubu",
+   "checked": "2026-10-28T13:33:00+00:00",
+   "ok": true,
+   "listed": 12,
+   "kept": 1,
+   "details_fetched": 11
+  },
+  {
+   "institution": "usal",
+   "url": "https://convocatoriasinvestigacion.usal.es/",
+   "checked": "2026-10-28T13:33:00+00:00",
+   "ok": true,
+   "listed": 48,
+   "kept": 3,
+   "details_fetched": 37
+  },
+  {
+   "institution": "ub",
+   "url": "https://seu.ub.edu/ofertaPublicaCategoriaPublic/categories",
+   "checked": "2026-10-28T13:33:00+00:00",
+   "ok": true,
+   "listed": 13,
+   "kept": 0,
+   "details_fetched": 13
+  },
+  {
    "institution": "upc",
    "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 32,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 32
   },
   {
    "institution": "upc",
    "url": "https://talenthub.upc.edu/en/jobs/r2/r2-jobs/r2-jobs",
-   "checked": "2026-10-28T13:25:53+00:00",
+   "checked": "2026-10-28T13:33:00+00:00",
    "ok": true,
    "listed": 31,
    "kept": 1,
-   "details_fetched": 0
+   "details_fetched": 31
   },
   {
    "institution": "upf",
    "url": "https://www.upf.edu/web/personal/ofertes-pdi",
-   "checked": "2026-10-28T13:25:56+00:00",
+   "checked": "2026-10-28T13:33:05+00:00",
    "ok": true,
    "listed": 100,
    "kept": 0,
@@ -638,7 +467,7 @@
   {
    "institution": "udg",
    "url": "https://www.udg.edu/ca/coneix/treballa-a-la-udg/personal-docent-i-investigador/ofertes-de-treball-temporal",
-   "checked": "2026-10-28T13:25:56+00:00",
+   "checked": "2026-10-28T13:33:14+00:00",
    "ok": true,
    "listed": 11,
    "kept": 0,
@@ -647,7 +476,7 @@
   {
    "institution": "udg",
    "url": "https://www.udg.edu/ca/coneix/treballa-a-la-udg/personal-docent-i-investigador/ofertes-de-treball-temporal-post",
-   "checked": "2026-10-28T13:25:57+00:00",
+   "checked": "2026-10-28T13:33:19+00:00",
    "ok": true,
    "listed": 11,
    "kept": 0,
@@ -656,52 +485,52 @@
   {
    "institution": "udl",
    "url": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-predoctorals/",
-   "checked": "2026-10-28T13:25:57+00:00",
+   "checked": "2026-10-28T13:33:26+00:00",
    "ok": true,
    "listed": 146,
-   "kept": 4,
+   "kept": 1,
    "details_fetched": 60
   },
   {
    "institution": "udl",
    "url": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-postdoctorals/",
-   "checked": "2026-10-28T13:25:57+00:00",
+   "checked": "2026-10-28T13:33:27+00:00",
    "ok": true,
    "listed": 130,
-   "kept": 5,
+   "kept": 1,
    "details_fetched": 60
   },
   {
    "institution": "urv",
    "url": "https://seuelectronica.urv.cat/treballar-a-la-urv/convocatories-pdi/",
-   "checked": "2026-10-28T13:25:57+00:00",
+   "checked": "2026-10-28T13:33:29+00:00",
    "ok": true,
    "listed": 41,
    "kept": 0,
-   "details_fetched": 3
+   "details_fetched": 41
   },
   {
    "institution": "upv",
    "url": "https://www.upv.es/empleopublico/",
-   "checked": "2026-10-28T13:25:58+00:00",
+   "checked": "2026-10-28T13:33:30+00:00",
    "ok": true,
    "listed": 42,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 42
   },
   {
    "institution": "ua",
    "url": "https://cvnet.cpd.ua.es/AgendaUA/Investigacio",
-   "checked": "2026-10-28T13:25:58+00:00",
+   "checked": "2026-10-28T13:33:40+00:00",
    "ok": true,
    "listed": 26,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 14
   },
   {
    "institution": "uji",
    "url": "https://www.uji.es/serveis/rrhh/base/pi/pii/",
-   "checked": "2026-10-28T13:25:59+00:00",
+   "checked": "2026-10-28T13:33:42+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
@@ -710,115 +539,115 @@
   {
    "institution": "umh",
    "url": "https://sgi.umh.es/en/",
-   "checked": "2026-10-28T13:26:00+00:00",
+   "checked": "2026-10-28T13:33:44+00:00",
    "ok": true,
    "listed": 8,
    "kept": 2,
-   "details_fetched": 0
+   "details_fetched": 7
   },
   {
    "institution": "uvigo",
    "url": "https://secretaria.uvigo.gal/uv/web/convocatoria/public/categoria/investigar",
-   "checked": "2026-10-28T13:26:01+00:00",
+   "checked": "2026-10-28T13:33:59+00:00",
    "ok": true,
    "listed": 21,
    "kept": 2,
-   "details_fetched": 1
+   "details_fetched": 20
   },
   {
    "institution": "ucm",
    "url": "https://www.ucm.es/pinves",
-   "checked": "2026-10-28T13:26:01+00:00",
+   "checked": "2026-10-28T13:34:03+00:00",
    "ok": true,
    "listed": 16,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 16
   },
   {
    "institution": "ucm",
    "url": "https://www.ucm.es/empleo-ucm",
-   "checked": "2026-10-28T13:26:01+00:00",
+   "checked": "2026-10-28T13:34:06+00:00",
    "ok": true,
    "listed": 10,
-   "kept": 0,
-   "details_fetched": 0
+   "kept": 1,
+   "details_fetched": 9
   },
   {
    "institution": "uam",
    "url": "https://www.uam.es/uam/investigacion/ofertas-empleo",
-   "checked": "2026-10-28T13:26:01+00:00",
+   "checked": "2026-10-28T13:34:18+00:00",
    "ok": true,
    "listed": 1289,
-   "kept": 23,
+   "kept": 22,
    "details_fetched": 60
   },
   {
    "institution": "uam",
    "url": "https://www.uam.es/uam/investigacion/proyectos-investigacion",
-   "checked": "2026-10-28T13:26:03+00:00",
+   "checked": "2026-10-28T13:34:21+00:00",
    "ok": true,
    "listed": 24,
    "kept": 0,
-   "details_fetched": 21
+   "details_fetched": 22
   },
   {
    "institution": "upm",
    "url": "https://web.upm.es/hrs4r/incorporacion-la-upm",
-   "checked": "2026-10-28T13:26:04+00:00",
+   "checked": "2026-10-28T13:34:40+00:00",
    "ok": true,
    "listed": 13,
    "kept": 1,
-   "details_fetched": 1
+   "details_fetched": 13
   },
   {
    "institution": "upm",
    "url": "https://web.upm.es/hrs4r/",
-   "checked": "2026-10-28T13:26:04+00:00",
+   "checked": "2026-10-28T13:34:44+00:00",
    "ok": true,
    "listed": 14,
    "kept": 0,
-   "details_fetched": 3
+   "details_fetched": 14
   },
   {
    "institution": "uc3m",
    "url": "https://www.uc3m.es/investigacion-apoyopdi/empleo-investigacion-uc3m/otras-ofertas",
-   "checked": "2026-10-28T13:26:08+00:00",
+   "checked": "2026-10-28T13:34:54+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
-   "details_fetched": 2
+   "details_fetched": 6
   },
   {
    "institution": "uc3m",
    "url": "https://www.uc3m.es/empleo/inicio",
-   "checked": "2026-10-28T13:26:08+00:00",
+   "checked": "2026-10-28T13:34:55+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 1
   },
   {
    "institution": "urjc",
    "url": "https://www.urjc.es/hrs4r",
-   "checked": "2026-10-28T13:26:08+00:00",
+   "checked": "2026-10-28T13:35:02+00:00",
    "ok": true,
    "listed": 12,
    "kept": 0,
-   "details_fetched": 1
+   "details_fetched": 12
   },
   {
    "institution": "uned",
    "url": "https://www.uned.es/universidad/inicio/investigacion/portal-investigador/becas-ayudas-doctorado.html",
-   "checked": "2026-10-28T13:26:09+00:00",
+   "checked": "2026-10-28T13:35:03+00:00",
    "ok": true,
    "listed": 28,
    "kept": 0,
-   "details_fetched": 1
+   "details_fetched": 14
   },
   {
    "institution": "um",
    "url": "https://www.um.es/web/investigacion/novedades-investigacion",
-   "checked": "2026-10-28T13:26:14+00:00",
+   "checked": "2026-10-28T13:35:09+00:00",
    "ok": true,
    "listed": 373,
    "kept": 0,
@@ -827,25 +656,25 @@
   {
    "institution": "upna",
    "url": "https://www.unavarra.es/en/sites/investigacion/como-lo-hacemos/ayudas-y-convocatorias/personal-investigador.html",
-   "checked": "2026-10-28T13:26:18+00:00",
+   "checked": "2026-10-28T13:35:11+00:00",
    "ok": true,
    "listed": 6,
    "kept": 2,
-   "details_fetched": 0
+   "details_fetched": 4
   },
   {
    "institution": "ehu",
    "url": "https://www.ehu.eus/es/web/ikerketaren-kudeaketa",
-   "checked": "2026-10-28T13:26:20+00:00",
+   "checked": "2026-10-28T13:35:11+00:00",
    "ok": true,
    "listed": 8,
    "kept": 2,
-   "details_fetched": 0
+   "details_fetched": 8
   },
   {
    "institution": "uoc",
    "url": "https://selection.uoc.edu/web/offersjob/offers.aspx?y=PP",
-   "checked": "2026-10-28T13:26:21+00:00",
+   "checked": "2026-10-28T13:35:16+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -854,16 +683,16 @@
   {
    "institution": "uic",
    "url": "https://www.uic.es/en/university/uic-barcelona/work-us-uic-barcelona/teaching-and-research-staff",
-   "checked": "2026-10-28T13:26:23+00:00",
+   "checked": "2026-10-28T13:35:22+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 1
   },
   {
    "institution": "uvic",
    "url": "https://utalent.uvic.cat/",
-   "checked": "2026-10-28T13:26:24+00:00",
+   "checked": "2026-10-28T13:35:22+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -872,25 +701,25 @@
   {
    "institution": "unav",
    "url": "https://www.unav.edu/investigacion/servicios-para-investigadores/atraccion-de-talento",
-   "checked": "2026-10-28T13:26:26+00:00",
+   "checked": "2026-10-28T13:35:24+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
-   "details_fetched": 4
+   "details_fetched": 5
   },
   {
    "institution": "mondragon",
    "url": "https://www.mondragon.edu/es/investigacion/ingenieria-tecnologia/ayudas-becas",
-   "checked": "2026-10-28T13:26:27+00:00",
+   "checked": "2026-10-28T13:35:26+00:00",
    "ok": true,
    "listed": 5,
    "kept": 0,
-   "details_fetched": 2
+   "details_fetched": 4
   },
   {
    "institution": "comillas",
    "url": "https://www.comillas.edu/trabaja-con-nosotros/convocatorias-para-el-personal-investigador/",
-   "checked": "2026-10-28T13:26:27+00:00",
+   "checked": "2026-10-28T13:35:27+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -899,43 +728,43 @@
   {
    "institution": "uax",
    "url": "https://fundacion.uax.com/investigadores/predoctorales.html",
-   "checked": "2026-10-28T13:26:29+00:00",
+   "checked": "2026-10-28T13:35:28+00:00",
    "ok": true,
    "listed": 7,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 7
   },
   {
    "institution": "uchceu",
    "url": "https://www.uchceu.es/investigacion/convocatorias",
-   "checked": "2026-10-28T13:26:32+00:00",
+   "checked": "2026-10-28T13:35:30+00:00",
    "ok": true,
    "listed": 139,
-   "kept": 10,
+   "kept": 8,
    "details_fetched": 60
   },
   {
    "institution": "ucam",
    "url": "https://investigacion.ucam.edu/postdoctorado",
-   "checked": "2026-10-28T13:26:34+00:00",
+   "checked": "2026-10-28T13:35:31+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 6
   },
   {
    "institution": "isglobal",
    "url": "https://jobs.isglobal.org/",
-   "checked": "2026-10-28T13:26:36+00:00",
+   "checked": "2026-10-28T13:35:36+00:00",
    "ok": true,
    "listed": 9,
-   "kept": 0,
-   "details_fetched": 1
+   "kept": 1,
+   "details_fetched": 8
   },
   {
    "institution": "irec",
    "url": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
-   "checked": "2026-10-28T13:26:41+00:00",
+   "checked": "2026-10-28T13:35:41+00:00",
    "ok": true,
    "listed": 1564,
    "kept": 0,
@@ -944,7 +773,7 @@
   {
    "institution": "cimne",
    "url": "https://cimne.com/jobs-fellowships/research-staff/",
-   "checked": "2026-10-28T13:26:41+00:00",
+   "checked": "2026-10-28T13:35:44+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -953,11 +782,11 @@
   {
    "institution": "bc3",
    "url": "https://www.bc3research.org/en/careers/job-offers/",
-   "checked": "2026-10-28T13:26:44+00:00",
+   "checked": "2026-10-28T13:35:47+00:00",
    "ok": true,
    "listed": 4,
    "kept": 2,
-   "details_fetched": 1
+   "details_fetched": 4
   }
  ]
 }
