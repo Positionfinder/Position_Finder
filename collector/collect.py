@@ -59,14 +59,16 @@ GENERIC_LINK = re.compile(
     r"^(download|descarga|descargar|descàrrega|more info|more information|más información|més informació|ver|veure|"
     r"details?|detalles?|apply|solicitar|sol·licitar|pdf|link|enlace|enllaç|aquí|here|click here|continúa leyendo|"
     r"leer más|read more|ver convocatoria|ver convocatorias|veure la convocatòria|job description|"
-    r"download job description)\b",
+    r"download job description)\b"
+    r"|^(convocat[oò]ria|convocatoria|bases|oferta|offer|anuncio|anunci|pdf|document|documento|enlace)\.?$",
     re.I,
 )
 SKIP_LINK = re.compile(r"^(home|inicio|inici|login|accede|contact|contacto|contacte|english|español|català|castellano|"
                        r"more|ver más|veure més|next|siguiente|previous|anterior|\d+|»|«|›|‹|all calls|open|closed|"
                        r"access to jobs|view more|view all|ver todas?|veure-les totes|tots|todas|abiertas?|cerradas?|obertes|tancades)$",
                        re.I)
-CONTAINERS = ("li", "tr", "article", "dd", "p", "h2", "h3", "h4")
+ROW_CONTAINERS = ("tr", "li", "article", "dd")
+TEXT_CONTAINERS = ("p", "h2", "h3", "h4", "h5", "td", "div")
 MAIN_ID = re.compile(r"^(content|main|contingut|contenido|region-content|main-content)", re.I)
 
 
@@ -106,7 +108,7 @@ def main_element(soup: BeautifulSoup):
 
 def parse_listing(html: str, base_url: str) -> list[dict]:
     soup = BeautifulSoup(html, "lxml")
-    for tag in soup(["script", "style", "nav", "header", "footer", "aside", "form", "noscript"]):
+    for tag in soup(["script", "style", "nav", "header", "footer", "aside", "noscript"]):
         tag.decompose()
     main = main_element(soup)
     items: dict[str, dict] = {}
@@ -118,13 +120,21 @@ def parse_listing(html: str, base_url: str) -> list[dict]:
         link_text = clean(a.get_text(" "))
         if len(link_text) < 4 or SKIP_LINK.match(link_text):
             continue
-        box = a
-        for parent in a.parents:
-            if parent.name in CONTAINERS:
+        box = None
+        for depth, parent in enumerate(a.parents):
+            if parent is main or depth > 7:
+                break
+            if parent.name in ROW_CONTAINERS:
                 box = parent
                 break
-            if parent is main:
-                break
+        if box is None:
+            for parent in a.parents:
+                if parent is main:
+                    break
+                if parent.name in TEXT_CONTAINERS and len(clean(parent.get_text(" "))) > len(link_text) + 10:
+                    box = parent
+                    break
+        box = box or a
         context = clean(box.get_text(" "))[:1200]
         if len(context) < len(link_text):
             context = link_text
@@ -167,7 +177,7 @@ def read_detail(url: str) -> dict:
                 pass
     elif "html" in ctype:
         soup = BeautifulSoup(r.text, "lxml")
-        for tag in soup(["script", "style", "nav", "header", "footer", "aside", "noscript", "form"]):
+        for tag in soup(["script", "style", "nav", "header", "footer", "aside", "noscript"]):
             tag.decompose()
         h1 = soup.find("h1")
         title = clean(h1.get_text(" ")) if h1 else None
@@ -251,6 +261,8 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             reason = "marked closed"
         elif not lvl:
             reason = "not PhD/postdoc"
+        elif not lvl_title and len(title) < 45:
+            reason = "vague title (looks like a menu or section link)"
         elif prog and not classify.relevant(flds):
             years = [int(y) for y in re.findall(r"\b(20\d{2})\b", f"{title} {it['context'][:300]}")]
             if (years and max(years) < today.year) or (not years and not dl):

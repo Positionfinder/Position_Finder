@@ -187,8 +187,7 @@
   type: public
   region: "Comunitat Valenciana"
   homepage: "https://www.uv.es"
-  job_pages:
-    - "https://www.uv.es/pasinvest/"
+  notes: "research contract calls are published in DOGV; uv.es/pasinvest returns 403 to bots"
 - id: upv
   name: "Universitat Politècnica de València"
   type: public
