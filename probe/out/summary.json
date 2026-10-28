@@ -1,0 +1,29 @@
+{
+  "euraxess_search": {
+    "url": "https://euraxess.ec.europa.eu/jobs/search",
+    "error": "<HTTPError 403: 'Forbidden'>"
+  },
+  "euraxess_kw": {
+    "url": "https://euraxess.ec.europa.eu/jobs/search?keywords=urban%20planning",
+    "error": "<HTTPError 403: 'Forbidden'>"
+  },
+  "euraxess_rss": {
+    "url": "https://euraxess.ec.europa.eu/jobs/search/rss",
+    "error": "<HTTPError 403: 'Forbidden'>"
+  },
+  "euraxess_feed": {
+    "url": "https://euraxess.ec.europa.eu/jobs/feed",
+    "error": "<HTTPError 403: 'Forbidden'>"
+  },
+  "boe_sumario": {
+    "url": "https://www.boe.es/datosabiertos/api/boe/sumario/20261027",
+    "status": 200,
+    "final_url": "https://www.boe.es/datosabiertos/api/boe/sumario/20261027",
+    "type": "application/json",
+    "bytes": 381221
+  },
+  "csic_empleo": {
+    "url": "https://www.csic.es/es/empleo",
+    "error": "URLError(TimeoutError('timed out'))"
+  }
+}
