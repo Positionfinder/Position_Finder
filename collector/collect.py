@@ -350,8 +350,8 @@ def merge_calls(items: list[dict]) -> list[dict]:
         out.append(rec)
     for c in calls.values():
         dls = c.pop("_deadlines")
-        if dls:  # the deadline most listings agree on; ties go to the later date
-            c["deadline"] = max(set(dls), key=lambda d: (dls.count(d), d))
+        if dls:  # earliest listed deadline: showing a date later than the real one could make people miss it
+            c["deadline"] = min(dls)
         if len(c["listed_by"]) > 1:
             c["institution"] = f"Listed by {len(c['listed_by'])} institutions"
             c["region"] = None

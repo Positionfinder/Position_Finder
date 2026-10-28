@@ -33,7 +33,8 @@ input[type=search]:focus, select:focus, button:focus-visible { outline: 2px soli
 .chip.on { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
 .toggle { font-size: 13px; color: var(--muted); display: flex; gap: 8px; align-items: flex-start; }
 
-.summary { color: var(--muted); font-size: 14px; margin: 18px 0 8px; }
+.summary { color: var(--muted); font-size: 14px; margin: 18px 0 2px; }
+.note { margin: 0 0 10px; font-size: 13px; }
 .list { list-style: none; padding: 0; margin: 0 0 40px; display: grid; gap: 10px; }
 .card { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 16px 18px; }
 .card h3 { margin: 0 0 4px; font-size: 17px; font-weight: 600; line-height: 1.35; }
