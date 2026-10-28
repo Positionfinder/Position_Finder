@@ -31,38 +31,51 @@ FIELDS: dict[str, re.Pattern] = {
     "Urban planning": re.compile(
         r"urban plann|urbanism|urbanis[mt]|urban[ií]stic|urbanist|planificaci[oó]n urbana|planificaci[oó] urbana|"
         r"ordenaci[oó]n del territorio|ordenaci[oó] del territori|spatial planning|regional planning|town planning|"
-        r"city planning|planning (theory|policy)|urban (design|regeneration|renewal|policy|studies|development|governance|form)|"
-        r"\bsmart cit|ciudades?\b|ciutats?\b|\bcities\b|\bcity\b|metropolitan|metropolita|territorial|territori\b|"
-        r"urban\b|urbanas?\b|urbans?\b|urbanes\b",
+        r"city planning|land[- ]use planning|planning (theory|policy|system)|"
+        r"urban (design|regeneration|renewal|policy|policies|studies|development|governance|form|transformation|analytics|"
+        r"sustainability|transition|planning|space|spaces|environment|green|nature|morphology|growth|sprawl|segregation|inequalit|"
+        r"adaptation|climate|health|heat|resilience|systems|economics|geography|ecology|mobility|areas?|land)|"
+        r"\bsmart cit|socio-?spatial|socioespacial|spatial justice|justicia espacial|just[ií]cia espacial|"
+        r"regeneraci[oó]n urbana|regeneraci[oó] urbana|espacio p[uú]blico|espai p[uú]blic|public space|"
+        r"desarrollo urbano|desenvolupament urb|metropolitan (area|region|planning)|[aá]rea metropolitana|"
+        r"pol[ií]ticas? urbanas?|estudios urbanos|estudis urbans|ciudades sostenibles|sustainable cities",
         re.I,
     ),
     "Architecture": re.compile(
-        r"architect|arquitect|edificaci[oó]|building (design|technology|physics|energy|performance)|built environment|"
-        r"\bETSA[BMVS]?\b|construcci[oó]n arquitect|rehabilitaci[oó]n (de edificios|energ)|rehabilitaci[oó] (d'edificis|energ)|"
-        r"interior design|dise[nñ]o arquitect",
+        r"\barchitect(ure|ural|s)?\b|\barquitect(ura|ure|ònic|onic|[oó]nica|[oó]nico|es|os|as|a|e)?\b|\barquitectes\b|"
+        r"edificaci[oó]|building (design|technology|physics|energy|performance|information|stock|renovation)|built environment|"
+        r"\bETSA[BMVS]?\b|\bBIM\b|rehabilitaci[oó]n (de edificios|energ)|rehabilitaci[oó] (d'edificis|energ)|"
+        r"construcci[oó]n sostenible|interior design|dise[nñ]o arquitect",
         re.I,
     ),
-    "Geography": re.compile(r"geograf|geograph|demograf|demograph|population studies|human geography", re.I),
-    "Landscape": re.compile(r"landscape|paisaj|paisatg|green infrastructure|infraestructura verde|ecosystem services|servicios ecosist", re.I),
+    "Geography": re.compile(r"geograf|geograph|demograf|demograph|population studies", re.I),
+    "Landscape": re.compile(r"landscape|paisaj|paisatg|green infrastructure|infraestructura verde|infraestructures? verds?|"
+                            r"nature-based solutions|soluciones basadas en la naturaleza|ecosystem services|servicios ecosist[eé]micos|"
+                            r"serveis ecosist[eè]mics|urban green|espacios verdes|espais verds|green spaces", re.I),
+    "Housing": re.compile(r"\bhousing\b|vivienda|habitatge", re.I),
     "GIS & remote sensing": re.compile(
         r"\bGIS\b|\bSIG\b|geographic information|informaci[oó]n geogr|informaci[oó] geogr|remote sensing|teledetec|"
-        r"cartograf|cartograph|geospatial|geoespacial|geomatic|geom[aà]tica|earth observation|observaci[oó]n de la tierra",
+        r"cartograf|cartograph|geospatial|geoespacial|geom[aà]tic|earth observation|observaci[oó]n de la tierra|PPGIS",
         re.I,
     ),
-    "Mobility & transport": re.compile(r"mobility|movilidad|mobilitat|transport planning|planificaci[oó]n del transporte|accessibility|accesibilidad|accessibilitat", re.I),
-    "Housing": re.compile(r"\bhousing\b|vivienda|habitatge", re.I),
-    "Heritage": re.compile(r"heritage|patrimonio (arquitect|cultural|hist)|patrimoni (arquitect|cultural)", re.I),
+    "Mobility & transport": re.compile(
+        r"urban mobility|movilidad urbana|mobilitat urbana|sustainable mobility|movilidad sostenible|mobilitat sostenible|"
+        r"transport planning|planificaci[oó]n del transporte|planificaci[oó] del transport|public transport|transporte p[uú]blico|"
+        r"transport p[uú]blic|active mobility|movilidad activa|cycling|ciclismo urbano|walkability|caminabilidad|"
+        r"travel behaviou?r|accessibility (analysis|planning|to)|accesibilidad (urbana|territorial)", re.I),
+    "Heritage": re.compile(r"architectural heritage|built heritage|patrimonio (arquitect|construido|urbano)|patrimoni (arquitect|construït|urb)", re.I),
     "Climate & risk": re.compile(
-        r"climate adaptation|adaptaci[oó]n al cambio clim|adaptaci[oó] al canvi clim|flood risk|riesgo de inundaci|"
-        r"risc d'inundaci|natural hazards|riesgos naturales|urban heat|isla de calor|resilien",
+        r"climate (change )?adaptation|adaptaci[oó]n al cambio clim|adaptaci[oó] al canvi clim|flood risk|riesgo de inundaci|"
+        r"risc d'inundaci|natural hazards|riesgos naturales|urban heat|isla de calor|illa de calor|heat island|"
+        r"climate resilien|urban resilien|resiliencia (urbana|clim)|resili[eè]ncia (urbana|clim)|risk perception|percepci[oó]n del riesgo",
         re.I,
     ),
 }
-# "Urban planning" catches broad words like city/urban/territorial; require something stronger
-# from another field, or a strong planning term, before trusting it alone.
-STRONG_PLANNING = re.compile(
-    r"urban plann|urbanism|urbanis[mt]|urban[ií]stic|planificaci[oó]n urbana|planificaci[oó] urbana|ordenaci[oó]n del territorio|"
-    r"ordenaci[oó] del territori|spatial planning|regional planning|town planning|city planning|urban (design|regeneration|studies|policy|governance)",
+CORE = {"Urban planning", "Architecture", "Geography", "Landscape", "Housing"}
+COMPUTING = re.compile(
+    r"comput|software|hardware|network|xarx|redes|sistem|system|processad|processor|chip|cloud|data|dades|datos|"
+    r"neural|neuronal|transformer|model|ia\b|ai\b|deep learning|memòria|memoria|quant|qu[aà]ntic|microarquitect|"
+    r"5g|6g|telecom|circuit|fpga|gpu|cpu|servei|service",
     re.I,
 )
 
@@ -127,14 +140,59 @@ def level(text: str) -> str | None:
     return "phd" if p else "postdoc" if q else None
 
 
+def _architecture_hits(text: str) -> int:
+    n = 0
+    for m in FIELDS["Architecture"].finditer(text):
+        around = text[max(0, m.start() - 40): m.end() + 45]
+        if not COMPUTING.search(around):
+            n += 1
+    return n
+
+
 def fields(text: str) -> list[str]:
-    hits = [name for name, pat in FIELDS.items() if pat.search(text)]
-    if hits == ["Urban planning"] and not STRONG_PLANNING.search(text):
-        # broad "urban/city" only: keep it if it appears several times
-        if len(FIELDS["Urban planning"].findall(text)) < 3:
-            return []
+    hits = []
+    for name, pat in FIELDS.items():
+        if name == "Architecture":
+            if _architecture_hits(text):
+                hits.append(name)
+        elif pat.search(text):
+            hits.append(name)
     return hits
+
+
+def relevant(flds: list[str]) -> bool:
+    """A position counts if it has a core field, or at least two related ones."""
+    return bool(CORE & set(flds)) or len(flds) >= 2
 
 
 def is_programme(title: str) -> bool:
     return bool(PROGRAMME.search(title))
+
+
+_NORMALISE = [
+    (re.compile(r"juan de la cierva", re.I), "Juan de la Cierva"),
+    (re.compile(r"ram[oó]n y cajal|ramon i cajal", re.I), "Ramón y Cajal"),
+    (re.compile(r"margarita salas", re.I), "Margarita Salas"),
+    (re.compile(r"mar[ií]a zambrano", re.I), "María Zambrano"),
+    (re.compile(r"beatriu de pin[oó]s", re.I), "Beatriu de Pinós"),
+    (re.compile(r"beatriz galindo", re.I), "Beatriz Galindo"),
+    (re.compile(r"junior leader", re.I), "la Caixa Junior Leader"),
+    (re.compile(r"\bINPhINIT\b", re.I), "la Caixa INPhINIT"),
+    (re.compile(r"joan or[oó]", re.I), "Joan Oró FI"),
+    (re.compile(r"\bfpu\b|formaci[oó]n de profesorado universitario|formaci[oó] de professorat universitari", re.I), "FPU"),
+    (re.compile(r"doctorados? industriales|doctorats? industrials", re.I), "Industrial Doctorates"),
+    (re.compile(r"marie (sk[lł]odowska-)?curie|\bmsca\b", re.I), "MSCA"),
+]
+
+
+def programme_key(text: str) -> str | None:
+    """Normalised programme name plus year, e.g. 'Juan de la Cierva 2026', for calls open to all fields."""
+    if not PROGRAMME.search(text) and not any(p.search(text) for p, _ in _NORMALISE):
+        return None
+    name = next((n for p, n in _NORMALISE if p.search(text)), None)
+    if not name:
+        return None
+    if name == "FPU" and re.search(r"fpu[- ]?(upc|uam|ugr|us|um|uv)\b|plan propio|programa propio", text, re.I):
+        return None  # university's own FPU-style scheme: treat as a local call, not the national one
+    years = re.findall(r"\b(20\d{2})\b", text)
+    return f"{name} {max(years)}" if years else name

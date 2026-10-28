@@ -19,13 +19,14 @@ jobs:
         with: {python-version: "3.12", cache: pip}
       - run: pip install -r requirements.txt
       - run: python collector/collect.py
-      - uses: actions/upload-artifact@v4
-        with: {name: debug, path: debug/, retention-days: 7}
+        env:
+          PF_DEBUG_HTML: ${{ github.ref == 'refs/heads/probe' && '1' || '0' }}
       - name: Commit updated data
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data/jobs.json data/detail_cache.json data/seen.json
+          if [ "$GITHUB_REF" = "refs/heads/probe" ]; then git add -f debug; fi
           git commit -m "Update positions $(date -u +%F) [skip ci]" || exit 0
           git pull --rebase || true
           git push
