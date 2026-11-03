@@ -1,6 +1,6 @@
 {
- "generated": "2026-11-03T11:03:32+00:00",
- "count": 8,
+ "generated": "2026-11-03T11:07:49+00:00",
+ "count": 9,
  "items": [
   {
    "id": "6c003e9b0554",
@@ -46,6 +46,27 @@
     "Universitat de Lleida",
     "Universidad Autónoma de Madrid"
    ],
+   "first_seen": "2026-11-03"
+  },
+  {
+   "id": "7b834867cfbd",
+   "title": "wiss. Mitarbeiterin bzw. Mitarbeiter (m/w/d)",
+   "url": "https://www.verw.tu-dresden.de/StellAus/stelle.asp?id=13010&lang=en&style=cms2",
+   "institution": "TU Dresden",
+   "inst_id": "de-tud",
+   "region": "Sachsen",
+   "country": "DE",
+   "inst_type": "public",
+   "level": "research",
+   "fields": [
+    "Architecture",
+    "Landscape"
+   ],
+   "deadline": "2026-11-09",
+   "deadline_estimated": false,
+   "kind": "position",
+   "programme": null,
+   "source_page": "https://tu-dresden.de/tu-dresden/arbeiten-an-der-tud/stellenangebote/stellenangebote?kat=2&style=cms",
    "first_seen": "2026-11-03"
   },
   {
@@ -186,7 +207,7 @@
   {
    "institution": "ual",
    "url": "https://www.ual.es/investigacion/convocatorias",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 48,
    "kept": 0,
@@ -195,7 +216,7 @@
   {
    "institution": "ual",
    "url": "https://www.ual.es/universidad/serviciosgenerales/sgi/convocatorias-1/rr-hh/contratos-predoctorales",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 19,
    "kept": 0,
@@ -204,7 +225,7 @@
   {
    "institution": "ual",
    "url": "https://www.ual.es/universidad/serviciosgenerales/sgi/convocatorias-1/rr-hh/contratos-posdoctorales",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 19,
    "kept": 0,
@@ -213,7 +234,7 @@
   {
    "institution": "uca",
    "url": "https://investigacionytransferencia.uca.es/capital-humano-investigador/contratos-predoctorales-en-industria/",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 27,
    "kept": 0,
@@ -222,7 +243,7 @@
   {
    "institution": "ugr",
    "url": "https://investigacion.ugr.es/recursos-humanos/predoctorales",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 10,
    "kept": 0,
@@ -231,7 +252,7 @@
   {
    "institution": "uhu",
    "url": "https://www.uhu.es/gestion-investigacion/rrhh/predoctorales",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 21,
    "kept": 4,
@@ -240,7 +261,7 @@
   {
    "institution": "uhu",
    "url": "https://www.uhu.es/gestion-investigacion/rrhh/posdoctorales",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
@@ -249,7 +270,7 @@
   {
    "institution": "uma",
    "url": "https://www.uma.es/servicio-de-investigacion/cms/menu/contratos-y-becas/convocatorias-contratos/",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 10,
    "kept": 0,
@@ -258,7 +279,7 @@
   {
    "institution": "upo",
    "url": "https://www.upo.es/area-investigacion/contratos-predoctorales/",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 44,
    "kept": 0,
@@ -267,7 +288,7 @@
   {
    "institution": "us",
    "url": "https://www.investigacion.us.es/",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -276,7 +297,7 @@
   {
    "institution": "unizar",
    "url": "https://gespi.unizar.es/",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -285,7 +306,7 @@
   {
    "institution": "ubu",
    "url": "https://www.ubu.es/trabaja-en-la-ubu",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 13,
    "kept": 1,
@@ -294,7 +315,7 @@
   {
    "institution": "usal",
    "url": "https://convocatoriasinvestigacion.usal.es/",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 48,
    "kept": 0,
@@ -303,7 +324,7 @@
   {
    "institution": "ub",
    "url": "https://seu.ub.edu/ofertaPublicaCategoriaPublic/categories",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 22,
    "kept": 0,
@@ -312,7 +333,7 @@
   {
    "institution": "upc",
    "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 32,
    "kept": 0,
@@ -321,7 +342,7 @@
   {
    "institution": "upc",
    "url": "https://talenthub.upc.edu/en/jobs/r2/r2-jobs/r2-jobs",
-   "checked": "2026-11-03T11:01:54+00:00",
+   "checked": "2026-11-03T11:06:34+00:00",
    "ok": true,
    "listed": 32,
    "kept": 1,
@@ -330,7 +351,7 @@
   {
    "institution": "upf",
    "url": "https://www.upf.edu/web/personal/ofertes-pdi",
-   "checked": "2026-11-03T11:01:56+00:00",
+   "checked": "2026-11-03T11:06:37+00:00",
    "ok": true,
    "listed": 21,
    "kept": 0,
@@ -339,7 +360,7 @@
   {
    "institution": "udg",
    "url": "https://www.udg.edu/ca/coneix/treballa-a-la-udg/personal-docent-i-investigador/ofertes-de-treball-temporal",
-   "checked": "2026-11-03T11:01:56+00:00",
+   "checked": "2026-11-03T11:06:37+00:00",
    "ok": true,
    "listed": 10,
    "kept": 0,
@@ -348,7 +369,7 @@
   {
    "institution": "udg",
    "url": "https://www.udg.edu/ca/coneix/treballa-a-la-udg/personal-docent-i-investigador/ofertes-de-treball-temporal-post",
-   "checked": "2026-11-03T11:01:56+00:00",
+   "checked": "2026-11-03T11:06:37+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
@@ -357,7 +378,7 @@
   {
    "institution": "udl",
    "url": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-predoctorals/",
-   "checked": "2026-11-03T11:01:57+00:00",
+   "checked": "2026-11-03T11:06:37+00:00",
    "ok": true,
    "listed": 183,
    "kept": 3,
@@ -366,7 +387,7 @@
   {
    "institution": "udl",
    "url": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-postdoctorals/",
-   "checked": "2026-11-03T11:01:57+00:00",
+   "checked": "2026-11-03T11:06:37+00:00",
    "ok": true,
    "listed": 103,
    "kept": 7,
@@ -375,7 +396,7 @@
   {
    "institution": "urv",
    "url": "https://seuelectronica.urv.cat/treballar-a-la-urv/convocatories-pdi/",
-   "checked": "2026-11-03T11:01:57+00:00",
+   "checked": "2026-11-03T11:06:37+00:00",
    "ok": true,
    "listed": 44,
    "kept": 1,
@@ -384,7 +405,7 @@
   {
    "institution": "upv",
    "url": "https://www.upv.es/empleopublico/",
-   "checked": "2026-11-03T11:01:57+00:00",
+   "checked": "2026-11-03T11:06:38+00:00",
    "ok": true,
    "listed": 45,
    "kept": 0,
@@ -393,7 +414,7 @@
   {
    "institution": "ua",
    "url": "https://cvnet.cpd.ua.es/AgendaUA/Investigacio",
-   "checked": "2026-11-03T11:01:57+00:00",
+   "checked": "2026-11-03T11:06:38+00:00",
    "ok": true,
    "listed": 30,
    "kept": 0,
@@ -402,7 +423,7 @@
   {
    "institution": "uji",
    "url": "https://www.uji.es/serveis/rrhh/base/pi/pii/",
-   "checked": "2026-11-03T11:01:58+00:00",
+   "checked": "2026-11-03T11:06:38+00:00",
    "ok": true,
    "listed": 22,
    "kept": 0,
@@ -411,7 +432,7 @@
   {
    "institution": "umh",
    "url": "https://sgi.umh.es/en/",
-   "checked": "2026-11-03T11:01:58+00:00",
+   "checked": "2026-11-03T11:06:38+00:00",
    "ok": true,
    "listed": 7,
    "kept": 1,
@@ -420,7 +441,7 @@
   {
    "institution": "uvigo",
    "url": "https://secretaria.uvigo.gal/uv/web/convocatoria/public/categoria/investigar",
-   "checked": "2026-11-03T11:01:58+00:00",
+   "checked": "2026-11-03T11:06:39+00:00",
    "ok": true,
    "listed": 14,
    "kept": 1,
@@ -429,7 +450,7 @@
   {
    "institution": "ucm",
    "url": "https://www.ucm.es/pinves",
-   "checked": "2026-11-03T11:01:59+00:00",
+   "checked": "2026-11-03T11:06:39+00:00",
    "ok": true,
    "listed": 18,
    "kept": 0,
@@ -438,7 +459,7 @@
   {
    "institution": "ucm",
    "url": "https://www.ucm.es/empleo-ucm",
-   "checked": "2026-11-03T11:01:59+00:00",
+   "checked": "2026-11-03T11:06:39+00:00",
    "ok": true,
    "listed": 16,
    "kept": 0,
@@ -447,7 +468,7 @@
   {
    "institution": "uam",
    "url": "https://www.uam.es/uam/investigacion/ofertas-empleo",
-   "checked": "2026-11-03T11:01:59+00:00",
+   "checked": "2026-11-03T11:06:39+00:00",
    "ok": true,
    "listed": 1276,
    "kept": 3,
@@ -456,7 +477,7 @@
   {
    "institution": "uam",
    "url": "https://www.uam.es/uam/investigacion/proyectos-investigacion",
-   "checked": "2026-11-03T11:02:00+00:00",
+   "checked": "2026-11-03T11:06:40+00:00",
    "ok": true,
    "listed": 24,
    "kept": 0,
@@ -465,7 +486,7 @@
   {
    "institution": "upm",
    "url": "https://web.upm.es/hrs4r/incorporacion-la-upm",
-   "checked": "2026-11-03T11:02:00+00:00",
+   "checked": "2026-11-03T11:06:40+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
@@ -474,16 +495,14 @@
   {
    "institution": "upm",
    "url": "https://web.upm.es/hrs4r/",
-   "checked": "2026-11-03T11:02:00+00:00",
-   "ok": true,
-   "listed": 12,
-   "kept": 0,
-   "details_fetched": 0
+   "checked": "2026-11-03T11:06:40+00:00",
+   "ok": false,
+   "error": "ReadTimeout: HTTPSConnectionPool(host='web.upm.es', port=443): Read timed out. (read timeout=30)"
   },
   {
    "institution": "uc3m",
    "url": "https://www.uc3m.es/investigacion-apoyopdi/empleo-investigacion-uc3m/otras-ofertas",
-   "checked": "2026-11-03T11:02:00+00:00",
+   "checked": "2026-11-03T11:06:42+00:00",
    "ok": true,
    "listed": 10,
    "kept": 0,
@@ -492,7 +511,7 @@
   {
    "institution": "uc3m",
    "url": "https://www.uc3m.es/empleo/inicio",
-   "checked": "2026-11-03T11:02:01+00:00",
+   "checked": "2026-11-03T11:06:42+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -501,7 +520,7 @@
   {
    "institution": "urjc",
    "url": "https://www.urjc.es/hrs4r",
-   "checked": "2026-11-03T11:02:01+00:00",
+   "checked": "2026-11-03T11:06:42+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
@@ -510,7 +529,7 @@
   {
    "institution": "uned",
    "url": "https://www.uned.es/universidad/inicio/investigacion/portal-investigador/becas-ayudas-doctorado.html",
-   "checked": "2026-11-03T11:02:01+00:00",
+   "checked": "2026-11-03T11:06:42+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
@@ -519,16 +538,16 @@
   {
    "institution": "um",
    "url": "https://www.um.es/web/investigacion/novedades-investigacion",
-   "checked": "2026-11-03T11:02:01+00:00",
+   "checked": "2026-11-03T11:06:43+00:00",
    "ok": true,
    "listed": 264,
    "kept": 0,
-   "details_fetched": 42
+   "details_fetched": 0
   },
   {
    "institution": "upna",
    "url": "https://www.unavarra.es/en/sites/investigacion/como-lo-hacemos/ayudas-y-convocatorias/personal-investigador.html",
-   "checked": "2026-11-03T11:02:01+00:00",
+   "checked": "2026-11-03T11:06:43+00:00",
    "ok": true,
    "listed": 10,
    "kept": 1,
@@ -537,16 +556,16 @@
   {
    "institution": "ehu",
    "url": "https://www.ehu.eus/es/web/ikerketaren-kudeaketa",
-   "checked": "2026-11-03T11:02:02+00:00",
+   "checked": "2026-11-03T11:06:43+00:00",
    "ok": true,
    "listed": 8,
    "kept": 2,
-   "details_fetched": 3
+   "details_fetched": 0
   },
   {
    "institution": "uoc",
    "url": "https://selection.uoc.edu/web/offersjob/offers.aspx?y=PP",
-   "checked": "2026-11-03T11:02:02+00:00",
+   "checked": "2026-11-03T11:06:43+00:00",
    "ok": true,
    "listed": 2,
    "kept": 0,
@@ -555,7 +574,7 @@
   {
    "institution": "uic",
    "url": "https://www.uic.es/en/university/uic-barcelona/work-us-uic-barcelona/teaching-and-research-staff",
-   "checked": "2026-11-03T11:02:04+00:00",
+   "checked": "2026-11-03T11:06:43+00:00",
    "ok": true,
    "listed": 11,
    "kept": 0,
@@ -564,7 +583,7 @@
   {
    "institution": "uvic",
    "url": "https://utalent.uvic.cat/",
-   "checked": "2026-11-03T11:02:06+00:00",
+   "checked": "2026-11-03T11:06:44+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -573,7 +592,7 @@
   {
    "institution": "unav",
    "url": "https://www.unav.edu/investigacion/servicios-para-investigadores/atraccion-de-talento",
-   "checked": "2026-11-03T11:02:06+00:00",
+   "checked": "2026-11-03T11:06:44+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
@@ -582,7 +601,7 @@
   {
    "institution": "mondragon",
    "url": "https://www.mondragon.edu/es/investigacion/ingenieria-tecnologia/ayudas-becas",
-   "checked": "2026-11-03T11:02:06+00:00",
+   "checked": "2026-11-03T11:06:44+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
@@ -591,7 +610,7 @@
   {
    "institution": "comillas",
    "url": "https://www.comillas.edu/trabaja-con-nosotros/convocatorias-para-el-personal-investigador/",
-   "checked": "2026-11-03T11:02:06+00:00",
+   "checked": "2026-11-03T11:06:46+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -600,7 +619,7 @@
   {
    "institution": "uax",
    "url": "https://fundacion.uax.com/investigadores/predoctorales.html",
-   "checked": "2026-11-03T11:02:09+00:00",
+   "checked": "2026-11-03T11:06:47+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
@@ -609,7 +628,7 @@
   {
    "institution": "uchceu",
    "url": "https://www.uchceu.es/investigacion/convocatorias",
-   "checked": "2026-11-03T11:02:09+00:00",
+   "checked": "2026-11-03T11:06:48+00:00",
    "ok": true,
    "listed": 127,
    "kept": 1,
@@ -618,7 +637,7 @@
   {
    "institution": "ucam",
    "url": "https://investigacion.ucam.edu/postdoctorado",
-   "checked": "2026-11-03T11:02:09+00:00",
+   "checked": "2026-11-03T11:06:48+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
@@ -627,7 +646,7 @@
   {
    "institution": "isglobal",
    "url": "https://jobs.isglobal.org/",
-   "checked": "2026-11-03T11:02:09+00:00",
+   "checked": "2026-11-03T11:06:49+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
@@ -636,7 +655,7 @@
   {
    "institution": "irec",
    "url": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
-   "checked": "2026-11-03T11:02:09+00:00",
+   "checked": "2026-11-03T11:06:49+00:00",
    "ok": true,
    "listed": 1219,
    "kept": 0,
@@ -645,7 +664,7 @@
   {
    "institution": "cimne",
    "url": "https://cimne.com/jobs-fellowships/research-staff/",
-   "checked": "2026-11-03T11:02:09+00:00",
+   "checked": "2026-11-03T11:06:49+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -654,7 +673,7 @@
   {
    "institution": "bc3",
    "url": "https://www.bc3research.org/en/careers/job-offers/",
-   "checked": "2026-11-03T11:02:09+00:00",
+   "checked": "2026-11-03T11:06:50+00:00",
    "ok": true,
    "listed": 3,
    "kept": 1,
@@ -663,7 +682,7 @@
   {
    "institution": "de-tudo",
    "url": "https://www.tu-dortmund.de/karriere/offene-stellen/",
-   "checked": "2026-11-03T11:02:09+00:00",
+   "checked": "2026-11-03T11:06:51+00:00",
    "ok": true,
    "listed": 7,
    "kept": 0,
@@ -672,7 +691,7 @@
   {
    "institution": "de-tub",
    "url": "https://jobs.tu-berlin.de/en",
-   "checked": "2026-11-03T11:02:09+00:00",
+   "checked": "2026-11-03T11:06:52+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
@@ -681,7 +700,7 @@
   {
    "institution": "de-tub",
    "url": "https://stellenticket.tu-berlin.de/en/job-offers",
-   "checked": "2026-11-03T11:02:09+00:00",
+   "checked": "2026-11-03T11:06:53+00:00",
    "ok": true,
    "listed": 42,
    "kept": 0,
@@ -690,7 +709,7 @@
   {
    "institution": "de-tum",
    "url": "https://www.tum.de/ueber-die-tum/karriere-und-jobs/stellenangebote",
-   "checked": "2026-11-03T11:02:10+00:00",
+   "checked": "2026-11-03T11:06:54+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
@@ -699,7 +718,7 @@
   {
    "institution": "de-luh",
    "url": "https://www.uni-hannover.de/universitaet/stellenangebote-arbeit-an-der-uni/jobboerse",
-   "checked": "2026-11-03T11:02:11+00:00",
+   "checked": "2026-11-03T11:06:54+00:00",
    "ok": true,
    "listed": 33,
    "kept": 0,
@@ -708,16 +727,16 @@
   {
    "institution": "de-tud",
    "url": "https://tu-dresden.de/tu-dresden/arbeiten-an-der-tud/stellenangebote/stellenangebote?kat=2&style=cms",
-   "checked": "2026-11-03T11:02:11+00:00",
+   "checked": "2026-11-03T11:06:54+00:00",
    "ok": true,
    "listed": 20,
-   "kept": 0,
+   "kept": 1,
    "details_fetched": 0
   },
   {
    "institution": "de-ustutt",
    "url": "https://careers.uni-stuttgart.de/?locale=de_DE",
-   "checked": "2026-11-03T11:02:11+00:00",
+   "checked": "2026-11-03T11:06:55+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
@@ -726,7 +745,7 @@
   {
    "institution": "de-kit",
    "url": "https://www.kit.edu/karriere/stellenangebote.php",
-   "checked": "2026-11-03T11:02:12+00:00",
+   "checked": "2026-11-03T11:06:55+00:00",
    "ok": true,
    "listed": 13,
    "kept": 0,
@@ -735,7 +754,7 @@
   {
    "institution": "de-rwth",
    "url": "https://www.rwth-aachen.de/stellenangebote",
-   "checked": "2026-11-03T11:02:12+00:00",
+   "checked": "2026-11-03T11:06:55+00:00",
    "ok": true,
    "listed": 63,
    "kept": 0,
@@ -744,7 +763,7 @@
   {
    "institution": "de-hcu",
    "url": "https://www.hcu-hamburg.de/universitaet/stellenausschreibungen",
-   "checked": "2026-11-03T11:02:12+00:00",
+   "checked": "2026-11-03T11:06:56+00:00",
    "ok": true,
    "listed": 45,
    "kept": 0,
@@ -753,7 +772,7 @@
   {
    "institution": "de-weimar",
    "url": "https://www.uni-weimar.de/de/universitaet/aktuell/stellenausschreibungen/",
-   "checked": "2026-11-03T11:02:12+00:00",
+   "checked": "2026-11-03T11:06:56+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -762,7 +781,7 @@
   {
    "institution": "de-rptu",
    "url": "https://rptu.de/stellenangebote",
-   "checked": "2026-11-03T11:02:12+00:00",
+   "checked": "2026-11-03T11:06:56+00:00",
    "ok": true,
    "listed": 7,
    "kept": 0,
@@ -771,7 +790,7 @@
   {
    "institution": "de-kassel",
    "url": "https://www.uni-kassel.de/uni/universitaet/stellenangebote.html",
-   "checked": "2026-11-03T11:02:13+00:00",
+   "checked": "2026-11-03T11:06:57+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
@@ -780,7 +799,7 @@
   {
    "institution": "de-hu",
    "url": "https://www.hu-berlin.de/de/stellenangebote",
-   "checked": "2026-11-03T11:02:13+00:00",
+   "checked": "2026-11-03T11:06:57+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -789,7 +808,7 @@
   {
    "institution": "de-fu",
    "url": "https://www.fu-berlin.de/universitaet/beruf-karriere/jobs/index.html",
-   "checked": "2026-11-03T11:02:13+00:00",
+   "checked": "2026-11-03T11:06:57+00:00",
    "ok": true,
    "listed": 72,
    "kept": 0,
@@ -798,7 +817,7 @@
   {
    "institution": "de-bonn",
    "url": "https://www.uni-bonn.de/de/universitaet/arbeiten-an-der-uni/stellenangebote",
-   "checked": "2026-11-03T11:02:13+00:00",
+   "checked": "2026-11-03T11:06:57+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
@@ -807,7 +826,7 @@
   {
    "institution": "de-freiburg",
    "url": "https://uni-freiburg.de/universitaet/jobs/",
-   "checked": "2026-11-03T11:02:14+00:00",
+   "checked": "2026-11-03T11:06:57+00:00",
    "ok": true,
    "listed": 18,
    "kept": 0,
@@ -816,7 +835,7 @@
   {
    "institution": "de-uhh",
    "url": "https://www.uni-hamburg.de/stellenangebote.html",
-   "checked": "2026-11-03T11:02:15+00:00",
+   "checked": "2026-11-03T11:06:59+00:00",
    "ok": true,
    "listed": 2,
    "kept": 0,
@@ -825,7 +844,7 @@
   {
    "institution": "de-lmu",
    "url": "https://www.lmu.de/de/die-lmu/arbeiten-an-der-lmu/stellenportal/",
-   "checked": "2026-11-03T11:02:15+00:00",
+   "checked": "2026-11-03T11:06:59+00:00",
    "ok": true,
    "listed": 3,
    "kept": 0,
@@ -834,7 +853,7 @@
   {
    "institution": "de-heidelberg",
    "url": "https://www.uni-heidelberg.de/de/stellenmarkt",
-   "checked": "2026-11-03T11:02:15+00:00",
+   "checked": "2026-11-03T11:06:59+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
@@ -843,7 +862,7 @@
   {
    "institution": "de-muenster",
    "url": "https://www.uni-muenster.de/Rektorat/Stellen/",
-   "checked": "2026-11-03T11:02:15+00:00",
+   "checked": "2026-11-03T11:06:59+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -852,7 +871,7 @@
   {
    "institution": "de-koeln",
    "url": "https://jobportal.uni-koeln.de/",
-   "checked": "2026-11-03T11:02:15+00:00",
+   "checked": "2026-11-03T11:06:59+00:00",
    "ok": true,
    "listed": 5,
    "kept": 0,
@@ -861,7 +880,7 @@
   {
    "institution": "de-rub",
    "url": "https://uni.ruhr-uni-bochum.de/de/stellenangebote",
-   "checked": "2026-11-03T11:02:16+00:00",
+   "checked": "2026-11-03T11:07:00+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
@@ -870,7 +889,7 @@
   {
    "institution": "de-ude",
    "url": "https://www.uni-due.de/karriere/ausschreibungen-nach-kategorien.php?kategorie=Research%20and%20teaching%20operations",
-   "checked": "2026-11-03T11:02:16+00:00",
+   "checked": "2026-11-03T11:07:00+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -879,7 +898,7 @@
   {
    "institution": "de-btu",
    "url": "https://www.b-tu.de/universitaet/karriere-engagement/karriere/stellenausschreibungen",
-   "checked": "2026-11-03T11:02:16+00:00",
+   "checked": "2026-11-03T11:07:00+00:00",
    "ok": true,
    "listed": 5,
    "kept": 0,
@@ -888,7 +907,7 @@
   {
    "institution": "de-potsdam",
    "url": "https://www.uni-potsdam.de/de/arbeiten-an-der-up/bewerbung/stellenausschreibungen",
-   "checked": "2026-11-03T11:02:16+00:00",
+   "checked": "2026-11-03T11:07:00+00:00",
    "ok": true,
    "listed": 2,
    "kept": 0,
@@ -897,7 +916,7 @@
   {
    "institution": "de-goettingen",
    "url": "https://www.uni-goettingen.de/de/305223.html",
-   "checked": "2026-11-03T11:02:16+00:00",
+   "checked": "2026-11-03T11:07:00+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
@@ -906,7 +925,7 @@
   {
    "institution": "de-bayreuth",
    "url": "https://www.uni-bayreuth.de/stellenangebote",
-   "checked": "2026-11-03T11:02:16+00:00",
+   "checked": "2026-11-03T11:07:00+00:00",
    "ok": true,
    "listed": 3,
    "kept": 0,
@@ -915,7 +934,7 @@
   {
    "institution": "de-wuerzburg",
    "url": "https://www.uni-wuerzburg.de/karriere/",
-   "checked": "2026-11-03T11:02:17+00:00",
+   "checked": "2026-11-03T11:07:00+00:00",
    "ok": true,
    "listed": 2,
    "kept": 0,
@@ -924,7 +943,7 @@
   {
    "institution": "de-augsburg",
    "url": "https://www.uni-augsburg.de/en/jobs-und-karriere/stellenangebote/",
-   "checked": "2026-11-03T11:02:17+00:00",
+   "checked": "2026-11-03T11:07:01+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
@@ -933,7 +952,7 @@
   {
    "institution": "de-tubs",
    "url": "https://www.tu-braunschweig.de/stellenangebote",
-   "checked": "2026-11-03T11:02:17+00:00",
+   "checked": "2026-11-03T11:07:02+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
@@ -942,7 +961,7 @@
   {
    "institution": "de-tuda",
    "url": "https://www.tu-darmstadt.de/universitaet/karriere_an_der_tu/stellenangebote/index.de.jsp",
-   "checked": "2026-11-03T11:02:18+00:00",
+   "checked": "2026-11-03T11:07:02+00:00",
    "ok": true,
    "listed": 3,
    "kept": 0,
@@ -951,7 +970,7 @@
   {
    "institution": "de-bremen",
    "url": "https://www.uni-bremen.de/universitaet/die-uni-als-arbeitgeber/offene-stellen",
-   "checked": "2026-11-03T11:02:18+00:00",
+   "checked": "2026-11-03T11:07:02+00:00",
    "ok": true,
    "listed": 16,
    "kept": 0,
@@ -960,7 +979,7 @@
   {
    "institution": "de-trier",
    "url": "https://www.uni-trier.de/universitaet/verwaltung/abteilung-iii-personal/jobs",
-   "checked": "2026-11-03T11:02:18+00:00",
+   "checked": "2026-11-03T11:07:02+00:00",
    "ok": true,
    "listed": 21,
    "kept": 0,
@@ -969,7 +988,7 @@
   {
    "institution": "de-osnabrueck",
    "url": "https://www.uni-osnabrueck.de/universitaet/stellenangebote",
-   "checked": "2026-11-03T11:02:18+00:00",
+   "checked": "2026-11-03T11:07:02+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
@@ -978,16 +997,16 @@
   {
    "institution": "de-jena",
    "url": "https://www.uni-jena.de/122166/stellenangebote",
-   "checked": "2026-11-03T11:02:18+00:00",
+   "checked": "2026-11-03T11:07:02+00:00",
    "ok": true,
-   "listed": 37,
+   "listed": 38,
    "kept": 0,
-   "details_fetched": 0
+   "details_fetched": 1
   },
   {
    "institution": "de-halle",
    "url": "https://www.uni-halle.de/karriere/",
-   "checked": "2026-11-03T11:02:18+00:00",
+   "checked": "2026-11-03T11:07:02+00:00",
    "ok": true,
    "listed": 2,
    "kept": 0,
@@ -996,7 +1015,7 @@
   {
    "institution": "de-frankfurt",
    "url": "https://www.uni-frankfurt.de/47549099/Stellenangebote",
-   "checked": "2026-11-03T11:02:19+00:00",
+   "checked": "2026-11-03T11:07:02+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
@@ -1005,7 +1024,7 @@
   {
    "institution": "de-mainz",
    "url": "https://stellenboerse.uni-mainz.de/",
-   "checked": "2026-11-03T11:02:19+00:00",
+   "checked": "2026-11-03T11:07:03+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -1014,7 +1033,7 @@
   {
    "institution": "de-tuebingen",
    "url": "https://uni-tuebingen.de/universitaet/stellenangebote/",
-   "checked": "2026-11-03T11:02:19+00:00",
+   "checked": "2026-11-03T11:07:03+00:00",
    "ok": true,
    "listed": 10,
    "kept": 0,
@@ -1023,7 +1042,7 @@
   {
    "institution": "de-fau",
    "url": "https://www.jobs.fau.de/en/jobs",
-   "checked": "2026-11-03T11:02:19+00:00",
+   "checked": "2026-11-03T11:07:03+00:00",
    "ok": true,
    "listed": 37,
    "kept": 0,
@@ -1032,7 +1051,7 @@
   {
    "institution": "de-marburg",
    "url": "https://www.uni-marburg.de/de/universitaet/profil/universitaetskultur/karriere/stellenangebote/wissenschaftliche-stellen",
-   "checked": "2026-11-03T11:02:19+00:00",
+   "checked": "2026-11-03T11:07:03+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -1041,7 +1060,7 @@
   {
    "institution": "de-giessen",
    "url": "https://www.uni-giessen.de/de/ueber-uns/karriere/stellenmarkt",
-   "checked": "2026-11-03T11:02:21+00:00",
+   "checked": "2026-11-03T11:07:04+00:00",
    "ok": true,
    "listed": 26,
    "kept": 0,
@@ -1050,7 +1069,7 @@
   {
    "institution": "de-siegen",
    "url": "https://www.uni-siegen.de/stellenangebote/",
-   "checked": "2026-11-03T11:02:22+00:00",
+   "checked": "2026-11-03T11:07:05+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -1059,7 +1078,7 @@
   {
    "institution": "de-wuppertal",
    "url": "https://stellenausschreibungen.uni-wuppertal.de",
-   "checked": "2026-11-03T11:02:23+00:00",
+   "checked": "2026-11-03T11:07:05+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -1068,7 +1087,7 @@
   {
    "institution": "de-oldenburg",
    "url": "https://uol.de/jobs",
-   "checked": "2026-11-03T11:02:23+00:00",
+   "checked": "2026-11-03T11:07:05+00:00",
    "ok": true,
    "listed": 40,
    "kept": 0,
@@ -1077,7 +1096,7 @@
   {
    "institution": "de-leuphana",
    "url": "https://www.leuphana.de/universitaet/jobs-und-karriere.html",
-   "checked": "2026-11-03T11:02:25+00:00",
+   "checked": "2026-11-03T11:07:05+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -1086,7 +1105,7 @@
   {
    "institution": "de-hnee",
    "url": "https://www.hnee.de/hochschule/arbeiten-an-der-hnee/stellenausschreibungen",
-   "checked": "2026-11-03T11:02:25+00:00",
+   "checked": "2026-11-03T11:07:06+00:00",
    "ok": true,
    "listed": 7,
    "kept": 0,
@@ -1095,7 +1114,7 @@
   {
    "institution": "de-ioer",
    "url": "https://www.ioer.de/karriere/stellenangebote",
-   "checked": "2026-11-03T11:02:26+00:00",
+   "checked": "2026-11-03T11:07:06+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
@@ -1104,7 +1123,7 @@
   {
    "institution": "de-ils",
    "url": "https://www.ils-forschung.de/das-ils/arbeiten-im-ils/",
-   "checked": "2026-11-03T11:02:26+00:00",
+   "checked": "2026-11-03T11:07:06+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
@@ -1113,7 +1132,7 @@
   {
    "institution": "de-irs",
    "url": "https://join.com/companies/leibniz-irs",
-   "checked": "2026-11-03T11:02:26+00:00",
+   "checked": "2026-11-03T11:07:06+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -1122,7 +1141,7 @@
   {
    "institution": "de-arl",
    "url": "https://www.arl-net.de/de/content/job-boerse",
-   "checked": "2026-11-03T11:02:27+00:00",
+   "checked": "2026-11-03T11:07:06+00:00",
    "ok": true,
    "listed": 5,
    "kept": 0,
@@ -1131,7 +1150,7 @@
   {
    "institution": "de-ifl",
    "url": "https://leibniz-ifl.de/karriere/arbeiten-am-ifl",
-   "checked": "2026-11-03T11:02:28+00:00",
+   "checked": "2026-11-03T11:07:06+00:00",
    "ok": true,
    "listed": 5,
    "kept": 0,
@@ -1140,7 +1159,7 @@
   {
    "institution": "de-ufz",
    "url": "https://www.ufz.de/index.php?en=34276",
-   "checked": "2026-11-03T11:02:29+00:00",
+   "checked": "2026-11-03T11:07:08+00:00",
    "ok": true,
    "listed": 3,
    "kept": 0,
@@ -1149,7 +1168,7 @@
   {
    "institution": "de-pik",
    "url": "https://www.pik-potsdam.de/en/people/career/jobs",
-   "checked": "2026-11-03T11:02:29+00:00",
+   "checked": "2026-11-03T11:07:08+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
@@ -1158,7 +1177,7 @@
   {
    "institution": "de-wupperinst",
    "url": "https://wupperinst.org/das-institut/karriere/",
-   "checked": "2026-11-03T11:02:30+00:00",
+   "checked": "2026-11-03T11:07:08+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -1167,7 +1186,7 @@
   {
    "institution": "de-difu",
    "url": "https://difu.de/institut/arbeiten-am-difu/stellenangebote-am-difu",
-   "checked": "2026-11-03T11:02:30+00:00",
+   "checked": "2026-11-03T11:07:08+00:00",
    "ok": true,
    "listed": 2,
    "kept": 0,
@@ -1176,7 +1195,7 @@
   {
    "institution": "de-bbsr",
    "url": "https://www.bbsr.bund.de/BBSR/DE/ueber-uns/karriere/stellenangebote/_node.html",
-   "checked": "2026-11-03T11:02:30+00:00",
+   "checked": "2026-11-03T11:07:08+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -1185,7 +1204,7 @@
   {
    "institution": "de-gfz",
    "url": "https://www.gfz.de/karriere/stellenangebote",
-   "checked": "2026-11-03T11:02:30+00:00",
+   "checked": "2026-11-03T11:07:08+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
@@ -1194,7 +1213,7 @@
   {
    "institution": "de-ioew",
    "url": "https://www.ioew.de/jobs",
-   "checked": "2026-11-03T11:02:32+00:00",
+   "checked": "2026-11-03T11:07:08+00:00",
    "ok": true,
    "listed": 22,
    "kept": 0,
@@ -1203,7 +1222,7 @@
   {
    "institution": "de-hereon",
    "url": "https://hereon.de/career/vacancies/index.php.en",
-   "checked": "2026-11-03T11:02:32+00:00",
+   "checked": "2026-11-03T11:07:08+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
