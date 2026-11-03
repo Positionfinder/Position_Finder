@@ -41,7 +41,7 @@ h1 { font-family: Fraunces, Georgia, serif; font-weight: 650; font-size: clamp(3
 .lede { max-width: 640px; margin: 0; color: var(--muted); font-size: 17px; }
 .lede strong { color: var(--ink); font-weight: 600; }
 
-.controls { position: sticky; top: 0; z-index: 2; background: var(--bg); padding: 18px 0 12px; display: grid; gap: 10px; border-bottom: 1px solid var(--line); }
+.controls { grid-template-columns: minmax(0, 1fr); position: sticky; top: 0; z-index: 2; background: var(--bg); padding: 18px 0 12px; display: grid; gap: 10px; border-bottom: 1px solid var(--line); }
 input[type=search], select { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
 input[type=search] { width: 100%; font-size: 17px; }
 input[type=search]:focus, select:focus, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 1px; }
@@ -81,6 +81,15 @@ input[type=search]:focus, select:focus, button:focus-visible { outline: 2px soli
 .ok { color: var(--accent); } .bad { color: var(--warm); }
 .foot { padding: 24px 16px 48px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
 
+/* applied tick box */
+.jobs td.appl, .jobs th.appl { width: 1%; white-space: nowrap; }
+.applbox { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); cursor: pointer; }
+.applbox input { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; margin: 0; }
+.jobs tr.applied .applbox span { color: var(--accent); font-weight: 600; }
+.jobs tr { transition: opacity .3s; }
+.jobs tr.leaving { opacity: .25; }
+.sumrow { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px; }
+.linkbtn { font: inherit; font-size: 14px; background: none; border: 0; padding: 0; color: var(--accent); cursor: pointer; text-decoration: underline; }
 @media (max-width: 860px) {
   /* table becomes one card per position */
   .tablewrap { border: 0; background: none; overflow: visible; }
@@ -91,12 +100,15 @@ input[type=search]:focus, select:focus, button:focus-visible { outline: 2px soli
   .jobs td::before { content: attr(data-label); color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; padding-top: 2px; }
   .jobs td.pos { display: block; min-width: 0; }
   .jobs td.pos::before { content: none; }
+  .jobs td.appl { width: 100%; }
   .jobs td.empty { display: block; }
   .jobs td.empty::before { content: none; }
   .num { text-align: left; }
   .jobs td > * { justify-self: start; min-width: 0; }
 }
 @media (max-width: 600px) {
+  .seg { max-width: 100%; overflow-x: auto; }
+  .row select { flex: 1 1 100%; min-width: 0; max-width: 100%; }
   .masthead { padding-top: 36px; }
   .controls { position: static; }
   .deadline { margin-left: 0; width: 100%; }

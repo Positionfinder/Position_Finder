@@ -41,13 +41,13 @@
     <label class="toggle"><input type="checkbox" id="calls"> Include national postdoc fellowship calls open to all fields (Juan de la Cierva, Ramón y Cajal…). Your host university may set an earlier internal deadline.</label>
   </section>
 
-  <p id="summary" class="summary" aria-live="polite">Loading…</p>
+  <div class="sumrow"><p id="summary" class="summary" aria-live="polite">Loading…</p><button type="button" id="showApplied" class="linkbtn" hidden>Show applied</button></div>
   <p class="small note">Collected and translated automatically. Always confirm requirements and deadlines in the official announcement before applying.</p>
 
   <div class="tablewrap">
     <table class="jobs">
       <thead><tr>
-        <th>Position</th><th>Institution</th><th>Location</th><th>Topic</th>
+        <th class="appl">Applied</th><th>Position</th><th>Institution</th><th>Location</th><th>Topic</th>
         <th id="hA" class="num">Match A</th><th id="hB" class="num">Match B</th><th>Deadline</th><th>Link</th>
       </tr></thead>
       <tbody id="rows"></tbody>

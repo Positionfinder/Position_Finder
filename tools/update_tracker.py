@@ -198,6 +198,8 @@ def main():
     ap.add_argument("--site")
     ap.add_argument("--linkedin")
     ap.add_argument("--out", help="write here instead of --xlsx")
+    ap.add_argument("--applied", help='JSON {url: "YYYY-MM-DD"} of positions ticked "Applied" on the website; '
+                    'their "My status" becomes "Applied" (unless already Applied/Not relevant/Closed)')
     a = ap.parse_args()
 
     old = read_existing(a.xlsx)
@@ -209,9 +211,18 @@ def main():
                 if r.get(key) and not k.get(key):
                     k[key] = r[key]
 
+    applied = {}
+    if a.applied and os.path.exists(a.applied):
+        with open(a.applied, encoding="utf-8") as f:
+            applied = json.load(f) or {}
+
     def keep_mine(r):
         k = mine.get(r["url"], {})
         r["status"], r["notes"] = k.get("status"), k.get("notes")
+        if r["url"] in applied and r["status"] not in ("Applied", "Not relevant", "Closed"):
+            r["status"] = "Applied"
+            if not r["notes"]:
+                r["notes"] = f"Ticked on the website {applied[r['url']]}"
         r["first_seen"] = k.get("first_seen") or r.get("first_seen") or TODAY
         return r
 
@@ -246,6 +257,13 @@ def main():
     for r in website:
         if expired(r):
             archive[r["url"]] = r
+
+    # positions ticked "Applied" on the website (all sheets, also rows kept from earlier updates)
+    for r in list(still_open) + list(linkedin.values()) + list(archive.values()):
+        if r.get("url") in applied and r.get("status") not in ("Applied", "Not relevant", "Closed"):
+            r["status"] = "Applied"
+            if not r.get("notes"):
+                r["notes"] = f"Ticked on the website {applied[r['url']]}"
 
     best = lambda r: max([v for v in (r.get("A"), r.get("B")) if isinstance(v, (int, float))] or [-1])
     still_open.sort(key=lambda r: (r["source"] != "Website", -best(r)))

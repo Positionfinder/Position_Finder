@@ -1,8 +1,16 @@
 (() => {
   const $ = (s) => document.querySelector(s);
   const COUNTRY = { ES: "Spain", DE: "Germany" };
-  const state = { country: "all", level: "all", source: "all", topics: new Set(), q: "", region: "", sort: "match", matchf: "any", calls: false };
+  const state = { showApplied: false, country: "all", level: "all", source: "all", topics: new Set(), q: "", region: "", sort: "match", matchf: "any", calls: false };
   let DATA = { items: [], sources: [], profiles: [], threshold: 60 };
+
+  // "Applied" ticks are kept in this browser only (key pf_applied: {url: "YYYY-MM-DD"}).
+  // The scheduled search reads them from his Chrome and marks the rows "Applied" in D:\Positions.xlsx.
+  const AKEY = "pf_applied";
+  let applied = {};
+  try { applied = JSON.parse(localStorage.getItem(AKEY) || "{}") || {}; } catch (e) { applied = {}; }
+  const saveApplied = () => { try { localStorage.setItem(AKEY, JSON.stringify(applied)); } catch (e) {} };
+  const isApplied = (it) => Object.prototype.hasOwnProperty.call(applied, it.url);
 
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const today = new Date(); today.setHours(0, 0, 0, 0);
@@ -14,6 +22,8 @@
 
   function matches(it) {
     const T = DATA.threshold;
+    if (state.showApplied) return isApplied(it);
+    if (isApplied(it)) return false;
     if (it.kind === "call") { if (!state.calls) return false; }
     else if (state.matchf === "any" && best(it) < T) return false;
     else if (state.matchf.startsWith("p:") && m(it, state.matchf.slice(2)) < T) return false;
@@ -48,7 +58,9 @@
     }
     const loc = [it.city, it.region, COUNTRY[it.country || "ES"]].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(", ");
     const topics = (it.topics || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("") || '<span class="muted">–</span>';
-    return `<tr>
+    const on = isApplied(it);
+    return `<tr class="${on ? "applied" : ""}">
+      <td data-label="Applied" class="appl"><label class="applbox" title="${on ? "Untick to show it again" : "Tick when you have applied: the position is hidden"}"><input type="checkbox" data-url="${esc(it.url)}"${on ? " checked" : ""}><span>${on ? "Applied " + esc(applied[it.url] || "") : "Applied"}</span></label></td>
       <td data-label="Position" class="pos"><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(en)}</a>${orig}<div class="tags">${tags}</div></td>
       <td data-label="Institution">${esc(it.institution)}</td>
       <td data-label="Location">${esc(loc)}</td>
@@ -69,9 +81,11 @@
     DATA.profiles.forEach((p) => { by["p:" + p.id] = (a, b) => (m(b, p.id) ?? -1) - (m(a, p.id) ?? -1); });
     items.sort(by[state.sort] || by.match);
     $("#rows").innerHTML = items.length ? items.map(row).join("")
-      : `<tr><td colspan="8" class="empty">No positions match these filters right now. Try "All positions" in the match filter, or check back tomorrow.</td></tr>`;
+      : `<tr><td colspan="9" class="empty">${state.showApplied ? "You haven't ticked any position as applied yet." : 'No positions match these filters right now. Try "All positions" in the match filter, or check back tomorrow.'}</td></tr>`;
     const total = DATA.items.filter((i) => i.kind !== "call").length;
-    $("#summary").textContent = `${items.length} shown · ${total} open positions collected`;
+    const nA = DATA.items.filter(isApplied).length;
+    $("#summary").textContent = state.showApplied ? `${items.length} positions you applied for` : `${items.length} shown · ${total} open positions collected`;
+    const t = $("#showApplied"); t.textContent = state.showApplied ? "← Back to open positions" : `Show applied (${nA})`; t.hidden = !nA && !state.showApplied;
   }
 
   function seg(id, key) {
@@ -109,6 +123,15 @@
     $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
     $("#matchf").addEventListener("change", (e) => { state.matchf = e.target.value; render(); });
     $("#calls").addEventListener("change", (e) => { state.calls = e.target.checked; render(); });
+    $("#rows").addEventListener("change", (e) => {
+      const cb = e.target.closest("input[data-url]"); if (!cb) return;
+      const url = cb.dataset.url;
+      if (cb.checked) applied[url] = new Date().toISOString().slice(0, 10); else delete applied[url];
+      saveApplied();
+      const tr = cb.closest("tr"); tr.classList.add("leaving");
+      setTimeout(render, 350);
+    });
+    $("#showApplied").addEventListener("click", () => { state.showApplied = !state.showApplied; render(); });
 
     $("#updated").textContent = DATA.generated ? new Date(DATA.generated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" }) : "–";
     $("#srcs").innerHTML = (DATA.sources || []).map((s) => `<tr><td>${esc(s.institution)}</td>
