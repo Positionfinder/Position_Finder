@@ -1,0 +1,2436 @@
+<!--/oportunidades/remuneradas/Default.aspx--><!--/oportunidades/remuneradas/Default.aspx-->
+
+<!DOCTYPE html>
+<html data-bs-theme="light" lang="es">
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" /><title>
+	Ofertas de trabajo en ONG
+</title>
+<!-- InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) -->
+<script type="text/javascript" async=true>
+    (function () {
+  var host = window.location.hostname;
+  var element = document.createElement('script');
+  var firstScript = document.getElementsByTagName('script')[0];
+  var url = 'https://cmp.inmobi.com'
+    .concat('/choice/', 'apv12_j3Z7d6w', '/', host, '/choice.js?tag_version=V3');
+  var uspTries = 0;
+  var uspTriesLimit = 3;
+  element.async = true;
+  element.type = 'text/javascript';
+  element.src = url;
+
+  firstScript.parentNode.insertBefore(element, firstScript);
+
+  function makeStub() {
+    var TCF_LOCATOR_NAME = '__tcfapiLocator';
+    var queue = [];
+    var win = window;
+    var cmpFrame;
+
+    function addFrame() {
+      var doc = win.document;
+      var otherCMP = !!(win.frames[TCF_LOCATOR_NAME]);
+
+      if (!otherCMP) {
+        if (doc.body) {
+          var iframe = doc.createElement('iframe');
+
+          iframe.style.cssText = 'display:none';
+          iframe.name = TCF_LOCATOR_NAME;
+          doc.body.appendChild(iframe);
+        } else {
+          setTimeout(addFrame, 5);
+        }
+      }
+      return !otherCMP;
+    }
+
+    function tcfAPIHandler() {
+      var gdprApplies;
+      var args = arguments;
+
+      if (!args.length) {
+        return queue;
+      } else if (args[0] === 'setGdprApplies') {
+        if (
+          args.length > 3 &&
+          args[2] === 2 &&
+          typeof args[3] === 'boolean'
+        ) {
+          gdprApplies = args[3];
+          if (typeof args[2] === 'function') {
+            args[2]('set', true);
+          }
+        }
+      } else if (args[0] === 'ping') {
+        var retr = {
+          gdprApplies: gdprApplies,
+          cmpLoaded: false,
+          cmpStatus: 'stub'
+        };
+
+        if (typeof args[2] === 'function') {
+          args[2](retr);
+        }
+      } else {
+                    if (args[0] === 'init' && typeof args[3] === 'object') {
+          args[3] = Object.assign(args[3], { tag_version: 'V3' });
+        }
+        queue.push(args);
+      }
+    }
+
+    function postMessageEventHandler(event) {
+      var msgIsString = typeof event.data === 'string';
+      var json = {};
+
+      try {
+        if (msgIsString) {
+          json = JSON.parse(event.data);
+        } else {
+          json = event.data;
+        }
+                } catch (ignore) { }
+
+      var payload = json.__tcfapiCall;
+
+      if (payload) {
+        window.__tcfapi(
+          payload.command,
+          payload.version,
+                        function (retValue, success) {
+            var returnMsg = {
+              __tcfapiReturn: {
+                returnValue: retValue,
+                success: success,
+                callId: payload.callId
+              }
+            };
+            if (msgIsString) {
+              returnMsg = JSON.stringify(returnMsg);
+            }
+            if (event && event.source && event.source.postMessage) {
+              event.source.postMessage(returnMsg, '*');
+            }
+          },
+          payload.parameter
+        );
+      }
+    }
+
+    while (win) {
+      try {
+        if (win.frames[TCF_LOCATOR_NAME]) {
+          cmpFrame = win;
+          break;
+        }
+                } catch (ignore) { }
+
+      if (win === window.top) {
+        break;
+      }
+      win = win.parent;
+    }
+    if (!cmpFrame) {
+      addFrame();
+      win.__tcfapi = tcfAPIHandler;
+      win.addEventListener('message', postMessageEventHandler, false);
+    }
+  };
+
+  makeStub();
+
+        function makeGppStub() {
+            const CMP_ID = 10;
+            const SUPPORTED_APIS = [
+                '2:tcfeuv2',
+                '6:uspv1',
+                '7:usnatv1',
+                '8:usca',
+                '9:usvav1',
+                '10:uscov1',
+                '11:usutv1',
+                '12:usctv1'
+            ];
+
+            window.__gpp_addFrame = function (n) {
+                if (!window.frames[n]) {
+                    if (document.body) {
+                        var i = document.createElement("iframe");
+                        i.style.cssText = "display:none";
+                        i.name = n;
+                        document.body.appendChild(i);
+                    } else {
+                        window.setTimeout(window.__gpp_addFrame, 10, n);
+                    }
+                }
+            };
+            window.__gpp_stub = function () {
+                var b = arguments;
+                __gpp.queue = __gpp.queue || [];
+                __gpp.events = __gpp.events || [];
+
+                if (!b.length || (b.length == 1 && b[0] == "queue")) {
+                    return __gpp.queue;
+                }
+
+                if (b.length == 1 && b[0] == "events") {
+                    return __gpp.events;
+                }
+
+                var cmd = b[0];
+                var clb = b.length > 1 ? b[1] : null;
+                var par = b.length > 2 ? b[2] : null;
+                if (cmd === "ping") {
+                    clb(
+                        {
+                            gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+                            cmpStatus: "stub", // possible values: stub, loading, loaded, error
+                            cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+                            signalStatus: "not ready", // possible values: not ready, ready
+                            supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+                            cmpId: CMP_ID, // IAB assigned CMP ID, may be 0 during stub/loading
+                            sectionList: [],
+                            applicableSections: [-1],
+                            gppString: "",
+                            parsedSections: {},
+                        },
+                        true
+                    );
+                } else if (cmd === "addEventListener") {
+                    if (!("lastId" in __gpp)) {
+                        __gpp.lastId = 0;
+                    }
+                    __gpp.lastId++;
+                    var lnr = __gpp.lastId;
+                    __gpp.events.push({
+                        id: lnr,
+                        callback: clb,
+                        parameter: par,
+                    });
+                    clb(
+                        {
+                            eventName: "listenerRegistered",
+                            listenerId: lnr, // Registered ID of the listener
+                            data: true, // positive signal
+                            pingData: {
+                                gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+                                cmpStatus: "stub", // possible values: stub, loading, loaded, error
+                                cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+                                signalStatus: "not ready", // possible values: not ready, ready
+                                supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+                                cmpId: CMP_ID, // list of supported APIs
+                                sectionList: [],
+                                applicableSections: [-1],
+                                gppString: "",
+                                parsedSections: {},
+                            },
+                        },
+                        true
+                    );
+                } else if (cmd === "removeEventListener") {
+                    var success = false;
+                    for (var i = 0; i < __gpp.events.length; i++) {
+                        if (__gpp.events[i].id == par) {
+                            __gpp.events.splice(i, 1);
+                            success = true;
+                            break;
+                        }
+                    }
+                    clb(
+                        {
+                            eventName: "listenerRemoved",
+                            listenerId: par, // Registered ID of the listener
+                            data: success, // status info
+                            pingData: {
+                                gppVersion: "1.1", // must be “Version.Subversion”, current: “1.1”
+                                cmpStatus: "stub", // possible values: stub, loading, loaded, error
+                                cmpDisplayStatus: "hidden", // possible values: hidden, visible, disabled
+                                signalStatus: "not ready", // possible values: not ready, ready
+                                supportedAPIs: SUPPORTED_APIS, // list of supported APIs
+                                cmpId: CMP_ID, // CMP ID
+                                sectionList: [],
+                                applicableSections: [-1],
+                                gppString: "",
+                                parsedSections: {},
+                            },
+                        },
+                        true
+                    );
+                } else if (cmd === "hasSection") {
+                    clb(false, true);
+                } else if (cmd === "getSection" || cmd === "getField") {
+                    clb(null, true);
+                }
+                //queue all other commands
+                else {
+                    __gpp.queue.push([].slice.apply(b));
+                }
+            };
+            window.__gpp_msghandler = function (event) {
+                var msgIsString = typeof event.data === "string";
+                try {
+                    var json = msgIsString ? JSON.parse(event.data) : event.data;
+                } catch (e) {
+                    var json = null;
+                }
+                if (typeof json === "object" && json !== null && "__gppCall" in json) {
+                    var i = json.__gppCall;
+                    window.__gpp(
+                        i.command,
+                        function (retValue, success) {
+                            var returnMsg = {
+                                __gppReturn: {
+                                    returnValue: retValue,
+                                    success: success,
+                                    callId: i.callId,
+                                },
+                            };
+                            event.source.postMessage(msgIsString ? JSON.stringify(returnMsg) : returnMsg, "*");
+                        },
+                        "parameter" in i ? i.parameter : null,
+                        "version" in i ? i.version : "1.1"
+                    );
+                }
+            };
+            if (!("__gpp" in window) || typeof window.__gpp !== "function") {
+                window.__gpp = window.__gpp_stub;
+                window.addEventListener("message", window.__gpp_msghandler, false);
+                window.__gpp_addFrame("__gppLocator");
+            }
+        };
+
+        makeGppStub();
+
+        var uspStubFunction = function () {
+    var arg = arguments;
+    if (typeof window.__uspapi !== uspStubFunction) {
+                setTimeout(function () {
+        if (typeof window.__uspapi !== 'undefined') {
+          window.__uspapi.apply(window.__uspapi, arg);
+        }
+      }, 500);
+    }
+  };
+
+        var checkIfUspIsReady = function () {
+    uspTries++;
+    if (window.__uspapi === uspStubFunction && uspTries < uspTriesLimit) {
+      console.warn('USP is not accessible');
+    } else {
+      clearInterval(uspInterval);
+    }
+  };
+
+  if (typeof window.__uspapi === 'undefined') {
+    window.__uspapi = uspStubFunction;
+    var uspInterval = setInterval(checkIfUspIsReady, 6000);
+  }
+    })();
+</script>
+<!-- End InMobi Choice. Consent Manager Tag v3.0 (for TCF 2.2) --><script src="/Scripts/angular-1.8.2.min.js"></script>
+
+        <!--Meta tags SEO: fp,twitter, etc-->
+    
+
+    <!--Favicon:-->
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-HF.png" />
+
+    <!--Fuentes GOOGLE-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Symbols+Outlined&amp;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Symbols+Rounded&amp;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Material+Symbols+Sharp&amp;display=swap" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800&amp;display=swap" /><link rel="stylesheet" href="/Content/fonts/fontawesome-all.min.css" />
+        <!--Css por defecto (fuxia):-->
+        <link id="cphTemaCss_lTemaCss" rel="stylesheet" href="/Content/scss/empleo-styles.css"></link>
+    
+
+
+    <!--SCRIPTS:-->
+    <script src="/Scripts/jquery-3.7.0.min.js"></script>
+    <script src="/Content/bootstrap5.3..3/js/bootstrap.bundle.min.js"></script>
+    <script src="/Scripts/bs-init.js"></script>
+    <script src="/Scripts/scripts-front.js"></script>
+    <script src="/Scripts/vue.global.prod.js"></script>
+
+    
+
+<script async src="https://securepubads.g.doubleclick.net/tag/js/gpt.js"></script>
+<script src="https://sc-devel.s3.eu-central-1.amazonaws.com/Skins/SMCService.js"></script>
+<!-- < script async = 'async' src = 'https://www.googletagservices.com/tag/js/gpt.js' ></script > -->
+<script>
+	var googletag = googletag || {};
+	googletag.cmd = googletag.cmd || [];
+</script>
+
+<script src="https://sc-devel.s3.eu-central-1.amazonaws.com/sc-tagmanager/hlp.js"></script>
+<script src="https://cdn.smartclip-services.com/v1/Storage-a482323/smartclip-services/HeaderBidding/js/SmartclipConfig.js" async="async"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', () => {
+      var n = 'hacesfalta';
+      var r = 'es';
+      var e = 'smartIntxt';
+      var c = '';
+      var p = '119748';
+      var t = 'https://des.smartclip.net/ads?sc_sitName='+n+'&sc_cc='+r+'&elementId='+e+'&cat='+c;
+      t+='&ref='+encodeURIComponent(window.top.document.URL)+'&rnd='+Math.round(Math.random()*1e8)+'&plc='+p;
+      var s=document.createElement('script');s.type='text/javascript';s.src=t;document.body.appendChild(s);
+	  });
+</script>
+<meta property="og:image" content="https://www.hacesfalta.org/images/images/ofertas-empleo.jpg" /><meta property="og:title" content=""/><link rel="canonical" href="https://www.hacesfalta.org/oportunidades/remuneradas/Default.aspx"/>
+
+<script type="text/javascript">
+    const idTiposOportunidadList = [2,5,6];
+    const maxItems = 3;
+    const IdItemDiplay = 'oportunidades-recomendadas'
+    document.addEventListener('DOMContentLoaded', async () => {
+        var lat = 0;
+        var lon = 0;
+        try {
+            if ('geolocation' in navigator) {
+                const position = await getCurrentPosition();
+                lat = position.coords.latitude;
+                lon = position.coords.longitude;
+            } else {
+                console.info("Geolocalización no es soportada por este navegador.");
+            }
+        } catch (e) {
+            console.error(e);
+        }
+
+        try {
+
+           
+            const response = await fetch('/oportunidades/recomendador/default.aspx/Recomendar', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json; charset=utf-8',
+                    'Cache-Control': 'no-cache, no-store, must-revalidate',
+                    'Pragma': 'no-cache',
+                    'Expires': '0'
+                },
+                body: JSON.stringify({ latitud: lat, longitud: lon, idTiposOportunidadList, maxItems })
+            });
+
+            if (response.ok) {
+                const result = await response.json();
+                if (result.d?.length > 0) {
+                    document.getElementById('result').innerHTML = result.d;
+                    document.getElementById(IdItemDiplay).style.display = 'block';
+                }
+
+            } else {
+                console.error('Error al obtener las recomendaciones:', response.statusText);
+            }
+        } catch (error) {
+            logError(error);
+        }
+
+    });
+
+    function getCurrentPosition(options) {
+        return new Promise((resolve, reject) => {
+            navigator.geolocation.getCurrentPosition(resolve, reject, options);
+        });
+    }
+
+    function logError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                console.info("El usuario denegó la solicitud de geolocalización.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                console.info("La información de la ubicación no está disponible.");
+                break;
+            case error.TIMEOUT:
+                console.info("La solicitud para obtener la ubicación ha caducado.");
+                break;
+            case error.UNKNOWN_ERROR:
+                console.info("Se ha producido un error desconocido.");
+                break;
+        }
+    }
+</script>
+
+<meta name="description" content="Técnico/a de prevención de riesgos laborales. Aldeas Infantiles SOS impulsa el buen trato a la infancia a través de su Política de Protección Infantil. " /><meta name="keywords" content="ofertas trabajo ong, trabajo ong, empleo ong, trabajar ong Ofertas de trabajo en ONG" /></head>
+<body id="page-top">
+    <!--Publicidad-->
+    
+        
+
+<div class="container banner-superior d-block d-md-block text-center mb-4">
+    
+	<div id='sc-top' class="sc-top"></div>
+</div>
+
+
+    
+
+    
+    <!--Cabecera y navegación-->
+    
+    <nav class="navbar navbar-expand-lg fixed-top bg-body py-md-3" id="nav-cabecera">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="/">
+                <img class="logo-hf img-fluid w-100" src="/images/logo-HF.svg" alt="hacesfalta.org"></a>
+            <button data-bs-toggle="collapse" class="navbar-toggler btn-buscador border-0" data-bs-target="#nav-cabecera-opciones" id="navbar-toggler"><span class="visually-hidden">Toggle navigation</span><span class="navbar-toggler-icon"><span></span></span></button>
+            <div class="collapse navbar-collapse text-center" id="nav-cabecera-opciones">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item nav-item-voluntariado"><a class="nav-link" href="/oportunidades/">Voluntariado</a></li>
+                    <li class="nav-item nav-item-empleo"><a class="nav-link" href="/oportunidades/remuneradas/">Empleo</a></li>
+                    <li class="nav-item nav-item-donaciones"><a class="nav-link" href="/donaciones/proyectos/">Donaciones</a></li>
+                    <li class="nav-item nav-item-transparencia"><a class="nav-link" href="/transparencia-ong/">Transparencia</a></li>
+                </ul>
+
+                <button id="cphModalDonar_HPDonacionIntro_btnAbrirModalOculto" type="button" class="btn bg-donaciones text-white me-2" data-bs-toggle="modal" data-bs-target="#modal-donacion">
+        Donar
+    </button>
+        <div id="botones-registro">
+            <a role="button" class="btn btn-primary text-decoration-none" data-bs-toggle="modal" data-bs-target="#modal-registro">Acceso <span class="mx-1">|</span> Registro</a>
+        </div>
+     
+
+
+
+            </div>
+			<div style="position: fixed;right: 1rem;bottom: 10rem;display: block;padding-top: 12px;" id="smartIntxt"></div>
+
+            <a class="scroll-to-top" href="#page-top"><i class="fas fa-angle-up"></i></a>
+			
+        </div>
+    </nav>
+   
+    <!--Fin cabecera-->
+    <div>
+        
+    <div class="container mt-0 mt-md-4" id="container-voluntariado">
+        <script src="/oportunidades/remuneradas/searchOpRemAppVue.js"></script>
+        <form id="filtrosApp"  action="/oportunidades/remuneradas/Default.aspx"  method="get" v-cloak>
+            <div class="row">
+                
+                <div class="col-md-3" id="filtros">
+                    <div><a class="text-end mb-3 w-100 d-block d-none" data-bs-toggle="collapse" aria-expanded="false" aria-controls="collapse-filtros" href="#collapse-filtros" role="button"><span class="material-symbols-rounded align-middle me-2"> tune </span>Filtros</a>
+                        <div class="collapse" id="collapse-filtros">
+                            <div class="d-block d-md-none pt-4"><a class="text-end mb-3 w-100 d-block" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-filtros" href="#collapse-filtros" role="button"><span class="material-symbols-rounded align-middle me-2"> close </span>Cerrar filtros</a></div>
+
+                            
+                             
+     <div id="alertas" class="w-100 mx-auto d-grid">
+     <button class="btn btn-outline-primary fw-bold border-2 btn-alerta" type="button" data-bs-toggle="modal" data-bs-target="#modal-alertas">
+         <svg xmlns="http://www.w3.org/2000/svg" height="1em" viewBox="0 0 24 24" width="1em" fill="currentColor" class="fs-5 align-middle me-2">
+             <path d="M0 0h24v24H0V0z" fill="none"></path>
+             <path d="M12 22c1.1 0 2-.9 2-2h-4c0 1.1.89 2 2 2zm6-6v-5c0-3.07-1.64-5.64-4.5-6.32V2.5h-3v2.18C7.63 5.36 6 7.92 6 11v5l-2 2v1h16v-1l-2-2z"></path>
+         </svg>
+          Crear alerta
+
+     </button>
+ </div>
+
+                            
+                            
+                            <div  class="mt-5 mb-4">
+                                <select class="border-2 form-select mb-3" id="fTipoOportunidadVoluntariado"  @change="buscar('fTipoOportunidadVoluntariado')">
+                                    <optgroup label="Tipo Remunerada">
+                                        <option value="" >Tipo Remunerada</option>
+                                        <option v-for="item in tipoOportunidadVoluntariado" :key="item.Valor" :value="item.Valor" :selected="item.Seleccionado" >{{ item.Nombre }}</option>
+                                    </optgroup>
+                                </select>
+                                <select class="border-2 form-select mb-3" name="fCategorias" @change="buscar">
+                                    <optgroup label="Categorías">
+                                        <option value="" >Categoría</option>
+                                        <option v-for="item in categorias" :key="item.Valor" :value="item.Valor" :selected="item.Seleccionado" >{{ item.Nombre }}</option>
+
+                                    </optgroup>
+                                </select>
+                                <div class="">
+                                    <label class="visually-hidden" for="lugar">Lugar</label>
+                                    
+                                    <div class="input-group flex-nowrap campo-provincia">
+                                        <input class="form-control" :class="{'form-control-disabled': hayUbicacionSeleccionada() }" type="text" :disabled="hayUbicacionSeleccionada()"
+                                            @input="(event) => ubicacionClave = event.target.value"
+                                            v-on:blur="cerrarLista"  v-model="ubicacionClave" v-on:input="filtraUbicaciones" v-on:keydown.enter="validarBusqueda" placeholder="Municipio, Provincia o Pais"  autocomplete="no-completar">
+                                        <span class="input-group-text bg-transparent border-0 px-0 py-0" id="addon-wrapping"><button type="button" class="btn p-0" v-if="ubicacionClave" v-on:click="limpiarUbicacion" title="Borrar"><span class="material-symbols-outlined">close</span></button></span>
+                                    </div>
+                                    <ul v-if="ubicacionesFiltradas.length > 0 || (ubicacionSinResultados && ubicacionClave)" class="dropdown-menu show">
+                                        <li v-if="ubicacionesFiltradas.length > 0" class="dropdown-item"  v-on:mousedown="evitarEventDefault"  v-for="ubicacion in ubicacionesFiltradas"
+                                            v-bind:key="ubicacion.Valor"  v-on:click="seleccionaUbicacion(ubicacion)"  v-on:mousedown.prevent="evitarEventDefault">{{ ubicacion.Nombre }}
+                                            <span v-if="esAmbigua(ubicacion)">({{ ubicacion.Tipo }})</span>
+                                        </li>
+                                        <li v-if="ubicacionSinResultados && ubicacionClave" class="dropdown-item text-danger"><span class="material-symbols-rounded align-middle mb-1">info</span>Ubicación no disponible.</li>
+                                    </ul>
+                                    <input type="hidden" v-if="paisSel" name="fPaises" v-bind:value="paisSel" />
+                                    <input type="hidden" v-if="provinciaSel" name="bsProvincia" v-bind:value="provinciaSel" />
+                                    <input type="hidden" v-if="localidadSel" name="fLocalidades" v-bind:value="localidadSel" />
+                                </div>
+                              
+                                
+                                <div v-show="niveles.length>0">
+                                    <hr>
+                                    <p class="fw-bold">Nivel</p>
+                                   
+                                        <table class="table table-borderless mb-0">
+                                            <tbody>
+                                                <tr v-for="x in niveles" :key="x.Valor">
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input name="fIdNivel" class="form-check-input" type="checkbox" :id="'nivel-' + x.Valor" :value="x.Valor" v-model="x.Seleccionado" @click="buscar" >
+                                                            <label 
+                                                            class="form-check-label d-inline" 
+                                                            :for="'nivel-' + x.Valor" 
+                                                            v-html="'<span>' + x.Nombre + '</span><div class=&quot;float-end&quot;>' + x.Total + '</div>'">
+                                                            </label>
+                                                        </div>
+                                                    </td>
+
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    
+                                </div>
+                                <div v-show="tipoOferta.length>0">
+                                    <hr>
+                                    <p class="fw-bold">Tipo de oferta</p>
+                                    <table class="table table-borderless mb-0">
+                                        <tbody>
+                                            <tr v-for="x in tipoOferta" :key="x.Valor">
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input name="fTipoOferta" class="form-check-input" type="checkbox" :id="'tipoOferta-' + x.Valor" :value="x.Valor" v-model="x.Seleccionado" @click="buscar">
+                                                        <label 
+                                                        class="form-check-label d-inline" 
+                                                        :for="'tipoOferta-' + x.Valor" 
+                                                        v-html="'<span>' + x.Nombre + '</span><div class=&quot;float-end&quot;>' + x.Total + '</div>'">
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div v-show="tiposContrato.length>0">
+                                    <hr>
+                                    <p class="fw-bold">Tipo contrato</p>
+                                    <table class="table table-borderless mb-0">
+                                        <tbody>
+                                            <tr v-for="x in tiposContrato" :key="x.Valor">
+                                                <td>
+                                                    <div class="form-check">
+                                                        <input name="fIdTipoContrato" class="form-check-input" type="checkbox" :id="'tipoContrato-' + x.Valor" :value="x.Valor" v-model="x.Seleccionado" @click="buscar">
+                                                        <label 
+                                                        class="form-check-label d-inline" 
+                                                        :for="'tipoContrato-' + x.Valor" 
+                                                        v-html="'<span>' + x.Nombre + '</span><div class=&quot;float-end&quot;>' + x.Total + '</div>'">
+                                                        </label>
+                                                    </div>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                
+                                <div v-show="shouldShowDuraciones">
+                                    <hr>
+                                    <p class="fw-bold">Duración</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless mb-0">
+                                            <tbody>
+                                                <tr v-for="x in duraciones" :key="x.Valor">
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input name="fIdDuracion" class="form-check-input" type="checkbox" :id="'duracion-' + x.Valor" :value="x.Valor" v-model="x.Seleccionado" @click="buscar">
+                                                            <label 
+                                                            class="form-check-label d-inline" 
+                                                            :for="'duracion-' + x.Valor" 
+                                                            v-html="'<span>' + x.Nombre + '</span><div class=&quot;float-end&quot;>' + x.Total + '</div>'">
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <a class="mostrar-mas small mt-3 d-block" @click="toggleDuracion" v-if="verDuracionMas">Mostrar más<span class="fs-6 material-symbols-rounded align-middle ms-2">keyboard_arrow_down</span></a>
+                                    <a class="small mt-3 d-block mostrar-menos" @click="toggleDuracion" v-if="verDuracionMenos">Mostrar menos <span class="fs-6 material-symbols-rounded align-middle ms-2">keyboard_arrow_up</span></a>
+                                </div>
+                                <div v-show="shouldShowExperiencias">
+                                    <hr>
+                                    <p class="fw-bold">Experiencia</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless mb-0">
+                                            <tbody>
+                                                <tr v-for="x in experiencias" :key="x.Valor">
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input name="fIdExperiencia" class="form-check-input" type="checkbox" :id="'experiencia-' + x.Valor" :value="x.Valor" v-model="x.Seleccionado" @click="buscar">
+                                                            <label 
+                                                            class="form-check-label d-inline" 
+                                                            :for="'experiencia-' + x.Valor" 
+                                                            v-html="'<span>' + x.Nombre + '</span><div class=&quot;float-end&quot;>' + x.Total + '</div>'">
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <a class="mostrar-mas small mt-3 d-block" @click="toggleExperiencia" v-if="verExperienciaMas">Mostrar más<span class="fs-6 material-symbols-rounded align-middle ms-2">keyboard_arrow_down</span></a>
+                                    <a class="small mt-3 d-block mostrar-menos" @click="toggleExperiencia" v-if="verExperienciaMenos">Mostrar menos <span class="fs-6 material-symbols-rounded align-middle ms-2">keyboard_arrow_up</span></a>
+                                </div>
+                               
+                                <div v-show="salarios.length>0">
+                                    <hr>
+                                    <p class="fw-bold">Salario</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless mb-0">
+                                            <tbody>
+                                                <tr v-for="x in salarios" :key="x.Valor">
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input name="fIdSalario" class="form-check-input" type="checkbox" :id="'salario-' + x.Valor" :value="x.Valor" v-model="x.Seleccionado" @click="buscar">
+                                                            <label 
+                                                            class="form-check-label d-inline" 
+                                                            :for="'salario-' + x.Valor" 
+                                                            v-html="'<span>' + x.Nombre + '</span><div class=&quot;float-end&quot;>' + x.Total + '</div>'">
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <a class="mostrar-mas small mt-3 d-block" @click="toggleSalario" v-if="verSalarioMas">Mostrar más<span class="fs-6 material-symbols-rounded align-middle ms-2">keyboard_arrow_down</span></a>
+                                    <a class="small mt-3 d-block mostrar-menos" @click="toggleSalario" v-if="verSalarioMenos">Mostrar menos <span class="fs-6 material-symbols-rounded align-middle ms-2">keyboard_arrow_up</span></a>
+                                </div>
+                                
+                                <div v-show="profesiones.length>0">
+                                    <hr>
+                                    <p class="fw-bold">Profesión</p>
+                                    <div class="table-responsive">
+                                        <table class="table table-borderless mb-0">
+                                            <tbody>
+                                                <tr v-for="x in profesiones" :key="x.Valor">
+                                                    <td>
+                                                        <div class="form-check">
+                                                            <input name="fIdProfesion" class="form-check-input" type="checkbox" :id="'profesion-' + x.Valor" :value="x.Valor" v-model="x.Seleccionado" @click="buscar" >
+                                                            <label 
+                                                            class="form-check-label d-inline" 
+                                                            :for="'profesion-' + x.Valor" 
+                                                            v-html="'<span>' + x.Nombre + '</span><div class=&quot;float-end&quot;>' + x.Total + '</div>'">
+                                                            </label>
+                                                        </div>
+                                                    </td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    <a class="mostrar-mas small mt-3 d-block" @click="toggleProfesion" v-if="verProfesionMas">Mostrar más<span class="fs-6 material-symbols-rounded align-middle ms-2">keyboard_arrow_down</span></a>
+                                    <a class="small mt-3 d-block mostrar-menos" @click="toggleProfesion" v-if="verProfesionMenos">Mostrar menos <span class="fs-6 material-symbols-rounded align-middle ms-2">keyboard_arrow_up</span></a>
+                                </div>
+
+                                <!--fin paramtros de busqueda-->
+                            </div>
+                            <!--</form>--> 
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" id="cuerpo-voluntariado">
+                    <div class="d-flex flex-column">
+                        <h1 class="mb-3">Empleos que ayudan a cambiar el mundo</h1>
+                        <div class="order-first order-md-last row buscador-voluntariado pb-0 my-3 mt-0" id="buscador-voluntariado">
+                            <div class="col-sm-9 col-md-8 col-lg-9 col-xl-9 order-1 order-md-2">
+                                <input class="form-control form-control" type="text" name="clave" :value="clave" placeholder="Buscar por palabras...">
+                                <span class="help">{{numResultados}} oportunidades</span> 
+                            </div>
+                            <div class="col-sm col-md-4 col-lg-3 col-xl-3 order-4"><button class="btn btn-primary w-100 btn-buscador d-block mt-2 mt-sm-0 d-sm-block" type="submit">Buscar</button></div>
+                        </div>
+                    </div>
+                    
+                    <div class="d-block d-md-none">
+                        <a class="text-end mb-3 w-100 d-block" data-bs-toggle="collapse" aria-expanded="true" aria-controls="collapse-filtros" href="#collapse-filtros" role="button">
+                            <span class="material-symbols-rounded align-middle me-2"> tune </span>Filtros
+                        </a>
+                    </div>
+
+                    
+
+<div class="row align-items-center g-1 small">
+    <div class="col-auto">
+        <a href="/oportunidades/remuneradas/Default.aspx?pageIndex=1&volver=&&forden=fechapubli&fordendir=asc" id="cphContenido_BuscadorOrdenLista2024_hlOrdenDir" alt="cambiar ordenación" title="Ordenar por Fecha de publicación ascendente">
+            <span class="fs-6 material-symbols-outlined">swap_vert</span>
+        </a>
+    </div>
+    <div class="col-auto">
+        <label class="col-form-label" for="ddOderby">Ordenar por:</label>
+    </div>
+    <div class="col-auto">
+        <select class="form-select-sm form-control border-0 form-select" id="ddOderby">
+            <option id="cphContenido_BuscadorOrdenLista2024_ordenFp" value="/oportunidades/remuneradas/Default.aspx?pageIndex=1&amp;volver=&amp;&amp;forden=fechapubli&amp;fordendir=desc" selected="">Fecha de publicación</option>
+            <option id="cphContenido_BuscadorOrdenLista2024_ordenInfoTa" value="/oportunidades/remuneradas/Default.aspx?pageIndex=1&amp;volver=&amp;&amp;forden=infotransparencia&amp;fordendir=desc">Información de transparencia</option>
+            <option id="cphContenido_BuscadorOrdenLista2024_ordenVal" value="/oportunidades/remuneradas/Default.aspx?pageIndex=1&amp;volver=&amp;&amp;forden=valoracion&amp;fordendir=desc">Valoración</option>
+            <option id="cphContenido_BuscadorOrdenLista2024_ordenFl" value="/oportunidades/remuneradas/Default.aspx?pageIndex=1&amp;volver=&amp;&amp;forden=fechalimite&amp;fordendir=asc">Fecha límite</option>
+            
+        </select>
+    </div>
+</div>
+
+                    
+
+
+
+                    <div id="oportunidades-recomendadas" class="py-4 py-xl-5" style="display: none;">
+                        <h2 class="mt-4 mb-3">Oportunidades recomendadas para ti</h2>
+                        
+
+<div id="result"></div>
+
+
+
+
+
+
+                    </div>
+                    
+        <div id="cphContenido_ListaOportunidades_rptOportunidades_marcoItem_0" class="card mb-4 card-oportunidad card-empleo">
+            <a href="/oportunidades/remuneradas/detalle/tecnicoa-de-prevencion-de-riesgos-laborales/279238" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresaCover_0" class="cover-link"></a>
+            <div class="row g-0">
+                <div class="col-lg-4">
+                    <div class="align-items-md-end card-body row pb-0 pb-lg-3">
+                        <div class="col-6 col-lg-12">
+                            <a href="/oportunidades/remuneradas/detalle/tecnicoa-de-prevencion-de-riesgos-laborales/279238" id="cphContenido_ListaOportunidades_rptOportunidades_aOpor_0">
+                                <div class="ratio ratio-4x3 mb-2">
+                                    <img src="/IO/Ong/Logos/2225e083a4-855f-43ee-bfb2-8f8160a193e9.jpg" id="cphContenido_ListaOportunidades_rptOportunidades_iOpor_0" class="fit-cover" alt="Técnico/a de prevención de riesgos laborales" />
+                                </div>
+                            </a>
+                            
+                        </div>
+                        <div class="rate-info col-6 col-lg-12 ps-0 ps-lg-3 small">
+                            
+                            <br />
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body ps-lg-0 pt-0 pt-lg-3">
+                        
+                        <div class="badges-oportunidades mb-2">
+
+                            
+
+                            <span class="badge bg-primary fw-normal me-2 border border-primary text-truncate" style="max-width: 150px;">
+                                RRHH/Gestión de personas </span>
+                            <span class="badge bg-primary fw-normal bg-transparent text-primary border border-primary text-truncate" style="max-width: 150px;">
+                                Empleo</span>
+                        </div>
+                        <h2 class="fs-5 fw-semibold card-title">
+                            <a href="/oportunidades/remuneradas/detalle/tecnicoa-de-prevencion-de-riesgos-laborales/279238" id="cphContenido_ListaOportunidades_rptOportunidades_lkTitulo_0">Técnico/a de prevención de riesgos laborales</a></h2>
+                        <p class="color-gray-400 pb-0 mb-2 mb-lg-4">
+                            <a href="/transparencia-ong/aldeas-infantiles-sos-de-espaa/delegacion/detalle/5" id="cphContenido_ListaOportunidades_rptOportunidades_aOng_0">Aldeas Infantiles SOS de España</a>
+                            |
+                            España(Madrid)
+                        </p>
+
+                        <p class="d-none d-lg-block card-text small descripcion mb-2">
+                            Aldeas Infantiles SOS impulsa el buen trato a la infancia a través de su Política de Protección Infantil. Nos implicamos en la promoción de una organización segura, condenando enérgicamente cualqu...
+                        </p>
+                        
+                            <p class="card-text respuesta">
+                                <small class="color-gray-400">
+                                    % de respuesta: 29,46%</small>
+                                
+    <span class="fs-6 fw-semibold material-symbols-rounded color-gray-400 ms-1" data-bs-toggle="tooltip" data-bs-tooltip="" data-bs-original-title="Porcentaje de respuesta que la ONG da a sus candidatos. Algunas ONG solo responden si el perfil del candidato/a se ajusta a la oferta.">info</span>
+                                
+                            </p>
+                        
+
+                        <div class="text-left w-100 d-grid d-md-block">
+                            <a href="/oportunidades/remuneradas/detalle/tecnicoa-de-prevencion-de-riesgos-laborales/279238" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresa_0" class="btn btn-primary mt-3 btn-call mx-0 mx-md-auto" style="color: var(--bs-white)!important;">Me interesa</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    
+        <div id="cphContenido_ListaOportunidades_rptOportunidades_marcoItem_1" class="card mb-4 card-oportunidad card-empleo">
+            <a href="/oportunidades/remuneradas/detalle/psiclega-infanto-juvenil/279237" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresaCover_1" class="cover-link"></a>
+            <div class="row g-0">
+                <div class="col-lg-4">
+                    <div class="align-items-md-end card-body row pb-0 pb-lg-3">
+                        <div class="col-6 col-lg-12">
+                            <a href="/oportunidades/remuneradas/detalle/psiclega-infanto-juvenil/279237" id="cphContenido_ListaOportunidades_rptOportunidades_aOpor_1">
+                                <div class="ratio ratio-4x3 mb-2">
+                                    <img src="/IO/Ong/Logos/90649f8da3-3524-47c0-90b4-9948d719238c.png" id="cphContenido_ListaOportunidades_rptOportunidades_iOpor_1" class="fit-cover" alt="Psicòleg/a infanto-juvenil" />
+                                </div>
+                            </a>
+                            
+                        </div>
+                        <div class="rate-info col-6 col-lg-12 ps-0 ps-lg-3 small">
+                            
+                                <p class="card-text mb-1 mb-lg-2">
+                                    <span class="fs-5 fw-semibold text-success material-symbols-rounded">
+                                        checkcheck</span>
+                                    <small class="small color-gray-600 d-block">Información de transparencia</small>
+                                </p>
+                            
+                            <br />
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body ps-lg-0 pt-0 pt-lg-3">
+                        
+                        <div class="badges-oportunidades mb-2">
+
+                            
+
+                            <span class="badge bg-primary fw-normal me-2 border border-primary text-truncate" style="max-width: 150px;">
+                                Atención Directa </span>
+                            <span class="badge bg-primary fw-normal bg-transparent text-primary border border-primary text-truncate" style="max-width: 150px;">
+                                Empleo</span>
+                        </div>
+                        <h2 class="fs-5 fw-semibold card-title">
+                            <a href="/oportunidades/remuneradas/detalle/psiclega-infanto-juvenil/279237" id="cphContenido_ListaOportunidades_rptOportunidades_lkTitulo_1">Psicòleg/a infanto-juvenil</a></h2>
+                        <p class="color-gray-400 pb-0 mb-2 mb-lg-4">
+                            <a href="/transparencia-ong/bayt-al-thaqafa/delegacion/detalle/89" id="cphContenido_ListaOportunidades_rptOportunidades_aOng_1">Bayt Al-Thaqafa</a>
+                            |
+                            España(Barcelona)
+                        </p>
+
+                        <p class="d-none d-lg-block card-text small descripcion mb-2">
+                            1. Identificaci&oacute; del lloc de treball
+Posici&oacute; de psic&ograve;leg/a infanto-juvenil pel programa d&rsquo;inf&agrave;ncia i adolesc&egrave;ncia.
+
+2. Descripci&oacute; del lloc de tre...
+                        </p>
+                        
+                            <p class="card-text respuesta">
+                                <small class="color-gray-400">
+                                    % de respuesta: 53,98%</small>
+                                
+    <span class="fs-6 fw-semibold material-symbols-rounded color-gray-400 ms-1" data-bs-toggle="tooltip" data-bs-tooltip="" data-bs-original-title="Porcentaje de respuesta que la ONG da a sus candidatos. Algunas ONG solo responden si el perfil del candidato/a se ajusta a la oferta.">info</span>
+                                
+                            </p>
+                        
+
+                        <div class="text-left w-100 d-grid d-md-block">
+                            <a href="/oportunidades/remuneradas/detalle/psiclega-infanto-juvenil/279237" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresa_1" class="btn btn-primary mt-3 btn-call mx-0 mx-md-auto" style="color: var(--bs-white)!important;">Me interesa</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    
+        <div id="cphContenido_ListaOportunidades_rptOportunidades_marcoItem_2" class="card mb-4 card-oportunidad card-empleo">
+            <a href="/oportunidades/remuneradas/detalle/psicologoa-caf-madrid--servicio-de-apoyo-a-la-crianza-/279236" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresaCover_2" class="cover-link"></a>
+            <div class="row g-0">
+                <div class="col-lg-4">
+                    <div class="align-items-md-end card-body row pb-0 pb-lg-3">
+                        <div class="col-6 col-lg-12">
+                            <a href="/oportunidades/remuneradas/detalle/psicologoa-caf-madrid--servicio-de-apoyo-a-la-crianza-/279236" id="cphContenido_ListaOportunidades_rptOportunidades_aOpor_2">
+                                <div class="ratio ratio-4x3 mb-2">
+                                    <img src="/IO/Ong/Logos/199320371cd8-9303-47e0-a150-83386ae62f10.png" id="cphContenido_ListaOportunidades_rptOportunidades_iOpor_2" class="fit-cover" alt="Psicologo/a  caf madrid ( servicio de apoyo a la crianza) " />
+                                </div>
+                            </a>
+                            
+                        </div>
+                        <div class="rate-info col-6 col-lg-12 ps-0 ps-lg-3 small">
+                            
+                            <br />
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body ps-lg-0 pt-0 pt-lg-3">
+                        
+                        <div class="badges-oportunidades mb-2">
+
+                            
+
+                            <span class="badge bg-primary fw-normal me-2 border border-primary text-truncate" style="max-width: 150px;">
+                                Atención Directa </span>
+                            <span class="badge bg-primary fw-normal bg-transparent text-primary border border-primary text-truncate" style="max-width: 150px;">
+                                Empleo</span>
+                        </div>
+                        <h2 class="fs-5 fw-semibold card-title">
+                            <a href="/oportunidades/remuneradas/detalle/psicologoa-caf-madrid--servicio-de-apoyo-a-la-crianza-/279236" id="cphContenido_ListaOportunidades_rptOportunidades_lkTitulo_2">Psicologo/a  caf madrid ( servicio de apoyo a la crianza) </a></h2>
+                        <p class="color-gray-400 pb-0 mb-2 mb-lg-4">
+                            <a href="/transparencia-ong/aprome/delegacion/detalle/27523" id="cphContenido_ListaOportunidades_rptOportunidades_aOng_2">APROME</a>
+                            |
+                            España(Madrid)
+                        </p>
+
+                        <p class="d-none d-lg-block card-text small descripcion mb-2">
+                            Funciones:
+
+Orientaci&oacute;n y asesoramiento psicol&oacute;gico e intervenci&oacute;n de pareja, familiar y grupal.
+
+Formador en los grupos y talleres dirigidos a las familias y profesionale...
+                        </p>
+                        
+                            <p class="card-text respuesta">
+                                <small class="color-gray-400">
+                                    % de respuesta: 67,42%</small>
+                                
+    <span class="fs-6 fw-semibold material-symbols-rounded color-gray-400 ms-1" data-bs-toggle="tooltip" data-bs-tooltip="" data-bs-original-title="Porcentaje de respuesta que la ONG da a sus candidatos. Algunas ONG solo responden si el perfil del candidato/a se ajusta a la oferta.">info</span>
+                                
+                            </p>
+                        
+
+                        <div class="text-left w-100 d-grid d-md-block">
+                            <a href="/oportunidades/remuneradas/detalle/psicologoa-caf-madrid--servicio-de-apoyo-a-la-crianza-/279236" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresa_2" class="btn btn-primary mt-3 btn-call mx-0 mx-md-auto" style="color: var(--bs-white)!important;">Me interesa</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    
+        <div id="cphContenido_ListaOportunidades_rptOportunidades_marcoItem_3" class="card mb-4 card-oportunidad card-empleo">
+            <a href="/oportunidades/remuneradas/detalle/auxiliar-educativoa-nocturno-escorial-temporal/279235" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresaCover_3" class="cover-link"></a>
+            <div class="row g-0">
+                <div class="col-lg-4">
+                    <div class="align-items-md-end card-body row pb-0 pb-lg-3">
+                        <div class="col-6 col-lg-12">
+                            <a href="/oportunidades/remuneradas/detalle/auxiliar-educativoa-nocturno-escorial-temporal/279235" id="cphContenido_ListaOportunidades_rptOportunidades_aOpor_3">
+                                <div class="ratio ratio-4x3 mb-2">
+                                    <img src="/IO/Ong/Logos/2225e083a4-855f-43ee-bfb2-8f8160a193e9.jpg" id="cphContenido_ListaOportunidades_rptOportunidades_iOpor_3" class="fit-cover" alt="Auxiliar educativo/a nocturno (escorial)- temporal" />
+                                </div>
+                            </a>
+                            
+                        </div>
+                        <div class="rate-info col-6 col-lg-12 ps-0 ps-lg-3 small">
+                            
+                            <br />
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body ps-lg-0 pt-0 pt-lg-3">
+                        
+                        <div class="badges-oportunidades mb-2">
+
+                            
+
+                            <span class="badge bg-primary fw-normal me-2 border border-primary text-truncate" style="max-width: 150px;">
+                                Atención Directa </span>
+                            <span class="badge bg-primary fw-normal bg-transparent text-primary border border-primary text-truncate" style="max-width: 150px;">
+                                Empleo</span>
+                        </div>
+                        <h2 class="fs-5 fw-semibold card-title">
+                            <a href="/oportunidades/remuneradas/detalle/auxiliar-educativoa-nocturno-escorial-temporal/279235" id="cphContenido_ListaOportunidades_rptOportunidades_lkTitulo_3">Auxiliar educativo/a nocturno (escorial)- temporal</a></h2>
+                        <p class="color-gray-400 pb-0 mb-2 mb-lg-4">
+                            <a href="/transparencia-ong/aldeas-infantiles-sos-de-espaa/delegacion/detalle/5" id="cphContenido_ListaOportunidades_rptOportunidades_aOng_3">Aldeas Infantiles SOS de España</a>
+                            |
+                            España(Madrid)
+                        </p>
+
+                        <p class="d-none d-lg-block card-text small descripcion mb-2">
+                            Aldeas Infantiles SOS impulsa el buen trato a la infancia a través de su Política de Protección Infantil. Nos implicamos en la promoción de una organización segura, condenando enérgicamente cualqu...
+                        </p>
+                        
+                            <p class="card-text respuesta">
+                                <small class="color-gray-400">
+                                    % de respuesta: 29,46%</small>
+                                
+    <span class="fs-6 fw-semibold material-symbols-rounded color-gray-400 ms-1" data-bs-toggle="tooltip" data-bs-tooltip="" data-bs-original-title="Porcentaje de respuesta que la ONG da a sus candidatos. Algunas ONG solo responden si el perfil del candidato/a se ajusta a la oferta.">info</span>
+                                
+                            </p>
+                        
+
+                        <div class="text-left w-100 d-grid d-md-block">
+                            <a href="/oportunidades/remuneradas/detalle/auxiliar-educativoa-nocturno-escorial-temporal/279235" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresa_3" class="btn btn-primary mt-3 btn-call mx-0 mx-md-auto" style="color: var(--bs-white)!important;">Me interesa</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    
+        <div id="cphContenido_ListaOportunidades_rptOportunidades_marcoItem_4" class="card mb-4 card-oportunidad card-empleo">
+            <a href="/oportunidades/remuneradas/detalle/preparadora-laboral-en-centro-de-diversidad-funcional/279234" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresaCover_4" class="cover-link"></a>
+            <div class="row g-0">
+                <div class="col-lg-4">
+                    <div class="align-items-md-end card-body row pb-0 pb-lg-3">
+                        <div class="col-6 col-lg-12">
+                            <a href="/oportunidades/remuneradas/detalle/preparadora-laboral-en-centro-de-diversidad-funcional/279234" id="cphContenido_ListaOportunidades_rptOportunidades_aOpor_4">
+                                <div class="ratio ratio-4x3 mb-2">
+                                    <img src="/images/foto-ong-300.png" id="cphContenido_ListaOportunidades_rptOportunidades_iOpor_4" class="fit-cover" alt="Preparador/a  laboral en centro de diversidad funcional" />
+                                </div>
+                            </a>
+                            
+                        </div>
+                        <div class="rate-info col-6 col-lg-12 ps-0 ps-lg-3 small">
+                            
+                            <br />
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body ps-lg-0 pt-0 pt-lg-3">
+                        
+                        <div class="badges-oportunidades mb-2">
+
+                            
+
+                            <span class="badge bg-primary fw-normal me-2 border border-primary text-truncate" style="max-width: 150px;">
+                                Atención Directa </span>
+                            <span class="badge bg-primary fw-normal bg-transparent text-primary border border-primary text-truncate" style="max-width: 150px;">
+                                Empleo</span>
+                        </div>
+                        <h2 class="fs-5 fw-semibold card-title">
+                            <a href="/oportunidades/remuneradas/detalle/preparadora-laboral-en-centro-de-diversidad-funcional/279234" id="cphContenido_ListaOportunidades_rptOportunidades_lkTitulo_4">Preparador/a  laboral en centro de diversidad funcional</a></h2>
+                        <p class="color-gray-400 pb-0 mb-2 mb-lg-4">
+                            
+                            |
+                            España(Madrid)
+                        </p>
+
+                        <p class="d-none d-lg-block card-text small descripcion mb-2">
+                            Centro Ocupacional busca incorporar un/a Preparador/a Laboral para acompa&ntilde;ar y orientar profesionalmente a los alumnos del taller ocupacional y dinamizar un taller de papeler&iacute;a en el...
+                        </p>
+                        
+
+                        <div class="text-left w-100 d-grid d-md-block">
+                            <a href="/oportunidades/remuneradas/detalle/preparadora-laboral-en-centro-de-diversidad-funcional/279234" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresa_4" class="btn btn-primary mt-3 btn-call mx-0 mx-md-auto" style="color: var(--bs-white)!important;">Me interesa</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    
+        <div id="cphContenido_ListaOportunidades_rptOportunidades_marcoItem_5" class="card mb-4 card-oportunidad card-empleo">
+            <a href="/oportunidades/remuneradas/detalle/tecnico-de-administracion-y-logistica/279233" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresaCover_5" class="cover-link"></a>
+            <div class="row g-0">
+                <div class="col-lg-4">
+                    <div class="align-items-md-end card-body row pb-0 pb-lg-3">
+                        <div class="col-6 col-lg-12">
+                            <a href="/oportunidades/remuneradas/detalle/tecnico-de-administracion-y-logistica/279233" id="cphContenido_ListaOportunidades_rptOportunidades_aOpor_5">
+                                <div class="ratio ratio-4x3 mb-2">
+                                    <img src="/IO/Ong/Logos/1550188c15530-7102-4e2e-89a7-5c12492f7da2.png" id="cphContenido_ListaOportunidades_rptOportunidades_iOpor_5" class="fit-cover" alt="Técnico de administración y logística" />
+                                </div>
+                            </a>
+                            
+                        </div>
+                        <div class="rate-info col-6 col-lg-12 ps-0 ps-lg-3 small">
+                            
+                            <br />
+                            
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="card-body ps-lg-0 pt-0 pt-lg-3">
+                        
+                        <div class="badges-oportunidades mb-2">
+
+                            
+
+                            <span class="badge bg-primary fw-normal me-2 border border-primary text-truncate" style="max-width: 150px;">
+                                Atención Directa Administración y Finanzas </span>
+                            <span class="badge bg-primary fw-normal bg-transparent text-primary border border-primary text-truncate" style="max-width: 150px;">
+                                Empleo</span>
+                        </div>
+                        <h2 class="fs-5 fw-semibold card-title">
+                            <a href="/oportunidades/remuneradas/detalle/tecnico-de-administracion-y-logistica/279233" id="cphContenido_ListaOportunidades_rptOportunidades_lkTitulo_5">Técnico de administración y logística</a></h2>
+                        <p class="color-gray-400 pb-0 mb-2 mb-lg-4">
+                            <a href="/transparencia-ong/fundacion-gasol/delegacion/detalle/22323" id="cphContenido_ListaOportunidades_rptOportunidades_aOng_5">Fundación GASOL</a>
+                            |
+                            España(Barcelona)
+                        </p>
+
+                        <p class="d-none d-lg-block card-text small descripcion mb-2">
+                            T&Eacute;CNICO/A ADMINISTRACI&Oacute;N Y LOG&Iacute;STICA
+
+Sobre la Gasol Foundation
+
+Misi&oacute;n: La Gasol Foundation trabaja para mejorar la salud de los ni&ntilde;os y ni&ntilde;as promov...
+                        </p>
+                        
+                            <p class="card-text respuesta">
+                                <small class="color-gray-400">
+                                    % de respuesta: 100,00%</small>
+                                
+    <span class="fs-6 fw-semibold material-symbols-rounded color-gray-400 ms-1" data-bs-toggle="tooltip" data-bs-tooltip="" data-bs-original-title="Porcentaje de respuesta que la ONG da a sus candidatos. Algunas ONG solo responden si el perfil del candidato/a se ajusta a la oferta.">info</span>
+                                
+                            </p>
+                        
+
+                        <div class="text-left w-100 d-grid d-md-block">
+                            <a href="/oportunidades/remuneradas/detalle/tecnico-de-administracion-y-logistica/279233" id="cphContenido_ListaOportunidades_rptOportunidades_aMeInteresa_5" class="btn btn-primary mt-3 btn-call mx-0 mx-md-auto" style="color: var(--bs-white)!important;">Me interesa</a>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    
+
+
+
+                    <nav class="d-flex justify-content-center mt-5">
+        <ul class="pagination">
+            
+            
+            <li id="cphContenido_rptPag_litIndice_0" class="page-item active"><a class="page-link" href="#">1</a></li>
+            
+            
+                
+            
+            
+            <li id="cphContenido_rptPag_lkIndice_1" class="page-item"><a href="/oportunidades/remuneradas/Default.aspx?pageIndex=2&volver=&fOrden=FechaPubli&fOrdenDir=Desc" id="cphContenido_rptPag_lkIndice2_1" class="page-link">2</a></li>
+            
+                
+            
+            
+            <li id="cphContenido_rptPag_lkIndice_2" class="page-item"><a href="/oportunidades/remuneradas/Default.aspx?pageIndex=3&volver=&fOrden=FechaPubli&fOrdenDir=Desc" id="cphContenido_rptPag_lkIndice2_2" class="page-link">3</a></li>
+            
+                
+            
+            
+            <li id="cphContenido_rptPag_lkIndice_3" class="page-item"><a href="/oportunidades/remuneradas/Default.aspx?pageIndex=4&volver=&fOrden=FechaPubli&fOrdenDir=Desc" id="cphContenido_rptPag_lkIndice2_3" class="page-link">4</a></li>
+            
+                
+            
+            
+            <li id="cphContenido_rptPag_lkIndice_4" class="page-item"><a href="/oportunidades/remuneradas/Default.aspx?pageIndex=5&volver=&fOrden=FechaPubli&fOrdenDir=Desc" id="cphContenido_rptPag_lkIndice2_4" class="page-link">5</a></li>
+            
+                
+            
+            
+            
+            <li id="cphContenido_rptPag_litNext_5" class="page-item page-item-next"><a class="page-link page-item-next" aria-label="Next" href="/oportunidades/remuneradas/Default.aspx?pageIndex=6&volver=&fOrden=FechaPubli&fOrdenDir=Desc"><span aria-hidden="true" class="material-symbols-rounded fs-4">keyboard_arrow_right</span></a></li>
+                
+        </ul>
+    </nav>
+                </div>
+                <div class="col-md-3" id="publicidad">
+                    
+                </div>
+            </div>
+        </form>
+        <div id="hiddenCajasDestacados" style="display:none;">
+            
+<p class="small color-gray-400">PUBLICIDAD</p>
+
+<div>
+<p style="text-align: center;">&nbsp;&nbsp;</p>
+</div>
+<div>
+<p style="text-align: center;"><a href="https://wa.me/34613433907" target="new">             <img src="/userfiles/image/Nuria/columna-modificada.png" width="300" height="600" alt="" /></a></p>
+<p style="text-align: center;"><a href="https://www.inteligenciaartificialparaong.org/" target="new">             <img src="/userfiles/image/Nuria/2.png" width="300" height="250" alt="" /></a></p>
+</div>
+<div>
+<p style="text-align: center;">&nbsp;&nbsp;</p>
+</div>
+<div>
+<p style="text-align: center;"><a href="https://www.hazloinclusivo.org/" target="new"><img src="/userfiles/image/Nuria/Robapaginas%20para%20HF-modificado.jpg&#10;" width="300" height="250" alt="" /></a></p>
+</div>
+<div>
+<p style="text-align: center;">&nbsp;</p>
+</div>
+<p style="text-align: center;"><script>
+		googletag.cmd.push(function() {
+			googletag.display('sc-mpu-top');
+		});
+	</script></p>
+<!--SEGUNDO ADD-->
+<div id="sc-mpu-btf" class="sc-mpu-btf"><script>
+		googletag.cmd.push(function() {
+			googletag.display('sc-mpu-btf');
+		});
+	</script></div>
+<div class="RightBox">
+<div class="Content">
+<div class="Titulo2">
+<h2 style="text-align: center;">Con el apoyo de:&nbsp;</h2>
+</div>
+</div>
+</div>
+<p><img src="/userfiles/image/logos%20nuevos%202024/Logo-MA.jpg" width="239" height="77" alt="" /></p>
+
+
+        </div>
+
+        
+<div id="cphContenido_FormAlerta2024_divBtn">
+
+</div>
+<div id="formAlertaModalApp">
+    <div class="modal fade" role="dialog" tabindex="-1" id="modal-alertas">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content shadow">
+                <div class="modal-header">
+                    <h4 class="modal-title fw-semibold text-primary">Crear alerta</h4>
+                    <button class="btn-close" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <hr class="mt-0">
+                    <p>Recibe alertas de ofertas de empleo según tus preferencias directamente en tu email</p>
+                    <div class="alert alert-danger" v-if="divErrorAlerta">
+                        <strong>Corrija los siguientes errores</strong>:
+                        <span id="mailVacioErr" v-if="valMailVacio">
+                            <br />
+                            El campo e-mail es obligatorio
+                        </span>
+                        <span v-if="valMailnoEsMail">
+                            <br />
+                            La dirección de e-mail no es correcta. Asegurate de que no haya tildes.
+                        </span>
+                        <span v-if="valMailNoCoincide">
+                            <br />
+                            El campo e-mail y repetir e-mail no coinciden
+                        </span>
+                        <span v-if="valPoliticaNoAceptada">
+                            <br />
+                            Debes aceptar la politica de tratamiento de datos
+                        </span>
+                    </div>
+                    <div class="alert alert-success" v-if="divOkAlerta">
+                        <strong><span v-if="msgCreada">Tu alerta ha sido guardada</span></strong>
+                    </div>
+                    <div class="alert alert-info" v-if="divLoading">
+                        <button class="btn btn-lg btn-warning"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>Enviando datos...</button>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="text" placeholder="Email" v-model="email">
+                    </div>
+                    <div class="mb-3">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" v-model="chkPol">
+                            <label class="form-check-label" for="chkPol"> Acepto la <a href="https://www.hacesfalta.org/Contenido/?idPagina=1471">Política de privacidad</a>.</label>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="modal-footer d-flex justify-content-lg-center">
+                    <button class="btn btn-primary" type="button" @click="guardar" v-show="btnAlertGuardar">Crear</button>
+                    <button class="btn btn-secondary" type="button" data-bs-dismiss="modal" @click="cerrar"  v-show="btnAlertCerrar">Cerrar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+
+    const { createApp } = Vue;
+    const IdTipoOportunidadVoluntariado = '2';
+
+    createApp({
+        data() {
+            return {
+                divOkAlerta: false,
+                divErrorAlerta: false,
+                divLoading: false,
+                formAlertaShow: true,
+                btnAlertCancelar: true,
+                btnAlertGuardar: true,
+                btnAlertCerrar: false,
+                valMailVacio: false,
+                valMailnoEsMail: false,
+                valMailNoCoincide: false,
+                valPoliticaNoAceptada: false,
+                descripcion: "",
+                msgCreada: false,
+                email: "",
+                email2: "",
+                chkPol: false,
+                preferencias: ["Profesor de francés", "Profesor de francés", "Profesor de francés"],
+                IdTipoOportunidadVoluntariado: IdTipoOportunidadVoluntariado 
+            };
+        },
+        methods: {
+            inicializaModalAlerta() {
+                this.divOkAlerta = false;
+                this.divErrorAlerta = false;
+                this.divLoading = false;
+                this.formAlertaShow = true;
+                this.btnAlertCancelar = true;
+                this.btnAlertGuardar = true;
+                this.btnAlertCerrar = false;
+                this.valMailVacio = false;
+                this.valMailnoEsMail = false;
+                this.valMailNoCoincide = false;
+                this.valPoliticaNoAceptada = false;
+                this.descripcion = "";
+                this.msgCreada = false;
+                this.email = "";
+                this.email2 = "";
+                this.chkPol = false;
+            },
+            guardar() {
+                this.formAlertaShow = false;
+                this.divLoading = true;
+
+                var query = '';
+                var data = {
+                    "model": {
+                        "Email": this.email,
+                        "Email2": this.email2,
+                        "PoliticaAceptada": this.chkPol,
+                        "Parametros": query,
+                        "Descripcion": (filtroData ? filtroData.Descripcion : ''),
+                        "IdTipoOportunidadVoluntariado": this.IdTipoOportunidadVoluntariado
+                    }
+                };
+
+                fetch("/oportunidades/default.aspx/Crear", {
+                    method: "POST",
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify(data)
+                })
+                    .then(response => response.json())
+                    .then(response => {
+                        this.divLoading = false;
+                        var model = JSON.parse(response.d);
+
+                        this.valMailVacio = model.MailVacio;
+                        this.valMailnoEsMail = model.MailNoEsMail;
+                        this.valMailNoCoincide = model.MailNoCoincide;
+                        this.valPoliticaNoAceptada = model.PoliticaNoAceptada;
+                        this.msgCreada = model.Creada;
+                        this.btnAlertCancelar = !model.Creada;
+                        this.btnAlertGuardar = !model.Creada;
+                        this.btnAlertCerrar = model.Creada;
+                        if (model.Creada) {
+                            this.divOkAlerta = true;
+                            this.divErrorAlerta = false;
+                            this.formAlertaShow = false;
+                        } else {
+                            this.divOkAlerta = false;
+                            this.divErrorAlerta = true;
+                            this.formAlertaShow = true;
+                        }
+                    })
+                    .catch(error => {
+                        this.formAlertaShow = true;
+                        this.divLoading = false;
+                        alert("Ocurrió un error. Inténtalo de nuevo.");
+                    });
+            },
+            eliminarPreferencia(index) {
+                this.preferencias.splice(index, 1);
+            },
+            cerrar() {
+                this.inicializaModalAlerta();
+            }
+        },
+        mounted() {
+            this.inicializaModalAlerta();
+        }
+    }).mount('#formAlertaModalApp');
+</script>
+    </div>
+    <script type="text/javascript">
+        // initial data
+        var filtroData = {"NumResultados":491,"Localidades":[{"Nombre":"Ámbito Provincial","Valor":0,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":29,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Almería","Valor":2,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Roquetas de Mar","Valor":4,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Arcos de la Frontera","Valor":109,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Córdoba","Valor":148,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Baena","Valor":154,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Cijuela","Valor":270,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Granada","Valor":299,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Úbeda","Valor":476,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Baeza","Valor":480,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Benalmádena","Valor":594,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Málaga","Valor":636,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":5,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Marbella","Valor":638,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Sevilla","Valor":763,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":5,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Teruel","Valor":977,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Zaragoza","Valor":1213,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Calatayud","Valor":1214,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Añón de Moncayo","Valor":1357,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Gijón. En asturiano: Xixón.","Valor":1528,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Alaró","Valor":1583,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Felanitx","Valor":1605,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Ibiza","Valor":1609,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Inca","Valor":1610,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Palma de Mallorca","Valor":1624,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":5,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Santa María del Camí","Valor":1642,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Las Palmas de Gran Canaria","Valor":1667,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"San Bartolomé","Valor":1669,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Telde","Valor":1676,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"San Cristóbal de La Laguna","Valor":1717,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":8,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Santa Cruz de Tenerife","Valor":1722,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Albacete","Valor":1738,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Puertollano","Valor":1826,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Manzanares","Valor":1830,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Guadalajara","Valor":2167,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Uceda","Valor":2183,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Almoguera","Valor":2185,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Noblejas","Valor":2573,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Toledo: capital provincial.","Valor":2627,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Santander","Valor":2664,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Santa Cruz de Bezana","Valor":2674,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Santa María de Cayón","Valor":2678,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Burgos","Valor":3015,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"León","Valor":3387,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":9,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Carrión de los Condes","Valor":3607,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Salamanca","Valor":3789,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Soria","Valor":4362,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Valladolid","Valor":4545,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Peñafiel","Valor":4553,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Barcelona","Valor":5023,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":77,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Hospitalet de Llobregat","Valor":5024,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":5,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Badalona","Valor":5025,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":8,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Terrassa","Valor":5027,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Cornellà de Llobregat","Valor":5030,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Sant Boi de Llobregat","Valor":5031,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Manresa","Valor":5032,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Rubí","Valor":5034,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Sant Cugat del Vallès","Valor":5035,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Granollers","Valor":5038,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Esplugues de Llobregat","Valor":5042,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Sant Feliu de Llobregat","Valor":5044,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Vic","Valor":5045,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Sant Adrià de Besòs","Valor":5047,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Sitges","Valor":5055,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Sant Just Desvern","Valor":5072,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Castellbisbal","Valor":5097,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Alella","Valor":5100,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Pallejà","Valor":5103,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Cubelles","Valor":5107,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Sant Fost de Campsentelles","Valor":5114,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Sant Feliu de Codines","Valor":5145,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Gerona","Valor":5334,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Figueras","Valor":5335,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Lloret de Mar","Valor":5338,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Palafrugell","Valor":5340,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Santa Coloma de Farners","Valor":5346,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Tarragona","Valor":5785,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Reus","Valor":5786,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"La Febró","Valor":5965,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Badajoz","Valor":5968,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Mérida","Valor":5969,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"A Coruña","Valor":6352,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Santiago de Compostela","Valor":6353,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Ferrol","Valor":6354,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Ordes","Valor":6369,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Lugo","Valor":6446,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Monterroso","Valor":6465,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Becerreá","Valor":6472,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Vigo","Valor":6605,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":7,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Vilagarcía de Arousa","Valor":6607,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Redondela","Valor":6608,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Vilanova de Arousa","Valor":6627,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Madrid","Valor":6667,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":133,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Móstoles","Valor":6668,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Alcalá de Henares","Valor":6669,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Fuenlabrada","Valor":6670,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Leganés","Valor":6671,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Getafe","Valor":6673,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Coslada","Valor":6677,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Pozuelo de Alarcón","Valor":6678,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Las Rozas de Madrid","Valor":6679,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":7,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"San Sebastián de los Reyes","Valor":6680,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Rivas-VaciaMadrid","Valor":6682,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":5,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Collado Villalba","Valor":6683,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Aranjuez","Valor":6685,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Colmenar Viejo","Valor":6687,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"San Fernando de Henares","Valor":6688,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Tres Cantos","Valor":6689,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Pinto","Valor":6690,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"San Lorenzo de El Escorial","Valor":6699,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Humanes de Madrid","Valor":6701,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Cercedilla","Valor":6724,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Collado Mediano","Valor":6730,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Cobeña","Valor":6745,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Ajalvir","Valor":6751,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Venturada","Valor":6780,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Berzosa del Lozoya","Valor":6829,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Somosierra","Valor":6837,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Alhama de Murcia","Valor":6854,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Lorca","Valor":6870,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Murcia","Valor":6876,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Zizur Mayor o Zizur Nagusia","Valor":6896,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Uterga","Valor":7089,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Vitoria o Gasteiz","Valor":7163,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Basauri","Valor":7323,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Bilbao","Valor":7329,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Logroño","Valor":7415,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":6,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Alicante","Valor":7589,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Elche","Valor":7590,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"San Vicente del Raspeig","Valor":7596,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Ibi","Valor":7606,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Castellón de la Plana","Valor":7730,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Vinaroz Vinaròs","Valor":7734,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Benicasim Benicàssim","Valor":7738,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Valencia / València","Valor":7865,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":6,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null},{"Nombre":"Ceuta","Valor":8131,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"localidades","TipoEnum":null}],"LocalidadesSel":"","Niveles":[{"Nombre":"Becario /prácticas","Valor":1,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":16,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"nivelescontrato","TipoEnum":null},{"Nombre":"Empleado","Valor":2,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":433,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"nivelescontrato","TipoEnum":null},{"Nombre":"Especialista","Valor":3,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":27,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"nivelescontrato","TipoEnum":null},{"Nombre":"Mando intermedio","Valor":4,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":12,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"nivelescontrato","TipoEnum":null},{"Nombre":"Dirección Gerencia","Valor":5,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"nivelescontrato","TipoEnum":null}],"NivelesSel":"","TiposContrato":[{"Nombre":"Jornada completa","Valor":1,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":297,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"tiposcontrato","TipoEnum":null},{"Nombre":"Media  jornada","Valor":2,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":152,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"tiposcontrato","TipoEnum":null},{"Nombre":"Jornada intensiva","Valor":3,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":25,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"tiposcontrato","TipoEnum":null},{"Nombre":"Freelance","Valor":4,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"tiposcontrato","TipoEnum":null},{"Nombre":"Becario","Valor":5,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"tiposcontrato","TipoEnum":null},{"Nombre":"Prácticas","Valor":6,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":12,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"tiposcontrato","TipoEnum":null}],"TiposContratoSel":"","Duraciones":[{"Nombre":"Hasta 6 meses","Valor":1,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":44,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"duraciones","TipoEnum":null},{"Nombre":"De 6 meses a 1 año","Valor":2,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":50,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"duraciones","TipoEnum":null},{"Nombre":"De 1 a 2 años","Valor":3,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":20,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"duraciones","TipoEnum":null},{"Nombre":"Más de 2 años","Valor":4,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":6,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"duraciones","TipoEnum":null},{"Nombre":"Indefinido","Valor":5,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":232,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"duraciones","TipoEnum":null},{"Nombre":"Sin especificar","Valor":6,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":139,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"duraciones","TipoEnum":null}],"DuracionesSel":"","Salarios":[{"Nombre":"Menos de 12.000 € bruto/anual","Valor":1,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":42,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"salarios","TipoEnum":null},{"Nombre":"Entre 12.000  y 18.000 € bruto/anual","Valor":2,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":113,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"salarios","TipoEnum":null},{"Nombre":"Entre 18.001 y 24.000 € bruto/anual","Valor":3,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":152,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"salarios","TipoEnum":null},{"Nombre":"Entre 24.001  y 30.000 € bruto/anual","Valor":4,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":137,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"salarios","TipoEnum":null},{"Nombre":"Más de 30.000 € bruto/anual ","Valor":5,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"salarios","TipoEnum":null},{"Nombre":"No remunerada","Valor":10,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":13,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"salarios","TipoEnum":null},{"Nombre":"Entre 30.000 y 36.000 € bruto/anual","Valor":11,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":24,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"salarios","TipoEnum":null},{"Nombre":"Entre 36.000 y 42.000 € bruto/anual","Valor":12,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":6,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"salarios","TipoEnum":null},{"Nombre":"Entre 42.000 y 48.000 € bruto/anual","Valor":13,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"salarios","TipoEnum":null}],"SalariosSel":"","Profesiones":[{"Nombre":"Derecho","Valor":1,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":18,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Arquitectura","Valor":2,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Empresariales/Económicas","Valor":3,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":18,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Educ. Social","Valor":4,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":134,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Educ. Infantil","Valor":5,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":7,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Educ. Especial","Valor":6,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":28,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Enfermería","Valor":7,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":20,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Ing. Agrónomo","Valor":8,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Medicina","Valor":10,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Periodismo","Valor":12,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":6,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Psicología","Valor":13,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":97,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Pedagogía/Psicopedagogía","Valor":14,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":37,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Maestro","Valor":15,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":24,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Trabajo social","Valor":16,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":80,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Informática","Valor":17,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":10,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Otras","Valor":18,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":20,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"No requerida","Valor":19,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":7,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Sin especificar","Valor":20,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":17,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Terapia ocupacional","Valor":22,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":20,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Integración Social","Valor":24,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":80,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Antropología","Valor":25,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":10,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Bellas Artes","Valor":26,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Biología","Valor":27,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"CC. Ambientales","Valor":29,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Comunic. Audiovisual","Valor":30,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":12,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Marketing/Publicidad","Valor":31,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":12,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Políticas","Valor":34,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Sociología","Valor":35,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":16,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Químicas","Valor":36,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Estadística","Valor":39,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Educ. Física","Valor":40,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":15,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Filología/Lingüistica","Valor":41,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":8,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Historia","Valor":44,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Hª del Arte","Valor":45,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":6,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Humanidades","Valor":46,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":9,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Fisioterapia","Valor":47,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":11,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Logopedia","Valor":48,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":13,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Odontología","Valor":49,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Documentación","Valor":55,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":5,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Secretariado/Admon","Valor":56,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":5,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Relac. Laborales","Valor":57,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":21,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"CC. Alimentos","Valor":58,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Ing.Telecomunicaciones","Valor":59,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Monitor/a tiempo libre","Valor":61,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":21,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Monitor/a ","Valor":62,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":28,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Fundraiser o Captador de fondos","Valor":63,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":8,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Educador/a en general","Valor":64,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":27,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Profesor/a","Valor":65,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":10,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Auxiliar administrativo/a","Valor":66,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":11,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Mediador/a ","Valor":67,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":6,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Cuidador/a ","Valor":68,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":22,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Administrativo/a","Valor":69,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":28,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Técnico/a de proyectos","Valor":70,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":28,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Cocinero/a","Valor":71,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":6,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Limpiador/a","Valor":72,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":5,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null},{"Nombre":"Auxiliar enfermería","Valor":73,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":20,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"profesiones","TipoEnum":null}],"ProfesionesSel":"","Experiencias":[{"Nombre":"No requerida","Valor":1,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":56,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"experiencias","TipoEnum":null},{"Nombre":"Al menos 1 año","Valor":2,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":266,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"experiencias","TipoEnum":null},{"Nombre":"Al menos 2 años","Valor":3,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":122,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"experiencias","TipoEnum":null},{"Nombre":"Al menos 3 años","Valor":4,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":32,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"experiencias","TipoEnum":null},{"Nombre":"De 3 a 5 años","Valor":5,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":7,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"experiencias","TipoEnum":null},{"Nombre":"Más de 5","Valor":6,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":7,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"experiencias","TipoEnum":null},{"Nombre":"Más de 10","Valor":7,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"experiencias","TipoEnum":null}],"ExperienciasSel":"","TipoOferta":[{"Nombre":"Orientada a personas con discapacidad","Valor":1,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":98,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"tipooferta","TipoEnum":null}],"TipoOfertaSel":"","Provincias":[{"Nombre":"A Coruña","Valor":9,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":8,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Albacete","Valor":2,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Alicante","Valor":1,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":8,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Almeria","Valor":3,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Ámbito nacional","Valor":0,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Araba/Álava","Valor":50,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Asturias","Valor":33,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Badajoz","Valor":6,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Baleares","Valor":36,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":11,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Barcelona","Valor":5,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":116,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Bizkaia","Valor":7,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Burgos","Valor":8,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Cádiz","Valor":10,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Cantabria","Valor":38,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Castellón","Valor":15,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":5,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Ceuta","Valor":12,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Ciudad Real","Valor":14,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Córdoba","Valor":13,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Girona","Valor":18,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":7,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Granada","Valor":19,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":5,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Guadalajara","Valor":20,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Huelva","Valor":21,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Huesca","Valor":22,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Jaén","Valor":23,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"La Rioja","Valor":26,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":7,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Las Palmas","Valor":17,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":7,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"León","Valor":25,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":9,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Lleida","Valor":24,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Lugo","Valor":27,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":5,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Madrid","Valor":28,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":191,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Málaga","Valor":29,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":7,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Murcia","Valor":31,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Navarra","Valor":32,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Ourense","Valor":34,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Palencia","Valor":35,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Pontevedra","Valor":37,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":10,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Salamanca","Valor":39,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Segovia","Valor":41,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Sevilla","Valor":40,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":6,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Soria","Valor":42,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Tarragona","Valor":44,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Tenerife","Valor":46,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":11,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Teruel","Valor":45,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Toledo","Valor":47,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":4,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Valencia","Valor":48,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":7,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Valladolid","Valor":49,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":3,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null},{"Nombre":"Zaragoza","Valor":51,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":6,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"provincias","TipoEnum":null}],"ProvinciasSel":"","Paises":[{"Nombre":"Argélia","Valor":8,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":1,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"paises","TipoEnum":null},{"Nombre":"España","Valor":60,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":490,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"paises","TipoEnum":null}],"PaisesSel":"","Categorias":[{"Nombre":"Dirección y Coordinación","Valor":4001,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":28,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"Atención Directa","Valor":4002,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":363,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"Gestión de Proyectos","Valor":4003,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":48,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"Comunicación y Marketing","Valor":4004,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":14,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"Informática y Tecnología","Valor":4005,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":11,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"Fundraising","Valor":4007,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":9,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"Administración y Finanzas","Valor":4008,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":31,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"Sensibilización","Valor":4009,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":41,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"Legal jurídico","Valor":4010,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":2,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"RRHH/Gestión de personas","Valor":4011,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":18,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"Personal de servicio","Valor":4012,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":40,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"Becas / Prácticas","Valor":4013,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":13,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null},{"Nombre":"Cooperación /Emergencia/ Ayuda humanitaria","Valor":4014,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":32,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"categorias","TipoEnum":null}],"CategoriasSel":"","TipoOportunidadVoluntariado":[{"Nombre":"Empleo","Valor":2,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":637,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"tipoOportunidadVoluntariado","TipoEnum":null},{"Nombre":"Becas y Practicas","Valor":5,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":13,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"tipoOportunidadVoluntariado","TipoEnum":null},{"Nombre":"Executive","Valor":6,"ValorTexto":null,"ValoresTextoAgrupados":[],"Total":0,"Seleccionado":false,"ReferenciaId":-1,"Tipo":"tipoOportunidadVoluntariado","TipoEnum":null}],"TipoOportunidadVoluntariadoSel":"","Clave":"","FechaIni":null,"FechaFin":null,"Categoria":"","CategoriaNombre":null,"Pais":"","PaisNombre":null,"Provincia":"","ProvinciaNombre":null,"Descripcion":"Niveles:|TiposContrato:|Duraciones:|Salarios:|Profesiones:|TipoOferta:|TipoOportunidadVoluntariado:|Categorias:|Paises:|Provincias:|Localidades:|","OrdenarPor":0};
+    </script>
+    <script>
+        $(function () {
+            $('#ddOderby').on('change', function () {
+                var url = $(this).val();
+                if (url) {
+                    window.location = url;
+                }
+                return false;
+            });
+        });
+    </script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var hiddenContent = document.getElementById("hiddenCajasDestacados").innerHTML;
+            document.getElementById("publicidad").innerHTML = hiddenContent;
+        });
+    </script>
+
+    
+<section id="secc-suscripcion" class="py-5">
+    <div class="container">
+        <div class="text-center my-5 row" id="newsletter-subscription">
+            <div class="col-lg-6 mx-auto">
+                <h2 class="display-6 fw-bold">No te pierdas nada</h2>
+                <p class="lead text-muted">Suscríbete a nuestra newsletter</p>
+                <form class="d-flex flex-column justify-content-center flex-wrap" method="post" id="boletinSusForm">
+                    <div class="mb-3">
+                        <input class="form-control" type="email" name="nemail" placeholder="Escribe aquí tu email...">
+                    </div>
+                    <div class="mb-3">
+                        <button class="btn btn-primary ms-2 btn-call" type="button" id="btnCajaBolSusEnv">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    document.getElementById("btnCajaBolSusEnv").addEventListener("click", function () {
+        var form = document.getElementById('boletinSusForm');
+        if (!form) {
+            console.error("Formulario no encontrado.");
+            return;
+        }      
+        var email = form.querySelector('input[name="nemail"]').value;
+        var dynamicForm = document.createElement('form');
+        dynamicForm.method = 'post';
+        dynamicForm.action = '/boletin/registro/default.aspx'; 
+        dynamicForm.id = 'boletinSusForm'; 
+        dynamicForm.style.display = 'none';  
+
+        var emailInput = document.createElement('input');
+        emailInput.type = 'hidden';
+        emailInput.name = 'nemail';
+        emailInput.value = email;
+        dynamicForm.appendChild(emailInput);
+
+        document.body.appendChild(dynamicForm);
+
+        dynamicForm.submit();
+    });
+</script>
+
+
+
+    <!--NUBES DE TAGS-->
+    <section id="nube-tags" class="mb-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-md-2">
+                <div class="col">
+                    <h2 class="mb-4">Ofertas de trabajo en ong en tu provincia</h2>
+                    <div class="small">
+                        
+<div id="tabsvol" class="Tabs">
+    <div id="vol1"> <span style=" color:#515151">|</span>
+        
+                <a href="/trabajo-ong-a-coruna.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_0" class="Categ1" title="trabajo ong A Coruña">trabajo ong A Coruña</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-albacete.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_1" class="Categ1" title="trabajo ong Albacete">trabajo ong Albacete</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-alicante.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_2" class="Categ1" title="trabajo ong Alicante">trabajo ong Alicante</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-almeria.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_3" class="Categ1" title="trabajo ong Almeria">trabajo ong Almeria</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-araba-álava.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_4" class="Categ1" title="trabajo ong Araba/Álava">trabajo ong Araba/Álava</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-asturias.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_5" class="Categ1" title="trabajo ong Asturias">trabajo ong Asturias</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-badajoz.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_6" class="Categ1" title="trabajo ong Badajoz">trabajo ong Badajoz</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-baleares.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_7" class="Categ1" title="trabajo ong Baleares">trabajo ong Baleares</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-barcelona.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_8" class="Categ1" title="trabajo ong Barcelona">trabajo ong Barcelona</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-bizkaia.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_9" class="Categ1" title="trabajo ong Bizkaia">trabajo ong Bizkaia</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-burgos.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_10" class="Categ1" title="trabajo ong Burgos">trabajo ong Burgos</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-cadiz.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_11" class="Categ1" title="trabajo ong Cádiz">trabajo ong Cádiz</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-cantabria.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_12" class="Categ1" title="trabajo ong Cantabria">trabajo ong Cantabria</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-castellon.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_13" class="Categ1" title="trabajo ong Castellón">trabajo ong Castellón</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-ceuta.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_14" class="Categ1" title="trabajo ong Ceuta">trabajo ong Ceuta</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-ciudad-real.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_15" class="Categ1" title="trabajo ong Ciudad Real">trabajo ong Ciudad Real</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-cordoba.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_16" class="Categ1" title="trabajo ong Córdoba">trabajo ong Córdoba</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-girona.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_17" class="Categ1" title="trabajo ong Girona">trabajo ong Girona</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-granada.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_18" class="Categ1" title="trabajo ong Granada">trabajo ong Granada</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-guadalajara.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_19" class="Categ1" title="trabajo ong Guadalajara">trabajo ong Guadalajara</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-huelva.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_20" class="Categ1" title="trabajo ong Huelva">trabajo ong Huelva</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-huesca.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_21" class="Categ1" title="trabajo ong Huesca">trabajo ong Huesca</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-jaen.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_22" class="Categ1" title="trabajo ong Jaén">trabajo ong Jaén</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-la-rioja.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_23" class="Categ1" title="trabajo ong La Rioja">trabajo ong La Rioja</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-las-palmas.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_24" class="Categ1" title="trabajo ong Las Palmas">trabajo ong Las Palmas</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-leon.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_25" class="Categ1" title="trabajo ong León">trabajo ong León</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-lleida.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_26" class="Categ1" title="trabajo ong Lleida">trabajo ong Lleida</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-lugo.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_27" class="Categ1" title="trabajo ong Lugo">trabajo ong Lugo</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-madrid.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_28" class="Categ1" title="trabajo ong Madrid">trabajo ong Madrid</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-malaga.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_29" class="Categ1" title="trabajo ong Málaga">trabajo ong Málaga</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-murcia.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_30" class="Categ1" title="trabajo ong Murcia">trabajo ong Murcia</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-navarra.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_31" class="Categ1" title="trabajo ong Navarra">trabajo ong Navarra</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-ourense.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_32" class="Categ1" title="trabajo ong Ourense">trabajo ong Ourense</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-palencia.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_33" class="Categ1" title="trabajo ong Palencia">trabajo ong Palencia</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-pontevedra.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_34" class="Categ1" title="trabajo ong Pontevedra">trabajo ong Pontevedra</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-salamanca.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_35" class="Categ1" title="trabajo ong Salamanca">trabajo ong Salamanca</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-segovia.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_36" class="Categ1" title="trabajo ong Segovia">trabajo ong Segovia</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-sevilla.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_37" class="Categ1" title="trabajo ong Sevilla">trabajo ong Sevilla</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-soria.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_38" class="Categ1" title="trabajo ong Soria">trabajo ong Soria</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-tarragona.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_39" class="Categ1" title="trabajo ong Tarragona">trabajo ong Tarragona</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-tenerife.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_40" class="Categ1" title="trabajo ong Tenerife">trabajo ong Tenerife</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-teruel.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_41" class="Categ1" title="trabajo ong Teruel">trabajo ong Teruel</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-toledo.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_42" class="Categ1" title="trabajo ong Toledo">trabajo ong Toledo</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-valencia.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_43" class="Categ1" title="trabajo ong Valencia">trabajo ong Valencia</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-valladolid.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_44" class="Categ1" title="trabajo ong Valladolid">trabajo ong Valladolid</a> <span style=" color:#515151">|</span>
+            
+                <a href="/trabajo-ong-zaragoza.aspx" id="cphContenido_CajaFolksonomiaRemuSeoProvincia_rptLista_hlCat_45" class="Categ1" title="trabajo ong Zaragoza">trabajo ong Zaragoza</a> <span style=" color:#515151">|</span>
+            
+    </div>
+</div>
+
+                    </div>
+                </div>
+                <div class="col">
+                    <h2 class="mb-4">Ofertas de trabajo en ong por categoría</h2>
+                    <div class="small">
+                        
+<div id="tabsvol" class="Tabs">
+    <div id="vol1"> <span style=" color:#515151">|</span>
+        
+                <a href="../../trabajo-ong-administracion-y-finanzas.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_0" class="Categ1" title="trabajo ong Administración y Finanzas">trabajo ong Administración y Finanzas</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-atencion-directa.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_1" class="Categ1" title="trabajo ong Atención Directa">trabajo ong Atención Directa</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-becas---practicas.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_2" class="Categ1" title="trabajo ong Becas / Prácticas">trabajo ong Becas / Prácticas</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-comunicacion-y-marketing.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_3" class="Categ1" title="trabajo ong Comunicación y Marketing">trabajo ong Comunicación y Marketing</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-cooperacion--emergencia--ayuda-humanitaria.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_4" class="Categ1" title="trabajo ong Cooperación /Emergencia/ Ayuda humanitaria">trabajo ong Cooperación /Emergencia/ Ayuda humanitaria</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-direccion-y-coordinacion.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_5" class="Categ1" title="trabajo ong Dirección y Coordinación">trabajo ong Dirección y Coordinación</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-fundraising.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_6" class="Categ1" title="trabajo ong Fundraising">trabajo ong Fundraising</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-gestion-de-proyectos.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_7" class="Categ1" title="trabajo ong Gestión de Proyectos">trabajo ong Gestión de Proyectos</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-informatica-y-tecnologia.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_8" class="Categ1" title="trabajo ong Informática y Tecnología">trabajo ong Informática y Tecnología</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-legal-juridico.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_9" class="Categ1" title="trabajo ong Legal jurídico">trabajo ong Legal jurídico</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-personal-de-servicio.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_10" class="Categ1" title="trabajo ong Personal de servicio">trabajo ong Personal de servicio</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-rrhh-gestion-de-personas.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_11" class="Categ1" title="trabajo ong RRHH/Gestión de personas">trabajo ong RRHH/Gestión de personas</a> <span style=" color:#515151">|</span>
+            
+                <a href="../../trabajo-ong-sensibilizacion.aspx" id="cphContenido_CajaFolksonomiaRemu1_rptLista_hlCat_12" class="Categ1" title="trabajo ong Sensibilización">trabajo ong Sensibilización</a> <span style=" color:#515151">|</span>
+            
+    </div>
+</div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+
+    </div>
+    <!--FOOTER-->
+    
+        <footer class="text-white py-5 mt-5" id="footer">
+            <div class="container py-4 py-lg-5">
+                <div class="row">
+                    <div class="col-lg-5 d-flex flex-column item social">
+                        <a href="https://www.hazloposible.org/" target="_blank">
+                            <img class="img-fluid mb-2 logo-footer" src="/images/logo_hazloposible-25ani.png" alt="Fundación Hazloposible" /></a>
+                        <p class="text-white copyright small mb-0">Web de <a href="https://www.hazloposible.org/" target="_blank" class="text-primary">Fundación Hazloposible</a> con la que se pretende facilitar, promover y fomentar el voluntariado y el trabajo en las organizaciones del tercer sector. </p>
+                        <div class="row mb-2 align-items-center logos-footer">
+                            <div class="col">
+                                <img src="/images/sellos-calidad.png" class="sellos-calidad" alt="Sellos de calidad IQNET y IMQ" />
+                            </div>
+                            <div class="col">
+                                <img class="w-100 logo-mdsca" src="/images/MDSCA.jpg" alt="Ministerio de Derechos Sociales, Consumo y Agenda 2030" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-1 col-xl-2"></div>
+                    <div class="col-sm-4 col-md-3 col-lg-2 d-flex flex-column item pt-5">
+                        <ul class="small ul-arrows mb-0">
+                            <li><a class="link-light" href="/noticias/">Noticias voluntariado</a></li>
+                            <li><a class="link-light" href="/noticias/empleo">Noticias empleo</a></li>
+                            <li><a class="link-light" href="/oportunidades/iniciativas/buscador/">Iniciativas ciudadanas</a></li>
+                            <li><a class="link-light" href="/experiencias/buscador/">Experiencias</a></li>
+                            <li><a class="link-light" href="/foro/">Foro</a></li>
+                            <li><a class="link-light" href="/preguntas-frecuentes.ct">Ayuda</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-sm-6 col-md-6 col-lg-3 col-xl-3 d-flex flex-column item pt-0 pt-sm-5">
+                        <ul class="small ul-arrows mb-0">
+                            <li><a class="link-light" href="https://www.solucionesong.org/" target="_blank">Solucionesong.org</a></li>
+                            <li><a class="link-light" href="https://accionporelclima.org/" target="_blank">Accionporelclima.org</a></li>
+                            <li><a class="link-light" href="https://voluntariadocorporativo.org/" target="_blank">Voluntariadocorporativo.org</a></li>
+                            <li><a class="link-light" href="https://www.inteligenciaartificialparaong.org/" target="_blank">Inteligenciaartificialparaong.org</a></li>
+                            <li><a class="link-light" href="https://www.hazloinclusivo.org/" target="_blank">Hazloinclusivo.org</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row mb-5">
+                    <div class="col item social pt-0 mt-3 mt-lg-0">
+                        <ul class="list-inline mb-0">
+                            <li class="list-inline-item"><a class="link-light" href="https://www.facebook.com/pages/hacesfaltaorg/162226137149?fref=ts" target="_blank"><span class="fs-4 bi bi-facebook">&nbsp;</span></a></li>
+                            <li class="list-inline-item"><a class="link-light" href="http://twitter.com/hacesfalta" target="_blank"><span class="fs-4 bi bi-twitter">&nbsp;</span></a></li>
+                            <li class="list-inline-item"><a class="link-light" href="https://www.instagram.com/hacesfalta_org/" target="_blank"><span class="fs-4 bi bi-instagram">&nbsp;</span></a></li>
+                            <li class="list-inline-item"><a class="link-light" href="https://www.linkedin.com/groups?mostRecent=&gid=4003926&trk=my_groups-tile-flipgrp" target="_blank"><span class="fs-4 bi bi-linkedin">&nbsp;</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <hr>
+                <div class="d-flex flex-column justify-content-between align-items-start flex-sm-row align-items-sm-center pt-3 small links-legal">
+                    <p class="text-white mb-3"><a class="link-light" href="https://www.hacesfalta.org/Contenido/default.aspx?idPagina=1520">Aviso legal</a> <a href="https://hazloposible.trusty.report/" target="_blank" class="link-light ms-4">Canal de denuncias</a></p>
+                    <ul class="list-inline d-flex flex-column flex-sm-row mb-0">
+                        <li class="list-inline-item mx-sm-3 mb-3"><a class="link-light" href="https://www.hacesfalta.org/Contenido/?idPagina=1471">Política de privacidad</a></li>
+                        <li class="list-inline-item ms-sm-3"><a class="link-light" href="https://www.hacesfalta.org/politica-cookies.ct">Cookies</a></li>
+                    </ul>
+                </div>
+            </div>
+			<script>
+window.embeddedChatbotConfig = {
+chatbotId: "oFwpaWLw0wt_5XfTU4D_t",
+domain: "www.chatbase.co"
+}
+</script>
+<script
+src="https://www.chatbase.co/embed.min.js"
+chatbotId="oFwpaWLw0wt_5XfTU4D_t"
+domain="www.chatbase.co"
+defer>
+</script>
+        </footer>
+        <!--FIN FOOTER-->
+    
+    
+        
+
+
+
+
+    <!-- Modal -->
+    <div class="modal fade donacion-contenido" id="modal-donacion" data-bs-backdrop="static" tabindex="-1" aria-labelledby="modal-donacionLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title fs-5" id="modal-donacionLabel">Haz posible nuestro trabajo</h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" id="btnCerrarXMod"></button>
+                </div>
+                <div class="modal-body p-0">
+                    <div class="ratio ratio-16x9">
+                        <iframe id="videoFrameMod" width="560" height="315"
+                            src="https://www.youtube.com/embed/WOjb_KhPh4g?enablejsapi=1&autoplay=1=1&mute=1"
+                            title="YouTube video player"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="modal-footer justify-content-between">
+                    <button type="button" class="btn btn-outline-secondary" id="btnCancelarMod">Saltar</button>
+                    <button type="button" class="btn btn-primary" id="btnDonarMod">DONAR</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+<script type="text/javascript">
+   
+    var donacionConfig = {"urlRetorno":null,"idOportunidad":0,"origen":2,"seccion":1,"modo":"boton","idUsuario":"0","urlDonacion":"/donaciones/fundacion/donar/fundacion/212?origen=2\u0026idOportunidad=0\u0026seccion=1","redirigirAlCancelar":true,"irADonacionAlTerminar":true,"tokenUsuario":null};
+
+
+    var player;
+    var videoCompleto = false;
+    var modalCerrado = false;
+
+    // YouTube API
+    function onYouTubeIframeAPIReady() {
+        var frameId = 'videoFrameMod';
+        if (document.getElementById(frameId)) {
+            player = new YT.Player(frameId, {
+                events: {
+                    'onReady': onPlayerReady,
+                    'onStateChange': onPlayerStateChange
+                },
+                playerVars: {
+                    'autoplay': 0,
+                    'mute': 1
+                }
+            });
+        }
+    }
+
+    function cargarYouTubeAPI() {
+        if (!document.getElementById('youtube-api-script')) {
+            var tag = document.createElement('script');
+            tag.id = 'youtube-api-script';
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        } else if (typeof YT !== 'undefined' && YT && YT.Player) {
+            setTimeout(onYouTubeIframeAPIReady, 100);
+        }
+    }
+    function onPlayerReady(event) {
+        // event.target.playVideo();
+        if ('boton' === 'embebido') {
+            event.target.playVideo();
+        }
+    }
+    function onPlayerStateChange(event) {
+        // 0 video ha terminado
+        if (event.data === 0) {
+            videoCompleto = true;
+            console.log("Video completado");
+
+            if (donacionConfig.irADonacionAlTerminar) {
+                irAPaginaDonacion();
+            }
+        }
+    }
+    function iniciarVideo() {
+        if (player && typeof player.playVideo === 'function') {
+            console.log("Iniciando video");
+            player.playVideo();
+        } else {
+            console.log("El reproductor no está listo para iniciar el video");
+        }
+    }
+
+    function irAPaginaDonacion() {
+        modalCerrado = true;
+        window.location.href = donacionConfig.urlDonacion;
+    }
+
+    function continuarSinDonar() {
+        modalCerrado = true;
+        console.log("Usuario continuó sin donar. Video completado: " + videoCompleto);
+       
+        irAPaginaDonacion();
+
+        //if (donacionConfig.urlRetorno) {
+        //    window.location.href = donacionConfig.urlRetorno;
+        //}
+        //else {
+        //    var videoModal = document.getElementById('modal-donacion');
+        //    var bsModal = videoModal ? bootstrap.Modal.getInstance(videoModal) : null;
+        //    if (bsModal) {
+        //        bsModal.hide();
+        //    }
+        //}
+        //modalCerrado = true;
+       
+    }
+
+
+    document.addEventListener('DOMContentLoaded', function () {
+         if ('boton' === 'embebido') {
+             document.body.classList.add('embebido-active');
+         }
+        // YouTube
+        cargarYouTubeAPI();
+
+        // modo Modal
+        if (false && 'boton' === 'modal') {
+            var videoModal = document.getElementById('modal-donacion');
+            if (videoModal) {
+                var bsModal = new bootstrap.Modal(videoModal);
+                setTimeout(function () {
+                    bsModal.show();
+                },3300);
+            }
+        }
+       
+        // video
+        var videoModal = document.getElementById('modal-donacion');
+        if (videoModal) {
+            videoModal.addEventListener('hidden.bs.modal', function () {
+                if (!modalCerrado) {
+                    modalCerrado = true;
+                    console.log("Modal cerrado sin interacción");
+                    if (donacionConfig.redirigirAlCancelar) {
+                        continuarSinDonar()
+                    }
+                }
+            });
+          
+            videoModal.addEventListener('shown.bs.modal', function () {
+                console.log("Modal abierto");
+                setTimeout(iniciarVideo,300);
+            });
+        }
+
+        // X cerrar en modal
+        var btnCerrarXMod = document.getElementById('btnCerrarXMod');
+        if (btnCerrarXMod) {
+            btnCerrarXMod.addEventListener('click', function () {
+                modalCerrado = true;
+                console.log("Botón X cerrar modal click");
+                if (donacionConfig.redirigirAlCancelar) {
+                    continuarSinDonar();
+                }
+            });
+        }
+
+        // cancelar en modal
+        var btnCancelarMod = document.getElementById('btnCancelarMod');
+        if (btnCancelarMod) {
+            btnCancelarMod.addEventListener('click', function () {
+                modalCerrado = true;
+                console.log("Botón cancelar modal click");
+                if (donacionConfig.redirigirAlCancelar) {
+                    continuarSinDonar();
+                }
+            });
+        }
+
+        //  donar en modal
+        var btnDonarMod = document.getElementById('btnDonarMod');
+        if (btnDonarMod) {
+            btnDonarMod.addEventListener('click', function () {
+                modalCerrado = true;
+                console.log("Botón donar modal click");
+                irAPaginaDonacion();
+            });
+        }
+
+        // modo embebido
+        // cancelar embebido
+        var btnCancelarEmb = document.getElementById('btnCancelarEmb');
+        if (btnCancelarEmb) {
+            btnCancelarEmb.addEventListener('click', function () {
+                modalCerrado = true;
+                console.log("Botón cancelar embebido click");
+                if (donacionConfig.redirigirAlCancelar) {
+                    continuarSinDonar();
+                }
+            });
+        }
+
+        // donar embebido
+        var btnDonarEmb = document.getElementById('btnDonarEmb');
+        if (btnDonarEmb) {
+            btnDonarEmb.addEventListener('click', function () {
+                modalCerrado = true;
+                console.log("Botón donar embebido click");
+                irAPaginaDonacion();
+
+            });
+        }
+    });
+</script>
+
+    
+    
+    
+    
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-Z4LDT5F6GR"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-Z4LDT5F6GR');
+    </script>
+	<script>function loadScript(a) { var b = document.getElementsByTagName("head")[0], c = document.createElement("script"); c.type = "text/javascript", c.src = "https://tracker.metricool.com/resources/be.js", c.onreadystatechange = a, c.onload = a, b.appendChild(c) } loadScript(function () { beTracker.t({ hash: "c480328d4ecb71c3d83d68c5ef735f66" }) });</script>
+
+
+
+
+
+
+    
+<!--MODAL DE REGISTRO-->
+<div class="modal fade" role="dialog" tabindex="-1" id="modal-registro">
+    <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content shadow" id="loginModalApp">
+            <div class="modal-header pt-4 pb-0">
+                <button class="btn-close pe-0" type="button" aria-label="Close" data-bs-dismiss="modal"></button>
+            </div>
+            
+            <div class="modal-body">
+                <div class="alert alert-info text-center py-4" v-if="divLoading">
+                    <span class="spinner-border spinner-border-sm me-2" aria-hidden="true"></span>
+                    <span role="status">Enviando datos...</span>
+                </div>
+                <div v-if="formulario" >
+                    <h5 class="fs-4 text-primary">Usuarios registrados:</h5>
+                    <p class="text-secondary">Si ya estás registrado/a indica tu mail y contraseña y pulsa el botón ‘entrar’.</p>
+                    <div class="alert alert-danger" v-if="divError">
+                        <strong>Corrija los siguientes errores</strong>:
+                        <span v-if="valMailnoEsMail">
+                            <br />
+                            La dirección de e-mail no es correcta.
+                        </span>
+                        <span v-if="valNoLogin">
+                            <br />
+                            El Email/Contrase&#241;a que has introducido no coincide con ningún usuario (asegúrate de que tu dispositivo no pone en mayúsculas la primera letra de la contraseña).
+                        </span>
+                      
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="text" placeholder="Email" name="email" v-model="email" autocomplete="on" required>
+                    </div>
+                    <div class="mb-3">
+                        <input class="form-control" type="password" placeholder="Contraseña" v-model="pass" autocomplete="off" required>
+                    </div>
+                  
+                    <div class="mb-3">
+                        <button class="btn btn-primary btn-call me-3" type="button" @click="iniciarSesion">Entrar</button>
+                        <a href="/usuarios/login/recuerda/">¿Olvidaste tu contraseña?</a>
+                    </div>
+                </div>
+                <h5 class="mt-4 mb-3 fs-4 text-primary">Usuarios no registrados:</h5>
+                <p class="text-secondary">Si no estás registrado/a, dinos&nbsp;¿quién eres?:</p>
+                <div class="row mb-5">
+                    <div class="col-6 d-grid">
+                        <a href="/usuarios/registro/?" class="btn btn-primary" type="button">Particular</a>
+                    </div>
+                    <div class="col-6 d-grid">
+                        <a href="/ong/registro/" class="btn btn-secondary" type="button">ONG / Empresa</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    divLoading: false,
+                    divError: false,
+                    valMailnoEsMail: false,
+                    valNoLogin: false,
+                    valNoDoc: false,
+                    divDoc: false,
+                    email: '',
+                    pass: '',
+                    documento: '',
+                    docIdPais: '',
+                    paises: [],
+                    formulario: true,
+                    enlacesReg: true,
+                    urlDestinoLogin: ''
+                };
+            },
+            methods: {
+                inicializaUI() {
+                    this.divLoading = false;
+                    this.divError = false;
+                    this.valMailnoEsMail = false;
+                    this.valNoLogin = false;
+                    //this.valNoDoc = false;
+                    //this.divDoc = false;
+                },
+                resetForm() {
+                    this.email = '';
+                    this.pass = '';
+                    //this.documento = '';
+                },
+                startLoading() {
+                    this.formulario = false;
+                    this.enlacesReg = false;
+                    this.divLoading = true;
+                },
+                stopLoading() {
+                    this.formulario = true;
+                    this.enlacesReg = true;
+                    this.divLoading = false;
+                },
+                validarEmail(email) {
+                    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                    return re.test(email);
+                },
+                validarFormulario() {
+                    this.inicializaUI();
+                    let isValid = true;
+
+                    if (!this.validarEmail(this.email)) {
+                        this.valMailnoEsMail = true;
+                        isValid = false;
+                    }
+
+                    if (!this.pass) {
+                        this.valNoLogin = true;
+                        isValid = false;
+                    }
+
+                    // if (this.divDoc && (!this.documento || !this.docIdPais)) {
+                    //     this.valNoDoc = true;
+                    //     isValid = false;
+                    // }
+
+                    return isValid;
+                },
+                iniciarSesion() {
+                    if (!this.validarFormulario()) {
+                        this.divError = true;
+                        return;
+                    }
+                    this.startLoading();
+                    const data = {
+                        model: {
+                            email: this.email,
+                            pass: this.pass,
+                            urlDestino: this.urlDestinoLogin//,
+                           // documento: this.documento,
+                           // documentoIdPais: this.docIdPais
+                        }
+                    };
+                    fetch("/usuarios/login/default.aspx/Entrar", {
+                        method: "POST",
+                        headers: {
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify(data)
+                    })
+                        .then(response => response.json())
+                        .then(response => {
+                            const model = JSON.parse(response.d);
+                            this.divLoading = false;
+                            if (!model.IsValidEmail) {
+                                this.divError = true;
+                                this.valMailnoEsMail = true;
+                                this.stopLoading();
+                            } else if (!model.IsValidLogin) {
+                                this.divError = true;
+                                this.valNoLogin = true;
+                                this.stopLoading();
+                            } /*else if (!model.IsValidDoc) {
+                                this.divError = true;
+                                this.divDoc = true;
+                                this.valNoDoc = true;
+                                this.paises = model.Paises;
+                                this.documento = model.Documento;
+                                this.stopLoading();
+                            }*/
+                            else {
+                                if (model.UrlDestino != null && model.UrlDestino != "") {
+                                    window.location.href = model.UrlDestino;
+                                } else {
+                                    window.location.reload();
+                                }
+                                setTimeout(() => { document.getElementById('modal-registro').classList.remove('show') }, 30000);
+                            }
+                        })
+                        .catch(() => {
+                            this.stopLoading();
+                            alert("Ocurrió un error. Inténtalo de nuevo.");
+                        });
+                }
+            },
+            mounted() {
+                this.inicializaUI();
+                this.resetForm();
+                var loginModal = document.getElementById('modal-registro');
+                if (loginModal) {
+                    loginModal.addEventListener('show.bs.modal', (e) => {
+                        var relatedTarget = e.relatedTarget;
+                        if (relatedTarget && relatedTarget.dataset.urldestlogin != null) {
+                            this.urlDestinoLogin = relatedTarget.dataset.urldestlogin;
+                        }
+                        this.inicializaUI(); // Inicializa la UI al abrir el modal
+                    });
+
+                    loginModal.addEventListener('hidden.bs.modal', () => {
+                        this.inicializaUI(); // Inicializa la UI al cerrar el modal
+                        //this.resetForm(); // Resetea el formulario al cerrar el modal
+                    });
+                }
+            }
+        }).mount('#loginModalApp');
+    });
+</script>
+<!--FIN MODAL REGISTRO-->
+    
+<style>
+    .glyphicon.spinning {
+        animation: spin 1s infinite linear;
+        -webkit-animation: spin2 1s infinite linear;
+    }
+
+    @keyframes spin {
+        from {
+            transform: scale(1) rotate(0deg);
+        }
+
+        to {
+            transform: scale(1) rotate(360deg);
+        }
+    }
+
+    @-webkit-keyframes spin2 {
+        from {
+            -webkit-transform: rotate(0deg);
+        }
+
+        to {
+            -webkit-transform: rotate(360deg);
+        }
+    }
+</style>
+<!--MODAL CHAT-->
+<div class="modal fade text-left" id="chatModal">
+    <div id="chatApp" data-ng-controller="chatController" class="modal-dialog modal-lg" ng-cloak>
+        <div id="loaderChat" ng-if="loadingChat" class="loading-contacts" style="display: none;">
+            <img src="/images/loader2.gif" /><br />
+            Cargando...
+        </div>
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h4 class="d-inline-block">
+                <div ng-show="!estaConectado" class="d-inline-block">
+                    <div class="header-estado-0"></div>
+                </div>
+                <div ng-show="estaConectado" class="d-inline-block">
+                    <div class="header-estado-1"></div>
+                </div>
+                Chat hacesfalta.org  {{chatUsuario.Usuario.NombreONick}}
+                </h4>
+                <button type="button" class="close btn-close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            </div>
+
+
+            <!--<div class="alert alert-info" data-ng-show="divLoading">
+                    <button class="btn btn-lg btn-warning"><span class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>Enviando datos...</button>
+                </div>-->
+            <div class="modal-body border-top border-light">
+
+                <div class="app" id="vistaChat">
+                    <div class="row app-one">
+                        <div class="col-sm-4 side">
+                            <div class="side-one">
+                                <!-- -->
+
+                                <div class="row searchBox hidden-xs">
+                                    <div class="col-sm-12 searchBox-inner">
+                                        <div class="form-group has-feedback">
+                                            <input id="searchText" name="searchText" type="search" ng-model="terms" class="form-control" name="searchText" ng-attr-autocomplete="off" readonly  ng-click="$event.target.removeAttribute('readonly')" placeholder="Buscar usuario..." style="padding:13px;">
+                                            <!--<span class="glyphicon glyphicon-search form-control-feedback"></span>-->
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row sideBar hidden-xs d-block small">
+                                    <div id="{{x.GrupoID}}" class="row sideBar-body sideBar-body{{grupoActivo && grupoActivo.GrupoID==x.GrupoID? '-active':''}}" ng-repeat=" x in chatUsuario.Contactos | orderBy: ['-MensajesPendientes','-EstaOnline','-OrdenFechaLectura' ] | buscarFilter:terms " ng-click="getConv(x.GrupoID)">
+                                        <div class="col-sm-3 col-xs-3 sideBar-avatar hidden-xs">
+                                            <div class="avatar-icon position-relative" ng-attr-title="{{x.EstaOnline?'Conectado':'Desconectado'}}">
+                                                <img ng-src="{{x.UrlFoto}}">
+                                                <div class="{{estaConectado && x.EstaOnline?'estado-1':'estado-0'}}"></div>
+                                            </div>
+                                        </div>
+                                        <div class="col-sm-9 col-xs-12 sideBar-main">
+
+                                            <div class="sideBar-name">
+                                                <span class="badge pull-right float-end text-bg-secondary {{x.MensajesPendientes>0?'alert-danger':''}}">{{x.MensajesPendientes}}</span>
+                                                <span class="name-meta">{{x.NombreONick}}</span>
+                                                <div ng-if="x.Ong">
+                                                    <br />
+                                                    <span class="ong-meta">{{x.Ong}}</span>
+                                                </div>
+                                                <br />
+                                                <span class="time-meta">{{x.Conversacion && x.Conversacion.MasReciente?(x.Conversacion.MasReciente.Fecha | date:'dd/MM/yyyy HH:mm:ss'):''}}</span>
+
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div ng-show="(msgNoCargaContacto)"  class="col-sm-8 conversation">
+                            <div class="alert alert-warning text-center">Hay problemas de conexión. Espera unos segundos antes de cargar el contacto</div>
+                        </div>
+                        <div ng-show="(!grupoActivo)" class="col-sm-8 conversation">
+                            <div class="alert alert-info text-center">Selecciona un contacto para ver sus mensajes o enviarle uno</div>
+                        </div>
+                        
+                        <div ng-show="(grupoActivo)" class="col-sm-8 conversation">
+                            <div class="row heading">
+                                <div class="col-sm-2 col-md-1 col-xs-3 heading-avatar">
+                                    <div class="heading-avatar-icon">
+                                        <img ng-src="{{grupoActivo.UrlFoto}}">
+                                    </div>
+                                </div>
+                                <div class="col-sm-8 col-xs-7 heading-name">
+                                    
+                                    {{grupoActivo.NombreONick}}
+                                    <span class="heading-online" ng-show="(grupoActivo.NombreOng)">-{{grupoActivo.NombreOng}}-</span>
+                                </div>
+                                <div class="col-sm-1 col-xs-1  heading-dot pull-right float-end text-right">
+                                    
+                                </div>
+                            </div>
+
+                            <div class="row message d-block" id="conversation">
+                                <!--<div class="row message-previous">
+                                      <div class="col-sm-12 previous">
+                                        <a onclick="previous(this)" id="ankitjain28" name="20">
+                                        Show Previous Message!
+                                        </a>
+                                      </div>
+                                    </div>-->
+
+                                <div id="listaMensajes" class="row message-body" ng-repeat=" x in grupoActivo.Conversacion.Mensajes">
+                                    <div id="anchor{{x.Id}}" class="col-sm-12 message-main-{{x.UsuarioId == chatUsuario.Usuario.UsuarioId?'sender':'receiver'}}">
+                                        <div class="{{x.UsuarioId== chatUsuario.Usuario.UsuarioId? 'sender':'receiver'}}">
+
+                                            <div class="message-text">
+                                                <div class="message-status pull-right float-end">
+                                                    <span ng-if="x.UsuarioId == chatUsuario.Usuario.UsuarioId" class="material-symbols-rounded" style="color: {{x.Estado===1 && grupoActivo.FechaLecturaContacto>x.Fecha? 'green':'transparent'}}">check</span>
+                                                </div>
+                                                {{x.Texto}}
+                                            </div>
+                                            <span ng-if="x.Estado===0" class="glyphicon glyphicon-repeat spinning"></span>
+                                            <span ng-if="x.Estado===0" style="color: gray">Enviando...</span>
+                                            <span ng-if="x.Estado===-2" style="color: red">El mensaje ha sido rechazado por el servidor</span>
+                                            <span ng-if="x.Estado===-1" style="color: red">
+                                                <span ng-show="estaConectado"><a href="javascript:return false;" ng-click="actualizarContacto(x.GrupoID);" ng-attr-title="Actualizar contacto">
+                                                    <span class="glyphicon glyphicon-refresh"></span>
+                                                </a></span>No se ha podido confirmar la entrega.
+
+                                            </span>
+
+                                            <span class="message-time pull-right float-end">{{x.Nombre}}<br />
+                                                {{x.Fecha | date:'dd/MM/yyyy HH:mm:ss'}}
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row reply">
+
+                                <!--<div class="col-sm-1 col-xs-1 reply-emojis">
+                                      <i class="fa fa-smile-o fa-2x"></i>
+                                    </div>-->
+                                <div class="col-sm-11 col-xs-11 reply-main">
+                                    <textarea style="" autocomplete="off" class="form-control" rows="1" ng-model="texto" id="inputMsg" ng-keypress="enterInput($event)" ng-change="enterInput($event)">{{$scope.texto}}</textarea>
+                                    <span style="color: red; margin-top: -72px; display: block;" ng-show="!estaConectado">En este momento no hay conexión</span>
+                                    <span style="color: red; margin-top: -72px; display: block;" ng-show="valTextolargo">Has superado el límite de caracteres para este mensaje</span>
+
+                                </div>
+                                <!--<div class="col-sm-1 col-xs-1 reply-recording">
+                                      <i class="fa fa-microphone fa-2x" aria-hidden="true"></i>
+                                    </div>-->
+                                <div class="col-sm-1 col-xs-1 reply-send">
+                                    <button class="btn btn-link" id="enviarmsg" ng-click="sendMsg()" ng-disabled="!estaConectado || !puedeEnviarMensaje"><span class="material-symbols-rounded">send</span></button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="alert alert-info text-center" id="vistaNoCont" style="display: none;">
+                    <p>Tus contactos no están disponibles en este momento.</p>
+                    <p><a href="#" onclick="window.location ='/usuarios/contactos/';return false;" class="btn btn-primary">Cargar contactos </a></p>
+                </div>
+                <div class="alert alert-info text-center text-center" id="vistaLogin" style="display: none;">
+                    <p>Debes iniciar sesión</p>
+                    <p><a href="#" onclick="window.location = '/usuarios/login/?orgn=' + window.location.href;return false;" class="btn btn-primary">Iniciar sesion</a></p>
+                </div>
+                <div class="alert alert-warning text-center" id="vistaError" style="display: none;">
+                    <p id="msgError">Ocurrió un error</p>
+                    <p></p>
+                </div>
+
+                
+            </div>
+
+        </div>
+    </div>
+
+
+    <script>
+
+        //function abrirChat(grupoId) {
+        //    // console.log('abrirChat');
+        //    angular.element(document.getElementById('chatApp')).scope().iniciarSesion(
+
+        //       /* function () {
+        //            var chatModal = $('#chatModal');
+        //            if (grupoId) {
+
+        //                chatModal.data('grupoid', grupoId);
+        //            }
+        //            chatModal.modal({ show: true });
+        //        }*/
+        //    );
+        //    var chatModal = $('#chatModal');
+        //    if (grupoId) {
+
+        //        chatModal.data('grupoid', grupoId);
+        //    }
+        //    chatModal.modal({ show: true });
+        //}
+
+        $(document).ready(function () {
+
+
+            if (window.location.href.indexOf("/usuarios/login/") > -1) return;
+
+            if ($('#chatMsgGlobalBox')) $('#chatMsgGlobalBox').show();
+
+            $.each(['Vol', 'Emp'], function (key, value) {
+                $('#chatMsgGlobalBox' + value + 'Mov').show();
+            });
+
+
+
+
+
+
+            
+
+        });
+
+
+
+
+    </script>
+    <!--FIN MODAL CHAT-->
+
+    
+        <script src="/Scripts/jquery.signalR-2.2.2.js"></script>
+<script src="/usuarios/contactos/chat/ChatHub.js"></script>
+<script src="/usuarios/contactos/chat/ChatApp.js"></script>
+<script src='/signalr/hubs'></script>
+    
+	   
+</body>
+</html>
