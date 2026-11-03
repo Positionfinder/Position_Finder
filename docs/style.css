@@ -1,13 +1,7 @@
 :root {
-  --bg: #f6f3ee; --surface: #fffdf9; --ink: #1f2420; --muted: #5d655f; --line: #e2ddd3;
-  --accent: #2f5d50; --accent-soft: #e2ece7; --warm: #b5532f; --warm-soft: #f6e5dc;
+  --bg: #ffffff; --surface: #ffffff; --ink: #0f1f3d; --muted: #4f5d78; --line: #d6e0f0;
+  --accent: #1d4ed8; --accent-soft: #e6eefc; --warm: #1e40af; --warm-soft: #dbe7fb;
   --radius: 12px;
-}
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #151916; --surface: #1d221f; --ink: #e9ece8; --muted: #a2aba4; --line: #2e3530;
-    --accent: #8cc2ad; --accent-soft: #23332d; --warm: #e8936f; --warm-soft: #3a2a22;
-  }
 }
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 Inter, system-ui, sans-serif; }
@@ -41,7 +35,7 @@ table.jobs { width: 100%; border-collapse: collapse; font-size: 14px; }
 .method { margin: 0 0 28px; }
 .method summary { cursor: pointer; font-weight: 600; }
 
-.masthead { padding: 56px 0 28px; border-bottom: 1px solid var(--line); }
+.masthead { padding: 56px 0 28px; border-bottom: 1px solid var(--line); background: linear-gradient(180deg, #eaf1fd 0%, #ffffff 100%); }
 .eyebrow { margin: 0 0 8px; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; color: var(--warm); font-weight: 600; }
 h1 { font-family: Fraunces, Georgia, serif; font-weight: 650; font-size: clamp(36px, 7vw, 56px); line-height: 1.05; margin: 0 0 12px; }
 .lede { max-width: 640px; margin: 0; color: var(--muted); font-size: 17px; }
