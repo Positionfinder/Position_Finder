@@ -58,6 +58,24 @@ def load_translators(langs: set[str]):
     return out
 
 
+DE_ASSOC = re.compile(r"(wissenschaftliche|akademische|wiss\.)\S{0,4}\s*(mitarbeiter|besch[aä]ftigte)\S*"
+                      r"(\s*(bzw\.|oder|/)\s*(wissenschaftliche|akademische)?\S{0,4}\s*(mitarbeiter|besch[aä]ftigte)\S*)?", re.I)
+EN_FIX = [(re.compile(r"\b(academic|scientific|science) (employee|staff member|collaborator|worker)s?\b", re.I), "Research associate"),
+          (re.compile(r"\bknow\. employee\b", re.I), "Research associate")]
+
+
+def prepare(title: str, lang: str) -> str:
+    if lang == "de":
+        title = DE_ASSOC.sub("Research associate", title)
+    return title
+
+
+def tidy(en: str) -> str:
+    for pat, rep in EN_FIX:
+        en = pat.sub(rep, en)
+    return en
+
+
 def main() -> None:
     data = json.loads(JOBS.read_text(encoding="utf-8"))
     cache = json.loads(CACHE.read_text(encoding="utf-8")) if CACHE.exists() else {}
@@ -70,7 +88,7 @@ def main() -> None:
         if lang == "en":
             it["title_en"] = it["title"]
         elif it["title"] in cache:
-            it["title_en"] = cache[it["title"]]
+            it["title_en"] = tidy(cache[it["title"]])
         else:
             todo.setdefault(lang, []).append(it)
     if todo:
@@ -80,7 +98,7 @@ def main() -> None:
             for it in items:
                 if tr:
                     try:
-                        en = tr(it["title"]).strip()
+                        en = tidy(tr(prepare(it["title"], lang)).strip())
                         cache[it["title"]] = en
                         it["title_en"] = en
                         continue

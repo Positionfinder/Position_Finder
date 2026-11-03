@@ -254,6 +254,28 @@ def parse_listing(html: str, base_url: str) -> list[dict]:
 
 # ---------- detail reading ----------
 
+CALL_PDF = re.compile(r"\bbases\b|convocat|resoluci|ausschreibung|stellenausschreibung|job description|"
+                      r"call (text|document)|anuncio|anunci\b|\bpdf\b", re.I)
+
+
+def pdf_segments(url: str) -> list[str]:
+    try:
+        r = fetch(url)
+    except Exception:  # noqa: BLE001  (blocked or unreachable)
+        return []
+    if "pdf" not in r.headers.get("Content-Type", "").lower() and not url.lower().endswith(".pdf"):
+        return []
+    if len(r.content) > MAX_PDF_BYTES:
+        return []
+    try:
+        from pypdf import PdfReader
+        reader = PdfReader(io.BytesIO(r.content))
+        text = "\n".join((p.extract_text() or "") for p in reader.pages[:6])
+    except Exception:  # noqa: BLE001
+        return []
+    return [clean(x) for x in text.split("\n") if clean(x)]
+
+
 def read_detail(url: str) -> dict:
     try:
         r = fetch(url)
@@ -280,7 +302,13 @@ def read_detail(url: str) -> dict:
             tag.decompose()
         h1 = soup.find("h1")
         title = clean(h1.get_text(" ")) if h1 else None
-        segments = [clean(x) for x in main_element(soup).get_text("\n").split("\n") if clean(x)]
+        main = main_element(soup)
+        segments = [clean(x) for x in main.get_text("\n").split("\n") if clean(x)]
+        if sum(len(x) for x in segments) < 2500:
+            # Short offer page that links to the call document (bases / Ausschreibung): read that too.
+            for a in [a for a in main.find_all("a", href=True)
+                      if CALL_PDF.search(clean(a.get_text(" "))) or a["href"].lower().endswith(".pdf")][:2]:
+                segments += pdf_segments(urldefrag(urljoin(r.url, a["href"]))[0])
     return {"status": "ok", "title": title, "segments": segments[:3000], "pdf": is_pdf}
 
 

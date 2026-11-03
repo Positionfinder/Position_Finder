@@ -29,7 +29,7 @@ TOPICS: dict[str, tuple[str, list[str]]] = {
     "participation": ("Citizen participation & co-design", [
         r"citizen participation", r"public participation", r"community (engagement|participation|based)", r"co-?design",
         r"co-?creation", r"participatory (planning|research|methods?|approach|process)", r"participaci[oó]n ciudadana",
-        r"participaci[oó] ciutadana", r"b[uü]rgerbeteiligung", r"\bbeteiligung", r"partizipati", r"stakeholder engagement",
+        r"participaci[oó] ciutadana", r"b[uü]rgerbeteiligung", r"[oö]ffentlichkeitsbeteiligung", r"beteiligungs(verfahren|prozess|formate)", r"partizipati", r"stakeholder engagement",
         r"living lab", r"transdisciplinar", r"\bparticipatory\b", r"participativ"]),
     "risk_perception": ("Risk perception", [
         r"risk perception", r"perceived risk", r"percepci[oó]n del riesgo", r"percepci[oó] del risc",
