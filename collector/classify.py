@@ -12,7 +12,7 @@ PHD = re.compile(
     # de
     r"doktorand|promotionsstelle|promotionsvorhaben|(m[oö]glichkeit|gelegenheit) zur (promotion|weiterqualifikation)|"
     r"zur promotion|promovieren|dissertation|promotionsm[oö]glichkeit|mit promotion\b|promotionsstelle|"
-    r"doctoral researcher|phd position|phd candidate|phd student",
+    r"(?<![a-z-])doctoral researcher|phd position|phd candidate|phd student",
     re.I,
 )
 POSTDOC = re.compile(
