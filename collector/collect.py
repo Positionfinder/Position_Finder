@@ -23,10 +23,25 @@ from bs4 import BeautifulSoup
 
 sys.path.insert(0, str(Path(__file__).parent))
 import classify  # noqa: E402
+import match as matcher  # noqa: E402
 from fetch import Blocked, fetch  # noqa: E402
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "docs/data/jobs.json"
+PROFILES = matcher.load_profiles(ROOT / "sources/profiles.yaml")
+SHOW_THRESHOLD = 60  # default "match" filter on the website
+REGION_EN = {
+    "Andalucía": "Andalusia", "Aragón": "Aragon", "Asturias": "Asturias", "Illes Balears": "Balearic Islands",
+    "Canarias": "Canary Islands", "Cantabria": "Cantabria", "Castilla-La Mancha": "Castilla-La Mancha",
+    "Castilla y León": "Castile and León", "Catalunya": "Catalonia", "Comunitat Valenciana": "Valencian Community",
+    "Extremadura": "Extremadura", "Galicia": "Galicia", "Madrid": "Madrid", "Murcia": "Murcia", "Navarra": "Navarre",
+    "País Vasco": "Basque Country", "La Rioja": "La Rioja", "Spain": "Spain",
+    "Baden-Württemberg": "Baden-Württemberg", "Bayern": "Bavaria", "Berlin": "Berlin", "Brandenburg": "Brandenburg",
+    "Bremen": "Bremen", "Hamburg": "Hamburg", "Hessen": "Hesse", "Mecklenburg-Vorpommern": "Mecklenburg-Western Pomerania",
+    "Niedersachsen": "Lower Saxony", "Nordrhein-Westfalen": "North Rhine-Westphalia", "Rheinland-Pfalz": "Rhineland-Palatinate",
+    "Saarland": "Saarland", "Sachsen": "Saxony", "Sachsen-Anhalt": "Saxony-Anhalt", "Schleswig-Holstein": "Schleswig-Holstein",
+    "Thüringen": "Thuringia",
+}
 CACHE = ROOT / "data/detail_cache.json"
 SEEN = ROOT / "data/seen.json"
 DEBUG = ROOT / "debug"
@@ -75,6 +90,10 @@ SKIP_LINK = re.compile(r"^(home|inicio|inici|login|accede|contact|contacto|conta
                        r"more|ver más|veure més|next|siguiente|previous|anterior|\d+|»|«|›|‹|all calls|open|closed|"
                        r"access to jobs|view more|view all|ver todas?|veure-les totes|tots|todas|abiertas?|cerradas?|obertes|tancades)$",
                        re.I)
+# Research posts that don't say whether they are PhD or postdoc level.
+RESEARCHER = re.compile(r"investigador(/a|a)?\b(?!\W{0,3}(predoctoral|en formaci|pre-doctoral))|"
+                        r"personal investigador(?! en formaci)|\bresearcher\b|research (fellow|associate|scientist)|"
+                        r"cient[ií]fic[oa]\b|investigaci[oó]n posdoctoral", re.I)
 # German research posts that don't say whether they are PhD or postdoc level.
 DE_ASSOCIATE = re.compile(r"(wissenschaftliche|akademische|wiss\.)\S{0,4}\s*(mitarbeiter|besch[aä]ftigte)|"
                           r"research (associate|scientist)|scientist \(|wissenschaftler\S{0,4}in\b", re.I)
@@ -289,6 +308,7 @@ def pdf_title(segments: list[str]) -> str | None:
 def classify_text(text: str) -> dict:
     return {"level": classify.level(text), "fields": classify.fields(text[:15000]),
             "deadline": classify.deadline(text, date.min), "max_year": max_year(text),
+            "topics": matcher.topic_counts(text),
             "deadline_est": classify.relative_deadline(text), "page_status": classify.page_status(text)}
 
 
@@ -361,8 +381,11 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         # ("PhD position ... after the doctorate you can ...").
         lvl_title = classify.level(it["title"]) or classify.level(it["context"])
         lvl = lvl_title or det.get("level")
-        if inst.get("country") == "DE" and not lvl and DE_ASSOCIATE.search(it["title"]):
-            lvl = "research"  # shown as "Research associate (level not stated)"
+        if lvl == "phd+postdoc":
+            # Both levels mentioned: it is a postdoc offer unless the title itself says PhD.
+            lvl = "phd" if classify.level(it["title"]) == "phd" else "postdoc"
+        if not lvl and (DE_ASSOCIATE.search(it["title"]) or RESEARCHER.search(it["title"])):
+            lvl = "research"  # shown as "Researcher (level not stated)"
         title_flds = classify.fields(f"{quick} {det.get('title') or ''}")
         flds = sorted(set(title_flds) | set(det.get("fields") or []))
         dl = classify.deadline(quick, date.min) or det.get("deadline")
@@ -384,6 +407,9 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             future = [d for _, d in classify._dates(it["context"]) if d >= today]
             dl = max(future).isoformat() if future else None
         row_status = f"{it['title']} {it['context']}"
+        strength = matcher.topic_strength(f"{title} {it['context']} {det.get('title') or ''}", det.get("topics") or {})
+        matches = {pr["id"]: matcher.score(pr, strength) for pr in PROFILES}
+        best = max(pct for pct, _ in matches.values())
         is_open = bool(OPEN_STATUS.search(row_status)) or det.get("page_status") == "open"
         if not dl and OPEN_STATUS.search(row_status):
             # Rows like "Oberta 13-11-2026": in an open row, the future date is the closing date.
@@ -401,9 +427,9 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         elif is_call and re.search(r"20\d\d$", prog) and int(prog[-4:]) < today.year:
             reason = "past edition of a programme call"
         elif not lvl:
-            reason = "not PhD/postdoc"
-        elif inst.get("country") == "DE" and "postdoc" not in lvl and lvl != "research":
-            reason = "Germany: postdoc positions only"
+            reason = "not a postdoc / researcher position"
+        elif lvl not in ("postdoc", "research"):
+            reason = "PhD position (excluded)"
         elif TECH_STAFF.search(title) and not classify.level(title):
             reason = "technical / support staff"
         elif not prog and not lvl_title and len(title) < 45 and not DE_ASSOCIATE.search(title):
@@ -412,16 +438,19 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             reason = "no deadline and not marked open (can't confirm it is still open)"
         elif not dl and max([y for y in (max_year(f"{title} {it['context']}"), det.get("max_year")) if y] or [today.year]) < today.year:
             reason = "old (latest year mentioned is in the past)"
-        elif not prog and not classify.relevant(flds):
+        elif not prog and not classify.relevant(flds) and best < 40:
             reason = "field not relevant"
-        elif not prog and not classify.relevant(title_flds) and len(det.get("fields") or []) < 2:
+        elif not prog and not classify.relevant(title_flds) and len(det.get("fields") or []) < 2 and best < SHOW_THRESHOLD:
             reason = "field only mentioned in passing in the offer text"
         if is_call:
             title = f"{prog} call"
         rec = {
             "id": item_id(it["url"]), "title": title[:300], "url": it["url"],
-            "institution": inst["name"], "inst_id": inst["id"], "region": inst.get("region"),
+            "institution": inst.get("name_en") or inst["name"], "inst_id": inst["id"],
+            "region": REGION_EN.get(inst.get("region"), inst.get("region")), "city": inst.get("city"),
             "country": inst.get("country", "ES"),
+            "match": None if is_call else {pid: pct for pid, (pct, _) in matches.items()},
+            "topics": [] if is_call else matcher.main_topics(strength),
             "inst_type": inst.get("type"), "level": lvl, "fields": flds, "deadline": dl,
             "deadline_estimated": estimated,
             "kind": "call" if is_call else "position",
@@ -512,6 +541,8 @@ def main() -> None:
 
     payload = {
         "generated": now_iso(),
+        "profiles": [{"id": pr["id"], "label": pr["label"], "short": pr["short"]} for pr in PROFILES],
+        "threshold": SHOW_THRESHOLD,
         "count": len(items),
         "items": sorted(items, key=lambda r: (r["first_seen"], r["deadline"] or "9999"), reverse=True),
         "sources": sources,

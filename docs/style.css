@@ -12,7 +12,34 @@
 * { box-sizing: border-box; }
 body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.55 Inter, system-ui, sans-serif; }
 a { color: var(--accent); }
-.wrap { max-width: 920px; margin: 0 auto; padding: 0 16px; }
+.wrap { max-width: 1240px; margin: 0 auto; padding: 0 16px; }
+
+/* profiles legend */
+.profiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 10px; margin: 18px 0 0; }
+.profile { display: flex; gap: 12px; align-items: center; background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); padding: 10px 14px; font-size: 14px; }
+.pid { flex: none; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; background: var(--accent); color: var(--surface); font-weight: 600; }
+
+/* jobs table */
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius); background: var(--surface); margin: 0 0 24px; }
+table.jobs { width: 100%; border-collapse: collapse; font-size: 14px; }
+.jobs th { text-align: left; font-weight: 600; font-size: 12px; text-transform: uppercase; letter-spacing: .06em; color: var(--muted); padding: 10px 12px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+.jobs td { padding: 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+.jobs tr:last-child td { border-bottom: 0; }
+.jobs .pos { min-width: 260px; }
+.jobs .pos > a { color: var(--ink); font-weight: 600; text-decoration: none; line-height: 1.35; }
+.jobs .pos > a:hover { text-decoration: underline; text-decoration-color: var(--accent); }
+.orig { color: var(--muted); font-size: 12px; margin: 3px 0 6px; }
+.jobs .tags { margin-top: 6px; }
+.num { text-align: right; white-space: nowrap; }
+.pct { display: inline-block; min-width: 54px; text-align: center; font-weight: 600; font-variant-numeric: tabular-nums; padding: 3px 8px; border-radius: 999px; }
+.pct.hi { background: var(--accent); color: var(--surface); }
+.pct.mid { background: var(--accent-soft); color: var(--accent); }
+.pct.lo { color: var(--muted); }
+.open { white-space: nowrap; font-weight: 500; }
+.muted { color: var(--muted); }
+.soon { color: var(--warm); font-weight: 600; }
+.method { margin: 0 0 28px; }
+.method summary { cursor: pointer; font-weight: 600; }
 
 .masthead { padding: 56px 0 28px; border-bottom: 1px solid var(--line); }
 .eyebrow { margin: 0 0 8px; text-transform: uppercase; letter-spacing: .12em; font-size: 12px; color: var(--warm); font-weight: 600; }
@@ -60,6 +87,20 @@ input[type=search]:focus, select:focus, button:focus-visible { outline: 2px soli
 .ok { color: var(--accent); } .bad { color: var(--warm); }
 .foot { padding: 24px 16px 48px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
 
+@media (max-width: 860px) {
+  /* table becomes one card per position */
+  .tablewrap { border: 0; background: none; overflow: visible; }
+  .jobs thead { display: none; }
+  .jobs, .jobs tbody, .jobs tr, .jobs td { display: block; width: 100%; }
+  .jobs tr { background: var(--surface); border: 1px solid var(--line); border-radius: var(--radius); margin: 0 0 10px; padding: 6px 4px; }
+  .jobs td { border: 0; padding: 6px 12px; display: grid; grid-template-columns: 96px 1fr; gap: 10px; text-align: left; }
+  .jobs td::before { content: attr(data-label); color: var(--muted); font-size: 12px; text-transform: uppercase; letter-spacing: .05em; padding-top: 2px; }
+  .jobs td.pos { display: block; min-width: 0; }
+  .jobs td.pos::before { content: none; }
+  .jobs td.empty { display: block; }
+  .jobs td.empty::before { content: none; }
+  .num { text-align: left; }
+}
 @media (max-width: 600px) {
   .masthead { padding-top: 36px; }
   .controls { position: static; }

@@ -1,0 +1,22 @@
+# Research profiles used for the "Match" columns. Each profile lists the topics of one CV
+# (topic ids are defined in collector/match.py). No names or CV text are stored here.
+#   core:       the profile's main research lines (weight 3)
+#   secondary:  closely related areas (weight 2)
+#   methods:    methods and context (weight 1)
+#   full_match: points that count as a 100 % match (about two core topics plus one secondary)
+
+- id: A
+  label: "Spatial risk, landscape & participatory GIS"
+  short: "Risk · landscape · PPGIS"
+  core: [ppgis, risk_perception, gis_rs, flood, ecosystem_services, landscape, spatial_justice]
+  secondary: [urban_growth, green_health, resilience, tech_risk, urban_planning, participation]
+  methods: [survey_methods, informal, digital_ai]
+  full_match: 8
+
+- id: B
+  label: "Participatory planning, housing & informal settlements"
+  short: "Participation · housing · informal"
+  core: [participation, ppgis, informal, housing, governance, urban_planning]
+  secondary: [digital_ai, sdg, mcda, spatial_justice]
+  methods: [survey_methods, gis_rs, global_south, urban_growth]
+  full_match: 8
