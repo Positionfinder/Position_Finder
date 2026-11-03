@@ -100,6 +100,7 @@ input[type=search]:focus, select:focus, button:focus-visible { outline: 2px soli
   .jobs td.empty { display: block; }
   .jobs td.empty::before { content: none; }
   .num { text-align: left; }
+  .jobs td > * { justify-self: start; min-width: 0; }
 }
 @media (max-width: 600px) {
   .masthead { padding-top: 36px; }

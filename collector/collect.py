@@ -46,6 +46,7 @@ CACHE = ROOT / "data/detail_cache.json"
 SEEN = ROOT / "data/seen.json"
 DEBUG = ROOT / "debug"
 CACHE_DAYS = 14
+CACHE_VERSION = 3  # bump when the way offer pages are read changes, so cached pages are re-read
 MAX_DETAILS_PER_SOURCE = 80
 MAX_PDF_BYTES = 8_000_000
 SAVE_DEBUG_HTML = os.environ.get("PF_DEBUG_HTML") == "1"
@@ -91,6 +92,7 @@ SKIP_LINK = re.compile(r"^(home|inicio|inici|login|accede|contact|contacto|conta
                        r"access to jobs|view more|view all|ver todas?|veure-les totes|tots|todas|abiertas?|cerradas?|obertes|tancades)$",
                        re.I)
 # Research posts that don't say whether they are PhD or postdoc level.
+PHD_PROGRAMME = re.compile(r"^(FPU|la Caixa INPhINIT|Joan Oró FI|Industrial Doctorates)\b|MSCA.*doctoral", re.I)
 RESEARCHER = re.compile(r"investigador(/a|a)?\b(?!\W{0,3}(predoctoral|en formaci|pre-doctoral))|"
                         r"personal investigador(?! en formaci)|\bresearcher\b|research (fellow|associate|scientist)|"
                         r"cient[ií]fic[oa]\b|investigaci[oó]n posdoctoral", re.I)
@@ -258,12 +260,16 @@ CALL_PDF = re.compile(r"\bbases\b|convocat|resoluci|ausschreibung|stellenausschr
                       r"call (text|document)|anuncio|anunci\b|\bpdf\b", re.I)
 
 
+NOT_CALL_DOC = re.compile(r"calendari|formulari|sol·licitud|solicitud|application form|antrag|ptgas|\bpas\b|"
+                          r"privacy|privacidad|protecci[oó]n de datos|datenschutz", re.I)
+
+
 def pdf_segments(url: str) -> list[str]:
     try:
         r = fetch(url)
     except Exception:  # noqa: BLE001  (blocked or unreachable)
         return []
-    if "pdf" not in r.headers.get("Content-Type", "").lower() and not url.lower().endswith(".pdf"):
+    if not r.content[:5].startswith(b"%PDF"):
         return []
     if len(r.content) > MAX_PDF_BYTES:
         return []
@@ -306,8 +312,12 @@ def read_detail(url: str) -> dict:
         segments = [clean(x) for x in main.get_text("\n").split("\n") if clean(x)]
         if sum(len(x) for x in segments) < 2500:
             # Short offer page that links to the call document (bases / Ausschreibung): read that too.
-            for a in [a for a in main.find_all("a", href=True)
-                      if CALL_PDF.search(clean(a.get_text(" "))) or a["href"].lower().endswith(".pdf")][:2]:
+            docs = [a for a in main.find_all("a", href=True)
+                    if (CALL_PDF.search(clean(a.get_text(" "))) or a["href"].lower().endswith(".pdf"))
+                    and not NOT_CALL_DOC.search(clean(a.get_text(" ")))]
+            docs.sort(key=lambda a: (not re.search(r"\bbases\b|ausschreibung|job description", a.get_text(" "), re.I),
+                                     not re.search(r"convocat|resoluci|call", a.get_text(" "), re.I)))
+            for a in docs[:2]:
                 segments += pdf_segments(urldefrag(urljoin(r.url, a["href"]))[0])
     return {"status": "ok", "title": title, "segments": segments[:3000], "pdf": is_pdf}
 
@@ -370,7 +380,7 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         if (row_dl and row_dl < today.isoformat()) or CLOSED_STATUS.search(quick) or it.get("result_links"):
             continue  # already over according to the listing row: no need to open it
         det = cache.get(it["url"])
-        if not (det and det.get("fetched", "") >= cutoff):
+        if not (det and det.get("fetched", "") >= cutoff and det.get("v") == CACHE_VERSION):
             to_read.append(it)
     # Big portals list hundreds of jobs: read the most promising ones first (field words, then
     # postdoc/PhD words in the title); the rest are read on later days (pages are cached).
@@ -394,7 +404,7 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
     for url, d in fetched.items():
         common = set(boiler.get(urlsplit(url).netloc, []))
         text = " ".join(s for s in d.get("segments", []) if seg_hash(s) not in common)
-        cache[url] = {"status": d["status"], "fetched": today.isoformat(), "title": d.get("title"),
+        cache[url] = {"v": CACHE_VERSION, "status": d["status"], "fetched": today.isoformat(), "title": d.get("title"),
                       "chars": len(text), **classify_text(text)}
 
     # 4) build records
@@ -429,8 +439,6 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         # A national/regional programme named in the title is a call, whatever fields its page mentions.
         is_call = bool(prog and (classify.programme_key(title) or not classify.relevant(flds)))
         estimated = False
-        if not dl and det.get("deadline_est"):
-            dl, estimated = det["deadline_est"], True
         if is_call and not dl:
             future = [d for _, d in classify._dates(it["context"]) if d >= today]
             dl = max(future).isoformat() if future else None
@@ -443,6 +451,8 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             # Rows like "Oberta 13-11-2026": in an open row, the future date is the closing date.
             future = [d for _, d in classify._dates(it["context"]) if d >= today]
             dl = max(future).isoformat() if future else None
+        if not dl and det.get("deadline_est"):
+            dl, estimated = det["deadline_est"], True
         reason = None
         if dl and dl < today.isoformat():
             reason = "deadline passed" + (" (estimated)" if estimated else "")
@@ -454,6 +464,8 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             reason = "offer page says closed / resolved"
         elif is_call and re.search(r"20\d\d$", prog) and int(prog[-4:]) < today.year:
             reason = "past edition of a programme call"
+        elif is_call and PHD_PROGRAMME.search(prog):
+            reason = "PhD programme call (excluded)"
         elif not lvl:
             reason = "not a postdoc / researcher position"
         elif lvl not in ("postdoc", "research"):

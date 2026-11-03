@@ -53,7 +53,7 @@
       <td data-label="Location">${esc(loc)}</td>
       <td data-label="Topic"><div class="tags">${topics}</div></td>
       ${DATA.profiles.map((p) => matchCell(it, p.id)).join("")}
-      <td data-label="Deadline">${dl}</td>
+      <td data-label="Deadline"><div>${dl}</div></td>
       <td data-label="Link"><a class="open" href="${esc(it.url)}" target="_blank" rel="noopener">Open ↗</a></td>
     </tr>`;
   }
