@@ -31,18 +31,20 @@ CACHE = ROOT / "data/detail_cache.json"
 SEEN = ROOT / "data/seen.json"
 DEBUG = ROOT / "debug"
 CACHE_DAYS = 14
-MAX_DETAILS_PER_SOURCE = 60
+MAX_DETAILS_PER_SOURCE = 80
 MAX_PDF_BYTES = 8_000_000
 SAVE_DEBUG_HTML = os.environ.get("PF_DEBUG_HTML") == "1"
 
 ITEM_HINT = re.compile(
     r"contrat|contract|oferta|offer|position|plaza|pla[çc]a|convocat|call\b|vacan|investigador|researcher|"
-    r"research|predoc|postdoc|posdoc|doctor|ph\.?d|fellowship|beca|ajut|ayuda|job|empleo|treball",
+    r"research|predoc|postdoc|posdoc|doctor|ph\.?d|fellowship|beca|ajut|ayuda|job|empleo|treball|"
+    r"mitarbeiter|stelle|wissenschaftl|promotion|\bE ?1[3-5]\b|TV-?L|TV[oö]D",
     re.I,
 )
 OFFER = re.compile(
     r"contrat|contract|oferta|offer|position|plaza|pla[çc]a|convocat|\bcall\b|vacan|investigador|researcher|"
-    r"predoc|postdoc|posdoc|ph\.?d|doctoral|doctorand|fellowship|beca|ajut|ayuda|job|selecci|\bR[12]\b|hrs20\d\d",
+    r"predoc|postdoc|posdoc|ph\.?d|doctoral|doctorand|fellowship|beca|ajut|ayuda|job|selecci|\bR[12]\b|hrs20\d\d|"
+    r"mitarbeiter|wissenschaftl|stellenausschreibung|\bE ?1[3-5]\b|TV-?L|TV[oö]D|kennziffer",
     re.I,
 )
 NOT_OFFER = re.compile(
@@ -54,7 +56,11 @@ NOT_OFFER = re.compile(
     r"acta |actas |memoria anual|news|noticia|evento|jornada|seminario|webinar|premio|award|"
     r"tramos de investigaci|sexenios|estabilizaci[oó]n|sorteo|committee selection|selection draws|tribunal|"
     r"cuerpos docentes|profesor(ado)? (titular|catedr|ayudante|asociado|agregat|lector|visitante)|catedr[aá]tic|"
-    r"plazas? de profesor|places? de professor",
+    r"plazas? de profesor|places? de professor|"
+    r"\bW ?[23]\b|w[23]-professur|professur f[uü]r|full professor|associate professor|lehrkraft f[uü]r besondere|"
+    r"studentische hilfskraft|studentische[rn]? mitarbeiter|wissenschaftliche hilfskraft|praktikum|internship|"
+    r"ausbildung|azubi|werkstudent|lehrkr[aä]ft|lehrer|"
+    r"^(ausschreibungen|stellenangebote|stellenausschreibungen|offene stellen|job offers|vacancies|jobs|karriere)\b",
     re.I,
 )
 GENERIC_LINK = re.compile(
@@ -69,10 +75,37 @@ SKIP_LINK = re.compile(r"^(home|inicio|inici|login|accede|contact|contacto|conta
                        r"more|ver más|veure més|next|siguiente|previous|anterior|\d+|»|«|›|‹|all calls|open|closed|"
                        r"access to jobs|view more|view all|ver todas?|veure-les totes|tots|todas|abiertas?|cerradas?|obertes|tancades)$",
                        re.I)
-TECH_STAFF = re.compile(r"personal t[eé]cnico|t[eé]cnic[oa]s? (de apoyo|superior|especialista|de laboratorio)|t[eè]cnic/?a|"
+# German research posts that don't say whether they are PhD or postdoc level.
+DE_ASSOCIATE = re.compile(r"(wissenschaftliche|akademische|wiss\.)\S{0,4}\s*(mitarbeiter|besch[aä]ftigte)|"
+                          r"research (associate|scientist)|scientist \(|wissenschaftler\S{0,4}in\b", re.I)
+TECH_STAFF = re.compile(r"technische[rn]? (angestellte|mitarbeiter|assistent)|sachbearbeit|verwaltungs|sekretariat|"
+                        r"systemadministr|it-administr|laborant|personal t[eé]cnico|t[eé]cnic[oa]s? (de apoyo|superior|especialista|de laboratorio)|t[eè]cnic/?a|"
                         r"\bPTA\b|technician|research support|gestor[a]? de|project manager|administrativ|developer|ingeniero de dise|engineer\b", re.I)
-ROW_CONTAINERS = ("tr", "li", "article", "dd")
-TEXT_CONTAINERS = ("p", "h2", "h3", "h4", "h5", "td", "div")
+# Documents that are only published once applications have closed (lists, results, awards).
+RESULT_DOC = re.compile(
+    r"llista (provisional|definitiva)|lista (provisional|definitiva)|listado (provisional|definitivo)|"
+    r"resoluci[oó]n? (provisional|definitiva|de adjudicaci|final)|resoluci[oó] (provisional|definitiva|final)|"
+    r"admesos|admitidos|admitted|exclosos|excluidos|adjudicaci|proposta de contractaci|propuesta de contrataci|"
+    r"\bacta\b|resultad|resultats|results|seleccionad|seleccionat|selected candidate|persona candidata proposada",
+    re.I,
+)
+BARE_RESOLUTION = re.compile(r"^resoluci[oó]n?\.?$", re.I)
+CALL_DOC = re.compile(r"^(convocat[oò]ria|convocatoria|bases|call)\b", re.I)
+# Row-level status words.
+CLOSED_STATUS = re.compile(
+    r"\b(cerrad[ao]s?|tancad[ao]s?|tancat|closed|resuelt[ao]s?|resolt[ao]s?|resolved|en evaluaci[oó]n|en avaluaci[oó]|"
+    r"under (evaluation|review)|finalitzad[ao]|finalizad[ao]|adjudicad[ao]|desiert[ao]|deserta|expired|"
+    r"fuera de plazo|fora de termini|plazo (cerrado|finalizado)|termini (tancat|finalitzat)|no longer accepting)\b",
+    re.I,
+)
+OPEN_STATUS = re.compile(
+    r"\b(abiert[ao]|obert[ao]?|open( call| position)?|en plazo|en termini|plazo abierto|termini obert|"
+    r"accepting applications|pr[oó]xima publicaci[oó]n|upcoming)\b",
+    re.I,
+)
+MAX_ROW_CHARS = 1500
+APPLY_LINK = re.compile(r"e-tauler|^sol·licitud$|^solicitud$|form submission|^formulari|^formulario|^apply( now| here)?$|"
+                        r"^inscripci[oó]n?$|^inscriure", re.I)
 MAIN_ID = re.compile(r"^(content|main|contingut|contenido|region-content|main-content)", re.I)
 
 
@@ -110,6 +143,53 @@ def main_element(soup: BeautifulSoup):
 
 # ---------- listing parsing ----------
 
+def _link_url(a, base_url: str) -> str:
+    return urldefrag(urljoin(base_url, a["href"].strip()))[0]
+
+
+def row_of(a, main, base_url: str):
+    """The listing row that holds this link.
+
+    Climb from the link while the ancestor still describes only this offer. Stop before an
+    ancestor that also holds another row: a link with the same text pointing elsewhere (the next
+    row's "Convocatòria"), or a link that looks like another offer's title.
+    """
+    url = _link_url(a, base_url)
+    text = clean(a.get_text(" "))
+    box = a
+    for depth, parent in enumerate(a.parents):
+        if parent is main or depth > 9 or parent.name in ("body", "html"):
+            break
+        if len(clean(parent.get_text(" "))) > MAX_ROW_CHARS:
+            break
+        other_row = False
+        for x in parent.find_all("a", href=True):
+            if x is a or x["href"].startswith(("mailto:", "tel:", "javascript:", "#")):
+                continue
+            xu, xt = _link_url(x, base_url), clean(x.get_text(" "))
+            if xu == url:
+                continue
+            if xt and xt.lower() == text.lower():
+                other_row = True
+                break
+            if len(xt) >= 40 and OFFER.search(xt) and not RESULT_DOC.search(xt) \
+                    and not re.search(r"bases|pdf|formulari|sol·licitud|solicitud|annex|anexo|e-tauler", xt, re.I):
+                other_row = True
+                break
+        if other_row:
+            break
+        box = parent
+    return box
+
+
+def row_flags(box, a) -> dict:
+    """Result documents linked from the same row (so applications are over)."""
+    texts = [clean(x.get_text(" ")) for x in box.find_all("a", href=True) if x is not a] if box is not a else []
+    has_call_doc = any(CALL_DOC.match(t) for t in texts) or bool(CALL_DOC.match(clean(a.get_text(" "))))
+    results = [t for t in texts if RESULT_DOC.search(t) or (has_call_doc and BARE_RESOLUTION.match(t))]
+    return {"result_links": results[:5]}
+
+
 def parse_listing(html: str, base_url: str) -> list[dict]:
     soup = BeautifulSoup(html, "lxml")
     for tag in soup(["script", "style", "nav", "header", "footer", "aside", "noscript"]):
@@ -120,26 +200,13 @@ def parse_listing(html: str, base_url: str) -> list[dict]:
         href = a["href"].strip()
         if href.startswith(("mailto:", "tel:", "javascript:", "#")):
             continue
-        url = urldefrag(urljoin(base_url, href))[0]
+        url = _link_url(a, base_url)
         link_text = clean(a.get_text(" "))
-        if len(link_text) < 4 or SKIP_LINK.match(link_text):
+        if len(link_text) < 4 or SKIP_LINK.match(link_text) or RESULT_DOC.search(link_text) \
+                or BARE_RESOLUTION.match(link_text) or APPLY_LINK.search(link_text):
             continue
-        box = None
-        for depth, parent in enumerate(a.parents):
-            if parent is main or depth > 7:
-                break
-            if parent.name in ROW_CONTAINERS:
-                box = parent
-                break
-        if box is None:
-            for parent in a.parents:
-                if parent is main:
-                    break
-                if parent.name in TEXT_CONTAINERS and len(clean(parent.get_text(" "))) > len(link_text) + 10:
-                    box = parent
-                    break
-        box = box or a
-        context = clean(box.get_text(" "))[:1200]
+        box = row_of(a, main, base_url)
+        context = clean(box.get_text(" "))[:MAX_ROW_CHARS]
         if len(context) < len(link_text):
             context = link_text
         if not ITEM_HINT.search(context):
@@ -150,11 +217,20 @@ def parse_listing(html: str, base_url: str) -> list[dict]:
             title = rest[:220] if len(rest) >= 15 else link_text
         else:
             title = link_text
+        flags = row_flags(box, a)
         prev = items.get(url)
         if prev is None or len(context) > len(prev["context"]):
             items[url] = {"url": url, "title": title, "context": context,
-                          "weak_title": generic and len(context) > 250}
-    return list(items.values())
+                          "weak_title": generic and len(context) > 400, **flags}
+    # One entry per row: several links in the same row (call PDF, notice board) describe one offer.
+    seen_rows, out = set(), []
+    for it in items.values():
+        key = (it["title"], it["context"])
+        if key in seen_rows:
+            continue
+        seen_rows.add(key)
+        out.append(it)
+    return out
 
 
 # ---------- detail reading ----------
@@ -212,7 +288,8 @@ def pdf_title(segments: list[str]) -> str | None:
 
 def classify_text(text: str) -> dict:
     return {"level": classify.level(text), "fields": classify.fields(text[:15000]),
-            "deadline": classify.deadline(text, date.min), "max_year": max_year(text)}
+            "deadline": classify.deadline(text, date.min), "max_year": max_year(text),
+            "deadline_est": classify.relative_deadline(text), "page_status": classify.page_status(text)}
 
 
 # ---------- per source ----------
@@ -241,9 +318,17 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         if NOT_OFFER.search(it["title"]) or not OFFER.search(quick):
             it["skip"] = "not an offer"
             continue
+        row_dl = classify.deadline(quick, date.min)
+        if (row_dl and row_dl < today.isoformat()) or CLOSED_STATUS.search(quick) or it.get("result_links"):
+            continue  # already over according to the listing row: no need to open it
         det = cache.get(it["url"])
-        if not (det and det.get("fetched", "") >= cutoff) and len(to_read) < MAX_DETAILS_PER_SOURCE:
+        if not (det and det.get("fetched", "") >= cutoff):
             to_read.append(it)
+    # Big portals list hundreds of jobs: read the most promising ones first (field words, then
+    # postdoc/PhD words in the title); the rest are read on later days (pages are cached).
+    to_read.sort(key=lambda it: (not classify.fields(f"{it['title']} {it['context']}"),
+                                 not classify.level(f"{it['title']} {it['context']}")))
+    to_read = to_read[:MAX_DETAILS_PER_SOURCE]
     fetched = {it["url"]: read_detail(it["url"]) for it in to_read}
 
     # 2) learn site boilerplate: lines repeated on many detail pages of the same host
@@ -272,10 +357,17 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             continue
         quick = f"{it['title']} {it['context']}"
         det = cache.get(it["url"], {})
+        # The title is the most reliable signal for the level; the offer text often mentions both
+        # ("PhD position ... after the doctorate you can ...").
         lvl_title = classify.level(it["title"]) or classify.level(it["context"])
-        lvl = classify.level(it["title"]) or classify.level(it["context"]) or det.get("level")
-        flds = sorted(set(classify.fields(f"{quick} {det.get('title') or ''}")) | set(det.get("fields") or []))
+        lvl = lvl_title or det.get("level")
+        if inst.get("country") == "DE" and not lvl and DE_ASSOCIATE.search(it["title"]):
+            lvl = "research"  # shown as "Research associate (level not stated)"
+        title_flds = classify.fields(f"{quick} {det.get('title') or ''}")
+        flds = sorted(set(title_flds) | set(det.get("fields") or []))
         dl = classify.deadline(quick, date.min) or det.get("deadline")
+        if dl and dl > (today + timedelta(days=400)).isoformat():
+            dl = None  # a "deadline" years away is a contract end date or similar, not the closing date
         title = it["title"]
         if det.get("title") and len(det["title"]) > 15 and (len(title) < 30 or GENERIC_LINK.match(title) or it.get("weak_title")):
             title = det["title"]
@@ -283,40 +375,60 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             debug.append({"title": title[:200], "url": it["url"], "skip": "link inside a long list, no own title"})
             continue
         prog = classify.programme_key(f"{title} {it['context'][:200]}")
-        reason = None
-        if dl and dl < today.isoformat():
-            reason = "deadline passed"
-        elif re.search(r"\b(closed|cerrad[ao]|tancad[ao]|finalitzad[ao]|resuelt[ao]|adjudicad[ao]|desiert[ao]|expired)\b",
-                       it["context"], re.I):
-            reason = "marked closed"
-        elif not lvl:
-            reason = "not PhD/postdoc"
-        elif TECH_STAFF.search(title) and not classify.level(title):
-            reason = "technical / support staff"
-        elif not prog and not lvl_title and len(title) < 45:
-            reason = "vague title (looks like a menu or section link)"
-        elif not dl and max([y for y in (max_year(f"{title} {it['context']}"), det.get("max_year")) if y] or [today.year]) < today.year:
-            reason = "old (no deadline, latest year mentioned is in the past)"
-        elif prog and not classify.relevant(flds):
-            years = [int(y) for y in re.findall(r"\b(20\d{2})\b", f"{title} {it['context'][:300]}")]
-            if (years and max(years) < today.year) or (not years and not dl):
-                reason = "old or undated programme call"
-        elif not prog and not classify.relevant(flds):
-            reason = "field not relevant"
-        is_call = bool(prog and not classify.relevant(flds))
+        # A national/regional programme named in the title is a call, whatever fields its page mentions.
+        is_call = bool(prog and (classify.programme_key(title) or not classify.relevant(flds)))
+        estimated = False
+        if not dl and det.get("deadline_est"):
+            dl, estimated = det["deadline_est"], True
         if is_call and not dl:
             future = [d for _, d in classify._dates(it["context"]) if d >= today]
             dl = max(future).isoformat() if future else None
+        row_status = f"{it['title']} {it['context']}"
+        is_open = bool(OPEN_STATUS.search(row_status)) or det.get("page_status") == "open"
+        if not dl and OPEN_STATUS.search(row_status):
+            # Rows like "Oberta 13-11-2026": in an open row, the future date is the closing date.
+            future = [d for _, d in classify._dates(it["context"]) if d >= today]
+            dl = max(future).isoformat() if future else None
+        reason = None
+        if dl and dl < today.isoformat():
+            reason = "deadline passed" + (" (estimated)" if estimated else "")
+        elif CLOSED_STATUS.search(row_status):
+            reason = "marked closed / resolved / under evaluation"
+        elif it.get("result_links"):
+            reason = "results already published: " + "; ".join(it["result_links"])[:120]
+        elif det.get("page_status") == "closed":
+            reason = "offer page says closed / resolved"
+        elif is_call and re.search(r"20\d\d$", prog) and int(prog[-4:]) < today.year:
+            reason = "past edition of a programme call"
+        elif not lvl:
+            reason = "not PhD/postdoc"
+        elif inst.get("country") == "DE" and "postdoc" not in lvl and lvl != "research":
+            reason = "Germany: postdoc positions only"
+        elif TECH_STAFF.search(title) and not classify.level(title):
+            reason = "technical / support staff"
+        elif not prog and not lvl_title and len(title) < 45 and not DE_ASSOCIATE.search(title):
+            reason = "vague title (looks like a menu or section link)"
+        elif not dl and not is_open:
+            reason = "no deadline and not marked open (can't confirm it is still open)"
+        elif not dl and max([y for y in (max_year(f"{title} {it['context']}"), det.get("max_year")) if y] or [today.year]) < today.year:
+            reason = "old (latest year mentioned is in the past)"
+        elif not prog and not classify.relevant(flds):
+            reason = "field not relevant"
+        elif not prog and not classify.relevant(title_flds) and len(det.get("fields") or []) < 2:
+            reason = "field only mentioned in passing in the offer text"
         if is_call:
             title = f"{prog} call"
         rec = {
             "id": item_id(it["url"]), "title": title[:300], "url": it["url"],
             "institution": inst["name"], "inst_id": inst["id"], "region": inst.get("region"),
+            "country": inst.get("country", "ES"),
             "inst_type": inst.get("type"), "level": lvl, "fields": flds, "deadline": dl,
-            "kind": "call" if (prog and not classify.relevant(flds)) else "position",
-            "programme": prog if (prog and not classify.relevant(flds)) else None, "source_page": page,
+            "deadline_estimated": estimated,
+            "kind": "call" if is_call else "position",
+            "programme": prog if is_call else None, "source_page": page,
         }
-        debug.append({**rec, "reason": reason, "context": it["context"][:300], "detail": det.get("status")})
+        debug.append({**rec, "reason": reason, "context": it["context"][:400], "detail": det.get("status"),
+                      "result_links": it.get("result_links"), "page_status": det.get("page_status")})
         if not reason:
             results.append(rec)
 
@@ -325,6 +437,10 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         (DEBUG / "html").mkdir(parents=True, exist_ok=True)
         (DEBUG / "html" / f"{inst['id']}-{item_id(page)}.html").write_text(r.text, encoding="utf-8")
     return results, status, debug
+
+
+OFFICIAL_HOSTS = re.compile(r"(^|\.)(aei\.gob\.es|ciencia\.gob\.es|agaur\.gencat\.cat|fundacionlacaixa\.org|"
+                           r"ec\.europa\.eu|europa\.eu|universidades\.gob\.es)$")
 
 
 def merge_calls(items: list[dict]) -> list[dict]:
@@ -344,14 +460,23 @@ def merge_calls(items: list[dict]) -> list[dict]:
                 c["listed_by"].append(rec["institution"])
             if rec["deadline"]:
                 c["_deadlines"].append(rec["deadline"])
+            c["_urls"].append(rec["url"])
             continue
-        rec = {**rec, "listed_by": [rec["institution"]], "_deadlines": [rec["deadline"]] if rec["deadline"] else []}
+        rec = {**rec, "listed_by": [rec["institution"]], "_deadlines": [rec["deadline"]] if rec["deadline"] else [],
+               "_urls": [rec["url"]]}
         calls[key] = rec
         out.append(rec)
     for c in calls.values():
         dls = c.pop("_deadlines")
-        if dls:  # earliest listed deadline: showing a date later than the real one could make people miss it
-            c["deadline"] = min(dls)
+        if dls:
+            # Universities sometimes post their own earlier internal deadline; the date most of them
+            # give is the official one. Ties go to the later date.
+            c["deadline"] = max(set(dls), key=lambda d: (dls.count(d), d))
+        if c.get("_urls"):
+            official = [u for u in c["_urls"] if OFFICIAL_HOSTS.search(urlsplit(u).netloc)]
+            if official:
+                c["url"] = official[0]
+        c.pop("_urls", None)
         if len(c["listed_by"]) > 1:
             c["institution"] = f"Listed by {len(c['listed_by'])} institutions"
             c["region"] = None

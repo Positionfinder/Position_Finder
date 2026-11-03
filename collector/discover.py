@@ -7,6 +7,7 @@ from the homepage (two levels deep, same site only).
 from __future__ import annotations
 
 import json
+import os
 import re
 import sys
 from concurrent.futures import ThreadPoolExecutor
@@ -26,14 +27,18 @@ NAV_WORDS = re.compile(
     r"empleo|ofertas?|trabaj|treball|trebal|lan eskaintza|work with us|work at|careers?|jobs?|"
     r"convocatori|personal investigador|personal docente|\bpdi\b|\bpi\b|selecci|contrataci|contractaci|"
     r"recursos humanos|recursos humans|human resources|hrs4r|talent|sede electr|seu electr|"
-    r"investigaci[oó]n|recerca|research",
+    r"investigaci[oó]n|recerca|research|"
+    r"stellen|stellenangebot|stellenausschreibung|stellenb[oö]rse|karriere|jobs? (und|&) karriere|"
+    r"arbeiten (an|bei|am)|offene stellen|ausschreibung|wissenschaftliches personal|personal",
     re.I,
 )
 JOB_WORDS = re.compile(
     r"predoctoral|postdoctoral|post-doctoral|posdoctoral|postdoc|ph\.?d|doctorand|doctoral|"
     r"investigador[a]? doctor|personal investigador|research(er)? (position|staff|assistant|fellow)|"
     r"\bR1\b|\bR2\b|juan de la cierva|ram[oó]n y cajal|margarita salas|\bfpi\b|\bfpu\b|"
-    r"contrat[oa]s? .*proyecto|contracte.*projecte|plazas? de investigaci|oferta de trabajo",
+    r"contrat[oa]s? .*proyecto|contracte.*projecte|plazas? de investigaci|oferta de trabajo|"
+    r"wissenschaftliche[rn]?\W*mitarbeiter|postdoktorand|promotion|\bE ?13\b|TV-?L|TV[oö]D|stellenausschreibung|"
+    r"bewerbungsfrist|kennziffer",
     re.I,
 )
 MAX_CANDIDATES_L1 = 10
@@ -135,6 +140,8 @@ def main() -> None:
     only = set(sys.argv[1:])
     if only:
         insts = [i for i in insts if i["id"] in only]
+    if os.environ.get("DISCOVER_ONLY_NEW") == "1":  # test branches: only institutions without job pages yet
+        insts = [i for i in insts if not i.get("job_pages")]
     with ThreadPoolExecutor(max_workers=24) as pool:
         results = list(pool.map(discover, insts))
     out = ROOT / "data/discovery.json"

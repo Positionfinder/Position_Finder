@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Position Finder · PhD & postdoc positions in Spain</title>
-<meta name="description" content="PhD and postdoc positions in urban planning, architecture, geography and related fields at Spanish universities and research centres, collected automatically every day.">
+<title>Position Finder · Academic positions in Spain & Germany</title>
+<meta name="description" content="PhD and postdoc positions in Spain and postdoc positions in Germany, in urban planning, architecture, geography and related fields, collected automatically every day.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,650&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -13,9 +13,9 @@
 <body>
 <header class="masthead">
   <div class="wrap">
-    <p class="eyebrow">Spain · updated daily</p>
+    <p class="eyebrow">Spain &amp; Germany · updated daily</p>
     <h1>Position Finder</h1>
-    <p class="lede">PhD and postdoc positions in <strong>urban planning, architecture, geography</strong> and related fields, collected automatically from Spanish universities and research centres.</p>
+    <p class="lede">Academic positions in <strong>urban planning, architecture, geography</strong> and related fields, collected automatically from universities and research centres: PhD and postdoc positions in Spain, postdoc positions in Germany.</p>
   </div>
 </header>
 
@@ -23,7 +23,12 @@
   <section class="controls" aria-label="Filters">
     <input id="q" type="search" placeholder="Search title, institution, keyword…" autocomplete="off">
     <div class="row">
-      <div class="seg" role="group" aria-label="Level">
+      <div class="seg" role="group" aria-label="Country" id="country">
+        <button data-country="all" class="on">All</button>
+        <button data-country="ES">Spain</button>
+        <button data-country="DE">Germany</button>
+      </div>
+      <div class="seg" role="group" aria-label="Level" id="level">
         <button data-level="all" class="on">All</button>
         <button data-level="phd">PhD</button>
         <button data-level="postdoc">Postdoc</button>
@@ -41,7 +46,7 @@
       </select>
     </div>
     <div id="fields" class="chips" aria-label="Fields"></div>
-    <label class="toggle"><input type="checkbox" id="calls"> Include national/regional fellowship calls open to all fields (Juan de la Cierva, FPU, Beatriu de Pinós…)</label>
+    <label class="toggle"><input type="checkbox" id="calls"> Include national/regional fellowship calls open to all fields (Juan de la Cierva, FPU, Beatriu de Pinós…). Your host university may set an earlier internal deadline.</label>
   </section>
 
   <p id="summary" class="summary" aria-live="polite">Loading…</p>
@@ -54,7 +59,9 @@
     <ul>
       <li><a href="https://euraxess.ec.europa.eu/jobs/search?keywords=urban%20planning%20Spain" rel="noopener">EURAXESS · urban planning</a> ·
           <a href="https://euraxess.ec.europa.eu/jobs/search?keywords=architecture%20Spain" rel="noopener">architecture</a> ·
-          <a href="https://euraxess.ec.europa.eu/jobs/search?keywords=geography%20Spain" rel="noopener">geography</a></li>
+          <a href="https://euraxess.ec.europa.eu/jobs/search?keywords=geography%20Spain" rel="noopener">geography</a> (Spain)</li>
+      <li><a href="https://euraxess.ec.europa.eu/jobs/search?keywords=postdoc%20urban%20planning%20Germany" rel="noopener">EURAXESS · postdoc urban planning</a> ·
+          <a href="https://euraxess.ec.europa.eu/jobs/search?keywords=postdoc%20geography%20Germany" rel="noopener">geography</a> (Germany)</li>
     </ul>
   </section>
 

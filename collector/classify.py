@@ -8,14 +8,22 @@ PHD = re.compile(
     r"predoctoral|pre-doctoral|predoc\b|ph\.?\s?d\.?\s?(student|candidate|position|fellowship|contract|scholarship)|"
     r"(?<![a-z-])doctoral (student|candidate|researcher|position|fellowship|contract)|doctorand[oa]?s?|"
     r"\bfpi\b|\bfpu\b|\bR1\b|first stage researcher|investigador[a]? (en formaci[oó]n|predoctoral)|"
-    r"personal investigador en formaci|contrat[eo]s? predoctorals?|beca predoctoral|tesis doctoral|joan or[oó]|\bINPhINIT\b",
+    r"personal investigador en formaci|contrat[eo]s? predoctorals?|beca predoctoral|tesis doctoral|joan or[oó]|\bINPhINIT\b|"
+    # de
+    r"doktorand|promotionsstelle|promotionsvorhaben|(m[oö]glichkeit|gelegenheit) zur (promotion|weiterqualifikation)|"
+    r"zur promotion|promovieren|dissertation|promotionsm[oö]glichkeit|mit promotion\b|promotionsstelle|"
+    r"doctoral researcher|phd position|phd candidate|phd student",
     re.I,
 )
 POSTDOC = re.compile(
     r"postdoctoral|post-doctoral|posdoctoral|postdoc|post-doc|\bR2\b|recognised researcher|recognized researcher|"
     r"investigador[a]? (doctor[a]?|posdoctoral|postdoctoral)|personal investigador doctor|"
     r"juan de la cierva|margarita salas|mar[ií]a zambrano|beatriu de pin[oó]s|ram[oó]n y cajal|junior leader|"
-    r"marie (sk[lł]odowska-)?curie postdoctoral|msca postdoctoral|research fellow|doctor/a|doctor or doctora",
+    r"marie (sk[lł]odowska-)?curie postdoctoral|msca postdoctoral|research fellow|doctor/a|doctor or doctora|"
+    # de
+    r"postdoktorand|promoviert|abgeschlossene[nr]? promotion|nach (der|abgeschlossener) promotion|"
+    r"(promotion|ph\.?\s?d\.?) (ist |wird )?(vorausgesetzt|erforderlich)|nachwuchsgruppenleit|habilitation|"
+    r"completed (a |your )?(ph\.?\s?d|doctora)|(ph\.?\s?d|doctoral degree) (is )?(required|completed)|holding a ph\.?\s?d",
     re.I,
 )
 # Programme-level calls that are open to all fields (shown separately as "Fellowship calls").
@@ -38,36 +46,50 @@ FIELDS: dict[str, re.Pattern] = {
         r"\bsmart cit|socio-?spatial|socioespacial|spatial justice|justicia espacial|just[ií]cia espacial|"
         r"regeneraci[oó]n urbana|regeneraci[oó] urbana|espacio p[uú]blico|espai p[uú]blic|public space|"
         r"desarrollo urbano|desenvolupament urb|metropolitan (area|region|planning)|[aá]rea metropolitana|"
-        r"pol[ií]ticas? urbanas?|estudios urbanos|estudis urbans|ciudades sostenibles|sustainable cities",
+        r"pol[ií]ticas? urbanas?|estudios urbanos|estudis urbans|ciudades sostenibles|sustainable cities|"
+        # de
+        r"stadtplanung|raumplanung|st[aä]dtebau|stadtentwicklung|raumentwicklung|regionalplanung|regionalentwicklung|"
+        r"stadtforschung|stadt- und regionalplanung|raumordnung|raumwissenschaft|stadtumbau|quartiersentwicklung|"
+        r"siedlungsentwicklung|fl[aä]chennutzung|urbane (transformation|resilienz|r[aä]ume)|stadtregion|"
+        r"planungswissenschaft|landesplanung|bauleitplanung|transformationsforschung",
         re.I,
     ),
     "Architecture": re.compile(
         r"\barchitect(ure|ural|s)?\b|\barquitect(ura|ure|ònic|onic|[oó]nica|[oó]nico|es|os|as|a|e)?\b|\barquitectes\b|"
         r"edificaci[oó]|building (design|technology|physics|energy|performance|information|stock|renovation)|built environment|"
         r"\bETSA[BMVS]?\b|\bBIM\b|rehabilitaci[oó]n (de edificios|energ)|rehabilitaci[oó] (d'edificis|energ)|"
-        r"construcci[oó]n sostenible|interior design|dise[nñ]o arquitect",
+        r"construcci[oó]n sostenible|interior design|dise[nñ]o arquitect|"
+        r"\barchitektur\b|architektonisch|baukultur|geb[aä]udeplanung|entwerfen|bauphysik",
         re.I,
     ),
-    "Geography": re.compile(r"geograf|geograph|demograf|demograph|population studies", re.I),
+    "Geography": re.compile(r"geograf|geograph|demograf|demograph|population studies|humangeograph|"
+                            r"wirtschaftsgeograph|sozialgeograph", re.I),
     "Landscape": re.compile(r"landscape|paisaj|paisatg|green infrastructure|infraestructura verde|infraestructures? verds?|"
                             r"nature-based solutions|soluciones basadas en la naturaleza|ecosystem services|servicios ecosist[eé]micos|"
-                            r"serveis ecosist[eè]mics|urban green|espacios verdes|espais verds|green spaces", re.I),
-    "Housing": re.compile(r"\bhousing\b|vivienda|habitatge", re.I),
+                            r"serveis ecosist[eè]mics|urban green|espacios verdes|espais verds|green spaces|"
+                            r"landschaft|gr[uü]ne infrastruktur|[oö]kosystemleistung|stadtgr[uü]n|freiraumplanung|"
+                            r"naturbasierte l[oö]sungen|umweltplanung|landnutzung", re.I),
+    "Housing": re.compile(r"\bhousing\b|vivienda|habitatge|wohnungs(markt|politik|bau|forschung)|\bwohnen\b", re.I),
     "GIS & remote sensing": re.compile(
         r"\bGIS\b|\bSIG\b|geographic information|informaci[oó]n geogr|informaci[oó] geogr|remote sensing|teledetec|"
-        r"cartograf|cartograph|geospatial|geoespacial|geom[aà]tic|earth observation|observaci[oó]n de la tierra|PPGIS",
+        r"cartograf|cartograph|geospatial|geoespacial|geom[aà]tic|earth observation|observaci[oó]n de la tierra|PPGIS|"
+        r"fernerkundung|geoinformati|kartograph|erdbeobachtung",
         re.I,
     ),
     "Mobility & transport": re.compile(
         r"urban mobility|movilidad urbana|mobilitat urbana|sustainable mobility|movilidad sostenible|mobilitat sostenible|"
         r"transport planning|planificaci[oó]n del transporte|planificaci[oó] del transport|public transport|transporte p[uú]blico|"
         r"transport p[uú]blic|active mobility|movilidad activa|cycling|ciclismo urbano|walkability|caminabilidad|"
-        r"travel behaviou?r|accessibility (analysis|planning|to)|accesibilidad (urbana|territorial)", re.I),
+        r"travel behaviou?r|accessibility (analysis|planning|to)|accesibilidad (urbana|territorial)|"
+        r"verkehrsplanung|mobilit[aä]tsforschung|verkehrswende|mobilit[aä]tswende|nachhaltige mobilit[aä]t|"
+        r"st[aä]dtische mobilit[aä]t", re.I),
     "Heritage": re.compile(r"architectural heritage|built heritage|patrimonio (arquitect|construido|urbano)|patrimoni (arquitect|construït|urb)", re.I),
     "Climate & risk": re.compile(
         r"climate (change )?adaptation|adaptaci[oó]n al cambio clim|adaptaci[oó] al canvi clim|flood risk|riesgo de inundaci|"
         r"risc d'inundaci|natural hazards|riesgos naturales|urban heat|isla de calor|illa de calor|heat island|"
-        r"climate resilien|urban resilien|resiliencia (urbana|clim)|resili[eè]ncia (urbana|clim)|risk perception|percepci[oó]n del riesgo",
+        r"climate resilien|urban resilien|resiliencia (urbana|clim)|resili[eè]ncia (urbana|clim)|risk perception|percepci[oó]n del riesgo|"
+        r"hochwasser|starkregen|klima(wandel)?anpassung|naturgefahren|risikowahrnehmung|katastrophenschutz|"
+        r"hitzevorsorge|klimaresilienz|disaster risk",
         re.I,
     ),
 }
@@ -89,19 +111,24 @@ MONTHS = {
     # en
     "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6, "july": 7, "august": 8,
     "september": 9, "october": 10, "november": 11, "december": 12,
+    # de
+    "januar": 1, "jänner": 1, "februar": 2, "märz": 3, "maerz": 3, "mai": 5, "juni": 6, "juli": 7,
+    "oktober": 10, "dezember": 12,
 }
 _MON = "|".join(sorted(MONTHS, key=len, reverse=True))
 DATE_PATTERNS = [
     (re.compile(r"\b(\d{1,2})[/.-](\d{1,2})[/.-](20\d{2})\b"), lambda m: (int(m[3]), int(m[2]), int(m[1]))),
     (re.compile(r"\b(20\d{2})-(\d{2})-(\d{2})\b"), lambda m: (int(m[1]), int(m[2]), int(m[3]))),
-    (re.compile(rf"\b(\d{{1,2}})\s+(?:de\s+|d')?({_MON})\s+(?:de\s+|del\s+)?(20\d{{2}})\b", re.I),
+    (re.compile(rf"\b(\d{{1,2}})(?:st|nd|rd|th|\.)?\s+(?:de\s+|d'|of\s+)?({_MON})\s*,?\s+(?:de\s+|del\s+)?(20\d{{2}})\b", re.I),
      lambda m: (int(m[3]), MONTHS[m[2].lower()], int(m[1]))),
-    (re.compile(rf"\b({_MON})\s+(\d{{1,2}}),?\s+(20\d{{2}})\b", re.I), lambda m: (int(m[3]), MONTHS[m[1].lower()], int(m[2]))),
+    (re.compile(rf"\b({_MON})\s+(\d{{1,2}})(?:st|nd|rd|th)?,?\s+(20\d{{2}})\b", re.I), lambda m: (int(m[3]), MONTHS[m[1].lower()], int(m[2]))),
 ]
 DEADLINE_CUE = re.compile(
     r"deadline|closing date|apply (by|before)|application period|until|plazo|fecha l[ií]mite|fin de plazo|hasta el|"
     r"termini|data l[ií]mit|fins al|fins el|finaliza|fecha de cierre|cierre|solicitud:|solicitudes|sol·licituds|"
-    r"presentaci[oó]n? de (solicitudes|sol·licituds)|applications?:",
+    r"presentaci[oó]n? de (solicitudes|sol·licituds)|applications?:|"
+    r"bewerbungsfrist|bewerbungsschluss|bewerbungen (bitte )?bis|bis (zum|sp[aä]testens)|einsendeschluss|"
+    r"ende der bewerbungsfrist|frist:|application deadline|closing date",
     re.I,
 )
 
@@ -197,3 +224,53 @@ def programme_key(text: str) -> str | None:
         return None  # university's own FPU-style scheme: treat as a local call, not the national one
     years = re.findall(r"\b(20\d{2})\b", text)
     return f"{name} {max(years)}" if years else name
+
+
+_NUM_WORDS = {"tres": 3, "three": 3, "cinc": 5, "cinco": 5, "five": 5, "set": 7, "siete": 7, "seven": 7,
+              "deu": 10, "diez": 10, "ten": 10, "quinze": 15, "quince": 15, "fifteen": 15,
+              "vint": 20, "veinte": 20, "twenty": 20, "trenta": 30, "treinta": 30, "thirty": 30}
+_RELATIVE = re.compile(
+    r"\b(\d{1,2}|" + "|".join(_NUM_WORDS) + r")\s*(?:\(\d{1,2}\)\s*)?"
+    r"(d[ií]as?|dies|days)\s+(h[aà]bils|h[aá]biles|laborables|naturals|naturales|working|business|calendar)",
+    re.I,
+)
+
+
+def relative_deadline(text: str) -> str | None:
+    """Estimate deadlines written as 'N working days from publication'.
+
+    Base date: the latest date in the document that is not in the future (usually the signature
+    or publication date). Working days are converted at 7/5 plus two days' margin.
+    """
+    m = _RELATIVE.search(text)
+    if not m:
+        return None
+    n = m[1].lower()
+    n = int(n) if n.isdigit() else _NUM_WORDS.get(n)
+    if not n or n > 60:
+        return None
+    today = date.today()
+    past = [d for _, d in _dates(text) if d <= today]
+    if not past:
+        return None
+    base = max(past)
+    working = not re.match(r"natural|calendar", m[3], re.I)
+    days = round(n * 7 / 5) if working else n
+    from datetime import timedelta
+    return (base + timedelta(days=days + 2)).isoformat()
+
+
+_STATUS = re.compile(
+    r"\b(estat|estado|status|situaci[oó]n?|state)\s*(?:de la convocat[oò]ria|de la oferta|of the call)?\s*:?\s*"
+    r"(oberta|obert|abierta|open|tancada|tancat|cerrada|closed|resolta|resuelta|resolved|"
+    r"en avaluaci[oó]|en evaluaci[oó]n|finalitzada|finalizada|adjudicada)\b",
+    re.I,
+)
+
+
+def page_status(text: str) -> str | None:
+    """'open' or 'closed' when the offer page states its status explicitly."""
+    m = _STATUS.search(text)
+    if not m:
+        return None
+    return "open" if re.match(r"obert|oberta|abierta|open", m[2], re.I) else "closed"

@@ -1,24 +1,33 @@
 # Position Finder
 
-PhD and postdoc positions in **urban planning, architecture, geography** and related fields
-(landscape, housing, GIS & remote sensing, urban mobility, heritage, climate risk) at Spanish
-universities and research centres, collected automatically every day and published as a
-searchable website on GitHub Pages.
+Academic positions in **urban planning, architecture, geography** and related fields
+(landscape, housing, GIS & remote sensing, urban mobility, heritage, climate risk), collected
+automatically every day and published as a searchable website on GitHub Pages:
+
+- **Spain**: PhD and postdoc positions, plus national/regional fellowship calls
+- **Germany**: postdoc positions only
+
+Live site: https://positionfinder.github.io/Position_Finder/
 
 ## How it works
 
-1. **Registry** (`sources/institutions.yaml`): every Spanish university and the relevant
+1. **Registry** (`sources/institutions.yaml`): every Spanish university, 65 German universities and
+   institutes strong in planning, landscape and geography, and the relevant
    research centres, with the public job pages known to list PhD / postdoc / research-contract calls.
 2. **Collector** (`collector/collect.py`, runs daily via `.github/workflows/collect.yml`):
    - reads each job page, extracts the listed offers and opens each offer's own page (HTML or PDF);
    - strips text that repeats across a site (menus, footers) so it doesn't skew the classification;
-   - keeps only PhD or postdoc offers whose text matches the target fields, and drops closed offers,
-     past deadlines, resolutions, lists of admitted candidates and similar notices;
+   - keeps only PhD or postdoc offers whose text matches the target fields (Spanish, Catalan,
+     English and German vocabulary);
+   - shows an offer only if it is confirmed open: a future deadline (from the listing row, the offer
+     page, or estimated from "N working days after publication"), or an explicit "open" status;
+   - drops offers marked closed / resolved / under evaluation, rows that already link to results
+     (admitted lists, final resolutions, awards), and past editions of programme calls;
    - national/regional fellowship programmes open to all fields (Juan de la Cierva, Ramón y Cajal, FPU,
      Beatriu de Pinós…) are kept as "fellowship calls", merged into one card even when several
      universities list them;
    - writes `docs/data/jobs.json`, which the website reads.
-3. **Website** (`docs/`): a static page with search and filters (PhD/postdoc, field, region,
+3. **Website** (`docs/`): a static page with search and filters (country, PhD/postdoc, field, region,
    institution type, deadline sort). Each card links to the original announcement.
 4. **Discovery** (`collector/discover.py`, weekly or on demand): follows job-related links from each
    institution's homepage and writes candidate job pages to `data/discovery.json`, to help find

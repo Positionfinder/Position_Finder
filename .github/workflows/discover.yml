@@ -3,9 +3,11 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "41 3 * * 1"   # weekly, Monday 03:41 UTC
+  push:
+    branches: ["probe-discover*"]
 permissions:
   contents: write
-concurrency: discover
+concurrency: discover-${{ github.ref }}
 jobs:
   discover:
     runs-on: ubuntu-latest
@@ -16,6 +18,8 @@ jobs:
         with: {python-version: "3.12", cache: pip}
       - run: pip install -r requirements.txt
       - run: python collector/discover.py
+        env:
+          DISCOVER_ONLY_NEW: ${{ github.ref != 'refs/heads/main' && '1' || '0' }}
       - run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
