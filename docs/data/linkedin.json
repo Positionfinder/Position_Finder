@@ -229,6 +229,71 @@
    "url": "https://www.linkedin.com/jobs/view/4485164577/",
    "li_kind": "job",
    "first_seen": "2026-11-03"
+  },
+  {
+   "title": "Técnico/a Medioambiente",
+   "title_en": "Environmental consultant (EIA/SEA, landscape integration, GIS)",
+   "institution": "IPLAN Gestión Integral",
+   "city": "Santa Cruz de Tenerife",
+   "region": "Canary Islands",
+   "country": "ES",
+   "level": "professional",
+   "note": "3–5 yrs experience; engineering consultancy",
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Urban & spatial planning"
+   ],
+   "match": {
+    "A": 100,
+    "B": 50
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4486074388/",
+   "li_kind": "job",
+   "first_seen": "2026-11-03"
+  },
+  {
+   "title": "ESG-DD Senior Consultant / Principal Consultant",
+   "title_en": "ESG due-diligence senior/principal consultant (infrastructure, mobility, energy)",
+   "institution": "Steer",
+   "city": "Madrid",
+   "region": "Community of Madrid",
+   "country": "ES",
+   "level": "professional",
+   "note": "senior level; transaction advisory",
+   "topics": [
+    "Citizen participation & co-design",
+    "Urban governance & policy"
+   ],
+   "match": {
+    "A": 55,
+    "B": 75
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4486879677/",
+   "li_kind": "job",
+   "first_seen": "2026-11-03"
+  },
+  {
+   "title": "Arquitecto/a - Ingeniero/a Urbanista",
+   "title_en": "Architect / engineer urban planner (land development)",
+   "institution": "Hercesa",
+   "city": "Guadalajara",
+   "region": "Castile-La Mancha",
+   "country": "ES",
+   "level": "professional",
+   "note": "private developer; architect/engineer profile",
+   "topics": [
+    "Urban & spatial planning"
+   ],
+   "match": {
+    "A": 55,
+    "B": 62
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4484638805/",
+   "li_kind": "job",
+   "first_seen": "2026-11-03"
   }
  ]
 }
