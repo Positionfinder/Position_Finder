@@ -870,3 +870,36 @@
 - {id: de-hsrm, country: DE, name: "RheinMain University of Applied Sciences", type: public, region: "Hessen", city: "Wiesbaden", homepage: "https://www.hs-rm.de", job_pages: ["https://www.hs-rm.de/de/hochschule/karriere/stellenangebote"]}
 - {id: de-htwk, country: DE, name: "HTWK Leipzig", type: public, region: "Sachsen", city: "Leipzig", homepage: "https://www.htwk-leipzig.de", job_pages: ["https://www.htwk-leipzig.de/hochschule/stellenangebote"]}
 - {id: de-hsco, country: DE, name: "Coburg University of Applied Sciences", type: public, region: "Bayern", city: "Coburg", homepage: "https://www.hs-coburg.de", job_pages: ["https://www.hs-coburg.de/karriere/stellenangebote/"]}
+
+# ---------------- Professional (non-academic) employers in Spain ----------------
+# type: professional — planning agencies, public bodies, consultancies and NGOs. Positions here are
+# planner / consultant / project manager / policy / GIS-analyst roles; technician and support jobs are skipped.
+- {id: pro-bcnregional, type: professional, name: "Barcelona Regional", name_en: "Barcelona Regional (urban development agency)", region: "Catalunya", city: "Barcelona", homepage: "https://www.bcnregional.com", job_pages: []}
+- {id: pro-amb, type: professional, name: "Àrea Metropolitana de Barcelona", name_en: "Barcelona Metropolitan Area (AMB)", region: "Catalunya", city: "Barcelona", homepage: "https://www.amb.cat", job_pages: []}
+- {id: pro-icgc, type: professional, name: "Institut Cartogràfic i Geològic de Catalunya", name_en: "Cartographic and Geological Institute of Catalonia (ICGC)", region: "Catalunya", city: "Barcelona", homepage: "https://www.icgc.cat", job_pages: []}
+- {id: pro-iermb, type: professional, name: "Institut d'Estudis Regionals i Metropolitans de Barcelona", name_en: "Institute of Regional and Metropolitan Studies of Barcelona (IERMB)", region: "Catalunya", city: "Bellaterra (Barcelona)", homepage: "https://iermb.uab.cat", job_pages: []}
+- {id: pro-metropoli, type: professional, name: "Institut Metròpoli", name_en: "Institut Metròpoli", region: "Catalunya", city: "Barcelona", homepage: "https://institutmetropoli.cat", job_pages: []}
+- {id: pro-bcnecologia, type: professional, name: "Agència d'Ecologia Urbana de Barcelona", name_en: "Urban Ecology Agency of Barcelona (BCNecologia)", region: "Catalunya", city: "Barcelona", homepage: "https://www.bcnecologia.net", job_pages: []}
+- {id: pro-imhab, type: professional, name: "Institut Municipal de l'Habitatge i Rehabilitació de Barcelona", name_en: "Barcelona Municipal Housing Institute (IMHAB)", region: "Catalunya", city: "Barcelona", homepage: "https://www.habitatge.barcelona", job_pages: []}
+- {id: pro-habitat3, type: professional, name: "Fundació Hàbitat3", name_en: "Hàbitat3 Foundation (social housing)", region: "Catalunya", city: "Barcelona", homepage: "https://www.habitat3.cat", job_pages: []}
+- {id: pro-ajbcn, type: professional, name: "Ajuntament de Barcelona", name_en: "Barcelona City Council", region: "Catalunya", city: "Barcelona", homepage: "https://ajuntament.barcelona.cat/ocupacio/ca", job_pages: []}
+- {id: pro-diba, type: professional, name: "Diputació de Barcelona", name_en: "Barcelona Provincial Council", region: "Catalunya", city: "Barcelona", homepage: "https://www.diba.cat", job_pages: []}
+- {id: pro-atri, type: professional, name: "Generalitat de Catalunya (ATRI)", name_en: "Government of Catalonia (ATRI job portal)", region: "Catalunya", city: "Barcelona", homepage: "https://atri.gencat.cat", job_pages: []}
+- {id: pro-cidob, type: professional, name: "CIDOB", name_en: "CIDOB – Barcelona Centre for International Affairs", region: "Catalunya", city: "Barcelona", homepage: "https://www.cidob.org", job_pages: []}
+- {id: pro-isglobal, type: professional, name: "ISGlobal", name_en: "Barcelona Institute for Global Health (ISGlobal)", region: "Catalunya", city: "Barcelona", homepage: "https://www.isglobal.org", job_pages: []}
+- {id: pro-eitum, type: professional, name: "EIT Urban Mobility", name_en: "EIT Urban Mobility", region: "Catalunya", city: "Barcelona", homepage: "https://www.eiturbanmobility.eu", job_pages: []}
+- {id: pro-fbiodiv, type: professional, name: "Fundación Biodiversidad", name_en: "Biodiversity Foundation (Ministry for the Ecological Transition)", region: "Madrid", city: "Madrid", homepage: "https://fundacion-biodiversidad.es", job_pages: []}
+- {id: pro-tragsa, type: professional, name: "Grupo Tragsa", name_en: "Tragsa Group (public environmental services company)", region: "Madrid", city: "Madrid", homepage: "https://www.tragsa.es", job_pages: []}
+- {id: pro-ineco, type: professional, name: "Ineco", name_en: "Ineco (public transport & planning consultancy)", region: "Madrid", city: "Madrid", homepage: "https://www.ineco.com", job_pages: []}
+- {id: pro-emvs, type: professional, name: "EMVS Madrid", name_en: "Madrid Municipal Housing and Land Company (EMVS)", region: "Madrid", city: "Madrid", homepage: "https://www.emvs.es", job_pages: []}
+- {id: pro-conama, type: professional, name: "Fundación Conama", name_en: "Conama Foundation", region: "Madrid", city: "Madrid", homepage: "https://www.conama.org", job_pages: []}
+- {id: pro-provivienda, type: professional, name: "Provivienda", name_en: "Provivienda (housing NGO)", region: "Madrid", city: "Madrid", homepage: "https://www.provivienda.org", job_pages: []}
+- {id: pro-asf, type: professional, name: "Arquitectura Sin Fronteras", name_en: "Architecture Without Borders Spain", region: "Spain", city: "", homepage: "https://asfes.org", job_pages: []}
+- {id: pro-ecodes, type: professional, name: "ECODES", name_en: "ECODES (sustainability foundation)", region: "Aragón", city: "Zaragoza", homepage: "https://ecodes.org", job_pages: []}
+- {id: pro-ihobe, type: professional, name: "Ihobe", name_en: "Ihobe – Basque Environment Agency", region: "País Vasco", city: "Bilbao", homepage: "https://www.ihobe.eus", job_pages: []}
+- {id: pro-bm30, type: professional, name: "Bilbao Metropoli-30", name_en: "Bilbao Metropoli-30", region: "País Vasco", city: "Bilbao", homepage: "https://www.bm30.eus", job_pages: []}
+- {id: pro-tecnalia, type: professional, name: "Tecnalia", name_en: "Tecnalia (applied research & consultancy)", region: "País Vasco", city: "Derio (Bilbao)", homepage: "https://www.tecnalia.com", job_pages: []}
+- {id: pro-jrc, type: professional, name: "Joint Research Centre (JRC) Seville", name_en: "European Commission Joint Research Centre – Seville", region: "Andalucía", city: "Seville", homepage: "https://recruitment.jrc.ec.europa.eu", job_pages: []}
+- {id: pro-idom, type: professional, name: "IDOM", name_en: "IDOM (engineering, architecture & consultancy)", region: "País Vasco", city: "Bilbao", homepage: "https://www.idom.com", job_pages: []}
+- {id: pro-hacesfalta, type: professional, name: "Hacesfalta.org", name_en: "Hacesfalta.org (NGO jobs portal)", region: "Spain", city: "", homepage: "https://www.hacesfalta.org", job_pages: []}
+- {id: pro-enviroo, type: professional, name: "Enviroo", name_en: "Enviroo (environmental jobs portal)", region: "Spain", city: "", homepage: "https://www.enviroo.com", job_pages: []}
