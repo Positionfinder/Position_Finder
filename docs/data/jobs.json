@@ -1,5 +1,5 @@
 {
- "generated": "2026-11-03T16:43:06+00:00",
+ "generated": "2026-11-03T16:47:27+00:00",
  "profiles": [
   {
    "id": "A",
@@ -84,36 +84,27 @@
  ],
  "sources": [
   {
-   "institution": "pro-bcnregional",
-   "url": "https://www.bcnregional.com/treballa-amb-nosaltres/",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "institution": "pro-ajbcn",
+   "url": "https://seuelectronica.ajuntament.barcelona.cat/processosselectius/ca",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
-   "listed": 0,
+   "listed": 2,
    "kept": 0,
    "details_fetched": 0
   },
   {
-   "institution": "pro-ajbcn",
-   "url": "https://seuelectronica.ajuntament.barcelona.cat/processosselectius/ca",
-   "checked": "2026-11-03T16:38:36+00:00",
-   "ok": true,
-   "listed": 2,
-   "kept": 0,
-   "details_fetched": 1
-  },
-  {
    "institution": "pro-cido",
    "url": "https://cido.diba.cat/oposicions",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
    "listed": 70,
    "kept": 1,
-   "details_fetched": 42
+   "details_fetched": 0
   },
   {
    "institution": "pro-cidob",
    "url": "https://www.cidob.org/sobre-cidob/ofertas-trabajo",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -122,101 +113,83 @@
   {
    "institution": "pro-isglobal",
    "url": "https://jobs.isglobal.org/",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
    "details_fetched": 0
   },
   {
-   "institution": "pro-eitum",
-   "url": "https://www.eiturbanmobility.eu/join-us/career/",
-   "checked": "2026-11-03T16:38:36+00:00",
-   "ok": true,
-   "listed": 3,
-   "kept": 0,
-   "details_fetched": 3
-  },
-  {
    "institution": "pro-fbiodiv",
    "url": "https://fundacion-biodiversidad.es/ofertas-de-empleo/",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
    "listed": 20,
    "kept": 0,
-   "details_fetched": 20
+   "details_fetched": 0
   },
   {
    "institution": "pro-tragsa",
    "url": "https://www.tragsa.es/es/equipo-humano/unete-a-nuestro-equipo/ofertas-empleo-temporal/Paginas/ofertas-especificas.aspx",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
    "listed": 20,
    "kept": 0,
-   "details_fetched": 18
+   "details_fetched": 0
   },
   {
    "institution": "pro-ineco",
    "url": "https://www.ineco.com/ineco/talento/oportunidades-profesionales",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
    "listed": 2,
    "kept": 0,
-   "details_fetched": 2
+   "details_fetched": 0
   },
   {
    "institution": "pro-ineco",
    "url": "https://www.ineco.com/ineco/talento/ofertas-de-empleo-publico",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
    "listed": 27,
    "kept": 0,
-   "details_fetched": 3
+   "details_fetched": 0
   },
   {
    "institution": "pro-provivienda",
    "url": "https://empleo.provivienda.org/jobs",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
-   "details_fetched": 8
+   "details_fetched": 0
   },
   {
    "institution": "pro-asf",
    "url": "https://asfes.org/tag/oferta-laboral/",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
    "listed": 18,
    "kept": 1,
-   "details_fetched": 18
+   "details_fetched": 0
   },
   {
    "institution": "pro-ecodes",
    "url": "https://ecodes.org/trabaja-en-ecodes",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
    "listed": 9,
-   "kept": 0,
-   "details_fetched": 9
-  },
-  {
-   "institution": "pro-tecnalia",
-   "url": "https://www.tecnalia.com/trabaja-en-tecnalia",
-   "checked": "2026-11-03T16:38:36+00:00",
-   "ok": true,
-   "listed": 0,
    "kept": 0,
    "details_fetched": 0
   },
   {
    "institution": "pro-hacesfalta",
    "url": "https://www.hacesfalta.org/oportunidades/remuneradas/",
-   "checked": "2026-11-03T16:38:36+00:00",
+   "checked": "2026-11-03T16:47:22+00:00",
    "ok": true,
    "listed": 37,
    "kept": 0,
-   "details_fetched": 28
+   "details_fetched": 0
   }
  ]
 }

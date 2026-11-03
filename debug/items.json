@@ -1,5 +1,4 @@
 {
- "pro-bcnregional https://www.bcnregional.com/treballa-amb-nosaltres/": [],
  "pro-ajbcn https://seuelectronica.ajuntament.barcelona.cat/processosselectius/ca": [
   {
    "id": "945df2aea813",
@@ -1631,109 +1630,6 @@
    "reason": "not a postdoc / researcher position",
    "context": "Living BCN Barcelona is a vibrant and cosmopolitan city on the Mediterranean Sea. It is one of the most attractive European cities thanks to its great quality of life. Barcelona is very multicultural and attracts people from all over the world for its creative atmosphere. All this make this place one of the the top European destinations for students and researchers",
    "detail": "error",
-   "result_links": [],
-   "page_status": null
-  }
- ],
- "pro-eitum https://www.eiturbanmobility.eu/join-us/career/": [
-  {
-   "id": "ca961bf554e6",
-   "title": "How can I apply for a job at EIT Urban Mobility? If you are interested in one of our open positions, please complete and submit your application before the deadline on our online application platform: .",
-   "url": "https://eiturbanmobility.bamboohr.com/careers",
-   "institution": "EIT Urban Mobility",
-   "inst_id": "pro-eitum",
-   "region": "Catalonia",
-   "city": "Barcelona",
-   "country": "ES",
-   "match": {
-    "A": 0,
-    "B": 0
-   },
-   "topics": [],
-   "inst_type": "professional",
-   "sector": "academic",
-   "level": null,
-   "fields": [
-    "Mobility & transport",
-    "Urban planning"
-   ],
-   "deadline": null,
-   "deadline_estimated": false,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.eiturbanmobility.eu/join-us/career/",
-   "reason": "not a postdoc / researcher position",
-   "context": "How can I apply for a job at EIT Urban Mobility? If you are interested in one of our open positions, please complete and submit your application before the deadline on our online application platform: BambooHR .",
-   "detail": "ok",
-   "result_links": [],
-   "page_status": null
-  },
-  {
-   "id": "be91bdec622f",
-   "title": "Check our vacant positions Join us!",
-   "url": "https://www.eiturbanmobility.eu/wp-content/uploads/2025/03/GDPR-compliant-privacy-notice-job-applicants-2025.pdf",
-   "institution": "EIT Urban Mobility",
-   "inst_id": "pro-eitum",
-   "region": "Catalonia",
-   "city": "Barcelona",
-   "country": "ES",
-   "match": {
-    "A": 6,
-    "B": 6
-   },
-   "topics": [],
-   "inst_type": "professional",
-   "sector": "academic",
-   "level": null,
-   "fields": [
-    "Mobility & transport",
-    "Urban planning"
-   ],
-   "deadline": null,
-   "deadline_estimated": false,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.eiturbanmobility.eu/join-us/career/",
-   "reason": "not a postdoc / researcher position",
-   "context": "Check our vacant positions Join us! Privacy policy",
-   "detail": "ok",
-   "result_links": [],
-   "page_status": null
-  },
-  {
-   "id": "b562f474ca4a",
-   "title": "Call for Independent Supervisory Board Chair",
-   "url": "https://www.eiturbanmobility.eu/wp-content/uploads/2026/08/2026.07.28-EIT-UM-SB-Chair-Call_final_-8.pdf",
-   "institution": "EIT Urban Mobility",
-   "inst_id": "pro-eitum",
-   "region": "Catalonia",
-   "city": "Barcelona",
-   "country": "ES",
-   "match": {
-    "A": 100,
-    "B": 81
-   },
-   "topics": [
-    "Urban governance & policy",
-    "Sustainable mobility & accessibility",
-    "Geography"
-   ],
-   "inst_type": "professional",
-   "sector": "academic",
-   "level": null,
-   "fields": [
-    "Geography",
-    "Mobility & transport",
-    "Urban planning"
-   ],
-   "deadline": null,
-   "deadline_estimated": false,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.eiturbanmobility.eu/join-us/career/",
-   "reason": "not a postdoc / researcher position",
-   "context": "Call for Independent Supervisory Board Chair MORE INFO",
-   "detail": "ok",
    "result_links": [],
    "page_status": null
   }
@@ -4458,7 +4354,6 @@
    "page_status": null
   }
  ],
- "pro-tecnalia https://www.tecnalia.com/trabaja-en-tecnalia": [],
  "pro-hacesfalta https://www.hacesfalta.org/oportunidades/remuneradas/": [
   {
    "title": "Técnico/a de prevención de riesgos laborales",
