@@ -1,0 +1,726 @@
+# Institutions the automatic collector cannot read (robots.txt, login, JavaScript portals, TLS/connection
+# errors or no known job page). The daily scheduled task checks these by hand in the user's Chrome,
+# alongside LinkedIn. job_pages: the vacancy/call pages to open; when empty, the daily task finds the page
+# from the homepage and writes the address here so later runs go straight to it.
+# kind: academic = postdoc/researcher (and assistant professor) calls; professional = planner/consultant/policy/GIS jobs (Spain).
+- id: uco
+  name: University of Córdoba
+  country: ES
+  kind: academic
+  city: Córdoba
+  region: Andalucía
+  homepage: https://www.uco.es
+  job_pages: []
+  why_manual: robots.txt disallows automated access to the whole site (Oct 2026)
+- id: ujaen
+  name: University of Jaén
+  country: ES
+  kind: academic
+  city: Jaén
+  region: Andalucía
+  homepage: https://www.ujaen.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: uniovi
+  name: University of Oviedo
+  country: ES
+  kind: academic
+  city: Oviedo
+  region: Asturias
+  homepage: https://www.uniovi.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: uib
+  name: University of the Balearic Islands
+  country: ES
+  kind: academic
+  city: Palma
+  region: Illes Balears
+  homepage: https://www.uib.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: ull
+  name: University of La Laguna
+  country: ES
+  kind: academic
+  city: San Cristóbal de La Laguna
+  region: Canarias
+  homepage: https://www.ull.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: ulpgc
+  name: University of Las Palmas de Gran Canaria
+  country: ES
+  kind: academic
+  city: Las Palmas de Gran Canaria
+  region: Canarias
+  homepage: https://www.ulpgc.es
+  job_pages: []
+  why_manual: robots.txt disallows automated access to the whole site (Oct 2026)
+- id: unican
+  name: University of Cantabria
+  country: ES
+  kind: academic
+  city: Santander
+  region: Cantabria
+  homepage: https://web.unican.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: uclm
+  name: University of Castilla-La Mancha
+  country: ES
+  kind: academic
+  city: Ciudad Real
+  region: Castilla-La Mancha
+  homepage: https://www.uclm.es
+  job_pages: []
+  why_manual: robots.txt disallows automated access to the whole site (Oct 2026)
+- id: unileon
+  name: University of León
+  country: ES
+  kind: academic
+  city: León
+  region: Castilla y León
+  homepage: https://www.unileon.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: uva
+  name: University of Valladolid
+  country: ES
+  kind: academic
+  city: Valladolid
+  region: Castilla y León
+  homepage: https://www.uva.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: uab
+  name: Autonomous University of Barcelona
+  country: ES
+  kind: academic
+  city: Bellaterra (Barcelona)
+  region: Catalunya
+  homepage: https://www.uab.cat
+  job_pages: []
+  why_manual: seleccio.uab.cat requires login and no public listing was found; UAB posts research offers on EURAXESS
+- id: uv
+  name: University of Valencia
+  country: ES
+  kind: academic
+  city: Valencia
+  region: Comunitat Valenciana
+  homepage: https://www.uv.es
+  job_pages: []
+  why_manual: research contract calls are published in DOGV; uv.es/pasinvest returns 403 to bots
+- id: unex
+  name: University of Extremadura
+  country: ES
+  kind: academic
+  city: Badajoz
+  region: Extremadura
+  homepage: https://www.unex.es
+  job_pages: []
+  why_manual: robots.txt disallows automated access to the whole site (Oct 2026)
+- id: usc
+  name: University of Santiago de Compostela
+  country: ES
+  kind: academic
+  city: Santiago de Compostela
+  region: Galicia
+  homepage: https://www.usc.gal
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: udc
+  name: University of A Coruña
+  country: ES
+  kind: academic
+  city: A Coruña
+  region: Galicia
+  homepage: https://www.udc.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: uah
+  name: University of Alcalá
+  country: ES
+  kind: academic
+  city: Alcalá de Henares
+  region: Madrid
+  homepage: https://www.uah.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: upct
+  name: Polytechnic University of Cartagena
+  country: ES
+  kind: academic
+  city: Cartagena
+  region: Murcia
+  homepage: https://www.upct.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: unirioja
+  name: University of La Rioja
+  country: ES
+  kind: academic
+  city: Logroño
+  region: La Rioja
+  homepage: https://www.unirioja.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: unia
+  name: International University of Andalusia
+  country: ES
+  kind: academic
+  city: Seville
+  region: Andalucía
+  homepage: https://www.unia.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: uimp
+  name: Menéndez Pelayo International University
+  country: ES
+  kind: academic
+  city: Madrid
+  region: Madrid
+  homepage: https://www.uimp.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: uoc
+  name: Open University of Catalonia (UOC)
+  country: ES
+  kind: academic
+  city: Barcelona
+  region: Catalunya
+  homepage: https://www.uoc.edu
+  job_pages:
+  - https://selection.uoc.edu/web/offersjob/offers.aspx?y=PP
+  why_manual: offers list is loaded by JavaScript; needs a dedicated adapter
+- id: url
+  name: Ramon Llull University
+  country: ES
+  kind: academic
+  city: Barcelona
+  region: Catalunya
+  homepage: https://www.url.edu
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: salle
+  name: La Salle – Ramon Llull University
+  country: ES
+  kind: academic
+  city: Barcelona
+  region: Catalunya
+  homepage: https://www.salleurl.edu
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: uao
+  name: Abat Oliba CEU University
+  country: ES
+  kind: academic
+  city: Barcelona
+  region: Catalunya
+  homepage: https://www.uaoceu.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: deusto
+  name: University of Deusto
+  country: ES
+  kind: academic
+  city: Bilbao
+  region: País Vasco
+  homepage: https://www.deusto.es
+  job_pages: []
+  why_manual: robots.txt disallows automated access to the whole site (Oct 2026)
+- id: ceu
+  name: CEU San Pablo University
+  country: ES
+  kind: academic
+  city: Madrid
+  region: Madrid
+  homepage: https://www.uspceu.com
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: ue
+  name: European University of Madrid
+  country: ES
+  kind: academic
+  city: Madrid
+  region: Madrid
+  homepage: https://universidadeuropea.com
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: ucjc
+  name: Camilo José Cela University
+  country: ES
+  kind: academic
+  city: Madrid
+  region: Madrid
+  homepage: https://www.ucjc.edu
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: nebrija
+  name: Nebrija University
+  country: ES
+  kind: academic
+  city: Madrid
+  region: Madrid
+  homepage: https://www.nebrija.com
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: ufv
+  name: Francisco de Vitoria University
+  country: ES
+  kind: academic
+  city: Pozuelo de Alarcón (Madrid)
+  region: Madrid
+  homepage: https://www.ufv.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: ie
+  name: IE University
+  country: ES
+  kind: academic
+  city: Madrid / Segovia
+  region: Castilla y León
+  homepage: https://www.ie.edu
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: ucv
+  name: Catholic University of Valencia
+  country: ES
+  kind: academic
+  city: Valencia
+  region: Comunitat Valenciana
+  homepage: https://www.ucv.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: loyola
+  name: Loyola University
+  country: ES
+  kind: academic
+  city: Seville
+  region: Andalucía
+  homepage: https://www.uloyola.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: usj
+  name: San Jorge University
+  country: ES
+  kind: academic
+  city: Zaragoza
+  region: Aragón
+  homepage: https://www.usj.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: upsa
+  name: Pontifical University of Salamanca
+  country: ES
+  kind: academic
+  city: Salamanca
+  region: Castilla y León
+  homepage: https://www.upsa.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: uemc
+  name: European University Miguel de Cervantes
+  country: ES
+  kind: academic
+  city: Valladolid
+  region: Castilla y León
+  homepage: https://www.uemc.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: unir
+  name: International University of La Rioja (UNIR)
+  country: ES
+  kind: academic
+  city: Logroño
+  region: La Rioja
+  homepage: https://www.unir.net
+  job_pages: []
+  why_manual: robots.txt disallows automated access to the whole site (Oct 2026)
+- id: csic
+  name: Spanish National Research Council (CSIC)
+  country: ES
+  kind: academic
+  city: Madrid
+  region: Spain
+  homepage: https://www.csic.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: cchs
+  name: CSIC Centre for Human and Social Sciences
+  country: ES
+  kind: academic
+  city: Madrid
+  region: Madrid
+  homepage: https://cchs.csic.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: ietcc
+  name: Eduardo Torroja Institute for Construction Sciences (CSIC)
+  country: ES
+  kind: academic
+  city: Madrid
+  region: Madrid
+  homepage: https://ietcc.csic.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: iesa
+  name: Institute for Advanced Social Studies (CSIC)
+  country: ES
+  kind: academic
+  city: Córdoba
+  region: Andalucía
+  homepage: https://www.iesa.csic.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: iermb
+  name: Metropolis Institute (IERMB)
+  country: ES
+  kind: academic
+  city: Barcelona
+  region: Catalunya
+  homepage: https://www.institutmetropoli.cat
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: iaac
+  name: Institute for Advanced Architecture of Catalonia (IAAC)
+  country: ES
+  kind: academic
+  city: Barcelona
+  region: Catalunya
+  homepage: https://iaac.net
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: icta
+  name: Institute of Environmental Science and Technology (ICTA-UAB)
+  country: ES
+  kind: academic
+  city: Bellaterra (Barcelona)
+  region: Catalunya
+  homepage: https://icta.uab.cat
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: creaf
+  name: CREAF
+  country: ES
+  kind: academic
+  city: Bellaterra (Barcelona)
+  region: Catalunya
+  homepage: https://www.creaf.cat
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: icgc
+  name: Cartographic and Geological Institute of Catalonia (ICGC)
+  country: ES
+  kind: academic
+  city: Barcelona
+  region: Catalunya
+  homepage: https://www.icgc.cat
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: tecnalia
+  name: Tecnalia
+  country: ES
+  kind: academic
+  city: Derio (Bilbao)
+  region: País Vasco
+  homepage: https://www.tecnalia.com
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: cartif
+  name: CARTIF
+  country: ES
+  kind: academic
+  city: Valladolid
+  region: Castilla y León
+  homepage: https://www.cartif.es
+  job_pages: []
+  why_manual: no collectable job page found by the collector
+- id: de-leipzig
+  name: Leipzig University
+  country: DE
+  kind: academic
+  city: Leipzig
+  region: Sachsen
+  homepage: https://www.uni-leipzig.de
+  job_pages: []
+  why_manual: central vacancy list not found (only PDFs under fileadmin/ul/Stellenausschreibungen)
+- id: de-kiel
+  name: Kiel University
+  country: DE
+  kind: academic
+  city: Kiel
+  region: Schleswig-Holstein
+  homepage: https://www.uni-kiel.de
+  job_pages: []
+  why_manual: robots.txt blocks all bots (Nov 2026)
+- id: de-greifswald
+  name: University of Greifswald
+  country: DE
+  kind: academic
+  city: Greifswald
+  region: Mecklenburg-Vorpommern
+  homepage: https://www.uni-greifswald.de
+  job_pages: []
+  why_manual: site resets connections from GitHub runners
+- id: de-zalf
+  name: Leibniz Centre for Agricultural Landscape Research (ZALF)
+  country: DE
+  kind: academic
+  city: Müncheberg
+  region: Brandenburg
+  homepage: https://www.zalf.de
+  job_pages: []
+  why_manual: TLS error from GitHub runners
+- id: de-dlr
+  name: German Aerospace Center (DLR)
+  country: DE
+  kind: academic
+  city: Cologne
+  region: Nordrhein-Westfalen
+  homepage: https://www.dlr.de
+  job_pages: []
+  why_manual: vacancies are in a JavaScript job portal split per institute; not collected
+- id: de-thuenen
+  name: Thünen Institute
+  country: DE
+  kind: academic
+  city: Braunschweig
+  region: Niedersachsen
+  homepage: https://www.thuenen.de
+  job_pages: []
+  why_manual: vacancy list page not found yet
+- id: de-viadrina
+  name: European University Viadrina
+  country: DE
+  kind: academic
+  city: Frankfurt (Oder)
+  region: Brandenburg
+  homepage: https://www.europa-uni.de
+  job_pages: []
+  why_manual: vacancy page address not found yet
+- id: de-flensburg
+  name: Europa-Universität Flensburg
+  country: DE
+  kind: academic
+  city: Flensburg
+  region: Schleswig-Holstein
+  homepage: https://www.uni-flensburg.de
+  job_pages: []
+  why_manual: vacancy page address not found yet
+- id: de-konstanz
+  name: University of Konstanz
+  country: DE
+  kind: academic
+  city: Konstanz
+  region: Baden-Württemberg
+  homepage: https://www.uni-konstanz.de
+  job_pages: []
+  why_manual: robots.txt blocks automated access
+- id: de-mannheim
+  name: University of Mannheim
+  country: DE
+  kind: academic
+  city: Mannheim
+  region: Baden-Württemberg
+  homepage: https://www.uni-mannheim.de
+  job_pages: []
+  why_manual: vacancy page address not found yet
+- id: de-paderborn
+  name: Paderborn University
+  country: DE
+  kind: academic
+  city: Paderborn
+  region: Nordrhein-Westfalen
+  homepage: https://www.uni-paderborn.de
+  job_pages: []
+  why_manual: vacancy page address not found yet
+- id: de-rostock
+  name: University of Rostock
+  country: DE
+  kind: academic
+  city: Rostock
+  region: Mecklenburg-Vorpommern
+  homepage: https://www.uni-rostock.de
+  job_pages: []
+  why_manual: site resets connections from GitHub runners
+- id: de-fhp
+  name: FH Potsdam – University of Applied Sciences
+  country: DE
+  kind: academic
+  city: Potsdam
+  region: Brandenburg
+  homepage: https://www.fh-potsdam.de
+  job_pages: []
+  why_manual: vacancy page address not found yet
+- id: de-hfwu
+  name: Nürtingen-Geislingen University (HfWU)
+  country: DE
+  kind: academic
+  city: Nürtingen
+  region: Baden-Württemberg
+  homepage: https://www.hfwu.de
+  job_pages: []
+  why_manual: vacancy page address not found yet
+- id: de-hswt
+  name: Weihenstephan-Triesdorf University of Applied Sciences
+  country: DE
+  kind: academic
+  city: Freising
+  region: Bayern
+  homepage: https://www.hswt.de
+  job_pages: []
+  why_manual: vacancy page address not found yet
+- id: de-hsnb
+  name: Neubrandenburg University of Applied Sciences
+  country: DE
+  kind: academic
+  city: Neubrandenburg
+  region: Mecklenburg-Vorpommern
+  homepage: https://www.hs-nb.de
+  job_pages: []
+  why_manual: site resets connections from GitHub runners
+- id: de-fra-uas
+  name: Frankfurt University of Applied Sciences
+  country: DE
+  kind: academic
+  city: Frankfurt am Main
+  region: Hessen
+  homepage: https://www.frankfurt-university.de
+  job_pages: []
+  why_manual: vacancy page address not found yet
+- id: de-hm
+  name: Munich University of Applied Sciences (HM)
+  country: DE
+  kind: academic
+  city: Munich
+  region: Bayern
+  homepage: https://www.hm.edu
+  job_pages: []
+  why_manual: vacancy page address not found yet
+- id: de-thowl
+  name: TH Ostwestfalen-Lippe
+  country: DE
+  kind: academic
+  city: Detmold / Lemgo
+  region: Nordrhein-Westfalen
+  homepage: https://www.th-owl.de
+  job_pages: []
+  why_manual: vacancy page address not found yet
+- id: pro-amb
+  name: Àrea Metropolitana de Barcelona (AMB)
+  country: ES
+  kind: professional
+  city: Barcelona
+  region: Catalonia
+  homepage: https://www.amb.cat
+  job_pages: []
+  why_manual: robots.txt disallows
+- id: pro-diba
+  name: Diputació de Barcelona
+  country: ES
+  kind: professional
+  city: Barcelona
+  region: Catalonia
+  homepage: https://www.diba.cat
+  job_pages: []
+  why_manual: robots.txt disallows
+- id: pro-idom
+  name: IDOM
+  country: ES
+  kind: professional
+  city: Bilbao
+  region: Basque Country
+  homepage: https://www.idom.com
+  job_pages: []
+  why_manual: robots.txt disallows
+- id: pro-emvs
+  name: EMVS Madrid (municipal housing company)
+  country: ES
+  kind: professional
+  city: Madrid
+  region: Community of Madrid
+  homepage: https://www.emvs.es
+  job_pages: []
+  why_manual: TLS errors
+- id: pro-jrc
+  name: JRC Seville (European Commission)
+  country: ES
+  kind: professional
+  city: Seville
+  region: Andalusia
+  homepage: https://joint-research-centre.ec.europa.eu
+  job_pages: []
+  why_manual: JavaScript job portal
+- id: pro-eitum
+  name: EIT Urban Mobility
+  country: ES
+  kind: professional
+  city: Barcelona
+  region: Catalonia
+  homepage: https://www.eiturbanmobility.eu
+  job_pages: []
+  why_manual: JavaScript job portal
+- id: pro-bcnregional
+  name: Barcelona Regional
+  country: ES
+  kind: professional
+  city: Barcelona
+  region: Catalonia
+  homepage: https://www.bcnregional.com
+  job_pages: []
+  why_manual: calls are PDFs
+- id: pro-habitat3
+  name: Hàbitat3
+  country: ES
+  kind: professional
+  city: Barcelona
+  region: Catalonia
+  homepage: https://www.habitat3.cat
+  job_pages: []
+  why_manual: no public job page found
+- id: pro-imhab
+  name: IMHAB – Barcelona Municipal Housing Institute
+  country: ES
+  kind: professional
+  city: Barcelona
+  region: Catalonia
+  homepage: https://www.habitatge.barcelona
+  job_pages: []
+  why_manual: no public job page found
+- id: pro-ihobe
+  name: Ihobe (Basque environmental agency)
+  country: ES
+  kind: professional
+  city: Bilbao
+  region: Basque Country
+  homepage: https://www.ihobe.eus
+  job_pages: []
+  why_manual: no public job page found
+- id: pro-bm30
+  name: Bilbao Metropoli-30
+  country: ES
+  kind: professional
+  city: Bilbao
+  region: Basque Country
+  homepage: https://www.bm30.eus
+  job_pages: []
+  why_manual: no public job page found
+- id: pro-conama
+  name: Fundación Conama
+  country: ES
+  kind: professional
+  city: Madrid
+  region: Community of Madrid
+  homepage: https://www.conama.org
+  job_pages: []
+  why_manual: no public job page found
+- id: pro-enviroo
+  name: Enviroo (environmental job board)
+  country: ES
+  kind: professional
+  city: ''
+  region: Spain
+  homepage: https://www.enviroo.com
+  job_pages: []
+  why_manual: no public job page found
