@@ -15,7 +15,7 @@
   <div class="wrap">
     <p class="eyebrow">Spain &amp; Germany · updated daily</p>
     <h1>Position Finder</h1>
-    <p class="lede">Postdoc and researcher positions in <strong>urban planning, geography, landscape</strong> and related fields, collected automatically from universities and research centres, and scored against two research profiles.</p>
+    <p class="lede">Postdoc, researcher and professional positions in <strong>urban planning, geography, landscape</strong> and related fields, collected automatically from universities, research centres, public bodies, consultancies and LinkedIn, and scored against two research profiles. Professional jobs cover Spain only.</p>
   </div>
 </header>
 
@@ -29,7 +29,10 @@
         <button data-v="all" class="on">All</button><button data-v="ES">Spain</button><button data-v="DE">Germany</button>
       </div>
       <div class="seg" role="group" aria-label="Level" id="level">
-        <button data-v="all" class="on">All</button><button data-v="postdoc">Postdoc</button><button data-v="research">Researcher</button>
+        <button data-v="all" class="on">All</button><button data-v="postdoc">Postdoc</button><button data-v="research">Researcher</button><button data-v="professional">Professional</button>
+      </div>
+      <div class="seg" role="group" aria-label="Source" id="source">
+        <button data-v="all" class="on">All sources</button><button data-v="web">Employer pages</button><button data-v="linkedin">LinkedIn</button>
       </div>
       <select id="matchf" aria-label="Match filter"></select>
       <select id="region" aria-label="Region"><option value="">All regions</option></select>
@@ -55,6 +58,7 @@
   <details class="method">
     <summary>How the match is calculated</summary>
     <p class="small">Each profile is a weighted list of research topics taken from a CV: main research lines count 3 points, related areas 2, methods and context 1. A topic counts fully when it appears in the position title or listing, or at least twice in the announcement, and half when it appears once. The match is the share of a "full match" (about two main lines plus one related area) the position covers, capped at 100%. A position that doesn't touch any main research line of a profile is capped at 55% for that profile. No CV text is published, only the topic lists.</p>
+    <p class="small">Professional jobs (planner, consultant, project manager, policy and GIS-analyst roles; no technician, IT or support jobs) come from public bodies, agencies, consultancies and NGOs in Spain. Positions marked "via LinkedIn" come from a daily LinkedIn search and are scored the same way; they are hidden once the deadline passes, or 30 days after they were found when no deadline is given.</p>
   </details>
 
   <section class="also">

@@ -1,14 +1,14 @@
 (() => {
   const $ = (s) => document.querySelector(s);
   const COUNTRY = { ES: "Spain", DE: "Germany" };
-  const state = { country: "all", level: "all", topics: new Set(), q: "", region: "", sort: "match", matchf: "any", calls: false };
+  const state = { country: "all", level: "all", source: "all", topics: new Set(), q: "", region: "", sort: "match", matchf: "any", calls: false };
   let DATA = { items: [], sources: [], profiles: [], threshold: 60 };
 
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
   const today = new Date(); today.setHours(0, 0, 0, 0);
   const daysTo = (iso) => Math.round((new Date(iso + "T00:00:00") - today) / 86400000);
   const fmt = (iso) => new Date(iso + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
-  const levelLabel = (l) => ({ postdoc: "Postdoc", research: "Researcher (level not stated)" }[l] || "Postdoc");
+  const levelLabel = (l) => ({ postdoc: "Postdoc", research: "Researcher (level not stated)", professional: "Professional" }[l] || "Postdoc");
   const m = (it, pid) => (it.match ? it.match[pid] ?? 0 : null);
   const best = (it) => (it.match ? Math.max(...Object.values(it.match)) : -1);
 
@@ -19,6 +19,7 @@
     else if (state.matchf.startsWith("p:") && m(it, state.matchf.slice(2)) < T) return false;
     if (state.country !== "all" && (it.country || "ES") !== state.country) return false;
     if (state.level !== "all" && it.kind !== "call" && it.level !== state.level) return false;
+    if (state.source !== "all" && (it.source === "linkedin" ? "linkedin" : "web") !== state.source) return false;
     if (state.region && it.region !== state.region) return false;
     if (state.topics.size && !(it.topics || []).some((t) => state.topics.has(t))) return false;
     if (state.q) {
@@ -39,7 +40,7 @@
     const en = it.title_en || it.title;
     const orig = en !== it.title ? `<div class="orig">Original: ${esc(it.title)}</div>` : "";
     const isNew = it.first_seen && daysTo(it.first_seen) >= -7;
-    const tags = `<span class="tag level">${it.kind === "call" ? "Fellowship call · all fields" : levelLabel(it.level)}</span>${isNew ? '<span class="tag new">New</span>' : ""}`;
+    const tags = `<span class="tag level">${it.kind === "call" ? "Fellowship call · all fields" : levelLabel(it.level)}</span>${isNew ? '<span class="tag new">New</span>' : ""}${it.source === "linkedin" ? '<span class="tag call">via LinkedIn</span>' : ""}${it.note ? `<span class="tag call">${esc(it.note)}</span>` : ""}`;
     let dl = '<span class="muted">Not stated</span>';
     if (it.deadline) {
       const d = daysTo(it.deadline);
@@ -70,7 +71,7 @@
     $("#rows").innerHTML = items.length ? items.map(row).join("")
       : `<tr><td colspan="8" class="empty">No positions match these filters right now. Try "All positions" in the match filter, or check back tomorrow.</td></tr>`;
     const total = DATA.items.filter((i) => i.kind !== "call").length;
-    $("#summary").textContent = `${items.length} shown · ${total} open postdoc/researcher positions collected`;
+    $("#summary").textContent = `${items.length} shown · ${total} open positions collected`;
   }
 
   function seg(id, key) {
@@ -102,7 +103,7 @@
       const t = b.dataset.t; state.topics.has(t) ? state.topics.delete(t) : state.topics.add(t);
       b.classList.toggle("on"); render();
     });
-    seg("country", "country"); seg("level", "level");
+    seg("country", "country"); seg("level", "level"); seg("source", "source");
     $("#q").addEventListener("input", (e) => { state.q = e.target.value.trim().toLowerCase(); render(); });
     $("#region").addEventListener("change", (e) => { state.region = e.target.value; render(); });
     $("#sort").addEventListener("change", (e) => { state.sort = e.target.value; render(); });
@@ -115,8 +116,18 @@
       <td class="${s.ok ? "ok" : "bad"}">${s.ok ? "OK" : esc(s.error || "error")}</td><td>${s.ok ? s.kept : "–"}</td></tr>`).join("");
   }
 
-  fetch("data/jobs.json", { cache: "no-cache" })
-    .then((r) => r.json())
-    .then((d) => { DATA = { profiles: [], threshold: 60, ...d }; setup(); render(); })
+  // LinkedIn results are written by a separate daily search (docs/data/linkedin.json); hide expired ones
+  // and ones without a deadline that were found more than 30 days ago.
+  const liFresh = (it) => it.deadline ? daysTo(it.deadline) >= 0 : (!it.first_seen || daysTo(it.first_seen) >= -30);
+  Promise.all([
+    fetch("data/jobs.json", { cache: "no-cache" }).then((r) => r.json()),
+    fetch("data/linkedin.json", { cache: "no-cache" }).then((r) => (r.ok ? r.json() : { items: [] })).catch(() => ({ items: [] })),
+  ])
+    .then(([d, li]) => {
+      const urls = new Set(d.items.map((i) => i.url));
+      const extra = (li.items || []).filter((i) => liFresh(i) && !urls.has(i.url)).map((i) => ({ ...i, source: "linkedin", kind: "position" }));
+      DATA = { profiles: [], threshold: 60, ...d, items: [...d.items, ...extra] };
+      setup(); render();
+    })
     .catch(() => { $("#summary").textContent = "Couldn't load positions. Please try again later."; });
 })();

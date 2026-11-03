@@ -102,6 +102,30 @@ DE_ASSOCIATE = re.compile(r"(wissenschaftliche|akademische|wiss\.)\S{0,4}\s*(mit
 TECH_STAFF = re.compile(r"technische[rn]? (angestellte|mitarbeiter|assistent)|sachbearbeit|verwaltungs|sekretariat|"
                         r"systemadministr|it-administr|laborant|personal t[eé]cnico|t[eé]cnic[oa]s? (de apoyo|superior|especialista|de laboratorio)|t[eè]cnic/?a|"
                         r"\bPTA\b|technician|research support|gestor[a]? de|project manager|administrativ|developer|ingeniero de dise|engineer\b", re.I)
+# Professional (non-academic) roles, for employers with type: professional.
+PRO_ROLE = re.compile(
+    r"planner|planificador|planejador|urbanista|urban (planning|designer|development)|"
+    r"t[eéè]cnic\S{0,5}\s.{0,40}?"
+    r"(urbanis|planeja|planea|planifica|territor|medi ?ambient|medio ?ambient|ambiental|habitatge|vivienda|mobilitat|movilidad|"
+    r"projecte|proyecto|cooperaci|sostenib|clima|paisatge|paisaje|participaci|pol[ií]tiques|pol[ií]ticas|estudis|estudios|sig\b|gis\b|cartograf|geogra|"
+    r"arquitect|desenvolupament|desarrollo|regeneraci|rehabilitaci|inclusi|comunitari)|"
+    r"consultor|consultant|project (manager|officer|coordinator|lead)|programme (manager|officer)|gestor[a]?(/a)? de (proyectos|projectes)|"
+    r"cap de projecte|jefe/?a? de proyecto|coordinador|policy (officer|analyst|advisor|adviser)|"
+    r"analyst|analista|especialista|specialist|\bexpert|officer|advis[oe]r|asesor|assessor|responsable de|"
+    r"arquitect[oa]|architect|ge[oò]graf|ambient[oó]log|\bGIS\b|\bSIG\b|spatial|cart[oò]graf|"
+    r"llicenciat|titulad[oa] superior|grup A1|grupo A1|subgrup A1|subgrupo A1",
+    re.I,
+)
+PRO_EXCLUDE = re.compile(
+    r"auxiliar|administrativ|conserje|consergeria|operari|pe[oó]n|conductor|ch[oó]fer|mantenimient|manteniment|limpieza|neteja|"
+    r"recepci|secretari|developer|desarrollador|programador|software|devops|sysadmin|full ?stack|front ?end|back ?end|"
+    r"helpdesk|soporte (t[eé]cnico|inform)|it support|becari|\bbeca\b|pr[aà]ctiques|pr[aá]cticas|intern(ship)?\b|trainee|"
+    r"electricista|fontaner|delineant|laborant|t[eè]cnic[oa]? (auxiliar|de laboratori|de manteniment|de mantenimiento|inform)|"
+    r"comercial|ventas|sales|account manager|contabl|comptabl|n[oó]min|payroll|abogad|advocat|jur[ií]dic|"
+    r"socorrista|vigilant|agent de|agente de|polic[ií]a|guardia urbana|bomber|bombero|educador|monitor|cuidador|enfermer|infermer|m[eé]dic",
+    re.I,
+)
+
 # Documents that are only published once applications have closed (lists, results, awards).
 RESULT_DOC = re.compile(
     r"llista (provisional|definitiva)|lista (provisional|definitiva)|listado (provisional|definitivo)|"
@@ -354,6 +378,7 @@ def classify_text(text: str) -> dict:
 
 def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[list[dict], dict, list[dict]]:
     status = {"institution": inst["id"], "url": page, "checked": now_iso()}
+    pro = inst.get("type") == "professional"
     try:
         r = fetch(page)
     except Blocked:
@@ -373,7 +398,8 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
     to_read = []
     for it in raw:
         quick = f"{it['title']} {it['context']}"
-        if NOT_OFFER.search(it["title"]) or not OFFER.search(quick):
+        is_offer = OFFER.search(quick) or (pro and PRO_ROLE.search(it["title"]))
+        if NOT_OFFER.search(it["title"]) or not is_offer:
             it["skip"] = "not an offer"
             continue
         row_dl = classify.deadline(quick, date.min)
@@ -424,6 +450,9 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             lvl = "phd" if classify.level(it["title"]) == "phd" else "postdoc"
         if not lvl and (DE_ASSOCIATE.search(it["title"]) or RESEARCHER.search(it["title"])):
             lvl = "research"  # shown as "Researcher (level not stated)"
+        pro_role = pro and not lvl and bool(PRO_ROLE.search(it["title"]) or PRO_ROLE.search(det.get("title") or ""))
+        if pro_role:
+            lvl = "professional"
         title_flds = classify.fields(f"{quick} {det.get('title') or ''}")
         flds = sorted(set(title_flds) | set(det.get("fields") or []))
         dl = classify.deadline(quick, date.min) or det.get("deadline")
@@ -468,13 +497,15 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             reason = "PhD programme call (excluded)"
         elif not lvl:
             reason = "not a postdoc / researcher position"
-        elif lvl not in ("postdoc", "research"):
+        elif lvl not in ("postdoc", "research", "professional"):
             reason = "PhD position (excluded)"
-        elif TECH_STAFF.search(title) and not classify.level(title):
+        elif lvl == "professional" and PRO_EXCLUDE.search(title):
+            reason = "technical / support / non-planning job"
+        elif lvl != "professional" and TECH_STAFF.search(title) and not classify.level(title):
             reason = "technical / support staff"
-        elif not prog and not lvl_title and len(title) < 45 and not DE_ASSOCIATE.search(title):
+        elif not prog and not lvl_title and not pro_role and len(title) < 45 and not DE_ASSOCIATE.search(title):
             reason = "vague title (looks like a menu or section link)"
-        elif not dl and not is_open:
+        elif not dl and not is_open and not pro_role:
             reason = "no deadline and not marked open (can't confirm it is still open)"
         elif not dl and max([y for y in (max_year(f"{title} {it['context']}"), det.get("max_year")) if y] or [today.year]) < today.year:
             reason = "old (latest year mentioned is in the past)"
@@ -491,7 +522,7 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             "country": inst.get("country", "ES"),
             "match": None if is_call else {pid: pct for pid, (pct, _) in matches.items()},
             "topics": [] if is_call else matcher.main_topics(strength),
-            "inst_type": inst.get("type"), "level": lvl, "fields": flds, "deadline": dl,
+            "inst_type": inst.get("type"), "sector": "professional" if lvl == "professional" else "academic", "level": lvl, "fields": flds, "deadline": dl,
             "deadline_estimated": estimated,
             "kind": "call" if is_call else "position",
             "programme": prog if is_call else None, "source_page": page,
