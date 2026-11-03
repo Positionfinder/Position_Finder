@@ -94,9 +94,9 @@ _MON = "|".join(sorted(MONTHS, key=len, reverse=True))
 DATE_PATTERNS = [
     (re.compile(r"\b(\d{1,2})[/.-](\d{1,2})[/.-](20\d{2})\b"), lambda m: (int(m[3]), int(m[2]), int(m[1]))),
     (re.compile(r"\b(20\d{2})-(\d{2})-(\d{2})\b"), lambda m: (int(m[1]), int(m[2]), int(m[3]))),
-    (re.compile(rf"\b(\d{{1,2}})\s+(?:de\s+|d')?({_MON})\s+(?:de\s+|del\s+)?(20\d{{2}})\b", re.I),
+    (re.compile(rf"\b(\d{{1,2}})(?:st|nd|rd|th|\.)?\s+(?:de\s+|d'|of\s+)?({_MON})\s*,?\s+(?:de\s+|del\s+)?(20\d{{2}})\b", re.I),
      lambda m: (int(m[3]), MONTHS[m[2].lower()], int(m[1]))),
-    (re.compile(rf"\b({_MON})\s+(\d{{1,2}}),?\s+(20\d{{2}})\b", re.I), lambda m: (int(m[3]), MONTHS[m[1].lower()], int(m[2]))),
+    (re.compile(rf"\b({_MON})\s+(\d{{1,2}})(?:st|nd|rd|th)?,?\s+(20\d{{2}})\b", re.I), lambda m: (int(m[3]), MONTHS[m[1].lower()], int(m[2]))),
 ]
 DEADLINE_CUE = re.compile(
     r"deadline|closing date|apply (by|before)|application period|until|plazo|fecha l[ií]mite|fin de plazo|hasta el|"
@@ -197,3 +197,53 @@ def programme_key(text: str) -> str | None:
         return None  # university's own FPU-style scheme: treat as a local call, not the national one
     years = re.findall(r"\b(20\d{2})\b", text)
     return f"{name} {max(years)}" if years else name
+
+
+_NUM_WORDS = {"tres": 3, "three": 3, "cinc": 5, "cinco": 5, "five": 5, "set": 7, "siete": 7, "seven": 7,
+              "deu": 10, "diez": 10, "ten": 10, "quinze": 15, "quince": 15, "fifteen": 15,
+              "vint": 20, "veinte": 20, "twenty": 20, "trenta": 30, "treinta": 30, "thirty": 30}
+_RELATIVE = re.compile(
+    r"\b(\d{1,2}|" + "|".join(_NUM_WORDS) + r")\s*(?:\(\d{1,2}\)\s*)?"
+    r"(d[ií]as?|dies|days)\s+(h[aà]bils|h[aá]biles|laborables|naturals|naturales|working|business|calendar)",
+    re.I,
+)
+
+
+def relative_deadline(text: str) -> str | None:
+    """Estimate deadlines written as 'N working days from publication'.
+
+    Base date: the latest date in the document that is not in the future (usually the signature
+    or publication date). Working days are converted at 7/5 plus two days' margin.
+    """
+    m = _RELATIVE.search(text)
+    if not m:
+        return None
+    n = m[1].lower()
+    n = int(n) if n.isdigit() else _NUM_WORDS.get(n)
+    if not n or n > 60:
+        return None
+    today = date.today()
+    past = [d for _, d in _dates(text) if d <= today]
+    if not past:
+        return None
+    base = max(past)
+    working = not re.match(r"natural|calendar", m[3], re.I)
+    days = round(n * 7 / 5) if working else n
+    from datetime import timedelta
+    return (base + timedelta(days=days + 2)).isoformat()
+
+
+_STATUS = re.compile(
+    r"\b(estat|estado|status|situaci[oó]n?|state)\s*(?:de la convocat[oò]ria|de la oferta|of the call)?\s*:?\s*"
+    r"(oberta|obert|abierta|open|tancada|tancat|cerrada|closed|resolta|resuelta|resolved|"
+    r"en avaluaci[oó]|en evaluaci[oó]n|finalitzada|finalizada|adjudicada)\b",
+    re.I,
+)
+
+
+def page_status(text: str) -> str | None:
+    """'open' or 'closed' when the offer page states its status explicitly."""
+    m = _STATUS.search(text)
+    if not m:
+        return None
+    return "open" if re.match(r"obert|oberta|abierta|open", m[2], re.I) else "closed"

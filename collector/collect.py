@@ -71,8 +71,31 @@ SKIP_LINK = re.compile(r"^(home|inicio|inici|login|accede|contact|contacto|conta
                        re.I)
 TECH_STAFF = re.compile(r"personal t[eé]cnico|t[eé]cnic[oa]s? (de apoyo|superior|especialista|de laboratorio)|t[eè]cnic/?a|"
                         r"\bPTA\b|technician|research support|gestor[a]? de|project manager|administrativ|developer|ingeniero de dise|engineer\b", re.I)
-ROW_CONTAINERS = ("tr", "li", "article", "dd")
-TEXT_CONTAINERS = ("p", "h2", "h3", "h4", "h5", "td", "div")
+# Documents that are only published once applications have closed (lists, results, awards).
+RESULT_DOC = re.compile(
+    r"llista (provisional|definitiva)|lista (provisional|definitiva)|listado (provisional|definitivo)|"
+    r"resoluci[oó]n? (provisional|definitiva|de adjudicaci|final)|resoluci[oó] (provisional|definitiva|final)|"
+    r"admesos|admitidos|admitted|exclosos|excluidos|adjudicaci|proposta de contractaci|propuesta de contrataci|"
+    r"\bacta\b|resultad|resultats|results|seleccionad|seleccionat|selected candidate|persona candidata proposada",
+    re.I,
+)
+BARE_RESOLUTION = re.compile(r"^resoluci[oó]n?\.?$", re.I)
+CALL_DOC = re.compile(r"^(convocat[oò]ria|convocatoria|bases|call)\b", re.I)
+# Row-level status words.
+CLOSED_STATUS = re.compile(
+    r"\b(cerrad[ao]s?|tancad[ao]s?|tancat|closed|resuelt[ao]s?|resolt[ao]s?|resolved|en evaluaci[oó]n|en avaluaci[oó]|"
+    r"under (evaluation|review)|finalitzad[ao]|finalizad[ao]|adjudicad[ao]|desiert[ao]|deserta|expired|"
+    r"fuera de plazo|fora de termini|plazo (cerrado|finalizado)|termini (tancat|finalitzat)|no longer accepting)\b",
+    re.I,
+)
+OPEN_STATUS = re.compile(
+    r"\b(abiert[ao]|obert[ao]?|open( call| position)?|en plazo|en termini|plazo abierto|termini obert|"
+    r"accepting applications|pr[oó]xima publicaci[oó]n|upcoming)\b",
+    re.I,
+)
+MAX_ROW_CHARS = 1500
+APPLY_LINK = re.compile(r"e-tauler|^sol·licitud$|^solicitud$|form submission|^formulari|^formulario|^apply( now| here)?$|"
+                        r"^inscripci[oó]n?$|^inscriure", re.I)
 MAIN_ID = re.compile(r"^(content|main|contingut|contenido|region-content|main-content)", re.I)
 
 
@@ -110,6 +133,53 @@ def main_element(soup: BeautifulSoup):
 
 # ---------- listing parsing ----------
 
+def _link_url(a, base_url: str) -> str:
+    return urldefrag(urljoin(base_url, a["href"].strip()))[0]
+
+
+def row_of(a, main, base_url: str):
+    """The listing row that holds this link.
+
+    Climb from the link while the ancestor still describes only this offer. Stop before an
+    ancestor that also holds another row: a link with the same text pointing elsewhere (the next
+    row's "Convocatòria"), or a link that looks like another offer's title.
+    """
+    url = _link_url(a, base_url)
+    text = clean(a.get_text(" "))
+    box = a
+    for depth, parent in enumerate(a.parents):
+        if parent is main or depth > 9 or parent.name in ("body", "html"):
+            break
+        if len(clean(parent.get_text(" "))) > MAX_ROW_CHARS:
+            break
+        other_row = False
+        for x in parent.find_all("a", href=True):
+            if x is a or x["href"].startswith(("mailto:", "tel:", "javascript:", "#")):
+                continue
+            xu, xt = _link_url(x, base_url), clean(x.get_text(" "))
+            if xu == url:
+                continue
+            if xt and xt.lower() == text.lower():
+                other_row = True
+                break
+            if len(xt) >= 40 and OFFER.search(xt) and not RESULT_DOC.search(xt) \
+                    and not re.search(r"bases|pdf|formulari|sol·licitud|solicitud|annex|anexo|e-tauler", xt, re.I):
+                other_row = True
+                break
+        if other_row:
+            break
+        box = parent
+    return box
+
+
+def row_flags(box, a) -> dict:
+    """Result documents linked from the same row (so applications are over)."""
+    texts = [clean(x.get_text(" ")) for x in box.find_all("a", href=True) if x is not a] if box is not a else []
+    has_call_doc = any(CALL_DOC.match(t) for t in texts) or bool(CALL_DOC.match(clean(a.get_text(" "))))
+    results = [t for t in texts if RESULT_DOC.search(t) or (has_call_doc and BARE_RESOLUTION.match(t))]
+    return {"result_links": results[:5]}
+
+
 def parse_listing(html: str, base_url: str) -> list[dict]:
     soup = BeautifulSoup(html, "lxml")
     for tag in soup(["script", "style", "nav", "header", "footer", "aside", "noscript"]):
@@ -120,26 +190,13 @@ def parse_listing(html: str, base_url: str) -> list[dict]:
         href = a["href"].strip()
         if href.startswith(("mailto:", "tel:", "javascript:", "#")):
             continue
-        url = urldefrag(urljoin(base_url, href))[0]
+        url = _link_url(a, base_url)
         link_text = clean(a.get_text(" "))
-        if len(link_text) < 4 or SKIP_LINK.match(link_text):
+        if len(link_text) < 4 or SKIP_LINK.match(link_text) or RESULT_DOC.search(link_text) \
+                or BARE_RESOLUTION.match(link_text) or APPLY_LINK.search(link_text):
             continue
-        box = None
-        for depth, parent in enumerate(a.parents):
-            if parent is main or depth > 7:
-                break
-            if parent.name in ROW_CONTAINERS:
-                box = parent
-                break
-        if box is None:
-            for parent in a.parents:
-                if parent is main:
-                    break
-                if parent.name in TEXT_CONTAINERS and len(clean(parent.get_text(" "))) > len(link_text) + 10:
-                    box = parent
-                    break
-        box = box or a
-        context = clean(box.get_text(" "))[:1200]
+        box = row_of(a, main, base_url)
+        context = clean(box.get_text(" "))[:MAX_ROW_CHARS]
         if len(context) < len(link_text):
             context = link_text
         if not ITEM_HINT.search(context):
@@ -150,11 +207,20 @@ def parse_listing(html: str, base_url: str) -> list[dict]:
             title = rest[:220] if len(rest) >= 15 else link_text
         else:
             title = link_text
+        flags = row_flags(box, a)
         prev = items.get(url)
         if prev is None or len(context) > len(prev["context"]):
             items[url] = {"url": url, "title": title, "context": context,
-                          "weak_title": generic and len(context) > 250}
-    return list(items.values())
+                          "weak_title": generic and len(context) > 400, **flags}
+    # One entry per row: several links in the same row (call PDF, notice board) describe one offer.
+    seen_rows, out = set(), []
+    for it in items.values():
+        key = (it["title"], it["context"])
+        if key in seen_rows:
+            continue
+        seen_rows.add(key)
+        out.append(it)
+    return out
 
 
 # ---------- detail reading ----------
@@ -212,7 +278,8 @@ def pdf_title(segments: list[str]) -> str | None:
 
 def classify_text(text: str) -> dict:
     return {"level": classify.level(text), "fields": classify.fields(text[:15000]),
-            "deadline": classify.deadline(text, date.min), "max_year": max_year(text)}
+            "deadline": classify.deadline(text, date.min), "max_year": max_year(text),
+            "deadline_est": classify.relative_deadline(text), "page_status": classify.page_status(text)}
 
 
 # ---------- per source ----------
@@ -283,40 +350,48 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             debug.append({"title": title[:200], "url": it["url"], "skip": "link inside a long list, no own title"})
             continue
         prog = classify.programme_key(f"{title} {it['context'][:200]}")
+        is_call = bool(prog and not classify.relevant(flds))
+        estimated = False
+        if not dl and det.get("deadline_est"):
+            dl, estimated = det["deadline_est"], True
+        if is_call and not dl:
+            future = [d for _, d in classify._dates(it["context"]) if d >= today]
+            dl = max(future).isoformat() if future else None
+        row_status = f"{it['title']} {it['context']}"
+        is_open = bool(OPEN_STATUS.search(row_status)) or det.get("page_status") == "open"
         reason = None
         if dl and dl < today.isoformat():
-            reason = "deadline passed"
-        elif re.search(r"\b(closed|cerrad[ao]|tancad[ao]|finalitzad[ao]|resuelt[ao]|adjudicad[ao]|desiert[ao]|expired)\b",
-                       it["context"], re.I):
-            reason = "marked closed"
+            reason = "deadline passed" + (" (estimated)" if estimated else "")
+        elif CLOSED_STATUS.search(row_status):
+            reason = "marked closed / resolved / under evaluation"
+        elif it.get("result_links"):
+            reason = "results already published: " + "; ".join(it["result_links"])[:120]
+        elif det.get("page_status") == "closed":
+            reason = "offer page says closed / resolved"
         elif not lvl:
             reason = "not PhD/postdoc"
         elif TECH_STAFF.search(title) and not classify.level(title):
             reason = "technical / support staff"
         elif not prog and not lvl_title and len(title) < 45:
             reason = "vague title (looks like a menu or section link)"
+        elif not dl and not is_open:
+            reason = "no deadline and not marked open (can't confirm it is still open)"
         elif not dl and max([y for y in (max_year(f"{title} {it['context']}"), det.get("max_year")) if y] or [today.year]) < today.year:
-            reason = "old (no deadline, latest year mentioned is in the past)"
-        elif prog and not classify.relevant(flds):
-            years = [int(y) for y in re.findall(r"\b(20\d{2})\b", f"{title} {it['context'][:300]}")]
-            if (years and max(years) < today.year) or (not years and not dl):
-                reason = "old or undated programme call"
+            reason = "old (latest year mentioned is in the past)"
         elif not prog and not classify.relevant(flds):
             reason = "field not relevant"
-        is_call = bool(prog and not classify.relevant(flds))
-        if is_call and not dl:
-            future = [d for _, d in classify._dates(it["context"]) if d >= today]
-            dl = max(future).isoformat() if future else None
         if is_call:
             title = f"{prog} call"
         rec = {
             "id": item_id(it["url"]), "title": title[:300], "url": it["url"],
             "institution": inst["name"], "inst_id": inst["id"], "region": inst.get("region"),
             "inst_type": inst.get("type"), "level": lvl, "fields": flds, "deadline": dl,
+            "deadline_estimated": estimated,
             "kind": "call" if (prog and not classify.relevant(flds)) else "position",
             "programme": prog if (prog and not classify.relevant(flds)) else None, "source_page": page,
         }
-        debug.append({**rec, "reason": reason, "context": it["context"][:300], "detail": det.get("status")})
+        debug.append({**rec, "reason": reason, "context": it["context"][:400], "detail": det.get("status"),
+                      "result_links": it.get("result_links"), "page_status": det.get("page_status")})
         if not reason:
             results.append(rec)
 

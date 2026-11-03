@@ -28,7 +28,9 @@
     let dl = "";
     if (it.deadline) {
       const d = daysTo(it.deadline);
-      dl = `<span class="deadline${d <= 7 ? " soon" : ""}">Deadline ${fmt(it.deadline)}${d >= 0 && d <= 30 ? ` · ${d === 0 ? "today" : d + " days"}` : ""}</span>`;
+      const approx = it.deadline_estimated ? "≈ " : "";
+      const hint = it.deadline_estimated ? ` title="Estimated from the call text (e.g. 10 working days after publication). Check the official announcement."` : "";
+      dl = `<span class="deadline${d <= 7 ? " soon" : ""}"${hint}>Deadline ${approx}${fmt(it.deadline)}${d >= 0 && d <= 30 ? ` · ${d === 0 ? "today" : d + " days"}` : ""}</span>`;
     }
     const tags = [
       it.level ? `<span class="tag level">${levelLabel(it.level)}</span>` : "",
