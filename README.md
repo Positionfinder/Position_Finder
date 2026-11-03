@@ -1,35 +1,48 @@
 # Position Finder
 
-Academic positions in **urban planning, architecture, geography** and related fields
-(landscape, housing, GIS & remote sensing, urban mobility, heritage, climate risk), collected
-automatically every day and published as a searchable website on GitHub Pages:
-
-- **Spain**: PhD and postdoc positions, plus national/regional fellowship calls
-- **Germany**: postdoc positions only
+Postdoc and researcher positions in **urban planning, geography, landscape** and related fields
+(GIS & remote sensing, participatory methods, risk, ecosystem services, housing, governance),
+collected automatically every day from universities and research centres in **Spain** and
+**Germany**, and scored against two research profiles. PhD positions are excluded.
 
 Live site: https://positionfinder.github.io/Position_Finder/
 
+Columns: position (English title, original underneath), institution, location (city, region,
+country), topic, match % for profile A and B, deadline, link to the original announcement.
+By default the site shows positions with at least 60 % match for either profile; a filter
+switches to all positions.
+
 ## How it works
 
-1. **Registry** (`sources/institutions.yaml`): every Spanish university, 65 German universities and
-   institutes strong in planning, landscape and geography, and the relevant
-   research centres, with the public job pages known to list PhD / postdoc / research-contract calls.
+1. **Registry** (`sources/institutions.yaml`): every Spanish university and relevant research centre,
+   and German universities, universities of applied sciences strong in planning/landscape, and
+   research institutes (city and region for each), with their public vacancy pages.
 2. **Collector** (`collector/collect.py`, runs daily via `.github/workflows/collect.yml`):
    - reads each job page, extracts the listed offers and opens each offer's own page (HTML or PDF);
    - strips text that repeats across a site (menus, footers) so it doesn't skew the classification;
-   - keeps only PhD or postdoc offers whose text matches the target fields (Spanish, Catalan,
-     English and German vocabulary);
+   - keeps only postdoc and researcher offers (PhD positions and PhD programme calls are excluded)
+     whose text matches the target fields or the research profiles (Spanish, Catalan, English and
+     German vocabulary); German "Wissenschaftliche/r Mitarbeiter/in" ads that don't state a level
+     are shown as "Researcher (level not stated)";
    - shows an offer only if it is confirmed open: a future deadline (from the listing row, the offer
      page, or estimated from "N working days after publication"), or an explicit "open" status;
    - drops offers marked closed / resolved / under evaluation, rows that already link to results
      (admitted lists, final resolutions, awards), and past editions of programme calls;
-   - national/regional fellowship programmes open to all fields (Juan de la Cierva, Ramón y Cajal, FPU,
+   - national/regional postdoc fellowship programmes open to all fields (Juan de la Cierva, Ramón y Cajal,
      Beatriu de Pinós…) are kept as "fellowship calls", merged into one card even when several
      universities list them;
    - writes `docs/data/jobs.json`, which the website reads.
-3. **Website** (`docs/`): a static page with search and filters (country, PhD/postdoc, field, region,
-   institution type, deadline sort). Each card links to the original announcement.
-4. **Discovery** (`collector/discover.py`, weekly or on demand): follows job-related links from each
+3. **Matching** (`collector/match.py`, `sources/profiles.yaml`): each profile is a weighted list of
+   research topics taken from a CV (main lines 3 points, related areas 2, methods 1). A topic
+   counts fully if it appears in the title/listing row or at least twice in the announcement
+   (including a linked call PDF), and half if once. Match % = covered points / "full match" points,
+   capped at 100; a position touching no main line of a profile is capped at 55 %. No CV text is
+   stored in this repository, only the topic lists, and profiles are labelled by research line.
+4. **English titles** (`collector/translate.py`): offline translation with Argos Translate
+   (Spanish, Catalan, German → English), cached in `data/translations.json`.
+5. **Website** (`docs/`): a static page with a table, search and filters (country, postdoc/researcher,
+   match threshold, region, topic, sort by match or deadline).
+6. **Discovery** (`collector/discover.py`, weekly or on demand): follows job-related links from each
    institution's homepage and writes candidate job pages to `data/discovery.json`, to help find
    pages worth adding to the registry.
 
