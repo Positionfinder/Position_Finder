@@ -18,7 +18,7 @@ jobs:
       - uses: actions/setup-python@v5
         with: {python-version: "3.12", cache: pip}
       - run: pip install -r requirements.txt
-      - run: python collector/collect.py
+      - run: python collector/collect.py $(python -c "import yaml;print(' '.join(i['id'] for i in yaml.safe_load(open('sources/institutions.yaml')) if i.get('type')=='professional'))")
         env:
           PF_DEBUG_HTML: ${{ github.ref != 'refs/heads/main' && '1' || '0' }}
       # English titles: offline translation models (Spanish, Catalan, German -> English), cached between runs
