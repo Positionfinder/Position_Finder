@@ -11,7 +11,8 @@ PHD = re.compile(
     r"personal investigador en formaci|contrat[eo]s? predoctorals?|beca predoctoral|tesis doctoral|joan or[oó]|\bINPhINIT\b|"
     # de
     r"doktorand|promotionsstelle|promotionsvorhaben|(m[oö]glichkeit|gelegenheit) zur (promotion|weiterqualifikation)|"
-    r"zur promotion|promovieren|dissertation",
+    r"zur promotion|promovieren|dissertation|promotionsm[oö]glichkeit|mit promotion\b|promotionsstelle|"
+    r"doctoral researcher|phd position|phd candidate|phd student",
     re.I,
 )
 POSTDOC = re.compile(

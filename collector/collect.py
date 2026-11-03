@@ -59,7 +59,8 @@ NOT_OFFER = re.compile(
     r"plazas? de profesor|places? de professor|"
     r"\bW ?[23]\b|w[23]-professur|professur f[uü]r|full professor|associate professor|lehrkraft f[uü]r besondere|"
     r"studentische hilfskraft|studentische[rn]? mitarbeiter|wissenschaftliche hilfskraft|praktikum|internship|"
-    r"ausbildung|azubi|werkstudent",
+    r"ausbildung|azubi|werkstudent|"
+    r"^(ausschreibungen|stellenangebote|stellenausschreibungen|offene stellen|job offers|vacancies|jobs|karriere)\b",
     re.I,
 )
 GENERIC_LINK = re.compile(
@@ -353,10 +354,15 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             continue
         quick = f"{it['title']} {it['context']}"
         det = cache.get(it["url"], {})
+        # The title is the most reliable signal for the level; the offer text often mentions both
+        # ("PhD position ... after the doctorate you can ...").
         lvl_title = classify.level(it["title"]) or classify.level(it["context"])
-        lvl = classify.level(it["title"]) or classify.level(it["context"]) or det.get("level")
-        flds = sorted(set(classify.fields(f"{quick} {det.get('title') or ''}")) | set(det.get("fields") or []))
+        lvl = lvl_title or det.get("level")
+        title_flds = classify.fields(f"{quick} {det.get('title') or ''}")
+        flds = sorted(set(title_flds) | set(det.get("fields") or []))
         dl = classify.deadline(quick, date.min) or det.get("deadline")
+        if dl and dl > (today + timedelta(days=400)).isoformat():
+            dl = None  # a "deadline" years away is a contract end date or similar, not the closing date
         title = it["title"]
         if det.get("title") and len(det["title"]) > 15 and (len(title) < 30 or GENERIC_LINK.match(title) or it.get("weak_title")):
             title = det["title"]
@@ -403,6 +409,8 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             reason = "old (latest year mentioned is in the past)"
         elif not prog and not classify.relevant(flds):
             reason = "field not relevant"
+        elif not prog and not classify.relevant(title_flds) and len(det.get("fields") or []) < 2:
+            reason = "field only mentioned in passing in the offer text"
         if is_call:
             title = f"{prog} call"
         rec = {
