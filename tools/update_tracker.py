@@ -261,6 +261,7 @@ def main():
                 "Academic: Spain & Germany, postdoc/researcher. Professional: Spain. Newest first. \"see ad\" = no deadline in the ad.")
     write_sheet(wb.create_sheet("Archive"), ar_rows, "Archive – closed or no longer listed",
                 "Rows move here when the deadline has passed or the position left the website.")
+    wb.calculation.fullCalcOnLoad = True  # Excel recomputes "Days left" every time the file is opened
     out = a.out or a.xlsx
     wb.save(out)
     print(json.dumps({"file": out, "website": len(still_open), "linkedin": len(li_rows),
