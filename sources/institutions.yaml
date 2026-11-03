@@ -9,6 +9,7 @@
   name: "Universidad de Almería"
   type: public
   region: "Andalucía"
+  city: "Almería"
   homepage: "https://www.ual.es"
   job_pages:
     - "https://www.ual.es/investigacion/convocatorias"
@@ -18,6 +19,7 @@
   name: "Universidad de Cádiz"
   type: public
   region: "Andalucía"
+  city: "Cádiz"
   homepage: "https://www.uca.es"
   job_pages:
     - "https://investigacionytransferencia.uca.es/capital-humano-investigador/contratos-predoctorales-en-industria/"
@@ -25,12 +27,14 @@
   name: "Universidad de Córdoba"
   type: public
   region: "Andalucía"
+  city: "Córdoba"
   homepage: "https://www.uco.es"
   notes: "robots.txt disallows automated access to the whole site (Oct 2026)"
 - id: ugr
   name: "Universidad de Granada"
   type: public
   region: "Andalucía"
+  city: "Granada"
   homepage: "https://www.ugr.es"
   job_pages:
     - "https://investigacion.ugr.es/recursos-humanos/predoctorales"
@@ -38,6 +42,7 @@
   name: "Universidad de Huelva"
   type: public
   region: "Andalucía"
+  city: "Huelva"
   homepage: "https://www.uhu.es"
   job_pages:
     - "https://www.uhu.es/gestion-investigacion/rrhh/predoctorales"
@@ -46,11 +51,13 @@
   name: "Universidad de Jaén"
   type: public
   region: "Andalucía"
+  city: "Jaén"
   homepage: "https://www.ujaen.es"
 - id: uma
   name: "Universidad de Málaga"
   type: public
   region: "Andalucía"
+  city: "Málaga"
   homepage: "https://www.uma.es"
   job_pages:
     - "https://www.uma.es/servicio-de-investigacion/cms/menu/contratos-y-becas/convocatorias-contratos/"
@@ -58,6 +65,7 @@
   name: "Universidad Pablo de Olavide"
   type: public
   region: "Andalucía"
+  city: "Seville"
   homepage: "https://www.upo.es"
   job_pages:
     - "https://www.upo.es/area-investigacion/contratos-predoctorales/"
@@ -65,6 +73,7 @@
   name: "Universidad de Sevilla"
   type: public
   region: "Andalucía"
+  city: "Seville"
   homepage: "https://www.us.es"
   job_pages:
     - "https://www.investigacion.us.es/"
@@ -72,6 +81,7 @@
   name: "Universidad de Zaragoza"
   type: public
   region: "Aragón"
+  city: "Zaragoza"
   homepage: "https://www.unizar.es"
   job_pages:
     - "https://gespi.unizar.es/"
@@ -79,38 +89,45 @@
   name: "Universidad de Oviedo"
   type: public
   region: "Asturias"
+  city: "Oviedo"
   homepage: "https://www.uniovi.es"
 - id: uib
   name: "Universitat de les Illes Balears"
   type: public
   region: "Illes Balears"
+  city: "Palma"
   homepage: "https://www.uib.es"
 - id: ull
   name: "Universidad de La Laguna"
   type: public
   region: "Canarias"
+  city: "San Cristóbal de La Laguna"
   homepage: "https://www.ull.es"
 - id: ulpgc
   name: "Universidad de Las Palmas de Gran Canaria"
   type: public
   region: "Canarias"
+  city: "Las Palmas de Gran Canaria"
   homepage: "https://www.ulpgc.es"
   notes: "robots.txt disallows automated access to the whole site (Oct 2026)"
 - id: unican
   name: "Universidad de Cantabria"
   type: public
   region: "Cantabria"
+  city: "Santander"
   homepage: "https://web.unican.es"
 - id: uclm
   name: "Universidad de Castilla-La Mancha"
   type: public
   region: "Castilla-La Mancha"
+  city: "Ciudad Real"
   homepage: "https://www.uclm.es"
   notes: "robots.txt disallows automated access to the whole site (Oct 2026)"
 - id: ubu
   name: "Universidad de Burgos"
   type: public
   region: "Castilla y León"
+  city: "Burgos"
   homepage: "https://www.ubu.es"
   job_pages:
     - "https://www.ubu.es/trabaja-en-la-ubu"
@@ -118,11 +135,13 @@
   name: "Universidad de León"
   type: public
   region: "Castilla y León"
+  city: "León"
   homepage: "https://www.unileon.es"
 - id: usal
   name: "Universidad de Salamanca"
   type: public
   region: "Castilla y León"
+  city: "Salamanca"
   homepage: "https://www.usal.es"
   job_pages:
     - "https://convocatoriasinvestigacion.usal.es/"
@@ -130,11 +149,13 @@
   name: "Universidad de Valladolid"
   type: public
   region: "Castilla y León"
+  city: "Valladolid"
   homepage: "https://www.uva.es"
 - id: ub
   name: "Universitat de Barcelona"
   type: public
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.ub.edu"
   job_pages:
     - "https://seu.ub.edu/ofertaPublicaCategoriaPublic/categories"
@@ -142,12 +163,14 @@
   name: "Universitat Autònoma de Barcelona"
   type: public
   region: "Catalunya"
+  city: "Bellaterra (Barcelona)"
   homepage: "https://www.uab.cat"
   notes: "seleccio.uab.cat requires login and no public listing was found; UAB posts research offers on EURAXESS"
 - id: upc
   name: "Universitat Politècnica de Catalunya"
   type: public
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.upc.edu"
   job_pages:
     - "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs"
@@ -156,6 +179,7 @@
   name: "Universitat Pompeu Fabra"
   type: public
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.upf.edu"
   job_pages:
     - "https://www.upf.edu/web/personal/ofertes-pdi"
@@ -163,6 +187,7 @@
   name: "Universitat de Girona"
   type: public
   region: "Catalunya"
+  city: "Girona"
   homepage: "https://www.udg.edu"
   job_pages:
     - "https://www.udg.edu/ca/coneix/treballa-a-la-udg/personal-docent-i-investigador/ofertes-de-treball-temporal"
@@ -171,6 +196,7 @@
   name: "Universitat de Lleida"
   type: public
   region: "Catalunya"
+  city: "Lleida"
   homepage: "https://www.udl.cat"
   job_pages:
     - "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-predoctorals/"
@@ -179,6 +205,7 @@
   name: "Universitat Rovira i Virgili"
   type: public
   region: "Catalunya"
+  city: "Tarragona"
   homepage: "https://www.urv.cat"
   job_pages:
     - "https://seuelectronica.urv.cat/treballar-a-la-urv/convocatories-pdi/"
@@ -186,12 +213,14 @@
   name: "Universitat de València"
   type: public
   region: "Comunitat Valenciana"
+  city: "Valencia"
   homepage: "https://www.uv.es"
   notes: "research contract calls are published in DOGV; uv.es/pasinvest returns 403 to bots"
 - id: upv
   name: "Universitat Politècnica de València"
   type: public
   region: "Comunitat Valenciana"
+  city: "Valencia"
   homepage: "https://www.upv.es"
   job_pages:
     - "https://www.upv.es/empleopublico/"
@@ -199,6 +228,7 @@
   name: "Universidad de Alicante"
   type: public
   region: "Comunitat Valenciana"
+  city: "Alicante"
   homepage: "https://www.ua.es"
   job_pages:
     - "https://cvnet.cpd.ua.es/AgendaUA/Investigacio"
@@ -206,6 +236,7 @@
   name: "Universitat Jaume I"
   type: public
   region: "Comunitat Valenciana"
+  city: "Castellón de la Plana"
   homepage: "https://www.uji.es"
   job_pages:
     - "https://www.uji.es/serveis/rrhh/base/pi/pii/"
@@ -213,6 +244,7 @@
   name: "Universidad Miguel Hernández"
   type: public
   region: "Comunitat Valenciana"
+  city: "Elche"
   homepage: "https://www.umh.es"
   job_pages:
     - "https://sgi.umh.es/en/"
@@ -220,22 +252,26 @@
   name: "Universidad de Extremadura"
   type: public
   region: "Extremadura"
+  city: "Badajoz"
   homepage: "https://www.unex.es"
   notes: "robots.txt disallows automated access to the whole site (Oct 2026)"
 - id: usc
   name: "Universidade de Santiago de Compostela"
   type: public
   region: "Galicia"
+  city: "Santiago de Compostela"
   homepage: "https://www.usc.gal"
 - id: udc
   name: "Universidade da Coruña"
   type: public
   region: "Galicia"
+  city: "A Coruña"
   homepage: "https://www.udc.es"
 - id: uvigo
   name: "Universidade de Vigo"
   type: public
   region: "Galicia"
+  city: "Vigo"
   homepage: "https://www.uvigo.gal"
   job_pages:
     - "https://secretaria.uvigo.gal/uv/web/convocatoria/public/categoria/investigar"
@@ -243,6 +279,7 @@
   name: "Universidad Complutense de Madrid"
   type: public
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://www.ucm.es"
   job_pages:
     - "https://www.ucm.es/pinves"
@@ -251,6 +288,7 @@
   name: "Universidad Autónoma de Madrid"
   type: public
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://www.uam.es"
   job_pages:
     - "https://www.uam.es/uam/investigacion/ofertas-empleo"
@@ -259,6 +297,7 @@
   name: "Universidad Politécnica de Madrid"
   type: public
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://www.upm.es"
   job_pages:
     - "https://web.upm.es/hrs4r/incorporacion-la-upm"
@@ -267,6 +306,7 @@
   name: "Universidad Carlos III de Madrid"
   type: public
   region: "Madrid"
+  city: "Getafe (Madrid)"
   homepage: "https://www.uc3m.es"
   job_pages:
     - "https://www.uc3m.es/investigacion-apoyopdi/empleo-investigacion-uc3m/otras-ofertas"
@@ -275,11 +315,13 @@
   name: "Universidad de Alcalá"
   type: public
   region: "Madrid"
+  city: "Alcalá de Henares"
   homepage: "https://www.uah.es"
 - id: urjc
   name: "Universidad Rey Juan Carlos"
   type: public
   region: "Madrid"
+  city: "Móstoles (Madrid)"
   homepage: "https://www.urjc.es"
   job_pages:
     - "https://www.urjc.es/hrs4r"
@@ -287,6 +329,7 @@
   name: "Universidad Nacional de Educación a Distancia"
   type: public
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://www.uned.es"
   job_pages:
     - "https://www.uned.es/universidad/inicio/investigacion/portal-investigador/becas-ayudas-doctorado.html"
@@ -294,6 +337,7 @@
   name: "Universidad de Murcia"
   type: public
   region: "Murcia"
+  city: "Murcia"
   homepage: "https://www.um.es"
   job_pages:
     - "https://www.um.es/web/investigacion/novedades-investigacion"
@@ -301,11 +345,13 @@
   name: "Universidad Politécnica de Cartagena"
   type: public
   region: "Murcia"
+  city: "Cartagena"
   homepage: "https://www.upct.es"
 - id: upna
   name: "Universidad Pública de Navarra"
   type: public
   region: "Navarra"
+  city: "Pamplona"
   homepage: "https://www.unavarra.es"
   job_pages:
     - "https://www.unavarra.es/en/sites/investigacion/como-lo-hacemos/ayudas-y-convocatorias/personal-investigador.html"
@@ -313,6 +359,7 @@
   name: "Universidad del País Vasco / Euskal Herriko Unibertsitatea"
   type: public
   region: "País Vasco"
+  city: "Leioa (Bilbao)"
   homepage: "https://www.ehu.eus"
   job_pages:
     - "https://www.ehu.eus/es/web/ikerketaren-kudeaketa"
@@ -320,16 +367,19 @@
   name: "Universidad de La Rioja"
   type: public
   region: "La Rioja"
+  city: "Logroño"
   homepage: "https://www.unirioja.es"
 - id: unia
   name: "Universidad Internacional de Andalucía"
   type: public
   region: "Andalucía"
+  city: "Seville"
   homepage: "https://www.unia.es"
 - id: uimp
   name: "Universidad Internacional Menéndez Pelayo"
   type: public
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://www.uimp.es"
 
 # ---------------- Private universities ----------------
@@ -337,6 +387,7 @@
   name: "Universitat Oberta de Catalunya"
   type: private
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.uoc.edu"
   notes: "offers list is loaded by JavaScript; needs a dedicated adapter"
   job_pages:
@@ -345,6 +396,7 @@
   name: "Universitat Internacional de Catalunya"
   type: private
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.uic.es"
   job_pages:
     - "https://www.uic.es/en/university/uic-barcelona/work-us-uic-barcelona/teaching-and-research-staff"
@@ -352,16 +404,19 @@
   name: "Universitat Ramon Llull"
   type: private
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.url.edu"
 - id: salle
   name: "La Salle - Universitat Ramon Llull"
   type: private
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.salleurl.edu"
 - id: uvic
   name: "Universitat de Vic - Universitat Central de Catalunya"
   type: private
   region: "Catalunya"
+  city: "Vic"
   homepage: "https://www.uvic.cat"
   job_pages:
     - "https://utalent.uvic.cat/"
@@ -369,11 +424,13 @@
   name: "Universitat Abat Oliba CEU"
   type: private
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.uaoceu.es"
 - id: unav
   name: "Universidad de Navarra"
   type: private
   region: "Navarra"
+  city: "Pamplona"
   homepage: "https://www.unav.edu"
   job_pages:
     - "https://www.unav.edu/investigacion/servicios-para-investigadores/atraccion-de-talento"
@@ -381,12 +438,14 @@
   name: "Universidad de Deusto"
   type: private
   region: "País Vasco"
+  city: "Bilbao"
   homepage: "https://www.deusto.es"
   notes: "robots.txt disallows automated access to the whole site (Oct 2026)"
 - id: mondragon
   name: "Mondragon Unibertsitatea"
   type: private
   region: "País Vasco"
+  city: "Mondragón"
   homepage: "https://www.mondragon.edu"
   job_pages:
     - "https://www.mondragon.edu/es/investigacion/ingenieria-tecnologia/ayudas-becas"
@@ -394,6 +453,7 @@
   name: "Universidad Pontificia Comillas"
   type: private
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://www.comillas.edu"
   job_pages:
     - "https://www.comillas.edu/trabaja-con-nosotros/convocatorias-para-el-personal-investigador/"
@@ -401,36 +461,43 @@
   name: "Universidad CEU San Pablo"
   type: private
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://www.uspceu.com"
 - id: ue
   name: "Universidad Europea"
   type: private
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://universidadeuropea.com"
 - id: ucjc
   name: "Universidad Camilo José Cela"
   type: private
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://www.ucjc.edu"
 - id: nebrija
   name: "Universidad Nebrija"
   type: private
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://www.nebrija.com"
 - id: ufv
   name: "Universidad Francisco de Vitoria"
   type: private
   region: "Madrid"
+  city: "Pozuelo de Alarcón (Madrid)"
   homepage: "https://www.ufv.es"
 - id: ie
   name: "IE University"
   type: private
   region: "Castilla y León"
+  city: "Madrid / Segovia"
   homepage: "https://www.ie.edu"
 - id: uax
   name: "Universidad Alfonso X el Sabio"
   type: private
   region: "Madrid"
+  city: "Villanueva de la Cañada (Madrid)"
   homepage: "https://www.uax.com"
   job_pages:
     - "https://fundacion.uax.com/investigadores/predoctorales.html"
@@ -438,11 +505,13 @@
   name: "Universidad Católica de Valencia"
   type: private
   region: "Comunitat Valenciana"
+  city: "Valencia"
   homepage: "https://www.ucv.es"
 - id: uchceu
   name: "Universidad CEU Cardenal Herrera"
   type: private
   region: "Comunitat Valenciana"
+  city: "Valencia"
   homepage: "https://www.uchceu.es"
   job_pages:
     - "https://www.uchceu.es/investigacion/convocatorias"
@@ -450,6 +519,7 @@
   name: "Universidad Católica de Murcia"
   type: private
   region: "Murcia"
+  city: "Murcia"
   homepage: "https://www.ucam.edu"
   job_pages:
     - "https://investigacion.ucam.edu/postdoctorado"
@@ -457,26 +527,31 @@
   name: "Universidad Loyola"
   type: private
   region: "Andalucía"
+  city: "Seville"
   homepage: "https://www.uloyola.es"
 - id: usj
   name: "Universidad San Jorge"
   type: private
   region: "Aragón"
+  city: "Zaragoza"
   homepage: "https://www.usj.es"
 - id: upsa
   name: "Universidad Pontificia de Salamanca"
   type: private
   region: "Castilla y León"
+  city: "Salamanca"
   homepage: "https://www.upsa.es"
 - id: uemc
   name: "Universidad Europea Miguel de Cervantes"
   type: private
   region: "Castilla y León"
+  city: "Valladolid"
   homepage: "https://www.uemc.es"
 - id: unir
   name: "Universidad Internacional de La Rioja"
   type: private
   region: "La Rioja"
+  city: "Logroño"
   homepage: "https://www.unir.net"
   notes: "robots.txt disallows automated access to the whole site (Oct 2026)"
 
@@ -485,46 +560,55 @@
   name: "Consejo Superior de Investigaciones Científicas (CSIC)"
   type: research
   region: "Spain"
+  city: "Madrid"
   homepage: "https://www.csic.es"
 - id: cchs
   name: "CSIC Centro de Ciencias Humanas y Sociales (incl. IEGD geography)"
   type: research
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://cchs.csic.es"
 - id: ietcc
   name: "Instituto de Ciencias de la Construcción Eduardo Torroja (CSIC)"
   type: research
   region: "Madrid"
+  city: "Madrid"
   homepage: "https://ietcc.csic.es"
 - id: iesa
   name: "Instituto de Estudios Sociales Avanzados (CSIC)"
   type: research
   region: "Andalucía"
+  city: "Córdoba"
   homepage: "https://www.iesa.csic.es"
 - id: iermb
   name: "Institut Metròpoli (IERMB)"
   type: research
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.institutmetropoli.cat"
 - id: iaac
   name: "Institute for Advanced Architecture of Catalonia (IAAC)"
   type: research
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://iaac.net"
 - id: icta
   name: "Institut de Ciència i Tecnologia Ambientals (ICTA-UAB)"
   type: research
   region: "Catalunya"
+  city: "Bellaterra (Barcelona)"
   homepage: "https://icta.uab.cat"
 - id: creaf
   name: "CREAF"
   type: research
   region: "Catalunya"
+  city: "Bellaterra (Barcelona)"
   homepage: "https://www.creaf.cat"
 - id: isglobal
   name: "ISGlobal (urban planning"
   type: research
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.isglobal.org"
   job_pages:
     - "https://jobs.isglobal.org/"
@@ -532,6 +616,7 @@
   name: "Institut de Recerca en Energia de Catalunya (IREC)"
   type: research
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.irec.cat"
   job_pages:
     - "https://rrhh.irec.cat/about/work-with-us/job-oportunities/"
@@ -539,6 +624,7 @@
   name: "CIMNE"
   type: research
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.cimne.com"
   job_pages:
     - "https://cimne.com/jobs-fellowships/research-staff/"
@@ -546,11 +632,13 @@
   name: "Institut Cartogràfic i Geològic de Catalunya (ICGC)"
   type: research
   region: "Catalunya"
+  city: "Barcelona"
   homepage: "https://www.icgc.cat"
 - id: bc3
   name: "Basque Centre for Climate Change (BC3)"
   type: research
   region: "País Vasco"
+  city: "Leioa (Bilbao)"
   homepage: "https://www.bc3research.org"
   job_pages:
     - "https://www.bc3research.org/en/careers/job-offers/"
@@ -558,82 +646,137 @@
   name: "Tecnalia"
   type: research
   region: "País Vasco"
+  city: "Derio (Bilbao)"
   homepage: "https://www.tecnalia.com"
 - id: cartif
   name: "CARTIF"
   type: research
   region: "Castilla y León"
+  city: "Valladolid"
   homepage: "https://www.cartif.es"
 
 # ================= GERMANY (postdoc positions only) =================
 # country: DE. Job pages are filled in from the discovery run (data/discovery.json).
 
 # ---------------- Universities ----------------
-- {id: de-tudo, country: DE, name: "TU Dortmund University", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.tu-dortmund.de", job_pages: ["https://www.tu-dortmund.de/karriere/offene-stellen/"]}
-- {id: de-tub, country: DE, name: "Technische Universität Berlin", type: public, region: "Berlin", homepage: "https://www.tu.berlin", job_pages: ["https://jobs.tu-berlin.de/en", "https://stellenticket.tu-berlin.de/en/job-offers"]}
-- {id: de-tum, country: DE, name: "Technical University of Munich", type: public, region: "Bayern", homepage: "https://www.tum.de", job_pages: ["https://www.tum.de/ueber-die-tum/karriere-und-jobs/stellenangebote"]}
-- {id: de-luh, country: DE, name: "Leibniz Universität Hannover", type: public, region: "Niedersachsen", homepage: "https://www.uni-hannover.de", job_pages: ["https://www.uni-hannover.de/universitaet/stellenangebote-arbeit-an-der-uni/jobboerse"]}
-- {id: de-tud, country: DE, name: "TU Dresden", type: public, region: "Sachsen", homepage: "https://tu-dresden.de", job_pages: ["https://tu-dresden.de/tu-dresden/arbeiten-an-der-tud/stellenangebote/stellenangebote?kat=2&style=cms"]}
-- {id: de-ustutt, country: DE, name: "University of Stuttgart", type: public, region: "Baden-Württemberg", homepage: "https://www.uni-stuttgart.de", job_pages: ["https://careers.uni-stuttgart.de/?locale=de_DE"]}
-- {id: de-kit, country: DE, name: "Karlsruhe Institute of Technology (KIT)", type: public, region: "Baden-Württemberg", homepage: "https://www.kit.edu", job_pages: ["https://www.kit.edu/karriere/stellenangebote.php"]}
-- {id: de-rwth, country: DE, name: "RWTH Aachen University", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.rwth-aachen.de", job_pages: ["https://www.rwth-aachen.de/stellenangebote"]}
-- {id: de-hcu, country: DE, name: "HafenCity University Hamburg", type: public, region: "Hamburg", homepage: "https://www.hcu-hamburg.de", job_pages: ["https://www.hcu-hamburg.de/universitaet/stellenausschreibungen"]}
-- {id: de-weimar, country: DE, name: "Bauhaus-Universität Weimar", type: public, region: "Thüringen", homepage: "https://www.uni-weimar.de", job_pages: ["https://www.uni-weimar.de/de/universitaet/aktuell/stellenausschreibungen/"]}
-- {id: de-rptu, country: DE, name: "RPTU Kaiserslautern-Landau", type: public, region: "Rheinland-Pfalz", homepage: "https://rptu.de", job_pages: ["https://rptu.de/stellenangebote"]}
-- {id: de-kassel, country: DE, name: "University of Kassel", type: public, region: "Hessen", homepage: "https://www.uni-kassel.de", job_pages: ["https://www.uni-kassel.de/uni/universitaet/stellenangebote.html"]}
-- {id: de-hu, country: DE, name: "Humboldt-Universität zu Berlin", type: public, region: "Berlin", homepage: "https://www.hu-berlin.de", job_pages: ["https://www.hu-berlin.de/de/stellenangebote"]}
-- {id: de-fu, country: DE, name: "Freie Universität Berlin", type: public, region: "Berlin", homepage: "https://www.fu-berlin.de", job_pages: ["https://www.fu-berlin.de/universitaet/beruf-karriere/jobs/index.html"]}
-- {id: de-bonn, country: DE, name: "University of Bonn", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-bonn.de", job_pages: ["https://www.uni-bonn.de/de/universitaet/arbeiten-an-der-uni/stellenangebote"]}
-- {id: de-freiburg, country: DE, name: "University of Freiburg", type: public, region: "Baden-Württemberg", homepage: "https://uni-freiburg.de", job_pages: ["https://uni-freiburg.de/universitaet/jobs/"]}
-- {id: de-uhh, country: DE, name: "Universität Hamburg", type: public, region: "Hamburg", homepage: "https://www.uni-hamburg.de", job_pages: ["https://www.uni-hamburg.de/stellenangebote.html"]}
-- {id: de-lmu, country: DE, name: "LMU Munich", type: public, region: "Bayern", homepage: "https://www.lmu.de", job_pages: ["https://www.lmu.de/de/die-lmu/arbeiten-an-der-lmu/stellenportal/"]}
-- {id: de-leipzig, country: DE, name: "Leipzig University", type: public, region: "Sachsen", homepage: "https://www.uni-leipzig.de", notes: "central vacancy list not found (only PDFs under fileadmin/ul/Stellenausschreibungen)"}
-- {id: de-heidelberg, country: DE, name: "Heidelberg University", type: public, region: "Baden-Württemberg", homepage: "https://www.uni-heidelberg.de", job_pages: ["https://www.uni-heidelberg.de/de/stellenmarkt"]}
-- {id: de-muenster, country: DE, name: "University of Münster", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-muenster.de", job_pages: ["https://www.uni-muenster.de/Rektorat/Stellen/"]}
-- {id: de-koeln, country: DE, name: "University of Cologne", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-koeln.de", job_pages: ["https://jobportal.uni-koeln.de/"]}
-- {id: de-rub, country: DE, name: "Ruhr University Bochum", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.ruhr-uni-bochum.de", job_pages: ["https://uni.ruhr-uni-bochum.de/de/stellenangebote"]}
-- {id: de-ude, country: DE, name: "University of Duisburg-Essen", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-due.de", job_pages: ["https://www.uni-due.de/karriere/ausschreibungen-nach-kategorien.php?kategorie=Research%20and%20teaching%20operations"]}
-- {id: de-btu, country: DE, name: "BTU Cottbus-Senftenberg", type: public, region: "Brandenburg", homepage: "https://www.b-tu.de", job_pages: ["https://www.b-tu.de/universitaet/karriere-engagement/karriere/stellenausschreibungen"]}
-- {id: de-kiel, country: DE, name: "Kiel University", type: public, region: "Schleswig-Holstein", homepage: "https://www.uni-kiel.de", notes: "robots.txt blocks all bots (Nov 2026)"}
-- {id: de-potsdam, country: DE, name: "University of Potsdam", type: public, region: "Brandenburg", homepage: "https://www.uni-potsdam.de", job_pages: ["https://www.uni-potsdam.de/de/arbeiten-an-der-up/bewerbung/stellenausschreibungen"]}
-- {id: de-goettingen, country: DE, name: "University of Göttingen", type: public, region: "Niedersachsen", homepage: "https://www.uni-goettingen.de", job_pages: ["https://www.uni-goettingen.de/de/305223.html"]}
-- {id: de-bayreuth, country: DE, name: "University of Bayreuth", type: public, region: "Bayern", homepage: "https://www.uni-bayreuth.de", job_pages: ["https://www.uni-bayreuth.de/stellenangebote"]}
-- {id: de-wuerzburg, country: DE, name: "University of Würzburg", type: public, region: "Bayern", homepage: "https://www.uni-wuerzburg.de", job_pages: ["https://www.uni-wuerzburg.de/karriere/"]}
-- {id: de-augsburg, country: DE, name: "University of Augsburg", type: public, region: "Bayern", homepage: "https://www.uni-augsburg.de", job_pages: ["https://www.uni-augsburg.de/en/jobs-und-karriere/stellenangebote/"]}
-- {id: de-greifswald, country: DE, name: "University of Greifswald", type: public, region: "Mecklenburg-Vorpommern", homepage: "https://www.uni-greifswald.de", notes: "site resets connections from GitHub runners"}
-- {id: de-tubs, country: DE, name: "TU Braunschweig", type: public, region: "Niedersachsen", homepage: "https://www.tu-braunschweig.de", job_pages: ["https://www.tu-braunschweig.de/stellenangebote"]}
-- {id: de-tuda, country: DE, name: "TU Darmstadt", type: public, region: "Hessen", homepage: "https://www.tu-darmstadt.de", job_pages: ["https://www.tu-darmstadt.de/universitaet/karriere_an_der_tu/stellenangebote/index.de.jsp"]}
-- {id: de-bremen, country: DE, name: "University of Bremen", type: public, region: "Bremen", homepage: "https://www.uni-bremen.de", job_pages: ["https://www.uni-bremen.de/universitaet/die-uni-als-arbeitgeber/offene-stellen"]}
-- {id: de-trier, country: DE, name: "Trier University", type: public, region: "Rheinland-Pfalz", homepage: "https://www.uni-trier.de", job_pages: ["https://www.uni-trier.de/universitaet/verwaltung/abteilung-iii-personal/jobs"]}
-- {id: de-osnabrueck, country: DE, name: "Osnabrück University", type: public, region: "Niedersachsen", homepage: "https://www.uni-osnabrueck.de", job_pages: ["https://www.uni-osnabrueck.de/universitaet/stellenangebote"]}
-- {id: de-jena, country: DE, name: "University of Jena", type: public, region: "Thüringen", homepage: "https://www.uni-jena.de", job_pages: ["https://www.uni-jena.de/122166/stellenangebote"]}
-- {id: de-halle, country: DE, name: "Martin Luther University Halle-Wittenberg", type: public, region: "Sachsen-Anhalt", homepage: "https://www.uni-halle.de", job_pages: ["https://www.uni-halle.de/karriere/"]}
-- {id: de-frankfurt, country: DE, name: "Goethe University Frankfurt", type: public, region: "Hessen", homepage: "https://www.uni-frankfurt.de", job_pages: ["https://www.uni-frankfurt.de/47549099/Stellenangebote"]}
-- {id: de-mainz, country: DE, name: "Johannes Gutenberg University Mainz", type: public, region: "Rheinland-Pfalz", homepage: "https://www.uni-mainz.de", job_pages: ["https://stellenboerse.uni-mainz.de/"]}
-- {id: de-tuebingen, country: DE, name: "University of Tübingen", type: public, region: "Baden-Württemberg", homepage: "https://uni-tuebingen.de", job_pages: ["https://uni-tuebingen.de/universitaet/stellenangebote/"]}
-- {id: de-fau, country: DE, name: "FAU Erlangen-Nürnberg", type: public, region: "Bayern", homepage: "https://www.fau.de", job_pages: ["https://www.jobs.fau.de/en/jobs"]}
-- {id: de-marburg, country: DE, name: "University of Marburg", type: public, region: "Hessen", homepage: "https://www.uni-marburg.de", job_pages: ["https://www.uni-marburg.de/de/universitaet/profil/universitaetskultur/karriere/stellenangebote/wissenschaftliche-stellen"]}
-- {id: de-giessen, country: DE, name: "Justus Liebig University Giessen", type: public, region: "Hessen", homepage: "https://www.uni-giessen.de", job_pages: ["https://www.uni-giessen.de/de/ueber-uns/karriere/stellenmarkt"]}
-- {id: de-siegen, country: DE, name: "University of Siegen", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-siegen.de", job_pages: ["https://www.uni-siegen.de/stellenangebote/"]}
-- {id: de-wuppertal, country: DE, name: "University of Wuppertal", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-wuppertal.de", job_pages: ["https://stellenausschreibungen.uni-wuppertal.de"]}
-- {id: de-oldenburg, country: DE, name: "University of Oldenburg", type: public, region: "Niedersachsen", homepage: "https://uol.de", job_pages: ["https://uol.de/jobs"]}
-- {id: de-leuphana, country: DE, name: "Leuphana University Lüneburg", type: public, region: "Niedersachsen", homepage: "https://www.leuphana.de", job_pages: ["https://www.leuphana.de/universitaet/jobs-und-karriere.html"]}
-- {id: de-hnee, country: DE, name: "Eberswalde University for Sustainable Development", type: public, region: "Brandenburg", homepage: "https://www.hnee.de", job_pages: ["https://www.hnee.de/hochschule/arbeiten-an-der-hnee/stellenausschreibungen"]}
+- {id: de-tudo, country: DE, name: "TU Dortmund University", type: public, region: "Nordrhein-Westfalen", city: "Dortmund", homepage: "https://www.tu-dortmund.de", job_pages: ["https://www.tu-dortmund.de/karriere/offene-stellen/"]}
+- {id: de-tub, country: DE, name: "Technische Universität Berlin", type: public, region: "Berlin", city: "Berlin", homepage: "https://www.tu.berlin", job_pages: ["https://jobs.tu-berlin.de/en", "https://stellenticket.tu-berlin.de/en/job-offers"]}
+- {id: de-tum, country: DE, name: "Technical University of Munich", type: public, region: "Bayern", city: "Munich", homepage: "https://www.tum.de", job_pages: ["https://www.tum.de/ueber-die-tum/karriere-und-jobs/stellenangebote"]}
+- {id: de-luh, country: DE, name: "Leibniz Universität Hannover", type: public, region: "Niedersachsen", city: "Hannover", homepage: "https://www.uni-hannover.de", job_pages: ["https://www.uni-hannover.de/universitaet/stellenangebote-arbeit-an-der-uni/jobboerse"]}
+- {id: de-tud, country: DE, name: "TU Dresden", type: public, region: "Sachsen", city: "Dresden", homepage: "https://tu-dresden.de", job_pages: ["https://tu-dresden.de/tu-dresden/arbeiten-an-der-tud/stellenangebote/stellenangebote?kat=2&style=cms"]}
+- {id: de-ustutt, country: DE, name: "University of Stuttgart", type: public, region: "Baden-Württemberg", city: "Stuttgart", homepage: "https://www.uni-stuttgart.de", job_pages: ["https://careers.uni-stuttgart.de/?locale=de_DE"]}
+- {id: de-kit, country: DE, name: "Karlsruhe Institute of Technology (KIT)", type: public, region: "Baden-Württemberg", city: "Karlsruhe", homepage: "https://www.kit.edu", job_pages: ["https://www.kit.edu/karriere/stellenangebote.php"]}
+- {id: de-rwth, country: DE, name: "RWTH Aachen University", type: public, region: "Nordrhein-Westfalen", city: "Aachen", homepage: "https://www.rwth-aachen.de", job_pages: ["https://www.rwth-aachen.de/stellenangebote"]}
+- {id: de-hcu, country: DE, name: "HafenCity University Hamburg", type: public, region: "Hamburg", city: "Hamburg", homepage: "https://www.hcu-hamburg.de", job_pages: ["https://www.hcu-hamburg.de/universitaet/stellenausschreibungen"]}
+- {id: de-weimar, country: DE, name: "Bauhaus-Universität Weimar", type: public, region: "Thüringen", city: "Weimar", homepage: "https://www.uni-weimar.de", job_pages: ["https://www.uni-weimar.de/de/universitaet/aktuell/stellenausschreibungen/"]}
+- {id: de-rptu, country: DE, name: "RPTU Kaiserslautern-Landau", type: public, region: "Rheinland-Pfalz", city: "Kaiserslautern", homepage: "https://rptu.de", job_pages: ["https://rptu.de/stellenangebote"]}
+- {id: de-kassel, country: DE, name: "University of Kassel", type: public, region: "Hessen", city: "Kassel", homepage: "https://www.uni-kassel.de", job_pages: ["https://www.uni-kassel.de/uni/universitaet/stellenangebote.html"]}
+- {id: de-hu, country: DE, name: "Humboldt-Universität zu Berlin", type: public, region: "Berlin", city: "Berlin", homepage: "https://www.hu-berlin.de", job_pages: ["https://www.hu-berlin.de/de/stellenangebote"]}
+- {id: de-fu, country: DE, name: "Freie Universität Berlin", type: public, region: "Berlin", city: "Berlin", homepage: "https://www.fu-berlin.de", job_pages: ["https://www.fu-berlin.de/universitaet/beruf-karriere/jobs/index.html"]}
+- {id: de-bonn, country: DE, name: "University of Bonn", type: public, region: "Nordrhein-Westfalen", city: "Bonn", homepage: "https://www.uni-bonn.de", job_pages: ["https://www.uni-bonn.de/de/universitaet/arbeiten-an-der-uni/stellenangebote"]}
+- {id: de-freiburg, country: DE, name: "University of Freiburg", type: public, region: "Baden-Württemberg", city: "Freiburg", homepage: "https://uni-freiburg.de", job_pages: ["https://uni-freiburg.de/universitaet/jobs/"]}
+- {id: de-uhh, country: DE, name: "Universität Hamburg", type: public, region: "Hamburg", city: "Hamburg", homepage: "https://www.uni-hamburg.de", job_pages: ["https://www.uni-hamburg.de/stellenangebote.html"]}
+- {id: de-lmu, country: DE, name: "LMU Munich", type: public, region: "Bayern", city: "Munich", homepage: "https://www.lmu.de", job_pages: ["https://www.lmu.de/de/die-lmu/arbeiten-an-der-lmu/stellenportal/"]}
+- {id: de-leipzig, country: DE, name: "Leipzig University", type: public, region: "Sachsen", city: "Leipzig", homepage: "https://www.uni-leipzig.de", notes: "central vacancy list not found (only PDFs under fileadmin/ul/Stellenausschreibungen)"}
+- {id: de-heidelberg, country: DE, name: "Heidelberg University", type: public, region: "Baden-Württemberg", city: "Heidelberg", homepage: "https://www.uni-heidelberg.de", job_pages: ["https://www.uni-heidelberg.de/de/stellenmarkt"]}
+- {id: de-muenster, country: DE, name: "University of Münster", type: public, region: "Nordrhein-Westfalen", city: "Münster", homepage: "https://www.uni-muenster.de", job_pages: ["https://www.uni-muenster.de/Rektorat/Stellen/"]}
+- {id: de-koeln, country: DE, name: "University of Cologne", type: public, region: "Nordrhein-Westfalen", city: "Cologne", homepage: "https://www.uni-koeln.de", job_pages: ["https://jobportal.uni-koeln.de/"]}
+- {id: de-rub, country: DE, name: "Ruhr University Bochum", type: public, region: "Nordrhein-Westfalen", city: "Bochum", homepage: "https://www.ruhr-uni-bochum.de", job_pages: ["https://uni.ruhr-uni-bochum.de/de/stellenangebote"]}
+- {id: de-ude, country: DE, name: "University of Duisburg-Essen", type: public, region: "Nordrhein-Westfalen", city: "Duisburg / Essen", homepage: "https://www.uni-due.de", job_pages: ["https://www.uni-due.de/karriere/ausschreibungen-nach-kategorien.php?kategorie=Research%20and%20teaching%20operations"]}
+- {id: de-btu, country: DE, name: "BTU Cottbus-Senftenberg", type: public, region: "Brandenburg", city: "Cottbus", homepage: "https://www.b-tu.de", job_pages: ["https://www.b-tu.de/universitaet/karriere-engagement/karriere/stellenausschreibungen"]}
+- {id: de-kiel, country: DE, name: "Kiel University", type: public, region: "Schleswig-Holstein", city: "Kiel", homepage: "https://www.uni-kiel.de", notes: "robots.txt blocks all bots (Nov 2026)"}
+- {id: de-potsdam, country: DE, name: "University of Potsdam", type: public, region: "Brandenburg", city: "Potsdam", homepage: "https://www.uni-potsdam.de", job_pages: ["https://www.uni-potsdam.de/de/arbeiten-an-der-up/bewerbung/stellenausschreibungen"]}
+- {id: de-goettingen, country: DE, name: "University of Göttingen", type: public, region: "Niedersachsen", city: "Göttingen", homepage: "https://www.uni-goettingen.de", job_pages: ["https://www.uni-goettingen.de/de/305223.html"]}
+- {id: de-bayreuth, country: DE, name: "University of Bayreuth", type: public, region: "Bayern", city: "Bayreuth", homepage: "https://www.uni-bayreuth.de", job_pages: ["https://www.uni-bayreuth.de/stellenangebote"]}
+- {id: de-wuerzburg, country: DE, name: "University of Würzburg", type: public, region: "Bayern", city: "Würzburg", homepage: "https://www.uni-wuerzburg.de", job_pages: ["https://www.uni-wuerzburg.de/karriere/"]}
+- {id: de-augsburg, country: DE, name: "University of Augsburg", type: public, region: "Bayern", city: "Augsburg", homepage: "https://www.uni-augsburg.de", job_pages: ["https://www.uni-augsburg.de/en/jobs-und-karriere/stellenangebote/"]}
+- {id: de-greifswald, country: DE, name: "University of Greifswald", type: public, region: "Mecklenburg-Vorpommern", city: "Greifswald", homepage: "https://www.uni-greifswald.de", notes: "site resets connections from GitHub runners"}
+- {id: de-tubs, country: DE, name: "TU Braunschweig", type: public, region: "Niedersachsen", city: "Braunschweig", homepage: "https://www.tu-braunschweig.de", job_pages: ["https://www.tu-braunschweig.de/stellenangebote"]}
+- {id: de-tuda, country: DE, name: "TU Darmstadt", type: public, region: "Hessen", city: "Darmstadt", homepage: "https://www.tu-darmstadt.de", job_pages: ["https://www.tu-darmstadt.de/universitaet/karriere_an_der_tu/stellenangebote/index.de.jsp"]}
+- {id: de-bremen, country: DE, name: "University of Bremen", type: public, region: "Bremen", city: "Bremen", homepage: "https://www.uni-bremen.de", job_pages: ["https://www.uni-bremen.de/universitaet/die-uni-als-arbeitgeber/offene-stellen"]}
+- {id: de-trier, country: DE, name: "Trier University", type: public, region: "Rheinland-Pfalz", city: "Trier", homepage: "https://www.uni-trier.de", job_pages: ["https://www.uni-trier.de/universitaet/verwaltung/abteilung-iii-personal/jobs"]}
+- {id: de-osnabrueck, country: DE, name: "Osnabrück University", type: public, region: "Niedersachsen", city: "Osnabrück", homepage: "https://www.uni-osnabrueck.de", job_pages: ["https://www.uni-osnabrueck.de/universitaet/stellenangebote"]}
+- {id: de-jena, country: DE, name: "University of Jena", type: public, region: "Thüringen", city: "Jena", homepage: "https://www.uni-jena.de", job_pages: ["https://www.uni-jena.de/122166/stellenangebote"]}
+- {id: de-halle, country: DE, name: "Martin Luther University Halle-Wittenberg", type: public, region: "Sachsen-Anhalt", city: "Halle (Saale)", homepage: "https://www.uni-halle.de", job_pages: ["https://www.uni-halle.de/karriere/"]}
+- {id: de-frankfurt, country: DE, name: "Goethe University Frankfurt", type: public, region: "Hessen", city: "Frankfurt am Main", homepage: "https://www.uni-frankfurt.de", job_pages: ["https://www.uni-frankfurt.de/47549099/Stellenangebote"]}
+- {id: de-mainz, country: DE, name: "Johannes Gutenberg University Mainz", type: public, region: "Rheinland-Pfalz", city: "Mainz", homepage: "https://www.uni-mainz.de", job_pages: ["https://stellenboerse.uni-mainz.de/"]}
+- {id: de-tuebingen, country: DE, name: "University of Tübingen", type: public, region: "Baden-Württemberg", city: "Tübingen", homepage: "https://uni-tuebingen.de", job_pages: ["https://uni-tuebingen.de/universitaet/stellenangebote/"]}
+- {id: de-fau, country: DE, name: "FAU Erlangen-Nürnberg", type: public, region: "Bayern", city: "Erlangen / Nuremberg", homepage: "https://www.fau.de", job_pages: ["https://www.jobs.fau.de/en/jobs"]}
+- {id: de-marburg, country: DE, name: "University of Marburg", type: public, region: "Hessen", city: "Marburg", homepage: "https://www.uni-marburg.de", job_pages: ["https://www.uni-marburg.de/de/universitaet/profil/universitaetskultur/karriere/stellenangebote/wissenschaftliche-stellen"]}
+- {id: de-giessen, country: DE, name: "Justus Liebig University Giessen", type: public, region: "Hessen", city: "Giessen", homepage: "https://www.uni-giessen.de", job_pages: ["https://www.uni-giessen.de/de/ueber-uns/karriere/stellenmarkt"]}
+- {id: de-siegen, country: DE, name: "University of Siegen", type: public, region: "Nordrhein-Westfalen", city: "Siegen", homepage: "https://www.uni-siegen.de", job_pages: ["https://www.uni-siegen.de/stellenangebote/"]}
+- {id: de-wuppertal, country: DE, name: "University of Wuppertal", type: public, region: "Nordrhein-Westfalen", city: "Wuppertal", homepage: "https://www.uni-wuppertal.de", job_pages: ["https://stellenausschreibungen.uni-wuppertal.de"]}
+- {id: de-oldenburg, country: DE, name: "University of Oldenburg", type: public, region: "Niedersachsen", city: "Oldenburg", homepage: "https://uol.de", job_pages: ["https://uol.de/jobs"]}
+- {id: de-leuphana, country: DE, name: "Leuphana University Lüneburg", type: public, region: "Niedersachsen", city: "Lüneburg", homepage: "https://www.leuphana.de", job_pages: ["https://www.leuphana.de/universitaet/jobs-und-karriere.html"]}
+- {id: de-hnee, country: DE, name: "Eberswalde University for Sustainable Development", type: public, region: "Brandenburg", city: "Eberswalde", homepage: "https://www.hnee.de", job_pages: ["https://www.hnee.de/hochschule/arbeiten-an-der-hnee/stellenausschreibungen"]}
 
 # ---------------- Research institutes ----------------
-- {id: de-ioer, country: DE, name: "Leibniz Institute of Ecological Urban and Regional Development (IÖR)", type: research, region: "Sachsen", homepage: "https://www.ioer.de", job_pages: ["https://www.ioer.de/karriere/stellenangebote"]}
-- {id: de-ils, country: DE, name: "ILS – Research Institute for Regional and Urban Development", type: research, region: "Nordrhein-Westfalen", homepage: "https://www.ils-forschung.de", job_pages: ["https://www.ils-forschung.de/das-ils/arbeiten-im-ils/"]}
-- {id: de-irs, country: DE, name: "Leibniz Institute for Research on Society and Space (IRS)", type: research, region: "Brandenburg", homepage: "https://leibniz-irs.de", job_pages: ["https://join.com/companies/leibniz-irs"]}
-- {id: de-arl, country: DE, name: "ARL – Academy for Territorial Development in the Leibniz Association", type: research, region: "Niedersachsen", homepage: "https://www.arl-net.de", job_pages: ["https://www.arl-net.de/de/content/job-boerse"]}
-- {id: de-ifl, country: DE, name: "Leibniz Institute for Regional Geography (IfL)", type: research, region: "Sachsen", homepage: "https://leibniz-ifl.de", job_pages: ["https://leibniz-ifl.de/karriere/arbeiten-am-ifl"]}
-- {id: de-zalf, country: DE, name: "Leibniz Centre for Agricultural Landscape Research (ZALF)", type: research, region: "Brandenburg", homepage: "https://www.zalf.de", notes: "TLS error from GitHub runners"}
-- {id: de-ufz, country: DE, name: "Helmholtz Centre for Environmental Research (UFZ)", type: research, region: "Sachsen", homepage: "https://www.ufz.de", job_pages: ["https://www.ufz.de/index.php?en=34276"]}
-- {id: de-pik, country: DE, name: "Potsdam Institute for Climate Impact Research (PIK)", type: research, region: "Brandenburg", homepage: "https://www.pik-potsdam.de", job_pages: ["https://www.pik-potsdam.de/en/people/career/jobs"]}
-- {id: de-wupperinst, country: DE, name: "Wuppertal Institute for Climate, Environment and Energy", type: research, region: "Nordrhein-Westfalen", homepage: "https://wupperinst.org", job_pages: ["https://wupperinst.org/das-institut/karriere/"]}
-- {id: de-difu, country: DE, name: "German Institute of Urban Affairs (Difu)", type: research, region: "Berlin", homepage: "https://difu.de", job_pages: ["https://difu.de/institut/arbeiten-am-difu/stellenangebote-am-difu"]}
-- {id: de-bbsr, country: DE, name: "Federal Institute for Research on Building, Urban Affairs and Spatial Development (BBSR)", type: research, region: "Nordrhein-Westfalen", homepage: "https://www.bbsr.bund.de", job_pages: ["https://www.bbsr.bund.de/BBSR/DE/ueber-uns/karriere/stellenangebote/_node.html"]}
-- {id: de-gfz, country: DE, name: "GFZ Helmholtz Centre for Geosciences", type: research, region: "Brandenburg", homepage: "https://www.gfz.de", job_pages: ["https://www.gfz.de/karriere/stellenangebote"]}
-- {id: de-dlr, country: DE, name: "German Aerospace Center (DLR)", type: research, region: "Nordrhein-Westfalen", homepage: "https://www.dlr.de", notes: "vacancies are in a JavaScript job portal split per institute; not collected"}
-- {id: de-ioew, country: DE, name: "Institute for Ecological Economy Research (IÖW)", type: research, region: "Berlin", homepage: "https://www.ioew.de", job_pages: ["https://www.ioew.de/jobs"]}
-- {id: de-thuenen, country: DE, name: "Thünen Institute", type: research, region: "Niedersachsen", homepage: "https://www.thuenen.de", notes: "vacancy list page not found yet"}
-- {id: de-hereon, country: DE, name: "Helmholtz-Zentrum Hereon (incl. GERICS climate service)", type: research, region: "Schleswig-Holstein", homepage: "https://hereon.de", job_pages: ["https://hereon.de/career/vacancies/index.php.en"]}
+- {id: de-ioer, country: DE, name: "Leibniz Institute of Ecological Urban and Regional Development (IÖR)", type: research, region: "Sachsen", city: "Dresden", homepage: "https://www.ioer.de", job_pages: ["https://www.ioer.de/karriere/stellenangebote"]}
+- {id: de-ils, country: DE, name: "ILS – Research Institute for Regional and Urban Development", type: research, region: "Nordrhein-Westfalen", city: "Dortmund", homepage: "https://www.ils-forschung.de", job_pages: ["https://www.ils-forschung.de/das-ils/arbeiten-im-ils/"]}
+- {id: de-irs, country: DE, name: "Leibniz Institute for Research on Society and Space (IRS)", type: research, region: "Brandenburg", city: "Erkner (Berlin)", homepage: "https://leibniz-irs.de", job_pages: ["https://join.com/companies/leibniz-irs"]}
+- {id: de-arl, country: DE, name: "ARL – Academy for Territorial Development in the Leibniz Association", type: research, region: "Niedersachsen", city: "Hannover", homepage: "https://www.arl-net.de", job_pages: ["https://www.arl-net.de/de/content/job-boerse"]}
+- {id: de-ifl, country: DE, name: "Leibniz Institute for Regional Geography (IfL)", type: research, region: "Sachsen", city: "Leipzig", homepage: "https://leibniz-ifl.de", job_pages: ["https://leibniz-ifl.de/karriere/arbeiten-am-ifl"]}
+- {id: de-zalf, country: DE, name: "Leibniz Centre for Agricultural Landscape Research (ZALF)", type: research, region: "Brandenburg", city: "Müncheberg", homepage: "https://www.zalf.de", notes: "TLS error from GitHub runners"}
+- {id: de-ufz, country: DE, name: "Helmholtz Centre for Environmental Research (UFZ)", type: research, region: "Sachsen", city: "Leipzig", homepage: "https://www.ufz.de", job_pages: ["https://www.ufz.de/index.php?en=34276"]}
+- {id: de-pik, country: DE, name: "Potsdam Institute for Climate Impact Research (PIK)", type: research, region: "Brandenburg", city: "Potsdam", homepage: "https://www.pik-potsdam.de", job_pages: ["https://www.pik-potsdam.de/en/people/career/jobs"]}
+- {id: de-wupperinst, country: DE, name: "Wuppertal Institute for Climate, Environment and Energy", type: research, region: "Nordrhein-Westfalen", city: "Wuppertal", homepage: "https://wupperinst.org", job_pages: ["https://wupperinst.org/das-institut/karriere/"]}
+- {id: de-difu, country: DE, name: "German Institute of Urban Affairs (Difu)", type: research, region: "Berlin", city: "Berlin", homepage: "https://difu.de", job_pages: ["https://difu.de/institut/arbeiten-am-difu/stellenangebote-am-difu"]}
+- {id: de-bbsr, country: DE, name: "Federal Institute for Research on Building, Urban Affairs and Spatial Development (BBSR)", type: research, region: "Nordrhein-Westfalen", city: "Bonn", homepage: "https://www.bbsr.bund.de", job_pages: ["https://www.bbsr.bund.de/BBSR/DE/ueber-uns/karriere/stellenangebote/_node.html"]}
+- {id: de-gfz, country: DE, name: "GFZ Helmholtz Centre for Geosciences", type: research, region: "Brandenburg", city: "Potsdam", homepage: "https://www.gfz.de", job_pages: ["https://www.gfz.de/karriere/stellenangebote"]}
+- {id: de-dlr, country: DE, name: "German Aerospace Center (DLR)", type: research, region: "Nordrhein-Westfalen", city: "Cologne", homepage: "https://www.dlr.de", notes: "vacancies are in a JavaScript job portal split per institute; not collected"}
+- {id: de-ioew, country: DE, name: "Institute for Ecological Economy Research (IÖW)", type: research, region: "Berlin", city: "Berlin", homepage: "https://www.ioew.de", job_pages: ["https://www.ioew.de/jobs"]}
+- {id: de-thuenen, country: DE, name: "Thünen Institute", type: research, region: "Niedersachsen", city: "Braunschweig", homepage: "https://www.thuenen.de", notes: "vacancy list page not found yet"}
+- {id: de-hereon, country: DE, name: "Helmholtz-Zentrum Hereon (incl. GERICS climate service)", type: research, region: "Schleswig-Holstein", city: "Geesthacht", homepage: "https://hereon.de", job_pages: ["https://hereon.de/career/vacancies/index.php.en"]}
+
+# ---------------- More German universities (added Nov 2026) ----------------
+- {id: de-bamberg, country: DE, name: "University of Bamberg", type: public, region: "Bayern", city: "Bamberg", homepage: "https://www.uni-bamberg.de"}
+- {id: de-bielefeld, country: DE, name: "Bielefeld University", type: public, region: "Nordrhein-Westfalen", city: "Bielefeld", homepage: "https://www.uni-bielefeld.de"}
+- {id: de-chemnitz, country: DE, name: "Chemnitz University of Technology", type: public, region: "Sachsen", city: "Chemnitz", homepage: "https://www.tu-chemnitz.de"}
+- {id: de-clausthal, country: DE, name: "Clausthal University of Technology", type: public, region: "Niedersachsen", city: "Clausthal-Zellerfeld", homepage: "https://www.tu-clausthal.de"}
+- {id: de-hhu, country: DE, name: "Heinrich Heine University Düsseldorf", type: public, region: "Nordrhein-Westfalen", city: "Düsseldorf", homepage: "https://www.hhu.de"}
+- {id: de-erfurt, country: DE, name: "University of Erfurt", type: public, region: "Thüringen", city: "Erfurt", homepage: "https://www.uni-erfurt.de"}
+- {id: de-viadrina, country: DE, name: "European University Viadrina", type: public, region: "Brandenburg", city: "Frankfurt (Oder)", homepage: "https://www.europa-uni.de"}
+- {id: de-flensburg, country: DE, name: "Europa-Universität Flensburg", type: public, region: "Schleswig-Holstein", city: "Flensburg", homepage: "https://www.uni-flensburg.de"}
+- {id: de-hildesheim, country: DE, name: "University of Hildesheim", type: public, region: "Niedersachsen", city: "Hildesheim", homepage: "https://www.uni-hildesheim.de"}
+- {id: de-hohenheim, country: DE, name: "University of Hohenheim", type: public, region: "Baden-Württemberg", city: "Stuttgart", homepage: "https://www.uni-hohenheim.de"}
+- {id: de-ilmenau, country: DE, name: "Ilmenau University of Technology", type: public, region: "Thüringen", city: "Ilmenau", homepage: "https://www.tu-ilmenau.de"}
+- {id: de-konstanz, country: DE, name: "University of Konstanz", type: public, region: "Baden-Württemberg", city: "Konstanz", homepage: "https://www.uni-konstanz.de"}
+- {id: de-luebeck, country: DE, name: "University of Lübeck", type: public, region: "Schleswig-Holstein", city: "Lübeck", homepage: "https://www.uni-luebeck.de"}
+- {id: de-magdeburg, country: DE, name: "Otto von Guericke University Magdeburg", type: public, region: "Sachsen-Anhalt", city: "Magdeburg", homepage: "https://www.ovgu.de"}
+- {id: de-mannheim, country: DE, name: "University of Mannheim", type: public, region: "Baden-Württemberg", city: "Mannheim", homepage: "https://www.uni-mannheim.de"}
+- {id: de-paderborn, country: DE, name: "Paderborn University", type: public, region: "Nordrhein-Westfalen", city: "Paderborn", homepage: "https://www.uni-paderborn.de"}
+- {id: de-passau, country: DE, name: "University of Passau", type: public, region: "Bayern", city: "Passau", homepage: "https://www.uni-passau.de"}
+- {id: de-regensburg, country: DE, name: "University of Regensburg", type: public, region: "Bayern", city: "Regensburg", homepage: "https://www.uni-regensburg.de"}
+- {id: de-rostock, country: DE, name: "University of Rostock", type: public, region: "Mecklenburg-Vorpommern", city: "Rostock", homepage: "https://www.uni-rostock.de"}
+- {id: de-saarland, country: DE, name: "Saarland University", type: public, region: "Saarland", city: "Saarbrücken", homepage: "https://www.uni-saarland.de"}
+- {id: de-ulm, country: DE, name: "Ulm University", type: public, region: "Baden-Württemberg", city: "Ulm", homepage: "https://www.uni-ulm.de"}
+- {id: de-vechta, country: DE, name: "University of Vechta", type: public, region: "Niedersachsen", city: "Vechta", homepage: "https://www.uni-vechta.de"}
+- {id: de-koblenz, country: DE, name: "University of Koblenz", type: public, region: "Rheinland-Pfalz", city: "Koblenz", homepage: "https://www.uni-koblenz.de"}
+- {id: de-tuhh, country: DE, name: "Hamburg University of Technology (TUHH)", type: public, region: "Hamburg", city: "Hamburg", homepage: "https://www.tuhh.de"}
+- {id: de-hsu, country: DE, name: "Helmut Schmidt University Hamburg", type: public, region: "Hamburg", city: "Hamburg", homepage: "https://www.hsu-hh.de"}
+- {id: de-unibw, country: DE, name: "University of the Bundeswehr Munich", type: public, region: "Bayern", city: "Munich", homepage: "https://www.unibw.de"}
+- {id: de-freiberg, country: DE, name: "TU Bergakademie Freiberg", type: public, region: "Sachsen", city: "Freiberg", homepage: "https://tu-freiberg.de"}
+- {id: de-ku, country: DE, name: "Catholic University of Eichstätt-Ingolstadt", type: private, region: "Bayern", city: "Eichstätt", homepage: "https://www.ku.de"}
+- {id: de-hertie, country: DE, name: "Hertie School", type: private, region: "Berlin", city: "Berlin", homepage: "https://www.hertie-school.org"}
+
+# ---------------- Universities of applied sciences strong in planning / landscape ----------------
+- {id: de-htw, country: DE, name: "HTW Berlin – University of Applied Sciences", type: public, region: "Berlin", city: "Berlin", homepage: "https://www.htw-berlin.de"}
+- {id: de-bht, country: DE, name: "Berliner Hochschule für Technik (BHT)", type: public, region: "Berlin", city: "Berlin", homepage: "https://www.bht-berlin.de"}
+- {id: de-fhp, country: DE, name: "FH Potsdam – University of Applied Sciences", type: public, region: "Brandenburg", city: "Potsdam", homepage: "https://www.fh-potsdam.de"}
+- {id: de-anhalt, country: DE, name: "Anhalt University of Applied Sciences", type: public, region: "Sachsen-Anhalt", city: "Bernburg / Dessau", homepage: "https://www.hs-anhalt.de"}
+- {id: de-hfwu, country: DE, name: "Nürtingen-Geislingen University (HfWU)", type: public, region: "Baden-Württemberg", city: "Nürtingen", homepage: "https://www.hfwu.de"}
+- {id: de-hswt, country: DE, name: "Weihenstephan-Triesdorf University of Applied Sciences", type: public, region: "Bayern", city: "Freising", homepage: "https://www.hswt.de"}
+- {id: de-hsnb, country: DE, name: "Neubrandenburg University of Applied Sciences", type: public, region: "Mecklenburg-Vorpommern", city: "Neubrandenburg", homepage: "https://www.hs-nb.de"}
+- {id: de-fherfurt, country: DE, name: "FH Erfurt – University of Applied Sciences", type: public, region: "Thüringen", city: "Erfurt", homepage: "https://www.fh-erfurt.de"}
+- {id: de-hawhh, country: DE, name: "HAW Hamburg", type: public, region: "Hamburg", city: "Hamburg", homepage: "https://www.haw-hamburg.de"}
+- {id: de-thkoeln, country: DE, name: "TH Köln", type: public, region: "Nordrhein-Westfalen", city: "Cologne", homepage: "https://www.th-koeln.de"}
+- {id: de-hsbo, country: DE, name: "Bochum University of Applied Sciences", type: public, region: "Nordrhein-Westfalen", city: "Bochum", homepage: "https://www.hochschule-bochum.de"}
+- {id: de-fra-uas, country: DE, name: "Frankfurt University of Applied Sciences", type: public, region: "Hessen", city: "Frankfurt am Main", homepage: "https://www.frankfurt-university.de"}
+- {id: de-hsos, country: DE, name: "Osnabrück University of Applied Sciences", type: public, region: "Niedersachsen", city: "Osnabrück", homepage: "https://www.hs-osnabrueck.de"}
+- {id: de-geisenheim, country: DE, name: "Geisenheim University", type: public, region: "Hessen", city: "Geisenheim", homepage: "https://www.hs-geisenheim.de"}
+- {id: de-hka, country: DE, name: "Karlsruhe University of Applied Sciences", type: public, region: "Baden-Württemberg", city: "Karlsruhe", homepage: "https://www.h-ka.de"}
+- {id: de-hm, country: DE, name: "Munich University of Applied Sciences (HM)", type: public, region: "Bayern", city: "Munich", homepage: "https://www.hm.edu"}
+- {id: de-thowl, country: DE, name: "TH Ostwestfalen-Lippe", type: public, region: "Nordrhein-Westfalen", city: "Detmold / Lemgo", homepage: "https://www.th-owl.de"}
+- {id: de-hsrm, country: DE, name: "RheinMain University of Applied Sciences", type: public, region: "Hessen", city: "Wiesbaden", homepage: "https://www.hs-rm.de"}
+- {id: de-htwk, country: DE, name: "HTWK Leipzig", type: public, region: "Sachsen", city: "Leipzig", homepage: "https://www.htwk-leipzig.de"}
+- {id: de-hsco, country: DE, name: "Coburg University of Applied Sciences", type: public, region: "Bayern", city: "Coburg", homepage: "https://www.hs-coburg.de"}
