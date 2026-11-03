@@ -564,3 +564,76 @@
   type: research
   region: "Castilla y León"
   homepage: "https://www.cartif.es"
+
+# ================= GERMANY (postdoc positions only) =================
+# country: DE. Job pages are filled in from the discovery run (data/discovery.json).
+
+# ---------------- Universities ----------------
+- {id: de-tudo, country: DE, name: "TU Dortmund University", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.tu-dortmund.de"}
+- {id: de-tub, country: DE, name: "Technische Universität Berlin", type: public, region: "Berlin", homepage: "https://www.tu.berlin"}
+- {id: de-tum, country: DE, name: "Technical University of Munich", type: public, region: "Bayern", homepage: "https://www.tum.de"}
+- {id: de-luh, country: DE, name: "Leibniz Universität Hannover", type: public, region: "Niedersachsen", homepage: "https://www.uni-hannover.de"}
+- {id: de-tud, country: DE, name: "TU Dresden", type: public, region: "Sachsen", homepage: "https://tu-dresden.de"}
+- {id: de-ustutt, country: DE, name: "University of Stuttgart", type: public, region: "Baden-Württemberg", homepage: "https://www.uni-stuttgart.de"}
+- {id: de-kit, country: DE, name: "Karlsruhe Institute of Technology (KIT)", type: public, region: "Baden-Württemberg", homepage: "https://www.kit.edu"}
+- {id: de-rwth, country: DE, name: "RWTH Aachen University", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.rwth-aachen.de"}
+- {id: de-hcu, country: DE, name: "HafenCity University Hamburg", type: public, region: "Hamburg", homepage: "https://www.hcu-hamburg.de"}
+- {id: de-weimar, country: DE, name: "Bauhaus-Universität Weimar", type: public, region: "Thüringen", homepage: "https://www.uni-weimar.de"}
+- {id: de-rptu, country: DE, name: "RPTU Kaiserslautern-Landau", type: public, region: "Rheinland-Pfalz", homepage: "https://rptu.de"}
+- {id: de-kassel, country: DE, name: "University of Kassel", type: public, region: "Hessen", homepage: "https://www.uni-kassel.de"}
+- {id: de-hu, country: DE, name: "Humboldt-Universität zu Berlin", type: public, region: "Berlin", homepage: "https://www.hu-berlin.de"}
+- {id: de-fu, country: DE, name: "Freie Universität Berlin", type: public, region: "Berlin", homepage: "https://www.fu-berlin.de"}
+- {id: de-bonn, country: DE, name: "University of Bonn", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-bonn.de"}
+- {id: de-freiburg, country: DE, name: "University of Freiburg", type: public, region: "Baden-Württemberg", homepage: "https://uni-freiburg.de"}
+- {id: de-uhh, country: DE, name: "Universität Hamburg", type: public, region: "Hamburg", homepage: "https://www.uni-hamburg.de"}
+- {id: de-lmu, country: DE, name: "LMU Munich", type: public, region: "Bayern", homepage: "https://www.lmu.de"}
+- {id: de-leipzig, country: DE, name: "Leipzig University", type: public, region: "Sachsen", homepage: "https://www.uni-leipzig.de"}
+- {id: de-heidelberg, country: DE, name: "Heidelberg University", type: public, region: "Baden-Württemberg", homepage: "https://www.uni-heidelberg.de"}
+- {id: de-muenster, country: DE, name: "University of Münster", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-muenster.de"}
+- {id: de-koeln, country: DE, name: "University of Cologne", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-koeln.de"}
+- {id: de-rub, country: DE, name: "Ruhr University Bochum", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.ruhr-uni-bochum.de"}
+- {id: de-ude, country: DE, name: "University of Duisburg-Essen", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-due.de"}
+- {id: de-btu, country: DE, name: "BTU Cottbus-Senftenberg", type: public, region: "Brandenburg", homepage: "https://www.b-tu.de"}
+- {id: de-kiel, country: DE, name: "Kiel University", type: public, region: "Schleswig-Holstein", homepage: "https://www.uni-kiel.de"}
+- {id: de-potsdam, country: DE, name: "University of Potsdam", type: public, region: "Brandenburg", homepage: "https://www.uni-potsdam.de"}
+- {id: de-goettingen, country: DE, name: "University of Göttingen", type: public, region: "Niedersachsen", homepage: "https://www.uni-goettingen.de"}
+- {id: de-bayreuth, country: DE, name: "University of Bayreuth", type: public, region: "Bayern", homepage: "https://www.uni-bayreuth.de"}
+- {id: de-wuerzburg, country: DE, name: "University of Würzburg", type: public, region: "Bayern", homepage: "https://www.uni-wuerzburg.de"}
+- {id: de-augsburg, country: DE, name: "University of Augsburg", type: public, region: "Bayern", homepage: "https://www.uni-augsburg.de"}
+- {id: de-greifswald, country: DE, name: "University of Greifswald", type: public, region: "Mecklenburg-Vorpommern", homepage: "https://www.uni-greifswald.de"}
+- {id: de-tubs, country: DE, name: "TU Braunschweig", type: public, region: "Niedersachsen", homepage: "https://www.tu-braunschweig.de"}
+- {id: de-tuda, country: DE, name: "TU Darmstadt", type: public, region: "Hessen", homepage: "https://www.tu-darmstadt.de"}
+- {id: de-bremen, country: DE, name: "University of Bremen", type: public, region: "Bremen", homepage: "https://www.uni-bremen.de"}
+- {id: de-trier, country: DE, name: "Trier University", type: public, region: "Rheinland-Pfalz", homepage: "https://www.uni-trier.de"}
+- {id: de-osnabrueck, country: DE, name: "Osnabrück University", type: public, region: "Niedersachsen", homepage: "https://www.uni-osnabrueck.de"}
+- {id: de-jena, country: DE, name: "University of Jena", type: public, region: "Thüringen", homepage: "https://www.uni-jena.de"}
+- {id: de-halle, country: DE, name: "Martin Luther University Halle-Wittenberg", type: public, region: "Sachsen-Anhalt", homepage: "https://www.uni-halle.de"}
+- {id: de-frankfurt, country: DE, name: "Goethe University Frankfurt", type: public, region: "Hessen", homepage: "https://www.uni-frankfurt.de"}
+- {id: de-mainz, country: DE, name: "Johannes Gutenberg University Mainz", type: public, region: "Rheinland-Pfalz", homepage: "https://www.uni-mainz.de"}
+- {id: de-tuebingen, country: DE, name: "University of Tübingen", type: public, region: "Baden-Württemberg", homepage: "https://uni-tuebingen.de"}
+- {id: de-fau, country: DE, name: "FAU Erlangen-Nürnberg", type: public, region: "Bayern", homepage: "https://www.fau.de"}
+- {id: de-marburg, country: DE, name: "University of Marburg", type: public, region: "Hessen", homepage: "https://www.uni-marburg.de"}
+- {id: de-giessen, country: DE, name: "Justus Liebig University Giessen", type: public, region: "Hessen", homepage: "https://www.uni-giessen.de"}
+- {id: de-siegen, country: DE, name: "University of Siegen", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-siegen.de"}
+- {id: de-wuppertal, country: DE, name: "University of Wuppertal", type: public, region: "Nordrhein-Westfalen", homepage: "https://www.uni-wuppertal.de"}
+- {id: de-oldenburg, country: DE, name: "University of Oldenburg", type: public, region: "Niedersachsen", homepage: "https://uol.de"}
+- {id: de-leuphana, country: DE, name: "Leuphana University Lüneburg", type: public, region: "Niedersachsen", homepage: "https://www.leuphana.de"}
+- {id: de-hnee, country: DE, name: "Eberswalde University for Sustainable Development", type: public, region: "Brandenburg", homepage: "https://www.hnee.de"}
+
+# ---------------- Research institutes ----------------
+- {id: de-ioer, country: DE, name: "Leibniz Institute of Ecological Urban and Regional Development (IÖR)", type: research, region: "Sachsen", homepage: "https://www.ioer.de"}
+- {id: de-ils, country: DE, name: "ILS – Research Institute for Regional and Urban Development", type: research, region: "Nordrhein-Westfalen", homepage: "https://www.ils-forschung.de"}
+- {id: de-irs, country: DE, name: "Leibniz Institute for Research on Society and Space (IRS)", type: research, region: "Brandenburg", homepage: "https://leibniz-irs.de"}
+- {id: de-arl, country: DE, name: "ARL – Academy for Territorial Development in the Leibniz Association", type: research, region: "Niedersachsen", homepage: "https://www.arl-net.de"}
+- {id: de-ifl, country: DE, name: "Leibniz Institute for Regional Geography (IfL)", type: research, region: "Sachsen", homepage: "https://leibniz-ifl.de"}
+- {id: de-zalf, country: DE, name: "Leibniz Centre for Agricultural Landscape Research (ZALF)", type: research, region: "Brandenburg", homepage: "https://www.zalf.de"}
+- {id: de-ufz, country: DE, name: "Helmholtz Centre for Environmental Research (UFZ)", type: research, region: "Sachsen", homepage: "https://www.ufz.de"}
+- {id: de-pik, country: DE, name: "Potsdam Institute for Climate Impact Research (PIK)", type: research, region: "Brandenburg", homepage: "https://www.pik-potsdam.de"}
+- {id: de-wupperinst, country: DE, name: "Wuppertal Institute for Climate, Environment and Energy", type: research, region: "Nordrhein-Westfalen", homepage: "https://wupperinst.org"}
+- {id: de-difu, country: DE, name: "German Institute of Urban Affairs (Difu)", type: research, region: "Berlin", homepage: "https://difu.de"}
+- {id: de-bbsr, country: DE, name: "Federal Institute for Research on Building, Urban Affairs and Spatial Development (BBSR)", type: research, region: "Nordrhein-Westfalen", homepage: "https://www.bbsr.bund.de"}
+- {id: de-gfz, country: DE, name: "GFZ Helmholtz Centre for Geosciences", type: research, region: "Brandenburg", homepage: "https://www.gfz.de"}
+- {id: de-dlr, country: DE, name: "German Aerospace Center (DLR)", type: research, region: "Nordrhein-Westfalen", homepage: "https://www.dlr.de"}
+- {id: de-ioew, country: DE, name: "Institute for Ecological Economy Research (IÖW)", type: research, region: "Berlin", homepage: "https://www.ioew.de"}
+- {id: de-thuenen, country: DE, name: "Thünen Institute", type: research, region: "Niedersachsen", homepage: "https://www.thuenen.de"}
+- {id: de-hereon, country: DE, name: "Helmholtz-Zentrum Hereon (incl. GERICS climate service)", type: research, region: "Schleswig-Holstein", homepage: "https://hereon.de"}

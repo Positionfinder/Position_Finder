@@ -8,14 +8,21 @@ PHD = re.compile(
     r"predoctoral|pre-doctoral|predoc\b|ph\.?\s?d\.?\s?(student|candidate|position|fellowship|contract|scholarship)|"
     r"(?<![a-z-])doctoral (student|candidate|researcher|position|fellowship|contract)|doctorand[oa]?s?|"
     r"\bfpi\b|\bfpu\b|\bR1\b|first stage researcher|investigador[a]? (en formaci[oó]n|predoctoral)|"
-    r"personal investigador en formaci|contrat[eo]s? predoctorals?|beca predoctoral|tesis doctoral|joan or[oó]|\bINPhINIT\b",
+    r"personal investigador en formaci|contrat[eo]s? predoctorals?|beca predoctoral|tesis doctoral|joan or[oó]|\bINPhINIT\b|"
+    # de
+    r"doktorand|promotionsstelle|promotionsvorhaben|(m[oö]glichkeit|gelegenheit) zur (promotion|weiterqualifikation)|"
+    r"zur promotion|promovieren|dissertation",
     re.I,
 )
 POSTDOC = re.compile(
     r"postdoctoral|post-doctoral|posdoctoral|postdoc|post-doc|\bR2\b|recognised researcher|recognized researcher|"
     r"investigador[a]? (doctor[a]?|posdoctoral|postdoctoral)|personal investigador doctor|"
     r"juan de la cierva|margarita salas|mar[ií]a zambrano|beatriu de pin[oó]s|ram[oó]n y cajal|junior leader|"
-    r"marie (sk[lł]odowska-)?curie postdoctoral|msca postdoctoral|research fellow|doctor/a|doctor or doctora",
+    r"marie (sk[lł]odowska-)?curie postdoctoral|msca postdoctoral|research fellow|doctor/a|doctor or doctora|"
+    # de
+    r"postdoktorand|promoviert|abgeschlossene[nr]? promotion|nach (der|abgeschlossener) promotion|"
+    r"(promotion|ph\.?\s?d\.?) (ist |wird )?(vorausgesetzt|erforderlich)|nachwuchsgruppenleit|habilitation|"
+    r"completed (a |your )?(ph\.?\s?d|doctora)|(ph\.?\s?d|doctoral degree) (is )?(required|completed)|holding a ph\.?\s?d",
     re.I,
 )
 # Programme-level calls that are open to all fields (shown separately as "Fellowship calls").
@@ -38,36 +45,50 @@ FIELDS: dict[str, re.Pattern] = {
         r"\bsmart cit|socio-?spatial|socioespacial|spatial justice|justicia espacial|just[ií]cia espacial|"
         r"regeneraci[oó]n urbana|regeneraci[oó] urbana|espacio p[uú]blico|espai p[uú]blic|public space|"
         r"desarrollo urbano|desenvolupament urb|metropolitan (area|region|planning)|[aá]rea metropolitana|"
-        r"pol[ií]ticas? urbanas?|estudios urbanos|estudis urbans|ciudades sostenibles|sustainable cities",
+        r"pol[ií]ticas? urbanas?|estudios urbanos|estudis urbans|ciudades sostenibles|sustainable cities|"
+        # de
+        r"stadtplanung|raumplanung|st[aä]dtebau|stadtentwicklung|raumentwicklung|regionalplanung|regionalentwicklung|"
+        r"stadtforschung|stadt- und regionalplanung|raumordnung|raumwissenschaft|stadtumbau|quartiersentwicklung|"
+        r"siedlungsentwicklung|fl[aä]chennutzung|urbane (transformation|resilienz|r[aä]ume)|stadtregion|"
+        r"planungswissenschaft|landesplanung|bauleitplanung|transformationsforschung",
         re.I,
     ),
     "Architecture": re.compile(
         r"\barchitect(ure|ural|s)?\b|\barquitect(ura|ure|ònic|onic|[oó]nica|[oó]nico|es|os|as|a|e)?\b|\barquitectes\b|"
         r"edificaci[oó]|building (design|technology|physics|energy|performance|information|stock|renovation)|built environment|"
         r"\bETSA[BMVS]?\b|\bBIM\b|rehabilitaci[oó]n (de edificios|energ)|rehabilitaci[oó] (d'edificis|energ)|"
-        r"construcci[oó]n sostenible|interior design|dise[nñ]o arquitect",
+        r"construcci[oó]n sostenible|interior design|dise[nñ]o arquitect|"
+        r"\barchitektur\b|architektonisch|baukultur|geb[aä]udeplanung|entwerfen|bauphysik",
         re.I,
     ),
-    "Geography": re.compile(r"geograf|geograph|demograf|demograph|population studies", re.I),
+    "Geography": re.compile(r"geograf|geograph|demograf|demograph|population studies|humangeograph|"
+                            r"wirtschaftsgeograph|sozialgeograph", re.I),
     "Landscape": re.compile(r"landscape|paisaj|paisatg|green infrastructure|infraestructura verde|infraestructures? verds?|"
                             r"nature-based solutions|soluciones basadas en la naturaleza|ecosystem services|servicios ecosist[eé]micos|"
-                            r"serveis ecosist[eè]mics|urban green|espacios verdes|espais verds|green spaces", re.I),
-    "Housing": re.compile(r"\bhousing\b|vivienda|habitatge", re.I),
+                            r"serveis ecosist[eè]mics|urban green|espacios verdes|espais verds|green spaces|"
+                            r"landschaft|gr[uü]ne infrastruktur|[oö]kosystemleistung|stadtgr[uü]n|freiraumplanung|"
+                            r"naturbasierte l[oö]sungen|umweltplanung|landnutzung", re.I),
+    "Housing": re.compile(r"\bhousing\b|vivienda|habitatge|wohnungs(markt|politik|bau|forschung)|\bwohnen\b", re.I),
     "GIS & remote sensing": re.compile(
         r"\bGIS\b|\bSIG\b|geographic information|informaci[oó]n geogr|informaci[oó] geogr|remote sensing|teledetec|"
-        r"cartograf|cartograph|geospatial|geoespacial|geom[aà]tic|earth observation|observaci[oó]n de la tierra|PPGIS",
+        r"cartograf|cartograph|geospatial|geoespacial|geom[aà]tic|earth observation|observaci[oó]n de la tierra|PPGIS|"
+        r"fernerkundung|geoinformati|kartograph|erdbeobachtung",
         re.I,
     ),
     "Mobility & transport": re.compile(
         r"urban mobility|movilidad urbana|mobilitat urbana|sustainable mobility|movilidad sostenible|mobilitat sostenible|"
         r"transport planning|planificaci[oó]n del transporte|planificaci[oó] del transport|public transport|transporte p[uú]blico|"
         r"transport p[uú]blic|active mobility|movilidad activa|cycling|ciclismo urbano|walkability|caminabilidad|"
-        r"travel behaviou?r|accessibility (analysis|planning|to)|accesibilidad (urbana|territorial)", re.I),
+        r"travel behaviou?r|accessibility (analysis|planning|to)|accesibilidad (urbana|territorial)|"
+        r"verkehrsplanung|mobilit[aä]tsforschung|verkehrswende|mobilit[aä]tswende|nachhaltige mobilit[aä]t|"
+        r"st[aä]dtische mobilit[aä]t", re.I),
     "Heritage": re.compile(r"architectural heritage|built heritage|patrimonio (arquitect|construido|urbano)|patrimoni (arquitect|construït|urb)", re.I),
     "Climate & risk": re.compile(
         r"climate (change )?adaptation|adaptaci[oó]n al cambio clim|adaptaci[oó] al canvi clim|flood risk|riesgo de inundaci|"
         r"risc d'inundaci|natural hazards|riesgos naturales|urban heat|isla de calor|illa de calor|heat island|"
-        r"climate resilien|urban resilien|resiliencia (urbana|clim)|resili[eè]ncia (urbana|clim)|risk perception|percepci[oó]n del riesgo",
+        r"climate resilien|urban resilien|resiliencia (urbana|clim)|resili[eè]ncia (urbana|clim)|risk perception|percepci[oó]n del riesgo|"
+        r"hochwasser|starkregen|klima(wandel)?anpassung|naturgefahren|risikowahrnehmung|katastrophenschutz|"
+        r"hitzevorsorge|klimaresilienz|disaster risk",
         re.I,
     ),
 }
@@ -89,6 +110,9 @@ MONTHS = {
     # en
     "january": 1, "february": 2, "march": 3, "april": 4, "may": 5, "june": 6, "july": 7, "august": 8,
     "september": 9, "october": 10, "november": 11, "december": 12,
+    # de
+    "januar": 1, "jänner": 1, "februar": 2, "märz": 3, "maerz": 3, "mai": 5, "juni": 6, "juli": 7,
+    "oktober": 10, "dezember": 12,
 }
 _MON = "|".join(sorted(MONTHS, key=len, reverse=True))
 DATE_PATTERNS = [
@@ -101,7 +125,9 @@ DATE_PATTERNS = [
 DEADLINE_CUE = re.compile(
     r"deadline|closing date|apply (by|before)|application period|until|plazo|fecha l[ií]mite|fin de plazo|hasta el|"
     r"termini|data l[ií]mit|fins al|fins el|finaliza|fecha de cierre|cierre|solicitud:|solicitudes|sol·licituds|"
-    r"presentaci[oó]n? de (solicitudes|sol·licituds)|applications?:",
+    r"presentaci[oó]n? de (solicitudes|sol·licituds)|applications?:|"
+    r"bewerbungsfrist|bewerbungsschluss|bewerbungen (bitte )?bis|bis (zum|sp[aä]testens)|einsendeschluss|"
+    r"ende der bewerbungsfrist|frist:|application deadline|closing date",
     re.I,
 )
 
