@@ -9,12 +9,16 @@
   const daysTo = (iso) => Math.round((new Date(iso + "T00:00:00") - today) / 86400000);
   const fmt = (iso) => new Date(iso + "T00:00:00").toLocaleDateString("en-GB", { day: "numeric", month: "short", year: "numeric" });
 
-  function levelLabel(l) { return l === "phd" ? "PhD" : l === "postdoc" ? "Postdoc" : "PhD / Postdoc"; }
+  function levelLabel(l) {
+    return { phd: "PhD", postdoc: "Postdoc", research: "Research associate (level not stated)" }[l] || "PhD / Postdoc";
+  }
 
   function matches(it) {
     if (!state.calls && it.kind === "call") return false;
     if (state.country !== "all" && (it.country || "ES") !== state.country) return false;
-    if (state.level !== "all" && !(it.level || "").includes(state.level)) return false;
+    // German research-associate posts without a stated level are open to doctorate holders: list them under Postdoc too.
+    const lv = it.level === "research" ? "postdoc" : (it.level || "");
+    if (state.level !== "all" && !lv.includes(state.level)) return false;
     if (state.region && it.region !== state.region) return false;
     if (state.itype && it.inst_type !== state.itype) return false;
     if (state.fields.size && !(it.fields || []).some((f) => state.fields.has(f))) return false;

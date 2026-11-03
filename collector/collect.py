@@ -59,7 +59,7 @@ NOT_OFFER = re.compile(
     r"plazas? de profesor|places? de professor|"
     r"\bW ?[23]\b|w[23]-professur|professur f[uü]r|full professor|associate professor|lehrkraft f[uü]r besondere|"
     r"studentische hilfskraft|studentische[rn]? mitarbeiter|wissenschaftliche hilfskraft|praktikum|internship|"
-    r"ausbildung|azubi|werkstudent|"
+    r"ausbildung|azubi|werkstudent|lehrkr[aä]ft|lehrer|"
     r"^(ausschreibungen|stellenangebote|stellenausschreibungen|offene stellen|job offers|vacancies|jobs|karriere)\b",
     re.I,
 )
@@ -75,6 +75,10 @@ SKIP_LINK = re.compile(r"^(home|inicio|inici|login|accede|contact|contacto|conta
                        r"more|ver más|veure més|next|siguiente|previous|anterior|\d+|»|«|›|‹|all calls|open|closed|"
                        r"access to jobs|view more|view all|ver todas?|veure-les totes|tots|todas|abiertas?|cerradas?|obertes|tancades)$",
                        re.I)
+# German research posts that don't say whether they are PhD or postdoc level.
+DE_ASSOCIATE = re.compile(r"wissenschaftliche[rn]?\W{0,3}(mitarbeiter|besch[aä]ftigte)|wiss\.\s*(mitarbeiter|besch[aä]ftigte)|"
+                          r"akademische[rn]?\W{0,3}mitarbeiter|research (associate|scientist)|scientist \(|"
+                          r"wissenschaftler\W{0,3}in", re.I)
 TECH_STAFF = re.compile(r"technische[rn]? (angestellte|mitarbeiter|assistent)|sachbearbeit|verwaltungs|sekretariat|"
                         r"systemadministr|it-administr|laborant|personal t[eé]cnico|t[eé]cnic[oa]s? (de apoyo|superior|especialista|de laboratorio)|t[eè]cnic/?a|"
                         r"\bPTA\b|technician|research support|gestor[a]? de|project manager|administrativ|developer|ingeniero de dise|engineer\b", re.I)
@@ -358,6 +362,8 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         # ("PhD position ... after the doctorate you can ...").
         lvl_title = classify.level(it["title"]) or classify.level(it["context"])
         lvl = lvl_title or det.get("level")
+        if inst.get("country") == "DE" and not lvl and DE_ASSOCIATE.search(it["title"]):
+            lvl = "research"  # shown as "Research associate (level not stated)"
         title_flds = classify.fields(f"{quick} {det.get('title') or ''}")
         flds = sorted(set(title_flds) | set(det.get("fields") or []))
         dl = classify.deadline(quick, date.min) or det.get("deadline")
@@ -397,7 +403,7 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             reason = "past edition of a programme call"
         elif not lvl:
             reason = "not PhD/postdoc"
-        elif inst.get("country") == "DE" and "postdoc" not in lvl:
+        elif inst.get("country") == "DE" and "postdoc" not in lvl and lvl != "research":
             reason = "Germany: postdoc positions only"
         elif TECH_STAFF.search(title) and not classify.level(title):
             reason = "technical / support staff"
