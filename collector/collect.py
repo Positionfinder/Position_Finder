@@ -483,7 +483,10 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         if not dl and det.get("deadline_est"):
             dl, estimated = det["deadline_est"], True
         reason = None
-        if dl and dl < today.isoformat():
+        row_dates = [d for _, d in classify._dates(it["context"])]
+        if pro and not dl and row_dates and max(row_dates) < today:
+            reason = "dates in the listing are all past"
+        elif dl and dl < today.isoformat():
             reason = "deadline passed" + (" (estimated)" if estimated else "")
         elif CLOSED_STATUS.search(row_status):
             reason = "marked closed / resolved / under evaluation"
@@ -505,7 +508,7 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             reason = "technical / support staff"
         elif not prog and not lvl_title and not pro_role and len(title) < 45 and not DE_ASSOCIATE.search(title):
             reason = "vague title (looks like a menu or section link)"
-        elif not dl and not is_open and not pro_role:
+        elif not dl and not is_open and not (pro_role and inst.get("open_list")):
             reason = "no deadline and not marked open (can't confirm it is still open)"
         elif not dl and max([y for y in (max_year(f"{title} {it['context']}"), det.get("max_year")) if y] or [today.year]) < today.year:
             reason = "old (latest year mentioned is in the past)"
