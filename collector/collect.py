@@ -31,18 +31,20 @@ CACHE = ROOT / "data/detail_cache.json"
 SEEN = ROOT / "data/seen.json"
 DEBUG = ROOT / "debug"
 CACHE_DAYS = 14
-MAX_DETAILS_PER_SOURCE = 60
+MAX_DETAILS_PER_SOURCE = 80
 MAX_PDF_BYTES = 8_000_000
 SAVE_DEBUG_HTML = os.environ.get("PF_DEBUG_HTML") == "1"
 
 ITEM_HINT = re.compile(
     r"contrat|contract|oferta|offer|position|plaza|pla[çc]a|convocat|call\b|vacan|investigador|researcher|"
-    r"research|predoc|postdoc|posdoc|doctor|ph\.?d|fellowship|beca|ajut|ayuda|job|empleo|treball",
+    r"research|predoc|postdoc|posdoc|doctor|ph\.?d|fellowship|beca|ajut|ayuda|job|empleo|treball|"
+    r"mitarbeiter|stelle|wissenschaftl|promotion|\bE ?1[3-5]\b|TV-?L|TV[oö]D",
     re.I,
 )
 OFFER = re.compile(
     r"contrat|contract|oferta|offer|position|plaza|pla[çc]a|convocat|\bcall\b|vacan|investigador|researcher|"
-    r"predoc|postdoc|posdoc|ph\.?d|doctoral|doctorand|fellowship|beca|ajut|ayuda|job|selecci|\bR[12]\b|hrs20\d\d",
+    r"predoc|postdoc|posdoc|ph\.?d|doctoral|doctorand|fellowship|beca|ajut|ayuda|job|selecci|\bR[12]\b|hrs20\d\d|"
+    r"mitarbeiter|wissenschaftl|stellenausschreibung|\bE ?1[3-5]\b|TV-?L|TV[oö]D|kennziffer",
     re.I,
 )
 NOT_OFFER = re.compile(
@@ -54,7 +56,10 @@ NOT_OFFER = re.compile(
     r"acta |actas |memoria anual|news|noticia|evento|jornada|seminario|webinar|premio|award|"
     r"tramos de investigaci|sexenios|estabilizaci[oó]n|sorteo|committee selection|selection draws|tribunal|"
     r"cuerpos docentes|profesor(ado)? (titular|catedr|ayudante|asociado|agregat|lector|visitante)|catedr[aá]tic|"
-    r"plazas? de profesor|places? de professor",
+    r"plazas? de profesor|places? de professor|"
+    r"\bW ?[23]\b|w[23]-professur|professur f[uü]r|full professor|associate professor|lehrkraft f[uü]r besondere|"
+    r"studentische hilfskraft|studentische[rn]? mitarbeiter|wissenschaftliche hilfskraft|praktikum|internship|"
+    r"ausbildung|azubi|werkstudent",
     re.I,
 )
 GENERIC_LINK = re.compile(
@@ -69,7 +74,8 @@ SKIP_LINK = re.compile(r"^(home|inicio|inici|login|accede|contact|contacto|conta
                        r"more|ver más|veure més|next|siguiente|previous|anterior|\d+|»|«|›|‹|all calls|open|closed|"
                        r"access to jobs|view more|view all|ver todas?|veure-les totes|tots|todas|abiertas?|cerradas?|obertes|tancades)$",
                        re.I)
-TECH_STAFF = re.compile(r"personal t[eé]cnico|t[eé]cnic[oa]s? (de apoyo|superior|especialista|de laboratorio)|t[eè]cnic/?a|"
+TECH_STAFF = re.compile(r"technische[rn]? (angestellte|mitarbeiter|assistent)|sachbearbeit|verwaltungs|sekretariat|"
+                        r"systemadministr|it-administr|laborant|personal t[eé]cnico|t[eé]cnic[oa]s? (de apoyo|superior|especialista|de laboratorio)|t[eè]cnic/?a|"
                         r"\bPTA\b|technician|research support|gestor[a]? de|project manager|administrativ|developer|ingeniero de dise|engineer\b", re.I)
 # Documents that are only published once applications have closed (lists, results, awards).
 RESULT_DOC = re.compile(
@@ -308,9 +314,17 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         if NOT_OFFER.search(it["title"]) or not OFFER.search(quick):
             it["skip"] = "not an offer"
             continue
+        row_dl = classify.deadline(quick, date.min)
+        if (row_dl and row_dl < today.isoformat()) or CLOSED_STATUS.search(quick) or it.get("result_links"):
+            continue  # already over according to the listing row: no need to open it
         det = cache.get(it["url"])
-        if not (det and det.get("fetched", "") >= cutoff) and len(to_read) < MAX_DETAILS_PER_SOURCE:
+        if not (det and det.get("fetched", "") >= cutoff):
             to_read.append(it)
+    # Big portals list hundreds of jobs: read the most promising ones first (field words, then
+    # postdoc/PhD words in the title); the rest are read on later days (pages are cached).
+    to_read.sort(key=lambda it: (not classify.fields(f"{it['title']} {it['context']}"),
+                                 not classify.level(f"{it['title']} {it['context']}")))
+    to_read = to_read[:MAX_DETAILS_PER_SOURCE]
     fetched = {it["url"]: read_detail(it["url"]) for it in to_read}
 
     # 2) learn site boilerplate: lines repeated on many detail pages of the same host
@@ -350,7 +364,8 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             debug.append({"title": title[:200], "url": it["url"], "skip": "link inside a long list, no own title"})
             continue
         prog = classify.programme_key(f"{title} {it['context'][:200]}")
-        is_call = bool(prog and not classify.relevant(flds))
+        # A national/regional programme named in the title is a call, whatever fields its page mentions.
+        is_call = bool(prog and (classify.programme_key(title) or not classify.relevant(flds)))
         estimated = False
         if not dl and det.get("deadline_est"):
             dl, estimated = det["deadline_est"], True
@@ -359,6 +374,10 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             dl = max(future).isoformat() if future else None
         row_status = f"{it['title']} {it['context']}"
         is_open = bool(OPEN_STATUS.search(row_status)) or det.get("page_status") == "open"
+        if not dl and OPEN_STATUS.search(row_status):
+            # Rows like "Oberta 13-11-2026": in an open row, the future date is the closing date.
+            future = [d for _, d in classify._dates(it["context"]) if d >= today]
+            dl = max(future).isoformat() if future else None
         reason = None
         if dl and dl < today.isoformat():
             reason = "deadline passed" + (" (estimated)" if estimated else "")
@@ -368,8 +387,12 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             reason = "results already published: " + "; ".join(it["result_links"])[:120]
         elif det.get("page_status") == "closed":
             reason = "offer page says closed / resolved"
+        elif is_call and re.search(r"20\d\d$", prog) and int(prog[-4:]) < today.year:
+            reason = "past edition of a programme call"
         elif not lvl:
             reason = "not PhD/postdoc"
+        elif inst.get("country") == "DE" and "postdoc" not in lvl:
+            reason = "Germany: postdoc positions only"
         elif TECH_STAFF.search(title) and not classify.level(title):
             reason = "technical / support staff"
         elif not prog and not lvl_title and len(title) < 45:
@@ -385,10 +408,11 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         rec = {
             "id": item_id(it["url"]), "title": title[:300], "url": it["url"],
             "institution": inst["name"], "inst_id": inst["id"], "region": inst.get("region"),
+            "country": inst.get("country", "ES"),
             "inst_type": inst.get("type"), "level": lvl, "fields": flds, "deadline": dl,
             "deadline_estimated": estimated,
-            "kind": "call" if (prog and not classify.relevant(flds)) else "position",
-            "programme": prog if (prog and not classify.relevant(flds)) else None, "source_page": page,
+            "kind": "call" if is_call else "position",
+            "programme": prog if is_call else None, "source_page": page,
         }
         debug.append({**rec, "reason": reason, "context": it["context"][:400], "detail": det.get("status"),
                       "result_links": it.get("result_links"), "page_status": det.get("page_status")})
@@ -400,6 +424,10 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         (DEBUG / "html").mkdir(parents=True, exist_ok=True)
         (DEBUG / "html" / f"{inst['id']}-{item_id(page)}.html").write_text(r.text, encoding="utf-8")
     return results, status, debug
+
+
+OFFICIAL_HOSTS = re.compile(r"(^|\.)(aei\.gob\.es|ciencia\.gob\.es|agaur\.gencat\.cat|fundacionlacaixa\.org|"
+                           r"ec\.europa\.eu|europa\.eu|universidades\.gob\.es)$")
 
 
 def merge_calls(items: list[dict]) -> list[dict]:
@@ -419,14 +447,23 @@ def merge_calls(items: list[dict]) -> list[dict]:
                 c["listed_by"].append(rec["institution"])
             if rec["deadline"]:
                 c["_deadlines"].append(rec["deadline"])
+            c["_urls"].append(rec["url"])
             continue
-        rec = {**rec, "listed_by": [rec["institution"]], "_deadlines": [rec["deadline"]] if rec["deadline"] else []}
+        rec = {**rec, "listed_by": [rec["institution"]], "_deadlines": [rec["deadline"]] if rec["deadline"] else [],
+               "_urls": [rec["url"]]}
         calls[key] = rec
         out.append(rec)
     for c in calls.values():
         dls = c.pop("_deadlines")
-        if dls:  # earliest listed deadline: showing a date later than the real one could make people miss it
-            c["deadline"] = min(dls)
+        if dls:
+            # Universities sometimes post their own earlier internal deadline; the date most of them
+            # give is the official one. Ties go to the later date.
+            c["deadline"] = max(set(dls), key=lambda d: (dls.count(d), d))
+        if c.get("_urls"):
+            official = [u for u in c["_urls"] if OFFICIAL_HOSTS.search(urlsplit(u).netloc)]
+            if official:
+                c["url"] = official[0]
+        c.pop("_urls", None)
         if len(c["listed_by"]) > 1:
             c["institution"] = f"Listed by {len(c['listed_by'])} institutions"
             c["region"] = None

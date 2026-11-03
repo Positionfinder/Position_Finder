@@ -1,6 +1,7 @@
 (() => {
   const $ = (s) => document.querySelector(s);
-  const state = { level: "all", fields: new Set(), q: "", region: "", itype: "", sort: "new", calls: false };
+  const state = { country: "all", level: "all", fields: new Set(), q: "", region: "", itype: "", sort: "new", calls: false };
+  const COUNTRY = { ES: "Spain", DE: "Germany" };
   let DATA = { items: [], sources: [] };
 
   const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
@@ -12,6 +13,7 @@
 
   function matches(it) {
     if (!state.calls && it.kind === "call") return false;
+    if (state.country !== "all" && (it.country || "ES") !== state.country) return false;
     if (state.level !== "all" && !(it.level || "").includes(state.level)) return false;
     if (state.region && it.region !== state.region) return false;
     if (state.itype && it.inst_type !== state.itype) return false;
@@ -39,7 +41,7 @@
       ...(it.fields || []).map((f) => `<span class="tag">${esc(f)}</span>`),
     ].join("");
     return `<li class="card"><h3><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(it.title)}</a></h3>
-      <p class="meta">${esc(it.institution)}${it.region ? " · " + esc(it.region) : ""}</p>
+      <p class="meta">${esc(it.institution)}${it.region ? " · " + esc(it.region) : ""} · ${COUNTRY[it.country || "ES"]}</p>
       <div class="tags">${tags}${dl}</div></li>`;
   }
 
@@ -54,8 +56,10 @@
   }
 
   function setup() {
-    const regions = [...new Set(DATA.items.map((i) => i.region).filter(Boolean))].sort();
-    $("#region").insertAdjacentHTML("beforeend", regions.map((r) => `<option>${esc(r)}</option>`).join(""));
+    const groups = {};
+    DATA.items.forEach((i) => { if (i.region) (groups[i.country || "ES"] ||= new Set()).add(i.region); });
+    $("#region").insertAdjacentHTML("beforeend", Object.keys(groups).sort().reverse().map((c) =>
+      `<optgroup label="${COUNTRY[c]}">${[...groups[c]].sort().map((r) => `<option>${esc(r)}</option>`).join("")}</optgroup>`).join(""));
     const fields = [...new Set(DATA.items.flatMap((i) => i.fields || []))].sort();
     $("#fields").innerHTML = fields.map((f) => `<button class="chip" data-f="${esc(f)}">${esc(f)}</button>`).join("");
     $("#fields").addEventListener("click", (e) => {
@@ -63,9 +67,13 @@
       const f = b.dataset.f; state.fields.has(f) ? state.fields.delete(f) : state.fields.add(f);
       b.classList.toggle("on"); render();
     });
-    document.querySelectorAll(".seg button").forEach((b) => b.addEventListener("click", () => {
-      document.querySelectorAll(".seg button").forEach((x) => x.classList.remove("on"));
+    document.querySelectorAll("#level button").forEach((b) => b.addEventListener("click", () => {
+      document.querySelectorAll("#level button").forEach((x) => x.classList.remove("on"));
       b.classList.add("on"); state.level = b.dataset.level; render();
+    }));
+    document.querySelectorAll("#country button").forEach((b) => b.addEventListener("click", () => {
+      document.querySelectorAll("#country button").forEach((x) => x.classList.remove("on"));
+      b.classList.add("on"); state.country = b.dataset.country; render();
     }));
     $("#q").addEventListener("input", (e) => { state.q = e.target.value.trim().toLowerCase(); render(); });
     $("#region").addEventListener("change", (e) => { state.region = e.target.value; render(); });
