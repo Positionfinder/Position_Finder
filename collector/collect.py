@@ -76,9 +76,8 @@ SKIP_LINK = re.compile(r"^(home|inicio|inici|login|accede|contact|contacto|conta
                        r"access to jobs|view more|view all|ver todas?|veure-les totes|tots|todas|abiertas?|cerradas?|obertes|tancades)$",
                        re.I)
 # German research posts that don't say whether they are PhD or postdoc level.
-DE_ASSOCIATE = re.compile(r"wissenschaftliche[rn]?\W{0,3}(mitarbeiter|besch[aä]ftigte)|wiss\.\s*(mitarbeiter|besch[aä]ftigte)|"
-                          r"akademische[rn]?\W{0,3}mitarbeiter|research (associate|scientist)|scientist \(|"
-                          r"wissenschaftler\W{0,3}in", re.I)
+DE_ASSOCIATE = re.compile(r"(wissenschaftliche|akademische|wiss\.)\S{0,4}\s*(mitarbeiter|besch[aä]ftigte)|"
+                          r"research (associate|scientist)|scientist \(|wissenschaftler\S{0,4}in\b", re.I)
 TECH_STAFF = re.compile(r"technische[rn]? (angestellte|mitarbeiter|assistent)|sachbearbeit|verwaltungs|sekretariat|"
                         r"systemadministr|it-administr|laborant|personal t[eé]cnico|t[eé]cnic[oa]s? (de apoyo|superior|especialista|de laboratorio)|t[eè]cnic/?a|"
                         r"\bPTA\b|technician|research support|gestor[a]? de|project manager|administrativ|developer|ingeniero de dise|engineer\b", re.I)
@@ -407,7 +406,7 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             reason = "Germany: postdoc positions only"
         elif TECH_STAFF.search(title) and not classify.level(title):
             reason = "technical / support staff"
-        elif not prog and not lvl_title and len(title) < 45:
+        elif not prog and not lvl_title and len(title) < 45 and not DE_ASSOCIATE.search(title):
             reason = "vague title (looks like a menu or section link)"
         elif not dl and not is_open:
             reason = "no deadline and not marked open (can't confirm it is still open)"
