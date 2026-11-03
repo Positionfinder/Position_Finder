@@ -1,47 +1,25 @@
 {
- "generated": "2026-11-03T10:50:05+00:00",
- "count": 12,
+ "generated": "2026-11-03T10:59:01+00:00",
+ "count": 9,
  "items": [
   {
-   "id": "d7f074883ba5",
-   "title": "Ausschreibungen für wissenschaftliches Personal",
-   "url": "https://www.fu-berlin.de/universitaet/beruf-karriere/jobs/wiss/index.html",
-   "institution": "Freie Universität Berlin",
-   "inst_id": "de-fu",
-   "region": "Berlin",
+   "id": "08c2417866b2",
+   "title": "Lehrkräfte (m/w/d) für Biologie, Geographie, Geschichte, Chemie, Mathematik, Physik, Deutsch, Englisch und Spanisch Wage: nach Vereinbarung Limitation: Befristete Anstellung Working time: Vollzeit: Nach Vereinbarung Job start date: 01.10.2027 Application deadline: 01.12.2026",
+   "url": "https://www.jobs.fau.de/jobs/lehrkraefte-m-w-d-fuer-biologie-geographie-geschichte-chemie-mathematik-physik-deutsch-englisch-und-spanisch-91332145/",
+   "institution": "FAU Erlangen-Nürnberg",
+   "inst_id": "de-fau",
+   "region": "Bayern",
    "country": "DE",
    "inst_type": "public",
    "level": "postdoc",
    "fields": [
-    "GIS & remote sensing",
     "Geography"
    ],
-   "deadline": "2029-03-31",
+   "deadline": "2027-10-01",
    "deadline_estimated": false,
    "kind": "position",
    "programme": null,
-   "source_page": "https://www.fu-berlin.de/universitaet/beruf-karriere/jobs/index.html",
-   "first_seen": "2026-11-03"
-  },
-  {
-   "id": "72fa0586e20d",
-   "title": "Ausschreibungen für wissenschaftliches Personal",
-   "url": "https://www.fu-berlin.de/universitaet/beruf-karriere/jobs/wiss/gesamtliste/index.html",
-   "institution": "Freie Universität Berlin",
-   "inst_id": "de-fu",
-   "region": "Berlin",
-   "country": "DE",
-   "inst_type": "public",
-   "level": "postdoc",
-   "fields": [
-    "GIS & remote sensing",
-    "Geography"
-   ],
-   "deadline": "2029-03-31",
-   "deadline_estimated": false,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.fu-berlin.de/universitaet/beruf-karriere/jobs/index.html",
+   "source_page": "https://www.jobs.fau.de/en/jobs",
    "first_seen": "2026-11-03"
   },
   {
@@ -90,66 +68,6 @@
    "first_seen": "2026-11-03"
   },
   {
-   "id": "cb975a17e562",
-   "title": "Wissenschaftliche/r Mitarbeiter (w/m/d) mit Promotionsmöglichkeit (100%, TVL-13) [V000011661]",
-   "url": "https://www.rwth-aachen.de/go/id/kbag/file/V000011661/",
-   "institution": "RWTH Aachen University",
-   "inst_id": "de-rwth",
-   "region": "Nordrhein-Westfalen",
-   "country": "DE",
-   "inst_type": "public",
-   "level": "phd+postdoc",
-   "fields": [
-    "Geography"
-   ],
-   "deadline": "2026-11-16",
-   "deadline_estimated": false,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.rwth-aachen.de/stellenangebote",
-   "first_seen": "2026-11-03"
-  },
-  {
-   "id": "30070ead37d6",
-   "title": "Wissenschaftliche/r Mitarbeiter (w/m/d) mit Promotionsmöglichkeit (100%, TVL-13) [V000011662]",
-   "url": "https://www.rwth-aachen.de/go/id/kbag/file/V000011662/",
-   "institution": "RWTH Aachen University",
-   "inst_id": "de-rwth",
-   "region": "Nordrhein-Westfalen",
-   "country": "DE",
-   "inst_type": "public",
-   "level": "phd+postdoc",
-   "fields": [
-    "Geography"
-   ],
-   "deadline": "2026-11-16",
-   "deadline_estimated": false,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://www.rwth-aachen.de/stellenangebote",
-   "first_seen": "2026-11-03"
-  },
-  {
-   "id": "6c592508a1cf",
-   "title": "Wissenschaftliche*r Mitarbeiter*in in der Arbeitsgruppe Navigationsbiologie",
-   "url": "https://uol.de/job/wissenschaftlicher-mitarbeiterin-in-der-arbeitsgruppe-navigationsbiologie-1343",
-   "institution": "University of Oldenburg",
-   "inst_id": "de-oldenburg",
-   "region": "Niedersachsen",
-   "country": "DE",
-   "inst_type": "public",
-   "level": "postdoc",
-   "fields": [
-    "Landscape"
-   ],
-   "deadline": "2026-11-15",
-   "deadline_estimated": false,
-   "kind": "position",
-   "programme": null,
-   "source_page": "https://uol.de/jobs",
-   "first_seen": "2026-11-03"
-  },
-  {
    "id": "64b07ce91a7a",
    "title": "Convocatòria per la contractació d'un/a Investigador/a Postdoctoral, Departament de Geografia",
    "url": "https://seuelectronica.urv.cat/treballar-a-la-urv/convocatories-pdi/1424/convocatoria-per-la-contractacio-duna-investigadora-postdoctoral-departament-de-geografia",
@@ -191,6 +109,27 @@
    "first_seen": "2026-10-28"
   },
   {
+   "id": "0b924c7136e3",
+   "title": "MSCA 2027 call",
+   "url": "https://marie-sklodowska-curie-actions.ec.europa.eu/actions/doctoral-networks",
+   "institution": "Universidad CEU Cardenal Herrera",
+   "inst_id": "uchceu",
+   "region": "Comunitat Valenciana",
+   "country": "ES",
+   "inst_type": "private",
+   "level": "phd",
+   "fields": [],
+   "deadline": "2026-11-24",
+   "deadline_estimated": false,
+   "kind": "call",
+   "programme": "MSCA 2027",
+   "source_page": "https://www.uchceu.es/investigacion/convocatorias",
+   "listed_by": [
+    "Universidad CEU Cardenal Herrera"
+   ],
+   "first_seen": "2026-10-28"
+  },
+  {
    "id": "4a6c759a2118",
    "title": "Postdoctoral Researcher for RELATE4NATURE Project",
    "url": "https://www.bc3research.org/en/job_offer/postdoctoral-researcher-for-relate4nature-project/",
@@ -199,7 +138,7 @@
    "region": "País Vasco",
    "country": "ES",
    "inst_type": "research",
-   "level": "postdoc",
+   "level": "phd+postdoc",
    "fields": [
     "Climate & risk",
     "GIS & remote sensing",
@@ -265,16 +204,16 @@
   {
    "institution": "ual",
    "url": "https://www.ual.es/investigacion/convocatorias",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 48,
    "kept": 0,
-   "details_fetched": 9
+   "details_fetched": 0
   },
   {
    "institution": "ual",
    "url": "https://www.ual.es/universidad/serviciosgenerales/sgi/convocatorias-1/rr-hh/contratos-predoctorales",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 19,
    "kept": 0,
@@ -283,7 +222,7 @@
   {
    "institution": "ual",
    "url": "https://www.ual.es/universidad/serviciosgenerales/sgi/convocatorias-1/rr-hh/contratos-posdoctorales",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 19,
    "kept": 0,
@@ -292,196 +231,196 @@
   {
    "institution": "uca",
    "url": "https://investigacionytransferencia.uca.es/capital-humano-investigador/contratos-predoctorales-en-industria/",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 27,
    "kept": 0,
-   "details_fetched": 26
+   "details_fetched": 0
   },
   {
    "institution": "ugr",
    "url": "https://investigacion.ugr.es/recursos-humanos/predoctorales",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 10,
    "kept": 0,
-   "details_fetched": 9
+   "details_fetched": 0
   },
   {
    "institution": "uhu",
    "url": "https://www.uhu.es/gestion-investigacion/rrhh/predoctorales",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 21,
    "kept": 4,
-   "details_fetched": 13
+   "details_fetched": 0
   },
   {
    "institution": "uhu",
    "url": "https://www.uhu.es/gestion-investigacion/rrhh/posdoctorales",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
-   "details_fetched": 9
+   "details_fetched": 0
   },
   {
    "institution": "uma",
    "url": "https://www.uma.es/servicio-de-investigacion/cms/menu/contratos-y-becas/convocatorias-contratos/",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 10,
    "kept": 0,
-   "details_fetched": 6
+   "details_fetched": 0
   },
   {
    "institution": "upo",
    "url": "https://www.upo.es/area-investigacion/contratos-predoctorales/",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 44,
    "kept": 0,
-   "details_fetched": 39
+   "details_fetched": 0
   },
   {
    "institution": "us",
    "url": "https://www.investigacion.us.es/",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
-   "details_fetched": 1
+   "details_fetched": 0
   },
   {
    "institution": "unizar",
    "url": "https://gespi.unizar.es/",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
-   "details_fetched": 1
+   "details_fetched": 0
   },
   {
    "institution": "ubu",
    "url": "https://www.ubu.es/trabaja-en-la-ubu",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 13,
    "kept": 1,
-   "details_fetched": 1
+   "details_fetched": 0
   },
   {
    "institution": "usal",
    "url": "https://convocatoriasinvestigacion.usal.es/",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 48,
    "kept": 0,
-   "details_fetched": 25
+   "details_fetched": 0
   },
   {
    "institution": "ub",
    "url": "https://seu.ub.edu/ofertaPublicaCategoriaPublic/categories",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 22,
    "kept": 0,
-   "details_fetched": 22
+   "details_fetched": 0
   },
   {
    "institution": "upc",
    "url": "https://talenthub.upc.edu/en/jobs/r1/r1-jobs/r1-jobs",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 32,
    "kept": 0,
-   "details_fetched": 31
+   "details_fetched": 0
   },
   {
    "institution": "upc",
    "url": "https://talenthub.upc.edu/en/jobs/r2/r2-jobs/r2-jobs",
-   "checked": "2026-11-03T10:45:26+00:00",
+   "checked": "2026-11-03T10:56:02+00:00",
    "ok": true,
    "listed": 32,
    "kept": 1,
-   "details_fetched": 27
+   "details_fetched": 0
   },
   {
    "institution": "upf",
    "url": "https://www.upf.edu/web/personal/ofertes-pdi",
-   "checked": "2026-11-03T10:45:30+00:00",
+   "checked": "2026-11-03T10:56:04+00:00",
    "ok": true,
    "listed": 21,
    "kept": 0,
-   "details_fetched": 3
+   "details_fetched": 0
   },
   {
    "institution": "udg",
    "url": "https://www.udg.edu/ca/coneix/treballa-a-la-udg/personal-docent-i-investigador/ofertes-de-treball-temporal",
-   "checked": "2026-11-03T10:45:32+00:00",
+   "checked": "2026-11-03T10:56:04+00:00",
    "ok": true,
    "listed": 10,
    "kept": 0,
-   "details_fetched": 8
+   "details_fetched": 0
   },
   {
    "institution": "udg",
    "url": "https://www.udg.edu/ca/coneix/treballa-a-la-udg/personal-docent-i-investigador/ofertes-de-treball-temporal-post",
-   "checked": "2026-11-03T10:45:32+00:00",
+   "checked": "2026-11-03T10:56:04+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
-   "details_fetched": 6
+   "details_fetched": 0
   },
   {
    "institution": "udl",
    "url": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-predoctorals/",
-   "checked": "2026-11-03T10:45:32+00:00",
+   "checked": "2026-11-03T10:56:05+00:00",
    "ok": true,
    "listed": 183,
    "kept": 3,
-   "details_fetched": 22
+   "details_fetched": 0
   },
   {
    "institution": "udl",
    "url": "https://www.recercaitransferencia.udl.cat/ca/convocatories/contractes-postdoctorals/",
-   "checked": "2026-11-03T10:45:37+00:00",
+   "checked": "2026-11-03T10:56:05+00:00",
    "ok": true,
    "listed": 103,
    "kept": 7,
-   "details_fetched": 13
+   "details_fetched": 0
   },
   {
    "institution": "urv",
    "url": "https://seuelectronica.urv.cat/treballar-a-la-urv/convocatories-pdi/",
-   "checked": "2026-11-03T10:45:38+00:00",
+   "checked": "2026-11-03T10:56:05+00:00",
    "ok": true,
    "listed": 44,
    "kept": 1,
-   "details_fetched": 22
+   "details_fetched": 0
   },
   {
    "institution": "upv",
    "url": "https://www.upv.es/empleopublico/",
-   "checked": "2026-11-03T10:45:44+00:00",
+   "checked": "2026-11-03T10:56:05+00:00",
    "ok": true,
    "listed": 45,
    "kept": 0,
-   "details_fetched": 43
+   "details_fetched": 0
   },
   {
    "institution": "ua",
    "url": "https://cvnet.cpd.ua.es/AgendaUA/Investigacio",
-   "checked": "2026-11-03T10:45:48+00:00",
+   "checked": "2026-11-03T10:56:05+00:00",
    "ok": true,
    "listed": 30,
    "kept": 0,
-   "details_fetched": 2
+   "details_fetched": 0
   },
   {
    "institution": "uji",
    "url": "https://www.uji.es/serveis/rrhh/base/pi/pii/",
-   "checked": "2026-11-03T10:45:57+00:00",
+   "checked": "2026-11-03T10:56:05+00:00",
    "ok": true,
    "listed": 22,
    "kept": 0,
@@ -490,115 +429,115 @@
   {
    "institution": "umh",
    "url": "https://sgi.umh.es/en/",
-   "checked": "2026-11-03T10:46:00+00:00",
+   "checked": "2026-11-03T10:56:06+00:00",
    "ok": true,
    "listed": 7,
    "kept": 1,
-   "details_fetched": 7
+   "details_fetched": 0
   },
   {
    "institution": "uvigo",
    "url": "https://secretaria.uvigo.gal/uv/web/convocatoria/public/categoria/investigar",
-   "checked": "2026-11-03T10:46:01+00:00",
+   "checked": "2026-11-03T10:56:06+00:00",
    "ok": true,
    "listed": 14,
    "kept": 1,
-   "details_fetched": 4
+   "details_fetched": 0
   },
   {
    "institution": "ucm",
    "url": "https://www.ucm.es/pinves",
-   "checked": "2026-11-03T10:46:05+00:00",
+   "checked": "2026-11-03T10:56:06+00:00",
    "ok": true,
    "listed": 18,
    "kept": 0,
-   "details_fetched": 17
+   "details_fetched": 0
   },
   {
    "institution": "ucm",
    "url": "https://www.ucm.es/empleo-ucm",
-   "checked": "2026-11-03T10:46:07+00:00",
+   "checked": "2026-11-03T10:56:06+00:00",
    "ok": true,
    "listed": 16,
    "kept": 0,
-   "details_fetched": 10
+   "details_fetched": 0
   },
   {
    "institution": "uam",
    "url": "https://www.uam.es/uam/investigacion/ofertas-empleo",
-   "checked": "2026-11-03T10:46:12+00:00",
+   "checked": "2026-11-03T10:56:06+00:00",
    "ok": true,
    "listed": 1276,
    "kept": 3,
-   "details_fetched": 14
+   "details_fetched": 0
   },
   {
    "institution": "uam",
    "url": "https://www.uam.es/uam/investigacion/proyectos-investigacion",
-   "checked": "2026-11-03T10:46:15+00:00",
+   "checked": "2026-11-03T10:56:07+00:00",
    "ok": true,
    "listed": 24,
    "kept": 0,
-   "details_fetched": 23
+   "details_fetched": 0
   },
   {
    "institution": "upm",
    "url": "https://web.upm.es/hrs4r/incorporacion-la-upm",
-   "checked": "2026-11-03T10:46:16+00:00",
+   "checked": "2026-11-03T10:56:07+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
-   "details_fetched": 9
+   "details_fetched": 0
   },
   {
    "institution": "upm",
    "url": "https://web.upm.es/hrs4r/",
-   "checked": "2026-11-03T10:46:22+00:00",
+   "checked": "2026-11-03T10:56:07+00:00",
    "ok": true,
    "listed": 12,
    "kept": 0,
-   "details_fetched": 12
+   "details_fetched": 0
   },
   {
    "institution": "uc3m",
    "url": "https://www.uc3m.es/investigacion-apoyopdi/empleo-investigacion-uc3m/otras-ofertas",
-   "checked": "2026-11-03T10:46:23+00:00",
+   "checked": "2026-11-03T10:56:08+00:00",
    "ok": true,
    "listed": 10,
    "kept": 0,
-   "details_fetched": 1
+   "details_fetched": 0
   },
   {
    "institution": "uc3m",
    "url": "https://www.uc3m.es/empleo/inicio",
-   "checked": "2026-11-03T10:46:23+00:00",
+   "checked": "2026-11-03T10:56:08+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
-   "details_fetched": 1
+   "details_fetched": 0
   },
   {
    "institution": "urjc",
    "url": "https://www.urjc.es/hrs4r",
-   "checked": "2026-11-03T10:46:25+00:00",
+   "checked": "2026-11-03T10:56:08+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
-   "details_fetched": 8
+   "details_fetched": 0
   },
   {
    "institution": "uned",
    "url": "https://www.uned.es/universidad/inicio/investigacion/portal-investigador/becas-ayudas-doctorado.html",
-   "checked": "2026-11-03T10:46:25+00:00",
+   "checked": "2026-11-03T10:56:09+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
-   "details_fetched": 7
+   "details_fetched": 0
   },
   {
    "institution": "um",
    "url": "https://www.um.es/web/investigacion/novedades-investigacion",
-   "checked": "2026-11-03T10:46:30+00:00",
+   "checked": "2026-11-03T10:56:09+00:00",
    "ok": true,
    "listed": 264,
    "kept": 0,
@@ -607,41 +546,41 @@
   {
    "institution": "upna",
    "url": "https://www.unavarra.es/en/sites/investigacion/como-lo-hacemos/ayudas-y-convocatorias/personal-investigador.html",
-   "checked": "2026-11-03T10:46:32+00:00",
+   "checked": "2026-11-03T10:56:09+00:00",
    "ok": true,
    "listed": 10,
    "kept": 1,
-   "details_fetched": 1
+   "details_fetched": 0
   },
   {
    "institution": "ehu",
    "url": "https://www.ehu.eus/es/web/ikerketaren-kudeaketa",
-   "checked": "2026-11-03T10:46:35+00:00",
+   "checked": "2026-11-03T10:56:09+00:00",
    "ok": false,
    "error": "ConnectionError: HTTPSConnectionPool(host='www.ehu.eus', port=443): Max retries exceeded with url: /es/web/ikerketaren-kudeaketa (Caused by NewConnectionError(\"HTTPSConnection(host='www.ehu.eus', port"
   },
   {
    "institution": "uoc",
    "url": "https://selection.uoc.edu/web/offersjob/offers.aspx?y=PP",
-   "checked": "2026-11-03T10:46:37+00:00",
+   "checked": "2026-11-03T10:56:09+00:00",
    "ok": true,
    "listed": 2,
    "kept": 0,
-   "details_fetched": 2
+   "details_fetched": 0
   },
   {
    "institution": "uic",
    "url": "https://www.uic.es/en/university/uic-barcelona/work-us-uic-barcelona/teaching-and-research-staff",
-   "checked": "2026-11-03T10:46:43+00:00",
+   "checked": "2026-11-03T10:56:10+00:00",
    "ok": true,
    "listed": 11,
    "kept": 0,
-   "details_fetched": 11
+   "details_fetched": 0
   },
   {
    "institution": "uvic",
    "url": "https://utalent.uvic.cat/",
-   "checked": "2026-11-03T10:46:45+00:00",
+   "checked": "2026-11-03T10:56:10+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -650,25 +589,25 @@
   {
    "institution": "unav",
    "url": "https://www.unav.edu/investigacion/servicios-para-investigadores/atraccion-de-talento",
-   "checked": "2026-11-03T10:46:47+00:00",
+   "checked": "2026-11-03T10:56:13+00:00",
    "ok": true,
    "listed": 9,
    "kept": 0,
-   "details_fetched": 8
+   "details_fetched": 0
   },
   {
    "institution": "mondragon",
    "url": "https://www.mondragon.edu/es/investigacion/ingenieria-tecnologia/ayudas-becas",
-   "checked": "2026-11-03T10:46:48+00:00",
+   "checked": "2026-11-03T10:56:14+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
-   "details_fetched": 8
+   "details_fetched": 0
   },
   {
    "institution": "comillas",
    "url": "https://www.comillas.edu/trabaja-con-nosotros/convocatorias-para-el-personal-investigador/",
-   "checked": "2026-11-03T10:46:50+00:00",
+   "checked": "2026-11-03T10:56:14+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -677,52 +616,52 @@
   {
    "institution": "uax",
    "url": "https://fundacion.uax.com/investigadores/predoctorales.html",
-   "checked": "2026-11-03T10:46:50+00:00",
+   "checked": "2026-11-03T10:56:14+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
-   "details_fetched": 5
+   "details_fetched": 0
   },
   {
    "institution": "uchceu",
    "url": "https://www.uchceu.es/investigacion/convocatorias",
-   "checked": "2026-11-03T10:46:53+00:00",
+   "checked": "2026-11-03T10:56:14+00:00",
    "ok": true,
    "listed": 127,
-   "kept": 0,
-   "details_fetched": 80
+   "kept": 1,
+   "details_fetched": 33
   },
   {
    "institution": "ucam",
    "url": "https://investigacion.ucam.edu/postdoctorado",
-   "checked": "2026-11-03T10:46:55+00:00",
+   "checked": "2026-11-03T10:56:14+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
-   "details_fetched": 4
+   "details_fetched": 0
   },
   {
    "institution": "isglobal",
    "url": "https://jobs.isglobal.org/",
-   "checked": "2026-11-03T10:46:57+00:00",
+   "checked": "2026-11-03T10:56:15+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
-   "details_fetched": 7
+   "details_fetched": 0
   },
   {
    "institution": "irec",
    "url": "https://rrhh.irec.cat/about/work-with-us/job-oportunities/",
-   "checked": "2026-11-03T10:47:03+00:00",
+   "checked": "2026-11-03T10:56:16+00:00",
    "ok": true,
    "listed": 1219,
    "kept": 0,
-   "details_fetched": 19
+   "details_fetched": 0
   },
   {
    "institution": "cimne",
    "url": "https://cimne.com/jobs-fellowships/research-staff/",
-   "checked": "2026-11-03T10:47:03+00:00",
+   "checked": "2026-11-03T10:56:17+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -731,91 +670,106 @@
   {
    "institution": "bc3",
    "url": "https://www.bc3research.org/en/careers/job-offers/",
-   "checked": "2026-11-03T10:47:04+00:00",
+   "checked": "2026-11-03T10:56:17+00:00",
    "ok": true,
    "listed": 3,
    "kept": 1,
-   "details_fetched": 2
+   "details_fetched": 0
   },
   {
    "institution": "de-tudo",
-   "url": "https://www.tu-dortmund.de/universitaet/karriere/stellenangebote/",
-   "checked": "2026-11-03T10:47:07+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.tu-dortmund.de/universitaet/karriere/stellenangebote/"
+   "url": "https://www.tu-dortmund.de/karriere/offene-stellen/",
+   "checked": "2026-11-03T10:56:17+00:00",
+   "ok": true,
+   "listed": 7,
+   "kept": 0,
+   "details_fetched": 2
   },
   {
    "institution": "de-tub",
-   "url": "https://www.tu.berlin/ueber-die-tu-berlin/karriere/stellenausschreibungen",
-   "checked": "2026-11-03T10:47:07+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.tu.berlin/ueber-die-tu-berlin/karriere/stellenausschreibungen"
+   "url": "https://jobs.tu-berlin.de/en",
+   "checked": "2026-11-03T10:56:18+00:00",
+   "ok": true,
+   "listed": 9,
+   "kept": 0,
+   "details_fetched": 4
+  },
+  {
+   "institution": "de-tub",
+   "url": "https://stellenticket.tu-berlin.de/en/job-offers",
+   "checked": "2026-11-03T10:56:19+00:00",
+   "ok": true,
+   "listed": 42,
+   "kept": 0,
+   "details_fetched": 24
   },
   {
    "institution": "de-tum",
    "url": "https://www.tum.de/ueber-die-tum/karriere-und-jobs/stellenangebote",
-   "checked": "2026-11-03T10:47:07+00:00",
+   "checked": "2026-11-03T10:56:19+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
-   "details_fetched": 5
+   "details_fetched": 0
   },
   {
    "institution": "de-luh",
    "url": "https://www.uni-hannover.de/universitaet/stellenangebote-arbeit-an-der-uni/jobboerse",
-   "checked": "2026-11-03T10:47:10+00:00",
+   "checked": "2026-11-03T10:56:19+00:00",
    "ok": true,
    "listed": 33,
    "kept": 0,
-   "details_fetched": 31
+   "details_fetched": 0
   },
   {
    "institution": "de-tud",
    "url": "https://tu-dresden.de/tu-dresden/arbeiten-an-der-tud/stellenangebote/stellenangebote?kat=2&style=cms",
-   "checked": "2026-11-03T10:47:10+00:00",
+   "checked": "2026-11-03T10:56:19+00:00",
    "ok": true,
    "listed": 20,
    "kept": 0,
-   "details_fetched": 20
+   "details_fetched": 0
   },
   {
    "institution": "de-ustutt",
-   "url": "https://www.uni-stuttgart.de/universitaet/arbeitgeberin/stellenangebote/",
-   "checked": "2026-11-03T10:47:11+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.uni-stuttgart.de/universitaet/arbeitgeberin/stellenangebote/"
+   "url": "https://careers.uni-stuttgart.de/?locale=de_DE",
+   "checked": "2026-11-03T10:56:20+00:00",
+   "ok": true,
+   "listed": 8,
+   "kept": 0,
+   "details_fetched": 7
   },
   {
    "institution": "de-kit",
    "url": "https://www.kit.edu/karriere/stellenangebote.php",
-   "checked": "2026-11-03T10:47:14+00:00",
+   "checked": "2026-11-03T10:56:20+00:00",
    "ok": true,
    "listed": 13,
    "kept": 0,
-   "details_fetched": 2
+   "details_fetched": 0
   },
   {
    "institution": "de-rwth",
    "url": "https://www.rwth-aachen.de/stellenangebote",
-   "checked": "2026-11-03T10:47:15+00:00",
+   "checked": "2026-11-03T10:56:20+00:00",
    "ok": true,
    "listed": 63,
-   "kept": 2,
-   "details_fetched": 34
+   "kept": 0,
+   "details_fetched": 0
   },
   {
    "institution": "de-hcu",
    "url": "https://www.hcu-hamburg.de/universitaet/stellenausschreibungen",
-   "checked": "2026-11-03T10:47:22+00:00",
+   "checked": "2026-11-03T10:56:20+00:00",
    "ok": true,
    "listed": 45,
    "kept": 0,
-   "details_fetched": 43
+   "details_fetched": 0
   },
   {
    "institution": "de-weimar",
    "url": "https://www.uni-weimar.de/de/universitaet/aktuell/stellenausschreibungen/",
-   "checked": "2026-11-03T10:47:23+00:00",
+   "checked": "2026-11-03T10:56:21+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -824,25 +778,25 @@
   {
    "institution": "de-rptu",
    "url": "https://rptu.de/stellenangebote",
-   "checked": "2026-11-03T10:47:23+00:00",
+   "checked": "2026-11-03T10:56:23+00:00",
    "ok": true,
    "listed": 7,
    "kept": 0,
-   "details_fetched": 6
+   "details_fetched": 0
   },
   {
    "institution": "de-kassel",
    "url": "https://www.uni-kassel.de/uni/universitaet/stellenangebote.html",
-   "checked": "2026-11-03T10:47:29+00:00",
+   "checked": "2026-11-03T10:56:23+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
-   "details_fetched": 1
+   "details_fetched": 0
   },
   {
    "institution": "de-hu",
    "url": "https://www.hu-berlin.de/de/stellenangebote",
-   "checked": "2026-11-03T10:47:30+00:00",
+   "checked": "2026-11-03T10:56:23+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -851,68 +805,61 @@
   {
    "institution": "de-fu",
    "url": "https://www.fu-berlin.de/universitaet/beruf-karriere/jobs/index.html",
-   "checked": "2026-11-03T10:47:33+00:00",
+   "checked": "2026-11-03T10:56:23+00:00",
    "ok": true,
    "listed": 72,
-   "kept": 2,
-   "details_fetched": 70
+   "kept": 0,
+   "details_fetched": 0
   },
   {
    "institution": "de-bonn",
    "url": "https://www.uni-bonn.de/de/universitaet/arbeiten-an-der-uni/stellenangebote",
-   "checked": "2026-11-03T10:47:33+00:00",
+   "checked": "2026-11-03T10:56:23+00:00",
    "ok": true,
    "listed": 8,
    "kept": 0,
-   "details_fetched": 6
+   "details_fetched": 0
   },
   {
    "institution": "de-freiburg",
    "url": "https://uni-freiburg.de/universitaet/jobs/",
-   "checked": "2026-11-03T10:47:35+00:00",
+   "checked": "2026-11-03T10:56:24+00:00",
    "ok": true,
    "listed": 18,
    "kept": 0,
-   "details_fetched": 7
+   "details_fetched": 0
   },
   {
    "institution": "de-uhh",
    "url": "https://www.uni-hamburg.de/stellenangebote.html",
-   "checked": "2026-11-03T10:47:35+00:00",
+   "checked": "2026-11-03T10:56:24+00:00",
    "ok": true,
    "listed": 2,
    "kept": 0,
-   "details_fetched": 2
+   "details_fetched": 0
   },
   {
    "institution": "de-lmu",
    "url": "https://www.lmu.de/de/die-lmu/arbeiten-an-der-lmu/stellenportal/",
-   "checked": "2026-11-03T10:47:35+00:00",
+   "checked": "2026-11-03T10:56:26+00:00",
    "ok": true,
    "listed": 3,
    "kept": 0,
-   "details_fetched": 3
-  },
-  {
-   "institution": "de-leipzig",
-   "url": "https://www.uni-leipzig.de/universitaet/arbeiten-an-der-universitaet-leipzig/stellenausschreibungen",
-   "checked": "2026-11-03T10:47:35+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.uni-leipzig.de/universitaet/arbeiten-an-der-universitaet-leipzig/stellenausschreibungen"
+   "details_fetched": 0
   },
   {
    "institution": "de-heidelberg",
    "url": "https://www.uni-heidelberg.de/de/stellenmarkt",
-   "checked": "2026-11-03T10:47:39+00:00",
+   "checked": "2026-11-03T10:56:26+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
-   "details_fetched": 3
+   "details_fetched": 0
   },
   {
    "institution": "de-muenster",
    "url": "https://www.uni-muenster.de/Rektorat/Stellen/",
-   "checked": "2026-11-03T10:47:42+00:00",
+   "checked": "2026-11-03T10:56:26+00:00",
    "ok": true,
    "listed": 0,
    "kept": 0,
@@ -921,25 +868,25 @@
   {
    "institution": "de-koeln",
    "url": "https://jobportal.uni-koeln.de/",
-   "checked": "2026-11-03T10:47:43+00:00",
+   "checked": "2026-11-03T10:56:26+00:00",
    "ok": true,
    "listed": 5,
    "kept": 0,
-   "details_fetched": 4
+   "details_fetched": 0
   },
   {
    "institution": "de-rub",
    "url": "https://uni.ruhr-uni-bochum.de/de/stellenangebote",
-   "checked": "2026-11-03T10:47:44+00:00",
+   "checked": "2026-11-03T10:56:27+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
-   "details_fetched": 5
+   "details_fetched": 0
   },
   {
    "institution": "de-ude",
    "url": "https://www.uni-due.de/karriere/ausschreibungen-nach-kategorien.php?kategorie=Research%20and%20teaching%20operations",
-   "checked": "2026-11-03T10:47:44+00:00",
+   "checked": "2026-11-03T10:56:28+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -948,7 +895,7 @@
   {
    "institution": "de-btu",
    "url": "https://www.b-tu.de/universitaet/karriere-engagement/karriere/stellenausschreibungen",
-   "checked": "2026-11-03T10:47:47+00:00",
+   "checked": "2026-11-03T10:56:30+00:00",
    "ok": true,
    "listed": 5,
    "kept": 0,
@@ -957,130 +904,133 @@
   {
    "institution": "de-potsdam",
    "url": "https://www.uni-potsdam.de/de/arbeiten-an-der-up/bewerbung/stellenausschreibungen",
-   "checked": "2026-11-03T10:47:48+00:00",
+   "checked": "2026-11-03T10:56:30+00:00",
+   "ok": true,
+   "listed": 2,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-goettingen",
+   "url": "https://www.uni-goettingen.de/de/305223.html",
+   "checked": "2026-11-03T10:56:30+00:00",
+   "ok": true,
+   "listed": 6,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-bayreuth",
+   "url": "https://www.uni-bayreuth.de/stellenangebote",
+   "checked": "2026-11-03T10:56:30+00:00",
+   "ok": true,
+   "listed": 3,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-wuerzburg",
+   "url": "https://www.uni-wuerzburg.de/karriere/",
+   "checked": "2026-11-03T10:56:31+00:00",
+   "ok": true,
+   "listed": 2,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-augsburg",
+   "url": "https://www.uni-augsburg.de/en/jobs-und-karriere/stellenangebote/",
+   "checked": "2026-11-03T10:56:32+00:00",
+   "ok": true,
+   "listed": 9,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-tubs",
+   "url": "https://www.tu-braunschweig.de/stellenangebote",
+   "checked": "2026-11-03T10:56:32+00:00",
+   "ok": true,
+   "listed": 6,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-tuda",
+   "url": "https://www.tu-darmstadt.de/universitaet/karriere_an_der_tu/stellenangebote/index.de.jsp",
+   "checked": "2026-11-03T10:56:32+00:00",
+   "ok": true,
+   "listed": 3,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-bremen",
+   "url": "https://www.uni-bremen.de/universitaet/die-uni-als-arbeitgeber/offene-stellen",
+   "checked": "2026-11-03T10:56:34+00:00",
+   "ok": true,
+   "listed": 16,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-trier",
+   "url": "https://www.uni-trier.de/universitaet/verwaltung/abteilung-iii-personal/jobs",
+   "checked": "2026-11-03T10:56:34+00:00",
+   "ok": true,
+   "listed": 21,
+   "kept": 0,
+   "details_fetched": 12
+  },
+  {
+   "institution": "de-osnabrueck",
+   "url": "https://www.uni-osnabrueck.de/universitaet/stellenangebote",
+   "checked": "2026-11-03T10:56:35+00:00",
+   "ok": true,
+   "listed": 6,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-jena",
+   "url": "https://www.uni-jena.de/122166/stellenangebote",
+   "checked": "2026-11-03T10:56:36+00:00",
+   "ok": true,
+   "listed": 37,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-halle",
+   "url": "https://www.uni-halle.de/karriere/",
+   "checked": "2026-11-03T10:56:36+00:00",
    "ok": true,
    "listed": 2,
    "kept": 0,
    "details_fetched": 2
   },
   {
-   "institution": "de-goettingen",
-   "url": "https://www.uni-goettingen.de/de/305223.html",
-   "checked": "2026-11-03T10:47:49+00:00",
-   "ok": true,
-   "listed": 6,
-   "kept": 0,
-   "details_fetched": 1
-  },
-  {
-   "institution": "de-bayreuth",
-   "url": "https://www.uni-bayreuth.de/stellenangebote",
-   "checked": "2026-11-03T10:47:50+00:00",
-   "ok": true,
-   "listed": 3,
-   "kept": 0,
-   "details_fetched": 1
-  },
-  {
-   "institution": "de-wuerzburg",
-   "url": "https://www.uni-wuerzburg.de/stellenangebote/",
-   "checked": "2026-11-03T10:47:52+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.uni-wuerzburg.de/stellenangebote/"
-  },
-  {
-   "institution": "de-augsburg",
-   "url": "https://www.uni-augsburg.de/en/jobs-und-karriere/stellenangebote/",
-   "checked": "2026-11-03T10:47:55+00:00",
-   "ok": true,
-   "listed": 9,
-   "kept": 0,
-   "details_fetched": 8
-  },
-  {
-   "institution": "de-greifswald",
-   "url": "https://www.uni-greifswald.de/universitaet/einrichtungen/personalabteilung/stellenausschreibungen/",
-   "checked": "2026-11-03T10:47:55+00:00",
-   "ok": false,
-   "error": "ConnectionError: ('Connection aborted.', ConnectionResetError(104, 'Connection reset by peer'))"
-  },
-  {
-   "institution": "de-tubs",
-   "url": "https://www.tu-braunschweig.de/stellenangebote",
-   "checked": "2026-11-03T10:47:55+00:00",
-   "ok": true,
-   "listed": 6,
-   "kept": 0,
-   "details_fetched": 6
-  },
-  {
-   "institution": "de-tuda",
-   "url": "https://www.tu-darmstadt.de/universitaet/karriere_an_der_tu/stellenangebote/index.de.jsp",
-   "checked": "2026-11-03T10:47:55+00:00",
-   "ok": true,
-   "listed": 3,
-   "kept": 0,
-   "details_fetched": 1
-  },
-  {
-   "institution": "de-bremen",
-   "url": "https://www.uni-bremen.de/universitaet/die-uni-als-arbeitgeber/offene-stellen",
-   "checked": "2026-11-03T10:47:56+00:00",
-   "ok": true,
-   "listed": 16,
-   "kept": 0,
-   "details_fetched": 16
-  },
-  {
-   "institution": "de-trier",
-   "url": "https://www.uni-trier.de/universitaet/wichtige-anlaufstellen/personalabteilung/stellenausschreibungen",
-   "checked": "2026-11-03T10:47:56+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.uni-trier.de/universitaet/wichtige-anlaufstellen/personalabteilung/stellenausschreibungen"
-  },
-  {
-   "institution": "de-osnabrueck",
-   "url": "https://www.uni-osnabrueck.de/universitaet/stellenangebote",
-   "checked": "2026-11-03T10:47:57+00:00",
-   "ok": true,
-   "listed": 6,
-   "kept": 0,
-   "details_fetched": 1
-  },
-  {
-   "institution": "de-jena",
-   "url": "https://www.uni-jena.de/122166/stellenangebote",
-   "checked": "2026-11-03T10:47:57+00:00",
-   "ok": true,
-   "listed": 37,
-   "kept": 0,
-   "details_fetched": 35
-  },
-  {
-   "institution": "de-halle",
-   "url": "https://www.uni-halle.de/stellenangebote/",
-   "checked": "2026-11-03T10:47:58+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.uni-halle.de/stellenangebote/"
-  },
-  {
    "institution": "de-frankfurt",
-   "url": "https://www.uni-frankfurt.de/de/stellenangebote",
-   "checked": "2026-11-03T10:48:00+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.uni-frankfurt.de/de/stellenangebote"
+   "url": "https://www.uni-frankfurt.de/47549099/Stellenangebote",
+   "checked": "2026-11-03T10:56:36+00:00",
+   "ok": true,
+   "listed": 4,
+   "kept": 0,
+   "details_fetched": 4
   },
   {
    "institution": "de-mainz",
-   "url": "https://www.uni-mainz.de/stellenangebote/",
-   "checked": "2026-11-03T10:48:01+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.uni-mainz.de/stellenangebote/"
+   "url": "https://stellenboerse.uni-mainz.de/",
+   "checked": "2026-11-03T10:56:40+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0
   },
   {
    "institution": "de-tuebingen",
    "url": "https://uni-tuebingen.de/universitaet/stellenangebote/",
-   "checked": "2026-11-03T10:48:02+00:00",
+   "checked": "2026-11-03T10:56:40+00:00",
    "ok": true,
    "listed": 10,
    "kept": 0,
@@ -1088,129 +1038,134 @@
   },
   {
    "institution": "de-fau",
-   "url": "https://www.fau.de/universitaet/stellen-praktika-und-jobs/",
-   "checked": "2026-11-03T10:48:02+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.fau.de/universitaet/stellen-praktika-und-jobs/"
+   "url": "https://www.jobs.fau.de/en/jobs",
+   "checked": "2026-11-03T10:56:41+00:00",
+   "ok": true,
+   "listed": 37,
+   "kept": 1,
+   "details_fetched": 35
   },
   {
    "institution": "de-marburg",
-   "url": "https://www.uni-marburg.de/de/stellenangebote",
-   "checked": "2026-11-03T10:48:03+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.uni-marburg.de/de/stellenangebote"
+   "url": "https://www.uni-marburg.de/de/universitaet/profil/universitaetskultur/karriere/stellenangebote/wissenschaftliche-stellen",
+   "checked": "2026-11-03T10:56:42+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0
   },
   {
    "institution": "de-giessen",
    "url": "https://www.uni-giessen.de/de/ueber-uns/karriere/stellenmarkt",
-   "checked": "2026-11-03T10:48:04+00:00",
+   "checked": "2026-11-03T10:56:44+00:00",
    "ok": true,
    "listed": 26,
    "kept": 0,
-   "details_fetched": 26
+   "details_fetched": 0
   },
   {
    "institution": "de-siegen",
    "url": "https://www.uni-siegen.de/stellenangebote/",
-   "checked": "2026-11-03T10:48:05+00:00",
+   "checked": "2026-11-03T10:56:46+00:00",
+   "ok": true,
+   "listed": 1,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-wuppertal",
+   "url": "https://stellenausschreibungen.uni-wuppertal.de",
+   "checked": "2026-11-03T10:56:47+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-oldenburg",
+   "url": "https://uol.de/jobs",
+   "checked": "2026-11-03T10:56:49+00:00",
+   "ok": true,
+   "listed": 40,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "de-leuphana",
+   "url": "https://www.leuphana.de/universitaet/jobs-und-karriere.html",
+   "checked": "2026-11-03T10:56:49+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
    "details_fetched": 1
   },
   {
-   "institution": "de-wuppertal",
-   "url": "https://www.uni-wuppertal.de/de/universitaet/stellenangebote/",
-   "checked": "2026-11-03T10:48:05+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.uni-wuppertal.de/de/universitaet/stellenangebote/"
-  },
-  {
-   "institution": "de-oldenburg",
-   "url": "https://uol.de/jobs",
-   "checked": "2026-11-03T10:48:08+00:00",
-   "ok": true,
-   "listed": 40,
-   "kept": 1,
-   "details_fetched": 30
-  },
-  {
-   "institution": "de-leuphana",
-   "url": "https://www.leuphana.de/universitaet/stellenangebote.html",
-   "checked": "2026-11-03T10:48:09+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.leuphana.de/universitaet/stellenangebote.html"
-  },
-  {
    "institution": "de-hnee",
    "url": "https://www.hnee.de/hochschule/arbeiten-an-der-hnee/stellenausschreibungen",
-   "checked": "2026-11-03T10:48:09+00:00",
+   "checked": "2026-11-03T10:56:50+00:00",
    "ok": true,
    "listed": 7,
    "kept": 0,
-   "details_fetched": 2
+   "details_fetched": 0
   },
   {
    "institution": "de-ioer",
    "url": "https://www.ioer.de/karriere/stellenangebote",
-   "checked": "2026-11-03T10:48:11+00:00",
+   "checked": "2026-11-03T10:56:50+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
-   "details_fetched": 4
+   "details_fetched": 0
   },
   {
    "institution": "de-ils",
    "url": "https://www.ils-forschung.de/das-ils/arbeiten-im-ils/",
-   "checked": "2026-11-03T10:48:11+00:00",
+   "checked": "2026-11-03T10:56:53+00:00",
    "ok": true,
    "listed": 6,
    "kept": 0,
-   "details_fetched": 1
+   "details_fetched": 0
   },
   {
    "institution": "de-irs",
-   "url": "https://leibniz-irs.de/karriere/stellenangebote",
-   "checked": "2026-11-03T10:48:14+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://leibniz-irs.de/karriere/stellenangebote"
+   "url": "https://join.com/companies/leibniz-irs",
+   "checked": "2026-11-03T10:56:54+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0
   },
   {
    "institution": "de-arl",
-   "url": "https://www.arl-net.de/de/stellenangebote",
-   "checked": "2026-11-03T10:48:14+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.arl-net.de/de/stellenangebote"
+   "url": "https://www.arl-net.de/de/content/job-boerse",
+   "checked": "2026-11-03T10:56:54+00:00",
+   "ok": true,
+   "listed": 5,
+   "kept": 0,
+   "details_fetched": 0
   },
   {
    "institution": "de-ifl",
    "url": "https://leibniz-ifl.de/karriere/arbeiten-am-ifl",
-   "checked": "2026-11-03T10:48:15+00:00",
+   "checked": "2026-11-03T10:56:57+00:00",
    "ok": true,
    "listed": 5,
    "kept": 0,
-   "details_fetched": 1
-  },
-  {
-   "institution": "de-zalf",
-   "url": "https://www.zalf.de/de/karriere/stellenangebote",
-   "checked": "2026-11-03T10:48:16+00:00",
-   "ok": false,
-   "error": "SSLError: HTTPSConnectionPool(host='www.zalf.de', port=443): Max retries exceeded with url: /de/karriere/stellenangebote (Caused by SSLError(SSLCertVerificationError(1, '[SSL: CERTIFICATE_VERIFY_FAILE"
+   "details_fetched": 0
   },
   {
    "institution": "de-ufz",
    "url": "https://www.ufz.de/index.php?en=34276",
-   "checked": "2026-11-03T10:48:17+00:00",
+   "checked": "2026-11-03T10:56:57+00:00",
    "ok": true,
    "listed": 3,
    "kept": 0,
-   "details_fetched": 3
+   "details_fetched": 0
   },
   {
    "institution": "de-pik",
    "url": "https://www.pik-potsdam.de/en/people/career/jobs",
-   "checked": "2026-11-03T10:48:17+00:00",
+   "checked": "2026-11-03T10:56:58+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
@@ -1219,7 +1174,7 @@
   {
    "institution": "de-wupperinst",
    "url": "https://wupperinst.org/das-institut/karriere/",
-   "checked": "2026-11-03T10:48:17+00:00",
+   "checked": "2026-11-03T10:56:58+00:00",
    "ok": true,
    "listed": 1,
    "kept": 0,
@@ -1228,57 +1183,47 @@
   {
    "institution": "de-difu",
    "url": "https://difu.de/institut/arbeiten-am-difu/stellenangebote-am-difu",
-   "checked": "2026-11-03T10:48:19+00:00",
+   "checked": "2026-11-03T10:56:58+00:00",
    "ok": true,
    "listed": 2,
    "kept": 0,
-   "details_fetched": 1
+   "details_fetched": 0
   },
   {
    "institution": "de-bbsr",
-   "url": "https://www.bbsr.bund.de/BBSR/DE/ueber-uns/stellenangebote/stellenangebote.html",
-   "checked": "2026-11-03T10:48:20+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: 404 for url: https://www.bbsr.bund.de/BBSR/DE/ueber-uns/stellenangebote/stellenangebote.html"
+   "url": "https://www.bbsr.bund.de/BBSR/DE/ueber-uns/karriere/stellenangebote/_node.html",
+   "checked": "2026-11-03T10:56:58+00:00",
+   "ok": true,
+   "listed": 1,
+   "kept": 0,
+   "details_fetched": 0
   },
   {
    "institution": "de-gfz",
    "url": "https://www.gfz.de/karriere/stellenangebote",
-   "checked": "2026-11-03T10:48:20+00:00",
+   "checked": "2026-11-03T10:56:58+00:00",
    "ok": true,
    "listed": 4,
    "kept": 0,
-   "details_fetched": 1
-  },
-  {
-   "institution": "de-dlr",
-   "url": "https://www.dlr.de/de/karriere-und-nachwuchs/stellenangebote",
-   "checked": "2026-11-03T10:48:20+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.dlr.de/de/karriere-und-nachwuchs/stellenangebote"
+   "details_fetched": 0
   },
   {
    "institution": "de-ioew",
    "url": "https://www.ioew.de/jobs",
-   "checked": "2026-11-03T10:48:23+00:00",
+   "checked": "2026-11-03T10:56:58+00:00",
    "ok": true,
    "listed": 22,
    "kept": 0,
-   "details_fetched": 18
-  },
-  {
-   "institution": "de-thuenen",
-   "url": "https://www.thuenen.de/de/ueber-uns/stellenangebote",
-   "checked": "2026-11-03T10:48:23+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.thuenen.de/de/ueber-uns/stellenangebote"
+   "details_fetched": 0
   },
   {
    "institution": "de-hereon",
-   "url": "https://www.hereon.de/career/job_offers/index.php.en",
-   "checked": "2026-11-03T10:48:24+00:00",
-   "ok": false,
-   "error": "HTTPError: 404 Client Error: Not Found for url: https://www.hereon.de/career/job_offers/index.php.en"
+   "url": "https://hereon.de/career/vacancies/index.php.en",
+   "checked": "2026-11-03T10:56:58+00:00",
+   "ok": true,
+   "listed": 6,
+   "kept": 0,
+   "details_fetched": 5
   }
  ]
 }
