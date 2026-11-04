@@ -47,5 +47,9 @@ jobs:
           git add data/translations.json 2>/dev/null || true
           if [ "$GITHUB_REF" != "refs/heads/main" ]; then git add -f debug; fi
           git commit -m "Update positions $(date -u +%F) [skip ci]" || exit 0
-          git pull --rebase || true
-          git push
+          for i in 1 2 3 4 5; do
+            git pull --rebase || true
+            git push && exit 0
+            echo "push failed (attempt $i), retrying in 30 s"; sleep 30
+          done
+          exit 1
