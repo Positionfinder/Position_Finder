@@ -83,9 +83,7 @@
     $("#rows").innerHTML = items.length ? items.map(row).join("")
       : `<tr><td colspan="9" class="empty">${state.showApplied ? "You haven't ticked any position as applied yet." : 'No positions match these filters right now. Try "All positions" in the match filter, or check back tomorrow.'}</td></tr>`;
     const total = DATA.items.filter((i) => i.kind !== "call").length;
-    const nA = DATA.items.filter(isApplied).length;
     $("#summary").textContent = state.showApplied ? `${items.length} positions you applied for` : `${items.length} shown · ${total} open positions collected`;
-    const t = $("#showApplied"); t.textContent = state.showApplied ? "← Back to open positions" : `Show applied (${nA})`; t.hidden = !nA && !state.showApplied;
   }
 
   function seg(id, key) {
@@ -131,7 +129,6 @@
       const tr = cb.closest("tr"); tr.classList.add("leaving");
       setTimeout(render, 350);
     });
-    $("#showApplied").addEventListener("click", () => { state.showApplied = !state.showApplied; render(); });
 
     $("#updated").textContent = DATA.generated ? new Date(DATA.generated).toLocaleString("en-GB", { dateStyle: "medium", timeStyle: "short" }) : "–";
     $("#srcs").innerHTML = (DATA.sources || []).map((s) => `<tr><td>${esc(s.institution)}</td>
