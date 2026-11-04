@@ -21,6 +21,10 @@ jobs:
       - run: python collector/collect.py
         env:
           PF_DEBUG_HTML: ${{ github.ref != 'refs/heads/main' && '1' || '0' }}
+      # EURAXESS + Faculty Radar -> data/external_candidates.json (read by the picks task)
+      - name: Read EURAXESS and Faculty Radar
+        continue-on-error: true
+        run: python collector/external.py
       # English titles: offline translation models (Spanish, Catalan, German -> English), cached between runs
       - uses: actions/cache@v4
         with:
@@ -39,6 +43,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add docs/data/jobs.json data/detail_cache.json data/seen.json
+          git add data/external_candidates.json data/external_seen.json 2>/dev/null || true
           git add data/translations.json 2>/dev/null || true
           if [ "$GITHUB_REF" != "refs/heads/main" ]; then git add -f debug; fi
           git commit -m "Update positions $(date -u +%F) [skip ci]" || exit 0
