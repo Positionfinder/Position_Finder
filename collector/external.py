@@ -41,6 +41,13 @@ EUR_KEYWORDS = ["urban planning", "spatial planning", "geography", "landscape", 
                 "Raumplanung", "Geographie"]
 EUR_FIELDS = "&f%5B1%5D=job_research_field%3A210&f%5B2%5D=job_research_field%3A195&f%5B3%5D=job_research_field%3A21"
 MAX_PAGES = 12
+ERRORS: list[str] = []
+
+
+def note_error(msg: str) -> None:
+    print(msg)
+    if len(ERRORS) < 12:
+        ERRORS.append(msg[:300])
 
 # Titles / texts that are not postdoc-or-researcher posts (STEP 1 A).
 EXCLUDE_TITLE = re.compile(
@@ -204,7 +211,7 @@ def eur_collect(cutoff: date) -> dict[str, dict]:
             try:
                 items = eur_list(params, page)
             except Exception as e:  # network error, robots.txt, layout change
-                print(f"  EURAXESS list failed ({params[:50]}): {e}")
+                note_error(f"EURAXESS list failed ({params[:50]}): {type(e).__name__} {e}")
                 break
             if not items:
                 break
@@ -274,7 +281,7 @@ def fr_call_text(href: str) -> str:
     try:
         r = fetch(href)
     except (Blocked, Exception) as e:
-        print(f"  FR call not readable {href}: {e}")
+        note_error(f"FR call not readable {href}: {type(e).__name__} {e}")
         return ""
     if "pdf" in r.headers.get("content-type", "").lower() or href.lower().endswith(".pdf"):
         return pdf_text(r.content)
@@ -286,7 +293,7 @@ def fr_collect(known_u: set, known_p: set) -> list[dict]:
     try:
         rows = fr_rows()
     except Exception as e:
-        print(f"Faculty Radar failed: {e}")
+        note_error(f"Faculty Radar failed: {type(e).__name__} {e}")
         return items
     print(f"Faculty Radar: {len(rows)} rows")
     for r in rows:
@@ -347,7 +354,7 @@ def main() -> None:
         try:
             d = eur_detail(offer)
         except Exception as e:
-            print(f"  EURAXESS offer {oid} failed: {e}")
+            note_error(f"EURAXESS offer {oid} failed: {type(e).__name__} {e}")
             continue
         stats["euraxess_opened"] += 1
         seen[oid] = {"date": TODAY.isoformat()}
@@ -377,7 +384,7 @@ def main() -> None:
     # forget seen ids older than 60 days
     keep_from = (TODAY - timedelta(days=60)).isoformat()
     seen = {k: v for k, v in seen.items() if v.get("date", "9") >= keep_from}
-    OUT.write_text(json.dumps({"generated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "stats": stats,
+    OUT.write_text(json.dumps({"generated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "stats": stats, "errors": ERRORS,
                                "items": final}, ensure_ascii=False, indent=1), encoding="utf-8")
     SEEN.write_text(json.dumps(seen, ensure_ascii=False, indent=0), encoding="utf-8")
     print(stats, "kept", len(final))
