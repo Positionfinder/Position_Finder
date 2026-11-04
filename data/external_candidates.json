@@ -1,23 +1,14 @@
 {
- "generated": "2026-11-04T09:59:54+00:00",
+ "generated": "2026-11-04T10:07:00+00:00",
  "stats": {
   "euraxess_listed": 0,
   "euraxess_opened": 0,
-  "faculty_radar_kept": 0
+  "faculty_radar_kept": 0,
+  "faculty_radar_rows": 187
  },
  "errors": [
   "EURAXESS list failed (f%5B0%5D=job_country%3A788): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
-  "EURAXESS list failed (keywords=urban%20planning&f%5B0%5D=job_country%3A7): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=urban%20planning&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
-  "EURAXESS list failed (keywords=spatial%20planning&f%5B0%5D=job_country%3): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=spatial%20planning&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
-  "EURAXESS list failed (keywords=geography&f%5B0%5D=job_country%3A788): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=geography&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
-  "EURAXESS list failed (keywords=landscape&f%5B0%5D=job_country%3A788): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=landscape&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
-  "EURAXESS list failed (keywords=GIS&f%5B0%5D=job_country%3A788): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=GIS&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
-  "EURAXESS list failed (keywords=flood&f%5B0%5D=job_country%3A788): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=flood&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
-  "EURAXESS list failed (keywords=ecosystem%20services&f%5B0%5D=job_country): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=ecosystem%20services&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
-  "EURAXESS list failed (keywords=climate%20adaptation&f%5B0%5D=job_country): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=climate%20adaptation&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
-  "EURAXESS list failed (keywords=housing&f%5B0%5D=job_country%3A788): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=housing&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
-  "EURAXESS list failed (keywords=participatory&f%5B0%5D=job_country%3A788): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=participatory&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
-  "EURAXESS list failed (keywords=urbanismo&f%5B0%5D=job_country%3A788): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=urbanismo&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC"
+  "EURAXESS list failed (keywords=urban%20planning&f%5B0%5D=job_country%3A7): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=urban%20planning&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC"
  ],
  "items": []
 }
