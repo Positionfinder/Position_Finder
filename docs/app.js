@@ -46,7 +46,7 @@
     return `<td class="num" data-label="Match ${esc(pid)}"><span class="pct ${cls}" style="--w:${v}%">${v}%</span></td>`;
   }
 
-  function row(it) {
+  function row(it, idx) {
     const en = it.title_en || it.title;
     const orig = en !== it.title ? `<div class="orig">Original: ${esc(it.title)}</div>` : "";
     const isNew = it.first_seen && daysTo(it.first_seen) >= -7;
@@ -60,6 +60,7 @@
     const topics = (it.topics || []).map((t) => `<span class="tag">${esc(t)}</span>`).join("") || '<span class="muted">–</span>';
     const on = isApplied(it);
     return `<tr class="${on ? "applied" : ""}">
+      <td data-label="No." class="no">${idx}</td>
       <td data-label="Applied" class="appl"><label class="applbox" title="${on ? "Untick to show it again" : "Tick when you have applied: the position is hidden"}"><input type="checkbox" data-url="${esc(it.url)}"${on ? " checked" : ""}><span>${on ? "Applied " + esc(applied[it.url] || "") : "Applied"}</span></label></td>
       <td data-label="Position" class="pos"><a href="${esc(it.url)}" target="_blank" rel="noopener">${esc(en)}</a>${orig}<div class="tags">${tags}</div></td>
       <td data-label="Institution">${esc(it.institution)}</td>
@@ -80,8 +81,8 @@
     };
     DATA.profiles.forEach((p) => { by["p:" + p.id] = (a, b) => (m(b, p.id) ?? -1) - (m(a, p.id) ?? -1); });
     items.sort(by[state.sort] || by.match);
-    $("#rows").innerHTML = items.length ? items.map(row).join("")
-      : `<tr><td colspan="9" class="empty">${state.showApplied ? "You haven't ticked any position as applied yet." : 'No positions match these filters right now. Try "All positions" in the match filter, or check back tomorrow.'}</td></tr>`;
+    $("#rows").innerHTML = items.length ? items.map((it, i) => row(it, i + 1)).join("")
+      : `<tr><td colspan="10" class="empty">${state.showApplied ? "You haven't ticked any position as applied yet." : 'No positions match these filters right now. Try "All positions" in the match filter, or check back tomorrow.'}</td></tr>`;
     const total = DATA.items.filter((i) => i.kind !== "call").length;
     $("#summary").textContent = state.showApplied ? `${items.length} positions you applied for` : `${items.length} shown · ${total} open positions collected`;
   }

@@ -83,6 +83,7 @@ input[type=search]:focus, select:focus, button:focus-visible { outline: 2px soli
 
 /* applied tick box */
 .jobs td.appl, .jobs th.appl { width: 1%; white-space: nowrap; }
+.jobs td.no, .jobs th.no { width: 1%; white-space: nowrap; color: var(--muted); font-variant-numeric: tabular-nums; text-align: right; }
 .applbox { display: inline-flex; align-items: center; gap: 6px; font-size: 12px; color: var(--muted); cursor: pointer; }
 .applbox input { width: 18px; height: 18px; accent-color: var(--accent); cursor: pointer; margin: 0; }
 .jobs tr.applied .applbox span { color: var(--accent); font-weight: 600; }
