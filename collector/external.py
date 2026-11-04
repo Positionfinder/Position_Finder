@@ -42,6 +42,7 @@ EUR_KEYWORDS = ["urban planning", "spatial planning", "geography", "landscape", 
 EUR_FIELDS = "&f%5B1%5D=job_research_field%3A210&f%5B2%5D=job_research_field%3A195&f%5B3%5D=job_research_field%3A21"
 MAX_PAGES = 12
 ERRORS: list[str] = []
+STATS: dict = {}
 
 
 def note_error(msg: str) -> None:
@@ -206,12 +207,16 @@ def eur_collect(cutoff: date) -> dict[str, dict]:
         queries.append((base, cc))
         queries += [(f"keywords={quote(k)}&{base}", cc) for k in EUR_KEYWORDS]
         queries.append((base + EUR_FIELDS, cc))
+    blocked = 0
     for params, cc in queries:
+        if blocked >= 2:  # EURAXESS refuses this machine (HTTP 403): stop instead of retrying 34 times
+            break
         for page in range(MAX_PAGES):
             try:
                 items = eur_list(params, page)
             except Exception as e:  # network error, robots.txt, layout change
                 note_error(f"EURAXESS list failed ({params[:50]}): {type(e).__name__} {e}")
+                blocked += 1 if "403" in str(e) else 0
                 break
             if not items:
                 break
@@ -296,6 +301,7 @@ def fr_collect(known_u: set, known_p: set) -> list[dict]:
         note_error(f"Faculty Radar failed: {type(e).__name__} {e}")
         return items
     print(f"Faculty Radar: {len(rows)} rows")
+    STATS["faculty_radar_rows"] = len(rows)
     for r in rows:
         if not FR_RANK.search(r["rank"]) or FR_RANK_NO.search(r["rank"]):
             continue
@@ -384,7 +390,7 @@ def main() -> None:
     # forget seen ids older than 60 days
     keep_from = (TODAY - timedelta(days=60)).isoformat()
     seen = {k: v for k, v in seen.items() if v.get("date", "9") >= keep_from}
-    OUT.write_text(json.dumps({"generated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "stats": stats, "errors": ERRORS,
+    OUT.write_text(json.dumps({"generated": datetime.now(timezone.utc).isoformat(timespec="seconds"), "stats": {**stats, **STATS}, "errors": ERRORS,
                                "items": final}, ensure_ascii=False, indent=1), encoding="utf-8")
     SEEN.write_text(json.dumps(seen, ensure_ascii=False, indent=0), encoding="utf-8")
     print(stats, "kept", len(final))
