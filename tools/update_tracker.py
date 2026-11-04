@@ -33,6 +33,18 @@ F = "Arial"
 TODAY = dt.date.today()
 
 
+def item_source(it):
+    """Where a docs/data/linkedin.json item came from (from its note; LinkedIn when nothing else is said)."""
+    note = (it.get("note") or "").lower()
+    if note.startswith("via euraxess"):
+        return "EURAXESS"
+    if "via faculty radar" in note:
+        return "Faculty Radar"
+    if note.startswith("via ") and note.endswith("website") or " website" in note[:60] and note.startswith("via "):
+        return "Institution website"
+    return "LinkedIn post" if it.get("li_kind") == "post" else "LinkedIn job"
+
+
 def as_date(v):
     if isinstance(v, dt.datetime):
         return v.date()
@@ -89,7 +101,7 @@ def linkedin_rows(path):
     for it in d.get("items", []):
         m = it.get("match") or {}
         rows.append({
-            "source": "LinkedIn post" if it.get("li_kind") == "post" else "LinkedIn job",
+            "source": item_source(it),
             "type": sector(it.get("level")),
             "title_en": it.get("title_en") or it["title"],
             "title": it["title"] if it["title"] != it.get("title_en") else "",
