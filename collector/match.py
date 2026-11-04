@@ -31,7 +31,9 @@ TOPICS: dict[str, tuple[str, list[str]]] = {
         r"co-?creation", r"participatory (planning|research|methods?|approach|process)", r"participaci[oó]n ciudadana",
         r"participaci[oó] ciutadana", r"b[uü]rgerbeteiligung", r"[oö]ffentlichkeitsbeteiligung", r"beteiligungs(verfahren|prozess|formate)", r"partizipati", r"stakeholder engagement",
         r"living ?labs?", r"transdisciplinar", r"\bparticipatory\b", r"participativ", r"co-?creaci[oó]",
-        r"tallers? participatius", r"talleres participativos", r"actores locales", r"agents locals", r"local stakeholders"]),
+        r"tallers? participatius", r"talleres participativos", r"actores locales", r"agents locals", r"local stakeholders",
+        r"zivilgesellschaft", r"civil society", r"sociedad civil", r"societat civil", r"multi-?stakeholder",
+        r"stakeholder-?(workshop|dialog|prozess)", r"prozessmoderation", r"akteurs(beteiligung|einbindung)"]),
     "risk_perception": ("Risk perception", [
         r"risk perception", r"perceived risk", r"percepci[oó]n del riesgo", r"percepci[oó] del risc",
         r"risikowahrnehmung", r"risk communication"]),
@@ -74,7 +76,8 @@ TOPICS: dict[str, tuple[str, list[str]]] = {
         r"stadtplanung", r"raumplanung", r"regionalplanung", r"st[aä]dtebau", r"stadtentwicklung", r"raumentwicklung",
         r"urban development", r"desarrollo urbano", r"urban design", r"dise[nñ]o urbano", r"urban systems",
         r"sistemas urbanos", r"sistemes urbans", r"territorial (analysis|planning|development)", r"an[aà]lisis territorial",
-        r"an[aà]lisi territorial", r"raumanalyse"]),
+        r"an[aà]lisi territorial", r"raumanalyse", r"stadtgestalt", r"urban regeneration", r"regeneraci[oó]n urbana",
+        r"regenerative (urban|stadt)", r"stadtumbau", r"quartiersentwicklung", r"new european bauhaus", r"urban renewal"]),
     "informal": ("Informal settlements, displacement & upgrading", [
         r"informal settlement", r"\bslum", r"asentamientos? informal", r"assentaments? informal", r"informelle siedlung",
         r"(neighbou?rhood|slum|settlement) upgrading", r"deprived (neighbou?rhood|area)", r"barrios? vulnerable",
