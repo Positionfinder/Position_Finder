@@ -295,6 +295,49 @@
    "url": "https://www.linkedin.com/jobs/view/4484638805/",
    "li_kind": "job",
    "first_seen": "2026-11-03"
+  },
+  {
+   "title": "Technical Assistance Officer",
+   "title_en": "Technical Assistance Officer (urban policy, technical assistance programme for cities)",
+   "institution": "Metropolis – World Association of the Major Metropolises",
+   "city": "Barcelona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "professional",
+   "note": "Part-time; applications only via jobs.metropolis.org",
+   "topics": [
+    "Urban & spatial planning",
+    "Urban governance & policy"
+   ],
+   "match": {
+    "A": 44,
+    "B": 81
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4486194373/",
+   "li_kind": "job",
+   "first_seen": "2026-11-05"
+  },
+  {
+   "title": "Arquitecto/a Urbanista",
+   "title_en": "Architect-urban planner (territorial-scale urbanism projects)",
+   "institution": "Iddtek (via LinkedIn)",
+   "city": "Madrid / Bilbao",
+   "region": "Madrid / Basque Country",
+   "country": "ES",
+   "level": "professional",
+   "note": "Staffing firm; client not named",
+   "topics": [
+    "Urban & spatial planning"
+   ],
+   "match": {
+    "A": 55,
+    "B": 44
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4486874750/",
+   "li_kind": "job",
+   "first_seen": "2026-11-05"
   }
  ]
 }
