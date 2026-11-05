@@ -1,9 +1,10 @@
 {
- "generated": "2026-11-05T07:51:07+00:00",
+ "generated": "2026-11-05T07:56:41+00:00",
  "stats": {
   "euraxess_listed": 0,
   "euraxess_opened": 0,
   "faculty_radar_kept": 0,
+  "faculty_radar_published": 0,
   "faculty_radar_rows": 253
  },
  "errors": [
