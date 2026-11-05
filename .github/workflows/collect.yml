@@ -1,7 +1,10 @@
 name: collect
 on:
   schedule:
-    - cron: "17 5 * * *"   # every day at 05:17 UTC
+    # 08:00 Spain time all year: GitHub cron is UTC only, so run at both 06:07 and 07:07 UTC;
+    # the "gate" job lets only the run that falls in the 08:xx hour in Madrid continue.
+    - cron: "7 6 * * *"
+    - cron: "7 7 * * *"
   workflow_dispatch:
   push:
     branches: [main, "probe-strict*", "probe-collect*"]
@@ -10,7 +13,18 @@ permissions:
   contents: write
 concurrency: collect-${{ github.ref }}
 jobs:
+  gate:
+    runs-on: ubuntu-latest
+    outputs:
+      run: ${{ steps.g.outputs.run }}
+    steps:
+      - id: g
+        run: |
+          h=$(TZ=Europe/Madrid date +%H)
+          if [ "${{ github.event_name }}" = "schedule" ] && [ "$h" != "08" ]; then echo "run=false" >> "$GITHUB_OUTPUT"; echo "Madrid hour $h: skipped"; else echo "run=true" >> "$GITHUB_OUTPUT"; fi
   collect:
+    needs: gate
+    if: needs.gate.outputs.run == 'true'
     runs-on: ubuntu-latest
     timeout-minutes: 60
     steps:
@@ -42,7 +56,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/data/jobs.json data/detail_cache.json data/seen.json
+          git add docs/data/jobs.json docs/data/linkedin.json data/detail_cache.json data/seen.json
           git add data/external_candidates.json data/external_seen.json 2>/dev/null || true
           git add data/translations.json 2>/dev/null || true
           if [ "$GITHUB_REF" != "refs/heads/main" ]; then git add -f debug; fi

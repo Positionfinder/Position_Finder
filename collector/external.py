@@ -95,9 +95,10 @@ CITY_REGION = {
 FR_URL = "https://facultyradar.eu/"
 FR_RANK = re.compile(r"ayudante doctor|lector|lectora", re.I)
 FR_RANK_NO = re.compile(r"titular|catedr|permanente|contratado doctor|agregat|asociad|sustitut|visitante", re.I)
-FR_CORE = re.compile(r"an[aá]lisis geogr[aá]fico regional|geograf[ií]a (humana|f[ií]sica)|urban[ií]stica y ordenaci[oó]n del territorio", re.I)
+FR_CORE = re.compile(r"an[aá]lisis geogr[aá]fico regional|geograf[ií]a (humana|f[ií]sica)|urban[ií]stica y ordenaci[oó]n del territorio|"
+                     r"^\s*urbanisme|paisatgisme", re.I)
 FR_BORDER = re.compile(r"composici[oó]n arquitect|proyectos arquitect|ecolog[ií]a|sociolog[ií]a|ciencia pol[ií]tica|"
-                       r"cartogr[aá]fica|geod[eé]sica|fotogrametr|arquitectura|urbanismo|paisaj", re.I)
+                       r"cartogr[aà]fica|geod[eè]sica|fotogrametr|arquitectura|arquitect[oò]nic|urbanism|paisaj|paisatg|territori", re.I)
 FR_AREA_EN = [
     (r"an[aá]lisis geogr[aá]fico regional", "Regional Geographic Analysis"), (r"geograf[ií]a humana", "Human Geography"),
     (r"geograf[ií]a f[ií]sica", "Physical Geography"), (r"urban[ií]stica y ordenaci", "Urban Planning and Spatial Planning"),
@@ -314,7 +315,7 @@ def fr_collect(known_u: set, known_p: set) -> list[dict]:
             continue
         text = fr_call_text(r["href"])
         title = f"{r['rank']} – {r['area']} ({r['pid']})"
-        scores, topics = score_text(title, text)
+        scores, topics = score_text(title + " " + r["dept"], text)
         if not core and max(scores.values()) < MIN_MATCH:
             continue
         area_en = next((en for pat, en in FR_AREA_EN if re.search(pat, r["area"], re.I)), r["area"])
@@ -329,9 +330,34 @@ def fr_collect(known_u: set, known_p: set) -> list[dict]:
             "region": region, "country": "ES", "level": "research", "note": note, "topics": topics,
             "match": {"A": scores["A"], "B": scores["B"]},
             "deadline": r["deadline"].isoformat() if r["deadline"] else None,
-            "url": r["href"] or FR_URL, "li_kind": "job", "first_seen": TODAY.isoformat(), "source": "Faculty Radar",
+            "url": (r["href"] or FR_URL) + "#" + r["pid"].split("/")[0], "li_kind": "job", "first_seen": TODAY.isoformat(), "source": "Faculty Radar",
         })
     return items
+
+
+# ---------- publish Faculty Radar posts straight to the website data ----------
+
+def publish_faculty_radar(final: list[dict]) -> int:
+    """Append new Faculty Radar posts (>= MIN_MATCH, or core geography/urbanism areas) to docs/data/linkedin.json."""
+    path = ROOT / "docs/data/linkedin.json"
+    data = load_json(path, {"items": []})
+    items = data.get("items", [])
+    have_urls = {i.get("url") for i in items} | {i.get("url") for i in load_json(ROOT / "docs/data/jobs.json", {}).get("items", [])}
+    titles = " ".join(i.get("title", "").lower() for i in items)
+    n = 0
+    for it in final:
+        if it.get("source") != "Faculty Radar" or it["url"] in have_urls or max(it["match"].values()) < MIN_MATCH:
+            continue
+        pid = re.search(r"\(([^()]+)\)\s*$", it["title"])
+        if pid and pid.group(1).lower() in titles:
+            continue
+        items.append({k: v for k, v in it.items() if k != "source"})
+        n += 1
+    if n:
+        data["items"] = items
+        data["updated"] = TODAY.isoformat()
+        path.write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
+    return n
 
 
 # ---------- main ----------
@@ -387,6 +413,8 @@ def main() -> None:
     # drop what is already known elsewhere or has expired
     final = [i for u, i in items.items() if u not in known_u and (not i.get("deadline") or i["deadline"] >= TODAY.isoformat())]
     final.sort(key=lambda i: -max(i["match"].values()))
+    published = publish_faculty_radar(final)
+    stats["faculty_radar_published"] = published
     # forget seen ids older than 60 days
     keep_from = (TODAY - timedelta(days=60)).isoformat()
     seen = {k: v for k, v in seen.items() if v.get("date", "9") >= keep_from}
