@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-05",
+ "updated": "2026-11-07",
  "items": [
   {
    "title": "Research associate in regenerative urban design / project lead",
@@ -213,25 +213,6 @@
    "first_seen": "2026-11-03"
   },
   {
-   "title": "Urban Flow Modelling Research Engineer",
-   "title_en": "Urban Flow Modelling Research Engineer",
-   "institution": "Barcelona Supercomputing Center",
-   "city": "Barcelona",
-   "region": "Catalonia",
-   "country": "ES",
-   "level": "research",
-   "note": "Research engineer (R1)",
-   "topics": [],
-   "match": {
-    "A": 0,
-    "B": 0
-   },
-   "deadline": "2026-11-06",
-   "url": "https://www.linkedin.com/jobs/view/4485164577/",
-   "li_kind": "job",
-   "first_seen": "2026-11-03"
-  },
-  {
    "title": "Técnico/a Medioambiente",
    "title_en": "Environmental consultant (EIA/SEA, landscape integration, GIS)",
    "institution": "IPLAN Gestión Integral",
@@ -404,6 +385,182 @@
    "url": "https://treballa.upc.edu/ca/convocatories-de-concursos/Concursos-pdi-laboral-temporal/resolucio-2026-7660-141-lectors#LE-418",
    "li_kind": "job",
    "first_seen": "2026-11-05"
+  },
+  {
+   "title": "Research Coordinator and Data Analyst – Political and Judicial Integrity (m/f/d)",
+   "title_en": "Research coordinator & data analyst – political and judicial integrity (BRIDGe-WBT project)",
+   "institution": "Transparency International Secretariat",
+   "city": "Berlin",
+   "region": "Berlin",
+   "country": "DE",
+   "level": "research",
+   "note": "NGO research role (not academic); Western Balkans & Türkiye governance project",
+   "topics": [
+    "Citizen participation & co-design",
+    "Urban green space, health & wellbeing",
+    "Urban governance & policy"
+   ],
+   "match": {
+    "A": 55,
+    "B": 100
+   },
+   "deadline": "2026-11-27",
+   "url": "https://www.linkedin.com/jobs/view/4486246739/",
+   "li_kind": "job",
+   "first_seen": "2026-11-07"
+  },
+  {
+   "title": "Wissenschaftliche:r Mitarbeiter:in im Fachbereich Bauwesen Geoinformation Gesundheitstechnologie (Campus Oldenburg)",
+   "title_en": "Research associate – material-flow and potential analyses (Dept. Civil Engineering, Geoinformation & Health Technology)",
+   "institution": "Jade University of Applied Sciences",
+   "city": "Oldenburg",
+   "region": "Lower Saxony",
+   "country": "DE",
+   "level": "research",
+   "note": "Match inflated by the department name; actual topic is material flows / circular economy; fixed-term to 31.01.2030",
+   "topics": [
+    "Urban green space, health & wellbeing",
+    "GIS, remote sensing & spatial analysis"
+   ],
+   "match": {
+    "A": 81,
+    "B": 25
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4486292337/",
+   "li_kind": "job",
+   "first_seen": "2026-11-07"
+  },
+  {
+   "title": "Research Scientist (f/m/x) - Radar Remote Sensing of Mining-Induced Deformation and Landslide Hazards",
+   "title_en": "Research scientist – radar remote sensing of mining-induced deformation and landslide hazards",
+   "institution": "GFZ Helmholtz Centre for Geosciences",
+   "city": "Potsdam",
+   "region": "Brandenburg",
+   "country": "DE",
+   "level": "research",
+   "note": "via EURAXESS (also on LinkedIn); R2–R3; strongly InSAR/remote-sensing technical",
+   "topics": [
+    "GIS, remote sensing & spatial analysis"
+   ],
+   "match": {
+    "A": 50,
+    "B": 12
+   },
+   "deadline": "2026-12-01",
+   "url": "https://euraxess.ec.europa.eu/jobs/478240",
+   "li_kind": "job",
+   "first_seen": "2026-11-07"
+  },
+  {
+   "title": "Senior Technologist (Tecnólogo Superior) I-PTGAI 55-26",
+   "title_en": "Senior technologist (research staff) – data spaces and open data management (tourism)",
+   "institution": "University of Alicante",
+   "city": "San Vicente del Raspeig (Alicante)",
+   "region": "Valencian Community",
+   "country": "ES",
+   "level": "research",
+   "note": "via EURAXESS; research-support (technologist) post, open-ended; data spaces/open data for tourism – check fit",
+   "topics": [
+    "Citizen participation & co-design",
+    "Urban governance & policy",
+    "Tourism & heritage"
+   ],
+   "match": {
+    "A": 55,
+    "B": 100
+   },
+   "deadline": "2026-11-20",
+   "url": "https://euraxess.ec.europa.eu/jobs/478432",
+   "li_kind": "job",
+   "first_seen": "2026-11-07"
+  },
+  {
+   "title": "Postdoctoral researcher specialized in archaeobotany (carpology)",
+   "title_en": "Postdoctoral researcher – archaeobotany (carpology)",
+   "institution": "Catalan Institute of Classical Archaeology (ICAC)",
+   "city": "Tarragona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "postdoc",
+   "note": "via EURAXESS; weak topical fit (archaeobotany; landscape mentioned)",
+   "topics": [
+    "Landscape & landscape planning",
+    "Surveys & mixed methods"
+   ],
+   "match": {
+    "A": 50,
+    "B": 12
+   },
+   "deadline": "2026-11-19",
+   "url": "https://euraxess.ec.europa.eu/jobs/478498",
+   "li_kind": "job",
+   "first_seen": "2026-11-07"
+  },
+  {
+   "title": "Técnico/a Junior GIS",
+   "title_en": "Junior GIS specialist (earth observation, smart cities, urban planning)",
+   "institution": "COTESA (Centro de Observación y Teledetección Espacial)",
+   "city": "Madrid",
+   "region": "Madrid",
+   "country": "ES",
+   "level": "professional",
+   "note": "Junior level; hybrid",
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Urban & spatial planning"
+   ],
+   "match": {
+    "A": 88,
+    "B": 62
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4488183241/",
+   "li_kind": "job",
+   "first_seen": "2026-11-07"
+  },
+  {
+   "title": "Environmental Consultant – EIA",
+   "title_en": "Environmental consultant – environmental impact assessment (EIA)",
+   "institution": "MAI Group",
+   "city": "Madrid",
+   "region": "Madrid",
+   "country": "ES",
+   "level": "professional",
+   "note": "EIA & permitting for renewables/infrastructure; hybrid",
+   "topics": [
+    "GIS, remote sensing & spatial analysis"
+   ],
+   "match": {
+    "A": 69,
+    "B": 25
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4485048931/",
+   "li_kind": "job",
+   "first_seen": "2026-11-07"
+  },
+  {
+   "title": "Incorporamos perfil técnico de urbanismo",
+   "title_en": "Urban planning specialist (urbanism, territory, real-estate projects)",
+   "institution": "PLOT",
+   "city": "Las Palmas de Gran Canaria",
+   "region": "Canary Islands",
+   "country": "ES",
+   "level": "professional",
+   "note": "On-site; architecture/geography/civil engineering degree",
+   "topics": [
+    "Urban & spatial planning",
+    "Geography"
+   ],
+   "match": {
+    "A": 62,
+    "B": 38
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4487041630/",
+   "li_kind": "job",
+   "first_seen": "2026-11-07"
   }
  ]
 }
