@@ -1,10 +1,10 @@
 name: collect
 on:
   schedule:
-    # 08:00 Spain time all year: GitHub cron is UTC only, so run at both 06:07 and 07:07 UTC;
-    # the "gate" job lets only the run that falls in the 08:xx hour in Madrid continue.
-    - cron: "7 6 * * *"
-    - cron: "7 7 * * *"
+    # Target: 08:00 Spain time. GitHub often starts scheduled runs hours late (or drops them),
+    # so try every hour from 06:07 to 20:07 UTC. The "gate" job lets a run continue only if it
+    # is 08:00 or later in Madrid and no collection has been done yet today (data/last_run.txt).
+    - cron: "7 6-20 * * *"
   workflow_dispatch:
   push:
     branches: [main, "probe-strict*", "probe-collect*"]
@@ -19,9 +19,19 @@ jobs:
       run: ${{ steps.g.outputs.run }}
     steps:
       - id: g
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
-          h=$(TZ=Europe/Madrid date +%H)
-          if [ "${{ github.event_name }}" = "schedule" ] && [ "$h" != "08" ]; then echo "run=false" >> "$GITHUB_OUTPUT"; echo "Madrid hour $h: skipped"; else echo "run=true" >> "$GITHUB_OUTPUT"; fi
+          run=true
+          if [ "${{ github.event_name }}" = "schedule" ]; then
+            h=$(TZ=Europe/Madrid date +%H)
+            today=$(TZ=Europe/Madrid date +%F)
+            last=$(gh api "repos/${{ github.repository }}/contents/data/last_run.txt?ref=main" --jq .content 2>/dev/null | base64 -d 2>/dev/null | tr -d '[:space:]' || true)
+            if [ "$h" -lt 8 ]; then run=false; echo "Madrid hour $h: before 08:00, skipped"
+            elif [ "$last" = "$today" ]; then run=false; echo "Already collected today ($today), skipped"
+            else echo "Madrid hour $h, last collection: ${last:-none}: running"; fi
+          fi
+          echo "run=$run" >> "$GITHUB_OUTPUT"
   collect:
     needs: gate
     if: needs.gate.outputs.run == 'true'
@@ -59,6 +69,7 @@ jobs:
           git add docs/data/jobs.json docs/data/linkedin.json data/detail_cache.json data/seen.json
           git add data/external_candidates.json data/external_seen.json 2>/dev/null || true
           git add data/translations.json 2>/dev/null || true
+          if [ "$GITHUB_REF" = "refs/heads/main" ]; then TZ=Europe/Madrid date +%F > data/last_run.txt; git add data/last_run.txt; fi
           if [ "$GITHUB_REF" != "refs/heads/main" ]; then git add -f debug; fi
           git commit -m "Update positions $(date -u +%F) [skip ci]" || exit 0
           for i in 1 2 3 4 5; do
