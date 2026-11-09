@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-07",
+ "updated": "2026-11-09",
  "items": [
   {
    "title": "Research associate in regenerative urban design / project lead",
@@ -561,6 +561,93 @@
    "url": "https://www.linkedin.com/jobs/view/4487041630/",
    "li_kind": "job",
    "first_seen": "2026-11-07"
+  },
+  {
+   "title": "Arquitecto/a Urbanismo",
+   "title_en": "Architect – urban planning (planning team)",
+   "institution": "batlleiroig",
+   "city": "Esplugues de Llobregat",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "professional",
+   "note": "Architecture/planning studio; planning (planeamiento) team",
+   "topics": [
+    "Landscape & landscape planning",
+    "GIS, remote sensing & spatial analysis",
+    "Urban & spatial planning"
+   ],
+   "match": {
+    "A": 100,
+    "B": 62
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4487138762/",
+   "li_kind": "job",
+   "first_seen": "2026-11-09"
+  },
+  {
+   "title": "Técnico/a de Medioambiente",
+   "title_en": "Environmental specialist (EIA, landscape integration studies, GIS)",
+   "institution": "IPLAN Gestión Integral",
+   "city": "Barcelona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "professional",
+   "note": "Energy/infrastructure engineering firm; EIA and landscape studies with QGIS",
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Urban & spatial planning"
+   ],
+   "match": {
+    "A": 81,
+    "B": 62
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4443109741/",
+   "li_kind": "job",
+   "first_seen": "2026-11-09"
+  },
+  {
+   "title": "Técnico de Consultoría en Paisajismo y Medio Ambiente",
+   "title_en": "Landscape and environmental consultant",
+   "institution": "Projar Group",
+   "city": "Quart de Poblet (Valencia)",
+   "region": "Valencian Community",
+   "country": "ES",
+   "level": "professional",
+   "note": "Landscaping company consultancy team",
+   "topics": [
+    "Landscape & landscape planning"
+   ],
+   "match": {
+    "A": 69,
+    "B": 25
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4488871785/",
+   "li_kind": "job",
+   "first_seen": "2026-11-09"
+  },
+  {
+   "title": "Wissenschaftliche:r Mitarbeiter:in – Wissenstransfer zur Fernerkundung / Geoinformatik",
+   "title_en": "Research associate – knowledge transfer in remote sensing / geoinformatics (FERN.Lab)",
+   "institution": "GFZ Helmholtz Centre for Geosciences",
+   "city": "Potsdam",
+   "region": "Brandenburg",
+   "country": "DE",
+   "level": "research",
+   "note": "Master-level; mostly transfer/communication work",
+   "topics": [
+    "GIS, remote sensing & spatial analysis"
+   ],
+   "match": {
+    "A": 50,
+    "B": 12
+   },
+   "deadline": "2026-11-29",
+   "url": "https://www.linkedin.com/jobs/view/4489109552/",
+   "li_kind": "job",
+   "first_seen": "2026-11-09"
   }
  ]
 }
