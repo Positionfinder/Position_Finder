@@ -1,11 +1,11 @@
 {
- "generated": "2026-11-13T14:28:25+00:00",
+ "generated": "2026-11-14T13:22:25+00:00",
  "stats": {
   "euraxess_listed": 0,
   "euraxess_opened": 0,
   "faculty_radar_kept": 0,
   "faculty_radar_published": 0,
-  "faculty_radar_rows": 347
+  "faculty_radar_rows": 338
  },
  "errors": [
   "EURAXESS list failed (f%5B0%5D=job_country%3A788): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
