@@ -1,29 +1,6 @@
 {
- "updated": "2026-11-09",
+ "updated": "2026-11-17",
  "items": [
-  {
-   "title": "Research associate in regenerative urban design / project lead",
-   "title_en": "Research associate in regenerative urban design / project lead",
-   "institution": "TH OWL – University of Applied Sciences",
-   "city": "Detmold",
-   "region": "North Rhine-Westphalia",
-   "country": "DE",
-   "level": "research",
-   "note": "Research associate (Master/PhD), 50%",
-   "topics": [
-    "Citizen participation & co-design",
-    "Urban & spatial planning",
-    "Flood risk & urban water"
-   ],
-   "match": {
-    "A": 81,
-    "B": 75
-   },
-   "deadline": "2026-11-13",
-   "url": "https://www.linkedin.com/jobs/view/4485353629/",
-   "li_kind": "job",
-   "first_seen": "2026-11-03"
-  },
   {
    "title": "Research Scientist – Hyperspectral Remote Sensing (EnMAP)",
    "title_en": "Research Scientist – Hyperspectral Remote Sensing (EnMAP)",
@@ -67,49 +44,6 @@
    "first_seen": "2026-11-03"
   },
   {
-   "title": "Research associate in the Biodiversa+ project Urbloom: transformation of urban flowering areas for the future",
-   "title_en": "Research associate in the Biodiversa+ project Urbloom: transformation of urban flowering areas for the future",
-   "institution": "Museum für Naturkunde Berlin (Leibniz)",
-   "city": "Berlin",
-   "region": "Berlin",
-   "country": "DE",
-   "level": "research",
-   "note": "Research associate (PhD desirable), 50%",
-   "topics": [
-    "Urban green space, health & wellbeing",
-    "Surveys & mixed methods"
-   ],
-   "match": {
-    "A": 55,
-    "B": 12
-   },
-   "deadline": "2026-11-09",
-   "url": "https://www.linkedin.com/jobs/view/4484480541/",
-   "li_kind": "job",
-   "first_seen": "2026-11-03"
-  },
-  {
-   "title": "Wissenschaftliche Position im Projekt Unequal trajectories: Spatial dynamics in refugees multidimensional integration",
-   "title_en": "Wissenschaftliche Position im Projekt Unequal trajectories: Spatial dynamics in refugees multidimensional integration",
-   "institution": "Leibniz Institute for Educational Trajectories (LIfBi)",
-   "city": "Bamberg",
-   "region": "Bavaria",
-   "country": "DE",
-   "level": "postdoc",
-   "note": "Researcher (postdoc level, PhD required)",
-   "topics": [
-    "Informal settlements, displacement & upgrading"
-   ],
-   "match": {
-    "A": 50,
-    "B": 50
-   },
-   "deadline": "2026-11-15",
-   "url": "https://www.linkedin.com/jobs/view/4485366183/",
-   "li_kind": "job",
-   "first_seen": "2026-11-03"
-  },
-  {
    "title": "Research associate at the Institute of Transport Planning and Logistics",
    "title_en": "Research associate at the Institute of Transport Planning and Logistics",
    "institution": "Hamburg University of Technology (TUHH)",
@@ -127,27 +61,6 @@
    },
    "deadline": null,
    "url": "https://www.linkedin.com/jobs/view/4484097173/",
-   "li_kind": "job",
-   "first_seen": "2026-11-03"
-  },
-  {
-   "title": "Research associate – Faculty of Architecture and Landscape (Building Design: Public Buildings)",
-   "title_en": "Research associate – Faculty of Architecture and Landscape (Building Design: Public Buildings)",
-   "institution": "TU Dresden",
-   "city": "Dresden",
-   "region": "Saxony",
-   "country": "DE",
-   "level": "research",
-   "note": "Research associate (level not stated), 50%",
-   "topics": [
-    "Landscape & landscape planning"
-   ],
-   "match": {
-    "A": 38,
-    "B": 0
-   },
-   "deadline": "2026-11-09",
-   "url": "https://www.linkedin.com/jobs/view/4483401170/",
    "li_kind": "job",
    "first_seen": "2026-11-03"
   },
@@ -648,6 +561,339 @@
    "url": "https://www.linkedin.com/jobs/view/4489109552/",
    "li_kind": "job",
    "first_seen": "2026-11-09"
+  },
+  {
+   "title": "Postdoctoral Researcher (f/m/d) – CoReS project, Institute of Geography",
+   "title_en": "Postdoc – compound climate risk & community resilience (CoReS, participatory narrative methods)",
+   "institution": "Heidelberg University",
+   "city": "Heidelberg",
+   "region": "Baden-Württemberg",
+   "country": "DE",
+   "level": "postdoc",
+   "note": "3-year postdoc, 75–100%; start by 1 Apr 2027",
+   "topics": [
+    "Citizen participation & co-design",
+    "Climate adaptation & resilience",
+    "Geography"
+   ],
+   "match": {
+    "A": 100,
+    "B": 81
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4488268137/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Wissenschaftliche/r Mitarbeiter/in – Siedlungsgestaltung und ländliche Bauwerke",
+   "title_en": "Research associate (postdoc) – settlement design & rural buildings, landscape planning",
+   "institution": "Universität Rostock",
+   "city": "Rostock",
+   "region": "Mecklenburg-Western Pomerania",
+   "country": "DE",
+   "level": "postdoc",
+   "note": "Requires PhD (≤5 yrs) in landscape architecture/planning; teaching",
+   "topics": [
+    "Citizen participation & co-design",
+    "Landscape & landscape planning",
+    "Climate adaptation & resilience"
+   ],
+   "match": {
+    "A": 100,
+    "B": 100
+   },
+   "deadline": "2026-12-01",
+   "url": "https://www.linkedin.com/jobs/view/4491581465/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Wissenschaftliche/r Mitarbeiter/in Projekt KARBON",
+   "title_en": "Research associate – KARBON project (human geography)",
+   "institution": "Leibniz Institute for Regional Geography (IfL)",
+   "city": "Leipzig",
+   "region": "Saxony",
+   "country": "DE",
+   "level": "research",
+   "note": "60% TV-L 13; Master's level, subject to project approval",
+   "topics": [
+    "Citizen participation & co-design",
+    "Geography",
+    "Surveys & mixed methods"
+   ],
+   "match": {
+    "A": 75,
+    "B": 50
+   },
+   "deadline": "2026-12-06",
+   "url": "https://www.linkedin.com/jobs/view/4491584258/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Research Fellow Inclusive Cities and Communities (FLEXIBUILD)",
+   "title_en": "Research fellow – inclusive cities & communities (FLEXIBUILD)",
+   "institution": "RMIT Europe",
+   "city": "Barcelona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "postdoc",
+   "note": "PhD in social science of energy-efficient buildings or equivalent; start Jan 2027",
+   "topics": [
+    "Citizen participation & co-design",
+    "Spatial & environmental justice"
+   ],
+   "match": {
+    "A": 100,
+    "B": 100
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4488543056/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Wissenschaftliche/r Mitarbeiter/in im Bereich Reallaborinfrastrukturen",
+   "title_en": "Research associate – real-world lab (Reallabor) infrastructures, agri-food systems",
+   "institution": "Leibniz Centre for Agricultural Landscape Research (ZALF)",
+   "city": "Müncheberg",
+   "region": "Brandenburg",
+   "country": "DE",
+   "level": "research",
+   "note": "PhD ideal; background in agri/food/nutrition sciences asked",
+   "topics": [
+    "Citizen participation & co-design",
+    "Landscape & landscape planning",
+    "Climate adaptation & resilience"
+   ],
+   "match": {
+    "A": 88,
+    "B": 38
+   },
+   "deadline": "2026-12-09",
+   "url": "https://www.linkedin.com/jobs/view/4490348869/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Wissenschaftliche/r Mitarbeiter/in im Bereich Infrastrukturen für Forschungsdaten",
+   "title_en": "Research associate – research-data infrastructures (agricultural landscapes)",
+   "institution": "Leibniz Centre for Agricultural Landscape Research (ZALF)",
+   "city": "Müncheberg",
+   "region": "Brandenburg",
+   "country": "DE",
+   "level": "research",
+   "note": "Research-data infrastructure role (data management focus)",
+   "topics": [
+    "Landscape & landscape planning",
+    "Climate adaptation & resilience"
+   ],
+   "match": {
+    "A": 62,
+    "B": 0
+   },
+   "deadline": "2026-12-09",
+   "url": "https://www.linkedin.com/jobs/view/4489958639/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Akademische:r Mitarbeiter:in, Postdoc – Reallabor Extremwetter & Klimarisiken (ITAS)",
+   "title_en": "Postdoc – decisions on extreme weather & climate risks in a real-world lab (behavioural research)",
+   "institution": "Karlsruhe Institute of Technology (KIT), ITAS",
+   "city": "Karlsruhe",
+   "region": "Baden-Württemberg",
+   "country": "DE",
+   "level": "postdoc",
+   "note": "",
+   "topics": [
+    "Urban green space, health & wellbeing",
+    "Surveys & mixed methods"
+   ],
+   "match": {
+    "A": 50,
+    "B": 12
+   },
+   "deadline": "2026-12-15",
+   "url": "https://www.linkedin.com/jobs/view/4489794122/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Wissenschaftliche*r Mitarbeiter*in – Projekt LENKER (Radverkehr)",
+   "title_en": "Research associate – cycling motivation project LENKER",
+   "institution": "Ostfalia University of Applied Sciences",
+   "city": "Salzgitter",
+   "region": "Lower Saxony",
+   "country": "DE",
+   "level": "research",
+   "note": "Master's level; 29.85 h/week; cycling management",
+   "topics": [
+    "Citizen participation & co-design",
+    "Surveys & mixed methods"
+   ],
+   "match": {
+    "A": 55,
+    "B": 56
+   },
+   "deadline": "2026-11-30",
+   "url": "https://www.linkedin.com/jobs/view/4487865411/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Postdoctoral Researcher For Climate Services - Climate Projections (R2)",
+   "title_en": "Postdoc – climate services & climate projections",
+   "institution": "Barcelona Supercomputing Center (BSC)",
+   "city": "Barcelona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "postdoc",
+   "note": "Climate-modelling focus",
+   "topics": [
+    "Digital planning tools & AI",
+    "Surveys & mixed methods"
+   ],
+   "match": {
+    "A": 38,
+    "B": 55
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4491194811/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Tècnic/a d’Anàlisi Urbanística i GIS – Landbank",
+   "title_en": "Urban-planning analysis & GIS specialist – land bank",
+   "institution": "OUA Group",
+   "city": "Barcelona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "professional",
+   "note": "",
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Urban & spatial planning",
+    "Housing & housing policy"
+   ],
+   "match": {
+    "A": 81,
+    "B": 88
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4489455424/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "GIS Specialist - European Agency",
+   "title_en": "GIS specialist (environment/biodiversity data) for an EU agency",
+   "institution": "Altia",
+   "city": "Madrid",
+   "region": "Community of Madrid",
+   "country": "ES",
+   "level": "professional",
+   "note": "Remote; consultancy placement",
+   "topics": [
+    "GIS, remote sensing & spatial analysis"
+   ],
+   "match": {
+    "A": 69,
+    "B": 12
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4489242793/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Environmental Risk Consultant",
+   "title_en": "Environmental risk consultant",
+   "institution": "Worley",
+   "city": "Madrid",
+   "region": "Community of Madrid",
+   "country": "ES",
+   "level": "professional",
+   "note": "Risk assessment / fate-and-transport modelling",
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Geography"
+   ],
+   "match": {
+    "A": 94,
+    "B": 44
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4437822659/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Técnico medioambiental (Senior)",
+   "title_en": "Senior environmental consultant",
+   "institution": "ALTÁCIA",
+   "city": "Madrid",
+   "region": "Community of Madrid",
+   "country": "ES",
+   "level": "professional",
+   "note": "Waste & environmental consultancy area",
+   "topics": [
+    "GIS, remote sensing & spatial analysis"
+   ],
+   "match": {
+    "A": 69,
+    "B": 31
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4488571207/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Técnico/a GIS - Galerías de Servicio",
+   "title_en": "GIS technician – utility tunnels",
+   "institution": "Attitude & Hiring",
+   "city": "Madrid",
+   "region": "Community of Madrid",
+   "country": "ES",
+   "level": "professional",
+   "note": "Technical GIS role",
+   "topics": [
+    "GIS, remote sensing & spatial analysis"
+   ],
+   "match": {
+    "A": 56,
+    "B": 12
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4490903029/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Team leader (Senior Key Expert) - Freelance",
+   "title_en": "Team leader (senior key expert) – EU dialogue with civil society & local authorities",
+   "institution": "ICF",
+   "city": "Madrid",
+   "region": "Community of Madrid",
+   "country": "ES",
+   "level": "professional",
+   "note": "Freelance; EU international-cooperation contract",
+   "topics": [
+    "Citizen participation & co-design",
+    "Digital planning tools & AI",
+    "Surveys & mixed methods"
+   ],
+   "match": {
+    "A": 50,
+    "B": 75
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4481397044/",
+   "li_kind": "job",
+   "first_seen": "2026-11-17"
   }
  ]
 }
