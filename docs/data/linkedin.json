@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-17",
+ "updated": "2026-11-18",
  "items": [
   {
    "title": "Research Scientist – Hyperspectral Remote Sensing (EnMAP)",
@@ -894,6 +894,51 @@
    "url": "https://www.linkedin.com/jobs/view/4481397044/",
    "li_kind": "job",
    "first_seen": "2026-11-17"
+  },
+  {
+   "title": "Professorat Lector – Arquitectura Legal i Gestió (LE-432/753)",
+   "title_en": "Assistant professor – Arquitectura Legal i Gestió",
+   "institution": "Universitat Politècnica de Catalunya",
+   "city": "Barcelona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "research",
+   "note": "Assistant professor via Faculty Radar",
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Urban & spatial planning",
+    "Housing & housing policy"
+   ],
+   "match": {
+    "A": 62,
+    "B": 88
+   },
+   "deadline": "2026-11-25",
+   "url": "https://facultyradar.eu/position/universitat-politecnica-de-catalunya-professorat-lector-arquitectura-legal-i-gestio-71027995-le-432-753/#LE-432",
+   "li_kind": "job",
+   "first_seen": "2026-11-18"
+  },
+  {
+   "title": "Professorat Lector – Expressió Gràfica Arquitectònica (LE-431/752)",
+   "title_en": "Assistant professor – Expressió Gràfica Arquitectònica",
+   "institution": "Universitat Politècnica de Catalunya",
+   "city": "Barcelona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "research",
+   "note": "Assistant professor via Faculty Radar",
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Digital planning tools & AI"
+   ],
+   "match": {
+    "A": 62,
+    "B": 55
+   },
+   "deadline": "2026-11-25",
+   "url": "https://facultyradar.eu/position/universitat-politecnica-de-catalunya-professorat-lector-expressio-grafica-arquitectonica-71028012-le-431-752/#LE-431",
+   "li_kind": "job",
+   "first_seen": "2026-11-18"
   }
  ]
 }
