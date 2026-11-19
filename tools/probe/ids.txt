@@ -1,0 +1,1 @@
+pl-baza cz-cuni cz-cuni-natur cz-muni cz-cvut cz-cvut-fa cz-vut cz-czu cz-upol cz-vsb cz-mendelu cz-tul cz-soc ro-unibuc ro-unibuc-geo ro-uauim ro-ubb ro-uaic ro-uvt ro-upb ro-usamv ro-uoradea ro-usv ro-tuiasi ro-urbanincerc tr-metu-crp tr-itu tr-msgsu tr-gazi tr-deu tr-iyte tr-istanbul tr-bogazici tr-ktu tr-bilkent
