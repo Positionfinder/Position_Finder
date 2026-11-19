@@ -11,7 +11,7 @@ for url in [u.strip() for u in Path("tools/probe/urls.txt").read_text().splitlin
     try:
         r = fetch(url)
         info = {"url": url, "final": r.url, "status": r.status_code, "type": r.headers.get("content-type", ""), "bytes": len(r.content), "file": h}
-        if "html" in info["type"] or "xml" in info["type"] or "json" in info["type"]:
+        if True:
             (out / f"{h}.html").write_text(r.text, encoding="utf-8")
             if "html" in info["type"]:
                 soup = BeautifulSoup(r.text, "lxml")
