@@ -724,3 +724,172 @@
   homepage: https://www.enviroo.com
   job_pages: []
   why_manual: no public job page found
+
+# ---- Poland, Czech Republic, Romania, Turkey (added Nov 2026): postdoc / researcher / assistant-professor-level posts ----
+- id: cz-osu
+  name: University of Ostrava
+  country: CZ
+  kind: academic
+  city: Ostrava
+  region: Moravian-Silesian Region
+  homepage: https://www.osu.cz
+  job_pages: []
+  why_manual: no vacancy list found by the discovery run (Nov 2026)
+- id: cz-ujep
+  name: Jan Evangelista Purkyně University in Ústí nad Labem
+  country: CZ
+  kind: academic
+  city: Ústí nad Labem
+  region: Ústí nad Labem Region
+  homepage: https://www.ujep.cz
+  job_pages: []
+  why_manual: only postdoc-support pages found, no vacancy list (Nov 2026)
+- id: cz-jcu
+  name: University of South Bohemia
+  country: CZ
+  kind: academic
+  city: České Budějovice
+  region: South Bohemia
+  homepage: https://www.jcu.cz
+  job_pages: []
+  why_manual: no vacancy list found by the discovery run (Nov 2026)
+- id: cz-ugn
+  name: Institute of Geonics of the Czech Academy of Sciences
+  country: CZ
+  kind: academic
+  city: Ostrava
+  region: Moravian-Silesian Region
+  homepage: https://www.ugn.cas.cz
+  job_pages: []
+  why_manual: no vacancy page linked from the homepage (Nov 2026)
+- id: cz-czechglobe
+  name: Global Change Research Institute CAS (CzechGlobe)
+  country: CZ
+  kind: academic
+  city: Brno
+  region: South Moravia
+  homepage: https://www.czechglobe.cz
+  job_pages: []
+  why_manual: no vacancy list found (careers page 404, Nov 2026)
+- id: cz-vukoz
+  name: Silva Tarouca Research Institute for Landscape and Ornamental Gardening
+  country: CZ
+  kind: academic
+  city: Průhonice
+  region: Central Bohemia
+  homepage: https://www.vukoz.cz
+  job_pages: []
+  why_manual: no vacancy page linked from the homepage (Nov 2026)
+- id: ro-utcn
+  name: Technical University of Cluj-Napoca
+  country: RO
+  kind: academic
+  city: Cluj-Napoca
+  region: Cluj
+  homepage: https://www.utcluj.ro
+  job_pages: []
+  why_manual: no vacancy list found by the discovery run (Nov 2026)
+- id: ro-upt
+  name: Politehnica University of Timișoara
+  country: RO
+  kind: academic
+  city: Timișoara
+  region: Timiș
+  homepage: https://www.upt.ro
+  job_pages: []
+  why_manual: no vacancy list found by the discovery run (Nov 2026)
+- id: ro-igar
+  name: Institute of Geography of the Romanian Academy
+  country: RO
+  kind: academic
+  city: Bucharest
+  region: Bucharest
+  homepage: https://www.geoinst.ro
+  job_pages: []
+  why_manual: no vacancy page found (Nov 2026)
+- id: tr-metu
+  name: Middle East Technical University (METU)
+  country: TR
+  kind: academic
+  city: Ankara
+  region: Ankara
+  homepage: https://www.metu.edu.tr
+  job_pages: []
+  why_manual: faculty posts are announced via the Official Gazette and apas.metu.edu.tr
+    (Nov 2026)
+- id: tr-ytu
+  name: Yıldız Technical University
+  country: TR
+  kind: academic
+  city: Istanbul
+  region: Istanbul
+  homepage: https://www.yildiz.edu.tr
+  job_pages: []
+  why_manual: announcements page lists general news only (Nov 2026)
+- id: tr-ankara
+  name: Ankara University
+  country: TR
+  kind: academic
+  city: Ankara
+  region: Ankara
+  homepage: https://www.ankara.edu.tr
+  job_pages: []
+  why_manual: homepage links not readable by the collector (Nov 2026)
+- id: tr-hacettepe
+  name: Hacettepe University
+  country: TR
+  kind: academic
+  city: Ankara
+  region: Ankara
+  homepage: https://www.hacettepe.edu.tr
+  job_pages: []
+  why_manual: no vacancy list found by the discovery run (Nov 2026)
+- id: tr-sabanci
+  name: Sabancı University
+  country: TR
+  kind: academic
+  city: Istanbul
+  region: Istanbul
+  homepage: https://www.sabanciuniv.edu
+  job_pages: []
+  why_manual: no vacancy list found by the discovery run (Nov 2026)
+- id: tr-koc
+  name: Koç University
+  country: TR
+  kind: academic
+  city: Istanbul
+  region: Istanbul
+  homepage: https://www.ku.edu.tr
+  job_pages: []
+  why_manual: robots.txt disallows automated access (Nov 2026)
+- id: tr-ozyegin
+  name: Özyeğin University
+  country: TR
+  kind: academic
+  city: Istanbul
+  region: Istanbul
+  homepage: https://www.ozyegin.edu.tr
+  job_pages: []
+  why_manual: no vacancy list found by the discovery run (Nov 2026)
+- id: cz-cuni
+  name: Charles University
+  country: CZ
+  kind: academic
+  city: Prague
+  region: Prague
+  homepage: https://cuni.cz
+  job_pages:
+  - https://cuni.cz/UKEN-318.html
+  why_manual: postdoc fellowship list (JUNIOR fund) is one long page with sections,
+    not separate offer links (Nov 2026)
+- id: tr-bilkent
+  name: Bilkent University
+  country: TR
+  kind: academic
+  city: Ankara
+  region: Ankara
+  homepage: https://w3.bilkent.edu.tr
+  job_pages:
+  - https://w3.bilkent.edu.tr/tr/akademik-is/
+  why_manual: academic jobs page lists departments; open posts are inside each department
+    page (Nov 2026)

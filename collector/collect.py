@@ -157,7 +157,8 @@ RESULT_DOC = re.compile(
     r"resoluci[oó]n? (provisional|definitiva|de adjudicaci|final)|resoluci[oó] (provisional|definitiva|final)|"
     r"admesos|admitidos|admitted|exclosos|excluidos|adjudicaci|proposta de contractaci|propuesta de contrataci|"
     r"\bacta\b|resultad|resultats|results|seleccionad|seleccionat|selected candidate|persona candidata proposada|"
-    r"wyniki|rozstrzygni[eę]ci|v[yý]sledk|rezultat|proces[- ]verbal|sonu[cç]",
+    r"wyniki|rozstrzygni[eę]ci|v[yý]sledk|rozhodnut[ií]|rezultatele (finale|concursului|selec|probei)|"
+    r"rezultat(ul|e)? (final|concurs|selec|contesta|dup[aă])|proces[- ]verbal|sonu[cç]",
     re.I,
 )
 BARE_RESOLUTION = re.compile(r"^resoluci[oó]n?\.?$", re.I)
@@ -298,7 +299,7 @@ def parse_listing(html: str, base_url: str) -> list[dict]:
         prev = items.get(url)
         if prev is None or len(context) > len(prev["context"]):
             items[url] = {"url": url, "title": title, "context": context,
-                          "weak_title": generic and len(context) > 400, **flags}
+                          "weak_title": generic and len(context) > 400, "ctx_title": generic, **flags}
     # One entry per row: several links in the same row (call PDF, notice board) describe one offer.
     seen_rows, out = set(), []
     for it in items.values():
@@ -327,6 +328,12 @@ CITY_REGION = {
 }
 
 
+PL_INSTITUTION = re.compile(
+    r"\b(Uniwersytet|Politechnika|Akademia|Szko[lł]a G[lł][oó]wna|Instytut|Centrum|Uczelnia|Wy[zż]sza Szko[lł]a)"
+    r"(\s+[A-ZŁŚŻŹĆŃÓĘĄ][\w.\-]*|\s+(im\.|w|we|nad|Nauk|Medyczny|Medyczna|Ekonomiczny|Rolniczy|Przyrodniczy|Techniczny|Morski|"
+    r"Polskiej|PAN|Badań|Geografii|Rozwoju|Miast|i|Regionów)){1,7}")
+
+
 def parse_rss(content: bytes) -> tuple[list[dict], dict]:
     """Items of a job-portal RSS feed as listing rows, plus their full text as ready-read offer pages."""
     soup = BeautifulSoup(content, "xml")
@@ -346,6 +353,9 @@ def parse_rss(content: bytes) -> tuple[list[dict], dict]:
         body_html = body_tag.get_text() if body_tag else ""
         lines = [clean(x) for x in BeautifulSoup(body_html, "lxml").get_text("\n").split("\n") if clean(x)]
         company = clean(item.find("company").get_text()) if item.find("company") else ""
+        if not company:
+            m = PL_INSTITUTION.search(" ".join(lines[:6]))
+            company = clean(m.group(0)) if m else ""
         loc = item.find("location")
         city = clean(re.sub(r"<[^>]+>", " ", html.unescape(loc.get_text()))) if loc else ""
         city = city.split(",")[0].strip()
@@ -573,7 +583,9 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         if dl and dl > (today + timedelta(days=400)).isoformat():
             dl = None  # a "deadline" years away is a contract end date or similar, not the closing date
         title = it["title"]
-        if det.get("title") and len(det["title"]) > 15 and (len(title) < 30 or GENERIC_LINK.match(title) or it.get("weak_title")):
+        new_country = inst.get("country") in ("PL", "CZ", "RO", "TR")
+        if det.get("title") and len(det["title"]) > 15 and (len(title) < 30 or GENERIC_LINK.match(title) or it.get("weak_title")
+                                                           or (new_country and it.get("ctx_title"))):
             title = det["title"]
         elif it.get("weak_title"):
             debug.append({"title": title[:200], "url": it["url"], "skip": "link inside a long list, no own title"})

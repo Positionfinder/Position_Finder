@@ -925,7 +925,7 @@
     - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=post-doc"
 
 # ---------------- Czech Republic ----------------
-- {id: cz-cuni, country: CZ, name: "Charles University", type: public, region: "Prague", city: "Prague", homepage: "https://cuni.cz", job_pages: ["https://cuni.cz/UKEN-318.html"]}
+- {id: cz-cuni, country: CZ, name: "Charles University", type: public, region: "Prague", city: "Prague", homepage: "https://cuni.cz", notes: "postdoc fellowships are sections of one long page (UKEN-318), not separate links: checked by hand (manual_pages.yaml)"}
 - {id: cz-cuni-natur, country: CZ, name: "Charles University – Faculty of Science", type: public, region: "Prague", city: "Prague", homepage: "https://natur.cuni.cz", job_pages: ["https://natur.cuni.cz/en/employees/postdocs"]}
 - {id: cz-muni, country: CZ, name: "Masaryk University", type: public, region: "South Moravia", city: "Brno", homepage: "https://www.muni.cz", job_pages: ["https://www.muni.cz/en/about-us/careers/find-the-right-job-for-you"]}
 - {id: cz-cvut, country: CZ, name: "Czech Technical University in Prague", type: public, region: "Prague", city: "Prague", homepage: "https://www.cvut.cz", job_pages: ["https://eud.is.cvut.cz/pub/deska/36000002/ifis/"]}
@@ -975,7 +975,7 @@
 - {id: tr-hacettepe, country: TR, name: "Hacettepe University", type: public, region: "Ankara", city: "Ankara", homepage: "https://www.hacettepe.edu.tr"}
 - {id: tr-bogazici, country: TR, name: "Boğaziçi University", type: public, region: "Istanbul", city: "Istanbul", homepage: "https://bogazici.edu.tr", job_pages: ["https://personel.bogazici.edu.tr/"]}
 - {id: tr-ktu, country: TR, name: "Karadeniz Technical University", type: public, region: "Trabzon", city: "Trabzon", homepage: "https://www.ktu.edu.tr", job_pages: ["https://www.ktu.edu.tr/personel"]}
-- {id: tr-bilkent, country: TR, name: "Bilkent University", type: private, region: "Ankara", city: "Ankara", homepage: "https://w3.bilkent.edu.tr", job_pages: ["https://w3.bilkent.edu.tr/tr/akademik-is/"]}
+- {id: tr-bilkent, country: TR, name: "Bilkent University", type: private, region: "Ankara", city: "Ankara", homepage: "https://w3.bilkent.edu.tr", notes: "academic jobs page lists departments, not posts: checked by hand (manual_pages.yaml)"}
 - {id: tr-sabanci, country: TR, name: "Sabancı University", type: private, region: "Istanbul", city: "Istanbul", homepage: "https://www.sabanciuniv.edu"}
 - {id: tr-koc, country: TR, name: "Koç University", type: private, region: "Istanbul", city: "Istanbul", homepage: "https://www.ku.edu.tr"}
 - {id: tr-ozyegin, country: TR, name: "Özyeğin University", type: private, region: "Istanbul", city: "Istanbul", homepage: "https://www.ozyegin.edu.tr"}

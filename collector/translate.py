@@ -70,9 +70,27 @@ EN_FIX = [(re.compile(r"\b(academic|scientific|science) (employee|staff member|c
           (re.compile(r"\bknow\. employee\b", re.I), "Research associate")]
 
 
+# Academic ranks the translation models get wrong ("Adiunkt lub adiunktka" -> "Assistant or Assistant").
+RANKS = {
+    "pl": [(re.compile(r"\badiunkt\w*(\s*(\(post-?doc\))?\s*(lub|/|i)\s*adiunkt\w*)?(\s*\(post-?doc\))?", re.I), "Assistant Professor (adiunkt)"),
+           (re.compile(r"\bbadacz\w*(\s*(lub|/)\s*badacz\w*)?", re.I), "Researcher")],
+    "cs": [(re.compile(r"odborn[ýá]\w* asistent\w*(\s*/\s*odborn[áý]\w* asistent\w*)?", re.I), "Assistant Professor"),
+           (re.compile(r"postdoktorand\w*(\s*/\s*postdoktorand\w*)?", re.I), "Postdoctoral researcher")],
+    "ro": [(re.compile(r"lector universitar", re.I), "Lecturer (lector universitar)"),
+           (re.compile(r"cercet[aă]tor\w* [sș]tiin[tț]ific\w*( \(?post-?doctorand\)?)?", re.I), "Research scientist")],
+    "tr": [(re.compile(r"dr\.? ?[öo][gğ]r(etim|\.)? ?[üu]yesi|doktor [öo][gğ]retim [üu]yesi", re.I), "Assistant Professor"),
+           (re.compile(r"doktora sonras[ıi] ara[sş]t[ıi]rmac[ıi]", re.I), "Postdoctoral researcher")],
+}
+
+
 def prepare(title: str, lang: str) -> str:
     if lang == "de":
         title = DE_ASSOC.sub("Research associate", title)
+    has_postdoc = re.search(r"post-?doc", title, re.I)
+    for pat, rep in RANKS.get(lang, []):
+        title = pat.sub(rep, title)
+    if lang == "pl" and has_postdoc and "post-doc" not in title.lower():
+        title = title.replace("Assistant Professor (adiunkt)", "Postdoc (adiunkt)", 1)
     return title
 
 
@@ -93,8 +111,10 @@ def main() -> None:
         lang = language(it["title"], it.get("country", "ES"))
         if lang == "en":
             it["title_en"] = it["title"]
-        elif it["title"] in cache:
+        elif it["title"] in cache and lang not in RANKS:
             it["title_en"] = tidy(cache[it["title"]])
+        elif prepare(it["title"], lang) in cache:
+            it["title_en"] = tidy(cache[prepare(it["title"], lang)])
         else:
             todo.setdefault(lang, []).append(it)
     if todo:
@@ -104,8 +124,9 @@ def main() -> None:
             for it in items:
                 if tr:
                     try:
-                        en = tidy(tr(prepare(it["title"], lang)).strip())
-                        cache[it["title"]] = en
+                        src = prepare(it["title"], lang)
+                        en = tidy(tr(src).strip())
+                        cache[src if lang in RANKS else it["title"]] = en
                         it["title_en"] = en
                         continue
                     except Exception as e:  # noqa: BLE001
