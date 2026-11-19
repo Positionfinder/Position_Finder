@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Uredni deska</title>
+    <link href="/pub/styles/cvut/screen_css_old.css" rel="stylesheet">
+    <script>
+        window.onload = function() {
+        var htmlEl = document.getElementsByTagName("html")[0];
+        parent.postMessage(htmlEl.offsetHeight, '*');
+        console.log("Poslal som");
+        }
+        </script>
+  </head>
+  <body>
+    <table class="zahlavi">
+      <tr>
+        <td style="border-style: none">
+          <img src="/pub/styles/cvut/logo_CVUT_doplnkova_verze.svg" style="height: 100px">
+        </td>
+        <td style="border-style: none; vertical-align: middle">
+          <h1 style="margin-left: 20px">Úřední deska</h1>
+        </td>
+      </tr>
+    </table>
+    <div class="pg-set para-like">
+      <span class="pg-count std-pg">
+        <a class="selected" href="https://eud.is.cvut.cz/pub/rss/36000002/ifis/?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=" target="_blank">Stáhnout RSS</a>
+      </span>
+      <span class="pg-size">Na stránce:
+        <select onchange="window.location=this.options[this.selectedIndex].getAttribute('href')">
+          <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=10&amp;trideni=">10</option>
+          <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=" selected="selected">25</option>
+          <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=50&amp;trideni=">50</option>
+          <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=100&amp;trideni=">100</option>
+        </select>
+      </span>
+      <ul class="std-pg pg-list">
+        <li>
+          <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">|◀</a>
+        </li>
+        <li>
+          <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">◀</a>
+        </li>
+        <li>
+          <select onchange="window.location=this.options[this.selectedIndex].getAttribute('href')" style="width: 160px;">
+            <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=" selected="selected">1-25 z 87</option>
+            <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=25&amp;pocet=25&amp;trideni=" value="25">26-50 z 87</option>
+            <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=50&amp;pocet=25&amp;trideni=" value="50">51-75 z 87</option>
+            <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=75&amp;pocet=25&amp;trideni=" value="75">76-87 z 87</option>
+          </select>
+        </li>
+        <li>
+          <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=25&amp;pocet=25&amp;trideni=">▶</a>
+        </li>
+        <li>
+          <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=75&amp;pocet=25&amp;trideni=">▶|</a>
+        </li>
+      </ul>
+    </div>
+    <table style="width:100%; table-layout:fixed">
+      <colgroup>
+        <col style="width: 20%">
+        <col style="width: 20%">
+        <col style="width: 45%">
+        <col style="width: 15%">
+        <col style="width: 100px">
+        <col style="width: 100px">
+      </colgroup>
+      <thead>
+        <tr class="even">
+          <th>
+            <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=oblast%2B" style="color:white; text-decoration:none">Součást</a>
+          </th>
+          <th>
+            <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=kategorie%2B" style="color:white; text-decoration:none">Kategorie</a>
+          </th>
+          <th>
+            <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=nazev%2B" style="color:white; text-decoration:none">Název</a>
+          </th>
+          <th>
+            <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=cislo_jednaci%2B" style="color:white; text-decoration:none">Číslo jednací</a>
+          </th>
+          <th>
+            <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=vyvesit%2B" style="color:white; text-decoration:none">Vyvěšeno</a>
+          </th>
+          <th>
+            <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=sejmout%2B" style="color:white; text-decoration:none">Sejmout</a>
+          </th>
+        </tr>
+        <tr style="background:white">
+          <th style="background:white">
+            <select onchange="window.location=this.options[this.selectedIndex].getAttribute('href')" style="width:100%">
+              <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25"></option>
+              <option href="?oblast_id=95&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25">Český institut informatiky, robotiky a kybernetiky</option>
+              <option href="?oblast_id=86&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25">Fakulta architektury</option>
+              <option href="?oblast_id=88&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25">Fakulta biomedicínského inženýrství</option>
+              <option href="?oblast_id=87&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25">Fakulta dopravní</option>
+              <option href="?oblast_id=84&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25">Fakulta elektrotechnická</option>
+              <option href="?oblast_id=89&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25">Fakulta informačních technologií</option>
+              <option href="?oblast_id=85&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25">Fakulta jaderná a fyzikálně inženýrská</option>
+              <option href="?oblast_id=82&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25">Fakulta stavební</option>
+              <option href="?oblast_id=91&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25">Masarykův ústav vyšších studií</option>
+              <option href="?oblast_id=96&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25">Rektorát ČVUT</option>
+              <option href="?oblast_id=94&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25">Univerzitní centrum energeticky efektivních budov</option>
+            </select>
+          </th>
+          <th style="background:white">
+            <select onchange="window.location=this.options[this.selectedIndex].getAttribute('href')" style="width:100%">
+              <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25"></option>
+              <option href="?kategorie_id=66&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=">Personální</option>
+              <option href="?kategorie_id=68&amp;nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=">Studium</option>
+            </select>
+          </th>
+          <th style="background:white">
+            <input href="?cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25" onchange="window.location=this.getAttribute('href')+'&amp;nazev='+this.value" style="width:100%" type="text" value="">
+          </th>
+          <th style="background:white">
+            <input href="?nazev=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pocet=25" onchange="window.location=this.getAttribute('href')+'&amp;cislo_jednaci='+this.value" style="width:100%" type="text" value="">
+          </th>
+          <th style="background:white">
+            <input href="?nazev=&amp;cislo_jednaci=&amp;datum_do=&amp;text=&amp;pocet=25" onchange="window.location=this.getAttribute('href')+'&amp;datum_od='+this.value" style="width:100%" type="text" value="">
+          </th>
+          <th style="background:white">
+            <input href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;text=&amp;pocet=25" onchange="window.location=this.getAttribute('href')+'&amp;datum_do='+this.value" style="width:100%" type="text" value="">
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr class="odd">
+          <td>Fakulta stavební</td>
+          <td>Personální</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5700?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Výběrové řízení na obsazení pozice Specialista/-ka kybernetické bezpečnosti</a>
+          </td>
+          <td>CVUT00025693/2026</td>
+          <td>19. 11. 2026</td>
+          <td>18. 12. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5697?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Shahzad Zahoor</a>
+          </td>
+          <td>ST8007/26/14921/Kuchy</td>
+          <td>19. 11. 2026</td>
+          <td>04. 12. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5696?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Gakha Oniani</a>
+          </td>
+          <td>ST8006/26/14921/Kuchy</td>
+          <td>19. 11. 2026</td>
+          <td>04. 12. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5695?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Tristan Andrew Evans</a>
+          </td>
+          <td>ST8005/26/14921/Kuchy</td>
+          <td>19. 11. 2026</td>
+          <td>04. 12. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5694?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Martin Thomas Connelly</a>
+          </td>
+          <td>ST8004/26/14921/Kuchy</td>
+          <td>19. 11. 2026</td>
+          <td>04. 12. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5693?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Karolína Trnavská</a>
+          </td>
+          <td>ST8003/26/14921/Kuchy</td>
+          <td>19. 11. 2026</td>
+          <td>04. 12. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5692?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Adrián Majoros</a>
+          </td>
+          <td>ST8002/26/14921/Kuchy</td>
+          <td>19. 11. 2026</td>
+          <td>04. 12. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5691?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Alexandra Angelovičová</a>
+          </td>
+          <td>ST8001/26/14921/Kuchy</td>
+          <td>19. 11. 2026</td>
+          <td>04. 12. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Fakulta elektrotechnická</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5690?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Marek Baše</a>
+          </td>
+          <td>ST21925/26/13922/Klemo</td>
+          <td>19. 11. 2026</td>
+          <td>03. 12. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Fakulta elektrotechnická</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5689?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Marek Baše</a>
+          </td>
+          <td>ST21924/26/13922/Fialo</td>
+          <td>19. 11. 2026</td>
+          <td>03. 12. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Personální</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5698?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Výběrové řízení na Vedoucího pracovníka Oddělení pro vědu a výzkum</a>
+          </td>
+          <td>CVUT0000062423-2026</td>
+          <td>18. 11. 2026</td>
+          <td>07. 12. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Univerzitní centrum energeticky efektivních budov</td>
+          <td>Personální</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5688?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Výběrové řízení - Asistent_ka a koordinátor_ka výzkumu pro Architekturu a životní prostředí</a>
+          </td>
+          <td>CVUT00025465/2026</td>
+          <td>16. 11. 2026</td>
+          <td>30. 11. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Fakulta biomedicínského inženýrství</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5687?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Nataliia Hrab</a>
+          </td>
+          <td>ST13711/26/17913/Mencl</td>
+          <td>13. 11. 2026</td>
+          <td>27. 11. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Fakulta elektrotechnická</td>
+          <td>Personální</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5686?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Výběrové řízení - vedoucí zaměstnaneckého oddělení ČVUT - FEL</a>
+          </td>
+          <td>CVUT0000061381-2026</td>
+          <td>12. 11. 2026</td>
+          <td>11. 12. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Rektorát ČVUT</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5685?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Rozhodnutí o dovolání - Natálie Votavová</a>
+          </td>
+          <td>ST800/26/51921/Cihlo</td>
+          <td>12. 11. 2026</td>
+          <td>26. 11. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Fakulta elektrotechnická</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5683?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Kirill Kim</a>
+          </td>
+          <td>ST21817/26/13922/Velic</td>
+          <td>12. 11. 2026</td>
+          <td>26. 11. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5682?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Santiago Daniel Afanador Suárez</a>
+          </td>
+          <td>ST7934/26/14921/Kuchy</td>
+          <td>12. 11. 2026</td>
+          <td>27. 11. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Fakulta informačních technologií</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5681?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Ekaterina Izotova</a>
+          </td>
+          <td>ST18878/26/18923/Kutin</td>
+          <td>12. 11. 2026</td>
+          <td>26. 11. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Fakulta architektury</td>
+          <td>Personální</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5684?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Social Media Manager/ka - Galerie Jaroslava Fragnera</a>
+          </td>
+          <td>CVUT00025182/2026</td>
+          <td>11. 11. 2026</td>
+          <td>31. 12. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Fakulta informačních technologií</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5679?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Radim Hladík</a>
+          </td>
+          <td>ST18857/26/18923/Kubík</td>
+          <td>11. 11. 2026</td>
+          <td>25. 11. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Personální</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5680?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Selection procedure - POSTDOC IN THEORETICAL HADRON PHYSICS</a>
+          </td>
+          <td>CVUT0000060879-2026</td>
+          <td>10. 11. 2026</td>
+          <td>09. 12. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Fakulta biomedicínského inženýrství</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5678?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">OZNÁMENÍ O MOŽNOSTI PŘEVZÍT PÍSEMNOST - Rytířová Karolína</a>
+          </td>
+          <td>CVUT00021411/2026</td>
+          <td>10. 11. 2026</td>
+          <td>24. 11. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5676?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Lev Marchenko</a>
+          </td>
+          <td>ST7752/26/14921/Kuchy</td>
+          <td>10. 11. 2026</td>
+          <td>25. 11. 2026</td>
+        </tr>
+        <tr class="even">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5675?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - George Slav Dimitrov</a>
+          </td>
+          <td>ST7751/26/14921/Kuchy</td>
+          <td>10. 11. 2026</td>
+          <td>25. 11. 2026</td>
+        </tr>
+        <tr class="odd">
+          <td>Fakulta jaderná a fyzikálně inženýrská</td>
+          <td>Studium</td>
+          <td>
+            <a href="/pub/deska/36000002/ifis/5674?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">Oznámení o možnosti převzít písemnost - Adrian Cerlat</a>
+          </td>
+          <td>ST7750/26/14921/Kuchy</td>
+          <td>10. 11. 2026</td>
+          <td>25. 11. 2026</td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="pg-set para-like">
+      <span class="pg-count std-pg">
+        <a class="selected" href="https://eud.is.cvut.cz/pub/rss/36000002/ifis/?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=" target="_blank">Stáhnout RSS</a>
+      </span>
+      <span class="pg-size">Na stránce:
+        <select onchange="window.location=this.options[this.selectedIndex].getAttribute('href')">
+          <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=10&amp;trideni=">10</option>
+          <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=" selected="selected">25</option>
+          <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=50&amp;trideni=">50</option>
+          <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=100&amp;trideni=">100</option>
+        </select>
+      </span>
+      <ul class="std-pg pg-list">
+        <li>
+          <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">|◀</a>
+        </li>
+        <li>
+          <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=">◀</a>
+        </li>
+        <li>
+          <select onchange="window.location=this.options[this.selectedIndex].getAttribute('href')" style="width: 150px;">
+            <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=0&amp;pocet=25&amp;trideni=" selected="selected">1-25 z 87</option>
+            <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=25&amp;pocet=25&amp;trideni=" value="25">26-50 z 87</option>
+            <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=50&amp;pocet=25&amp;trideni=" value="50">51-75 z 87</option>
+            <option href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=75&amp;pocet=25&amp;trideni=" value="75">76-87 z 87</option>
+          </select>
+        </li>
+        <li>
+          <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=25&amp;pocet=25&amp;trideni=">▶</a>
+        </li>
+        <li>
+          <a href="?nazev=&amp;cislo_jednaci=&amp;datum_od=&amp;datum_do=&amp;text=&amp;pozice=75&amp;pocet=25&amp;trideni=">▶|</a>
+        </li>
+      </ul>
+    </div>
+  </body>
+</html>

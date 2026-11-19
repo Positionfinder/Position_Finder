@@ -1,0 +1,3279 @@
+<!doctype html>
+<html lang="tr"><head>
+
+<!-- Google tag (gtag.js) --> 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5X5FVCMBFN"></script> 
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-5X5FVCMBFN');
+</script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Karadeniz Teknik Üniversitesi güçlü akademik kadrosu, 32 bini aşkın öğrencisi ve 258 bini aşkın mezunu ile ülkemizin önde gelen üniversitelerinden biridir. Köklü geçmişi, oturmuş gelenekleri, eğitim-öğretim deneyimi, altyapısı, mükemmel kampüsü ve nitelikli eğitim-öğretim ve araştırma kadrosu ile KTÜ bir ekoldür.">
+<meta name="keywords" content="KTÜ, ktü, Karadeniz Technical University, Karadeniz Teknik Üniversitesi, KTU, ktu, 1955">
+<meta name="author" content="Karadeniz Teknik Üniversitesi">
+<meta name="generator" content="KTÜ WYS">
+<meta name="referrer" content="no-referrer-when-downgrade">
+<title>
+Anasayfa | Personel Daire Başkanlığı</title>
+<link rel="icon" type="image/x-icon" href="/image/tr_bg.png">
+<script src="/assets/js/jquery.min.js"></script> 
+<script src="/assets/js/functions.js"></script> 
+
+<!-- Bootstrap core CSS -->
+<link href="/assets/css/bootstrap.min.css" rel="stylesheet">
+<link href="/assets/css/style.css" rel="stylesheet" >
+<link href="/assets/css/search.css" rel="stylesheet" type="text/css">
+<link href="/assets/fontawesome6/css/all.css" rel="stylesheet">
+<script>
+		$(document).ready(function(){
+			
+			
+			
+			var tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'))
+			var tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
+  				return new bootstrap.Tooltip(tooltipTriggerEl)
+			})
+
+			$('table').addClass('table table-striped table-hover table-bordered caption-top');	
+	
+			$('.carousel').carousel({
+    			pause: "true"
+			});	
+
+	
+			$("#carousel-prev").click(function(){
+    			$("#carouselText").carousel("prev");
+  			});
+  
+			$("#carousel-next").click(function(){
+    			$("#carouselText").carousel("next");
+  			});  		
+		
+		});
+
+// ********** FOTO GALERİ ****************
+		$(document).ready(function(){
+
+    		loadGallery(true, 'a.thumbnail');
+
+			//This function disables buttons when needed
+			function disableButtons(counter_max, counter_current){
+				$('#show-previous-image, #show-next-image').show();
+				if(counter_max == counter_current){
+					$('#show-next-image').hide();
+				} else if (counter_current == 1){
+					$('#show-previous-image').hide();
+				}
+			}
+
+
+			function loadGallery(setIDs, setClickAttr){
+				var current_image,
+					selector,
+					counter = 0;
+
+				$('#show-next-image, #show-previous-image').click(function(){
+					if($(this).attr('id') == 'show-previous-image'){
+						current_image--;
+					} else {
+						current_image++;
+					}
+
+					selector = $('[data-image-id="' + current_image + '"]');
+					updateGallery(selector);
+				});
+
+				function updateGallery(selector) {
+
+					var $sel = selector;
+					current_image = $sel.data('image-id');
+					$('#image-gallery-caption').text($sel.data('caption'));
+					$('#image-gallery-title').text($sel.data('title'));
+					$('#image-gallery-image').attr('src', $sel.data('image'));
+					disableButtons(counter, $sel.data('image-id'));
+				}
+
+				if(setIDs == true){
+					$('[data-image-id]').each(function(){
+						counter++;
+						$(this).attr('data-image-id',counter);
+					});
+				}
+				$(setClickAttr).on('click',function(){
+					updateGallery($(this));
+				});
+			}
+		});		
+
+// ********** FOTO GALERİ ****************
+	
+	  </script>
+</head>
+
+<body class="d-flex flex-column min-vh-100">
+<header class="header">
+  <div class="container-fluid header-container">
+    <div class="container-xxl" style="padding: 0px;">
+      <div class="row row-cols-auto justify-content-end ust">
+        <div class="col-auto d-flex align-items-start d-none d-md-flex " style="margin-top: 7px;"> <img src="https://www.ktu.edu.tr/image/kurdela.png" alt="Araştırma Üniversitesi"> <a style=" font-size: 14px; color: #d05b57; margin-left: 10px;" href="/arastirmauniversitesi">
+          Araştırma Üniversitesi          </a> </div>
+          
+          <div class="col-auto d-flex align-items-start d-none d-md-flex ">  
+                    
+          </div>
+          
+          <div class="col-auto d-flex align-items-start d-none d-md-flex ">  
+                    
+          </div>
+          
+          
+          <div class="col-auto d-flex align-items-start me-auto d-none d-md-flex ">  
+                    
+          </div>
+
+		 
+        <div class="ust1"> <a href="/">
+          KTÜ Anasayfa          </a> </div>
+		                           <div class="ust1 d-none d-sm-block"> <a href="https://www.ktu.edu.tr/mezun">
+          Mezun          </a> </div>
+        <div class="ust1 d-none d-sm-block"> <a href="http://tanitim.ktu.edu.tr/oynatici.htm?tour=tur.json" target="_blank">
+          Sanal Kampüs          </a> </div>
+           <!--<div class="ust1 d-none d-sm-block"> <a href="https://ktu.edu.tr/oir" target="_blank" style="color:#00426a; font-weight: bold;font-size: 14px;">
+          <i class="fa-solid fa-earth-europe"></i> International
+          </a> </div>
+        
+        <div class="content d-none d-sm-block"> 
+				
+				<div class="search">
+					
+  					<input type="text" class="search__input" aria-label="search" placeholder="" id="arama_kutu" name="terim">
+					
+					<button class="search__submit" aria-label="submit search"><i class="fas fa-search"></i></button>
+					
+				</div> 
+
+				<script>
+
+					var input = document.getElementById("arama_kutu");
+					input.addEventListener("keyup", function(event) {
+					  if (event.keyCode === 13) {
+					   event.preventDefault();
+					   window.location.href = "/ara/" + document.getElementById("arama_kutu").value;
+					  }
+					});
+					</script>
+				
+		    </div>-->
+        
+        <div class="content">
+          <div class="search">
+            <form action="/ara" method="post" id="ara_form" style="width: 100%;">
+              <input type="text" class="search__input" aria-label="search" autocomplete="off" required="required" name="terim" id="terim" onKeyUp="this.value=this.value.buyukHarf()">
+              <div class="search__submit" id="searchicon"><i class="fas fa-search"></i></div>
+            </form>
+          </div>
+        </div>
+        <div class="ust3">
+          <div class="btn-group" role="group">
+            <!--
+                        <button id="btnGroupDrop1" type="button" class="btn btn-dark btn-tr button-dil1" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="bi bi-chevron-double-down"></i> </button>
+            <ul class="dropdown-menu ul-en" aria-labelledby="btnGroupDrop1">
+              <li style="width: 100%;">
+                <button type="button" onclick="window.location='https://ktu.edu.tr/farabihospital'" class="btn btn-dark btn-tr button-dil2">EN</button>
+              </li>
+              
+                <li style="width: 100%;">
+                <button type="button" onclick="window.location='https://ktufarabihospital.com/ru/home-ru/'" class="btn btn-dark btn-tr button-dil2">RU</button>
+              </li>
+              <li style="width: 100%;">
+                <button type="button" onclick="window.location='https://ktufarabihospital.com/ge/home/'" class="btn btn-dark btn-tr button-dil2">GE</button>
+              </li>
+              <li style="width: 100%;">
+                <button type="button" onclick="window.location='https://ktufarabihospital.com/ar/home-ar-3/'" class="btn btn-dark btn-tr button-dil2">AR</button>
+              </li> 
+            </ul>
+            			  -->
+			  <style>
+@-moz-document domain("ktu.edu.tr") {
+    body, html {
+        background-color: #1e1e1e !important;
+        color: #ffffff !important;
+    }
+    a, h1, h2, h3, h4, h5, h6, p, span {
+        color: #ddd !important;
+    }
+    header, nav, footer {
+        background-color: #2c2c2c !important;
+    }
+    .container, .content, .panel, .box, .card {
+        background-color: #252525 !important;
+        color: #ffffff !important;
+    }
+    img {
+        filter: brightness(0.8) contrast(1.2);
+    }
+}
+</style>
+
+			  
+			  
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>
+<style>
+.ktu-banner {
+  max-width: 250px; /* genişliği buradan ayarlayabilirsin */
+  white-space: normal; /* metin satır kaydırabilir */
+  word-wrap: break-word;
+  color: #1B71AC;	
+}
+
+.ktu-banner-mobile {
+  max-width: 250px;
+  font-size: 12px;
+  color: #1B71AC;	
+  white-space: normal;
+  word-wrap: break-word;
+}
+</style>
+<script>
+			  
+		$(document).ready(function(){
+  
+		var btns = document.getElementsByClassName("menu-pills");
+		
+		for (var i = 0; i < btns.length; i++) {
+        btns[i].addEventListener("click", function () {
+			event.stopPropagation();//Add function here
+        });
+    	}
+			
+		});
+	  
+		  </script> 
+
+<nav class="navbar navbar-expand-lg header-nav navbar-light " style="padding:0px !important;">
+  
+	<div class="container  align-items-start menu-container">
+	
+    
+		<a class="navbar-brand align-self-end" style="margin-left:-12px;" href="/personel">
+						<div class="row align-items-center" style="flex-wrap: nowrap;">
+			<div class="col-auto d-none d-sm-block" style="padding-right: 0px;">
+				<img src="/image/tr_bg.png" class="img-fluid brand-image"> 
+			</div>
+			<div class="col-auto d-block d-sm-none" style="padding-right: 0px;">
+				<img src="/image/tr_bg.png" class="img-fluid brand-image" style="width:100px;"> 
+			</div>				
+			<div class="col-auto align-middle brand-name-div">
+			  	<p class="brand-name-ktu">KARADENİZ<br>TEKNİK ÜNİVERSİTESİ</p>
+				
+				<p class="banner-name brand-name-birim d-none d-sm-block ktu-banner">Personel Daire Başkanlığı</p>
+				<p class="banner-name brand-name-birim d-block d-sm-none ktu-banner-mobile">Personel Daire Başkanlığı</p>
+				
+			</div>
+						<div class="col-auto brand-col-kisaltma d-none d-xxl-block">
+				<div class="brand-kisaltma" style="border-top: 4px solid #1B71AC; color:#1B71AC;">
+					PDB				</div>
+			</div>
+				
+			</div>
+					</a>
+		
+		  		
+		<a class="align-self-center d-none d-sm-inline-block" style="margin-left:-20px; margin-top: 20px;" href="#" data-bs-toggle="modal" data-bs-target="#yokak">
+			<img src="/image/logo/other/yokak.png" style="height: 60px;margin-left:25px" alt="YÖKAK 5 Yıl Tam Akreditasyon">
+		</a>
+		
+		<div class="modal fade" id="yokak" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		  <div class="modal-dialog modal-dialog-centered" style="max-width: 800px;">
+			<div class="modal-content">
+			
+				<span class="btn-close" style="position: absolute; right: 2px; top:2px;" data-bs-dismiss="modal" aria-label="Close"></span>
+
+				<img src="/dosyalar/tr_80a8c.jpg">
+				
+			</div>
+		  </div>
+		</div>
+		
+				
+		<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample" aria-expanded="false" aria-label="Toggle navigation" style="margin-top: 40px;">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+		
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  
+	<div class="offcanvas-header">
+    <div class="offcanvas-title" id="offcanvasExampleLabel">
+			
+		</div>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body" id="mobile-menu">
+	
+	 
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0 h-75 align-self-end">
+        		<li class="nav-item">
+          <a class="nav-link nav-link-menu h-100 collapsed anamenu anamenu-mobile" href="#" id="navbarDropdown-mobile-2035" role="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#drop-mobile-2035" aria-controls="drop-mobile-2035">DAİRE BAŞKANLIĞI</a>
+        </li>
+		  
+		<div class="collapse megamenu" id="drop-mobile-2035" data-bs-parent="#mobile-menu" >
+          	<div class="container">
+            <div class="row" style="padding: 1rem;">
+            	
+                <div class="col-md-12 col-xs-12" style="padding-bottom:20px;">
+					
+						<div class="nav flex-column nav-pills me-3 col-md-4 col-xs-6" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        										
+									<button class="nav-link menu-pills text-start" id="v-pills-mobile-2035123-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-mobile-2035123" type="button" role="button" aria-controls="v-pills-mobile-2035123" aria-selected="true"><div class="underline"> Hakkımızda <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start" id="v-pills-mobile-2035124-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-mobile-2035124" type="button" role="button" aria-controls="v-pills-mobile-2035124" aria-selected="true"><div class="underline"> Formlar | Dokümanlar | Raporlar <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start" id="v-pills-mobile-2035125-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-mobile-2035125" type="button" role="button" aria-controls="v-pills-mobile-2035125" aria-selected="true"><div class="underline"> Mevzuat <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start" id="v-pills-mobile-20353645-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-mobile-20353645" type="button" role="button" aria-controls="v-pills-mobile-20353645" aria-selected="true"><div class="underline"> Kalite <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start" id="v-pills-mobile-2035126-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-mobile-2035126" type="button" role="button" aria-controls="v-pills-mobile-2035126" aria-selected="true"><div class="underline"> İç Kontrol | İş Akışları <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        		                      	</div>
+						
+						<div class="tab-content col-md-8 col-xs-6" id="v-pills-tabContent-2035">
+							
+																
+							<div class="collapse" id="v-pills-mobile-2035123" role="tabpanel" aria-labelledby="v-pills-mobile-2035123-tab"  data-bs-parent="#v-pills-tabContent-2035" ><hr class="menutab-hr">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																									
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/misyon-vizyon-temel-degerler&quot;;">Misyon | Vizyon | Temel Değerler</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/hizli-erisim&quot;;">Hızlı Erişim</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;https:\/\/online.ktu.edu.tr\/&quot;;">Online Başvuru</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/birimlerimiz&quot;;">Birimlerimiz</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/personel&quot;;">Personel</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/organizasyonsemasi&quot;;">Organizasyon Şeması</li>
+														
+																							</ul>
+									</div>
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/dosyalar\/personel_JXBfOt.jpg&quot;;">İnsan Kaynakları Politikamız</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/kurul-komisyonlarimiz&quot;;">Kurul ve Komisyonlarımız</li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="collapse" id="v-pills-mobile-2035124" role="tabpanel" aria-labelledby="v-pills-mobile-2035124-tab"  data-bs-parent="#v-pills-tabContent-2035" ><hr class="menutab-hr">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																									
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/formlar&quot;;">Formlar | Dilekçeler</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/dokumanlar&quot;;">Dokümanlar</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/kontrolfaaliyetleri&quot;;">Birim Faaliyet Raporları</li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="collapse" id="v-pills-mobile-2035125" role="tabpanel" aria-labelledby="v-pills-mobile-2035125-tab"  data-bs-parent="#v-pills-tabContent-2035" ><hr class="menutab-hr">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																									
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/mevzuat&quot;;">Mevzuat | Yönetmelik | Yönerge</li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="collapse" id="v-pills-mobile-20353645" role="tabpanel" aria-labelledby="v-pills-mobile-20353645-tab"  data-bs-parent="#v-pills-tabContent-2035" ><hr class="menutab-hr">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																									
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/2025-kalite-calismalari&quot;;">Kalite Güvence Sistemimiz</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/komisyon-yonerge-takvim&quot;;">Komisyon | Yönerge | Takvim</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/iyilestirme-2025&quot;;">İyi Uygulama Örneklerimiz</li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="collapse" id="v-pills-mobile-2035126" role="tabpanel" aria-labelledby="v-pills-mobile-2035126-tab"  data-bs-parent="#v-pills-tabContent-2035" ><hr class="menutab-hr">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																									
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/ickontrol&quot;;">İç Kontrol</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/isakis&quot;;">İş Akışları</li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        										
+							
+							
+							
+						
+						</div>
+					
+				</div>
+            
+            </div>  
+          </div>
+          </div>
+
+				<li class="nav-item">
+          <a class="nav-link nav-link-menu h-100 collapsed anamenu anamenu-mobile" href="#" id="navbarDropdown-mobile-2044" role="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#drop-mobile-2044" aria-controls="drop-mobile-2044">HİZMETLER</a>
+        </li>
+		  
+		<div class="collapse megamenu" id="drop-mobile-2044" data-bs-parent="#mobile-menu" >
+          	<div class="container">
+            <div class="row" style="padding: 1rem;">
+            	
+                <div class="col-md-12 col-xs-12" style="padding-bottom:20px;">
+					
+						<div class="nav flex-column nav-pills me-3 col-md-4 col-xs-6" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        										
+									<button class="nav-link menu-pills text-start" id="v-pills-mobile-20442433-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-mobile-20442433" type="button" role="button" aria-controls="v-pills-mobile-20442433" aria-selected="true"><div class="underline"> Akademik Personel <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start" id="v-pills-mobile-20442434-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-mobile-20442434" type="button" role="button" aria-controls="v-pills-mobile-20442434" aria-selected="true"><div class="underline"> İdari | Sözleşmeli | İşçi Personel  <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start" id="v-pills-mobile-20442435-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-mobile-20442435" type="button" role="button" aria-controls="v-pills-mobile-20442435" aria-selected="true"><div class="underline"> Kadro | İstatistik <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start" id="v-pills-mobile-20442436-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-mobile-20442436" type="button" role="button" aria-controls="v-pills-mobile-20442436" aria-selected="true"><div class="underline"> Planlama, Eğitim ve Performans <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start" id="v-pills-mobile-20443685-tab" data-bs-toggle="collapse" data-bs-target="#v-pills-mobile-20443685" type="button" role="button" aria-controls="v-pills-mobile-20443685" aria-selected="true"><div class="underline"> Personel Ödemeleri <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        		                      	</div>
+						
+						<div class="tab-content col-md-8 col-xs-6" id="v-pills-tabContent-2044">
+							
+																
+							<div class="collapse" id="v-pills-mobile-20442433" role="tabpanel" aria-labelledby="v-pills-mobile-20442433-tab"  data-bs-parent="#v-pills-tabContent-2044" ><hr class="menutab-hr">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																									
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/akademiktesvik&quot;;">Akademik Teşvik</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/ogretimelemaniatamainfografikleri&quot;;">Atama İşlemleri</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/yQNyacMNlF&quot;;">Görevlendirme</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/yabanci-uyruklu-ogretim-elemani-istihdam-sureci&quot;;">Sözleşmeli Yabancı Uyruklu Öğretim Elemanı</li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="collapse" id="v-pills-mobile-20442434" role="tabpanel" aria-labelledby="v-pills-mobile-20442434-tab"  data-bs-parent="#v-pills-tabContent-2044" ><hr class="menutab-hr">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																									
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/muvafakat&quot;;">Muvafakat</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/idari-personel-atamalari&quot;;">Atama İşlemleri</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/kamuidarikurultutanaklari&quot;;">Kurum İdari Kurul Kararları</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;https:\/\/www.ktu.edu.tr\/personel\/paylasmakicinengelyok&quot;;">Paylaşmak için Engel Yok</li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="collapse" id="v-pills-mobile-20442435" role="tabpanel" aria-labelledby="v-pills-mobile-20442435-tab"  data-bs-parent="#v-pills-tabContent-2044" ><hr class="menutab-hr">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																									
+														<li class="list-group-item menu-items" onclick="window.location=&quot;http:\/\/sayilarla.ktu.edu.tr\/#av&quot;;">Personel Sayıları</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/tumemeklipersonel&quot;;">Emekli Personellerimiz</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/vefatedenpersonel&quot;;">Vefat Eden Personellerimiz</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/pasaportislemleri&quot;;">Pasaport İşlemleri</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;https:\/\/kampuskart.ktu.edu.tr\/User\/Login&quot;;">Personel Kimlik</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/2025-istatistikleri&quot;;">2025 İstatistikleri</li>
+														
+																							</ul>
+									</div>
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="collapse" id="v-pills-mobile-20442436" role="tabpanel" aria-labelledby="v-pills-mobile-20442436-tab"  data-bs-parent="#v-pills-tabContent-2044" ><hr class="menutab-hr">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																									
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/bys-organizasyon-yapisi&quot;;">BYS Organizasyon Yapısı</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/performans-yonetim-sistemi&quot;;">Performans Yönetim Sistemi</li>
+														
+																											
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/akademi&quot;;">Memur Akademisi | Hizmet İçi Eğitim</li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="collapse" id="v-pills-mobile-20443685" role="tabpanel" aria-labelledby="v-pills-mobile-20443685-tab"  data-bs-parent="#v-pills-tabContent-2044" ><hr class="menutab-hr">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																									
+														<li class="list-group-item menu-items" onclick="window.location=&quot;\/personel\/Z88ertyZ1U&quot;;">Görevler</li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        										
+							
+							
+							
+						
+						</div>
+					
+				</div>
+            
+            </div>  
+          </div>
+          </div>
+
+		
+		<li class="nav-item">
+          <a class="nav-link nav-link-menu h-100 collapsed anamenu anamenu-mobile" href="/personel/information-for-international-academic-staff">INTERNATİONAL ACADEMİC STAFF</a>
+        </li>
+
+		
+		<li class="nav-item">
+          <a class="nav-link nav-link-menu h-100 collapsed anamenu anamenu-mobile" href="/personel/iletisim">İLETİŞİM</a>
+        </li>
+
+		      </ul>
+      
+   
+    
+  </div>
+</div>
+		
+		
+    <div class="collapse navbar-collapse justify-content-end h-75 align-self-end" id="navbarSupportedContent" style="margin-right: -12px;">
+      <ul class="navbar-nav ml-auto mb-2 mb-lg-0 h-75 align-self-end">
+        		<li class="nav-item">
+          <a class="nav-link nav-link-menu h-100 collapsed anamenu anamenu-mobile" href="#" id="navbarDropdown-2035" role="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#drop-2035" aria-controls="drop-2035">DAİRE BAŞKANLIĞI</a>
+        </li>
+
+				<li class="nav-item">
+          <a class="nav-link nav-link-menu h-100 collapsed anamenu anamenu-mobile" href="#" id="navbarDropdown-2044" role="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#drop-2044" aria-controls="drop-2044">HİZMETLER</a>
+        </li>
+
+		
+		<li class="nav-item">
+          <a class="nav-link nav-link-menu h-100 collapsed anamenu" href="/personel/information-for-international-academic-staff">INTERNATİONAL ACADEMİC STAFF</a>
+        </li>
+
+		
+		<li class="nav-item">
+          <a class="nav-link nav-link-menu h-100 collapsed anamenu" href="/personel/iletisim">İLETİŞİM</a>
+        </li>
+
+		      </ul>
+      
+    </div>
+	</div>	 
+  
+</nav>
+
+
+<div id="menumega">
+	
+        	
+		<div class="collapse megamenu" id="drop-2035" data-bs-parent="#menumega" >
+          	<div class="container">
+            <div class="row menu-row">
+            	<div class="col-md-3 col-xs-12 d-flex align-items-center d-none d-lg-flex col-menu-label">
+                	
+                  <p class="text-break menu-label">DAİRE BAŞKANLIĞI</p>
+                    
+                </div>
+                <div class="col-md-9 col-xs-12 col-menu-list">
+					<div class="d-flex align-items-start">
+						<div class="nav flex-column nav-pills me-3 col-md-4 col-xs-6" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        										
+									<button class="nav-link menu-pills text-start active" id="v-pills-2035123-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2035123" type="button" role="tab" aria-controls="v-pills-2035123" aria-selected="true"><div class="underline"> Hakkımızda <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start " id="v-pills-2035124-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2035124" type="button" role="tab" aria-controls="v-pills-2035124" aria-selected="true"><div class="underline"> Formlar | Dokümanlar | Raporlar <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start " id="v-pills-2035125-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2035125" type="button" role="tab" aria-controls="v-pills-2035125" aria-selected="true"><div class="underline"> Mevzuat <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start " id="v-pills-20353645-tab" data-bs-toggle="pill" data-bs-target="#v-pills-20353645" type="button" role="tab" aria-controls="v-pills-20353645" aria-selected="true"><div class="underline"> Kalite <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start " id="v-pills-2035126-tab" data-bs-toggle="pill" data-bs-target="#v-pills-2035126" type="button" role="tab" aria-controls="v-pills-2035126" aria-selected="true"><div class="underline"> İç Kontrol | İş Akışları <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        		                      	</div>
+						
+						<div class="tab-content col-md-8 col-xs-6" id="v-pills-tabContent">
+							
+																
+							<div class="tab-pane fade show active" id="v-pills-2035123" role="tabpanel" aria-labelledby="v-pills-2035123-tab">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																										
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;misyon-vizyon-temel-degerler"  style="text-decoration: none;">Misyon | Vizyon | Temel Değerler</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;hizli-erisim"  style="text-decoration: none;">Hızlı Erişim</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="https&#x3A;&#x2F;&#x2F;online.ktu.edu.tr&#x2F;"  target=_blank style="text-decoration: none;">Online Başvuru</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;birimlerimiz"  style="text-decoration: none;">Birimlerimiz</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;personel"  style="text-decoration: none;">Personel</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;organizasyonsemasi"  style="text-decoration: none;">Organizasyon Şeması</a></li>
+														
+																							</ul>
+									</div>
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;dosyalar&#x2F;personel_JXBfOt.jpg"  target=_blank style="text-decoration: none;">İnsan Kaynakları Politikamız</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;kurul-komisyonlarimiz"  style="text-decoration: none;">Kurul ve Komisyonlarımız</a></li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="tab-pane fade " id="v-pills-2035124" role="tabpanel" aria-labelledby="v-pills-2035124-tab">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																										
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;formlar"  style="text-decoration: none;">Formlar | Dilekçeler</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;dokumanlar"  style="text-decoration: none;">Dokümanlar</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;kontrolfaaliyetleri"  style="text-decoration: none;">Birim Faaliyet Raporları</a></li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="tab-pane fade " id="v-pills-2035125" role="tabpanel" aria-labelledby="v-pills-2035125-tab">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																										
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;mevzuat"  style="text-decoration: none;">Mevzuat | Yönetmelik | Yönerge</a></li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="tab-pane fade " id="v-pills-20353645" role="tabpanel" aria-labelledby="v-pills-20353645-tab">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																										
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;2025-kalite-calismalari"  style="text-decoration: none;">Kalite Güvence Sistemimiz</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;komisyon-yonerge-takvim"  style="text-decoration: none;">Komisyon | Yönerge | Takvim</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;iyilestirme-2025"  style="text-decoration: none;">İyi Uygulama Örneklerimiz</a></li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="tab-pane fade " id="v-pills-2035126" role="tabpanel" aria-labelledby="v-pills-2035126-tab">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																										
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;ickontrol"  style="text-decoration: none;">İç Kontrol</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;isakis"  style="text-decoration: none;">İş Akışları</a></li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        										
+							
+							
+							
+						
+						</div>
+					</div>
+				</div>
+            
+            </div>  
+          </div>
+          </div>
+
+			
+		<div class="collapse megamenu" id="drop-2044" data-bs-parent="#menumega" >
+          	<div class="container">
+            <div class="row menu-row">
+            	<div class="col-md-3 col-xs-12 d-flex align-items-center d-none d-lg-flex col-menu-label">
+                	
+                  <p class="text-break menu-label">HİZMETLER</p>
+                    
+                </div>
+                <div class="col-md-9 col-xs-12 col-menu-list">
+					<div class="d-flex align-items-start">
+						<div class="nav flex-column nav-pills me-3 col-md-4 col-xs-6" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                        										
+									<button class="nav-link menu-pills text-start active" id="v-pills-20442433-tab" data-bs-toggle="pill" data-bs-target="#v-pills-20442433" type="button" role="tab" aria-controls="v-pills-20442433" aria-selected="true"><div class="underline"> Akademik Personel <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start " id="v-pills-20442434-tab" data-bs-toggle="pill" data-bs-target="#v-pills-20442434" type="button" role="tab" aria-controls="v-pills-20442434" aria-selected="true"><div class="underline"> İdari | Sözleşmeli | İşçi Personel  <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start " id="v-pills-20442435-tab" data-bs-toggle="pill" data-bs-target="#v-pills-20442435" type="button" role="tab" aria-controls="v-pills-20442435" aria-selected="true"><div class="underline"> Kadro | İstatistik <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start " id="v-pills-20442436-tab" data-bs-toggle="pill" data-bs-target="#v-pills-20442436" type="button" role="tab" aria-controls="v-pills-20442436" aria-selected="true"><div class="underline"> Planlama, Eğitim ve Performans <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        											
+									<button class="nav-link menu-pills text-start " id="v-pills-20443685-tab" data-bs-toggle="pill" data-bs-target="#v-pills-20443685" type="button" role="tab" aria-controls="v-pills-20443685" aria-selected="true"><div class="underline"> Personel Ödemeleri <i class="fas fa-angle-double-right" style="float:right; font-size:15px;"></i></div>  </button>
+                        		                      	</div>
+						
+						<div class="tab-content col-md-8 col-xs-6" id="v-pills-tabContent">
+							
+																
+							<div class="tab-pane fade show active" id="v-pills-20442433" role="tabpanel" aria-labelledby="v-pills-20442433-tab">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																										
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;akademiktesvik"  style="text-decoration: none;">Akademik Teşvik</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;ogretimelemaniatamainfografikleri"  style="text-decoration: none;">Atama İşlemleri</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;yQNyacMNlF"  style="text-decoration: none;">Görevlendirme</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;yabanci-uyruklu-ogretim-elemani-istihdam-sureci"  style="text-decoration: none;">Sözleşmeli Yabancı Uyruklu Öğretim Elemanı</a></li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="tab-pane fade " id="v-pills-20442434" role="tabpanel" aria-labelledby="v-pills-20442434-tab">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																										
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;muvafakat"  style="text-decoration: none;">Muvafakat</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;idari-personel-atamalari"  style="text-decoration: none;">Atama İşlemleri</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;kamuidarikurultutanaklari"  style="text-decoration: none;">Kurum İdari Kurul Kararları</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="https&#x3A;&#x2F;&#x2F;www.ktu.edu.tr&#x2F;personel&#x2F;paylasmakicinengelyok"  style="text-decoration: none;">Paylaşmak için Engel Yok</a></li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="tab-pane fade " id="v-pills-20442435" role="tabpanel" aria-labelledby="v-pills-20442435-tab">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																										
+														<li class="list-group-item menu-items"><a href="http&#x3A;&#x2F;&#x2F;sayilarla.ktu.edu.tr&#x2F;&#x23;av"  target=_blank style="text-decoration: none;">Personel Sayıları</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;tumemeklipersonel"  style="text-decoration: none;">Emekli Personellerimiz</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;vefatedenpersonel"  style="text-decoration: none;">Vefat Eden Personellerimiz</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;pasaportislemleri"  style="text-decoration: none;">Pasaport İşlemleri</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="https&#x3A;&#x2F;&#x2F;kampuskart.ktu.edu.tr&#x2F;User&#x2F;Login"  target=_blank style="text-decoration: none;">Personel Kimlik</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;2025-istatistikleri"  style="text-decoration: none;">2025 İstatistikleri</a></li>
+														
+																							</ul>
+									</div>
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="tab-pane fade " id="v-pills-20442436" role="tabpanel" aria-labelledby="v-pills-20442436-tab">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																										
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;bys-organizasyon-yapisi"  style="text-decoration: none;">BYS Organizasyon Yapısı</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;performans-yonetim-sistemi"  style="text-decoration: none;">Performans Yönetim Sistemi</a></li>
+														
+																												
+														<li class="list-group-item menu-items"><a href="&#x2F;akademi"  target=_blank style="text-decoration: none;">Memur Akademisi | Hizmet İçi Eğitim</a></li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        												
+							<div class="tab-pane fade " id="v-pills-20443685" role="tabpanel" aria-labelledby="v-pills-20443685-tab">
+								<div class="row">
+									<div class="col-md-6 col-xs-12">
+                                		<ul class="list-group list-group-flush" style="width:87%;">
+											
+																										
+														<li class="list-group-item menu-items"><a href="&#x2F;personel&#x2F;Z88ertyZ1U"  style="text-decoration: none;">Görevler</a></li>
+														
+																								
+										</ul>
+									</div>
+								</div>
+							</div>
+									
+                        										
+							
+							
+							
+						
+						</div>
+					</div>
+				</div>
+            
+            </div>  
+          </div>
+          </div>
+
+			
+
+        </div>
+
+
+<div class="container-fluid slider-container">
+    <div class="container">
+        <div class="row"> 
+            <!--######### SLİDER ##############-->
+            <div id="mainCarousel" class="carousel slide" data-bs-ride="carousel" style="padding:0px;" data-bs-interval="8000">
+                                <div class="carousel-indicators">
+                                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 0"></button>
+                                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"  aria-label="Slide 1"></button>
+                                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"  aria-label="Slide 2"></button>
+                                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="3"  aria-label="Slide 3"></button>
+                                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="4"  aria-label="Slide 4"></button>
+                                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="5"  aria-label="Slide 5"></button>
+                                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="6"  aria-label="Slide 6"></button>
+                                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="7"  aria-label="Slide 7"></button>
+                                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="8"  aria-label="Slide 8"></button>
+                                        <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="9"  aria-label="Slide 9"></button>
+                                    </div>
+                                <div class="carousel-inner">
+                                        <div class="slider-mobile carousel-item active"> <a href="https://www.ktu.edu.tr/akademi/yapay-zeka-ve-dijital-donusum-yetkinlikleri-egitim-programi"><img src="/slayt/akademi_15b99a6fc961.jpg" class="img-fluid" alt="Yapay Zekâ ve Dijital Dönüşüm Yetkinlikleri Eğitim Programı"> </a> </div>
+                                        <div class="slider-mobile carousel-item "> <a href="https://www.ktu.edu.tr/personel/haber/kSesIsLxLE"><img src="/slayt/personel_467abb81d151.jpg" class="img-fluid" alt="oryantasyon"> </a> </div>
+                                        <div class="slider-mobile carousel-item "> <a href="https://www.ktu.edu.tr/personel/duyuru/14ECCMCx48"><img src="/slayt/personel_RfCKw.jpg" class="img-fluid" alt="4b sonuç duyuru grafikli"> </a> </div>
+                                        <div class="slider-mobile carousel-item "> <a href="https://www.ktu.edu.tr/akademi/duyuru/NxhpsM9mEb"><img src="/slayt/akademi_1ozGz.jpg" class="img-fluid" alt="Yetenek Havuzu Uygulamalı Eğitimler Başladı (2026)"> </a> </div>
+                                        <div class="slider-mobile carousel-item "> <a href="https://www.ktu.edu.tr/personel/duyuru/M2f4a8QPeE"><img src="/slayt/personel_ex1UG.jpg" class="img-fluid" alt="ktü kontenjan"> </a> </div>
+                                        <div class="slider-mobile carousel-item "> <a href="https://www.ktu.edu.tr/personel/duyuru/JnvBt3Inwd"><img src="/slayt/personel_qSm8J.jpg" class="img-fluid" alt="içerik üreticiliği"> </a> </div>
+                                        <div class="slider-mobile carousel-item "> <a href="https://www.ktu.edu.tr/personel/duyuru/yaQNp5b8GF"><img src="/slayt/personel_eqkqp.jpg" class="img-fluid" alt="Belge talep duyuru"> </a> </div>
+                                        <div class="slider-mobile carousel-item "> <a href="/personel/duyuru/akademik-personel-gorev-suresi-uzatimi-surecleri-yenilendi"><img src="/slayt/personel_ESmnR.jpg" class="img-fluid" alt="Akademik Personel Görev Süresi Uzatımı"> </a> </div>
+                                        <div class="slider-mobile carousel-item "> <a href="https://www.ktu.edu.tr/personel/kurum-kadrosu-disindaki-misafir-personellerimiz-ve-arastirmacilarimizin-yararlanabilecegi-hizmetler"><img src="/slayt/personel_QDhmD.jpg" class="img-fluid" alt="kadro dışı çalışanlar artık pbs de"> </a> </div>
+                                        <div class="slider-mobile carousel-item "> <a href="https://www.ktu.edu.tr/personel/doktor-ogretim-uyesi-yeniden-atama-surec-yonetimi"><img src="/slayt/personel_bryGi.jpg" class="img-fluid" alt="dr öğretim üyesi süre uzatımı güncelleme"> </a> </div>
+                                                        </div>
+                <div id="carouselText" class="carousel slide carousel-fade d-none d-lg-block" data-bs-ride="carousel"  data-bs-interval="8000">
+                    <div class="carousel-inner carouseltext-inner">
+                                                <div class="carousel-item active slider-item d-none">
+                            <p class="carouseltext-p1 d-none">
+                                Yapay Zekâ ve Dijital Dönüşüm Yetkinlikleri Eğitim Programı                            </p>
+                            <p class="carouseltext-p2 d-none">
+                                                            </p>
+                        </div>
+                                                <div class="carousel-item  slider-item d-none">
+                            <p class="carouseltext-p1 d-none">
+                                oryantasyon                            </p>
+                            <p class="carouseltext-p2 d-none">
+                                                            </p>
+                        </div>
+                                                <div class="carousel-item  slider-item d-none">
+                            <p class="carouseltext-p1 d-none">
+                                4b sonuç duyuru grafikli                            </p>
+                            <p class="carouseltext-p2 d-none">
+                                4b sonuç duyuru grafikli                            </p>
+                        </div>
+                                                <div class="carousel-item  slider-item d-none">
+                            <p class="carouseltext-p1 d-none">
+                                Yetenek Havuzu Uygulamalı Eğitimler Başladı (2026)                            </p>
+                            <p class="carouseltext-p2 d-none">
+                                                            </p>
+                        </div>
+                                                <div class="carousel-item  slider-item d-none">
+                            <p class="carouseltext-p1 d-none">
+                                ktü kontenjan                            </p>
+                            <p class="carouseltext-p2 d-none">
+                                ktü kontenjan                            </p>
+                        </div>
+                                                <div class="carousel-item  slider-item d-none">
+                            <p class="carouseltext-p1 d-none">
+                                içerik üreticiliği                            </p>
+                            <p class="carouseltext-p2 d-none">
+                                içerik üreticiliği                            </p>
+                        </div>
+                                                <div class="carousel-item  slider-item d-none">
+                            <p class="carouseltext-p1 d-none">
+                                Belge talep duyuru                            </p>
+                            <p class="carouseltext-p2 d-none">
+                                Belge talep duyuru                            </p>
+                        </div>
+                                                <div class="carousel-item  slider-item d-none">
+                            <p class="carouseltext-p1 d-none">
+                                Akademik Personel Görev Süresi Uzatımı                            </p>
+                            <p class="carouseltext-p2 d-none">
+                                                            </p>
+                        </div>
+                                                <div class="carousel-item  slider-item d-none">
+                            <p class="carouseltext-p1 d-none">
+                                kadro dışı çalışanlar artık pbs de                            </p>
+                            <p class="carouseltext-p2 d-none">
+                                kadro dışı çalışanlar artık pbs de                            </p>
+                        </div>
+                                                <div class="carousel-item  slider-item d-none">
+                            <p class="carouseltext-p1 d-none">
+                                dr öğretim üyesi süre uzatımı güncelleme                            </p>
+                            <p class="carouseltext-p2 d-none">
+                                dr öğretim üyesi süre uzatımı güncelleme                            </p>
+                        </div>
+                                                                    </div>
+                </div>
+                <!--
+				    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+				      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+				      <span class="visually-hidden">Previous</span>
+				    </button>
+				    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+				      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+				      <span class="visually-hidden">Next</span>
+				    </button>
+--> 
+            </div>
+            
+            <!--######### SLİDER ##############--> 
+        </div>
+    </div>
+</div>
+<div class="container-fluid icons-container">
+    <div class="container">
+        <div class="row">
+            <div class="col-auto">
+                <div class="row row-cols-7 row-cols-lg-7">
+                                        <a class="col-auto hb" href="https://ktu.edu.tr/personel/hizli-erisim" target="_blank" style="max-width: 182px;padding-right:30px;"> <i class="fas fa-grip-horizontal" style="font-size: 20px;"></i><br>
+                    <p class="p1">Hızlı Erişim</p>
+                    <p class="p2">Hızlı Erişim</p>
+                    <p class="p2">Hızlı Erişim</p>
+                    </a>
+                                        <a class="col-auto hb" href="https://www.ktu.edu.tr/personel/odullendirme-mekanizmamiz" target="_blank" style="max-width: 182px;padding-right:30px;"> <i class="fas fa-trophy" style="font-size: 20px;"></i><br>
+                    <p class="p1">Ödüllendirme</p>
+                    <p class="p2">Ödüllendirme</p>
+                    <p class="p2">Mekanizması</p>
+                    </a>
+                                        <a class="col-auto hb" href="https://online.ktu.edu.tr/" target="_blank" style="max-width: 182px;padding-right:30px;"> <i class="fas fa-hand-point-up" style="font-size: 20px;"></i><br>
+                    <p class="p1">Online Başvuru</p>
+                    <p class="p2">Personel Daire</p>
+                    <p class="p2">Başkanlığı </p>
+                    </a>
+                                        <a class="col-auto hb d-none d-md-block" href="https://www.ktu.edu.tr/personel/4-b-sozlesmeli-personelin-kadroya-gecis-islemleri" target="_blank" style="max-width: 182px;padding-right:30px;"> <i class="fab fa-schlix" style="font-size: 20px;"></i><br>
+                    <p class="p1">Kadroya Geçiş</p>
+                    <p class="p2">4/b Söz.personel</p>
+                    <p class="p2">Kadro Geçiş İşlemler</p>
+                    </a>
+                                        <a class="col-auto hb d-none d-md-block" href="https://www.ktu.edu.tr/personel/iup-is-gucu-uyum-programi" target="_blank" style="max-width: 182px;padding-right:30px;"> <i class="fab fa-confluence" style="font-size: 20px;"></i><br>
+                    <p class="p1">iup</p>
+                    <p class="p2">İş Gücü Uyum</p>
+                    <p class="p2">Programı</p>
+                    </a>
+                                        <a class="col-auto hb d-none d-lg-block" href="https://www.ktu.edu.tr/personel/bizeyazin" target="_blank" style="max-width: 182px;padding-right:30px;"> <i class="far fa-envelope" style="font-size: 20px;"></i><br>
+                    <p class="p1">Bize Yazın</p>
+                    <p class="p2">Personel Daire</p>
+                    <p class="p2">Başkanlığı </p>
+                    </a>
+                                        <a class="col-auto hb d-none d-xl-block" href="https://ubys.ktu.edu.tr/" target="_blank" style="max-width: 182px;padding-right:30px;"> <i class="fas fa-forward" style="font-size: 20px;"></i><br>
+                    <p class="p1">UBYS</p>
+                    <p class="p2">Öğretim Üyesi</p>
+                    <p class="p2">Başvuru Sistemi</p>
+                    </a>
+                                        <a class="col-auto hb d-none d-xxl-block" href="https://www.ktu.edu.tr/personel/izinrobotu" target="_blank" style="max-width: 182px;padding-right:30px;"> <i class="fas fa-robot" style="font-size: 20px;"></i><br>
+                    <p class="p1">İzin Robotu</p>
+                    <p class="p2">Personel Daire</p>
+                    <p class="p2">Başkanlığı </p>
+                    </a>
+                                    </div>
+            </div>
+            <div class="col-auto ms-auto d-none d-sm-block" style="padding: 0px;">
+                <button id="carousel-prev" data-bs-target="#mainCarousel" data-bs-slide="prev" type="button" class="btn btn-info carousel-button"  aria-label="Önceki"><i class="fas fa-angle-double-left"></i></button>
+                <br>
+                <button id="carousel-next" data-bs-target="#mainCarousel" data-bs-slide="next" type="button" class="btn btn-info carousel-button" aria-label="Sonraki"><i class="fas fa-angle-double-right"></i></button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ####################### DUYURULAR #####################################-->    
+    <div class="container-fluid duyuru_container" style="">
+		
+    	<div class="container">
+		  <div class="row">
+			<div class="col-12" style="padding:20px;padding-left:0px;">
+				<div class="solcizgi"></div>
+               	<div style="float:left;padding-top:7px;"><h1 class="sayfabaslik">duyurular</h1></div>
+		    </div>
+          </div>  
+ 		  
+		<div class="row">     
+          <div id="carousel-duyuru" class="carousel slide" data-bs-ride="false" style="padding: 0px;">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                	
+                    <div class="row" style="padding-left: 12px; padding-right: 12px;">
+
+
+
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/02092026-tarihli-4-d-surekli-isci-eski-hukumlu-tmy-ilani-neticesinde-goreve-baslatilacak-personel-duyurusu"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">13</h3>
+<p class="dp1">Kasım</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">02.09.2026 Tarihli 4/D Sürekli İşçi Eski Hükümlü/TMY ilanı Neticesinde Göreve Başlatılacak Personel Duyurusu</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/2026-ii-donem-nihai-muvafakat-sonuclari"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">13</h3>
+<p class="dp1">Kasım</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">2026/II. Dönem Nihai Muvafakat Sonuçları</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/04092026-tarihli-4-b-sozlesmeli-personel-alim-ilanina-iliskin-yedek-adaylara-duyuru-DK"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">10</h3>
+<p class="dp1">Kasım</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">04.09.2026 Tarihli 4/b Sözleşmeli Personel Alım İlanına İlişkin Yedek Adaylara Duyuru</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="akademi/duyuru/yapay-zeka-ve-dijital-donusum-yetkinlikleri-egitim-programi-basliyor"  target=_blank style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">09</h3>
+<p class="dp1">Kasım</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">Yapay Zekâ ve Dijital Dönüşüm Yetkinlikleri Eğitim Programı Başlıyor!</div>
+                        <p class="dp3">Memur Akademisi</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/09112026-tarihli-ogretim-gorevlisi-ilani"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">09</h3>
+<p class="dp1">Kasım</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">09.11.2026 Tarihli Öğretim Görevlisi İlanı</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/16112026-tarihinde-ise-baslatilacak-4-b-sozlesmeli-personel-duyurusu"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">06</h3>
+<p class="dp1">Kasım</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">16.11.2026 Tarihinde İşe Başlatılacak 4/B Sözleşmeli Personel Duyurusu</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    			
+			</div>    
+                </div>
+                <div class="carousel-item">
+                  
+                  <div class="row" style="padding-left: 12px; padding-right: 12px;" >
+            
+			<?
+		else :
+		?>
+
+
+
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/2026-ii-donem-muvafakat-sonuclari"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">03</h3>
+<p class="dp1">Kasım</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">2026/II. Dönem Muvafakat Sonuçları</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/04092026-tarihli-4-b-sozlesmeli-personel-alim-ilanina-iliskin-yedek-adaylara-duyuru-CT"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">28</h3>
+<p class="dp1">Ekim</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">04.09.2026 Tarihli 4/b Sözleşmeli Personel Alım İlanına İlişkin Yedek Adaylara Duyuru</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/yuksekogretim-kurumlarinda-emeklilik-yas-haddini-doldurmus-ogretim-uyelerinin-sozlesmeli-olarak-calistirilmasi"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">27</h3>
+<p class="dp1">Ekim</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">Yükseköğretim Kurumlarında Emeklilik Yaş Haddini Doldurmuş Öğretim Üyelerinin Sözleşmeli Olarak Çalıştırılması</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/04092026-4-b-sozlesmeli-personel-alim-ilani-ile-yerlesmeye-hak-kazananlar"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">27</h3>
+<p class="dp1">Ekim</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">04.09.2026 4/B Sözleşmeli Personel Alım İlanı İle Yerleşmeye Hak Kazananlar</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/04092026-tarihli-4-b-sozlesmeli-personel-alim-ilanina-iliskin-yedek-adaylara-duyuru"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">14</h3>
+<p class="dp1">Ekim</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">04.09.2026 Tarihli 4/b Sözleşmeli Personel Alım İlanına İlişkin Yedek Adaylara Duyuru</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/07092026-tarihli-4-d-surekli-isci-eski-hukumlu-tmy-alimi-ile-yerlesmeye-hak-kazanan-aday-duyurusu"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">20</h3>
+<p class="dp1">Ekim</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">07.09.2026 Tarihli 4/D Sürekli İşçi Eski Hükümlü/ TMY Alımı İle Yerleşmeye Hak Kazanan Aday Duyurusu</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    			
+			</div>    
+                </div>
+                <div class="carousel-item">
+                  
+                  <div class="row" style="padding-left: 12px; padding-right: 12px;" >
+            
+			<?
+		else :
+		?>
+
+
+
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/2026-ii-donem-muvafakat-talep-basvurulari-baslamistir"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">09</h3>
+<p class="dp1">Ekim</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">2026/II. Dönem Muvafakat Talep Başvuruları Başlamıştır</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/04092026-tarihli-4-b-sozlesmeli-personel-alim-ilani-basvuru-sureci-ve-dijital-erisim-verileri"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">18</h3>
+<p class="dp1">Eylül</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">04.09.2026 Tarihli 4/B Sözleşmeli Personel Alım İlanı Başvuru Süreci ve Dijital Erişim Verileri</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="akademi/duyuru/yetenek-havuzu-uygulamali-egitim-donemi-basliyor"  target=_blank style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">15</h3>
+<p class="dp1">Eylül</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">Yetenek Havuzu Uygulamalı Eğitim Dönemi Başlıyor</div>
+                        <p class="dp3">Memur Akademisi</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/02092026-tarihli-eski-hukumlu-tmy-surekli-isci-alimi-noter-kurasi-sonuclari"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">11</h3>
+<p class="dp1">Eylül</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">02.09.2026 Tarihli Eski Hükümlü/TMY Sürekli İşçi Alımı Noter Kurası Sonuçları</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/02092026-tarihli-2-adet-surekli-isci-eski-hukumlu-noter-kurasi-duyurusu"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">10</h3>
+<p class="dp1">Eylül</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">02.09.2026 Tarihli 2 Adet Sürekli İşçi (Eski Hükümlü) Noter Kurası Duyurusu</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+			<a class="col-12 col-sm-6 col-md-6 col-lg-4 d1 rounded" href="personel/duyuru/04092026-tarihli-4-b-sozlesmeli-personel-alim-ilani"  style="min-height: 105px; padding: 14px 25px; margin-bottom: 18px;text-decoration: none;">
+				<div class="row h-100">
+					<div class="col-auto align-self-end" style="padding-left:0px;">            
+
+<h3 class="dh3">04</h3>
+<p class="dp1">Eylül</p>						
+
+                   	</div>             
+                    <div class="col align-self-end" style=" padding-left:0px;">
+                        <div class="dp2" style="min-height: 54px;">04.09.2026 Tarihli 4/B Sözleşmeli Personel Alım İlanı</div>
+                        <p class="dp3">Personel Daire Başkanlığı</p>
+                    </div>
+               	</div>
+		    </a>
+            
+
+    
+     
+          </div>  
+                  
+                </div>
+              
+			  
+			  </div>
+          </div>     
+            
+			</div>    
+		  <div class="row">
+			<div class="col-12" style="text-align: center;color:#fff;margin-top:1rem; line-height: 1.1 !important;">        
+                 
+                 <a data-bs-target="#carousel-duyuru" data-bs-slide="prev" style="cursor:pointer; padding: 5px 0px 5px 0px;  position: relative; top: -5px;" aria-label="Önceki Sayfa"><span class="sr-only">Önceki Sayfa</span><i class="fas fa-angle-double-left" aria-hidden="true" style="font-size: 1.3rem;"></i></a> 
+                <span style=" width: 0; height: 0; border-bottom: 24px solid #1eafc7; border-left: 12px solid transparent; position: relative; top: -24px;"></span>
+				<a href="/personel/duyurular" style="border-top-left-radius: 5px; border-top-right-radius: 5px; position: relative; top: -4px;text-decoration:none; color:#FFF; padding: 5px 15px 5px 15px; background-color:#1eafc7; font-size: 14px;">Tüm Duyurular</a><span style=" width: 0; height: 0; border-bottom: 24px solid #1eafc7; border-right: 12px solid transparent; position: relative; top: -24px;"></span>
+                 <a data-bs-target="#carousel-duyuru" data-bs-slide="next" style="cursor:pointer; padding: 5px 0px 5px 0px;  position: relative; top: -5px;" aria-label="Sonraki Sayfa"><span class="sr-only">Sonraki Sayfa</span><i class="fas fa-angle-double-right" aria-hidden="true" style="font-size: 1.3rem;"></i></a>
+                
+		    </div>                        
+          </div>  
+		</div>        
+	</div>   
+    <style>
+	#prev_haber:hover{
+		background-color: #c14c48 !important;
+		color: #fff !important; 
+	}
+	#next_haber:hover{
+		background-color: #c14c48 !important;
+		color: #fff !important;
+	}
+</style>
+<!-- ####################### HABERLER #####################################-->        
+    <div class="container-fluid">
+    	<div class="container">
+		  <div class="row">
+			<div class="col-12" style="padding: 0px; padding-top:20px; padding-bottom: 20px;">
+				<div class="solcizgi" style="border-left:6px solid #00426a !important;"></div>
+               	<div style="float:left;padding-top:7px;">
+                	<h3 style=" font-family: HurmeBold; font-size: 30px;color:#00426a;">haberler</h3>
+               	</div>
+                <div style="float:right;padding-top:5px;font-size:15px;display: flex; align-items: center;"><a href="/personel/haberler" style="text-decoration: none;color:#c14c48; font-size: 14px;">Tüm Haberler </a>
+                                <a data-bs-target="#carousel-haber" data-bs-slide="prev" style="cursor:pointer;" aria-label="Önceki Sayfa"><span class="sr-only">Önceki Sayfa</span><i id="prev_haber" aria-hidden="true" class="fas fa-angle-double-left" style="font-size: 24px; padding: 10px 5px 10px 5px;color:#c14c48;"></i></a>
+                                <a data-bs-target="#carousel-haber" data-bs-slide="next" style="cursor:pointer;" aria-label="Sonraki Sayfa"><span class="sr-only">Sonraki Sayfa</span><i id="next_haber" aria-hidden="true" class="fas fa-angle-double-right" style="font-size: 24px; padding: 10px 5px 10px 5px;color:#c14c48;"></i></a>
+                </div>    
+		    </div>
+          </div>  
+        
+		<div class="row">
+        <div id="carousel-haber" class="carousel slide" data-bs-ride="false" style="padding: 0px; padding-bottom: 20px;">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+        
+        
+		  <div class="row">
+              
+              
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/akademi/haber/memur-akademisinde-yapay-zeka-ve-dijital-donusum-yetkinlikleri-egitim-programi-yogun-ilgiyle-basladi"  target=_blank style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/rTLFGi.jpg" class="img-fluid w-100" alt="Memur Akademisinde Yapay Zekâ ve Dijital Dönüşüm Yetkinlikleri Eğitim Programı Yoğun İlgiyle Başladı">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">Memur Akademisinde Yapay Zekâ ve Dijital Dönüşüm Yetkinlikleri Eğitim Programı Yoğun İlgiyle Başladı</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">2026-2027 Dönemi Genel Eğitimler kapsamında hazırlanan &quot;Yapay Zekâ ve Dijital Dönüşüm Yetkinlikleri Eğitim Programı&quot;, ilk eğitimiyle başladı.</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						19 Kasım 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+             
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/personel/haber/idari-personel-oryantasyon-surecinde-dijital-donusum-rehber-ve-tanitim-videosu-erisime-acildi"  style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/personel_a119c0f1e73e.jpg" class="img-fluid w-100" alt="İdari Personel Oryantasyon Sürecinde Dijital Dönüşüm: Rehber ve Tanıtım Videosu Erişime Açıldı">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">İdari Personel Oryantasyon Sürecinde Dijital Dönüşüm: Rehber ve Tanıtım Videosu Erişime Açıldı</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">Personel Daire Başkanlığımız tarafından, erişilebilir &#039;&#039;İdari Personel Oryantasyon El Kitabı&#039;&#039; hazırlandı.</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						28 Ekim 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+             
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/personel/haber/ktu-vi-yuksekogretimde-insan-kaynaklari-yonetimi-calistayinda-iyi-uygulama-orneklerini-paylasti"  style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/VjnoWa.jpg" class="img-fluid w-100" alt="KTÜ, VI. Yükseköğretimde İnsan Kaynakları Yönetimi Çalıştayı&#039;nda İyi Uygulama Örneklerini Paylaştı">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">KTÜ, VI. Yükseköğretimde İnsan Kaynakları Yönetimi Çalıştayı&#039;nda İyi Uygulama Örneklerini Paylaştı</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">YÖKAK tarafından iyi uygulama örneği olarak onaylanan Memur Akademisi, Yetenek Havuzu, Performans Yönetim Sistemi ve Ödül, çalıştay katılımcılarının yoğun ilgisini gördü</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						11 Ağustos 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+ 			
+			</div>    
+                </div>
+                <div class="carousel-item">
+                  
+                  <div class="row">
+            
+			<?
+		else :
+?>
+
+
+            
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/personel/haber/dairemiz-personelinin-arastirmaci-olarak-yer-aldigi-tubitak-3005-projesi-desteklenmeye-hak-kazandi"  style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/personel_LQx1O.jpg" class="img-fluid w-100" alt="Dairemiz Personelinin Araştırmacı Olarak Yer Aldığı TÜBİTAK 3005 Projesi Desteklenmeye Hak Kazandı">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">Dairemiz Personelinin Araştırmacı Olarak Yer Aldığı TÜBİTAK 3005 Projesi Desteklenmeye Hak Kazandı</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">Dairemiz personeli Öğr. Gör. Abdulsamet ÜÇÜNCÜ&#039;nün araştırmacı olarak yer aldığı proje, TÜBİTAK 3005 Programı kapsamında desteklenmeye hak kazandı.</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						28 Temmuz 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+             
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/akademi/haber/ktu-yetenek-havuzu-deneyimi-konya-teknik-universitesi-ile-paylasildi"  target=_blank style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/WfTV1L.jpg" class="img-fluid w-100" alt="KTÜ Yetenek Havuzu Deneyimi Konya Teknik Üniversitesi ile Paylaşıldı">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">KTÜ Yetenek Havuzu Deneyimi Konya Teknik Üniversitesi ile Paylaşıldı</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">YÖKAK tarafından örnek gösterilen KTÜ Yetenek Havuzu, Konya Teknik Üniversitesi ile gerçekleştirilen çevrim içi toplantıda tanıtıldı.</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						24 Temmuz 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+             
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/personel/haber/ktude-yilin-deger-katan-personeli-odulu-kubra-gurdogan-ustanin"  style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/personel_C5UpS.jpg" class="img-fluid w-100" alt="KTÜ&#039;de &#039;&#039;Yılın Değer Katan Personeli&#039;&#039; Ödülü Kübra GÜRDOĞAN USTA&#039;nın">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">KTÜ&#039;de &#039;&#039;Yılın Değer Katan Personeli&#039;&#039; Ödülü Kübra GÜRDOĞAN USTA&#039;nın</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">2025 yılı faaliyetleri kapsamında yapılan değerlendirme sonucunda, Başkanlığımız personeli Kübra GÜRDOĞAN USTA &quot;Yılın Değer Katan Personeli&quot; ödülüne layık görülmüştür.</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						15 Haziran 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+ 			
+			</div>    
+                </div>
+                <div class="carousel-item">
+                  
+                  <div class="row">
+            
+			<?
+		else :
+?>
+
+
+            
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/akademi/haber/memur-akademisi-odul-toreni-gerceklestirildi"  target=_blank style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/MPVWZK.jpg" class="img-fluid w-100" alt="Memur Akademisi Ödül Töreni Gerçekleştirildi">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">Memur Akademisi Ödül Töreni Gerçekleştirildi</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">Rektörlük yönetimi ve idari birim amirlerinin katılımıyla Fen Fakültesi Prof. Dr. Nazım TERZİOĞLU Amfisi&#039;nde &quot;Memur Akademisi Ödül Töreni&quot; gerçekleştirildi.</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						10 Haziran 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+             
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/personel/haber/suheda-camii-yararina-duzenlenen-kermese-personel-daire-baskanligindan-destek"  style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/personel_4jAA8.jpg" class="img-fluid w-100" alt="Şüheda Camii Yararına Düzenlenen Kermese Personel Daire Başkanlığından Destek">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">Şüheda Camii Yararına Düzenlenen Kermese Personel Daire Başkanlığından Destek</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">Kurumumuz ile Türkiye Harp Malulü Gaziler, Şehit Dul ve Yetimleri Derneği iş birliğinde, Trabzon Şüheda Camii yararına düzenlenen kermese Personel Daire Başkanlığı katılım sağlamıştır</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						05 Haziran 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+             
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/tr/haber/yillarin-emegine-tesekkur-emekli-personelimiz-icin-veda-toreni-duzenlendi"  target=_blank style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/tr_ZMbjy.jpg" class="img-fluid w-100" alt="Yılların Emeğine Teşekkür: Emekli Personelimiz İçin Veda Töreni Düzenlendi">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">Yılların Emeğine Teşekkür: Emekli Personelimiz İçin Veda Töreni Düzenlendi</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">Üniversitemizde uzun yıllar, özveriyle görev yapan ve emekliliğe ayrılan 59 personelimiz için Veda Töreni gerçekleştirildi.</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						12 Mayıs 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+ 			
+			</div>    
+                </div>
+                <div class="carousel-item">
+                  
+                  <div class="row">
+            
+			<?
+		else :
+?>
+
+
+            
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/akademi/haber/genel-egitimler-modul-2-sinavi-basariyla-gerceklestirildi"  target=_blank style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/akademi_3sVHW.jpg" class="img-fluid w-100" alt="Genel Eğitimler Modül 2 Sınavı Başarıyla Gerçekleştirildi">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">Genel Eğitimler Modül 2 Sınavı Başarıyla Gerçekleştirildi</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">Personelin kurumsal gelişimine katkı sağlamak amacıyla düzenlenen Genel Eğitimler Modül 2 Sınavı tamamlandı.</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						07 Mayıs 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+             
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/tr/haber/akademisyenlerimizin-profesorluk-unvanlari-belge-takdimiyle-taclandi"  target=_blank style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/tr_8k3Cy.jpg" class="img-fluid w-100" alt="Akademisyenlerimizin Profesörlük Ünvanları, Belge Takdimiyle Taçlandı">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">Akademisyenlerimizin Profesörlük Ünvanları, Belge Takdimiyle Taçlandı</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">Üniversitemizde &#039;Profesör&#039; kadrosuna ataması yapılan akademisyenlerimiz için &quot;Profesörlük Belgesi Takdim Töreni&quot; düzenlendi.</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						06 Mayıs 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+             
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/akademi/haber/yetenek-havuzu-teorik-egitim-sinavi-basariyla-tamamlandi"  target=_blank style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/akademi_9sQtO.jpg" class="img-fluid w-100" alt="Yetenek Havuzu Teorik Eğitim Sınavı Başarıyla Tamamlandı">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">Yetenek Havuzu Teorik Eğitim Sınavı Başarıyla Tamamlandı</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">Yetenek Havuzu Teorik Eğitim ve Sınav Takvimi kapsamında İktisadi ve İdari Bilimler Fakültesinde teorik eğitim sınavı gerçekleştirildi.</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						21 Nisan 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+ 			
+			</div>    
+                </div>
+                <div class="carousel-item">
+                  
+                  <div class="row">
+            
+			<?
+		else :
+?>
+
+
+            
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/akademi/haber/karadeniz-teknik-universitesi-ile-turkiye-is-kurumu-is-birliginde-yurutulen-is-gucu-uyum-programi-tamamlandi"  target=_blank style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/W1e9UW.jpg" class="img-fluid w-100" alt="Karadeniz Teknik Üniversitesi ile Türkiye İş Kurumu İş Birliğinde Yürütülen İş Gücü Uyum Programı Tamamlandı">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">Karadeniz Teknik Üniversitesi ile Türkiye İş Kurumu İş Birliğinde Yürütülen İş Gücü Uyum Programı Tamamlandı</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">Gerçekleştirilen eğitim programı kapsamında 25&#039;i aşkın eğitimler ile farkındalık oluşturuldu.</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						21 Nisan 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+             
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/akademi/haber/memur-akademisi-modul-2-sona-erdi-guvenli-e-ticaret-egitimi"  target=_blank style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/eylhW6.jpg" class="img-fluid w-100" alt="Memur Akademisi MODÜL-2 Sona Erdi: Güvenli E-Ticaret Eğitimi">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">Memur Akademisi MODÜL-2 Sona Erdi: Güvenli E-Ticaret Eğitimi</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">İktisadi ve İdari Bilimler Fakültesi öğretim üyesi Dr. Öğr. Üyesi Mustafa Bilgehan İMAMOĞLU tarafından Güvenli E-Ticaret eğitimi gerçekleştirildi. </p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						17 Nisan 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+             
+			<a class="col-12 col-sm-12 col-md-12 col-lg-4" href="/akademi/haber/yetenek-havuzu-yolculugunda-orgutsel-vatandaslik-egitimi-ile-taclanan-guclu-kapanis"  target=_blank style="padding:15px; cursor: pointer; text-decoration: none;">
+            	<div class="haberler h-100">
+                    <img src="https://www.ktu.edu.tr/slayt/haber/akademi_AVYNR.jpg" class="img-fluid w-100" alt="Yetenek Havuzu Yolculuğunda Örgütsel Vatandaşlık Eğitimi ile Taçlanan Güçlü Kapanış">
+                    <h5 style="margin-top: .5rem;font-size:18px; font-family: HurmeSemiBold;color:#00426a; min-height: 67px;">Yetenek Havuzu Yolculuğunda Örgütsel Vatandaşlık Eğitimi ile Taçlanan Güçlü Kapanış</h5>
+                    <p style="font-size:14px; color:#6d6e71; min-height: 63px;">Yükseköğretimde Örgütsel Vatandaşlık &quot;Üniversiteleri güçlü yapan 
+yalnızca resmi görev ve sorumluluklarımız değil, 
+aynı zamanda gönüllü katkılarımızdır.&quot;</p>
+                    <p style="font-size:14px;margin-bottom:0px;color:#c14c48;">
+						03 Nisan 2026						
+						
+					</p>
+                    <div class="row" style="padding-left:11px;padding-right:15px;">
+                        <div class="col-3" style="border-bottom:3px solid #c14c48;"></div>
+                        <div class="col-9" style="float:left;border-bottom:3px solid #e6e7e8;"></div> 
+                    </div>
+                </div>
+		    </a>
+			
+ 
+             
+          
+          </div> 
+          		</div>
+          </div>
+          </div>
+          </div>  
+ 		</div>        
+	</div>  <style>
+	#prev_etk:hover{
+		background-color: #fff !important;
+		color: #ef233c !important; 
+	}
+	#next_etk:hover{
+		background-color: #fff !important;
+		color: #ef233c !important;
+	}
+	
+	.etk .col:not(:first-child){
+		padding-left: 25px;
+	}
+</style>
+
+<!-- ####################### ETKİNLİKLER #####################################-->        
+    <div class="container-fluid" style="background-color: #ef233c;">
+    	<div class="container">
+		  <div class="row" style="padding-bottom: 30px;">
+			<div class="col-12" style="padding:0px; padding-top: 20px;background-color:#ef233c;">
+               	<div class="row">
+                	<div class="col-12">            
+                        <div class="solcizgi"></div>
+                        <div style="float:left;padding-top:7px;">
+							<h3 style=" font-family: HurmeBold; font-size: 30px;color:#fff;">etkinlikler</h3>
+                       	</div>
+        <div style="float:right;padding-top:5px;font-size:14px;color:#fff;display: flex;  align-items: center;">
+			<a href="/personel/etkinliktakvimi" style="text-decoration: none; color: #fff;" aria-label="Etkinlik Takvimi">Etkinlik Takvimi </a>&nbsp;
+			<a href="/personel/etkinliktakvimi" style="text-decoration: none; color: #fff;" aria-label="Etkinlik Takvimi"><i class="fa-solid fa-calendar-days" style="font-size: 24px; padding: 10px 25px 10px 5px;color:#fff;"></i></a>
+			<a href="/personel/etkinlikler" style="text-decoration: none; color: #fff;">Tüm Etkinlikler</a>
+                        <a data-bs-target="#carousel-etkinlik" data-bs-slide="prev" style="cursor:pointer;" aria-label="Önceki Sayfa"><span class="sr-only">Önceki Sayfa</span><i id="prev_etk" aria-hidden="true" class="fas fa-angle-double-left" style="font-size: 24px; padding: 10px 5px 10px 5px;color:#fff;"></i></a>
+                        <a data-bs-target="#carousel-etkinlik" data-bs-slide="next" style="cursor:pointer;" aria-label="Sonraki Sayfa"><span class="sr-only">Sonraki Sayfa</span><i id="next_etk" aria-hidden="true" class="fas fa-angle-double-right" style="font-size: 24px; padding: 10px 5px 10px 5px;color:#fff;"></i></a>               
+        </div>    
+
+                  	</div>
+				</div> 
+
+                <div id="carousel-etkinlik" class="carousel slide" data-bs-ride="false" style="margin-top: 20px;">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                                     
+               	<div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 etk">
+                    
+                     
+                	<a class="col" href="/akademi/etkinlik/iyi-prompt-nasil-yazilir"  target=_blank style=" cursor: pointer;border-right: solid #cd061e 1px;border-left: solid #fb5468 1px; text-decoration: none;">
+						<div class="row">
+												<div class="col-auto">                  
+	                        <div style="color:#fff;margin:0px; font-family: HurmeBold; font-size: 30px; line-height: 24px;">26</div>
+    	                    <p class="dp1" style="color: #ef233c;">Kasım</p>   
+                       	</div>
+							
+												</div>
+                        <div style="max-width: 298px;">
+            				
+							
+							<img src="https://www.ktu.edu.tr/slayt/etk/Bi0OS4.jpg" width="100%;" alt="İyi Prompt Nasıl Yazılır?">
+							
+                            <h5 style="margin-top: .5rem;font-size:16px; font-family: HurmeBold;color:#fff; min-height: 58px;">İyi Prompt Nasıl Yazılır?</h5>
+                            <p style="font-size:14px; line-height: 18px;color:#fff; min-height: 36px;">Memur Akademisinde Yetkinlik Dolu Eğitim Serisi</p> 
+                       	</div>
+                        <div class="row" style="color:#fff;">
+                            <div class="col-1" style="font-family: HurmeSemiBold; font-size: 14px;">     
+								<i class="fas fa-map-marker-alt"></i> 
+	                        </div>
+                            <div class="col-8" style="font-family: HurmeSemiBold; font-size: 14px;min-height: 42px;">     
+								 KTÜ Uzaktan Eğitim Sistemi	                        </div>
+                            <div class="col-3" style="font-family: HurmeSemiBold; font-size: 14px;">                            
+    	    	                <i class="fas fa-clock"></i> 10:30    
+                           	</div>                        
+                        </div>
+                    </a>
+                	
+                     
+                         
+                	<a class="col" href="/akademi/etkinlik/chatgpt"  target=_blank style=" cursor: pointer;border-right: solid #cd061e 1px;border-left: solid #fb5468 1px; text-decoration: none;">
+						<div class="row">
+												<div class="col-auto">                  
+	                        <div style="color:#fff;margin:0px; font-family: HurmeBold; font-size: 30px; line-height: 24px;">03</div>
+    	                    <p class="dp1" style="color: #ef233c;">Aralık</p>   
+                       	</div>
+							
+												<div class="col-auto">                    
+	                        <div style="color:#fff;margin:0px; font-family: HurmeBold; font-size: 30px; line-height: 24px;">04</div>
+    	                    <p class="dp1" style="color: #ef233c;">Ocak</p>   
+                       	</div>
+												</div>
+                        <div style="max-width: 298px;">
+            				
+							
+							<img src="https://www.ktu.edu.tr/slayt/etk/akademi_cc2edd67cefe.jpg" width="100%;" alt="ChatGPT">
+							
+                            <h5 style="margin-top: .5rem;font-size:16px; font-family: HurmeBold;color:#fff; min-height: 58px;">ChatGPT</h5>
+                            <p style="font-size:14px; line-height: 18px;color:#fff; min-height: 36px;">Memur Akademisinde Yetkinlik Dolu Eğitim Serisi</p> 
+                       	</div>
+                        <div class="row" style="color:#fff;">
+                            <div class="col-1" style="font-family: HurmeSemiBold; font-size: 14px;">     
+								<i class="fas fa-map-marker-alt"></i> 
+	                        </div>
+                            <div class="col-8" style="font-family: HurmeSemiBold; font-size: 14px;min-height: 42px;">     
+								 BTK Akademi	                        </div>
+                            <div class="col-3" style="font-family: HurmeSemiBold; font-size: 14px;">                            
+    	    	                <i class="fas fa-clock"></i> 08:00    
+                           	</div>                        
+                        </div>
+                    </a>
+                	
+                     
+                         
+                	<a class="col" href="/akademi/etkinlik/dijital-etik-ve-veri-gizliligi"  target=_blank style=" cursor: pointer;border-right: solid #cd061e 1px;border-left: solid #fb5468 1px; text-decoration: none;">
+						<div class="row">
+												<div class="col-auto">                  
+	                        <div style="color:#fff;margin:0px; font-family: HurmeBold; font-size: 30px; line-height: 24px;">10</div>
+    	                    <p class="dp1" style="color: #ef233c;">Aralık</p>   
+                       	</div>
+							
+												</div>
+                        <div style="max-width: 298px;">
+            				
+							
+							<img src="https://www.ktu.edu.tr/slayt/etk/akademi_8b89c7333c6e.jpg" width="100%;" alt="Dijital Etik ve Veri Gizliliği">
+							
+                            <h5 style="margin-top: .5rem;font-size:16px; font-family: HurmeBold;color:#fff; min-height: 58px;">Dijital Etik ve Veri Gizliliği</h5>
+                            <p style="font-size:14px; line-height: 18px;color:#fff; min-height: 36px;">Memur Akademisinde Yetkinlik Dolu Eğitim Serisi</p> 
+                       	</div>
+                        <div class="row" style="color:#fff;">
+                            <div class="col-1" style="font-family: HurmeSemiBold; font-size: 14px;">     
+								<i class="fas fa-map-marker-alt"></i> 
+	                        </div>
+                            <div class="col-8" style="font-family: HurmeSemiBold; font-size: 14px;min-height: 42px;">     
+								 KTÜ Nazım Terzioğlu Amfisi	                        </div>
+                            <div class="col-3" style="font-family: HurmeSemiBold; font-size: 14px;">                            
+    	    	                <i class="fas fa-clock"></i> 10:30    
+                           	</div>                        
+                        </div>
+                    </a>
+                	
+                     
+                         
+                	<a class="col" href="/akademi/etkinlik/uretken-yapay-zeka-ile-sunum-hazirlama"  target=_blank style=" cursor: pointer;border-right: solid #cd061e 1px;border-left: solid #fb5468 1px; text-decoration: none;">
+						<div class="row">
+												<div class="col-auto">                  
+	                        <div style="color:#fff;margin:0px; font-family: HurmeBold; font-size: 30px; line-height: 24px;">17</div>
+    	                    <p class="dp1" style="color: #ef233c;">Aralık</p>   
+                       	</div>
+							
+												<div class="col-auto">                    
+	                        <div style="color:#fff;margin:0px; font-family: HurmeBold; font-size: 30px; line-height: 24px;">04</div>
+    	                    <p class="dp1" style="color: #ef233c;">Ocak</p>   
+                       	</div>
+												</div>
+                        <div style="max-width: 298px;">
+            				
+							
+							<img src="https://www.ktu.edu.tr/slayt/etk/akademi_0f9e9a03c705.jpg" width="100%;" alt="Üretken Yapay Zekâ ile Sunum Hazırlama">
+							
+                            <h5 style="margin-top: .5rem;font-size:16px; font-family: HurmeBold;color:#fff; min-height: 58px;">Üretken Yapay Zekâ ile Sunum Hazırlama</h5>
+                            <p style="font-size:14px; line-height: 18px;color:#fff; min-height: 36px;">Memur Akademisinde Yetkinlik Dolu Eğitim Serisi</p> 
+                       	</div>
+                        <div class="row" style="color:#fff;">
+                            <div class="col-1" style="font-family: HurmeSemiBold; font-size: 14px;">     
+								<i class="fas fa-map-marker-alt"></i> 
+	                        </div>
+                            <div class="col-8" style="font-family: HurmeSemiBold; font-size: 14px;min-height: 42px;">     
+								 BTK Akademi	                        </div>
+                            <div class="col-3" style="font-family: HurmeSemiBold; font-size: 14px;">                            
+    	    	                <i class="fas fa-clock"></i> 08:00    
+                           	</div>                        
+                        </div>
+                    </a>
+                	
+                     
+               			
+			</div>    
+                </div>
+                <div class="carousel-item">
+                  
+                  <div class="row row-cols-1 row-cols-sm-1 row-cols-md-2 row-cols-lg-4 etk">
+            
+			<?
+		else :
+?>
+
+
+          
+                	<a class="col" href="/akademi/etkinlik/power-bi-ile-veri-analizi-ve-raporlama"  target=_blank style=" cursor: pointer;border-right: solid #cd061e 1px;border-left: solid #fb5468 1px; text-decoration: none;">
+						<div class="row">
+												<div class="col-auto">                  
+	                        <div style="color:#fff;margin:0px; font-family: HurmeBold; font-size: 30px; line-height: 24px;">24</div>
+    	                    <p class="dp1" style="color: #ef233c;">Aralık</p>   
+                       	</div>
+							
+												</div>
+                        <div style="max-width: 298px;">
+            				
+							
+							<img src="https://www.ktu.edu.tr/slayt/etk/akademi_db406ff5774b.jpg" width="100%;" alt="Power BI ile Veri Analizi ve Raporlama">
+							
+                            <h5 style="margin-top: .5rem;font-size:16px; font-family: HurmeBold;color:#fff; min-height: 58px;">Power BI ile Veri Analizi ve Raporlama</h5>
+                            <p style="font-size:14px; line-height: 18px;color:#fff; min-height: 36px;">Memur Akademisinde Yetkinlik Dolu Eğitim Serisi</p> 
+                       	</div>
+                        <div class="row" style="color:#fff;">
+                            <div class="col-1" style="font-family: HurmeSemiBold; font-size: 14px;">     
+								<i class="fas fa-map-marker-alt"></i> 
+	                        </div>
+                            <div class="col-8" style="font-family: HurmeSemiBold; font-size: 14px;min-height: 42px;">     
+								 KTÜ Uzaktan Eğitim Sistemi	                        </div>
+                            <div class="col-3" style="font-family: HurmeSemiBold; font-size: 14px;">                            
+    	    	                <i class="fas fa-clock"></i> 10:30    
+                           	</div>                        
+                        </div>
+                    </a>
+                	
+                     
+                         
+                	<a class="col" href="/akademi/etkinlik/kamuda-yapay-zeka-donusumu"  target=_blank style=" cursor: pointer;border-right: solid #cd061e 1px;border-left: solid #fb5468 1px; text-decoration: none;">
+						<div class="row">
+												<div class="col-auto">                  
+	                        <div style="color:#fff;margin:0px; font-family: HurmeBold; font-size: 30px; line-height: 24px;">31</div>
+    	                    <p class="dp1" style="color: #ef233c;">Aralık</p>   
+                       	</div>
+							
+												<div class="col-auto">                    
+	                        <div style="color:#fff;margin:0px; font-family: HurmeBold; font-size: 30px; line-height: 24px;">04</div>
+    	                    <p class="dp1" style="color: #ef233c;">Ocak</p>   
+                       	</div>
+												</div>
+                        <div style="max-width: 298px;">
+            				
+							
+							<img src="https://www.ktu.edu.tr/slayt/etk/akademi_49c8d8fee811.jpg" width="100%;" alt="Kamuda Yapay Zekâ Dönüşümü">
+							
+                            <h5 style="margin-top: .5rem;font-size:16px; font-family: HurmeBold;color:#fff; min-height: 58px;">Kamuda Yapay Zekâ Dönüşümü</h5>
+                            <p style="font-size:14px; line-height: 18px;color:#fff; min-height: 36px;">Memur Akademisinde Yetkinlik Dolu Eğitim Serisi</p> 
+                       	</div>
+                        <div class="row" style="color:#fff;">
+                            <div class="col-1" style="font-family: HurmeSemiBold; font-size: 14px;">     
+								<i class="fas fa-map-marker-alt"></i> 
+	                        </div>
+                            <div class="col-8" style="font-family: HurmeSemiBold; font-size: 14px;min-height: 42px;">     
+								 BTK Akademi	                        </div>
+                            <div class="col-3" style="font-family: HurmeSemiBold; font-size: 14px;">                            
+    	    	                <i class="fas fa-clock"></i> 08:00    
+                           	</div>                        
+                        </div>
+                    </a>
+                	
+                     
+               
+             
+                    
+              	</div>                    
+		    
+            </div>
+
+           
+            </div>
+            </div>
+            
+            </div>
+            
+            
+                 
+          </div>  
+ 		</div>
+		
+		
+			
+				
+				
+			
+	</div>      
+<!-- ####################### Sayılarla KTÜ #####################################-->        
+    <div class="container-fluid">
+    	<div class="container">
+		  <div class="row">
+			<div class="col-12" style="padding:15px 0px;">
+				<div style="float:left;width:20px;height:50px;border-left:6px solid #00426a;"></div>
+               	<div style="float:left;padding-top:7px;">
+					<a href="http://sayilarla.ktu.edu.tr/" target="_blank" style="color:#00426a; font-family: HurmeBold; font-size: 32px; text-decoration: none;">
+					sayılarla personel					</a>
+				</div>
+		    </div>
+          </div>  
+ 		</div>
+    	<div class="container">        
+		  <div class="row row-cols-8">		
+								<!-- Akademik Personel -->
+					<div class="col d-none d-md-block" style="padding:15px;color: #00426a;text-align:center;">
+                        <i class="fas fa-user-graduate" style="font-size: 60px;"></i> 
+						<h3 class="counter sayi">2158</h3>
+						<p class="sayibaslik">Akademik Personel</p>   
+		    		</div>     
+					<div class="col d-block d-sm-none" style="padding:10px;color: #00426a;text-align:center;">
+                        <i class="fas fa-user-graduate" style="font-size: 30px;"></i> 
+						<h3 class="counter sayi2">2158</h3>
+						<p class="sayibaslik2">Akademik Personel</p>   
+		    		</div>   
+					<!-- İdari Personel -->
+					<div class="col d-none d-md-block" style="padding:15px;color: #00426a;text-align:center;">
+                        <i class="fas fa-user-tie" style="font-size: 60px;"></i> 
+						<h3 class="counter sayi">2034</h3>
+						<p class="sayibaslik">İdari Personel</p>   
+		    		</div>     
+					<div class="col d-block d-sm-none" style="padding:10px;color: #00426a;text-align:center;">
+                        <i class="fas fa-user-tie" style="font-size: 30px;"></i> 
+						<h3 class="counter sayi2">2034</h3>
+						<p class="sayibaslik2">İdari Personel</p>   
+		    		</div>   			  
+					<!-- Sözleşmeli Personel -->
+					<div class="col d-none d-md-block" style="padding:15px;color: #00426a;text-align:center;">
+                        <i class="fa-solid fa-user-tag" style="font-size: 60px;"></i> 
+						<h3 class="counter sayi">107</h3>
+						<p class="sayibaslik">Sözleşmeli Personel</p>   
+		    		</div>     
+					<div class="col d-block d-sm-none" style="padding:10px;color: #00426a;text-align:center;">
+                        <i class="fa-solid fa-user-tag" style="font-size: 30px;"></i> 
+						<h3 class="counter sayi2">107</h3>
+						<p class="sayibaslik2">Sözleşmeli Personel</p>   
+		    		</div>   	
+					<!-- İşçi Personel -->
+					<div class="col d-none d-md-block" style="padding:15px;color: #00426a;text-align:center;">
+                        <i class="fa-solid fa-users-gear" style="font-size: 60px;"></i> 
+						<h3 class="counter sayi">1292</h3>
+						<p class="sayibaslik">Sürekli İşçi Personel</p>   
+		    		</div>     
+					<div class="col d-block d-sm-none" style="padding:10px;color: #00426a;text-align:center;">
+                        <i class="fa-solid fa-users-gear" style="font-size: 30px;"></i> 
+						<h3 class="counter sayi2">1292</h3>
+						<p class="sayibaslik2">Sürekli İşçi Personel</p>   
+		    		</div>   			  
+					<!-- Sözleşmeli Bilişim Personeli -->
+					<div class="col d-none d-md-block" style="padding:15px;color: #00426a;text-align:center;">
+                        <i class="fa-classic fa-solid fa-user-secret" style="font-size: 60px;"></i> 
+						<h3 class="counter sayi">4</h3>
+						<p class="sayibaslik">Sözleşmeli Bilişim Personeli</p>   
+		    		</div>     
+					<div class="col d-block d-sm-none" style="padding:10px;color: #00426a;text-align:center;">
+                        <i class="fa-classic fa-solid fa-user-secret" style="font-size: 30px;"></i> 
+						<h3 class="counter sayi2">4</h3>
+						<p class="sayibaslik2">Sözleşmeli Bilişim Personeli</p>   
+		    		</div>   			  			  
+			  			  
+					<div class="col d-none d-md-block" style="padding:15px;color: #00426a;text-align:center;">
+						                        <i class="fa-solid fa-user-plus" style="font-size: 60px;"></i> 
+						<h3 class="counter sayi">10</h3>
+						<p class="sayibaslik">Sözleşmeli Yabancı Uyruklu Akademik Personel</p>   
+								    		</div>   
+					<div class="col d-block d-sm-none" style="padding:10px;color: #00426a;text-align:center;">
+						                        <i class="fa-solid fa-user-plus" style="font-size: 30px;"></i> 
+						<h3 class="counter sayi2">10</h3>
+						<p class="sayibaslik2">Sözleşmeli Yabancı Uyruklu Akademik Personel</p>   
+								    		</div> 			  
+
+                      		                        
+
+              		                        
+          </div>  
+ 		</div>			  
+	</div> 
+
+<script>
+$(document).ready(function() {
+
+$('.counter').each(function () {
+$(this).prop('Counter',0).animate({
+Counter: $(this).text()
+}, {
+duration: 5000,
+easing: 'swing',
+step: function (now) {
+$(this).text(Math.ceil(now));
+}
+});
+});
+
+});
+</script>  <footer class="mt-auto">
+
+<!-- ####################### ALT KISIM #####################################-->    
+    <div class="container-fluid" style="background-color:#e6e7e8;">
+    	<div class="container">
+		  <div class="row">
+			<div class="col-12" style="height:15px;">
+		    </div>
+          </div>  
+ 		</div>
+  	</div>
+   	<div class="container-fluid" style="background-color:#2d2d2d;">
+    	<div class="container" style="padding-top: 20px !important; padding-bottom: 10px !important;">        
+		  <div class="row row-cols-auto">
+			<div class="col-12 col-sm-12 col-md-5 col-lg-3">
+            	<img src="../../image/Logo2.png" style="max-width:325px;" alt="KTÜ">
+	    	</div>                        
+			<div class="col-12 col-sm-12 col-md-4 col-lg-3" style="color: #fff;margin-top:20px;">
+				<div style="display: flex; align-items: center;">
+				            	<div style="float:left;margin-right:5px;font-size:24px;"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></div>
+                <div style="float:left;font-size:12px;">Karadeniz Teknik Üniversitesi Personel Dairesi Başkanlığı Kanuni Kampüsü 61080 TRABZON</div>
+								</div>
+                <div style="display: flex; align-items: center;">
+				                <div style="float:left;margin-right:5px;font-size:24px;"><i class="fas fa-at" aria-hidden="true"></i></div>
+                <div style="float:left;font-size:12px;">personeldairesi@ktu.edu.tr</div>
+								</div>
+	    	</div>                        
+			<div class="col-12 col-sm-12 col-md-3 col-lg-2" style="color: #fff;margin-top:20px;font-size:24px;">
+            	<div style="display: flex; align-items: center;">
+								<div style="float:left;margin-right:5px;font-size:24px;">
+					<i class="fas fa-phone-square-alt"></i>
+				</div> 
+				<div style="float:left;font-size:12px;">	
+					+90 462 377 2108                                        				</div>
+								</div> 
+            	<div style="display: flex; align-items: center;">
+										<div style="float:left;margin-right:5px;font-size:24px;">
+						<i class="fas fa-fax"></i>
+					</div> 	
+					<div style="float:left;font-size:12px;">	
+						 +90 462 377 4292					</div>
+									</div>    
+	    	</div>                        
+			                       
+			<div class="col-auto ms-auto" style="color: #fff;margin-top:20px;">
+            	<a href="https://apps.apple.com/tr/app/kt%C3%BC-mobil/id6474992226" target="_blank"><img class="float-end" src="https://www.ktu.edu.tr/image/app-store.png" style="margin-left: 15px;" alt="KTÜ Mobil IOS"></a>
+				<a href="https://play.google.com/store/apps/details?id=ktu.mobil&hl=tr" target="_blank"><img class="float-end" src="https://www.ktu.edu.tr/image/google-play.png" alt="KTÜ Mobil Android"></a>            
+	    	
+            	            
+	    	</div>                                                                                    
+          </div>  
+		  <div class="row row-cols-auto">
+			<div class="col-md-4" style="padding:15px;color: #fff; font-size: 12px; display: flex; align-items: center;">
+				© Karadeniz Teknik Üniversitesi. Tüm Hakları Saklıdır 
+	    	</div>                        
+			<div class="col-auto ms-auto" style="padding:15px;color: #fff; font-size: 32px;">
+				            	            	            	            					<!-- <a class="sosyalmedya" href="/radyotv" target=_blank>
+					<i class="fas fa-broadcast-tower"></i>
+				</a>
+				<a class="sosyalmedya" href="/ktuhaber" target=_blank>
+					<i class="fas fa-newspaper"></i>
+				</a>-->
+	    	</div>  
+		   </div>	                      
+          
+ 		</div>
+	</div> 
+</footer>
+
+<button onclick="topFunction()" id="topbtn" title="Başa Dön"><i class="fas fa-angle-up"></i></button>  
+
+
+<script>
+// Get the button
+let mybutton = document.getElementById("topbtn");
+
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+}
+</script>
+
+
+<!-- Chatbase config -->
+<script>
+window.embeddedChatbotConfig = {
+  chatbotId: "Of87fRe2d2D4cO5ZIpjCw",
+  domain: "www.chatbase.co"
+};
+</script>
+
+<!-- Chatbase embed -->
+<script
+  src="https://www.chatbase.co/embed.min.js"
+  chatbotId="Of87fRe2d2D4cO5ZIpjCw"
+  domain="www.chatbase.co"
+  defer>
+</script>
+
+<style>
+/* Scroll to top butonu */
+#topbtn{
+    right: 20px;
+    bottom: 20px;
+}
+
+/* Chatbot – arka plan YOK */
+#chatbase-bubble-button {
+    position: fixed !important;
+    right: 20px;
+    left: auto !important;
+
+    width: 56px !important;
+    height: 56px !important;
+
+    background: transparent !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    padding: 0 !important;
+    z-index: 9999;
+}
+
+/* Chatbase kendi SVG ikonunu gizle */
+#chatbase-bubble-button svg {
+    display: none !important;
+}
+
+/* PNG ikon + parlama efekti */
+#chatbase-bubble-button img {
+    width: 56px;
+    height: 56px;
+
+    filter: drop-shadow(0 0 6px rgba(0, 66, 106, 0.5));
+    animation: glowPulse 2.4s infinite ease-in-out;
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover efekti */
+#chatbase-bubble-button:hover img {
+    filter: drop-shadow(0 0 14px rgba(0, 66, 106, 0.9));
+    transform: scale(1.05);
+}
+
+/* Parlama animasyonu */
+@keyframes glowPulse {
+    0% {
+        filter: drop-shadow(0 0 5px rgba(0, 66, 106, 0.4));
+    }
+    50% {
+        filter: drop-shadow(0 0 12px rgba(0, 66, 106, 0.85));
+    }
+    100% {
+        filter: drop-shadow(0 0 5px rgba(0, 66, 106, 0.4));
+    }
+}
+</style>
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+  const interval = setInterval(() => {
+    const chatBtn  = document.getElementById("chatbase-bubble-button");
+    const scrollBtn = document.getElementById("topbtn");
+
+    if (!chatBtn || !scrollBtn) return;
+
+    /* PNG EKLE */
+    chatBtn.innerHTML = "";
+
+    const img = document.createElement("img");
+    img.src = "/image/webicon.png";
+    img.alt = "Chatbot";
+    img.style.width = "112px";
+    img.style.height = "112px";
+    img.style.objectFit = "contain";
+    img.style.pointerEvents = "none";
+
+    chatBtn.appendChild(img);
+
+    /* 🔥 TOPBTN GÖRÜNÜRSE SOLA KAY */
+   function updatePosition() {
+  const scrollVisible = scrollBtn.style.display === "block";
+
+  if (scrollVisible) {
+    // TOP OK VAR → SOLA + YUKARI KAY
+    chatBtn.style.right  = "135px";
+    chatBtn.style.bottom = "60px";
+  } else {
+    // TOP OK YOK → NORMAL AMA YUKARIDA
+    chatBtn.style.right  = "55px";
+    chatBtn.style.bottom = "60px";
+  }
+}
+
+
+    updatePosition();
+    window.addEventListener("scroll", updatePosition);
+
+    clearInterval(interval);
+  }, 300);
+
+});
+</script>
+
+
+<script src="/assets/js/bootstrap.bundle.min.js"></script>
+
+
+<style>
+/* OpenDyslexic Fontu */
+@import url('https://fonts.cdnfonts.com/css/opendyslexic');
+
+/* Okuma &#x015E;eridi */
+#ktuReadingLine { 
+    position: fixed !important; top: 0; left: 0; right: 0; height: 4px; 
+    background: #d81b60; opacity: 0.8; z-index: 99999999; 
+    display: none; pointer-events: none; 
+}
+body.ktu-acc-reading-line ~ #ktuReadingLine { display: block !important; }
+
+html, body {
+    overflow-x: hidden !important;
+    max-width: 100vw !important;
+}
+
+/* ==========================================
+   1. WIDGET ST&#x0130;LLER&#x0130;
+   ========================================== */
+#ktuAccessWidget {
+    position: fixed !important;
+    top: calc(50% - 27px) !important;
+    right: 0 !important;
+    width: 55px !important;
+    height: 55px !important;
+    background: #00426a !important;
+    border-radius: 15px 0 0 15px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    cursor: pointer !important;
+    box-shadow: -4px 0 15px rgba(0, 0, 0, 0.2) !important;
+    z-index: 99999999 !important;
+    transition: width 0.3s ease, background 0.3s ease !important;
+}
+
+#ktuAccessWidget:hover { 
+    width: 70px !important; 
+    background: #005b94 !important; 
+}
+
+#ktuAccessWidget i { 
+    color: #ffffff !important; 
+    font-size: 24px !important;
+}
+
+#ktuAccessWidget.active-mode { 
+    background: #d81b60 !important; 
+    animation: ktuPulse 2s infinite !important; 
+}
+
+@keyframes ktuPulse { 
+    0% { box-shadow: 0 0 0 0 rgba(216, 27, 96, 0.4); } 
+    70% { box-shadow: 0 0 0 10px rgba(216, 27, 96, 0); } 
+    100% { box-shadow: 0 0 0 0 rgba(216, 27, 96, 0); } 
+}
+
+/* ==========================================
+   2. YAN PANEL ST&#x0130;LLER&#x0130; (SAG TASMA SORUNU COZULDU)
+   ========================================== */
+#ktuAccessComponent {
+    position: fixed !important; top: 0 !important; right: 0 !important;
+    transform: translateX(110%) !important; visibility: hidden !important;
+    width: 400px !important; max-width: 100vw !important; height: 100vh !important; height: 100dvh !important;
+    background: #ffffff !important; box-shadow: -5px 0 25px rgba(0,0,0,0.1) !important;
+    z-index: 99999998 !important; transition: transform 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), visibility 0.4s !important;
+    display: flex !important; flex-direction: column !important; 
+    font-family: 'Source Sans Pro', sans-serif !important;
+    border-top-left-radius: 24px !important; border-bottom-left-radius: 24px !important;
+}
+#ktuAccessComponent.active { transform: translateX(0) !important; visibility: visible !important; }
+
+.ktu-acc-header { padding: 20px !important; border-bottom: 1px solid rgba(0,0,0,0.05) !important; display: flex !important; justify-content: space-between !important; align-items: center !important; }
+.ktu-acc-title { font-size: 1.2rem !important; font-weight: 700 !important; color: #00426a !important; display: flex !important; align-items: center !important; gap: 10px !important; margin: 0 !important; }
+#ktuAccCloseBtn { background: #f4f6f8 !important; border: none !important; width: 35px !important; height: 35px !important; border-radius: 50% !important; cursor: pointer !important; color: #d81b60 !important; font-size: 1.2rem !important; }
+.ktu-acc-tabs { display: flex !important; background: #f4f6f8 !important; padding: 5px !important; margin: 15px 20px 0 !important; border-radius: 12px !important; }
+.ktu-acc-tab-btn { flex: 1 !important; background: transparent !important; border: none !important; padding: 10px !important; border-radius: 8px !important; font-weight: 700 !important; color: #718096 !important; cursor: pointer !important; font-size: 0.9rem !important; }
+.ktu-acc-tab-btn.active { background: #ffffff !important; color: #00426a !important; box-shadow: 0 2px 8px rgba(0,0,0,0.05) !important; }
+.ktu-acc-body { flex: 1 !important; overflow-y: auto !important; padding: 20px !important; }
+.ktu-acc-tab-content { display: none !important; }
+.ktu-acc-tab-content.active { display: block !important; animation: ktuFadeIn 0.3s ease; }
+@keyframes ktuFadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+.ktu-profile-card-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 12px !important; }
+.ktu-profile-card { background: #ffffff !important; border: 2px solid #f0f2f5 !important; border-radius: 16px !important; padding: 15px 10px !important; display: flex !important; flex-direction: column !important; align-items: center !important; text-align: center !important; cursor: pointer !important; transition: all 0.3s ease !important; position: relative !important; }
+.ktu-profile-card:hover { border-color: #00426a !important; background: #fafafa !important; }
+.ktu-profile-card.active { border-color: #d81b60 !important; background: #fff5f8 !important; }
+.ktu-profile-card.active::after { content: "\f058"; font-family: "Font Awesome 6 Free"; font-weight: 900; position: absolute; top: 8px; right: 8px; color: #d81b60; font-size: 1.1rem; }
+.ktu-p-icon { width: 44px !important; height: 44px !important; border-radius: 10px !important; display: flex !important; align-items: center !important; justify-content: center !important; margin-bottom: 8px !important; font-size: 1.4rem !important; }
+.vision-bg { background: rgba(0, 66, 106, 0.1) !important; color: #00426a !important; }
+.dys-bg { background: rgba(216, 27, 96, 0.1) !important; color: #d81b60 !important; }
+.adhd-bg { background: rgba(245, 158, 11, 0.1) !important; color: #d97706 !important; }
+.epi-bg { background: rgba(16, 185, 129, 0.1) !important; color: #059669 !important; }
+.ktu-p-title { font-size: 0.85rem !important; font-weight: 700 !important; color: #2d3748 !important; line-height: 1.2 !important; }
+
+.ktu-acc-grid { display: grid !important; grid-template-columns: 1fr 1fr !important; gap: 8px !important; }
+.ktu-acc-btn-item { background: #f8f9fa !important; border: 1px solid #e2e8f0 !important; border-radius: 10px !important; padding: 10px !important; text-align: center !important; cursor: pointer !important; display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; gap: 5px !important; color: #4a5568 !important; font-size: 0.85rem !important; font-weight: 600 !important; }
+.ktu-acc-btn-item.active { background: #00426a !important; border-color: #00426a !important; color: #ffffff !important; }
+.ktu-acc-section-title { font-size: 0.85rem !important; font-weight: 700 !important; color: #4a5568 !important; margin-top: 15px !important; margin-bottom: 10px !important; border-bottom: 1px dashed #e2e8f0 !important; padding-bottom: 5px !important; text-transform: uppercase !important; }
+
+.ktu-acc-footer { padding: 15px 20px !important; border-top: 1px solid rgba(0,0,0,0.05) !important; display: flex !important; gap: 10px !important; background: #fff !important; }
+.ktu-btn-save { flex: 2 !important; background: #00426a !important; color: white !important; border: none !important; padding: 12px !important; border-radius: 10px !important; font-weight: 700 !important; cursor: pointer !important; }
+.ktu-btn-reset { flex: 1 !important; background: #e2e8f0 !important; color: #4a5568 !important; border: none !important; padding: 12px !important; border-radius: 10px !important; font-weight: 700 !important; cursor: pointer !important; }
+
+/* ==========================================
+   3. F&#x0130;LTRE KATMANLARI (PANEL IKONLARI KORUNUR)
+   ========================================== */
+body.ktu-acc-protanopia { filter: url('#p-filter') !important; }
+body.ktu-acc-deuteranopia { filter: url('#d-filter') !important; }
+body.ktu-acc-tritanopia { filter: url('#t-filter') !important; }
+body.ktu-acc-adhd { filter: saturate(0.75) !important; }
+body.ktu-acc-epilepsy { filter: saturate(0.5) contrast(0.85) brightness(0.95) !important; }
+body.ktu-acc-grayscale { filter: grayscale(100%) !important; }
+body.ktu-acc-colorblind-contrast { filter: contrast(1.3) saturate(1.2) brightness(1.1) !important; }
+
+/* ==========================================
+   AGRESIF KOYU MOD (DESENLERI VE BEYAZLIKLARI SILER)
+   ========================================== */
+body.ktu-acc-dark,
+body.ktu-acc-dark *:not(#ktuAccessComponent):not(#ktuAccessComponent *):not(#ktuAccessWidget):not(#ktuAccessWidget *):not(i):not(svg) {
+    background-color: #1a1a1a !important; /* Ger�ek�i koyu gri */
+    background-image: none !important; /* YENI: Arkadaki t�m petek desenlerini ve beyazliklari zorla siler */
+    color: #e0e0e0 !important; /* G�z yormayan a�ik gri yazi */
+    border-color: #333333 !important; 
+    box-shadow: none !important; 
+    text-shadow: none !important;
+}
+
+/* Koyu modda linklerin okunabilmesi i�in */
+body.ktu-acc-dark a:not(#ktuAccessComponent *) {
+    color: #8ab4f8 !important; 
+    text-decoration: underline !important; 
+}
+
+/* Koyu modda g�rsellerin (haber fotolari vs.) g�z almamasi i�in */
+body.ktu-acc-dark img {
+    opacity: 0.85 !important;
+    transition: opacity 0.3s ease;
+}
+body.ktu-acc-dark img:hover {
+    opacity: 1 !important; 
+}
+
+#ktuAccFilterOverlay {
+    position: fixed !important; top: 0 !important; left: 0 !important; 
+    width: 100vw !important; height: 100vh !important;
+    pointer-events: none !important; z-index: 99999990 !important; 
+    display: none;
+}
+body.ktu-acc-blue-light ~ #ktuAccFilterOverlay { 
+    display: block !important; background: rgba(255, 165, 0, 0.12) !important; mix-blend-mode: multiply !important; 
+}
+
+/* ==========================================
+   4. T&#x0130;POGRAF&#x0130; VE DINAMIK YAZI KONTRASTI
+   ========================================== */
+body.ktu-acc-motor a, body.ktu-acc-motor button,
+body.ktu-acc-motor input[type="submit"], body.ktu-acc-motor .btn { 
+    padding: 15px 25px !important; margin: 8px !important; 
+    border: 3px solid #00426a !important; text-decoration: underline !important; 
+    font-weight: bold !important; display: inline-block !important; 
+    line-height: 1.5 !important; min-height: 44px !important; min-width: 44px !important;
+}
+
+/* AZ G�REN AGRESIF MOD: ARKA PLANA DOKUNMADAN YAZIYI ZIT RENGINE D�N�ST�R�R */
+body.ktu-acc-vision h1, body.ktu-acc-vision h2, body.ktu-acc-vision h3, body.ktu-acc-vision h4, 
+body.ktu-acc-vision p, body.ktu-acc-vision span, body.ktu-acc-vision a, body.ktu-acc-vision li, 
+body.ktu-acc-vision td, body.ktu-acc-vision th, body.ktu-acc-vision label, body.ktu-acc-vision button { 
+    color: #ffffff !important; 
+    mix-blend-mode: difference !important;
+    font-weight: 900 !important; 
+    letter-spacing: 0.05em !important; 
+    background: transparent !important;
+}
+body.ktu-acc-vision a { text-decoration: underline !important; }
+#ktuAccessWidget *, #ktuAccessComponent * { mix-blend-mode: normal !important; }
+body.ktu-acc-vision img, body.ktu-acc-vision video, body.ktu-acc-vision iframe, body.ktu-acc-vision .carousel-inner {
+    filter: contrast(100%) saturate(100%) !important;
+}
+
+/* OTO KONTRAST SINIFLARI */
+body.ktu-acc-auto-contrast .ktu-auto-dark-bg,
+body.ktu-acc-auto-contrast .ktu-auto-dark-bg * {
+    color: #ffffff !important;
+    text-shadow: 0 1px 4px rgba(0,0,0,0.85) !important;
+}
+body.ktu-acc-auto-contrast .ktu-auto-light-bg,
+body.ktu-acc-auto-contrast .ktu-auto-light-bg * {
+    color: #000000 !important;
+    text-shadow: 0 1px 3px rgba(255,255,255,0.7) !important;
+}
+
+body.ktu-acc-dyslexia-font, body.ktu-acc-dyslexia-font * { 
+    font-family: 'OpenDyslexic', 'Comic Sans MS', cursive, sans-serif !important; 
+    letter-spacing: 0.05em !important; word-spacing: 0.1em !important; 
+}
+
+/* 2. ADIM (D�ZELTME): GER�EKTEN KOCAMAN VE SIVRI IMLE� */
+/* Sitenin t�m link ve buton kodlarini ezer, her yerde bu kocaman sivri oku g�sterir */
+body.ktu-acc-cursor-big,
+body.ktu-acc-cursor-big *:not(#ktuAccessComponent):not(#ktuAccessComponent *) { 
+    /* YENI: Garanti b�y�yen, sivri u�lu, beyaz kenarli siyah dev ok (64x64 px) */
+    cursor: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 32 32"%3E%3Cpath d="M2.5,2.5 L2.5,30 L10,21 L22,21 L2.5,2.5 Z" fill="black" stroke="white" stroke-width="1.5"/%3E%3C/svg%3E') 2.5 2.5, auto !important; 
+}
+
+body.ktu-acc-stop-animations *, body.ktu-acc-stop-animations *::before { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+body.ktu-acc-text-spacing * { letter-spacing: 0.12em !important; word-spacing: 0.2em !important; }
+body.ktu-acc-line-height * { line-height: 2.2 !important; }
+body.ktu-acc-align-left * { text-align: left !important; }
+body.ktu-acc-highlight-titles h1, body.ktu-acc-highlight-titles h2, 
+body.ktu-acc-highlight-titles h3, body.ktu-acc-highlight-titles h4 { 
+    border-left: 8px solid #d81b60 !important; padding-left: 15px !important; background: rgba(216,27,96,0.08) !important; 
+}
+body.ktu-acc-hide-images img, body.ktu-acc-hide-images video { opacity: 0.1 !important; filter: blur(5px) !important; }
+
+#ktuAccOverlay { 
+    position: fixed !important; top: 0 !important; left: 0 !important; 
+    width: 100% !important; height: 100% !important; 
+    background: rgba(15, 23, 42, 0.4) !important; backdrop-filter: blur(3px) !important; 
+    z-index: 99999997 !important; display: none; opacity: 0; 
+}
+body.ktu-acc-overlay-active ~ #ktuAccOverlay { display: block !important; opacity: 1 !important; }
+
+/* ==========================================
+   GOOGLE TRANSLATE GIZLEME CSS EKLENTISI
+   ========================================== */
+.goog-te-banner-frame.skiptranslate, #goog-gt-tt { display: none !important; }
+body { top: 0px !important; position: static !important; }
+.goog-tooltip, .goog-tooltip:hover { display: none !important; }
+.goog-text-highlight { background-color: transparent !important; border: none !important; box-shadow: none !important; }
+
+@media (max-width: 768px) {
+    #ktuAccessComponent { width: 100% !important; height: 100dvh !important; transform: translateX(110%) !important; border-radius: 0 !important; }
+    #ktuAccessComponent.active { transform: translateX(0) !important; }
+    #ktuAccessWidget { width: 45px !important; height: 45px !important; border-radius: 12px 0 0 12px !important; top: calc(50% - 22px) !important; }
+    #ktuAccessWidget i { font-size: 20px !important; }
+    #ktuAccessWidget:hover { width: 55px !important; }
+    .ktu-profile-card-grid { grid-template-columns: 1fr 1fr !important; }
+    .ktu-acc-grid { gap: 6px !important; }
+    .ktu-acc-btn-item { padding: 8px 5px !important; font-size: 0.75rem !important; }
+}
+</style>
+
+<svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+    <defs>
+        <filter id="p-filter"><feColorMatrix type="matrix" values="0.567 0.433 0 0 0  0.558 0.442 0 0 0  0 0.242 0.758 0 0  0 0 0 1 0" /></filter>
+        <filter id="d-filter"><feColorMatrix type="matrix" values="0.625 0.375 0 0 0  0.7 0.3 0 0 0  0 0.3 0.7 0 0  0 0 0 1 0" /></filter>
+        <filter id="t-filter"><feColorMatrix type="matrix" values="0.95 0.05 0 0 0  0 0.433 0.567 0 0 0  0 0.475 0.525 0 0  0 0 0 1 0" /></filter>
+    </defs>
+</svg>
+
+<div id="ktuAccFilterOverlay"></div>
+
+<div id="ktuAccessWidget" title="Eri&#x015F;ilebilirlik Ara&#x00E7;lar&#x0131;">
+    <i class="fas fa-universal-access"></i>
+</div>
+
+<div id="ktuAccOverlay"></div>
+
+<div id="ktuAccessComponent">
+    <div class="ktu-acc-header">
+        <h3 class="ktu-acc-title"><i class="fas fa-universal-access"></i> Eri&#x015F;ilebilirlik</h3>
+        <button class="ktu-acc-close" id="ktuAccCloseBtn"><i class="fas fa-times"></i></button>
+    </div>
+
+    <div class="ktu-acc-tabs">
+        <button class="ktu-acc-tab-btn active" data-tab="tab-profiles">H&#x0131;zl&#x0131; Profiller</button>
+        <button class="ktu-acc-tab-btn" data-tab="tab-custom">&#x00D6;zel Ayarlar</button>
+    </div>
+
+   <div class="ktu-acc-body">
+        
+        <div id="tab-profiles" class="ktu-acc-tab-content active">
+            <div class="ktu-profile-card-grid">
+                <div class="ktu-profile-card" data-profile="vision"><div class="ktu-p-icon vision-bg"><i class="fas fa-low-vision"></i></div><span class="ktu-p-title">Az G&#x00F6;ren</span></div>
+                <div class="ktu-profile-card" data-profile="dyslexia"><div class="ktu-p-icon dys-bg"><i class="fas fa-book-reader"></i></div><span class="ktu-p-title">Disleksi</span></div>
+                <div class="ktu-profile-card" data-profile="adhd"><div class="ktu-p-icon adhd-bg"><i class="fas fa-brain"></i></div><span class="ktu-p-title">DEHB</span></div>
+                <div class="ktu-profile-card" data-profile="epilepsy"><div class="ktu-p-icon epi-bg"><i class="fas fa-bolt"></i></div><span class="ktu-p-title">Epilepsi</span></div>
+                <div class="ktu-profile-card" data-profile="colorblind"><div class="ktu-p-icon vision-bg"><i class="fas fa-eye-slash"></i></div><span class="ktu-p-title">Renk K&#x00F6;rl&#x00FC;&#x011F;&#x00FC;</span></div>
+                <div class="ktu-profile-card" data-profile="cataract"><div class="ktu-p-icon dys-bg"><i class="fas fa-adjust"></i></div><span class="ktu-p-title">Katarakt</span></div>
+                <div class="ktu-profile-card" data-profile="elderly"><div class="ktu-p-icon adhd-bg"><i class="fas fa-blind"></i></div><span class="ktu-p-title">Ya&#x015F;l&#x0131; Dostu</span></div>
+                <div class="ktu-profile-card" data-profile="motor"><div class="ktu-p-icon epi-bg"><i class="fas fa-hand-paper"></i></div><span class="ktu-p-title">Motor Bozukluk</span></div>
+            </div>
+        </div>
+        <div id="tab-custom" class="ktu-acc-tab-content">
+            
+            <h4 class="ktu-acc-section-title" style="color: #00426a;"><i class="fas fa-language"></i> Dil Se&#x00E7;enekleri</h4>
+            <div class="ktu-acc-grid" style="grid-template-columns: repeat(4, 1fr); margin-bottom: 25px; gap: 6px;">
+                <div class="ktu-acc-btn-item ktu-lang-btn active" data-lang="tr"><span>T&#x00FC;rk&#x00E7;e</span></div>
+                <div class="ktu-acc-btn-item ktu-lang-btn" data-lang="en"><span>English</span></div>
+                <div class="ktu-acc-btn-item ktu-lang-btn" data-lang="ar"><span>&#x627;&#x644;&#x639;&#x631;&#x628;&#x64A;&#x629;</span></div>
+                <div class="ktu-acc-btn-item ktu-lang-btn" data-lang="ru"><span>&#x420;&#x443;&#x441;&#x441;&#x43A;&#x438;&#x439;</span></div>
+                <div class="ktu-acc-btn-item ktu-lang-btn" data-lang="de"><span>Deutsch</span></div>
+                <div class="ktu-acc-btn-item ktu-lang-btn" data-lang="fr"><span>Fran&#x00E7;ais</span></div>
+                <div class="ktu-acc-btn-item ktu-lang-btn" data-lang="es"><span>Espa&#x00F1;ol</span></div>
+                <div class="ktu-acc-btn-item ktu-lang-btn" data-lang="pt"><span>Portugu&#x00EA;s</span></div>
+            </div>
+
+            <h4 class="ktu-acc-section-title">Renk K&#x00F6;rl&#x00FC;&#x011F;&#x00FC; Filtreleri</h4>
+            <div class="ktu-acc-grid" style="grid-template-columns: repeat(3, 1fr);">
+                <div class="ktu-acc-btn-item" data-action="protanopia"><span style="display:block; width:24px; height:24px; border-radius:50%; background:linear-gradient(to right, #e74c3c, #2ecc71); margin-bottom:3px;"></span><span>K&#x0131;rm&#x0131;z&#x0131;-Ye&#x015F;il</span></div>
+                <div class="ktu-acc-btn-item" data-action="deuteranopia"><span style="display:block; width:24px; height:24px; border-radius:50%; background:linear-gradient(to right, #2ecc71, #e74c3c); margin-bottom:3px;"></span><span>Ye&#x015F;il-K&#x0131;rm&#x0131;z&#x0131;</span></div>
+                <div class="ktu-acc-btn-item" data-action="tritanopia"><span style="display:block; width:24px; height:24px; border-radius:50%; background:linear-gradient(to right, #3498db, #f1c40f); margin-bottom:3px;"></span><span>Mavi-Sar&#x0131;</span></div>
+				 <div class="ktu-acc-btn-item" data-action="colorblind-contrast"><i class="fas fa-adjust"></i><span>Y&#x00FC;ksek Kontrast</span></div>
+            </div>
+
+            <h4 class="ktu-acc-section-title">Arka Plan ve Kontrast</h4>
+            <div class="ktu-acc-grid">
+                
+                <div class="ktu-acc-btn-item" data-action="dark"><i class="fas fa-moon"></i><span>Koyu Mod</span></div>
+                <div class="ktu-acc-btn-item" data-action="blue-light"><i class="fas fa-eye"></i><span>Mavi I&#x015F;&#x0131;k</span></div>
+                <div class="ktu-acc-btn-item" data-action="grayscale"><i class="fas fa-tint-slash"></i><span>Gri Tonlama</span></div>
+                <div class="ktu-acc-btn-item" data-action="hide-images"><i class="fas fa-image"></i><span>Resim Gizle</span></div>
+            </div>
+
+            <h4 class="ktu-acc-section-title">Yaz&#x0131; ve Metin</h4>
+            <div class="ktu-acc-grid" style="grid-template-columns: 1fr 1fr 1fr;">
+                <div class="ktu-acc-btn-item" data-action="font-minus"><span>K&#x00FC;&#x00E7;&#x00FC;lt (-)</span></div>
+                <div class="ktu-acc-btn-item active" data-action="font-reset"><span>Normal (A)</span></div>
+                <div class="ktu-acc-btn-item" data-action="font-plus"><span>B&#x00FC;y&#x00FC;t (+)</span></div>
+            </div>
+            <div class="ktu-acc-grid" style="margin-top: 8px;">
+                <div class="ktu-acc-btn-item" data-action="dyslexia-font"><span>Disleksi Font</span></div>
+                <div class="ktu-acc-btn-item" data-action="text-spacing"><span>Metin Bo&#x015F;lu&#x011F;u</span></div>
+                <div class="ktu-acc-btn-item" data-action="line-height"><span>Sat&#x0131;r Aral&#x0131;&#x011F;&#x0131;</span></div>
+                <div class="ktu-acc-btn-item" data-action="align-left"><span>Sola Yasla</span></div>
+            </div>
+            
+            <h4 class="ktu-acc-section-title">Okuma Ara&#x00E7;lar&#x0131;</h4>
+            <div class="ktu-acc-grid">
+                <div class="ktu-acc-btn-item" data-action="screen-reader"><i class="fas fa-volume-up"></i><span>Sesli Oku (T&#x0131;kla)</span></div>
+                <div class="ktu-acc-btn-item" data-action="reading-line"><i class="fas fa-ruler-horizontal"></i><span>Okuma &#x015E;eridi</span></div>
+                <div class="ktu-acc-btn-item" data-action="highlight-titles"><i class="fas fa-heading"></i><span>Ba&#x015F;l&#x0131;k Vurgusu</span></div>
+                <div class="ktu-acc-btn-item" data-action="cursor-big"><span>B&#x00FC;y&#x00FC;k &#x0130;mle&#x00E7;</span></div>
+            </div>
+        </div>
+        </div>
+
+    <div class="ktu-acc-footer">
+        <button class="ktu-btn-reset" id="ktuAccResetBtn"><i class="fas fa-trash-alt"></i> T&#x00FC;m&#x00FC;n&#x00FC; S&#x0131;f&#x0131;rla</button>
+        <button class="ktu-btn-save" id="ktuAccSaveBtn">Kapat</button>
+    </div>
+</div>
+
+<div id="ktuReadingLine" class="ktu-reading-line"></div>
+
+<div id="google_translate_element" style="display:none;"></div>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({pageLanguage: 'tr', autoDisplay: false}, 'google_translate_element');
+  }
+</script>
+<script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script>
+(function() {
+    document.addEventListener("DOMContentLoaded", function() {
+        
+        var uiElements = ['ktuAccessWidget', 'ktuAccessComponent', 'ktuAccOverlay', 'ktuAccFilterOverlay', 'ktuReadingLine'];
+        uiElements.forEach(function(id) {
+            var el = document.getElementById(id);
+            if (el && el.parentElement === document.body) {
+                document.documentElement.appendChild(el);
+            }
+        });
+
+        var accWidget = document.getElementById('ktuAccessWidget');
+        var accPanel = document.getElementById('ktuAccessComponent');
+        var bodyObj = document.body;
+        var speechTimeout;
+        var synth = window.speechSynthesis;
+        var isScreenReaderActive = false;
+
+        var globalDomObserver = null;
+        var autoContrastEnabled = false;
+        var fontStep = 0;
+        var fontMultiplier = [1, 1.15, 1.30, 1.50, 1.75, 2.0];
+        var targetTags = 'p, span, a, h1, h2, h3, h4, h5, h6, li, td, th, label, button, strong, em, b, i, small, div';
+        var colorblindFilters = ['protanopia', 'deuteranopia', 'tritanopia'];
+        
+        function forceWidgetPosition() {
+            if (!accWidget) return;
+            var isMobile = window.innerWidth <= 768;
+            var topValue = isMobile ? 'calc(50% - 22px)' : 'calc(50% - 27px)';
+            accWidget.style.setProperty('top', topValue, 'important');
+        }
+        window.addEventListener('resize', forceWidgetPosition);
+        forceWidgetPosition();
+        
+        function removeOtherColorblindFilters(activeFilter) {
+            for (var i = 0; i < colorblindFilters.length; i++) {
+                if (colorblindFilters[i] !== activeFilter) {
+                    bodyObj.classList.remove('ktu-acc-' + colorblindFilters[i]);
+                    var otherBtn = document.querySelector('[data-action="' + colorblindFilters[i] + '"]');
+                    if (otherBtn) otherBtn.classList.remove('active');
+                }
+            }
+        }
+
+        /* -------------------------------------------
+           DOM G�ZLEMCISI
+           ------------------------------------------- */
+        function processElement(element) {
+            if (autoContrastEnabled) applyContrastToElement(element);
+            if (fontStep > 0) applyFontToElement(element);
+        }
+
+        function startDomObserver() {
+            if (globalDomObserver) return;
+            globalDomObserver = new MutationObserver(function(mutations) {
+                if (!autoContrastEnabled && fontStep === 0) return;
+                for (var i = 0; i < mutations.length; i++) {
+                    var mutation = mutations[i];
+                    for (var j = 0; j < mutation.addedNodes.length; j++) {
+                        var node = mutation.addedNodes[j];
+                        if (node.nodeType === 1 && !node.closest('#ktuAccessComponent') && !node.closest('#ktuAccessWidget') && !node.closest('#ktu-quick-access-wrapper')) {
+                            processElement(node);
+                            var children = node.querySelectorAll(targetTags);
+                            for (var k = 0; k < children.length; k++) processElement(children[k]);
+                        }
+                    }
+                }
+            });
+            globalDomObserver.observe(document.body, { childList: true, subtree: true });
+        }
+
+        function stopDomObserver() {
+            if (globalDomObserver && !autoContrastEnabled && fontStep === 0) {
+                globalDomObserver.disconnect();
+                globalDomObserver = null;
+            }
+        }
+
+        /* -------------------------------------------
+           FONT HESAPLAMA SISTEMI
+           ------------------------------------------- */
+        function applyFontToElement(el) {
+            if (!el || el.closest('#ktuAccessComponent') || el.closest('#ktuAccessWidget') || el.closest('#ktu-quick-access-wrapper')) return;
+            var tag = el.tagName.toLowerCase();
+            if (targetTags.split(', ').indexOf(tag) === -1) return;
+            
+            var hasDirectText = false;
+            for (var i = 0; i < el.childNodes.length; i++) {
+                if (el.childNodes[i].nodeType === 3 && el.childNodes[i].textContent.trim().length > 0) { hasDirectText = true; break; }
+            }
+            if (!hasDirectText && el.children.length > 0 && tag !== 'button') return;
+            
+            if (fontStep === 0) {
+                if (el.hasAttribute('data-ktu-font')) { el.style.removeProperty('font-size'); }
+            } else {
+                var origSize = el.getAttribute('data-ktu-font');
+                if (!origSize) {
+                    var compSize = window.getComputedStyle(el).fontSize;
+                    origSize = parseFloat(compSize);
+                    if (!isNaN(origSize) && origSize > 0) { el.setAttribute('data-ktu-font', origSize); }
+                }
+                if (origSize) { el.style.setProperty('font-size', (origSize * fontMultiplier[fontStep]) + 'px', 'important'); }
+            }
+        }
+
+        function applyGlobalFont() {
+            var elements = document.querySelectorAll(targetTags);
+            for (var i = 0; i < elements.length; i++) { applyFontToElement(elements[i]); }
+        }
+
+        function stepFontUp() { if(fontStep < 5) fontStep++; applyFontStep(); }
+        function stepFontDown() { if(fontStep > 0) fontStep--; applyFontStep(); }
+        function resetFont() { fontStep = 0; applyFontStep(); }
+        
+        function applyFontStep() {
+            applyGlobalFont();
+            var fontBtns = document.querySelectorAll('[data-action^="font-"]');
+            for (var i = 0; i < fontBtns.length; i++) fontBtns[i].classList.remove('active');
+            if(fontStep === 0) { 
+                var resetBtn = document.querySelector('[data-action="font-reset"]'); 
+                if(resetBtn) resetBtn.classList.add('active'); 
+                stopDomObserver();
+            } else if(fontStep > 0) { 
+                var plusBtn = document.querySelector('[data-action="font-plus"]'); 
+
+                if(plusBtn) plusBtn.classList.add('active'); 
+                startDomObserver();
+            }
+            saveSettings();
+        }
+
+        /* -------------------------------------------
+           DINAMIK YAZI RENGI SISTEMI (Oto Kontrast)
+           ------------------------------------------- */
+        function getBackgroundColor(element) {
+            var el = element;
+            while (el && el.nodeType === 1) {
+                var bg = window.getComputedStyle(el).backgroundColor;
+                if (bg && bg !== 'rgba(0, 0, 0, 0)' && bg !== 'transparent') {
+                    var match = bg.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)(?:,\s*([\d.]+))?\)/);
+                    if (match) {
+                        var alpha = match[4];
+                        if (alpha === undefined || parseFloat(alpha) > 0) {
+                            return bg; 
+                        }
+                    }
+                }
+                el = el.parentElement;
+            }
+            return 'rgb(255, 255, 255)'; 
+        }
+        
+        function applyContrastToElement(el) {
+            if (!el || el.nodeType !== 1 || el.closest('#ktuAccessComponent') || el.closest('#ktuAccessWidget') || el.closest('#ktu-quick-access-wrapper')) return;
+            var tag = el.tagName.toLowerCase();
+            if (targetTags.split(', ').indexOf(tag) === -1) return;
+            
+            var hasDirectText = false;
+            for (var i = 0; i < el.childNodes.length; i++) {
+                if (el.childNodes[i].nodeType === 3 && el.childNodes[i].textContent.trim().length > 0) { hasDirectText = true; break; }
+            }
+            if (!hasDirectText && el.children.length > 0 && tag !== 'button') return;
+            
+            var bgColor = getBackgroundColor(el);
+            var match = bgColor.match(/rgba?\((\d+),\s*(\d+),\s*(\d+)/);
+            var brightness = 255; 
+            
+            if (match) {
+                var r = parseInt(match[1]), g = parseInt(match[2]), b = parseInt(match[3]);
+                brightness = (r * 299 + g * 587 + b * 114) / 1000;
+            }
+            
+            el.classList.remove('ktu-auto-dark-bg', 'ktu-auto-light-bg');
+            if (brightness < 128) { 
+                el.classList.add('ktu-auto-dark-bg'); 
+            } else { 
+                el.classList.add('ktu-auto-light-bg'); 
+            }
+        }
+
+        function removeContrastFromElement(el) {
+            el.classList.remove('ktu-auto-dark-bg', 'ktu-auto-light-bg');
+        }
+
+        function applyAutoContrast() {
+            var elements = document.querySelectorAll(targetTags);
+            for (var i = 0; i < elements.length; i++) { applyContrastToElement(elements[i]); }
+        }
+        function clearAutoContrast() {
+            var elements = document.querySelectorAll('.ktu-auto-dark-bg, .ktu-auto-light-bg');
+            for (var i = 0; i < elements.length; i++) { removeContrastFromElement(elements[i]); }
+        }
+        function enableAutoContrast() { autoContrastEnabled = true; applyAutoContrast(); startDomObserver(); }
+        function disableAutoContrast() { autoContrastEnabled = false; clearAutoContrast(); stopDomObserver(); }
+
+        /* -------------------------------------------
+           SISTEM KAYIT VE Y�KLEME
+           ------------------------------------------- */
+        function saveSettings() {
+            try {
+                localStorage.setItem('ktuAccClasses', bodyObj.className);
+                localStorage.setItem('ktuAccFontStep', fontStep);
+                localStorage.setItem('ktuAccAutoContrast', autoContrastEnabled);
+                var activeProfile = document.querySelector('.ktu-profile-card.active');
+                localStorage.setItem('ktuAccActiveProfile', activeProfile ? activeProfile.getAttribute('data-profile') : '');
+            } catch(e) {}
+            checkWidgetStatus();
+
+        }
+        
+        function loadSettings() {
+            try {
+                var savedClasses = localStorage.getItem('ktuAccClasses');
+                var savedFont = localStorage.getItem('ktuAccFontStep');
+                var savedProfile = localStorage.getItem('ktuAccActiveProfile');
+                var savedAutoContrast = localStorage.getItem('ktuAccAutoContrast');
+                
+                if(savedClasses) bodyObj.className = savedClasses;
+                if(savedFont) { fontStep = parseInt(savedFont); applyFontStep(); }
+                
+                var allBtns = document.querySelectorAll('.ktu-acc-btn-item:not(.ktu-lang-btn)');
+                for (var i = 0; i < allBtns.length; i++) {
+                    var action = allBtns[i].getAttribute('data-action');
+                    if(action === 'font-plus' || action === 'font-minus' || action === 'font-reset') continue;
+                    if(bodyObj.classList.contains('ktu-acc-' + action)) allBtns[i].classList.add('active');
+                }
+                
+                if(savedProfile) {
+                    var profileCard = document.querySelector('.ktu-profile-card[data-profile="' + savedProfile + '"]');
+                    if(profileCard && bodyObj.classList.contains('ktu-acc-' + savedProfile)) profileCard.classList.add('active');
+                }
+                
+                if(savedAutoContrast === 'true') { 
+                    var btn = document.querySelector('[data-action="auto-contrast"]');
+                    if(btn) btn.classList.add('active');
+                    enableAutoContrast(); 
+                }
+                if(bodyObj.classList.contains('ktu-acc-screen-reader')) { isScreenReaderActive = true; document.addEventListener('click', readTextOnClick); }
+            } catch(e) {}
+            checkWidgetStatus();
+        }
+        loadSettings();
+
+        /* MEN� KONTROLLERI */
+        function openAll() { accPanel.classList.add('active'); bodyObj.classList.add('ktu-acc-overlay-active'); bodyObj.style.overflow = 'hidden'; }
+        function closeAll() { accPanel.classList.remove('active'); bodyObj.classList.remove('ktu-acc-overlay-active'); bodyObj.style.overflow = ''; saveSettings(); }
+        
+        accWidget.addEventListener('click', openAll);
+        document.getElementById('ktuAccCloseBtn').addEventListener('click', closeAll);
+        document.getElementById('ktuAccOverlay').addEventListener('click', closeAll);
+
+        /* SEKMELER */
+        var tabBtns = document.querySelectorAll('.ktu-acc-tab-btn');
+        for (var t = 0; t < tabBtns.length; t++) {
+            tabBtns[t].addEventListener('click', function() {
+                var allTabBtns = document.querySelectorAll('.ktu-acc-tab-btn');
+                for (var a = 0; a < allTabBtns.length; a++) allTabBtns[a].classList.remove('active');
+                var allTabs = document.querySelectorAll('.ktu-acc-tab-content');
+                for (var b = 0; b < allTabs.length; b++) allTabs[b].classList.remove('active');
+                this.classList.add('active');
+                document.getElementById(this.getAttribute('data-tab')).classList.add('active');
+            });
+        }
+
+        /* ==========================================
+           DIL BUTONLARI (G�NCELLENMIS GOOGLE TRANSLATE ENTEGRASYONU)
+           ========================================== */
+        var langBtns = document.querySelectorAll('.ktu-lang-btn');
+        var currentLang = 'tr';
+        var cookieMatch = document.cookie.match(/googtrans=\/tr\/([a-z]{2})/);
+        if (cookieMatch && cookieMatch[1]) {
+            currentLang = cookieMatch[1];
+        }
+
+        for (var l = 0; l < langBtns.length; l++) {
+            langBtns[l].classList.remove('active');
+            if (langBtns[l].getAttribute('data-lang') === currentLang) {
+                langBtns[l].classList.add('active');
+                document.documentElement.lang = currentLang;
+            }
+
+            langBtns[l].addEventListener('click', function() {
+                var selectedLang = this.getAttribute('data-lang');
+                
+                if (selectedLang === 'tr') {
+                    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;";
+                    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=." + document.domain + "; path=/;";
+                    document.cookie = "googtrans=; expires=Thu, 01 Jan 1970 00:00:00 UTC; domain=" + document.domain + "; path=/;";
+                } else {
+                    document.cookie = "googtrans=/tr/" + selectedLang + "; path=/;";
+                    document.cookie = "googtrans=/tr/" + selectedLang + "; domain=." + document.domain + "; path=/;";
+                }
+                
+                window.location.reload();
+            });
+        }
+
+        /* PROFIL VE AKSIYON Y�NETIMI */
+        var profileActions = {
+            'vision': ['vision', 'auto-contrast', 'cursor-big', 'highlight-titles', 'line-height'],
+            'dyslexia': ['dyslexia-font', 'text-spacing', 'line-height', 'align-left', 'blue-light'],
+            'adhd': ['adhd', 'stop-animations', 'highlight-titles', 'reading-line'],
+            'epilepsy': ['epilepsy', 'stop-animations', 'blue-light'],
+            'colorblind': ['colorblind-contrast', 'colorblind-pattern', 'auto-contrast', 'highlight-titles'],
+            'cataract': ['auto-contrast', 'blue-light', 'cursor-big'],
+            'elderly': ['cursor-big', 'reading-line', 'stop-animations', 'auto-contrast'],
+            'motor': ['motor', 'cursor-big', 'highlight-titles']
+        };
+
+        function activateAction(action) {
+            var btn = document.querySelector('[data-action="' + action + '"]');
+            if(btn) btn.classList.add('active');
+            if (colorblindFilters.indexOf(action) !== -1) removeOtherColorblindFilters(action);
+            
+            if(action === 'screen-reader') { isScreenReaderActive = true; document.addEventListener('click', readTextOnClick); }
+            else if(action === 'reading-line') { bodyObj.classList.add('ktu-acc-reading-line'); document.addEventListener('mousemove', moveReadingLine); }
+            else if(action === 'auto-contrast') { enableAutoContrast(); }
+            else if(action === 'font-plus') stepFontUp();
+            else if(action === 'font-minus') stepFontDown();
+            else if(action !== 'font-reset') bodyObj.classList.add('ktu-acc-' + action);
+            saveSettings();
+        }
+
+        function deactivateAction(action) {
+            var btn = document.querySelector('[data-action="' + action + '"]');
+            if(btn) btn.classList.remove('active');
+            
+            if(action === 'screen-reader') { isScreenReaderActive = false; document.removeEventListener('click', readTextOnClick); if(synth) synth.cancel(); }
+            else if(action === 'reading-line') { bodyObj.classList.remove('ktu-acc-reading-line'); document.removeEventListener('mousemove', moveReadingLine); }
+            else if(action === 'auto-contrast') { disableAutoContrast(); }
+            else bodyObj.classList.remove('ktu-acc-' + action);
+            saveSettings();
+        }
+
+        var profileCards = document.querySelectorAll('.ktu-profile-card');
+        for (var p = 0; p < profileCards.length; p++) {
+            profileCards[p].addEventListener('click', function() {
+                var profile = this.getAttribute('data-profile');
+                var isActive = this.classList.contains('active');
+                
+                bodyObj.className = bodyObj.className.replace(/\bktu-acc-\S+/g, '');
+                var allBtns = document.querySelectorAll('.ktu-acc-btn-item:not(.ktu-lang-btn)');
+                for (var i = 0; i < allBtns.length; i++) allBtns[i].classList.remove('active');
+                var allCards = document.querySelectorAll('.ktu-profile-card');
+                for (var j = 0; j < allCards.length; j++) allCards[j].classList.remove('active');
+                
+                resetFont(); disableAutoContrast();
+                document.removeEventListener('mousemove', moveReadingLine);
+                isScreenReaderActive = false; document.removeEventListener('click', readTextOnClick);
+                if(synth) synth.cancel();
+                
+                if(!isActive && profileActions[profile]) {
+                    this.classList.add('active');
+                    bodyObj.classList.add('ktu-acc-' + profile);
+                    if(profile === 'vision' || profile === 'elderly' || profile === 'cataract') { fontStep = 3; applyFontStep(); }
+                    var actions = profileActions[profile];
+                    for (var k = 0; k < actions.length; k++) activateAction(actions[k]);
+                }
+                saveSettings();
+            });
+        }
+
+        var customBtns = document.querySelectorAll('.ktu-acc-btn-item:not(.ktu-lang-btn)');
+        for (var cb = 0; cb < customBtns.length; cb++) {
+            customBtns[cb].addEventListener('click', function() {
+                var action = this.getAttribute('data-action');
+                if(action === 'font-plus') stepFontUp();
+                else if(action === 'font-minus') stepFontDown();
+                else if(action === 'font-reset') resetFont();
+                else {
+                    if (colorblindFilters.indexOf(action) !== -1) {
+                        if (this.classList.contains('active')) { this.classList.remove('active'); deactivateAction(action); }
+                        else { this.classList.add('active'); activateAction(action); }
+                    } else {
+                        this.classList.toggle('active');
+                        if(this.classList.contains('active')) activateAction(action);
+                        else deactivateAction(action);
+                    }
+                }
+                var allCards = document.querySelectorAll('.ktu-profile-card');
+                for (var i = 0; i < allCards.length; i++) allCards[i].classList.remove('active');
+                saveSettings();
+            });
+        }
+
+        /* -------------------------------------------
+           SESLI OKUMA VE ARA�LAR
+           ------------------------------------------- */
+        function readTextOnClick(e) {
+            if (!synth || !isScreenReaderActive) return;
+            var target = e.target.closest('P,H1,H2,H3,H4,A,SPAN,BUTTON,LI,TD');
+            if (!target || target.closest('#ktuAccessComponent') || target.closest('#ktuAccessWidget')) return;
+            
+            e.preventDefault(); 
+            e.stopPropagation();
+
+            clearTimeout(speechTimeout);
+            var text = target.innerText || target.title;
+            if(text && text.trim().length > 1) {
+                speechTimeout = setTimeout(function() { 
+                    try { 
+                        synth.cancel(); 
+                        var msg = new SpeechSynthesisUtterance(text.trim()); 
+                        msg.lang = 'tr-TR'; 
+                        synth.speak(msg); 
+                    } catch(e) {}
+                }, 100);
+            }
+        }
+        
+        function moveReadingLine(e) { var line = document.getElementById('ktuReadingLine'); if(line) line.style.top = (e.clientY - 2) + 'px'; }
+        
+        function checkWidgetStatus() {
+            var hasMod = false;
+            var classList = bodyObj.classList;
+            for (var i = 0; i < classList.length; i++) { if (classList[i].startsWith('ktu-acc-')) { hasMod = true; break; } }
+            hasMod = hasMod || fontStep > 0 || autoContrastEnabled;
+            if (hasMod) accWidget.classList.add('active-mode');
+            else accWidget.classList.remove('active-mode');
+        }
+
+        function resetAllSettings() {
+            bodyObj.className = bodyObj.className.replace(/\bktu-acc-\S+/g, '');
+            resetFont(); disableAutoContrast();
+            if(synth) synth.cancel(); 
+            isScreenReaderActive = false;
+            document.removeEventListener('click', readTextOnClick);
+            document.removeEventListener('mousemove', moveReadingLine);
+            var allItems = document.querySelectorAll('.ktu-acc-btn-item:not(.ktu-lang-btn), .ktu-profile-card');
+            for (var i = 0; i < allItems.length; i++) allItems[i].classList.remove('active');
+            var resetBtn = document.querySelector('[data-action="font-reset"]');
+            if(resetBtn) resetBtn.classList.add('active');
+            checkWidgetStatus(); saveSettings();
+        }
+
+        document.getElementById('ktuAccResetBtn').addEventListener('click', resetAllSettings);
+        document.getElementById('ktuAccSaveBtn').addEventListener('click', closeAll);
+
+        checkWidgetStatus();
+    });
+})();
+</script>
+      
+  </body>
+</html>
