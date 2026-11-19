@@ -1,0 +1,754 @@
+{
+ "generated": "2026-11-19T20:52:28+00:00",
+ "profiles": [
+  {
+   "id": "A",
+   "label": "Spatial risk, landscape & participatory GIS",
+   "short": "Risk · landscape · PPGIS"
+  },
+  {
+   "id": "B",
+   "label": "Participatory planning, housing & informal settlements",
+   "short": "Participation · housing · informal"
+  }
+ ],
+ "threshold": 60,
+ "count": 8,
+ "items": [
+  {
+   "id": "041635ed539e",
+   "title": "Adiunkt lub adiunktka – Praca na stanowisku adiunkta / adiunktki w Katedrze Geoinformacji i Teledetekcji Środowiska.",
+   "url": "https://bazaogloszen.nauka.gov.pl/oferta/adiunkt-lub-adiunktka-1407/",
+   "institution": "Uniwersytet Mikołaja Kopernika w Toruniu",
+   "inst_id": "pl-baza",
+   "region": "Kuyavia-Pomerania",
+   "city": "Toruń",
+   "country": "PL",
+   "match": {
+    "A": 75,
+    "B": 75
+   },
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Urban & spatial planning",
+    "Digital planning tools & AI"
+   ],
+   "inst_type": "portal",
+   "sector": "academic",
+   "level": "research",
+   "fields": [
+    "GIS & remote sensing",
+    "Urban planning"
+   ],
+   "deadline": "2027-01-10",
+   "deadline_estimated": false,
+   "kind": "position",
+   "note": "Assistant-professor-level post (PhD required)",
+   "programme": null,
+   "source_page": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=GIS",
+   "first_seen": "2026-11-19",
+   "title_en": "Assistant or Assistant – Job as Assistant/Addict in the Department of Geoinformation and Remoteness of the Environment."
+  },
+  {
+   "id": "c101069232c0",
+   "title": "Adiunkt lub adiunktka – Instytut Geografii i Rozwoju Regionalnego, Zakład Zagospodarowania Przestrzennego, Wydział Nauk o Ziemi i…",
+   "url": "https://bazaogloszen.nauka.gov.pl/oferta/adiunkt-lub-adiunktka-1429/",
+   "institution": "Uniwersytet Wrocławski",
+   "inst_id": "pl-baza",
+   "region": "Lower Silesia",
+   "city": "Wrocław",
+   "country": "PL",
+   "match": {
+    "A": 100,
+    "B": 50
+   },
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Urban & spatial planning",
+    "Geography"
+   ],
+   "inst_type": "portal",
+   "sector": "academic",
+   "level": "research",
+   "fields": [
+    "Architecture",
+    "GIS & remote sensing",
+    "Geography",
+    "Urban planning"
+   ],
+   "deadline": "2026-12-10",
+   "deadline_estimated": false,
+   "kind": "position",
+   "note": "Assistant-professor-level post (PhD required)",
+   "programme": null,
+   "source_page": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=gospodarka+przestrzenna",
+   "first_seen": "2026-11-19",
+   "title_en": "Assistant or Assistant – Institute of Geography and Regional Development, Department of Spatial Management, Department of Earth Sciences and..."
+  },
+  {
+   "id": "d07ba3028dc6",
+   "title": "Department: Exposure and Health Risk Assessment – Faculty of Science Deadline: 7 December 2026 Full-time Science and research",
+   "url": "https://www.muni.cz/en/about-us/careers/vacancies/82059",
+   "institution": "Masaryk University",
+   "inst_id": "cz-muni",
+   "region": "South Moravia",
+   "city": "Brno",
+   "country": "CZ",
+   "match": {
+    "A": 75,
+    "B": 44
+   },
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Digital planning tools & AI"
+   ],
+   "inst_type": "public",
+   "sector": "academic",
+   "level": "postdoc",
+   "fields": [
+    "GIS & remote sensing",
+    "Geography"
+   ],
+   "deadline": "2026-12-07",
+   "deadline_estimated": false,
+   "kind": "position",
+   "note": null,
+   "programme": null,
+   "source_page": "https://www.muni.cz/en/about-us/careers/find-the-right-job-for-you",
+   "first_seen": "2026-11-19",
+   "title_en": "Department: Exposure and Health Risk Assessment – Faculty of Science Deadline: 7 December 2026 Full-time Science and research"
+  },
+  {
+   "id": "c7c9ad1c243d",
+   "title": "Výběrové řízení na akademické pracovníky*pracovnice",
+   "url": "https://www.fa.cvut.cz/cs/aktualne/161048-vyberove-rizeni-na-akademicke-pracovniky-pracovnice",
+   "institution": "Czech Technical University – Faculty of Architecture",
+   "inst_id": "cz-cvut-fa",
+   "region": "Prague",
+   "city": "Prague",
+   "country": "CZ",
+   "match": {
+    "A": 25,
+    "B": 38
+   },
+   "topics": [
+    "Urban & spatial planning"
+   ],
+   "inst_type": "public",
+   "sector": "academic",
+   "level": "postdoc",
+   "fields": [
+    "Architecture",
+    "Urban planning"
+   ],
+   "deadline": "2026-12-03",
+   "deadline_estimated": false,
+   "kind": "position",
+   "note": "Assistant-professor-level post (PhD required)",
+   "programme": null,
+   "source_page": "https://www.fa.cvut.cz/cs/fakulta/vyberova-rizeni",
+   "first_seen": "2026-11-19",
+   "title_en": "Selection procedure for academic staff * staff"
+  },
+  {
+   "id": "cb699c9c139a",
+   "title": "Adiunkt lub adiunktka – Poszukiwany jest kandydat na stanowisko adiunkta w Katedrze Performatyki na Wydziale Polonistyki UJ.",
+   "url": "https://bazaogloszen.nauka.gov.pl/oferta/adiunkt-lub-adiunktka-1444/",
+   "institution": "Polish national academic job portal",
+   "inst_id": "pl-baza",
+   "region": "Lesser Poland",
+   "city": "Kraków",
+   "country": "PL",
+   "match": {
+    "A": 38,
+    "B": 0
+   },
+   "topics": [
+    "Landscape & landscape planning"
+   ],
+   "inst_type": "portal",
+   "sector": "academic",
+   "level": "research",
+   "fields": [
+    "Landscape"
+   ],
+   "deadline": "2026-11-27",
+   "deadline_estimated": false,
+   "kind": "position",
+   "note": "Assistant-professor-level post (PhD required)",
+   "programme": null,
+   "source_page": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=landscape",
+   "first_seen": "2026-11-19",
+   "title_en": "Assistant or Assistant – A candidate for the position of assistant professor in the Department of Performance at the Faculty of Polish Studies of the Jagiellonian University is wanted."
+  },
+  {
+   "id": "14cd2d5af350",
+   "title": "Adiunkt lub adiunktka – Poszukiwany jest kandydat na stanowisko adiunkta w Katedrze Performatyki na Wydziale Polonistyki UJ.",
+   "url": "https://bazaogloszen.nauka.gov.pl/oferta/adiunkt-lub-adiunktka-1443/",
+   "institution": "Polish national academic job portal",
+   "inst_id": "pl-baza",
+   "region": "Lesser Poland",
+   "city": "Kraków",
+   "country": "PL",
+   "match": {
+    "A": 38,
+    "B": 0
+   },
+   "topics": [
+    "Landscape & landscape planning"
+   ],
+   "inst_type": "portal",
+   "sector": "academic",
+   "level": "research",
+   "fields": [
+    "Landscape"
+   ],
+   "deadline": "2026-11-27",
+   "deadline_estimated": false,
+   "kind": "position",
+   "note": "Assistant-professor-level post (PhD required)",
+   "programme": null,
+   "source_page": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=landscape",
+   "first_seen": "2026-11-19",
+   "title_en": "Assistant or Assistant – A candidate for the position of assistant professor in the Department of Performance at the Faculty of Polish Studies of the Jagiellonian University is wanted."
+  },
+  {
+   "id": "da101ad9e49a",
+   "title": "Adiunkt lub adiunktka – Katedra Urbanistyki i Gospodarki Przestrzennej na Wydziale Architektury Politechniki Wrocławskiej poszukuje…",
+   "url": "https://bazaogloszen.nauka.gov.pl/oferta/adiunkt-lub-adiunktka-1379/",
+   "institution": "Politechnika Wrocławska",
+   "inst_id": "pl-baza",
+   "region": "Lower Silesia",
+   "city": "Wrocław",
+   "country": "PL",
+   "match": {
+    "A": 100,
+    "B": 50
+   },
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Urban & spatial planning",
+    "Geography"
+   ],
+   "inst_type": "portal",
+   "sector": "academic",
+   "level": "research",
+   "fields": [
+    "Architecture",
+    "GIS & remote sensing",
+    "Geography",
+    "Urban planning"
+   ],
+   "deadline": "2026-11-26",
+   "deadline_estimated": false,
+   "kind": "position",
+   "note": "Assistant-professor-level post (PhD required)",
+   "programme": null,
+   "source_page": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=gospodarka+przestrzenna",
+   "first_seen": "2026-11-19",
+   "title_en": "Assistant or Assistant – Chair of Urban Studies and Spatial Economy at the Faculty of Architecture of Wroclaw University of Technology is looking for..."
+  },
+  {
+   "id": "c9e1ce2495d0",
+   "title": "Adiunkt (post-doc)/Adiunktka (post-doc) – Centrum Badań Regionów Zimnych",
+   "url": "https://bazaogloszen.nauka.gov.pl/oferta/adiunkt-post-doc-adiunktka-post-doc-3/",
+   "institution": "Uniwersytet Wrocławski",
+   "inst_id": "pl-baza",
+   "region": "Lower Silesia",
+   "city": "Wrocław",
+   "country": "PL",
+   "match": {
+    "A": 75,
+    "B": 12
+   },
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Geography"
+   ],
+   "inst_type": "portal",
+   "sector": "academic",
+   "level": "postdoc",
+   "fields": [
+    "Architecture",
+    "GIS & remote sensing",
+    "Geography"
+   ],
+   "deadline": "2026-11-23",
+   "deadline_estimated": false,
+   "kind": "position",
+   "note": null,
+   "programme": null,
+   "source_page": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=geografia",
+   "first_seen": "2026-11-19",
+   "title_en": "Adjunct (post-doc)/Adjunct (post-doc) – Centre for the Research of the Cold Regions"
+  }
+ ],
+ "sources": [
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=gospodarka+przestrzenna",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 12,
+   "kept": 2,
+   "details_fetched": 2
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=geografia",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 13,
+   "kept": 3,
+   "details_fetched": 4
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=urbanistyka",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 20,
+   "kept": 2,
+   "details_fetched": 4
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=architektura",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 56,
+   "kept": 3,
+   "details_fetched": 8
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=krajobraz",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=planowanie+przestrzenne",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 2,
+   "kept": 1,
+   "details_fetched": 1
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=GIS",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 52,
+   "kept": 4,
+   "details_fetched": 15
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=teledetekcja",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 5,
+   "kept": 2,
+   "details_fetched": 2
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=rewitalizacja",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 1,
+   "kept": 1,
+   "details_fetched": 1
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=mieszkalnictwo",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 1,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=klimatu",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 4,
+   "kept": 1,
+   "details_fetched": 2
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=urban",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 2,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=geography",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 6,
+   "kept": 2,
+   "details_fetched": 2
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=landscape",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 2,
+   "kept": 2,
+   "details_fetched": 2
+  },
+  {
+   "institution": "pl-baza",
+   "url": "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=post-doc",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 60,
+   "kept": 1,
+   "details_fetched": 24
+  },
+  {
+   "institution": "cz-cuni",
+   "url": "https://cuni.cz/UKEN-318.html",
+   "checked": "2026-11-19T20:47:07+00:00",
+   "ok": true,
+   "listed": 18,
+   "kept": 0,
+   "details_fetched": 17
+  },
+  {
+   "institution": "cz-cuni-natur",
+   "url": "https://natur.cuni.cz/en/employees/postdocs",
+   "checked": "2026-11-19T20:47:17+00:00",
+   "ok": true,
+   "listed": 18,
+   "kept": 0,
+   "details_fetched": 9
+  },
+  {
+   "institution": "cz-muni",
+   "url": "https://www.muni.cz/en/about-us/careers/find-the-right-job-for-you",
+   "checked": "2026-11-19T20:47:28+00:00",
+   "ok": true,
+   "listed": 21,
+   "kept": 1,
+   "details_fetched": 7
+  },
+  {
+   "institution": "cz-cvut",
+   "url": "https://eud.is.cvut.cz/pub/deska/36000002/ifis/",
+   "checked": "2026-11-19T20:47:32+00:00",
+   "ok": true,
+   "listed": 5,
+   "kept": 0,
+   "details_fetched": 5
+  },
+  {
+   "institution": "cz-cvut-fa",
+   "url": "https://www.fa.cvut.cz/cs/fakulta/vyberova-rizeni",
+   "checked": "2026-11-19T20:47:44+00:00",
+   "ok": true,
+   "listed": 15,
+   "kept": 1,
+   "details_fetched": 12
+  },
+  {
+   "institution": "cz-vut",
+   "url": "https://www.vut.cz/uredni-deska",
+   "checked": "2026-11-19T20:47:48+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "cz-czu",
+   "url": "https://www.czu.cz/cs/r-16895-kariera-na-czu",
+   "checked": "2026-11-19T20:47:51+00:00",
+   "ok": true,
+   "listed": 7,
+   "kept": 0,
+   "details_fetched": 6
+  },
+  {
+   "institution": "cz-upol",
+   "url": "https://www.upol.cz/univerzita/uredni-deska/",
+   "checked": "2026-11-19T20:47:54+00:00",
+   "ok": true,
+   "listed": 36,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "cz-vsb",
+   "url": "https://www.vsb.cz/cs/univerzita/uredni-deska/",
+   "checked": "2026-11-19T20:47:55+00:00",
+   "ok": true,
+   "listed": 16,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "cz-mendelu",
+   "url": "https://mendelu.cz/o-univerzite/uredni-deska/",
+   "checked": "2026-11-19T20:47:57+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "cz-tul",
+   "url": "https://www.tul.cz/univerzita/uredni-deska/kariera/",
+   "checked": "2026-11-19T20:47:58+00:00",
+   "ok": true,
+   "listed": 9,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "cz-soc",
+   "url": "https://www.soc.cas.cz/en/news/tenders",
+   "checked": "2026-11-19T20:48:00+00:00",
+   "ok": true,
+   "listed": 15,
+   "kept": 0,
+   "details_fetched": 6
+  },
+  {
+   "institution": "ro-unibuc",
+   "url": "https://unibuc.ro/despre-ub/cariere/",
+   "checked": "2026-11-19T20:48:01+00:00",
+   "ok": true,
+   "listed": 7,
+   "kept": 0,
+   "details_fetched": 6
+  },
+  {
+   "institution": "ro-unibuc",
+   "url": "https://unibuc.ro/cercetare/oportunitati-pentru-cercetatori/",
+   "checked": "2026-11-19T20:48:04+00:00",
+   "ok": true,
+   "listed": 48,
+   "kept": 0,
+   "details_fetched": 1
+  },
+  {
+   "institution": "ro-unibuc-geo",
+   "url": "https://geo.unibuc.ro/anunturi/",
+   "checked": "2026-11-19T20:48:09+00:00",
+   "ok": true,
+   "listed": 0,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "ro-uauim",
+   "url": "https://www.uauim.ro/anunturi/",
+   "checked": "2026-11-19T20:48:12+00:00",
+   "ok": true,
+   "listed": 349,
+   "kept": 0,
+   "details_fetched": 80
+  },
+  {
+   "institution": "ro-ubb",
+   "url": "https://www.ubbcluj.ro/ro/infoubb/posturi_vacante/posturi_proiecte",
+   "checked": "2026-11-19T20:48:12+00:00",
+   "ok": true,
+   "listed": 8,
+   "kept": 0,
+   "details_fetched": 6
+  },
+  {
+   "institution": "ro-uaic",
+   "url": "https://www.uaic.ro/studii/studii-postdoctorale/",
+   "checked": "2026-11-19T20:48:14+00:00",
+   "ok": true,
+   "listed": 8,
+   "kept": 0,
+   "details_fetched": 8
+  },
+  {
+   "institution": "ro-uvt",
+   "url": "http://cariere.uvt.ro/posturi-vacante/",
+   "checked": "2026-11-19T20:48:15+00:00",
+   "ok": true,
+   "listed": 236,
+   "kept": 0,
+   "details_fetched": 80
+  },
+  {
+   "institution": "ro-uvt",
+   "url": "https://uvt.ro/cercetare/cercetare-si-inovare/anunturi-si-resurse-pentru-cercetatorii-din-uvt/",
+   "checked": "2026-11-19T20:48:17+00:00",
+   "ok": true,
+   "listed": 1,
+   "kept": 0,
+   "details_fetched": 1
+  },
+  {
+   "institution": "ro-upb",
+   "url": "https://posturivacante.upb.ro/",
+   "checked": "2026-11-19T20:48:18+00:00",
+   "ok": true,
+   "listed": 24,
+   "kept": 0,
+   "details_fetched": 24
+  },
+  {
+   "institution": "ro-usamv",
+   "url": "https://usamv.ro/posturi-didactice-vacante/",
+   "checked": "2026-11-19T20:48:19+00:00",
+   "ok": true,
+   "listed": 12,
+   "kept": 0,
+   "details_fetched": 6
+  },
+  {
+   "institution": "ro-usamv",
+   "url": "https://usamv.ro/resurse-umane/",
+   "checked": "2026-11-19T20:48:20+00:00",
+   "ok": true,
+   "listed": 8,
+   "kept": 0,
+   "details_fetched": 2
+  },
+  {
+   "institution": "ro-uoradea",
+   "url": "https://www.uoradea.ro/despre-noi/informatii-de-interes-public/concursuri-pe-posturi/",
+   "checked": "2026-11-19T20:48:23+00:00",
+   "ok": true,
+   "listed": 28,
+   "kept": 0,
+   "details_fetched": 16
+  },
+  {
+   "institution": "ro-usv",
+   "url": "https://usv.ro/resurse/angajari/posturi-didactice/",
+   "checked": "2026-11-19T20:48:25+00:00",
+   "ok": true,
+   "listed": 2,
+   "kept": 0,
+   "details_fetched": 1
+  },
+  {
+   "institution": "ro-tuiasi",
+   "url": "https://www.tuiasi.ro/concursuri-si-promovari/",
+   "checked": "2026-11-19T20:48:30+00:00",
+   "ok": true,
+   "listed": 8,
+   "kept": 0,
+   "details_fetched": 7
+  },
+  {
+   "institution": "ro-urbanincerc",
+   "url": "https://incd.ro/anunturi-compartimentul-management-si-resurse-umane/",
+   "checked": "2026-11-19T20:48:31+00:00",
+   "ok": true,
+   "listed": 76,
+   "kept": 0,
+   "details_fetched": 42
+  },
+  {
+   "institution": "tr-metu-crp",
+   "url": "https://crp.metu.edu.tr/en/tum-duyurular",
+   "checked": "2026-11-19T20:48:32+00:00",
+   "ok": true,
+   "listed": 15,
+   "kept": 0,
+   "details_fetched": 9
+  },
+  {
+   "institution": "tr-itu",
+   "url": "https://www.itu.edu.tr/duyurular",
+   "checked": "2026-11-19T20:48:33+00:00",
+   "ok": true,
+   "listed": 106,
+   "kept": 0,
+   "details_fetched": 30
+  },
+  {
+   "institution": "tr-msgsu",
+   "url": "https://msgsu.edu.tr/tum-duyurular/",
+   "checked": "2026-11-19T20:48:33+00:00",
+   "ok": true,
+   "listed": 4,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "tr-gazi",
+   "url": "https://personel.gazi.edu.tr/",
+   "checked": "2026-11-19T20:48:37+00:00",
+   "ok": true,
+   "listed": 31,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "tr-deu",
+   "url": "https://www.deu.edu.tr/duyurular/",
+   "checked": "2026-11-19T20:48:38+00:00",
+   "ok": true,
+   "listed": 33,
+   "kept": 0,
+   "details_fetched": 2
+  },
+  {
+   "institution": "tr-iyte",
+   "url": "https://iyte.edu.tr/duyuru",
+   "checked": "2026-11-19T20:48:38+00:00",
+   "ok": true,
+   "listed": 9,
+   "kept": 0,
+   "details_fetched": 1
+  },
+  {
+   "institution": "tr-istanbul",
+   "url": "https://www.istanbul.edu.tr/tr/duyurular/",
+   "checked": "2026-11-19T20:48:40+00:00",
+   "ok": true,
+   "listed": 3,
+   "kept": 0,
+   "details_fetched": 0
+  },
+  {
+   "institution": "tr-bogazici",
+   "url": "https://personel.bogazici.edu.tr/",
+   "checked": "2026-11-19T20:48:42+00:00",
+   "ok": true,
+   "listed": 8,
+   "kept": 0,
+   "details_fetched": 3
+  },
+  {
+   "institution": "tr-ktu",
+   "url": "https://www.ktu.edu.tr/personel",
+   "checked": "2026-11-19T20:48:46+00:00",
+   "ok": false,
+   "error": "HTTPError: 500 Server Error: Internal Server Error for url: https://www.ktu.edu.tr/personel"
+  },
+  {
+   "institution": "tr-bilkent",
+   "url": "https://w3.bilkent.edu.tr/tr/akademik-is/",
+   "checked": "2026-11-19T20:48:48+00:00",
+   "ok": true,
+   "listed": 25,
+   "kept": 0,
+   "details_fetched": 25
+  }
+ ]
+}
