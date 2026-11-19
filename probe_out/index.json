@@ -1,13 +1,5 @@
 [
  {
-  "url": "https://bazaogloszen.nauka.gov.pl/",
-  "final": "https://bazaogloszen.nauka.gov.pl/",
-  "status": 200,
-  "type": "text/html; charset=UTF-8",
-  "bytes": 73140,
-  "file": "4e199d736f"
- },
- {
   "url": "https://bazaogloszen.nauka.gov.pl/robots.txt",
   "final": "https://bazaogloszen.nauka.gov.pl/robots.txt",
   "status": 200,
@@ -16,151 +8,107 @@
   "file": "fef0c58fcb"
  },
  {
-  "url": "https://bazaogloszen.nauka.gov.pl/?feed=job_feed&search_keywords=geografia",
-  "final": "https://bazaogloszen.nauka.gov.pl/?feed=job_feed&search_keywords=geografia",
+  "url": "https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=gospodarka+przestrzenna",
+  "final": "https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=gospodarka+przestrzenna",
   "status": 200,
   "type": "application/rss+xml; charset=UTF-8",
-  "bytes": 18563,
-  "file": "6a9b5f9183"
+  "bytes": 26577,
+  "file": "eba4b97cd3"
  },
  {
-  "url": "https://bazaogloszen.nauka.gov.pl/oferty-pracy/",
-  "error": "HTTPError: 404 Client Error: Not Found for url: https://bazaogloszen.nauka.gov.pl/oferty-pracy/"
+  "url": "https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=urban",
+  "final": "https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=urban",
+  "status": 200,
+  "type": "application/rss+xml; charset=UTF-8",
+  "bytes": 14282,
+  "file": "f0388173c7"
  },
  {
-  "url": "https://jobs.research.gov.ro/",
-  "error": "ConnectTimeout: HTTPSConnectionPool(host='jobs.research.gov.ro', port=443): Max retries exceeded with url: / (Caused by ConnectTimeoutError(<HTTPSConnection(host='jobs.research.gov.ro', port=443) at 0x7481ba432a80>, 'Connection to jobs.research.gov.ro timed out. (connect timeout=30)'))"
- },
- {
-  "url": "https://jobs.research.gov.ro/robots.txt",
-  "error": "ConnectTimeout: HTTPSConnectionPool(host='jobs.research.gov.ro', port=443): Max retries exceeded with url: /robots.txt (Caused by ConnectTimeoutError(<HTTPSConnection(host='jobs.research.gov.ro', port=443) at 0x7481ba432fc0>, 'Connection to jobs.research.gov.ro timed out. (connect timeout=30)'))"
- },
- {
-  "url": "https://www.resmigazete.gov.tr/",
-  "error": "ReadTimeout: HTTPSConnectionPool(host='www.resmigazete.gov.tr', port=443): Read timed out. (read timeout=30)"
- },
- {
-  "url": "https://www.resmigazete.gov.tr/robots.txt",
-  "error": "ReadTimeout: HTTPSConnectionPool(host='www.resmigazete.gov.tr', port=443): Read timed out. (read timeout=30)"
- },
- {
-  "url": "https://www.resmigazete.gov.tr/ilanlar/eskiilanlar/2026/11/20261118-4.htm",
-  "error": "ConnectTimeout: HTTPSConnectionPool(host='www.resmigazete.gov.tr', port=443): Max retries exceeded with url: /ilanlar/eskiilanlar/2026/11/20261118-4.htm (Caused by ConnectTimeoutError(<HTTPSConnection(host='www.resmigazete.gov.tr', port=443) at 0x7481ba432d80>, 'Connection to www.resmigazete.gov.tr "
- },
- {
-  "url": "https://www.ubbcluj.ro/ro/infoubb/posturi_vacante/posturi_proiecte",
-  "final": "https://www.ubbcluj.ro/ro/infoubb/posturi_vacante/posturi_proiecte",
+  "url": "https://bazaogloszen.nauka.gov.pl/oferta/adiunkt-lub-adiunktka-1429/",
+  "final": "https://bazaogloszen.nauka.gov.pl/oferta/adiunkt-lub-adiunktka-1429/",
   "status": 200,
   "type": "text/html; charset=UTF-8",
-  "bytes": 83870,
-  "file": "3f37ebea4e"
+  "bytes": 73715,
+  "file": "c101069232"
  },
  {
-  "url": "https://studyin.cz/ukraine-work/job-offers",
-  "error": "HTTPError: 404 Client Error: Not Found for url: https://studyin.gov.cz/ukraine-work/job-offers"
+  "url": "https://ilan.memurlar.net/robots.txt",
+  "final": "https://ilan.memurlar.net/robots.txt",
+  "status": 200,
+  "type": "text/plain",
+  "bytes": 134,
+  "file": "c511790575"
  },
  {
-  "url": "https://www.cuni.cz/UKEN-318.html",
-  "final": "https://cuni.cz/UKEN-318.html",
+  "url": "https://ilan.memurlar.net/ilan/86552/orta-dogu-teknik-universitesi-ogretim-uyesi-ve-elemani-alim-ilani.html",
+  "final": "https://ilan.memurlar.net/ilan/86552/orta-dogu-teknik-universitesi-ogretim-uyesi-ve-elemani-alim-ilani.html",
+  "status": 200,
+  "type": "text/html; charset=iso-8859-9",
+  "bytes": 58075,
+  "file": "b2b23fbe45"
+ },
+ {
+  "url": "https://www.akademikpersonel.org/",
+  "final": "https://www.akademikpersonel.org/",
   "status": 200,
   "type": "text/html; charset=UTF-8",
-  "bytes": 61421,
-  "file": "8165715038"
+  "bytes": 247610,
+  "file": "251e9e6fb7"
  },
  {
-  "url": "https://www.muni.cz/en/about-us/careers/vacancies",
+  "url": "https://www.akademikpersonel.org/robots.txt",
+  "final": "https://www.akademikpersonel.org/robots.txt",
+  "status": 200,
+  "type": "text/plain; charset=utf-8",
+  "bytes": 2804,
+  "file": "9c67d538fe"
+ },
+ {
+  "url": "https://www.yok.gov.tr/",
+  "final": "https://www.yok.gov.tr/tr",
+  "status": 200,
+  "type": "text/html; charset=UTF-8",
+  "bytes": 227211,
+  "file": "357851b604"
+ },
+ {
+  "url": "https://posturi.gov.ro/",
+  "final": "https://posturi.gov.ro/",
+  "status": 200,
+  "type": "text/html; charset=UTF-8",
+  "bytes": 125413,
+  "file": "a44c886d63"
+ },
+ {
+  "url": "https://posturivacante.upb.ro/",
+  "final": "https://posturivacante.upb.ro/",
+  "status": 200,
+  "type": "text/html; charset=UTF-8",
+  "bytes": 79682,
+  "file": "f0cd82cfe5"
+ },
+ {
+  "url": "https://www.muni.cz/en/about-us/careers/find-the-right-job-for-you",
   "final": "https://www.muni.cz/en/about-us/careers/find-the-right-job-for-you",
   "status": 200,
   "type": "text/html; charset=utf-8",
-  "bytes": 111221,
-  "file": "f949851f22"
+  "bytes": 111220,
+  "file": "67bf44f534"
  },
  {
-  "url": "https://www.cvut.cz/en/vacancies",
-  "error": "HTTPError: 404 Client Error: Not Found for url: https://www.cvut.cz/en/vacancies"
+  "url": "https://natur.cuni.cz/en/faculty/job-offers",
+  "error": "HTTPError: 404 Client Error: Not Found for url: https://natur.cuni.cz/en/faculty/job-offers"
  },
  {
-  "url": "https://www.vut.cz/en/about/jobs",
-  "error": "HTTPError: 404 Client Error: Not Found for url: https://www.vut.cz/en/about/jobs"
+  "url": "https://www.natur.cuni.cz/fakulta/uredni-deska/vyberova-rizeni",
+  "blocked_by_robots": true
  },
  {
-  "url": "https://www.czu.cz/en/r-9455-about-czu/r-11002-jobs",
-  "final": "https://www.fld.czu.cz/en/r-9414-study/r-9501-information-for-students/r-11002-information-systems",
-  "status": 200,
-  "type": "text/html; charset=utf-8",
-  "bytes": 38547,
-  "file": "b61fc7a46d"
- },
- {
-  "url": "https://www.upol.cz/en/university/jobs/",
-  "error": "HTTPError: 404 Client Error: Not Found for url: https://www.upol.cz/en/university/jobs/"
- },
- {
-  "url": "https://www.ugn.cas.cz/",
-  "final": "https://www.ugn.cas.cz/",
+  "url": "https://euraxess.ec.europa.eu/jobs/search",
+  "final": "https://euraxess.ec.europa.eu/jobs/search",
   "status": 200,
   "type": "text/html; charset=UTF-8",
-  "bytes": 14986,
-  "file": "2ad880ebce"
- },
- {
-  "url": "https://www.czechglobe.cz/en/careers/",
-  "error": "HTTPError: 404 Client Error: Not Found for url: https://www.czechglobe.cz/en/careers/"
- },
- {
-  "url": "https://career.metu.edu.tr/",
-  "error": "ConnectionError: HTTPSConnectionPool(host='career.metu.edu.tr', port=443): Max retries exceeded with url: / (Caused by NameResolutionError(\"HTTPSConnection(host='career.metu.edu.tr', port=443): Failed to resolve 'career.metu.edu.tr' ([Errno -2] Name or service not known)\"))"
- },
- {
-  "url": "https://www.itu.edu.tr/",
-  "final": "https://www.itu.edu.tr/",
-  "status": 200,
-  "type": "text/html; charset=utf-8",
-  "bytes": 125675,
-  "file": "7a4bfc457b"
- },
- {
-  "url": "https://www.bilkent.edu.tr/",
-  "final": "https://w3.bilkent.edu.tr/en/",
-  "status": 200,
-  "type": "text/html; charset=UTF-8",
-  "bytes": 159148,
-  "file": "2993c41e63"
- },
- {
-  "url": "https://unibuc.ro/",
-  "final": "https://unibuc.ro/",
-  "status": 200,
-  "type": "text/html",
-  "bytes": 12054,
-  "file": "c012619528"
- },
- {
-  "url": "https://www.uauim.ro/",
-  "final": "https://www.uauim.ro/",
-  "status": 200,
-  "type": "text/html; charset=utf-8",
-  "bytes": 28568,
-  "file": "be1b7a6272"
- },
- {
-  "url": "https://www.uw.edu.pl/kategoria-praca/konkursy-na-stanowiska-nauczycieli-akademickich/",
-  "final": "https://www.uw.edu.pl/kategoria-praca/konkursy-na-stanowiska-nauczycieli-akademickich/",
-  "status": 200,
-  "type": "text/html; charset=UTF-8",
-  "bytes": 94437,
-  "file": "0a56d36a2b"
- },
- {
-  "url": "https://www.pw.edu.pl/",
-  "error": "ConnectionError: ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))"
- },
- {
-  "url": "https://www.igipz.pan.pl/",
-  "final": "https://www.igipz.pan.pl/",
-  "status": 200,
-  "type": "text/html; charset=utf-8",
-  "bytes": 34417,
-  "file": "e6fdcf3ecf"
+  "bytes": 180924,
+  "file": "233ca0f39c"
  }
 ]
