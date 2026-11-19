@@ -313,6 +313,9 @@ _RELATIVE = re.compile(
 )
 
 
+_RELATIVE_TR = re.compile(r"(?:ilan|yay[ıi]m)\w*\D{0,60}?(\d{1,2})\s*(?:\([^)]{0,20}\)\s*)?(i[sş]\s*)?g[üu]n", re.I)
+
+
 def relative_deadline(text: str) -> str | None:
     """Estimate deadlines written as 'N working days from publication'.
 
@@ -321,7 +324,16 @@ def relative_deadline(text: str) -> str | None:
     """
     m = _RELATIVE.search(text)
     if not m:
-        return None
+        t = _RELATIVE_TR.search(text)  # Turkish: "ilanın yayım tarihinden itibaren 15 gün"
+        if not t:
+            return None
+        n, working = int(t[1]), bool(t[2])
+        today = date.today()
+        past = [d for _, d in _dates(text) if d <= today]
+        if not past or n > 60:
+            return None
+        from datetime import timedelta
+        return (max(past) + timedelta(days=(round(n * 7 / 5) if working else n) + 2)).isoformat()
     n = m[1].lower()
     n = int(n) if n.isdigit() else _NUM_WORDS.get(n)
     if not n or n > 60:
