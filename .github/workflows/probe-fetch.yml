@@ -1,0 +1,23 @@
+name: probe-fetch
+on:
+  push:
+    branches: ["probe-fetch*"]
+    paths: ["tools/probe/**"]
+permissions:
+  contents: write
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12", cache: pip}
+      - run: pip install -r requirements.txt
+      - run: python tools/probe/fetch_urls.py
+      - run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -f probe_out
+          git commit -m "probe output [skip ci]" || exit 0
+          git push
