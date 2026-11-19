@@ -1,5 +1,5 @@
 {
- "updated": "2026-11-18",
+ "updated": "2026-11-19",
  "items": [
   {
    "title": "Research Scientist – Hyperspectral Remote Sensing (EnMAP)",
@@ -939,6 +939,136 @@
    "url": "https://facultyradar.eu/position/universitat-politecnica-de-catalunya-professorat-lector-expressio-grafica-arquitectonica-71028012-le-431-752/#LE-431",
    "li_kind": "job",
    "first_seen": "2026-11-18"
+  },
+  {
+   "title": "Wissenschaftliche/r Mitarbeiter/in (w/m/d) – Sicherheitsrelevante Erdbeobachtung",
+   "title_en": "Research associate – security-related Earth observation",
+   "institution": "German Aerospace Center (DLR)",
+   "city": "Bonn",
+   "region": "North Rhine-Westphalia",
+   "country": "DE",
+   "level": "postdoc",
+   "note": "Master-level research associate post (2-year contract); remote sensing for security applications",
+   "topics": [
+    "Climate adaptation & resilience",
+    "GIS, remote sensing & spatial analysis"
+   ],
+   "match": {
+    "A": 75,
+    "B": 12
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4491333905/",
+   "li_kind": "job",
+   "first_seen": "2026-11-19"
+  },
+  {
+   "title": "Wissenschaftliche Mitarbeit XLeitstelle",
+   "title_en": "Research associate – XLeitstelle (XPlanung/XBau data standards)",
+   "institution": "Landesbetrieb Geoinformation und Vermessung (LGV) Hamburg",
+   "city": "Hamburg",
+   "region": "Hamburg",
+   "country": "DE",
+   "level": "research",
+   "note": "Public agency, not academic; permanent, TV-L E13, 2 posts; Master in planning/landscape architecture/geoinformatics",
+   "topics": [
+    "GIS, remote sensing & spatial analysis"
+   ],
+   "match": {
+    "A": 69,
+    "B": 31
+   },
+   "deadline": "2026-12-15",
+   "url": "https://www.linkedin.com/jobs/view/4491570968/",
+   "li_kind": "job",
+   "first_seen": "2026-11-19"
+  },
+  {
+   "title": "Senior Landscape Architect",
+   "title_en": "Senior landscape architect",
+   "institution": "FIA – Fenwick Iribarren Architects",
+   "city": "Madrid",
+   "region": "Community of Madrid",
+   "country": "ES",
+   "level": "professional",
+   "note": "Architecture firm; hybrid",
+   "topics": [
+    "Landscape & landscape planning",
+    "Urban & spatial planning"
+   ],
+   "match": {
+    "A": 100,
+    "B": 50
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4492039396/",
+   "li_kind": "job",
+   "first_seen": "2026-11-19"
+  },
+  {
+   "title": "Técnico/a GIS de Desarrollo y Automatización",
+   "title_en": "GIS development & automation specialist",
+   "institution": "Accenture España",
+   "city": "Madrid",
+   "region": "Community of Madrid",
+   "country": "ES",
+   "level": "professional",
+   "note": "GIS development/automation role (IT-leaning); hybrid",
+   "topics": [
+    "GIS, remote sensing & spatial analysis",
+    "Surveys & mixed methods"
+   ],
+   "match": {
+    "A": 69,
+    "B": 25
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4491876302/",
+   "li_kind": "job",
+   "first_seen": "2026-11-19"
+  },
+  {
+   "title": "Innovation Consultant in Automated Mobility",
+   "title_en": "Innovation consultant – automated mobility",
+   "institution": "Bax Innovation",
+   "city": "Barcelona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "professional",
+   "note": "EU-project innovation consultancy; topic is automated driving, not urban planning",
+   "topics": [
+    "Sustainable mobility & accessibility"
+   ],
+   "match": {
+    "A": 55,
+    "B": 25
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4492031800/",
+   "li_kind": "job",
+   "first_seen": "2026-11-19"
+  },
+  {
+   "title": "Assurance Climate Risk Consultant",
+   "title_en": "Climate risk assurance consultant",
+   "institution": "Jobgether (recruiter for an undisclosed firm)",
+   "city": "Spain (remote)",
+   "region": "Spain",
+   "country": "ES",
+   "level": "professional",
+   "note": "Posted via the Jobgether aggregator; audit/assurance of climate-risk reporting",
+   "topics": [
+    "Climate adaptation & resilience",
+    "Digital planning tools & AI"
+   ],
+   "match": {
+    "A": 55,
+    "B": 31
+   },
+   "deadline": null,
+   "url": "https://www.linkedin.com/jobs/view/4492128662/",
+   "li_kind": "job",
+   "first_seen": "2026-11-19"
   }
  ]
 }
