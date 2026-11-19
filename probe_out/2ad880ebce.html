@@ -1,0 +1,287 @@
+
+
+<html lang='cs'>
+
+<head>
+
+ <meta charset='utf-8'>
+ 
+ <link rel=StyleSheet type='text/css' href='style.css'>
+ <title>Ústav geoniky Akademie věd České republiky</title>
+
+ <link href="https://fonts.googleapis.com/css?family=Ubuntu:700" rel="stylesheet">
+
+ <!-- for Lightbox2 --> 
+ <link  rel=StyleSheet type="text/css" href="lightbox/css/lightbox.css">
+ <script src="lightbox/js/lightbox-plus-jquery.js"></script>
+ <script>lightbox.option({ 'showImageNumberLabel': false, 'maxWidth': 800, 'maxHeight': 600 })</script>
+
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+ <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+ <script type="text/javascript">
+ 
+ 
+  function initmapov() {                                  // map initialization - Ostrava
+
+    const coords = [49.8322569, 18.1588247];
+	 
+    const map = L.map('map').setView(coords, 15);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var pin = L.icon({
+	  iconUrl:'image/pin.png',
+	  shadowUrl:'image/pin.png',
+	  iconSize:[32, 32],
+	  shadowSize:[32, 32],
+	  iconAnchor:[0, 32],
+	  shadowAnchor:[0, 32],
+	  popupAnchor:[16, -32],
+	});
+    var marker = L.marker(coords, {icon:pin}).addTo(map);
+    marker.bindPopup('<small>Ústav geoniky AV ČR, Ostrava</small>').openPopup();
+
+  }
+ 
+
+  function initmapbr() {                                  // map initialization - Brno
+
+    const coords = [49.2073489, 16.6141911];
+	 
+    const map = L.map('map').setView(coords, 14);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+      maxZoom: 18,
+      attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    var pin = L.icon({
+	  iconUrl:'image/pin.png',
+	  shadowUrl:'image/pin.png',
+	  iconSize:[32, 32],
+	  shadowSize:[32, 32],
+	  iconAnchor:[0, 32],
+	  shadowAnchor:[0, 32],
+	  popupAnchor:[16, -32],
+	});
+    var marker = L.marker(coords, {icon:pin}).addTo(map);
+    marker.bindPopup('<small>Ústav geoniky AV ČR, Brno</small>').openPopup();
+
+  }
+ 
+
+ </script>
+
+</head>
+
+<body >
+
+  <div id='container'>
+
+     <div id='header'>
+      <div id='logo'>
+ <a href='?l=cz&p=home'>
+  <img src='image/logo.png'>
+ </a>
+</div>
+
+<div id='title'>
+ <div id='institute'>
+  <a href='?l=cz&p=home'>Ústav geoniky</a> </div>
+ <div id='academy'>
+  <a href='?l=cz&p=home'>Akademie věd České republiky</a> </div>
+</div>
+
+<div id='picture'>
+ <img src='image/header-picture.png'>
+</div>
+
+<div id='clean'></div>
+     </div>
+
+     <div id='panel'>
+      
+
+<div id='menu'>
+ <!--   horizontal drop-down menu   -->
+
+
+
+<ul>
+
+  <!--   HOME   -->
+  <!--
+  <li id='first'>
+   <a href='?l=cz&p=home'><img src='image/home.png'></a>
+  </li>
+  -->
+
+  <!--   ABOUT   -->
+  <li id='first'>
+   O ÚSTAVU   <ul>
+    <li> <a href='?l=cz&p=general'>Charakteristika</a> </li>
+    <li> <a href='?l=cz&p=manage'>Vedení ústavu</a> </li>
+	<!--
+    <li> <a href='?l=cz&p=library'>Veřejná knihovna</a> </li>
+	-->
+    <li> <a href='?l=cz&p=registry'>Podatelna</a> </li>
+    <li> <a href='?l=cz&p=storage'>Dokumenty</a> </li>
+   </ul>
+  </li>
+
+  <!--   DEPARTMENT   -->
+  <li>
+   ODDĚLENÍ   <ul>
+    <li> <a href='?l=cz&p=dg'>Oddělení geomateriálů</a> </li>
+    <li> <a href='?l=cz&p=dfj'>Oddělení kapalinových paprsků</a> </li>
+    <li> <a href='?l=cz&p=dgmr'>Oddělení geomechaniky a&nbsp;báňského&nbsp;výzkumu</a> </li>
+    <li> <a href='?l=cz&p=damcs'>Oddělení aplikované matematiky a&nbsp;výpočetních&nbsp;věd</a> </li>
+    <li> <a href='?l=cz&p=deg'>Oddělení environmentální geografie</a> </li>
+   </ul>
+  </li>
+
+  <!--   ACTUALITIES   -->
+  <li>
+   AKTUALITY   <ul>
+    <li> <a href='?l=cz&p=event'>Novinky a události</a> </li>
+    <li> <a href='?l=cz&p=contract'>Veřejné zakázky</a> </li>
+    <!--
+    <li> <a href='?l=cz&p=career'>Volná pracovní místa</a> </li>
+    -->
+   </ul>
+  </li>
+
+  <!--   PUBLIC   -->
+  <!--
+  <li>
+   VEŘEJNOST   <ul>
+    <li> <a href='?l=cz&p=gallery'>Fotogalerie a video</a> </li>
+    <li> <a href='?l=cz&p=public'>Zajímavé publikace</a> </li>
+   </ul>
+  </li>
+  -->
+
+  <!--   CONTACT   -->
+  <li>
+   KONTAKT   <ul>
+    <li> <a href='?l=cz&p=contact'>Kontakty a mapy</a> </li>
+    <li> <a href='?l=cz&p=people'>Zaměstnanci</a> </li>
+   </ul>
+  </li>
+
+</ul>
+</div>
+
+<div id='language'>
+ <a href='?l=cz&p=home'>
+  <img src='image/flag-cz.png' alt='CZ'>
+ </a>
+ <a href='?l=en&p=home'>
+  <img src='image/flag-en.png' alt='EN'>
+ </a>
+</div>
+
+<div id='intranet'>
+ <a href='http://www.ugn.cas.cz/private' target=_blank>
+  <div>
+   <div>
+    <img src='image/lock.png' alt='Intranet'>
+   </div>
+   Intranet
+  </div>
+ </a>
+</div>
+
+
+<div id='clean'></div>     </div>
+      
+     <div id='content'>
+      
+
+<!-- ACTUALLY -->
+<div id='' class=''><div id='column-3' class='first '><div id='thumb' class=''><a href='event/2026/jlp/info.pdf' target=_blank><img src='event/2026/jlp/promo-picture.jpg
+'></a></div><div id='' class='bigger stronger m06-top'><a href='event/2026/jlp/info.pdf' target=_blank>Jeskyně Labských pískovců</a></div><div id='' class='narrow m06-top'>Konference o přírodním podzemí, Krásná Lípa.</div><div id='' class='m06-top'><span class='c-brown smaller'>27.11.2026</span>&nbsp; <span class='c-brown-2 smaller'>09:00</span></div></div><div id='column-3' class=' '><div id='thumb' class=''><a href='https://www.geonika.cz/mgr/articles/MGR_Volume_34_Issue_3_full.pdf' target=_blank><img src='event/2026/mgr/promo-picture-26-3.jpg
+'></a></div><div id='' class='bigger stronger m06-top'><a href='https://www.geonika.cz/mgr/articles/MGR_Volume_34_Issue_3_full.pdf' target=_blank>Právě vyšlo nové číslo MGR</a></div><div id='' class='narrow m06-top'>Časopis Moravian Geographical Reports.</div><div id='' class='m06-top'><span class='c-brown smaller'>06.10.2026</span></div></div><div id='column-3' class=' '><div id='thumb' class=''><a href='event/2026/igd/pozvanka.png' target=_blank><img src='event/2026/igd/promo-picture.jpg
+'></a></div><div id='' class='bigger stronger m06-top'><a href='event/2026/igd/pozvanka.png' target=_blank>Komunikace s veřejností</a></div><div id='' class='narrow m06-top'>Seminář k Mezinárodnímu dni geodiverzity, Moravské zemské muzeum, Brno.</div><div id='' class='m06-top'><span class='c-brown smaller'>06.10.2026</span>&nbsp; <span class='c-brown-2 smaller'>10:00</span></div></div><div id='clean' class=''></div><div id='column-3' class='first m25-top '><div id='thumb' class=''><a href='?p=damcs&s=seminar'><img src='event/seminar-amcs.jpg
+'></a></div><div id='' class='bigger stronger m06-top'><a href='?p=damcs&s=seminar'>Seminář matematiky a informatiky</a></div><div id='' class='narrow m06-top'>Aktuální témata v cyklu odborných přednášek.</div><div id='' class='m06-top'><span class='c-brown smaller'>16.09.2026</span>&nbsp; <span class='c-brown-2 smaller'>12:30</span></div></div><div id='column-3' class=' m25-top '><div id='thumb' class=''><a href='event/2026/wrutec/info.pdf' target=_blank><img src='event/2026/wrutec/promo-picture.jpg
+'></a></div><div id='' class='bigger stronger m06-top'><a href='event/2026/wrutec/info.pdf' target=_blank>Nová spolupráce s rakouskou společností WRUtec</a></div><div id='' class='narrow m06-top'>Video, Ostrava.</div><div id='' class='m06-top'><span class='c-brown smaller'>31.08.2026</span></div></div><div id='column-3' class=' m25-top '><div id='thumb' class=''><a href='event/2026/dl/info.pdf' target=_blank><img src='event/2026/dl/promo-picture.jpg
+'></a></div><div id='' class='bigger stronger m06-top'><a href='event/2026/dl/info.pdf' target=_blank>Děkovné listy AV ČR</a></div><div id='' class='narrow m06-top'>Bc. Iva Imrichová, Ing. Jarmila Šimkovičová a Tomáš Rutar oceněni za dlouholetou práci, video, Praha.</div><div id='' class='m06-top'><span class='c-brown smaller'>24.06.2026</span></div></div><div id='clean' class=''></div></div><div id='' class='m25-top'><div id='column-2-broader' class='first'><div id='block-colored' class='gray'><div id='thumb' class=''><a href='event/2026/vv/info.pdf' target=_blank><img src='event/2026/vv/promo-picture.png
+'></a></div><div id='text' class=''><div id='' class='bigger stronger'><a href='event/2026/vv/info.pdf' target=_blank>ÚGN na Veletrhu vědy 2026</a></div><div id='' class='narrow m06-top'>Video, Praha.</div><div id='' class='m06-top'><span class='c-brown smaller'>22.06.2026</span>&nbsp; <span class='c-brown-2 smaller'>12:46</span></div></div><div id='clean'></div></div></div><div id='column-2-broader' class=''><div id='block-colored' class='gray'><div id='thumb' class=''><a href='event/2026/dh-prof/info.pdf' target=_blank><img src='event/2026/dh-prof/promo-picture.jpg
+'></a></div><div id='text' class=''><div id='' class='bigger stronger'><a href='event/2026/dh-prof/info.pdf' target=_blank>Prezident jmenoval nové profesory</a></div><div id='' class='narrow m06-top'>Slavnostní jmenování prof. Davida Horáka.</div><div id='' class='m06-top'><span class='c-brown smaller'>02.06.2026</span>&nbsp; <span class='c-brown-2 smaller'>11:19</span></div></div><div id='clean'></div></div></div><div id='clean' class=''></div><div id='column-2-broader' class='first m25-top'><div id='block-colored' class='gray'><div id='thumb' class=''><a href='event/2026/ova/pozvanka.pdf' target=_blank><img src='event/2026/ova/promo-picture.jpg
+'></a></div><div id='text' class=''><div id='' class='bigger stronger'><a href='event/2026/ova/pozvanka.pdf' target=_blank>Konference OVA 2026</a></div><div id='' class='narrow m06-top'>Nové poznatky a měření v seizmologii, inženýrské geofyzice a geotechnice, Ramzová, Česká republika.</div><div id='' class='m06-top'><span class='c-brown smaller'>19.05.2026</span>&nbsp; &ndash; &nbsp;<span class='c-brown smaller'>21.05.2026</span></div></div><div id='clean'></div></div></div><div id='column-2-broader' class=' m25-top'><div id='block-colored' class='gray'><div id='thumb' class=''><a href='https://jcmf.vsb.cz/workshop2026' target=_blank><img src='event/2026/jh80/promo-picture.jpg
+'></a></div><div id='text' class=''><div id='' class='bigger stronger'><a href='https://jcmf.vsb.cz/workshop2026' target=_blank>Workshop numerické matematiky</a></div><div id='' class='narrow m06-top'>Workshop ke příležitosti životního jubilea prof. Jaroslava Haslingera, Ostrava, Česká republika.</div><div id='' class='m06-top'><span class='c-brown smaller'>09.04.2026</span>&nbsp; &ndash; &nbsp;<span class='c-brown smaller'>10.04.2026</span></div></div><div id='clean'></div></div></div><div id='clean' class=''></div></div><br>
+
+<!-- NOTICE BOARD -->
+<div id="nboard"><div id="column-4-broader" class="first"><a href="http://www.avcr.cz/cs/strategie" target=_blank> <img src="ribbon/av21-cz.jpg"></a><a href="http://www.avcr.cz/cs" target=_blank> <img src="ribbon/cas-cz.jpg"></a><a href="https://www.diamo.cz/cs/projekt-tacr/o-projektu" target=_blank> <img src="ribbon/diamo-cz.png"></a></div><div id="column-4-broader" class=""><a href="https://www.geonika.cz/mgr.html" target=_blank> <img src="ribbon/mgr.jpg"></a><a href="https://nusl.cz/?language=cs" target=_blank> <img src="ribbon/nrgl-cz.jpg"></a><a href="https://www.czechelib.cz/cs" target=_blank> <img src="ribbon/czelib-cz.jpg"></a></div><div id="column-4-broader" class=""><a href="https://www.tezebni-unie.cz" target=_blank> <img src="ribbon/tunie.jpg"></a><a href="https://postminquake.eu" target=_blank> <img src="ribbon/pmq.png"></a><a href="?p=other/info/gravistore" > <img src="ribbon/gravistore.jpg"></a></div><div id="column-4-broader" class=""><a href="?p=bulletin" > <img src="ribbon/soa-cz.jpg"></a><a href="http://www.czechgeo.cz/cs" target=_blank> <img src="ribbon/czgeo.jpg"></a><a href="https://www.ugn.cas.cz/link/azrock" target=_blank> <img src="ribbon/azrock-cz.png"></a></div> <div id="clean"></div></div>     </div>
+
+     <div id='footer'>
+      
+
+<div id='wrap' class='narrow'>
+
+ <div id='column-4' class='first'>
+  <h5>ODDĚLENÍ</h5>
+  <div><a href='?l=cz&p=dg'>Oddělení geomateriálů</a></div>
+  <div><a href='?l=cz&p=dfj'>Oddělení kapalinových paprsků</a></div>
+  <div><a href='?l=cz&p=dgmr'>Oddělení geomechaniky a&nbsp;báňského&nbsp;výzkumu</a></div>
+  <div><a href='?l=cz&p=damcs'>Oddělení aplikované matematiky a&nbsp;výpočetních&nbsp;věd</a></div>
+  <div><a href='?l=cz&p=deg'>Oddělení environmentální geografie</a></div>
+ </div>
+ 
+ <div id='column-4'>
+  <h5>AKTUÁLNĚ</h5>
+  <div><a href='?l=cz&p=event'>Novinky a události</a></div>
+  <div><a href='?l=cz&p=contract'>Veřejné zakázky</a></div>
+  <!--
+  <div><a href='?l=cz&p=career'>Volná pracovní místa</a></div>
+  <div class='m25-bottom'></div>
+  <h5>VEŘEJNÉ</h5>
+  <div><a href='?l=cz&p=gallery'>Fotogalerie a video</a></div>
+  <div><a href='?l=cz&p=public'>Zajímavé publikace</a></div>
+  -->
+  <div id='socnet' style='margin-top: 40px;'>
+   <a href='https://www.facebook.com/ustavgeoniky' target=_blank>
+    <div id='logo'><img src='image/icon-fb.png'></div>
+    <div id='text'>facebook</div>
+	<div id='clean'></div>
+   </a>
+  </div>
+  <div class='smaller c-light' style='margin-top: 30px;'>
+   &copy; 2000&thinsp;-&thinsp;2026&nbsp; <a href="?p=ecard&s=10000610">Jiří Starý</a>  </div>
+ </div>
+ 
+ <div id='column-4'>
+  <h5>O ÚSTAVU</h5>
+  <div><a href='?l=cz&p=manage'>Vedení ústavu</a></div>
+  <div><a href='?l=cz&p=manage&s=iboard'>Rada pracoviště</a></div>
+  <div><a href='?l=cz&p=manage&s=sboard'>Dozorčí rada</a></div>
+  <!--
+  <div><a href='?l=cz&p=library'>Veřejná knihovna</a></div>
+  -->
+  <div class='' style='margin-top: 25px;'>
+   <div><a href='?l=cz&p=registry&s=provide'>Informace ze zákona</a></div>
+   <div><a href='?l=cz&p=registry&s=process'>Ochrana osobních údajů</a></div>
+   <div><a href='?l=cz&p=registry&s=report'>Ochrana oznamovatele</a></div>
+  </div>
+</div>
+ 
+ <div id='column-4' class='last'>
+  <h5>KONTAKT</h5>
+  <div>Ústav geoniky AV ČR, v. v. i.<br>Studentská 1768/9<br>708 00 Ostrava-Poruba<br>Česká republika</div>
+  <div>IČ: 68145535<br>DIČ: CZ68145535</div>
+  <div>Telefon: +420 596 979 111<br>Email: <a href="mailto:podatelna@ugn.cas.cz">podatelna@ugn.cas.cz</a><br>Datová schranka: <a href="https://www.mojedatovaschranka.cz/sds/detail.do?dbid=hftndsc" target=_blank>hftndsc</a></div>
+ </div>
+ 
+ <div id='clean'></div>
+
+</div>
+     </div>
+
+  </div>
+
+</body>
+
+</html>
