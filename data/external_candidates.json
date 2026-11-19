@@ -1,63 +1,15 @@
 {
- "generated": "2026-11-18T15:36:43+00:00",
+ "generated": "2026-11-19T15:39:29+00:00",
  "stats": {
   "euraxess_listed": 0,
   "euraxess_opened": 0,
   "faculty_radar_kept": 2,
-  "faculty_radar_published": 2,
-  "faculty_radar_rows": 397
+  "faculty_radar_published": 0,
+  "faculty_radar_rows": 396
  },
  "errors": [
   "EURAXESS list failed (f%5B0%5D=job_country%3A788): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC",
   "EURAXESS list failed (keywords=urban%20planning&f%5B0%5D=job_country%3A7): HTTPError 403 Client Error: Forbidden for url: https://euraxess.ec.europa.eu/jobs/search?keywords=urban%20planning&f%5B0%5D=job_country%3A788&sort%5Bname%5D=created&sort%5Bdirection%5D=DESC"
  ],
- "items": [
-  {
-   "title": "Professorat Lector – Arquitectura Legal i Gestió (LE-432/753)",
-   "title_en": "Assistant professor – Arquitectura Legal i Gestió",
-   "institution": "Universitat Politècnica de Catalunya",
-   "city": "Barcelona",
-   "region": "Catalonia",
-   "country": "ES",
-   "level": "research",
-   "note": "Assistant professor via Faculty Radar",
-   "topics": [
-    "GIS, remote sensing & spatial analysis",
-    "Urban & spatial planning",
-    "Housing & housing policy"
-   ],
-   "match": {
-    "A": 62,
-    "B": 88
-   },
-   "deadline": "2026-11-25",
-   "url": "https://facultyradar.eu/position/universitat-politecnica-de-catalunya-professorat-lector-arquitectura-legal-i-gestio-71027995-le-432-753/#LE-432",
-   "li_kind": "job",
-   "first_seen": "2026-11-18",
-   "source": "Faculty Radar"
-  },
-  {
-   "title": "Professorat Lector – Expressió Gràfica Arquitectònica (LE-431/752)",
-   "title_en": "Assistant professor – Expressió Gràfica Arquitectònica",
-   "institution": "Universitat Politècnica de Catalunya",
-   "city": "Barcelona",
-   "region": "Catalonia",
-   "country": "ES",
-   "level": "research",
-   "note": "Assistant professor via Faculty Radar",
-   "topics": [
-    "GIS, remote sensing & spatial analysis",
-    "Digital planning tools & AI"
-   ],
-   "match": {
-    "A": 62,
-    "B": 55
-   },
-   "deadline": "2026-11-25",
-   "url": "https://facultyradar.eu/position/universitat-politecnica-de-catalunya-professorat-lector-expressio-grafica-arquitectonica-71028012-le-431-752/#LE-431",
-   "li_kind": "job",
-   "first_seen": "2026-11-18",
-   "source": "Faculty Radar"
-  }
- ]
+ "items": []
 }
