@@ -29,7 +29,12 @@ NAV_WORDS = re.compile(
     r"recursos humanos|recursos humans|human resources|hrs4r|talent|sede electr|seu electr|"
     r"investigaci[oó]n|recerca|research|"
     r"stellen|stellenangebot|stellenausschreibung|stellenb[oö]rse|karriere|jobs? (und|&) karriere|"
-    r"arbeiten (an|bei|am)|offene stellen|ausschreibung|wissenschaftliches personal|personal",
+    r"arbeiten (an|bei|am)|offene stellen|ausschreibung|wissenschaftliches personal|personal|"
+    # pl / cs / ro / tr
+    r"praca|oferty pracy|konkurs|kariera|rekrutac|"
+    r"kari[eé]ra|voln[aá] m[ií]sta|v[yý]b[eě]rov[aá] [rř][ií]zen|pracovn[ií] (m[ií]sta|nab[ií]dk|pozic)|[uú][rř]edn[ií] deska|"
+    r"cariere|posturi|concurs|resurse umane|anun[tț]|"
+    r"kariyer|ilan|personel daire|insan kaynaklar|akademik kadro|duyuru|announcement|vacanc|open position",
     re.I,
 )
 JOB_WORDS = re.compile(
@@ -38,7 +43,11 @@ JOB_WORDS = re.compile(
     r"\bR1\b|\bR2\b|juan de la cierva|ram[oó]n y cajal|margarita salas|\bfpi\b|\bfpu\b|"
     r"contrat[oa]s? .*proyecto|contracte.*projecte|plazas? de investigaci|oferta de trabajo|"
     r"wissenschaftliche[rn]?\W*mitarbeiter|postdoktorand|promotion|\bE ?13\b|TV-?L|TV[oö]D|stellenausschreibung|"
-    r"bewerbungsfrist|kennziffer",
+    r"bewerbungsfrist|kennziffer|"
+    r"adiunkt|post-?doc|konkurs na stanowisk|termin sk[lł]adania|"
+    r"postdoktorand|v[eě]deck[yý] pracovn|v[yý]zkumn[yý] pracovn|odborn[yý] asistent|uz[aá]v[eě]rka|"
+    r"cercet[aă]tor|postdoctor|concurs pentru ocuparea|posturi (vacante|didactice)|"
+    r"[öo][gğ]retim [üu]yesi|doktora sonras|ara[sş]t[ıi]rmac[ıi]|son ba[sş]vuru",
     re.I,
 )
 MAX_CANDIDATES_L1 = 10
