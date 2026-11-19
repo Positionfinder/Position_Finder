@@ -6,13 +6,18 @@ from datetime import date
 
 PHD = re.compile(
     r"predoctoral|pre-doctoral|predoc\b|ph\.?\s?d\.?\s?(student|candidate|position|fellowship|contract|scholarship)|"
-    r"(?<![a-z-])doctoral (student|candidate|researcher|position|fellowship|contract)|doctorand[oa]?s?|"
+    r"(?<![a-z-])doctoral (student|candidate|researcher|position|fellowship|contract)|(?<!post)(?<!post-)(?<!pos)doctorand[oa]?s?|"
     r"\bfpi\b|\bfpu\b|\bR1\b|first stage researcher|investigador[a]? (en formaci[oó]n|predoctoral)|"
     r"personal investigador en formaci|contrat[eo]s? predoctorals?|beca predoctoral|tesis doctoral|joan or[oó]|\bINPhINIT\b|"
     # de
-    r"doktorand|promotionsstelle|promotionsvorhaben|(m[oö]glichkeit|gelegenheit) zur (promotion|weiterqualifikation)|"
+    r"(?<!post)(?<!post-)doktorand|promotionsstelle|promotionsvorhaben|(m[oö]glichkeit|gelegenheit) zur (promotion|weiterqualifikation)|"
     r"zur promotion|promovieren|dissertation|promotionsm[oö]glichkeit|mit promotion\b|promotionsstelle|"
-    r"(?<![a-z-])doctoral researcher|phd position|phd candidate|phd student",
+    r"(?<![a-z-])doctoral researcher|phd position|phd candidate|phd student|"
+    # pl / cs / ro / tr (Poland, Czech Republic, Romania, Turkey)
+    r"doktorant|szko[lł]\w* doktorsk|stypendi\w* doktoranck|\basystent\w*|"
+    r"(?<!post)(?<!post-)doktorand|doktorsk\w* student|(?<!odborn[ýy] )\basistent\b(?! (?:professor|prof))|"
+    r"(?<!post)(?<!post-)doctorand|asistent de cercetare|asistent universitar|burs[aă] doctoral|"
+    r"ara[sş]t[ıi]rma g[oö]revlisi|doktora (ö[gğ]rencisi|bursiyeri|bursu)|yüksek lisans ö[gğ]rencisi",
     re.I,
 )
 POSTDOC = re.compile(
@@ -23,7 +28,19 @@ POSTDOC = re.compile(
     # de
     r"postdoktorand|promoviert|abgeschlossene[nr]? promotion|nach (der|abgeschlossener) promotion|"
     r"(promotion|ph\.?\s?d\.?) (ist |wird )?(vorausgesetzt|erforderlich)|nachwuchsgruppenleit|habilitation|"
-    r"completed (a |your )?(ph\.?\s?d|doctora)|(ph\.?\s?d|doctoral degree) (is )?(required|completed)|holding a ph\.?\s?d",
+    r"completed (a |your )?(ph\.?\s?d|doctora)|(ph\.?\s?d|doctoral degree) (is )?(required|completed)|holding a ph\.?\s?d|"
+    # pl / cs / ro / tr
+    r"sta[zż]\w* podoktorsk|stopie[nń]\w* doktora|stopniem doktora|naukowiec ze stopniem doktora|"
+    r"postdoktorand|postdok|titul\w* ph\.?\s?d|absolvent\w* doktorsk|"
+    r"postdoctorand|post-doctorand|cercet[aă]tor\w* postdoctoral|titlul\w* de doctor|\bCS ?III\b|"
+    r"doktora sonras[ıi]|post-?doktora|doktora derecesine sahip|doktoras[ıi]n[ıi] tamamlam[ıi][sş]",
+    re.I,
+)
+# Assistant-professor level posts in Poland, Czech Republic, Romania and Turkey (PhD required).
+# They are kept as researcher-level posts with a note, like the Spanish assistant-professor posts.
+ASSISTANT_PROF = re.compile(
+    r"\badiunkt\w*|odborn[ýy]\w* asistent\w*|lector universitar|\blector\b|[sș]ef de lucr[aă]ri|"
+    r"dr\.? ?[öo][gğ]r(etim|\.)? ?[üu]yesi|doktor [öo][gğ]retim [üu]yesi|assistant professor",
     re.I,
 )
 # Programme-level calls that are open to all fields (shown separately as "Fellowship calls").
@@ -51,7 +68,14 @@ FIELDS: dict[str, re.Pattern] = {
         r"stadtplanung|raumplanung|st[aä]dtebau|stadtentwicklung|raumentwicklung|regionalplanung|regionalentwicklung|"
         r"stadtforschung|stadt- und regionalplanung|raumordnung|raumwissenschaft|stadtumbau|quartiersentwicklung|"
         r"siedlungsentwicklung|fl[aä]chennutzung|urbane (transformation|resilienz|r[aä]ume)|stadtregion|"
-        r"planungswissenschaft|landesplanung|bauleitplanung|transformationsforschung",
+        r"planungswissenschaft|landesplanung|bauleitplanung|transformationsforschung"
+        # pl / cs / ro / tr
+        r"|gospodark\w* przestrzenn|planowani\w* przestrzenn|urbanisty|rozw[oó]j\w* (miast|regionaln|lokaln)|rewitalizac|"
+        r"polityk\w* miejsk|studi\w* miejsk|geografi\w* spo[lł]eczno-ekonomiczn|"
+        r"územní\w* plánování|územního plánování|regionální\w* rozvoj|rozvoj\w* měst|městsk\w* studi|"
+        r"amenaj\w* (a )?teritori|planific\w* (urban|spa[tț]ial|teritorial)|dezvoltare (urban|regional|teritorial)|regenerare urban|"
+        r"[sş]ehir ve b[oö]lge planlama|[sş]ehir planlama|kentsel (tasar[ıi]m|d[oö]n[üu][sş][üu]m|planlama|çal[ıi][sş]malar)|"
+        r"b[oö]lge planlama|kent planlama|kentle[sş]me|mek[aâ]nsal planlama",
         re.I,
     ),
     "Architecture": re.compile(
@@ -59,21 +83,29 @@ FIELDS: dict[str, re.Pattern] = {
         r"edificaci[oó]|building (design|technology|physics|energy|performance|information|stock|renovation)|built environment|"
         r"\bETSA[BMVS]?\b|\bBIM\b|rehabilitaci[oó]n (de edificios|energ)|rehabilitaci[oó] (d'edificis|energ)|"
         r"construcci[oó]n sostenible|interior design|dise[nñ]o arquitect|"
-        r"\barchitektur\b|architektonisch|baukultur|geb[aä]udeplanung|entwerfen|bauphysik",
+        r"\barchitektur\b|architektonisch|baukultur|geb[aä]udeplanung|entwerfen|bauphysik"
+        r"|architektur\w*|\barchitekt\w*|arhitectur|\barhitect|mimarl[ıi]k|\bmimari\b",
         re.I,
     ),
     "Geography": re.compile(r"geograf|geograph|demograf|demograph|population studies|humangeograph|"
-                            r"wirtschaftsgeograph|sozialgeograph", re.I),
+                            r"wirtschaftsgeograph|sozialgeograph|co[gğ]rafya", re.I),
     "Landscape": re.compile(r"landscape|paisaj|paisatg|green infrastructure|infraestructura verde|infraestructures? verds?|"
                             r"nature-based solutions|soluciones basadas en la naturaleza|ecosystem services|servicios ecosist[eé]micos|"
                             r"serveis ecosist[eè]mics|urban green|espacios verdes|espais verds|green spaces|"
                             r"landschaft|gr[uü]ne infrastruktur|[oö]kosystemleistung|stadtgr[uü]n|freiraumplanung|"
-                            r"naturbasierte l[oö]sungen|umweltplanung|landnutzung", re.I),
-    "Housing": re.compile(r"\bhousing\b|vivienda|habitatge|wohnungs(markt|politik|bau|forschung)|\bwohnen\b", re.I),
+                            r"naturbasierte l[oö]sungen|umweltplanung|landnutzung|"
+                            r"krajobraz|zieleń miejsk|zielon\w* infrastruktur|us[lł]ug\w* ekosystem|rozwi[aą]za\w* oparte na przyrodzie|"
+                            r"krajin|ekosystémov\w* služ|zelen\w* infrastruktur|městsk\w* zele|"
+                            r"peisaj|servicii(le)? ecosistemic|infrastructur\w* verde|spa[tț]ii verzi|"
+                            r"peyzaj|ekosistem hizmet|ye[sş]il altyap[ıi]|kentsel ye[sş]il|ye[sş]il alan", re.I),
+    "Housing": re.compile(r"\bhousing\b|vivienda|habitatge|wohnungs(markt|politik|bau|forschung)|\bwohnen\b|"
+                         r"mieszkalnictw|mieszkaniow|bydlen[íi]|bytov\w* politik|locuin[tț]|locuire|\bkonut", re.I),
     "GIS & remote sensing": re.compile(
         r"\bGIS\b|\bSIG\b|geographic information|informaci[oó]n geogr|informaci[oó] geogr|remote sensing|teledetec|"
         r"cartograf|cartograph|geospatial|geoespacial|geom[aà]tic|earth observation|observaci[oó]n de la tierra|PPGIS|"
-        r"fernerkundung|geoinformati|kartograph|erdbeobachtung",
+        r"fernerkundung|geoinformati|kartograph|erdbeobachtung|"
+        r"kartograf|teledetekc|geoinformac|geoinformatyk|dálkov\w* průzkum|teledetec[tț]i|sisteme informatice geografice|"
+        r"co[gğ]rafi bilgi sistem|uzaktan alg[ıi]lama|\bCBS\b",
         re.I,
     ),
     "Mobility & transport": re.compile(
@@ -82,14 +114,20 @@ FIELDS: dict[str, re.Pattern] = {
         r"transport p[uú]blic|active mobility|movilidad activa|cycling|ciclismo urbano|walkability|caminabilidad|"
         r"travel behaviou?r|accessibility (analysis|planning|to)|accesibilidad (urbana|territorial)|"
         r"verkehrsplanung|mobilit[aä]tsforschung|verkehrswende|mobilit[aä]tswende|nachhaltige mobilit[aä]t|"
-        r"st[aä]dtische mobilit[aä]t", re.I),
+        r"st[aä]dtische mobilit[aä]t|mobilno[sś][cć] miejsk|transport\w* publiczn|komunikacj\w* miejsk|"
+        r"městsk\w* mobilit|veřejn\w* doprav|udržiteln\w* mobilit|mobilitate urban|transport public|"
+        r"kentsel ula[sş][ıi]m|toplu ta[sş][ıi]ma|s[üu]rd[üu]r[üu]lebilir ula[sş][ıi]m", re.I),
     "Heritage": re.compile(r"architectural heritage|built heritage|patrimonio (arquitect|construido|urbano)|patrimoni (arquitect|construït|urb)", re.I),
     "Climate & risk": re.compile(
         r"climate (change )?adaptation|adaptaci[oó]n al cambio clim|adaptaci[oó] al canvi clim|flood risk|riesgo de inundaci|"
         r"risc d'inundaci|natural hazards|riesgos naturales|urban heat|isla de calor|illa de calor|heat island|"
         r"climate resilien|urban resilien|resiliencia (urbana|clim)|resili[eè]ncia (urbana|clim)|risk perception|percepci[oó]n del riesgo|"
         r"hochwasser|starkregen|klima(wandel)?anpassung|naturgefahren|risikowahrnehmung|katastrophenschutz|"
-        r"hitzevorsorge|klimaresilienz|disaster risk",
+        r"hitzevorsorge|klimaresilienz|disaster risk|"
+        r"ryzyk\w* powodziow|pow[oó]d[zź]|powodzi|adaptacj\w* do zmian\w* klimatu|zagro[zż]e\w* naturaln|wysp\w* ciep[lł]a|"
+        r"povod(e[nň]|n[ěií])|adaptac\w* na změn\w* klimatu|přírodní\w* rizik|tepeln\w* ostrov|"
+        r"inunda[tț]i|adaptare(a)? la schimb[aă]ri(le)? climatic|hazard\w* natural|insul\w* de c[aă]ldur|"
+        r"ta[sş]k[ıi]n|iklim de[gğ]i[sş]ikli[gğ]ine uyum|afet risk|deprem risk|do[gğ]al afet|kentsel [ıi]s[ıi] adas",
         re.I,
     ),
 }
@@ -114,21 +152,51 @@ MONTHS = {
     # de
     "januar": 1, "jänner": 1, "februar": 2, "märz": 3, "maerz": 3, "mai": 5, "juni": 6, "juli": 7,
     "oktober": 10, "dezember": 12,
+    # pl (genitive and nominative)
+    "stycznia": 1, "styczeń": 1, "lutego": 2, "luty": 2, "marca": 3, "marzec": 3, "kwietnia": 4, "kwiecień": 4,
+    "maja": 5, "maj": 5, "czerwca": 6, "czerwiec": 6, "lipca": 7, "lipiec": 7, "sierpnia": 8, "sierpień": 8,
+    "września": 9, "wrzesień": 9, "października": 10, "październik": 10, "listopada": 11, "listopad": 11,
+    "grudnia": 12, "grudzień": 12,
+    # cs
+    "ledna": 1, "leden": 1, "února": 2, "únor": 2, "března": 3, "březen": 3, "dubna": 4, "duben": 4,
+    "května": 5, "květen": 5, "června": 6, "červen": 6, "července": 7, "červenec": 7, "srpna": 8, "srpen": 8,
+    "září": 9, "října": 10, "říjen": 10, "listopadu": 11, "prosince": 12, "prosinec": 12,
+    # ro
+    "ianuarie": 1, "februarie": 2, "martie": 3, "aprilie": 4, "iunie": 6, "iulie": 7, "septembrie": 9,
+    "octombrie": 10, "noiembrie": 11, "decembrie": 12,
+    # tr (dotless ı written as i here; see _mon_key)
+    "ocak": 1, "şubat": 2, "subat": 2, "mart": 3, "nisan": 4, "mayis": 5, "haziran": 6, "temmuz": 7,
+    "ağustos": 8, "agustos": 8, "eylül": 9, "eylul": 9, "ekim": 10, "kasim": 11, "aralik": 12,
 }
-_MON = "|".join(sorted(MONTHS, key=len, reverse=True))
+
+
+def _mon_key(s: str) -> str:
+    """Month name as a MONTHS key: lower case, Turkish dotted/dotless i folded to i."""
+    return s.lower().replace("\u0307", "").replace("ı", "i")
+
+
+MONTHS = {_mon_key(k): v for k, v in MONTHS.items()}
+_MON = "|".join(k.replace("i", "[iıİI]") for k in sorted(MONTHS, key=len, reverse=True))
 DATE_PATTERNS = [
     (re.compile(r"\b(\d{1,2})[/.-](\d{1,2})[/.-](20\d{2})\b"), lambda m: (int(m[3]), int(m[2]), int(m[1]))),
     (re.compile(r"\b(20\d{2})-(\d{2})-(\d{2})\b"), lambda m: (int(m[1]), int(m[2]), int(m[3]))),
     (re.compile(rf"\b(\d{{1,2}})(?:st|nd|rd|th|\.)?\s+(?:de\s+|d'|of\s+)?({_MON})\s*,?\s+(?:de\s+|del\s+)?(20\d{{2}})\b", re.I),
-     lambda m: (int(m[3]), MONTHS[m[2].lower()], int(m[1]))),
-    (re.compile(rf"\b({_MON})\s+(\d{{1,2}})(?:st|nd|rd|th)?,?\s+(20\d{{2}})\b", re.I), lambda m: (int(m[3]), MONTHS[m[1].lower()], int(m[2]))),
+     lambda m: (int(m[3]), MONTHS[_mon_key(m[2])], int(m[1]))),
+    (re.compile(rf"\b({_MON})\s+(\d{{1,2}})(?:st|nd|rd|th)?,?\s+(20\d{{2}})\b", re.I), lambda m: (int(m[3]), MONTHS[_mon_key(m[1])], int(m[2]))),
+    # Czech style "6. 12. 2025"
+    (re.compile(r"\b(\d{1,2})\.\s(\d{1,2})\.\s?(20\d{2})\b"), lambda m: (int(m[3]), int(m[2]), int(m[1]))),
 ]
 DEADLINE_CUE = re.compile(
     r"deadline|closing date|apply (by|before)|application period|until|plazo|fecha l[ií]mite|fin de plazo|hasta el|"
     r"termini|data l[ií]mit|fins al|fins el|finaliza|fecha de cierre|cierre|solicitud:|solicitudes|sol·licituds|"
     r"presentaci[oó]n? de (solicitudes|sol·licituds)|applications?:|"
     r"bewerbungsfrist|bewerbungsschluss|bewerbungen (bitte )?bis|bis (zum|sp[aä]testens)|einsendeschluss|"
-    r"ende der bewerbungsfrist|frist:|application deadline|closing date",
+    r"ende der bewerbungsfrist|frist:|application deadline|closing date|"
+    # pl / cs / ro / tr
+    r"termin\w* (sk[lł]adania|nadsy[lł]ania|zg[lł]osze|aplikacj)|do dnia|ostateczny termin|nieprzekraczaln|wa[zż]ne do|"
+    r"uz[aá]v[eě]rk|term[ií]n\w* (pro )?(pod[aá]n[ií]|p[rř]ihl[aá][sš]|odevzd|doru[cč]en)|p[rř]ihl[aá][sš]k\w* .{0,40}do|nejpozd[eě]ji do|"
+    r"termen(ul)? limit|data limit|p[aâ]n[aă] la data de|p[aâ]n[aă] la|depunere\w* dosarelor|[iî]nscrier\w*|"
+    r"son ba[sş]vuru|ba[sş]vuru (tarih|s[üu]resi|biti[sş])|ba[sş]vurular",
     re.I,
 )
 
@@ -145,9 +213,18 @@ def _dates(text: str) -> list[tuple[int, date]]:
     return found
 
 
+# Dates right after these words are start / end / decision dates, not application deadlines.
+NOT_DEADLINE_DATE = re.compile(
+    r"(rozpocz[eę]ci\w*|zatrudnieni\w*|rozstrzygni[eę]ci\w*|nástup\w*|zahájen[ií]\w*|[iî]nceperi\w*|desf[aă][sș]ur[aă]rii|"
+    r"ba[sş]lama|ba[sş]lang[ıi][cç]|start(ing)? date|employment (start|from)|begin\w*|beginn|inicio del contrato|incorporaci[oó]n|"
+    r"interview|rozmow\w*|pohovor|interviu|m[üu]lakat|sınav|prob[aă])[^.\n]{0,25}$",
+    re.I,
+)
+
+
 def deadline(text: str, today: date | None = None) -> str | None:
     today = today or date.today()
-    dates = _dates(text)
+    dates = [(pos, d) for pos, d in _dates(text) if not NOT_DEADLINE_DATE.search(text[max(0, pos - 45):pos])]
     if not dates:
         return None
     cues = [m.start() for m in DEADLINE_CUE.finditer(text)]
@@ -236,6 +313,9 @@ _RELATIVE = re.compile(
 )
 
 
+_RELATIVE_TR = re.compile(r"(?:ilan|yay[ıi]m)\w*\D{0,60}?(\d{1,2})\s*(?:\([^)]{0,20}\)\s*)?(i[sş]\s*)?g[üu]n", re.I)
+
+
 def relative_deadline(text: str) -> str | None:
     """Estimate deadlines written as 'N working days from publication'.
 
@@ -244,7 +324,16 @@ def relative_deadline(text: str) -> str | None:
     """
     m = _RELATIVE.search(text)
     if not m:
-        return None
+        t = _RELATIVE_TR.search(text)  # Turkish: "ilanın yayım tarihinden itibaren 15 gün"
+        if not t:
+            return None
+        n, working = int(t[1]), bool(t[2])
+        today = date.today()
+        past = [d for _, d in _dates(text) if d <= today]
+        if not past or n > 60:
+            return None
+        from datetime import timedelta
+        return (max(past) + timedelta(days=(round(n * 7 / 5) if working else n) + 2)).isoformat()
     n = m[1].lower()
     n = int(n) if n.isdigit() else _NUM_WORDS.get(n)
     if not n or n > 60:

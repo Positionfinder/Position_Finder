@@ -7,6 +7,7 @@ across a site (menus, footers), classifies the rest and writes docs/data/jobs.js
 from __future__ import annotations
 
 import hashlib
+import html
 import io
 import json
 import os
@@ -15,6 +16,7 @@ import sys
 from collections import Counter
 from concurrent.futures import ThreadPoolExecutor
 from datetime import date, datetime, timedelta, timezone
+from email.utils import parsedate_to_datetime
 from pathlib import Path
 from urllib.parse import urldefrag, urljoin, urlsplit
 
@@ -46,6 +48,7 @@ CACHE = ROOT / "data/detail_cache.json"
 SEEN = ROOT / "data/seen.json"
 DEBUG = ROOT / "debug"
 CACHE_DAYS = 14
+FEED_MAX_AGE_DAYS = 120  # RSS search feeds also return old, long-closed offers
 CACHE_VERSION = 4  # bump when the way offer pages are read changes, so cached pages are re-read
 MAX_DETAILS_PER_SOURCE = 80
 MAX_PDF_BYTES = 8_000_000
@@ -54,13 +57,23 @@ SAVE_DEBUG_HTML = os.environ.get("PF_DEBUG_HTML") == "1"
 ITEM_HINT = re.compile(
     r"contrat|contract|oferta|offer|position|plaza|pla[çc]a|convocat|call\b|vacan|investigador|researcher|"
     r"research|predoc|postdoc|posdoc|doctor|ph\.?d|fellowship|beca|ajut|ayuda|job|empleo|treball|"
-    r"mitarbeiter|stelle|wissenschaftl|promotion|\bE ?1[3-5]\b|TV-?L|TV[oö]D",
+    r"mitarbeiter|stelle|wissenschaftl|promotion|\bE ?1[3-5]\b|TV-?L|TV[oö]D|"
+    # pl / cs / ro / tr
+    r"konkurs|oferta pracy|stanowisk|adiunkt|badacz|naukow|"
+    r"v[yý]b[eě]rov|pozic|voln[eé] m[ií]sto|pracovn[ií]k|v[eě]deck|v[yý]zkumn|postdok|asistent|"
+    r"concurs|\bpost(ul|uri)? (de|didactic|vacant)|cercet|anun[tț]|"
+    r"\bilan|kadro|ara[sş]t[ıi]rmac|[öo][gğ]retim [üu]yesi|doktora sonras|ba[sş]vuru",
     re.I,
 )
 OFFER = re.compile(
     r"contrat|contract|oferta|offer|position|plaza|pla[çc]a|convocat|\bcall\b|vacan|investigador|researcher|"
     r"predoc|postdoc|posdoc|ph\.?d|doctoral|doctorand|fellowship|beca|ajut|ayuda|job|selecci|\bR[12]\b|hrs20\d\d|"
-    r"mitarbeiter|wissenschaftl|stellenausschreibung|\bE ?1[3-5]\b|TV-?L|TV[oö]D|kennziffer",
+    r"mitarbeiter|wissenschaftl|stellenausschreibung|\bE ?1[3-5]\b|TV-?L|TV[oö]D|kennziffer|"
+    # pl / cs / ro / tr
+    r"konkurs|stanowisk|adiunkt|badacz|"
+    r"v[yý]b[eě]rov[eé] [rř][ií]zen|pozice|postdok|v[eě]deck[yý] pracovn|v[yý]zkumn[yý] pracovn|odborn[yý] asistent|"
+    r"concurs|cercet[aă]tor|postdoctor|lector universitar|[sș]ef de lucr[aă]ri|"
+    r"[öo][gğ]retim [üu]yesi|doktora sonras|ara[sş]t[ıi]rmac[ıi]|kadro ilan",
     re.I,
 )
 NOT_OFFER = re.compile(
@@ -76,7 +89,14 @@ NOT_OFFER = re.compile(
     r"\bW ?[23]\b|w[23]-professur|professur f[uü]r|full professor|associate professor|lehrkraft f[uü]r besondere|"
     r"studentische hilfskraft|studentische[rn]? mitarbeiter|wissenschaftliche hilfskraft|praktikum|internship|"
     r"ausbildung|azubi|werkstudent|lehrkr[aä]ft|lehrer|"
-    r"^(ausschreibungen|stellenangebote|stellenausschreibungen|offene stellen|job offers|vacancies|jobs|karriere)\b",
+    r"^(ausschreibungen|stellenangebote|stellenausschreibungen|offene stellen|job offers|vacancies|jobs|karriere)\b|"
+    # pl / cs / ro / tr: results, senior ranks, teaching-only and non-research posts
+    r"wyniki konkursu|rozstrzygni[eę]cie konkursu|informacja o wynikach|lista rankingowa|profesor\w* uczelni|"
+    r"profesor\w* zwyczajn|^\s*profesor\w*|\blektor(a|ka|ki)?\b|instruktor|"
+    r"v[yý]sledk\w* v[yý]b[eě]rov|\bdocent\b|"
+    r"rezultat\w*|proces[e]?[- ]verbal|contesta[tț]i|lista candida|conferen[tț]iar|profesor universitar|selec[tț]ia dosarelor|"
+    r"sonu[cç]lar[ıi]?|nihai de[gğ]erlendirme|[öo]n de[gğ]erlendirme|giri[sş] s[ıi]nav|kesin kay[ıi]t|m[üu]lakat|"
+    r"[öo][gğ]retim g[öo]revlisi|do[cç]ent kadro|prof\. ?dr\.? kadro",
     re.I,
 )
 GENERIC_LINK = re.compile(
@@ -95,13 +115,18 @@ SKIP_LINK = re.compile(r"^(home|inicio|inici|login|accede|contact|contacto|conta
 PHD_PROGRAMME = re.compile(r"^(FPU|la Caixa INPhINIT|Joan Oró FI|Industrial Doctorates)\b|MSCA.*doctoral", re.I)
 RESEARCHER = re.compile(r"investigador(/a|a)?\b(?!\W{0,3}(predoctoral|en formaci|pre-doctoral))|"
                         r"personal investigador(?! en formaci)|\bresearcher\b|research (fellow|associate|scientist)|"
-                        r"cient[ií]fic[oa]\b|investigaci[oó]n posdoctoral", re.I)
+                        r"cient[ií]fic[oa]\b|investigaci[oó]n posdoctoral|"
+                        # pl / cs / ro / tr
+                        r"\bbadacz\w*|v[eě]deck[yý]\w* pracovn|v[yý]zkumn[yý]\w* pracovn|cercet[aă]tor\w*(?! doctorand)|"
+                        r"ara[sş]t[ıi]rmac[ıi]", re.I)
 # German research posts that don't say whether they are PhD or postdoc level.
 DE_ASSOCIATE = re.compile(r"(wissenschaftliche|akademische|wiss\.)\S{0,4}\s*(mitarbeiter|besch[aä]ftigte)|"
                           r"research (associate|scientist)|scientist \(|wissenschaftler\S{0,4}in\b", re.I)
 TECH_STAFF = re.compile(r"technische[rn]? (angestellte|mitarbeiter|assistent)|sachbearbeit|verwaltungs|sekretariat|"
                         r"systemadministr|it-administr|laborant|personal t[eé]cnico|t[eé]cnic[oa]s? (de apoyo|superior|especialista|de laboratorio)|t[eè]cnic/?a|"
-                        r"\bPTA\b|technician|research support|gestor[a]? de|project manager|administrativ|developer|ingeniero de dise|engineer\b", re.I)
+                        r"\bPTA\b|technician|research support|gestor[a]? de|project manager|administrativ|developer|ingeniero de dise|engineer\b|"
+                        r"in[zż]ynieryjno-techniczn|pracownik\w* techniczn|\bstarsz\w* technik|specjalist\w* (ds|do spraw)|technick\w* pracovn|"
+                        r"tehnician|\bexpert\b|economist|secretar|\btekniker|uzman yard[ıi]mc[ıi]s[ıi]|s[öo]zle[sş]meli personel", re.I)
 # Professional (non-academic) roles, for employers with type: professional.
 PRO_ROLE = re.compile(
     r"planner|planificador|planejador|urbanista|urban (planning|designer|development)|"
@@ -131,7 +156,9 @@ RESULT_DOC = re.compile(
     r"llista (provisional|definitiva)|lista (provisional|definitiva)|listado (provisional|definitivo)|"
     r"resoluci[oó]n? (provisional|definitiva|de adjudicaci|final)|resoluci[oó] (provisional|definitiva|final)|"
     r"admesos|admitidos|admitted|exclosos|excluidos|adjudicaci|proposta de contractaci|propuesta de contrataci|"
-    r"\bacta\b|resultad|resultats|results|seleccionad|seleccionat|selected candidate|persona candidata proposada",
+    r"\bacta\b|resultad|resultats|results|seleccionad|seleccionat|selected candidate|persona candidata proposada|"
+    r"wyniki|rozstrzygni[eę]ci|v[yý]sledk|rozhodnut[ií]|rezultatele (finale|concursului|selec|probei)|"
+    r"rezultat(ul|e)? (final|concurs|selec|contesta|dup[aă])|proces[- ]verbal|sonu[cç]",
     re.I,
 )
 BARE_RESOLUTION = re.compile(r"^resoluci[oó]n?\.?$", re.I)
@@ -140,17 +167,23 @@ CALL_DOC = re.compile(r"^(convocat[oò]ria|convocatoria|bases|call)\b", re.I)
 CLOSED_STATUS = re.compile(
     r"\b(cerrad[ao]s?|tancad[ao]s?|tancat|closed|resuelt[ao]s?|resolt[ao]s?|resolved|en evaluaci[oó]n|en avaluaci[oó]|"
     r"under (evaluation|review)|finalitzad[ao]|finalizad[ao]|adjudicad[ao]|desiert[ao]|deserta|expired|"
-    r"fuera de plazo|fora de termini|plazo (cerrado|finalizado)|termini (tancat|finalitzat)|no longer accepting)\b",
+    r"fuera de plazo|fora de termini|plazo (cerrado|finalizado)|termini (tancat|finalitzat)|no longer accepting|"
+    r"zako[nń]czon\w*|rozstrzygni[eę]t\w*|zamkni[eę]t\w*|ukon[cč]en\w*|uzav[rř]en\w*|finalizat\w*|anulat\w*|"
+    r"sona erdi|kapand[ıi]|iptal edil\w*)\b",
     re.I,
 )
 OPEN_STATUS = re.compile(
     r"\b(abiert[ao]|obert[ao]?|open( call| position)?|en plazo|en termini|plazo abierto|termini obert|"
-    r"accepting applications|pr[oó]xima publicaci[oó]n|upcoming)\b",
+    r"accepting applications|pr[oó]xima publicaci[oó]n|upcoming|otwart\w*|otev[rř]en\w*|deschis\w*|"
+    r"[iî]n desf[aă][sș]urare|devam ediyor)\b",
     re.I,
 )
 MAX_ROW_CHARS = 1500
 APPLY_LINK = re.compile(r"e-tauler|^sol·licitud$|^solicitud$|form submission|^formulari|^formulario|^apply( now| here)?$|"
                         r"^inscripci[oó]n?$|^inscriure", re.I)
+SIMILAR_SECTION = re.compile(r"^(podobne og[lł]oszenia|similar (jobs|offers|ads|positions)|related (jobs|positions|offers)|"
+                             r"other (jobs|vacancies|positions)|ofertas similares|[aä]hnliche stellen(angebote)?|podobn[eé] nab[ií]dky|"
+                             r"dal[sš][ií] nab[ií]dky|anun[tț]uri similare|benzer ilanlar)\b", re.I)
 MAIN_ID = re.compile(r"^(content|main|contingut|contenido|region-content|main-content)", re.I)
 
 
@@ -266,7 +299,7 @@ def parse_listing(html: str, base_url: str) -> list[dict]:
         prev = items.get(url)
         if prev is None or len(context) > len(prev["context"]):
             items[url] = {"url": url, "title": title, "context": context,
-                          "weak_title": generic and len(context) > 400, **flags}
+                          "weak_title": generic and len(context) > 400, "ctx_title": generic, "link_text": link_text, **flags}
     # One entry per row: several links in the same row (call PDF, notice board) describe one offer.
     seen_rows, out = set(), []
     for it in items.values():
@@ -276,6 +309,73 @@ def parse_listing(html: str, base_url: str) -> list[dict]:
         seen_rows.add(key)
         out.append(it)
     return out
+
+
+# ---------- RSS feeds (national job portals) ----------
+
+# City -> (city in English, region in English) for items whose institution comes from a portal feed.
+CITY_REGION = {
+    "warszawa": ("Warsaw", "Masovia"), "kraków": ("Kraków", "Lesser Poland"), "krakow": ("Kraków", "Lesser Poland"),
+    "wrocław": ("Wrocław", "Lower Silesia"), "poznań": ("Poznań", "Greater Poland"), "łódź": ("Łódź", "Łódź Voivodeship"),
+    "gdańsk": ("Gdańsk", "Pomerania"), "gdynia": ("Gdynia", "Pomerania"), "sopot": ("Sopot", "Pomerania"),
+    "katowice": ("Katowice", "Silesia"), "gliwice": ("Gliwice", "Silesia"), "sosnowiec": ("Sosnowiec", "Silesia"),
+    "lublin": ("Lublin", "Lublin Voivodeship"), "toruń": ("Toruń", "Kuyavia-Pomerania"), "bydgoszcz": ("Bydgoszcz", "Kuyavia-Pomerania"),
+    "szczecin": ("Szczecin", "West Pomerania"), "białystok": ("Białystok", "Podlaskie"), "rzeszów": ("Rzeszów", "Subcarpathia"),
+    "olsztyn": ("Olsztyn", "Warmia-Masuria"), "kielce": ("Kielce", "Świętokrzyskie"), "opole": ("Opole", "Opole Voivodeship"),
+    "zielona góra": ("Zielona Góra", "Lubusz"), "słupsk": ("Słupsk", "Pomerania"), "kalisz": ("Kalisz", "Greater Poland"),
+    "częstochowa": ("Częstochowa", "Silesia"), "siedlce": ("Siedlce", "Masovia"), "radom": ("Radom", "Masovia"),
+    "koszalin": ("Koszalin", "West Pomerania"), "bielsko-biała": ("Bielsko-Biała", "Silesia"), "płock": ("Płock", "Masovia"),
+}
+
+
+PL_INSTITUTION = re.compile(
+    r"\b(Uniwersytet|Politechnika|Akademia|Szko[lł]a G[lł][oó]wna|Instytut|Centrum|Uczelnia|Wy[zż]sza Szko[lł]a)"
+    r"(\s+[A-ZŁŚŻŹĆŃÓĘĄ][\w.\-]*|\s+(im\.|w|we|nad|Nauk|Medyczny|Medyczna|Ekonomiczny|Rolniczy|Przyrodniczy|Techniczny|Morski|"
+    r"Polskiej|PAN|Badań|Geografii|Rozwoju|Miast|i|Regionów)){1,7}")
+
+
+def parse_rss(content: bytes) -> tuple[list[dict], dict]:
+    """Items of a job-portal RSS feed as listing rows, plus their full text as ready-read offer pages."""
+    soup = BeautifulSoup(content, "xml")
+    raw, details = [], {}
+    for item in soup.find_all("item"):
+        link = clean(item.find("link").get_text()) if item.find("link") else ""
+        if not link:
+            continue
+        title = clean(item.find("title").get_text()) if item.find("title") else ""
+        published = None
+        if item.find("pubDate"):
+            try:
+                published = parsedate_to_datetime(item.find("pubDate").get_text().strip()).date()
+            except (TypeError, ValueError):
+                published = None
+        body_tag = item.find("encoded") or item.find("description")
+        body_html = body_tag.get_text() if body_tag else ""
+        lines = [clean(x) for x in BeautifulSoup(body_html, "lxml").get_text("\n").split("\n") if clean(x)]
+        company = clean(item.find("company").get_text()) if item.find("company") else ""
+        if not company:
+            m = PL_INSTITUTION.search(" ".join(lines))
+            company = clean(m.group(0)) if m else ""
+        loc = item.find("location")
+        city = clean(re.sub(r"<[^>]+>", " ", html.unescape(loc.get_text()))) if loc else ""
+        city = city.split(",")[0].strip()
+        body = " ".join(lines)
+        unit = re.search(r"(?:Jednostka organizacyjna|Jednostka|Miejsce (?:wykonywania )?pracy|Workplace|Department)\s*:\s*(.{5,140}?)"
+                         r"(?:\s(?:Stanowisko|Rodzaj|Grupa|Liczba|Dyscyplina|Wymiar|•)|$)", body, re.I)
+        if unit:
+            extra = unit.group(1)
+        else:
+            first = re.split(r"(?<=[.!?])\s", body, maxsplit=1)[0] if body else ""
+            extra = first[:160]
+        if len(extra) > 110:
+            extra = extra[:110].rsplit(" ", 1)[0] + "…"
+        full_title = f"{title} – {extra}" if extra and extra.lower() not in title.lower() else title
+        c_city, c_region = CITY_REGION.get(city.lower().strip(), (city, ""))
+        raw.append({"url": link, "title": full_title[:300], "context": f"{title} {company} {city} {body[:600]}",
+                    "weak_title": False, "result_links": [], "institution": company, "city": c_city, "region": c_region,
+                    "published": published.isoformat() if published else None})
+        details[link] = {"status": "ok", "title": None, "segments": [title] + lines, "pdf": False}
+    return raw, details
 
 
 # ---------- detail reading ----------
@@ -334,6 +434,9 @@ def read_detail(url: str) -> dict:
         title = clean(h1.get_text(" ")) if h1 else None
         main = main_element(soup)
         segments = [clean(x) for x in main.get_text("\n").split("\n") if clean(x)]
+        stop = next((i for i, x in enumerate(segments) if i > 5 and SIMILAR_SECTION.match(x)), None)
+        if stop is not None:
+            segments = segments[:stop]  # "similar offers" lists other ads with their own dates
         if sum(len(x) for x in segments) < 2500:
             # Short offer page that links to the call document (bases / Ausschreibung): read that too.
             docs = [a for a in main.find_all("a", href=True)
@@ -379,8 +482,9 @@ def classify_text(text: str) -> dict:
 def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[list[dict], dict, list[dict]]:
     status = {"institution": inst["id"], "url": page, "checked": now_iso()}
     pro = inst.get("type") == "professional"
+    rss = page.startswith("rss:")
     try:
-        r = fetch(page)
+        r = fetch(page[4:] if rss else page)
     except Blocked:
         status.update(ok=False, error="disallowed by robots.txt")
         return [], status, []
@@ -388,9 +492,13 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         status.update(ok=False, error=f"{type(e).__name__}: {e}"[:200])
         return [], status, []
 
-    raw = [it for it in parse_listing(r.text, r.url)
-           if it["url"].rstrip("/") not in (page.rstrip("/"), r.url.rstrip("/"))
-           and not (r.url.startswith(it["url"].rstrip("/") + "/") and len(it["url"]) < len(r.url))]
+    if rss:
+        raw, ready = parse_rss(r.content)
+    else:
+        ready = {}
+        raw = [it for it in parse_listing(r.text, r.url)
+               if it["url"].rstrip("/") not in (page.rstrip("/"), r.url.rstrip("/"))
+               and not (r.url.startswith(it["url"].rstrip("/") + "/") and len(it["url"]) < len(r.url))]
     today = date.today()
     cutoff = (today - timedelta(days=CACHE_DAYS)).isoformat()
 
@@ -398,13 +506,21 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
     to_read = []
     for it in raw:
         quick = f"{it['title']} {it['context']}"
-        is_offer = OFFER.search(quick) or (pro and PRO_ROLE.search(it["title"]))
+        is_offer = (OFFER.search(quick) or (pro and PRO_ROLE.search(it["title"]))
+                    or (inst.get("country") in ("PL", "CZ", "RO", "TR") and classify.ASSISTANT_PROF.search(it["title"])))
         if NOT_OFFER.search(it["title"]) or not is_offer:
             it["skip"] = "not an offer"
             continue
         row_dl = classify.deadline(quick, date.min)
         if (row_dl and row_dl < today.isoformat()) or CLOSED_STATUS.search(quick) or it.get("result_links"):
             continue  # already over according to the listing row: no need to open it
+        if it["url"] in ready:
+            if it.get("published") and it["published"] < (today - timedelta(days=FEED_MAX_AGE_DAYS)).isoformat():
+                it["skip"] = f"feed item published over {FEED_MAX_AGE_DAYS} days ago"
+                continue
+            if classify.level(it["title"]) == "phd":
+                it["skip"] = "PhD / assistant post (title)"
+                continue
         det = cache.get(it["url"])
         if not (det and det.get("fetched", "") >= cutoff and det.get("v") == CACHE_VERSION):
             to_read.append(it)
@@ -414,6 +530,11 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
                                  not classify.level(f"{it['title']} {it['context']}")))
     to_read = to_read[:MAX_DETAILS_PER_SOURCE]
     fetched = {it["url"]: read_detail(it["url"]) for it in to_read}
+    for url, d in fetched.items():
+        if url in ready:
+            # Offer page and feed text together; the feed text alone when the page can't be read.
+            d["segments"] = (d.get("segments") or []) + ready[url]["segments"] if d.get("status") == "ok" else ready[url]["segments"]
+            d["status"] = "ok"
 
     # 2) learn site boilerplate: lines repeated on many detail pages of the same host
     by_host: dict[str, list[set[str]]] = {}
@@ -444,6 +565,10 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         # The title is the most reliable signal for the level; the offer text often mentions both
         # ("PhD position ... after the doctorate you can ...").
         lvl_title = classify.level(it["title"]) or classify.level(it["context"])
+        assistant_prof = (bool(classify.ASSISTANT_PROF.search(it["title"])) and lvl_title != "phd"
+                          and not re.search(r"post-?doc|postdok|posdoc|doktora sonras", it["title"], re.I))
+        if assistant_prof and not lvl_title:
+            lvl_title = "research"  # adiunkt / odborný asistent / lector / Dr. Öğretim Üyesi: PhD required
         lvl = lvl_title or det.get("level")
         if lvl == "phd+postdoc":
             # Both levels mentioned: it is a postdoc offer unless the title itself says PhD.
@@ -459,8 +584,15 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
         if dl and dl > (today + timedelta(days=400)).isoformat():
             dl = None  # a "deadline" years away is a contract end date or similar, not the closing date
         title = it["title"]
-        if det.get("title") and len(det["title"]) > 15 and (len(title) < 30 or GENERIC_LINK.match(title) or it.get("weak_title")):
+        new_country = inst.get("country") in ("PL", "CZ", "RO", "TR")
+        if det.get("title") and len(det["title"]) > 15 and (len(title) < 30 or GENERIC_LINK.match(title) or it.get("weak_title")
+                                                           or (new_country and it.get("ctx_title"))):
             title = det["title"]
+        elif new_country and it.get("ctx_title") and not it.get("weak_title") and len(it.get("link_text", "")) >= 6:
+            # Card layouts ("Researcher" link + department + deadline): link text plus the department part.
+            rest = re.split(r"\s(?:Deadline|Term[ií]n|Uz[aá]v[eě]rka|Full-time|Part-time|Posted|Termen|Son ba[sş]vuru)\b", title)[0]
+            rest = re.sub(r"^(Department|Katedra|Ústav|Workplace)\s*:\s*", "", rest).strip(" –-")
+            title = f"{it['link_text']} – {rest}" if rest and rest.lower() != it["link_text"].lower() else it["link_text"]
         elif it.get("weak_title"):
             debug.append({"title": title[:200], "url": it["url"], "skip": "link inside a long list, no own title"})
             continue
@@ -520,14 +652,16 @@ def collect_source(inst: dict, page: str, cache: dict, boiler: dict) -> tuple[li
             title = f"{prog} call"
         rec = {
             "id": item_id(it["url"]), "title": title[:300], "url": it["url"],
-            "institution": inst.get("name_en") or inst["name"], "inst_id": inst["id"],
-            "region": REGION_EN.get(inst.get("region"), inst.get("region")), "city": inst.get("city"),
+            "institution": it.get("institution") or inst.get("name_en") or inst["name"], "inst_id": inst["id"],
+            "region": it.get("region") or REGION_EN.get(inst.get("region"), inst.get("region")) or None,
+            "city": it.get("city") or inst.get("city"),
             "country": inst.get("country", "ES"),
             "match": None if is_call else {pid: pct for pid, (pct, _) in matches.items()},
             "topics": [] if is_call else matcher.main_topics(strength),
             "inst_type": inst.get("type"), "sector": "professional" if lvl == "professional" else "academic", "level": lvl, "fields": flds, "deadline": dl,
             "deadline_estimated": estimated,
             "kind": "call" if is_call else "position",
+            "note": "Assistant-professor-level post (PhD required)" if assistant_prof and not is_call else None,
             "programme": prog if is_call else None, "source_page": page,
         }
         debug.append({**rec, "reason": reason, "context": it["context"][:400], "detail": det.get("status"),

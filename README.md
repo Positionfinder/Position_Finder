@@ -2,8 +2,9 @@
 
 Postdoc and researcher positions in **urban planning, geography, landscape** and related fields
 (GIS & remote sensing, participatory methods, risk, ecosystem services, housing, governance),
-collected automatically every day from universities and research centres in **Spain** and
-**Germany**, and scored against two research profiles. PhD positions are excluded.
+collected automatically every day from universities and research centres in **Spain**, **Germany**,
+**Poland**, the **Czech Republic**, **Romania** and **Turkey**, and scored against two research profiles.
+PhD positions are excluded.
 
 Live site: https://positionfinder.github.io/Position_Finder/
 
@@ -39,10 +40,22 @@ switches to all positions.
    capped at 100; a position touching no main line of a profile is capped at 55 %. No CV text is
    stored in this repository, only the topic lists, and profiles are labelled by research line.
 4. **English titles** (`collector/translate.py`): offline translation with Argos Translate
-   (Spanish, Catalan, German → English), cached in `data/translations.json`.
-5. **Website** (`docs/`): a static page with a table, search and filters (country, postdoc/researcher,
+   (Spanish, Catalan, German, Polish, Czech, Romanian, Turkish → English), cached in `data/translations.json`.
+5. **Poland, Czech Republic, Romania, Turkey** (added Nov 2026):
+   - Poland: every academic competition must be published on the ministry's national portal
+     (Akademicka Baza Ogłoszeń, bazaogloszen.nauka.gov.pl). Its RSS search feeds (`rss:` entries under
+     `pl-baza` in the registry) are read for field keywords; each offer page is opened for the full text
+     and the "Ważne do" (valid until) date.
+   - Czech Republic, Romania, Turkey: university and institute vacancy pages, found with the discovery run.
+     The Turkish Official Gazette and the Romanian national research-jobs portal do not answer GitHub's
+     servers, so Turkish and Romanian coverage also relies on EURAXESS and LinkedIn in the daily search.
+   - Polish, Czech, Romanian and Turkish vocabulary is used for levels, fields, deadlines and the CV topics.
+     Assistant-professor-level posts that require a PhD (adiunkt, odborný asistent, lector universitar,
+     Dr. Öğretim Üyesi) are kept and marked; PhD-student and assistant posts (asystent, asistent,
+     araştırma görevlisi), senior ranks and teaching-only posts are excluded.
+6. **Website** (`docs/`): a static page with a table, search and filters (country, postdoc/researcher,
    match threshold, region, topic, sort by match or deadline).
-6. **Discovery** (`collector/discover.py`, weekly or on demand): follows job-related links from each
+7. **Discovery** (`collector/discover.py`, weekly or on demand): follows job-related links from each
    institution's homepage and writes candidate job pages to `data/discovery.json`, to help find
    pages worth adding to the registry.
 

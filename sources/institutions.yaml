@@ -889,3 +889,93 @@
 - {id: pro-asf, type: professional, name: "Arquitectura Sin Fronteras", name_en: "Architecture Without Borders Spain", region: "Spain", city: "", homepage: "https://asfes.org", job_pages: ["https://asfes.org/tag/oferta-laboral/"]}
 - {id: pro-ecodes, type: professional, open_list: true, name: "ECODES", name_en: "ECODES (sustainability foundation)", region: "Aragón", city: "Zaragoza", homepage: "https://ecodes.org", job_pages: ["https://ecodes.org/trabaja-en-ecodes"]}
 - {id: pro-hacesfalta, type: professional, open_list: true, name: "Hacesfalta.org", name_en: "NGO jobs (Hacesfalta.org)", region: "Spain", city: "", homepage: "https://www.hacesfalta.org", job_pages: ["https://www.hacesfalta.org/oportunidades/remuneradas/"]}
+
+# ================= POLAND, CZECH REPUBLIC, ROMANIA, TURKEY (added Nov 2026) =================
+# Postdoc / researcher posts and assistant-professor-level posts (adiunkt, odborný asistent, lector,
+# Dr. Öğretim Üyesi), shown as researcher posts with a note. PhD / assistant (asystent, asistent,
+# araştırma görevlisi) posts are excluded. Regions are given in English.
+
+# ---------------- Poland ----------------
+# Every academic job competition in Poland must be published on the ministry's national portal
+# (Akademicka Baza Ogłoszeń), so its RSS search feeds cover all Polish universities and institutes.
+# "rss:" pages are read as RSS feeds (one item = one offer; institution and city come from the feed).
+- id: pl-baza
+  country: PL
+  name: "Akademicka Baza Ogłoszeń (Polish national academic job portal)"
+  name_en: "Polish national academic job portal"
+  type: portal
+  region: ""
+  city: ""
+  homepage: "https://bazaogloszen.nauka.gov.pl"
+  job_pages:
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=gospodarka+przestrzenna"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=geografia"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=urbanistyka"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=architektura"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=krajobraz"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=planowanie+przestrzenne"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=GIS"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=teledetekcja"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=rewitalizacja"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=mieszkalnictwo"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=klimatu"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=urban"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=geography"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=landscape"
+    - "rss:https://bazaogloszen.nauka.gov.pl/?feed=job_feed&posts_per_page=60&search_keywords=post-doc"
+
+# ---------------- Czech Republic ----------------
+- {id: cz-cuni, country: CZ, name: "Charles University", type: public, region: "Prague", city: "Prague", homepage: "https://cuni.cz", notes: "postdoc fellowships are sections of one long page (UKEN-318), not separate links: checked by hand (manual_pages.yaml)"}
+- {id: cz-cuni-natur, country: CZ, name: "Charles University – Faculty of Science", type: public, region: "Prague", city: "Prague", homepage: "https://natur.cuni.cz", job_pages: ["https://natur.cuni.cz/en/employees/postdocs"]}
+- {id: cz-muni, country: CZ, name: "Masaryk University", type: public, region: "South Moravia", city: "Brno", homepage: "https://www.muni.cz", job_pages: ["https://www.muni.cz/en/about-us/careers/find-the-right-job-for-you"]}
+- {id: cz-cvut, country: CZ, name: "Czech Technical University in Prague", type: public, region: "Prague", city: "Prague", homepage: "https://www.cvut.cz", job_pages: ["https://eud.is.cvut.cz/pub/deska/36000002/ifis/"]}
+- {id: cz-cvut-fa, country: CZ, name: "Czech Technical University – Faculty of Architecture", type: public, region: "Prague", city: "Prague", homepage: "https://www.fa.cvut.cz", job_pages: ["https://www.fa.cvut.cz/cs/fakulta/vyberova-rizeni"]}
+- {id: cz-vut, country: CZ, name: "Brno University of Technology", type: public, region: "South Moravia", city: "Brno", homepage: "https://www.vut.cz", job_pages: ["https://www.vut.cz/uredni-deska"]}
+- {id: cz-czu, country: CZ, name: "Czech University of Life Sciences Prague", type: public, region: "Prague", city: "Prague", homepage: "https://www.czu.cz", job_pages: ["https://www.czu.cz/cs/r-16895-kariera-na-czu"]}
+- {id: cz-upol, country: CZ, name: "Palacký University Olomouc", type: public, region: "Olomouc Region", city: "Olomouc", homepage: "https://www.upol.cz", job_pages: ["https://www.upol.cz/univerzita/uredni-deska/"]}
+- {id: cz-osu, country: CZ, name: "University of Ostrava", type: public, region: "Moravian-Silesian Region", city: "Ostrava", homepage: "https://www.osu.cz"}
+- {id: cz-vsb, country: CZ, name: "VSB – Technical University of Ostrava", type: public, region: "Moravian-Silesian Region", city: "Ostrava", homepage: "https://www.vsb.cz", job_pages: ["https://www.vsb.cz/cs/univerzita/uredni-deska/"]}
+- {id: cz-ujep, country: CZ, name: "Jan Evangelista Purkyně University in Ústí nad Labem", type: public, region: "Ústí nad Labem Region", city: "Ústí nad Labem", homepage: "https://www.ujep.cz"}
+- {id: cz-mendelu, country: CZ, name: "Mendel University in Brno", type: public, region: "South Moravia", city: "Brno", homepage: "https://mendelu.cz", job_pages: ["https://mendelu.cz/o-univerzite/uredni-deska/"]}
+- {id: cz-tul, country: CZ, name: "Technical University of Liberec", type: public, region: "Liberec Region", city: "Liberec", homepage: "https://www.tul.cz", job_pages: ["https://www.tul.cz/univerzita/uredni-deska/kariera/"]}
+- {id: cz-jcu, country: CZ, name: "University of South Bohemia", type: public, region: "South Bohemia", city: "České Budějovice", homepage: "https://www.jcu.cz"}
+- {id: cz-ugn, country: CZ, name: "Institute of Geonics of the Czech Academy of Sciences", type: research, region: "Moravian-Silesian Region", city: "Ostrava", homepage: "https://www.ugn.cas.cz"}
+- {id: cz-czechglobe, country: CZ, name: "Global Change Research Institute CAS (CzechGlobe)", type: research, region: "South Moravia", city: "Brno", homepage: "https://www.czechglobe.cz"}
+- {id: cz-soc, country: CZ, name: "Institute of Sociology of the Czech Academy of Sciences", type: research, region: "Prague", city: "Prague", homepage: "https://www.soc.cas.cz", job_pages: ["https://www.soc.cas.cz/en/news/tenders"]}
+- {id: cz-vukoz, country: CZ, name: "Silva Tarouca Research Institute for Landscape and Ornamental Gardening", type: research, region: "Central Bohemia", city: "Průhonice", homepage: "https://www.vukoz.cz"}
+
+# ---------------- Romania ----------------
+- {id: ro-unibuc, country: RO, name: "University of Bucharest", type: public, region: "Bucharest", city: "Bucharest", homepage: "https://unibuc.ro", job_pages: ["https://unibuc.ro/despre-ub/cariere/", "https://unibuc.ro/cercetare/oportunitati-pentru-cercetatori/"]}
+- {id: ro-unibuc-geo, country: RO, name: "University of Bucharest – Faculty of Geography", type: public, region: "Bucharest", city: "Bucharest", homepage: "https://geo.unibuc.ro", job_pages: ["https://geo.unibuc.ro/anunturi/"]}
+- {id: ro-uauim, country: RO, name: "Ion Mincu University of Architecture and Urban Planning", type: public, region: "Bucharest", city: "Bucharest", homepage: "https://www.uauim.ro", job_pages: ["https://www.uauim.ro/anunturi/"]}
+- {id: ro-ubb, country: RO, name: "Babeș-Bolyai University", type: public, region: "Cluj", city: "Cluj-Napoca", homepage: "https://www.ubbcluj.ro", job_pages: ["https://www.ubbcluj.ro/ro/infoubb/posturi_vacante/posturi_proiecte"]}
+- {id: ro-uaic, country: RO, name: "Alexandru Ioan Cuza University of Iași", type: public, region: "Iași", city: "Iași", homepage: "https://www.uaic.ro", job_pages: ["https://www.uaic.ro/studii/studii-postdoctorale/"]}
+- {id: ro-uvt, country: RO, name: "West University of Timișoara", type: public, region: "Timiș", city: "Timișoara", homepage: "https://www.uvt.ro", job_pages: ["http://cariere.uvt.ro/posturi-vacante/", "https://uvt.ro/cercetare/cercetare-si-inovare/anunturi-si-resurse-pentru-cercetatorii-din-uvt/"]}
+- {id: ro-utcn, country: RO, name: "Technical University of Cluj-Napoca", type: public, region: "Cluj", city: "Cluj-Napoca", homepage: "https://www.utcluj.ro"}
+- {id: ro-upt, country: RO, name: "Politehnica University of Timișoara", type: public, region: "Timiș", city: "Timișoara", homepage: "https://www.upt.ro"}
+- {id: ro-upb, country: RO, name: "National University of Science and Technology POLITEHNICA Bucharest", type: public, region: "Bucharest", city: "Bucharest", homepage: "https://upb.ro", job_pages: ["https://posturivacante.upb.ro/"]}
+- {id: ro-usamv, country: RO, name: "University of Agronomic Sciences and Veterinary Medicine of Bucharest (USAMV)", type: public, region: "Bucharest", city: "Bucharest", homepage: "https://usamv.ro", job_pages: ["https://usamv.ro/posturi-didactice-vacante/", "https://usamv.ro/resurse-umane/"]}
+- {id: ro-uoradea, country: RO, name: "University of Oradea", type: public, region: "Bihor", city: "Oradea", homepage: "https://www.uoradea.ro", job_pages: ["https://www.uoradea.ro/despre-noi/informatii-de-interes-public/concursuri-pe-posturi/"]}
+- {id: ro-usv, country: RO, name: "Ștefan cel Mare University of Suceava", type: public, region: "Suceava", city: "Suceava", homepage: "https://usv.ro", job_pages: ["https://usv.ro/resurse/angajari/posturi-didactice/"]}
+- {id: ro-tuiasi, country: RO, name: "Gheorghe Asachi Technical University of Iași", type: public, region: "Iași", city: "Iași", homepage: "https://www.tuiasi.ro", job_pages: ["https://www.tuiasi.ro/concursuri-si-promovari/"]}
+- {id: ro-igar, country: RO, name: "Institute of Geography of the Romanian Academy", type: research, region: "Bucharest", city: "Bucharest", homepage: "https://www.geoinst.ro"}
+- {id: ro-urbanincerc, country: RO, name: "URBAN-INCERC National Institute for Research and Development in Construction, Urban Planning and Sustainable Spatial Development", type: research, region: "Bucharest", city: "Bucharest", homepage: "https://incd.ro", job_pages: ["https://incd.ro/anunturi-compartimentul-management-si-resurse-umane/"]}
+
+# ---------------- Turkey ----------------
+- {id: tr-metu, country: TR, name: "Middle East Technical University (METU)", type: public, region: "Ankara", city: "Ankara", homepage: "https://www.metu.edu.tr"}
+- {id: tr-metu-crp, country: TR, name: "METU – Department of City and Regional Planning", type: public, region: "Ankara", city: "Ankara", homepage: "https://crp.metu.edu.tr", job_pages: ["https://crp.metu.edu.tr/en/tum-duyurular"]}
+- {id: tr-itu, country: TR, name: "Istanbul Technical University", type: public, region: "Istanbul", city: "Istanbul", homepage: "https://www.itu.edu.tr", job_pages: ["https://www.itu.edu.tr/duyurular"]}
+- {id: tr-ytu, country: TR, name: "Yıldız Technical University", type: public, region: "Istanbul", city: "Istanbul", homepage: "https://www.yildiz.edu.tr"}
+- {id: tr-msgsu, country: TR, name: "Mimar Sinan Fine Arts University", type: public, region: "Istanbul", city: "Istanbul", homepage: "https://www.msgsu.edu.tr", job_pages: ["https://msgsu.edu.tr/tum-duyurular/"]}
+- {id: tr-gazi, country: TR, name: "Gazi University", type: public, region: "Ankara", city: "Ankara", homepage: "https://gazi.edu.tr", job_pages: ["https://personel.gazi.edu.tr/"]}
+- {id: tr-deu, country: TR, name: "Dokuz Eylül University", type: public, region: "İzmir", city: "İzmir", homepage: "https://www.deu.edu.tr", job_pages: ["https://www.deu.edu.tr/duyurular/"]}
+- {id: tr-iyte, country: TR, name: "İzmir Institute of Technology", type: public, region: "İzmir", city: "İzmir", homepage: "https://iyte.edu.tr", job_pages: ["https://iyte.edu.tr/duyuru"]}
+- {id: tr-ankara, country: TR, name: "Ankara University", type: public, region: "Ankara", city: "Ankara", homepage: "https://www.ankara.edu.tr"}
+- {id: tr-istanbul, country: TR, name: "Istanbul University", type: public, region: "Istanbul", city: "Istanbul", homepage: "https://www.istanbul.edu.tr", job_pages: ["https://www.istanbul.edu.tr/tr/duyurular/"]}
+- {id: tr-hacettepe, country: TR, name: "Hacettepe University", type: public, region: "Ankara", city: "Ankara", homepage: "https://www.hacettepe.edu.tr"}
+- {id: tr-bogazici, country: TR, name: "Boğaziçi University", type: public, region: "Istanbul", city: "Istanbul", homepage: "https://bogazici.edu.tr", job_pages: ["https://personel.bogazici.edu.tr/"]}
+- {id: tr-ktu, country: TR, name: "Karadeniz Technical University", type: public, region: "Trabzon", city: "Trabzon", homepage: "https://www.ktu.edu.tr", job_pages: ["https://www.ktu.edu.tr/personel"]}
+- {id: tr-bilkent, country: TR, name: "Bilkent University", type: private, region: "Ankara", city: "Ankara", homepage: "https://w3.bilkent.edu.tr", notes: "academic jobs page lists departments, not posts: checked by hand (manual_pages.yaml)"}
+- {id: tr-sabanci, country: TR, name: "Sabancı University", type: private, region: "Istanbul", city: "Istanbul", homepage: "https://www.sabanciuniv.edu"}
+- {id: tr-koc, country: TR, name: "Koç University", type: private, region: "Istanbul", city: "Istanbul", homepage: "https://www.ku.edu.tr"}
+- {id: tr-ozyegin, country: TR, name: "Özyeğin University", type: private, region: "Istanbul", city: "Istanbul", homepage: "https://www.ozyegin.edu.tr"}

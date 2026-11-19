@@ -10,7 +10,7 @@ Sheets
 Columns "My status" and "My notes" are the user's own: they are kept for every row (matched by link),
 also when a row moves to the Archive. Nothing personal is stored in this script.
 
---linkedin is docs/data/linkedin.json: {"items": [{title, title_en, institution, city, region, country (ES/DE),
+--linkedin is docs/data/linkedin.json: {"items": [{title, title_en, institution, city, region, country (ES/DE/PL/CZ/RO/TR),
   level (postdoc/research/professional), note, topics, match {A, B}, deadline (YYYY-MM-DD or null), url,
   li_kind (job/post), first_seen}]}
 """
@@ -27,7 +27,7 @@ COLS = ["Source", "Type", "Position (English)", "Original title", "Institution",
 WIDTH = [13, 13, 48, 36, 32, 16, 18, 10, 26, 38, 24, 10, 10, 11, 13, 10, 10, 12, 14, 30, 40]
 KEYS = ["source", "type", "title_en", "title", "institution", "city", "region", "country", "level", "topics", "note",
         "A", "B", None, "deadline", None, "url", "first_seen", "status", "notes", "url"]
-COUNTRY = {"ES": "Spain", "DE": "Germany"}
+COUNTRY = {"ES": "Spain", "DE": "Germany", "PL": "Poland", "CZ": "Czech Republic", "RO": "Romania", "TR": "Turkey"}
 STATUS = '"To check,Interested,Applied,Not relevant,Closed"'
 F = "Arial"
 TODAY = dt.date.today()
@@ -288,7 +288,7 @@ def main():
     write_sheet(ws, still_open, "Open positions – Position Finder website",
                 "Rebuilt from the website data on every update.")
     write_sheet(wb.create_sheet("LinkedIn"), li_rows, "LinkedIn – research positions found by the daily search",
-                "Academic: Spain & Germany, postdoc/researcher. Professional: Spain. Newest first. \"see ad\" = no deadline in the ad.")
+                "Academic: Spain, Germany, Poland, Czech Republic, Romania, Turkey, postdoc/researcher. Professional: Spain. Newest first. \"see ad\" = no deadline in the ad.")
     write_sheet(wb.create_sheet("Archive"), ar_rows, "Archive – closed or no longer listed",
                 "Rows move here when the deadline has passed or the position left the website.")
     wb.calculation.fullCalcOnLoad = True  # Excel recomputes "Days left" every time the file is opened
