@@ -1,6 +1,6 @@
 (() => {
   const $ = (s) => document.querySelector(s);
-  const COUNTRY = { ES: "Spain", DE: "Germany" };
+  const COUNTRY = { ES: "Spain", DE: "Germany", PL: "Poland", CZ: "Czech Republic", RO: "Romania", TR: "Turkey" };
   const state = { showApplied: false, country: "all", level: "all", source: "all", topics: new Set(), q: "", region: "", sort: "match", matchf: "any", calls: false };
   let DATA = { items: [], sources: [], profiles: [], threshold: 60 };
 

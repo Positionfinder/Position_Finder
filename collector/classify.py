@@ -193,7 +193,7 @@ DEADLINE_CUE = re.compile(
     r"bewerbungsfrist|bewerbungsschluss|bewerbungen (bitte )?bis|bis (zum|sp[aä]testens)|einsendeschluss|"
     r"ende der bewerbungsfrist|frist:|application deadline|closing date|"
     # pl / cs / ro / tr
-    r"termin\w* (sk[lł]adania|nadsy[lł]ania|zg[lł]osze|aplikacj)|do dnia|ostateczny termin|nieprzekraczaln|"
+    r"termin\w* (sk[lł]adania|nadsy[lł]ania|zg[lł]osze|aplikacj)|do dnia|ostateczny termin|nieprzekraczaln|wa[zż]ne do|"
     r"uz[aá]v[eě]rk|term[ií]n\w* (pro )?(pod[aá]n[ií]|p[rř]ihl[aá][sš]|odevzd|doru[cč]en)|p[rř]ihl[aá][sš]k\w* .{0,40}do|nejpozd[eě]ji do|"
     r"termen(ul)? limit|data limit|p[aâ]n[aă] la data de|p[aâ]n[aă] la|depunere\w* dosarelor|[iî]nscrier\w*|"
     r"son ba[sş]vuru|ba[sş]vuru (tarih|s[üu]resi|biti[sş])|ba[sş]vurular",
@@ -213,9 +213,18 @@ def _dates(text: str) -> list[tuple[int, date]]:
     return found
 
 
+# Dates right after these words are start / end / decision dates, not application deadlines.
+NOT_DEADLINE_DATE = re.compile(
+    r"(rozpocz[eę]ci\w*|zatrudnieni\w*|rozstrzygni[eę]ci\w*|nástup\w*|zahájen[ií]\w*|[iî]nceperi\w*|desf[aă][sș]ur[aă]rii|"
+    r"ba[sş]lama|ba[sş]lang[ıi][cç]|start(ing)? date|employment (start|from)|begin\w*|beginn|inicio del contrato|incorporaci[oó]n|"
+    r"interview|rozmow\w*|pohovor|interviu|m[üu]lakat|sınav|prob[aă])[^.\n]{0,25}$",
+    re.I,
+)
+
+
 def deadline(text: str, today: date | None = None) -> str | None:
     today = today or date.today()
-    dates = _dates(text)
+    dates = [(pos, d) for pos, d in _dates(text) if not NOT_DEADLINE_DATE.search(text[max(0, pos - 45):pos])]
     if not dates:
         return None
     cues = [m.start() for m in DEADLINE_CUE.finditer(text)]

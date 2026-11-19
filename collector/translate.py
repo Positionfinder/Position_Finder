@@ -1,6 +1,7 @@
 """Add English titles (title_en) to docs/data/jobs.json.
 
-Offline machine translation with Argos Translate (Spanish, Catalan, German -> English).
+Offline machine translation with Argos Translate (Spanish, Catalan, German, Polish, Czech, Romanian,
+Turkish -> English).
 Translations are cached in data/translations.json, so each title is translated only once.
 If a language model can't be installed, the original title is kept.
 """
@@ -22,9 +23,14 @@ ES_WORDS = re.compile(r"\b(y|del|para|con|de la|investigaci[oó]n|contrato|convo
 DE_WORDS = re.compile(r"\b(und|der|die|das|f[uü]r|mit|im|zur|wissenschaftliche|mitarbeiter|stelle|projekt)\b", re.I)
 
 
+COUNTRY_LANG = {"PL": "pl", "CZ": "cs", "RO": "ro", "TR": "tr"}
+
+
 def language(title: str, country: str) -> str:
     words = max(1, len(title.split()))
     en = len(EN_WORDS.findall(title))
+    if country in COUNTRY_LANG:
+        return "en" if en / words > 0.25 else COUNTRY_LANG[country]
     if country == "DE":
         de = len(DE_WORDS.findall(title))
         return "en" if en > de and en / words > 0.15 else "de"

@@ -49,11 +49,11 @@ jobs:
       - name: Read EURAXESS and Faculty Radar
         continue-on-error: true
         run: python collector/external.py
-      # English titles: offline translation models (Spanish, Catalan, German -> English), cached between runs
+      # English titles: offline translation models (es, ca, de, pl, cs, ro, tr -> English), cached between runs
       - uses: actions/cache@v4
         with:
           path: ~/.local/share/argos-translate
-          key: argos-models-v1
+          key: argos-models-v2
       - name: Install translator (CPU only)
         continue-on-error: true
         run: |

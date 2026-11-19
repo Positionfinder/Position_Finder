@@ -35,10 +35,19 @@ TODAY = date.today()
 MIN_MATCH = 50
 MAX_TEXT = 25000
 
-COUNTRY = {"788": ("ES", "Spain"), "794": ("DE", "Germany")}
+COUNTRY = {"788": ("ES", "Spain"), "794": ("DE", "Germany"), "749": ("PL", "Poland"), "747": ("CZ", "Czech Republic"),
+           "751": ("RO", "Romania"), "739": ("TR", "Turkey")}
 EUR_KEYWORDS = ["urban planning", "spatial planning", "geography", "landscape", "GIS", "flood", "ecosystem services",
                 "climate adaptation", "housing", "participatory", "urbanismo", "territorio", "Stadtplanung",
                 "Raumplanung", "Geographie"]
+# Extra keyword runs per country (local-language field words); English keywords above run for every country.
+EUR_KEYWORDS_LOCAL = {
+    "ES": [], "DE": [],
+    "PL": ["gospodarka przestrzenna", "urbanistyka", "geografia"],
+    "CZ": ["územní plánování", "geografie"],
+    "RO": ["urbanism", "geografie"],
+    "TR": ["şehir planlama", "peyzaj"],
+}
 EUR_FIELDS = "&f%5B1%5D=job_research_field%3A210&f%5B2%5D=job_research_field%3A195&f%5B3%5D=job_research_field%3A21"
 MAX_PAGES = 12
 ERRORS: list[str] = []
@@ -55,7 +64,8 @@ EXCLUDE_TITLE = re.compile(
     r"\bph\.?d\b(?!.{0,15}(required|holder))|predoc|pre-doc|doctoral (candidate|researcher|position|fellow)|doctorand|"
     r"promotionsstelle|promovend|\bFPU\b|\bFPI\b|student|internship|practicum|pr[aá]cticas|\bbeca\b|"
     r"professor|professur|catedr|titular|lecturer|technician|t[eé]cnic|laborant|"
-    r"bachelor|master (thesis|student)|trainee|administrat|secretar|assistant professor.*tenure",
+    r"bachelor|master (thesis|student)|trainee|administrat|secretar|assistant professor.*tenure|"
+    r"doktorant|(?<!post)(?<!post-)doctorand|asystent|ara[sş]t[ıi]rma g[öo]revlisi",
     re.I)
 POSTDOC_HINT = re.compile(r"post-?doc|posdoc|postdoctoral|research (associate|scientist|fellow)|wissenschaftliche|"
                           r"investigador|researcher|scientist|forscher|senior researcher", re.I)
@@ -89,6 +99,16 @@ CITY_REGION = {
     "flensburg": "Schleswig-Holstein", "lübeck": "Schleswig-Holstein", "mainz": "Rhineland-Palatinate",
     "trier": "Rhineland-Palatinate", "kaiserslautern": "Rhineland-Palatinate", "koblenz": "Rhineland-Palatinate",
     "saarbrücken": "Saarland",
+    "warsaw": "Masovia", "warszawa": "Masovia", "kraków": "Lesser Poland", "krakow": "Lesser Poland", "wrocław": "Lower Silesia",
+    "wroclaw": "Lower Silesia", "poznań": "Greater Poland", "poznan": "Greater Poland", "łódź": "Łódź Voivodeship",
+    "lodz": "Łódź Voivodeship", "gdańsk": "Pomerania", "gdansk": "Pomerania", "katowice": "Silesia", "gliwice": "Silesia",
+    "lublin": "Lublin Voivodeship", "toruń": "Kuyavia-Pomerania", "torun": "Kuyavia-Pomerania", "szczecin": "West Pomerania",
+    "prague": "Prague", "praha": "Prague", "brno": "South Moravia", "ostrava": "Moravian-Silesian Region",
+    "olomouc": "Olomouc Region", "liberec": "Liberec Region", "české budějovice": "South Bohemia", "plzeň": "Plzeň Region",
+    "bucharest": "Bucharest", "bucurești": "Bucharest", "bucuresti": "Bucharest", "cluj": "Cluj", "iași": "Iași", "iasi": "Iași",
+    "timișoara": "Timiș", "timisoara": "Timiș", "oradea": "Bihor", "suceava": "Suceava", "constanța": "Constanța",
+    "ankara": "Ankara", "istanbul": "Istanbul", "i̇stanbul": "Istanbul", "izmir": "İzmir", "i̇zmir": "İzmir", "trabzon": "Trabzon",
+    "eskişehir": "Eskişehir", "antalya": "Antalya", "konya": "Konya", "bursa": "Bursa",
 }
 
 # Faculty Radar
@@ -206,7 +226,7 @@ def eur_collect(cutoff: date) -> dict[str, dict]:
     for cid, (cc, _) in COUNTRY.items():
         base = f"f%5B0%5D=job_country%3A{cid}"
         queries.append((base, cc))
-        queries += [(f"keywords={quote(k)}&{base}", cc) for k in EUR_KEYWORDS]
+        queries += [(f"keywords={quote(k)}&{base}", cc) for k in EUR_KEYWORDS + EUR_KEYWORDS_LOCAL.get(cc, [])]
         queries.append((base + EUR_FIELDS, cc))
     blocked = 0
     for params, cc in queries:
