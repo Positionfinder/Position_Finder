@@ -1069,6 +1069,67 @@
    "url": "https://www.linkedin.com/jobs/view/4492128662/",
    "li_kind": "job",
    "first_seen": "2026-11-19"
+  },
+  {
+   "title": "Professorat Lector – Matemàtiques per a l'Arquitectura (LE-435/753)",
+   "title_en": "Assistant professor – Matemàtiques per a l'Arquitectura",
+   "institution": "Universitat Politècnica de Catalunya",
+   "city": "Barcelona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "research",
+   "note": "Assistant professor via Faculty Radar",
+   "topics": [
+    "Urban & spatial planning"
+   ],
+   "match": {
+    "A": 55,
+    "B": 62
+   },
+   "deadline": "2026-11-25",
+   "url": "https://facultyradar.eu/position/universitat-politecnica-de-catalunya-professorat-lector-matematiques-per-a-l-arquitectura-71027998-le-435-753/#LE-435",
+   "li_kind": "job",
+   "first_seen": "2026-11-19"
+  },
+  {
+   "title": "Professorat Lector – Enginyeria Cartogràfica, Geodèsica i Fotogrametria (LE-429/751)",
+   "title_en": "Assistant professor – Cartographic, Geodetic Engineering and Photogrammetry",
+   "institution": "Universitat Politècnica de Catalunya",
+   "city": "Barcelona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "research",
+   "note": "Assistant professor via Faculty Radar",
+   "topics": [
+    "GIS, remote sensing & spatial analysis"
+   ],
+   "match": {
+    "A": 50,
+    "B": 31
+   },
+   "deadline": "2026-11-25",
+   "url": "https://facultyradar.eu/position/universitat-politecnica-de-catalunya-professorat-lector-enginyeria-cartografica-geodesica-i-fotogrametria-71027993-le-429-751/#LE-429",
+   "li_kind": "job",
+   "first_seen": "2026-11-19"
+  },
+  {
+   "title": "Professorat Lector – Expressió Gràfica Arquitectònica (LE-430/752)",
+   "title_en": "Assistant professor – Expressió Gràfica Arquitectònica",
+   "institution": "Universitat Politècnica de Catalunya",
+   "city": "Barcelona",
+   "region": "Catalonia",
+   "country": "ES",
+   "level": "research",
+   "note": "Assistant professor via Faculty Radar",
+   "topics": [],
+   "match": {
+    "A": 31,
+    "B": 50
+   },
+   "deadline": "2026-11-25",
+   "url": "https://facultyradar.eu/position/universitat-politecnica-de-catalunya-professorat-lector-expressio-grafica-arquitectonica-71027994-le-430-752/#LE-430",
+   "li_kind": "job",
+   "first_seen": "2026-11-19"
   }
  ]
 }
